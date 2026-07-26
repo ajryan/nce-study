@@ -1,0 +1,127 @@
+{
+  "$comment": "Career development supplement. The six NBCC domains are work behaviours, so career theory has no domain of its own and lives inside D3 (task 3U occupation and career development, 3AB retirement, 3I financial). Added after the CACREP coverage axis flagged career as under-represented.",
+  "domain": "D3",
+  "cards": [
+    {
+      "id": "d3-parsons-146",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3U",
+      "cacrep": ["career"],
+      "tags": ["parsons", "trait-and-factor", "career-history"],
+      "prompt": "Summarize Parsons's trait-and-factor model, the foundation of career guidance.",
+      "answer": "Parsons proposed three steps: developing a clear understanding of oneself — aptitudes, abilities, interests, resources, and limitations; acquiring knowledge of the requirements, conditions, opportunities, and prospects of different lines of work; and using true reasoning about the relationship between these two sets of facts to find a match.",
+      "explanation": "Frank Parsons is regarded as the founder of the vocational guidance movement, and his 1909 framework still underlies most career counseling: self-knowledge, occupational knowledge, and the reasoning that connects them. Holland's congruence model is its direct descendant.",
+      "refs": ["ncda", "onet"]
+    },
+    {
+      "id": "d3-roe-147",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3U",
+      "cacrep": ["career", "human-growth"],
+      "tags": ["roe", "career-theory", "early-experience"],
+      "prompt": "Anne Roe's theory of career choice proposed which central idea?",
+      "choices": [
+        { "text": "That early parent–child relationships and the resulting need patterns orient a person toward or away from people-oriented occupations", "correct": true, "rationale": "Roe linked emotional climate in the family of origin to later occupational orientation, particularly the person/non-person dimension." },
+        { "text": "That occupational choice results from matching measurable traits to job requirements", "correct": false, "rationale": "That is the trait-and-factor tradition of Parsons and Holland." },
+        { "text": "That career development proceeds through life-span stages of self-concept implementation", "correct": false, "rationale": "That is Super's developmental theory." },
+        { "text": "That unplanned events determine most career outcomes", "correct": false, "rationale": "That is Krumboltz's Planned Happenstance." }
+      ],
+      "explanation": "Roe's specific predictions have not held up well empirically, but the theory is historically important as the first to connect personality development to occupational choice, and it appears on the exam as a named theorist.",
+      "refs": ["ncda", "statpearls-erikson"]
+    },
+    {
+      "id": "d3-savickas-148",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3U",
+      "cacrep": ["career"],
+      "tags": ["savickas", "career-construction", "adaptability"],
+      "prompt": "Savickas's Career Construction Theory emphasizes career adaptability. What are its four dimensions?",
+      "choices": [
+        { "text": "Concern, Control, Curiosity, and Confidence", "correct": true, "rationale": "The four Cs describe the psychosocial resources for managing career transitions and tasks." },
+        { "text": "Congruence, Consistency, Differentiation, and Identity", "correct": false, "rationale": "These are Holland's secondary constructs." },
+        { "text": "Growth, Exploration, Establishment, and Maintenance", "correct": false, "rationale": "These are Super's life-span stages." },
+        { "text": "Curiosity, Persistence, Flexibility, and Optimism", "correct": false, "rationale": "These are four of Krumboltz's five Planned Happenstance skills." }
+      ],
+      "explanation": "Career construction treats career as a story the person authors rather than a match to be found — well suited to unstable labour markets where the trait-matching assumption of a stable lifelong occupation no longer holds.",
+      "refs": ["ncda", "bls-ooh"]
+    },
+    {
+      "id": "d3-schlossberg-149",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3U",
+      "cacrep": ["career", "human-growth"],
+      "tags": ["schlossberg", "transition", "4s"],
+      "prompt": "Name the four factors in Schlossberg's transition model.",
+      "answer": "Situation — the trigger, timing, control, role change, duration, and prior experience with similar transitions. Self — the person's characteristics and psychological resources, including outlook, resilience, and self-efficacy. Support — relationships, family, institutions, and networks available. Strategies — the coping responses used to modify the situation, control the meaning, or manage the stress.",
+      "explanation": "The 4S model applies to any major transition, not just career ones, which makes it useful for job loss, retirement, relocation, and role change. Assessing which of the four is weakest identifies where to intervene.",
+      "refs": ["ncda", "statpearls-erikson", "bls-ooh"]
+    },
+    {
+      "id": "d3-joblo-150",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3I",
+      "cacrep": ["career"],
+      "tags": ["unemployment", "job-loss", "mental-health"],
+      "prompt": "A client made redundant after 20 years reports symptoms resembling grief. How should the counselor understand this?",
+      "choices": [
+        { "text": "As a genuine grief response to loss of role, identity, structure, income, and workplace relationships, not merely a financial problem", "correct": true, "rationale": "Job loss involves multiple simultaneous losses; treating it as purely economic misses most of the distress." },
+        { "text": "As an overreaction that should be reframed toward opportunity", "correct": false, "rationale": "Premature reframing toward opportunity invalidates a legitimate loss response." },
+        { "text": "As evidence of an underlying depressive disorder requiring immediate diagnosis", "correct": false, "rationale": "The reaction may be proportionate; diagnosis should follow assessment, not the event." },
+        { "text": "As a problem best resolved by rapid re-employment in any available role", "correct": false, "rationale": "Rapid placement without addressing fit or the loss often produces further instability." }
+      ],
+      "explanation": "Unemployment is a well-documented risk factor for depression, substance use, relationship strain, and suicide. Structure, routine, and social contact are frequently more urgent counseling targets than job-search technique.",
+      "refs": ["ncda", "nimh-depression", "bls-ooh", "statpearls-grief"]
+    },
+    {
+      "id": "d3-roles-151",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3U",
+      "cacrep": ["career", "human-growth"],
+      "tags": ["super", "life-roles", "role-conflict"],
+      "prompt": "A client describes exhaustion from competing demands of work, parenting, and caring for an aging parent. Which career framework most directly addresses this?",
+      "choices": [
+        { "text": "Super's Life-Career Rainbow, which maps the multiple life roles a person occupies simultaneously and how their salience shifts over time", "correct": true, "rationale": "The Rainbow explicitly models role overlap and changing salience across the life span, which is exactly the client's difficulty." },
+        { "text": "Holland's hexagonal model of person–environment congruence", "correct": false, "rationale": "Holland addresses fit between personality type and work environment, not multiple-role conflict." },
+        { "text": "Gottfredson's circumscription and compromise", "correct": false, "rationale": "That concerns how occupational options are eliminated during development." },
+        { "text": "Krumboltz's social learning theory of career decision making", "correct": false, "rationale": "That addresses how learning experiences shape career beliefs and choices." }
+      ],
+      "explanation": "Super identified nine major life roles — child, student, leisurite, citizen, worker, spouse, homemaker, parent, pensioner. Role salience varies across the life span, and role overload is a common presenting issue in mid-life.",
+      "refs": ["ncda", "statpearls-erikson", "statpearls-burnout"]
+    },
+    {
+      "id": "d3-barriers-152",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3U",
+      "cacrep": ["career", "social-cultural"],
+      "tags": ["career-barriers", "discrimination", "equity"],
+      "prompt": "How should career counseling address structural barriers such as discrimination in hiring?",
+      "choices": [
+        { "text": "Name them as real external constraints rather than personal deficits, help the client strategize around them, and consider advocacy where appropriate", "correct": true, "rationale": "Treating structural barriers as individual failings is a documented failure of decontextualized career counseling." },
+        { "text": "Focus on improving the client's qualifications and interview skills, since these are within their control", "correct": false, "rationale": "Skills work may help but attributing the barrier entirely to the client is inaccurate and demoralizing." },
+        { "text": "Advise the client to consider fields where they will encounter less resistance", "correct": false, "rationale": "This accepts and reproduces the exclusion, narrowing options on discriminatory grounds." },
+        { "text": "Avoid the topic, since counselors cannot change labour market conditions", "correct": false, "rationale": "Naming the barrier is itself valuable, and advocacy is within the counselor's role." }
+      ],
+      "explanation": "Career development theory has been criticized for assuming a freedom of choice not available to everyone. Occupational segregation, discrimination, caregiving demands, disability, and access to education all constrain the option set before individual preference operates.",
+      "refs": ["msjcc", "ncda", "bls-ooh", "aca-ethics"]
+    },
+    {
+      "id": "d3-values-153",
+      "type": "cloze",
+      "domain": "D3",
+      "task": "3U",
+      "cacrep": ["career"],
+      "tags": ["work-values", "satisfaction", "career"],
+      "prompt": "Beyond interests and aptitudes, {{work values}} — such as autonomy, security, altruism, prestige, income, and work-life balance — are strong predictors of long-term job satisfaction.",
+      "answer": "work values",
+      "explanation": "Clients frequently arrive having considered only interests. Values often explain why someone in a well-matched, competently performed job is nonetheless dissatisfied, and the Theory of Work Adjustment treats values–reinforcer correspondence as central to satisfaction and tenure.",
+      "refs": ["ncda", "onet", "apa-testing-standards"]
+    }
+  ]
+}

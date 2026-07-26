@@ -1,0 +1,469 @@
+{
+  "$comment": "Shared citation library. Cards cite entries by id via their `refs` array, so each source is written and corrected in exactly one place. Every URL is link-checked by scripts/check-links.ts, and every title below was confirmed against the live page (an earlier draft had six StatPearls ids that resolved to unrelated articles).",
+  "references": [
+    {
+      "id": "nbcc-content-outline",
+      "label": "NCE Content Outline (NBCC)",
+      "url": "https://nbcc.org/assets/exam/nce_content_outline.pdf",
+      "citation": "National Board for Certified Counselors. (2023). The National Counselor Examination (NCE) content outline.",
+      "category": "exam"
+    },
+    {
+      "id": "nbcc-2027-spec",
+      "label": "NCE Examination Specifications, effective July 1, 2027 (NBCC)",
+      "url": "https://nbcc.org/assets/exam/NCE_exam_spec_2027.pdf",
+      "citation": "National Board for Certified Counselors. (2026). National Counselor Examination (NCE) examination specifications, effective July 1, 2027.",
+      "category": "exam"
+    },
+    {
+      "id": "nbcc-nce-page",
+      "label": "NBCC — National Counselor Examination",
+      "url": "https://nbcc.org/exams/nce",
+      "citation": "National Board for Certified Counselors. National Counselor Examination (NCE).",
+      "category": "exam"
+    },
+    {
+      "id": "nbcc-handbook-licensure",
+      "label": "NCE Candidate Handbook for State Licensure (NBCC)",
+      "url": "https://www.nbcc.org/assets/exam/handbooks/nce.pdf",
+      "citation": "National Board for Certified Counselors. Candidate handbook for state licensure: National Counselor Examination.",
+      "category": "exam"
+    },
+    {
+      "id": "nbcc-ethics",
+      "label": "NBCC Code of Ethics",
+      "url": "https://nbcc.org/Assets/Ethics/NBCCCodeofEthics.pdf",
+      "citation": "National Board for Certified Counselors. NBCC code of ethics.",
+      "category": "ethics",
+      "codeVersion": "NBCC"
+    },
+    {
+      "id": "aca-ethics",
+      "label": "ACA Code of Ethics (2014)",
+      "url": "https://www.counseling.org/resources/ethics",
+      "citation": "American Counseling Association. (2014). ACA code of ethics.",
+      "category": "ethics",
+      "codeVersion": "2014",
+      "note": "The 2014 code remains in force. ACA's Ethics Revision Task Force began work in January 2025; board adoption of a revised code is expected September 2026. Re-audit all ethics cards after adoption."
+    },
+    {
+      "id": "cacrep-standards",
+      "label": "CACREP 2024 Standards",
+      "url": "https://www.cacrep.org/for-programs/2024-cacrep-standards/",
+      "citation": "Council for Accreditation of Counseling and Related Educational Programs. (2023). 2024 CACREP standards.",
+      "category": "exam"
+    },
+    {
+      "id": "counseling-compact",
+      "label": "Counseling Compact",
+      "url": "https://counselingcompact.org/",
+      "citation": "Counseling Compact. Interstate licensure compact for professional counselors.",
+      "category": "legal"
+    },
+
+    {
+      "id": "hhs-hipaa-privacy",
+      "label": "HHS — HIPAA Privacy Rule",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/index.html",
+      "citation": "U.S. Department of Health and Human Services. HIPAA privacy rule.",
+      "category": "legal"
+    },
+    {
+      "id": "hhs-mental-health",
+      "label": "HHS — HIPAA and mental/behavioral health information",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/special-topics/mental-health/index.html",
+      "citation": "U.S. Department of Health and Human Services. Information related to mental and behavioral health, including opioid overdose.",
+      "category": "legal",
+      "note": "Covers the special status of psychotherapy notes under the Privacy Rule."
+    },
+    {
+      "id": "ed-ferpa",
+      "label": "U.S. Dept. of Education — FERPA",
+      "url": "https://studentprivacy.ed.gov/ferpa",
+      "citation": "U.S. Department of Education. Family Educational Rights and Privacy Act (FERPA).",
+      "category": "legal"
+    },
+    {
+      "id": "ada-title-iii",
+      "label": "ADA — Title III (public accommodations)",
+      "url": "https://www.ada.gov/topics/title-iii/",
+      "citation": "U.S. Department of Justice. Americans with Disabilities Act, Title III.",
+      "category": "legal"
+    },
+    {
+      "id": "cfr-42-part-2",
+      "label": "42 CFR Part 2 — Confidentiality of SUD patient records",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2",
+      "citation": "42 C.F.R. pt. 2. Confidentiality of substance use disorder patient records.",
+      "category": "legal"
+    },
+    {
+      "id": "tarasoff",
+      "label": "Tarasoff v. Regents of the University of California (1976)",
+      "url": "https://scocal.stanford.edu/opinion/tarasoff-v-regents-university-california-30278",
+      "citation": "Tarasoff v. Regents of the University of California, 17 Cal. 3d 425 (1976).",
+      "category": "legal"
+    },
+    {
+      "id": "jaffee-redmond",
+      "label": "Jaffee v. Redmond (1996)",
+      "url": "https://www.law.cornell.edu/supct/html/95-266.ZS.html",
+      "citation": "Jaffee v. Redmond, 518 U.S. 1 (1996).",
+      "category": "legal",
+      "note": "Cornell LII rather than Justia — Justia serves a Cloudflare challenge to automated link checks."
+    },
+    {
+      "id": "childwelfare-reporting",
+      "label": "Child Welfare Information Gateway — Reporting abuse and neglect",
+      "url": "https://www.childwelfare.gov/topics/responding/reporting/",
+      "citation": "Child Welfare Information Gateway. Reporting child abuse and neglect.",
+      "category": "legal"
+    },
+
+    {
+      "id": "dsm5tr",
+      "label": "DSM-5-TR (American Psychiatric Association)",
+      "url": "https://www.psychiatry.org/psychiatrists/practice/dsm",
+      "citation": "American Psychiatric Association. (2022). Diagnostic and statistical manual of mental disorders (5th ed., text rev.).",
+      "category": "diagnosis",
+      "note": "Copyrighted. Cite criteria by disorder name and code only; never reproduce criterion text."
+    },
+    {
+      "id": "icd11",
+      "label": "WHO ICD-11 browser",
+      "url": "https://icd.who.int/browse11",
+      "citation": "World Health Organization. International classification of diseases, 11th revision.",
+      "category": "diagnosis"
+    },
+
+    {
+      "id": "samhsa-tip35",
+      "label": "SAMHSA TIP 35 — Motivational Interviewing as a Counseling Style",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK571068/",
+      "citation": "Substance Abuse and Mental Health Services Administration. (2019). Chapter 3: Motivational interviewing as a counseling style. In TIP 35: Enhancing motivation for change in substance use disorder treatment. NCBI Bookshelf.",
+      "category": "clinical"
+    },
+    {
+      "id": "samhsa-tip42",
+      "label": "SAMHSA TIP 42 — Treatment for People With Co-Occurring Disorders",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK571020/",
+      "citation": "Substance Abuse and Mental Health Services Administration. (2020). TIP 42: Substance use disorder treatment for people with co-occurring disorders. NCBI Bookshelf.",
+      "category": "clinical"
+    },
+    {
+      "id": "samhsa-tip57",
+      "label": "SAMHSA TIP 57 — Trauma-Informed Care in Behavioral Health Services",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK207201/",
+      "citation": "Substance Abuse and Mental Health Services Administration. (2014). TIP 57: Trauma-informed care in behavioral health services. NCBI Bookshelf.",
+      "category": "clinical"
+    },
+    {
+      "id": "samhsa-tip65",
+      "label": "SAMHSA TIP 65 — Counseling Approaches To Promote Recovery",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK601482/",
+      "citation": "Substance Abuse and Mental Health Services Administration. (2020). TIP 65: Counseling approaches to promote recovery from problematic substance use and related issues. NCBI Bookshelf.",
+      "category": "clinical"
+    },
+    {
+      "id": "samhsa-988",
+      "label": "988 Suicide & Crisis Lifeline",
+      "url": "https://988lifeline.org/",
+      "citation": "988 Suicide & Crisis Lifeline.",
+      "category": "clinical"
+    },
+    {
+      "id": "asam-criteria",
+      "label": "ASAM Criteria — levels of care",
+      "url": "https://www.asam.org/asam-criteria/about-the-asam-criteria",
+      "citation": "American Society of Addiction Medicine. The ASAM criteria.",
+      "category": "clinical"
+    },
+
+    {
+      "id": "nimh-depression",
+      "label": "NIMH — Depression",
+      "url": "https://www.nimh.nih.gov/health/topics/depression",
+      "citation": "National Institute of Mental Health. Depression.",
+      "category": "clinical"
+    },
+    {
+      "id": "nimh-anxiety",
+      "label": "NIMH — Anxiety Disorders",
+      "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders",
+      "citation": "National Institute of Mental Health. Anxiety disorders.",
+      "category": "clinical"
+    },
+    {
+      "id": "nimh-ptsd",
+      "label": "NIMH — Post-Traumatic Stress Disorder",
+      "url": "https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd",
+      "citation": "National Institute of Mental Health. Post-traumatic stress disorder.",
+      "category": "clinical"
+    },
+    {
+      "id": "nimh-bipolar",
+      "label": "NIMH — Bipolar Disorder",
+      "url": "https://www.nimh.nih.gov/health/topics/bipolar-disorder",
+      "citation": "National Institute of Mental Health. Bipolar disorder.",
+      "category": "clinical"
+    },
+    {
+      "id": "nimh-schizophrenia",
+      "label": "NIMH — Schizophrenia",
+      "url": "https://www.nimh.nih.gov/health/topics/schizophrenia",
+      "citation": "National Institute of Mental Health. Schizophrenia.",
+      "category": "clinical"
+    },
+    {
+      "id": "nimh-eating-disorders",
+      "label": "NIMH — Eating Disorders",
+      "url": "https://www.nimh.nih.gov/health/topics/eating-disorders",
+      "citation": "National Institute of Mental Health. Eating disorders.",
+      "category": "clinical"
+    },
+    {
+      "id": "nimh-adhd",
+      "label": "NIMH — ADHD",
+      "url": "https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd",
+      "citation": "National Institute of Mental Health. Attention-deficit/hyperactivity disorder.",
+      "category": "clinical"
+    },
+    {
+      "id": "nimh-ocd",
+      "label": "NIMH — Obsessive-Compulsive Disorder",
+      "url": "https://www.nimh.nih.gov/health/topics/obsessive-compulsive-disorder-ocd",
+      "citation": "National Institute of Mental Health. Obsessive-compulsive disorder.",
+      "category": "clinical"
+    },
+    {
+      "id": "nimh-bpd",
+      "label": "NIMH — Borderline Personality Disorder",
+      "url": "https://www.nimh.nih.gov/health/topics/borderline-personality-disorder",
+      "citation": "National Institute of Mental Health. Borderline personality disorder.",
+      "category": "clinical"
+    },
+    {
+      "id": "nimh-suicide-prevention",
+      "label": "NIMH — Suicide Prevention",
+      "url": "https://www.nimh.nih.gov/health/topics/suicide-prevention",
+      "citation": "National Institute of Mental Health. Suicide prevention.",
+      "category": "clinical"
+    },
+    {
+      "id": "cdc-ace",
+      "label": "CDC — Adverse Childhood Experiences (ACEs)",
+      "url": "https://www.cdc.gov/aces/about/index.html",
+      "citation": "Centers for Disease Control and Prevention. About adverse childhood experiences.",
+      "category": "clinical"
+    },
+    {
+      "id": "cdc-ipv",
+      "label": "CDC — Intimate Partner Violence",
+      "url": "https://www.cdc.gov/intimate-partner-violence/about/index.html",
+      "citation": "Centers for Disease Control and Prevention. About intimate partner violence.",
+      "category": "clinical"
+    },
+    {
+      "id": "cdc-suicide-data",
+      "label": "CDC — Suicide Prevention Facts",
+      "url": "https://www.cdc.gov/suicide/facts/index.html",
+      "citation": "Centers for Disease Control and Prevention. Suicide prevention facts.",
+      "category": "clinical"
+    },
+    {
+      "id": "columbia-cssrs",
+      "label": "Columbia Protocol (C-SSRS) — suicide risk screening",
+      "url": "https://cssrs.columbia.edu/",
+      "citation": "The Columbia Lighthouse Project. Columbia-Suicide Severity Rating Scale (C-SSRS).",
+      "category": "clinical"
+    },
+    {
+      "id": "sprc",
+      "label": "Suicide Prevention Resource Center",
+      "url": "https://sprc.org/",
+      "citation": "Suicide Prevention Resource Center.",
+      "category": "clinical"
+    },
+
+    {
+      "id": "statpearls-mse",
+      "label": "StatPearls — Mental Status Examination",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK546682/",
+      "citation": "Voss RM, Das JM. Mental status examination. StatPearls. NCBI Bookshelf.",
+      "category": "clinical"
+    },
+    {
+      "id": "statpearls-cbt",
+      "label": "StatPearls — Cognitive Behavior Therapy",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK470241/",
+      "citation": "Chand SP, Kuckel DP, Huecker MR. Cognitive behavior therapy. StatPearls. NCBI Bookshelf.",
+      "category": "theory"
+    },
+    {
+      "id": "statpearls-grief",
+      "label": "StatPearls — Grief and Prolonged Grief Disorder",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK507832/",
+      "citation": "Mughal S, Azhar Y, Mahon MM, Siddiqui WJ. Grief and prolonged grief disorder. StatPearls. NCBI Bookshelf.",
+      "category": "clinical"
+    },
+    {
+      "id": "statpearls-defense-mechanisms",
+      "label": "StatPearls — Defense Mechanisms",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK559106/",
+      "citation": "Bailey R, Pico J. Defense mechanisms. StatPearls. NCBI Bookshelf.",
+      "category": "theory"
+    },
+    {
+      "id": "statpearls-erikson",
+      "label": "StatPearls — Erikson's Stages of Psychosocial Development",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK556096/",
+      "citation": "Orenstein GA, Lewis L. Erikson's stages of psychosocial development. StatPearls. NCBI Bookshelf.",
+      "category": "theory"
+    },
+    {
+      "id": "statpearls-piaget",
+      "label": "StatPearls — Piaget (cognitive development)",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK448206/",
+      "citation": "Malik F, Marwaha R. Cognitive development. StatPearls. NCBI Bookshelf.",
+      "category": "theory"
+    },
+    {
+      "id": "statpearls-group-therapy",
+      "label": "StatPearls — Group Therapy",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK549812/",
+      "citation": "Malhotra A, Baker J. Group therapy. StatPearls. NCBI Bookshelf.",
+      "category": "theory"
+    },
+    {
+      "id": "statpearls-burnout",
+      "label": "StatPearls — Healthcare Professional Burnout",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK538330/",
+      "citation": "De Hert S. Healthcare professional burnout, depression and suicide risk. StatPearls. NCBI Bookshelf.",
+      "category": "clinical"
+    },
+    {
+      "id": "statpearls-insomnia",
+      "label": "StatPearls — Chronic Insomnia",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK526136/",
+      "citation": "Bollu PC, Kaur H. Chronic insomnia. StatPearls. NCBI Bookshelf.",
+      "category": "clinical"
+    },
+    {
+      "id": "statpearls-milestones",
+      "label": "StatPearls — Developmental Milestones",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK557518/",
+      "citation": "Gerber RJ, Wilks T, Erdie-Lalena C. Developmental milestones. StatPearls. NCBI Bookshelf.",
+      "category": "theory"
+    },
+    {
+      "id": "stages-of-change",
+      "label": "StatPearls — Stages of Change Theory (Transtheoretical Model)",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK556005/",
+      "citation": "Raihan N, Cogburn M. Stages of change theory. StatPearls. NCBI Bookshelf.",
+      "category": "theory"
+    },
+    {
+      "id": "statpearls-sensitivity-specificity",
+      "label": "StatPearls — Diagnostic Testing Accuracy: Sensitivity, Specificity, Predictive Values",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK557491/",
+      "citation": "Shreffler J, Huecker MR. Diagnostic testing accuracy: Sensitivity, specificity, predictive values and likelihood ratios. StatPearls. NCBI Bookshelf.",
+      "category": "assessment"
+    },
+    {
+      "id": "statpearls-type-i-ii",
+      "label": "StatPearls — Type I and Type II Errors and Statistical Power",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK557530/",
+      "citation": "Banerjee A, Chitnis UB, Jadhav SL, Bhawalkar JS, Chaudhury S. Type I and type II errors and statistical power. StatPearls. NCBI Bookshelf.",
+      "category": "research"
+    },
+
+    {
+      "id": "nice-attachment",
+      "label": "NICE — Introduction to children's attachment",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK356196/",
+      "citation": "National Collaborating Centre for Mental Health. Introduction to children's attachment. In Children's attachment (NICE Guideline NG26). NCBI Bookshelf.",
+      "category": "theory"
+    },
+    {
+      "id": "behavioraltech-dbt",
+      "label": "Behavioral Tech — Dialectical Behavior Therapy (DBT)",
+      "url": "https://behavioraltech.org/resources/faqs/dialectical-behavior-therapy-dbt/",
+      "citation": "Behavioral Tech (Linehan Institute). What is dialectical behavior therapy (DBT)?",
+      "category": "theory"
+    },
+    {
+      "id": "div12-treatments",
+      "label": "APA Div. 12 — Research-Supported Psychological Treatments",
+      "url": "https://div12.org/treatments/",
+      "citation": "Society of Clinical Psychology (APA Division 12). Psychological treatments.",
+      "category": "theory"
+    },
+    {
+      "id": "mi-org",
+      "label": "MINT — Understanding Motivational Interviewing",
+      "url": "https://motivationalinterviewing.org/understanding-motivational-interviewing",
+      "citation": "Motivational Interviewing Network of Trainers. Understanding motivational interviewing.",
+      "category": "theory"
+    },
+    {
+      "id": "msjcc",
+      "label": "Multicultural and Social Justice Counseling Competencies (MSJCC)",
+      "url": "https://www.counseling.org/docs/default-source/competencies/multicultural-and-social-justice-counseling-competencies.pdf",
+      "citation": "Ratts, M. J., Singh, A. A., Nassar-McMillan, S., Butler, S. K., & McCullough, J. R. (2015). Multicultural and social justice counseling competencies. AMCD/ACA.",
+      "category": "theory"
+    },
+    {
+      "id": "harvard-neglect",
+      "label": "Harvard Center on the Developing Child — The Science of Neglect",
+      "url": "https://developingchild.harvard.edu/resources/inbrief-the-science-of-neglect/",
+      "citation": "Center on the Developing Child, Harvard University. InBrief: The science of neglect.",
+      "category": "theory"
+    },
+
+    {
+      "id": "onet",
+      "label": "O*NET OnLine (occupational data and career assessment)",
+      "url": "https://www.onetonline.org/",
+      "citation": "U.S. Department of Labor. O*NET OnLine.",
+      "category": "career"
+    },
+    {
+      "id": "bls-ooh",
+      "label": "Occupational Outlook Handbook (BLS)",
+      "url": "https://www.bls.gov/ooh/",
+      "citation": "U.S. Bureau of Labor Statistics. Occupational outlook handbook.",
+      "category": "career"
+    },
+    {
+      "id": "ncda",
+      "label": "National Career Development Association",
+      "url": "https://www.ncda.org/aws/NCDA/pt/sp/resources",
+      "citation": "National Career Development Association. Career development resources.",
+      "category": "career"
+    },
+
+    {
+      "id": "apa-testing-standards",
+      "label": "Standards for Educational and Psychological Testing (AERA/APA/NCME)",
+      "url": "https://www.apa.org/science/programs/testing/standards",
+      "citation": "American Educational Research Association, American Psychological Association, & National Council on Measurement in Education. (2014). Standards for educational and psychological testing.",
+      "category": "assessment"
+    },
+    {
+      "id": "oer-research-methods",
+      "label": "Research Methods in Psychology (open textbook)",
+      "url": "https://open.umn.edu/opentextbooks/textbooks/research-methods-in-psychology-2nd-canadian-edition",
+      "citation": "Price, P. C., Jhangiani, R., Chiang, I. A., Leighton, D. C., & Cuttler, C. Research methods in psychology (2nd Canadian ed.). Open Textbook Library.",
+      "category": "research",
+      "note": "Openly licensed; covers reliability, validity, sampling, and study design."
+    },
+    {
+      "id": "openstax-statistics",
+      "label": "OpenStax — Introductory Statistics",
+      "url": "https://openstax.org/details/books/introductory-statistics-2e",
+      "citation": "Illowsky, B., & Dean, S. Introductory statistics (2nd ed.). OpenStax.",
+      "category": "research",
+      "note": "Openly licensed; covers distributions, significance testing, and correlation."
+    }
+  ]
+}

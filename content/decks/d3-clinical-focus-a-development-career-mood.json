@@ -1,0 +1,1160 @@
+{
+  "domain": "D3",
+  "cards": [
+    {
+      "id": "d3-erikson-001",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3S",
+      "cacrep": ["human-growth"],
+      "tags": ["erikson", "psychosocial", "lifespan"],
+      "prompt": "List Erikson's eight psychosocial stages with their crisis and approximate age.",
+      "answer": "Trust vs. mistrust (0–1); autonomy vs. shame and doubt (1–3); initiative vs. guilt (3–6); industry vs. inferiority (6–12); identity vs. role confusion (12–18); intimacy vs. isolation (young adulthood); generativity vs. stagnation (middle adulthood); integrity vs. despair (late adulthood).",
+      "explanation": "Each stage presents a crisis whose resolution yields a virtue: hope, will, purpose, competence, fidelity, love, care, and wisdom. Erikson's model is epigenetic — unresolved earlier crises resurface later rather than being permanently foreclosed.",
+      "refs": ["statpearls-erikson"]
+    },
+    {
+      "id": "d3-erikson-002",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AB",
+      "cacrep": ["human-growth"],
+      "tags": ["erikson", "aging", "late-adulthood"],
+      "prompt": "A 72-year-old client reviews their life with regret, saying they wasted their opportunities. Which Eriksonian crisis is most relevant?",
+      "choices": [
+        { "text": "Integrity vs. despair", "correct": true, "rationale": "Late adulthood centres on reviewing one's life and either accepting it as meaningful or experiencing despair over unlived possibilities." },
+        { "text": "Generativity vs. stagnation", "correct": false, "rationale": "That is the middle-adulthood crisis, concerning contribution to the next generation." },
+        { "text": "Intimacy vs. isolation", "correct": false, "rationale": "The young-adult crisis, concerning the capacity to form close committed relationships." },
+        { "text": "Identity vs. role confusion", "correct": false, "rationale": "The adolescent crisis of establishing a coherent sense of self." }
+      ],
+      "explanation": "Life review is developmentally normative in late adulthood rather than pathological. Reminiscence-based interventions work with this process directly rather than redirecting away from it.",
+      "refs": ["statpearls-erikson"]
+    },
+    {
+      "id": "d3-piaget-003",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3AQ",
+      "cacrep": ["human-growth"],
+      "tags": ["piaget", "cognitive-development"],
+      "prompt": "Name Piaget's four stages of cognitive development, their ages, and a defining achievement of each.",
+      "answer": "Sensorimotor (0–2): learning through senses and action; achieves object permanence. Preoperational (2–7): symbolic thought and language; marked by egocentrism and lack of conservation. Concrete operational (7–11): logical reasoning about concrete objects; achieves conservation, reversibility, and classification. Formal operational (11+): abstract, hypothetical, and deductive reasoning.",
+      "explanation": "Key mechanisms are assimilation (fitting new information into existing schemas) and accommodation (changing schemas to fit new information). Clinically, the stage determines what a child can understand about divorce, death, or illness.",
+      "refs": ["statpearls-piaget", "statpearls-milestones"]
+    },
+    {
+      "id": "d3-piaget-004",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AQ",
+      "cacrep": ["human-growth"],
+      "tags": ["piaget", "conservation", "children"],
+      "prompt": "A 5-year-old insists a tall thin glass holds more juice than a short wide glass, though they watched the same amount poured into each. What does this demonstrate?",
+      "choices": [
+        { "text": "Lack of conservation, typical of the preoperational stage", "correct": true, "rationale": "Conservation — understanding that quantity is unchanged by appearance — is not yet achieved in the preoperational stage." },
+        { "text": "Object permanence has not developed", "correct": false, "rationale": "Object permanence — knowing objects exist when out of sight — is achieved in the sensorimotor stage, well before age 5." },
+        { "text": "Concrete operational reasoning", "correct": false, "rationale": "A concrete operational child would recognize the quantity is the same." },
+        { "text": "Formal operational abstract reasoning", "correct": false, "rationale": "Far beyond this age and unrelated to the task." }
+      ],
+      "explanation": "Preoperational children centre on one salient dimension — here, height — and lack reversibility. Related features are egocentrism (difficulty taking another's visual or mental perspective) and animism.",
+      "refs": ["statpearls-piaget"]
+    },
+    {
+      "id": "d3-kohlberg-005",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3S",
+      "cacrep": ["human-growth"],
+      "tags": ["kohlberg", "moral-development"],
+      "prompt": "Name Kohlberg's three levels of moral development and their two stages each.",
+      "answer": "Preconventional — Stage 1 obedience and punishment orientation; Stage 2 individualism and exchange (what's in it for me). Conventional — Stage 3 good interpersonal relationships (being seen as good); Stage 4 maintaining social order and law. Postconventional — Stage 5 social contract and individual rights; Stage 6 universal ethical principles.",
+      "explanation": "Kohlberg scored the *reasoning* behind a moral judgement, not the judgement itself. Gilligan critiqued the model for reflecting a justice orientation derived from male samples, proposing a complementary ethic of care.",
+      "refs": ["statpearls-erikson", "oer-research-methods"]
+    },
+    {
+      "id": "d3-attachment-006",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3M",
+      "cacrep": ["human-growth"],
+      "tags": ["attachment", "bowlby", "ainsworth"],
+      "prompt": "Name the four attachment styles identified in the Strange Situation and their characteristic behaviour on reunion.",
+      "answer": "Secure — distressed at separation, readily comforted and returns to play on reunion. Insecure-avoidant — little distress at separation, avoids or ignores the caregiver on reunion. Insecure-ambivalent/resistant — highly distressed, simultaneously seeks and resists comfort, hard to settle. Disorganized/disoriented — contradictory, confused, or fearful behaviour with no coherent strategy, often associated with frightening caregiving.",
+      "explanation": "Bowlby developed attachment theory; Ainsworth operationalized it through the Strange Situation. Disorganized attachment was added later by Main and Solomon and carries the strongest association with later psychopathology.",
+      "refs": ["nice-attachment", "harvard-neglect"]
+    },
+    {
+      "id": "d3-attachment-007",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3M",
+      "cacrep": ["human-growth", "helping-relationships"],
+      "tags": ["attachment", "adult-relationships"],
+      "prompt": "An adult client describes intense fear of abandonment, rapid intense attachments, and frequent need for reassurance. Which attachment pattern does this most resemble?",
+      "choices": [
+        { "text": "Anxious/preoccupied attachment", "correct": true, "rationale": "Preoccupied attachment features hyperactivation of the attachment system — heightened proximity-seeking, fear of abandonment, and reassurance-seeking." },
+        { "text": "Dismissive-avoidant attachment", "correct": false, "rationale": "Dismissive attachment involves deactivation — minimizing the importance of closeness and emphasizing self-reliance." },
+        { "text": "Secure attachment", "correct": false, "rationale": "Secure attachment is characterized by comfort with both intimacy and autonomy." },
+        { "text": "Fearful-avoidant attachment", "correct": false, "rationale": "Fearful-avoidant combines desire for closeness with fear of it, producing approach–avoidance; here the pattern is consistent approach." }
+      ],
+      "explanation": "Early attachment shapes internal working models of self and others that persist into adult relationships — including the therapeutic one. Attachment patterns are influenced but not fixed by early experience.",
+      "refs": ["nice-attachment", "statpearls-erikson"]
+    },
+    {
+      "id": "d3-holland-008",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3U",
+      "cacrep": ["career"],
+      "tags": ["holland", "career", "riasec"],
+      "prompt": "Name Holland's six personality/environment types (RIASEC) and the theory's core proposition.",
+      "answer": "Realistic (practical, hands-on, mechanical); Investigative (analytical, scientific, curious); Artistic (creative, expressive, unstructured); Social (helping, teaching, cooperative); Enterprising (persuading, leading, selling); Conventional (organizing, detail-oriented, structured). The core proposition is that job satisfaction and stability increase with congruence — the fit between a person's type and their work environment's type.",
+      "explanation": "The types sit on a hexagon; adjacent types are most similar and opposite types most dissimilar. Key concepts include congruence (person–environment fit), differentiation (how distinct the profile is), and consistency (how adjacent the top types are). The Self-Directed Search operationalizes it.",
+      "refs": ["onet", "ncda"]
+    },
+    {
+      "id": "d3-holland-009",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3U",
+      "cacrep": ["career"],
+      "tags": ["holland", "career", "congruence"],
+      "prompt": "A client with a strong Artistic–Social profile works in a highly structured accounting role and reports chronic dissatisfaction. How would Holland's theory explain this?",
+      "choices": [
+        { "text": "Low congruence between the client's type and a Conventional work environment", "correct": true, "rationale": "Dissatisfaction is predicted by poor person–environment fit, which is exactly the mismatch described." },
+        { "text": "Low differentiation in the client's interest profile", "correct": false, "rationale": "Differentiation refers to how sharply defined a profile is; this client's profile is clearly defined." },
+        { "text": "Career immaturity", "correct": false, "rationale": "Career maturity is a Super concept concerning readiness for developmental tasks, not fit." },
+        { "text": "An external locus of control", "correct": false, "rationale": "Locus of control is a separate construct not central to Holland's model." }
+      ],
+      "explanation": "Congruence predicts satisfaction, stability, and achievement. Interventions may target changing the environment, changing the role within it, or changing occupations — not simply adjusting the client's expectations.",
+      "refs": ["onet", "bls-ooh", "ncda"]
+    },
+    {
+      "id": "d3-super-010",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3U",
+      "cacrep": ["career"],
+      "tags": ["super", "career", "life-span"],
+      "prompt": "Name Super's five life-span career development stages and their central task.",
+      "answer": "Growth (roughly to 14) — developing self-concept, interests, and capacities. Exploration (15–24) — trying roles, tentative choices, crystallizing and specifying a preference. Establishment (25–44) — entering a chosen field, stabilizing, consolidating and advancing. Maintenance (45–64) — holding on, keeping up, and innovating within the established position. Disengagement/Decline (65+) — reducing output, planning retirement, transitioning out of the work role.",
+      "explanation": "Super's central idea is that career is the implementation of self-concept over the life span. His Life-Career Rainbow adds the interaction of multiple life roles — child, student, worker, partner, parent, citizen, leisurite — and 'recycling' means people can revisit earlier stages after a career change.",
+      "refs": ["ncda", "bls-ooh"]
+    },
+    {
+      "id": "d3-krumboltz-011",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3U",
+      "cacrep": ["career"],
+      "tags": ["krumboltz", "happenstance", "career"],
+      "prompt": "A career counselor helps a client develop curiosity, persistence, flexibility, optimism, and risk-taking so they can capitalize on unplanned events. Which theory is being applied?",
+      "choices": [
+        { "text": "Krumboltz's Planned Happenstance theory", "correct": true, "rationale": "Planned Happenstance names exactly these five skills for turning chance events into career opportunities." },
+        { "text": "Holland's theory of vocational personalities", "correct": false, "rationale": "Holland focuses on matching type to environment, not on managing unplanned events." },
+        { "text": "Super's life-span theory", "correct": false, "rationale": "Super emphasizes developmental stages and self-concept implementation." },
+        { "text": "Roe's theory of early determinants", "correct": false, "rationale": "Roe linked occupational choice to early parent–child relationships and need satisfaction." }
+      ],
+      "explanation": "Planned Happenstance grew out of Krumboltz's earlier social learning theory of career decision making. It reframes indecision as open-mindedness rather than a deficit — a useful stance with clients paralyzed by pressure to pick one right path.",
+      "refs": ["ncda", "onet"]
+    },
+    {
+      "id": "d3-career-012",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3U",
+      "cacrep": ["career"],
+      "tags": ["gottfredson", "circumscription", "career"],
+      "prompt": "Summarize Gottfredson's theory of circumscription and compromise.",
+      "answer": "Children progressively eliminate occupational options that conflict with their developing self-concept — first by size and power (ages 3–5), then by sex role (6–8), then by social valuation and prestige (9–13), and finally by internal unique self (14+). This narrowing is circumscription. Compromise is the later adjustment of aspirations when reality constrains access, and people typically sacrifice interest first, then prestige, and give up sex-type fit last.",
+      "explanation": "The theory explains why some options are never even considered by the time a client reaches career counseling. Interventions often involve re-opening prematurely eliminated possibilities, particularly those foreclosed on gender or class grounds.",
+      "refs": ["ncda", "bls-ooh"]
+    },
+    {
+      "id": "d3-career-013",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AB",
+      "cacrep": ["career"],
+      "tags": ["retirement", "transition", "aging"],
+      "prompt": "A client approaching retirement expresses fear about losing their sense of purpose. What is the most useful counseling focus?",
+      "choices": [
+        { "text": "Exploring identity beyond the work role and developing meaningful post-retirement roles and structure", "correct": true, "rationale": "Retirement distress typically concerns loss of identity, structure, and social connection more than loss of income." },
+        { "text": "Reassuring the client that retirement is universally experienced as a relief", "correct": false, "rationale": "False reassurance dismisses a real concern and is not supported by the evidence on retirement adjustment." },
+        { "text": "Advising the client to delay retirement indefinitely", "correct": false, "rationale": "Directive advice on a major life decision exceeds the counselor's role." },
+        { "text": "Focusing exclusively on financial planning", "correct": false, "rationale": "Finances matter but are outside counseling scope and are not the stated concern." }
+      ],
+      "explanation": "Super's framework is directly applicable: as the worker role recedes, other life roles must expand to carry self-concept. Retirement is best approached as a transition process rather than a single event.",
+      "refs": ["ncda", "statpearls-erikson", "bls-ooh"]
+    },
+    {
+      "id": "d3-career-014",
+      "type": "cloze",
+      "domain": "D3",
+      "task": "3U",
+      "cacrep": ["career"],
+      "tags": ["self-efficacy", "bandura", "career"],
+      "prompt": "Social Cognitive Career Theory holds that career interests and choices are shaped largely by {{self-efficacy beliefs and outcome expectations}}, which develop through mastery experience, vicarious learning, social persuasion, and physiological states.",
+      "answer": "self-efficacy beliefs and outcome expectations",
+      "explanation": "SCCT (Lent, Brown, Hackett) builds on Bandura. Its practical implication is that low self-efficacy can eliminate an option regardless of actual ability, so interventions target the belief — usually through graded mastery experiences.",
+      "refs": ["ncda", "onet"]
+    },
+    {
+      "id": "d3-grief-015",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3K",
+      "cacrep": ["human-growth"],
+      "tags": ["grief", "kubler-ross", "stages"],
+      "prompt": "A grieving client asks why they have not moved through the 'stages of grief' in order. What is the most accurate response?",
+      "choices": [
+        { "text": "Grief does not follow a fixed sequence; the stages describe common experiences that vary in order, intensity, and presence between people", "correct": true, "rationale": "Kübler-Ross's stages were never validated as an invariant sequence, and grief research consistently shows individual, oscillating patterns." },
+        { "text": "The client is likely experiencing complicated grief and should be reassessed", "correct": false, "rationale": "Non-sequential grief is normal, not evidence of pathology." },
+        { "text": "The stages must be completed in order for healthy resolution", "correct": false, "rationale": "This is the common misconception the question targets." },
+        { "text": "Skipping stages indicates avoidance that should be confronted", "correct": false, "rationale": "There is no requirement to experience every stage, and confrontation is not indicated." }
+      ],
+      "explanation": "Kübler-Ross (denial, anger, bargaining, depression, acceptance) originally described dying patients, not the bereaved. The Dual Process Model — oscillation between loss-oriented and restoration-oriented coping — better fits the evidence, as does Worden's task-based model.",
+      "refs": ["statpearls-grief"]
+    },
+    {
+      "id": "d3-grief-016",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3K",
+      "cacrep": ["human-growth"],
+      "tags": ["grief", "worden", "tasks"],
+      "prompt": "Name Worden's four tasks of mourning.",
+      "answer": "Accept the reality of the loss; process the pain of grief; adjust to a world without the deceased (external, internal, and spiritual adjustments); and find an enduring connection with the deceased while embarking on a new life.",
+      "explanation": "Worden's model is active rather than passive — tasks to be worked through instead of stages to be endured, which gives counseling clear points of intervention. The fourth task was revised away from 'withdrawing emotional energy' toward maintaining continuing bonds.",
+      "refs": ["statpearls-grief"]
+    },
+    {
+      "id": "d3-grief-017",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3K",
+      "cacrep": ["human-growth", "social-cultural"],
+      "tags": ["disenfranchised-grief", "loss"],
+      "prompt": "A client grieving the death of a former partner from whom they were estranged says no one acknowledges their loss. What concept best describes this?",
+      "choices": [
+        { "text": "Disenfranchised grief — loss that is not socially recognized, validated, or publicly mourned", "correct": true, "rationale": "Doka's concept covers grief where the relationship, the loss, or the griever is not socially sanctioned." },
+        { "text": "Anticipatory grief", "correct": false, "rationale": "Anticipatory grief occurs before an expected death." },
+        { "text": "Prolonged grief disorder", "correct": false, "rationale": "That is a diagnosis defined by duration and impairment, not by social recognition." },
+        { "text": "Ambiguous loss", "correct": false, "rationale": "Ambiguous loss involves unclear status — a missing person, or dementia where someone is physically present but psychologically absent." }
+      ],
+      "explanation": "Common instances of disenfranchised grief include miscarriage, pet loss, the death of an ex-partner or an affair partner, loss for people with cognitive disabilities, and deaths by overdose or suicide where stigma suppresses mourning. Validation is the primary intervention.",
+      "refs": ["statpearls-grief"]
+    },
+    {
+      "id": "d3-depression-018",
+      "type": "scenario",
+      "domain": "D3",
+      "task": "3L",
+      "cacrep": ["helping-relationships"],
+      "tags": ["depression", "behavioral-activation", "intervention"],
+      "prompt": "A depressed client has withdrawn from nearly all activities and says they will resume when they feel motivated. What intervention directly targets this pattern?",
+      "choices": [
+        { "text": "Behavioural activation — scheduling valued and pleasurable activity regardless of current motivation", "correct": true, "rationale": "BA works from the premise that action precedes motivation, breaking the withdrawal–low mood cycle." },
+        { "text": "Waiting until motivation returns before scheduling activity", "correct": false, "rationale": "This accepts the client's premise and perpetuates the very cycle that maintains depression." },
+        { "text": "Interpreting the withdrawal as unconscious resistance", "correct": false, "rationale": "Interpretation does not address the behavioural contingency and is not indicated as a first-line approach." },
+        { "text": "Focusing exclusively on identifying the childhood origins of the depression", "correct": false, "rationale": "Insight into origins does not by itself reverse behavioural withdrawal." }
+      ],
+      "explanation": "Behavioural activation performs comparably to full cognitive therapy for depression and is simpler to deliver. The core reframe given to clients: motivation follows action rather than preceding it.",
+      "refs": ["statpearls-cbt", "div12-treatments", "nimh-depression"]
+    },
+    {
+      "id": "d3-depression-019",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3W",
+      "cacrep": ["assessment"],
+      "tags": ["depression", "somatic", "physical"],
+      "prompt": "What physical symptoms commonly accompany depression, and why do they matter clinically?",
+      "answer": "Fatigue and loss of energy; sleep disturbance (insomnia or hypersomnia); appetite and weight change; psychomotor agitation or retardation; unexplained aches, headaches, and gastrointestinal complaints; and reduced libido. They matter because they may be the presenting complaint — particularly in cultures where somatic expression of distress is more acceptable — and because they overlap with medical conditions that must be ruled out.",
+      "explanation": "Many clients first present to primary care with physical complaints rather than reporting low mood. Somatic presentation of depression is common across many cultural contexts and is a frequent source of missed diagnosis.",
+      "refs": ["nimh-depression", "dsm5tr", "statpearls-insomnia"]
+    },
+    {
+      "id": "d3-anxiety-020",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3H",
+      "cacrep": ["helping-relationships"],
+      "tags": ["anxiety", "exposure", "avoidance"],
+      "prompt": "Why is avoidance considered the maintaining factor in anxiety disorders?",
+      "choices": [
+        { "text": "Because escaping the feared situation produces immediate relief that negatively reinforces avoidance and prevents disconfirmation of the feared outcome", "correct": true, "rationale": "Negative reinforcement strengthens avoidance, and the client never learns that the feared outcome does not occur or is survivable." },
+        { "text": "Because avoidance directly increases physiological arousal", "correct": false, "rationale": "Avoidance reduces arousal in the short term, which is precisely why it is reinforcing." },
+        { "text": "Because avoidance is a conscious choice clients make deliberately", "correct": false, "rationale": "Avoidance is often automatic and subtle, including safety behaviours the client may not recognize." },
+        { "text": "Because avoidance causes the original traumatic event to recur", "correct": false, "rationale": "This is not a mechanism in any anxiety model." }
+      ],
+      "explanation": "Exposure therapy targets this directly through graduated, repeated contact with feared stimuli without escape or safety behaviours. Subtle safety behaviours — carrying medication, sitting near exits — undermine exposure because they preserve the belief that the outcome was avoided rather than absent.",
+      "refs": ["statpearls-cbt", "div12-treatments", "nimh-anxiety"]
+    },
+    {
+      "id": "d3-anxiety-021",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3V",
+      "cacrep": ["assessment"],
+      "tags": ["panic", "physiology", "psychoeducation"],
+      "prompt": "A client having panic attacks is convinced they are having a heart attack despite normal cardiac workups. What psychoeducation is most useful?",
+      "choices": [
+        { "text": "Explaining the fight-or-flight response and how catastrophic misinterpretation of normal bodily sensations escalates panic", "correct": true, "rationale": "The cognitive model of panic centres on catastrophic misinterpretation of benign sensations, and understanding the mechanism reduces the fear-of-fear cycle." },
+        { "text": "Telling the client the symptoms are 'all in their head'", "correct": false, "rationale": "The physical symptoms are real; dismissing them damages the alliance and is inaccurate." },
+        { "text": "Recommending they avoid all situations where attacks have occurred", "correct": false, "rationale": "This builds agoraphobic avoidance and worsens the course." },
+        { "text": "Suggesting repeated cardiac testing for reassurance", "correct": false, "rationale": "Reassurance-seeking is a safety behaviour that maintains health anxiety." }
+      ],
+      "explanation": "Interoceptive exposure — deliberately inducing feared sensations through hyperventilation, spinning, or breath-holding — is a distinctive and effective component of panic treatment, teaching that the sensations themselves are not dangerous.",
+      "refs": ["statpearls-cbt", "nimh-anxiety", "div12-treatments"]
+    },
+    {
+      "id": "d3-trauma-022",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3X",
+      "cacrep": ["helping-relationships"],
+      "tags": ["trauma", "phases", "treatment"],
+      "prompt": "Describe the three-phase consensus model of trauma treatment.",
+      "answer": "Phase 1 — safety and stabilization: establishing physical and emotional safety, psychoeducation, affect regulation and grounding skills, and reducing self-harm or substance use. Phase 2 — processing: working through traumatic memories using an evidence-based approach such as prolonged exposure, cognitive processing therapy, or EMDR. Phase 3 — integration and reconnection: consolidating gains, rebuilding relationships, meaning-making, and re-engaging with life goals.",
+      "explanation": "Sequencing matters: processing before adequate stabilization can overwhelm and destabilize the client. The commonest error is moving to memory work before regulation skills are in place.",
+      "refs": ["samhsa-tip57", "nimh-ptsd", "div12-treatments"]
+    },
+    {
+      "id": "d3-trauma-023",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3X",
+      "cacrep": ["human-growth"],
+      "tags": ["ace", "childhood-trauma", "outcomes"],
+      "prompt": "What did the Adverse Childhood Experiences (ACE) study establish?",
+      "choices": [
+        { "text": "A graded dose–response relationship between the number of adverse childhood experiences and later physical and mental health problems", "correct": true, "rationale": "The central finding was that risk increases cumulatively with the ACE count across a wide range of outcomes." },
+        { "text": "That childhood adversity affects mental but not physical health", "correct": false, "rationale": "The study's most striking findings included physical outcomes such as heart disease, cancer, and early mortality." },
+        { "text": "That a single adverse experience is sufficient to cause adult disorder", "correct": false, "rationale": "The relationship is cumulative and probabilistic rather than deterministic." },
+        { "text": "That adverse childhood experiences are rare in the general population", "correct": false, "rationale": "The study found ACEs to be remarkably common, including among insured, middle-class adults." }
+      ],
+      "explanation": "The ten original ACEs span abuse, neglect, and household dysfunction. Important caveats: the score is a population-level research tool, not a diagnostic instrument, and it omits community-level adversity such as racism and poverty. Protective relationships buffer the effect.",
+      "refs": ["cdc-ace", "harvard-neglect", "samhsa-tip57"]
+    },
+    {
+      "id": "d3-trauma-024",
+      "type": "cloze",
+      "domain": "D3",
+      "task": "3X",
+      "cacrep": ["helping-relationships"],
+      "tags": ["window-of-tolerance", "regulation"],
+      "prompt": "The zone of arousal in which a person can process information and engage therapeutically is the {{window of tolerance}}; above it lies hyperarousal, and below it hypoarousal or shutdown.",
+      "answer": "window of tolerance",
+      "explanation": "The concept guides pacing: outside the window, insight-oriented work is ineffective because the client cannot process. Grounding brings a hyperaroused client down; activating and orienting techniques bring a hypoaroused client up.",
+      "refs": ["samhsa-tip57", "nimh-ptsd"]
+    },
+    {
+      "id": "d3-hopeless-025",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3L",
+      "cacrep": ["assessment"],
+      "tags": ["hopelessness", "suicide-risk", "depression"],
+      "prompt": "Why is hopelessness given particular weight in suicide risk assessment?",
+      "choices": [
+        { "text": "Because it predicts suicidal behaviour more strongly than depression severity alone", "correct": true, "rationale": "Beck's research established hopelessness as a stronger predictor of eventual suicide than the overall severity of depression." },
+        { "text": "Because it indicates the client is not taking their medication", "correct": false, "rationale": "Hopelessness is not a marker of adherence." },
+        { "text": "Because it always accompanies psychotic symptoms", "correct": false, "rationale": "Hopelessness occurs across many presentations and is not tied to psychosis." },
+        { "text": "Because it means the client has already decided on a plan", "correct": false, "rationale": "Hopelessness raises risk but does not by itself indicate a formed plan." }
+      ],
+      "explanation": "Clinically, this means targeting hopelessness directly — through behavioural experiments, future-oriented planning, and identifying reasons for living — rather than assuming it will lift as depression improves.",
+      "refs": ["nimh-suicide-prevention", "sprc", "statpearls-cbt"]
+    },
+    {
+      "id": "d3-rumination-026",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AC",
+      "cacrep": ["helping-relationships"],
+      "tags": ["rumination", "intrusive-thoughts", "intervention"],
+      "prompt": "A client repeatedly analyses past failures, believing this will produce insight. What is the most accurate framing?",
+      "choices": [
+        { "text": "Rumination — repetitive abstract self-focused thought that maintains rather than resolves distress", "correct": true, "rationale": "Rumination is characterized by an abstract, evaluative 'why' focus that prolongs low mood without producing solutions." },
+        { "text": "Productive problem-solving that should be encouraged", "correct": false, "rationale": "Rumination is distinguished from problem-solving precisely by producing no actionable outcome." },
+        { "text": "An obsession requiring exposure and response prevention", "correct": false, "rationale": "Obsessions are ego-dystonic intrusions; rumination is experienced as purposeful thinking." },
+        { "text": "A dissociative process", "correct": false, "rationale": "Dissociation involves disruption of consciousness, memory, or identity, which is not described." }
+      ],
+      "explanation": "The useful distinction for clients is abstract 'why' processing versus concrete 'how' processing. Interventions shift attention from abstract evaluation to concrete, specific, action-focused thinking, or use mindfulness to change the relationship to the thought.",
+      "refs": ["statpearls-cbt", "nimh-depression", "div12-treatments"]
+    },
+    {
+      "id": "d3-ocd-027",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3T",
+      "cacrep": ["helping-relationships"],
+      "tags": ["ocd", "erp", "compulsions"],
+      "prompt": "What is the first-line psychological treatment for obsessive-compulsive disorder?",
+      "choices": [
+        { "text": "Exposure and response prevention (ERP)", "correct": true, "rationale": "ERP — deliberate exposure to obsessional triggers while refraining from the compulsion — is the best-supported psychological treatment for OCD." },
+        { "text": "Supportive counseling focused on reassurance", "correct": false, "rationale": "Reassurance functions as a compulsion and maintains the disorder." },
+        { "text": "Thought-stopping techniques", "correct": false, "rationale": "Thought-stopping is ineffective and can increase intrusion frequency through ironic rebound." },
+        { "text": "Psychodynamic exploration of the symbolic meaning of the obsessions", "correct": false, "rationale": "This has no established efficacy for OCD compared with ERP." }
+      ],
+      "explanation": "Response prevention is the essential component: exposure without preventing the compulsion allows the ritual to be credited with preventing the feared outcome. Family accommodation — relatives participating in rituals or providing reassurance — must also be addressed.",
+      "refs": ["nimh-ocd", "div12-treatments", "statpearls-cbt"]
+    },
+    {
+      "id": "d3-stress-028",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3AH",
+      "cacrep": ["helping-relationships"],
+      "tags": ["stress", "coping", "lazarus"],
+      "prompt": "Describe Lazarus and Folkman's transactional model of stress and the two forms of coping it identifies.",
+      "answer": "Stress arises from the transaction between person and environment, mediated by appraisal. Primary appraisal evaluates whether the situation is irrelevant, benign, or a threat/challenge/harm; secondary appraisal evaluates whether one has the resources to cope. Problem-focused coping acts to change the stressor itself and is most useful when the situation is controllable; emotion-focused coping regulates the distress and is most useful when it is not.",
+      "explanation": "The clinical payoff is matching coping to controllability. Problem-focused coping applied to an uncontrollable situation produces frustration; emotion-focused coping applied to a solvable problem produces avoidance.",
+      "refs": ["samhsa-tip57", "statpearls-burnout"]
+    },
+    {
+      "id": "d3-insomnia-029",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3P",
+      "cacrep": ["helping-relationships"],
+      "tags": ["insomnia", "cbt-i", "sleep"],
+      "prompt": "Which component of CBT-I involves restricting time in bed to consolidate sleep and rebuild sleep drive?",
+      "choices": [
+        { "text": "Sleep restriction therapy", "correct": true, "rationale": "Sleep restriction limits time in bed to approximate actual sleep time, increasing sleep efficiency and homeostatic drive." },
+        { "text": "Stimulus control", "correct": false, "rationale": "Stimulus control re-associates the bed with sleep — getting out of bed when unable to sleep, using the bed only for sleep and sex." },
+        { "text": "Sleep hygiene education", "correct": false, "rationale": "Sleep hygiene covers general habits and is insufficient as a standalone treatment." },
+        { "text": "Paradoxical intention", "correct": false, "rationale": "Paradoxical intention involves attempting to stay awake to reduce performance anxiety about sleeping." }
+      ],
+      "explanation": "CBT-I combines sleep restriction, stimulus control, cognitive restructuring of sleep-related beliefs, relaxation, and sleep hygiene. It is first-line for chronic insomnia ahead of hypnotic medication, with better durability.",
+      "refs": ["statpearls-insomnia", "div12-treatments"]
+    },
+    {
+      "id": "d3-sleep-030",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3AF",
+      "cacrep": ["helping-relationships"],
+      "tags": ["sleep-hygiene", "psychoeducation"],
+      "prompt": "List the core sleep hygiene recommendations.",
+      "answer": "Keep a consistent sleep and wake time including weekends; avoid caffeine in the afternoon and limit alcohol and nicotine; get regular exercise but not immediately before bed; keep the bedroom dark, quiet, and cool; avoid screens and bright light before bed; avoid long or late naps; do not eat heavily late at night; reserve the bed for sleep and sex; and get out of bed if unable to sleep after about 20 minutes.",
+      "explanation": "Alcohol is the most commonly misunderstood item: it shortens sleep onset but fragments the second half of the night and suppresses REM. Sleep hygiene alone rarely resolves chronic insomnia and works best as part of CBT-I.",
+      "refs": ["statpearls-insomnia"]
+    },
+    {
+      "id": "d3-anger-031",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AX",
+      "cacrep": ["helping-relationships"],
+      "tags": ["anger", "emotional-dysregulation", "intervention"],
+      "prompt": "A client escalates rapidly from mild irritation to rage with little awareness of the intermediate steps. What is the most useful initial intervention?",
+      "choices": [
+        { "text": "Building awareness of early physiological and cognitive cues so the client can intervene before escalation", "correct": true, "rationale": "Early cue recognition creates the window in which any regulation strategy can be applied; without it, techniques arrive too late." },
+        { "text": "Teaching the client to suppress angry feelings", "correct": false, "rationale": "Suppression is ineffective and associated with rebound and physiological cost." },
+        { "text": "Encouraging cathartic release such as hitting a pillow", "correct": false, "rationale": "Catharsis theory is not supported; aggressive venting tends to increase rather than discharge anger." },
+        { "text": "Advising the client to avoid all situations that provoke anger", "correct": false, "rationale": "Blanket avoidance is impractical and prevents developing regulation skills." }
+      ],
+      "explanation": "Once escalation reaches high arousal, cognitive strategies become unavailable — hence the emphasis on early detection and time-out. DBT's distress tolerance and emotion regulation modules address this systematically.",
+      "refs": ["behavioraltech-dbt", "statpearls-cbt", "div12-treatments"]
+    },
+    {
+      "id": "d3-dysregulation-032",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AX",
+      "cacrep": ["helping-relationships"],
+      "tags": ["dbt", "emotion-regulation", "skills"],
+      "prompt": "Which are the four skills modules of standard Dialectical Behavior Therapy?",
+      "choices": [
+        { "text": "Mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness", "correct": true, "rationale": "These are DBT's four modules, with mindfulness as the core skill running through the others." },
+        { "text": "Cognitive restructuring, exposure, behavioural activation, and relapse prevention", "correct": false, "rationale": "These are CBT components rather than DBT modules." },
+        { "text": "Empathy, genuineness, unconditional positive regard, and congruence", "correct": false, "rationale": "These are person-centred conditions, not DBT skills." },
+        { "text": "Assessment, planning, intervention, and evaluation", "correct": false, "rationale": "This is a generic helping-process sequence." }
+      ],
+      "explanation": "The 'dialectic' is the synthesis of acceptance and change — validating the client's experience while working toward behavioural change. Standard DBT includes individual therapy, skills group, phone coaching, and a consultation team for the therapist.",
+      "refs": ["behavioraltech-dbt", "nimh-bpd", "div12-treatments"]
+    },
+    {
+      "id": "d3-selfesteem-033",
+      "type": "scenario",
+      "domain": "D3",
+      "task": "3L",
+      "cacrep": ["helping-relationships"],
+      "tags": ["self-esteem", "cognitive-distortion", "core-beliefs"],
+      "prompt": "A client responds to a promotion by saying 'they were just desperate; anyone could have done it'. Which cognitive distortion is this?",
+      "choices": [
+        { "text": "Disqualifying the positive — rejecting positive experiences by insisting they do not count", "correct": true, "rationale": "The client acknowledges the event but strips it of any positive implication for self-worth." },
+        { "text": "Catastrophizing", "correct": false, "rationale": "Catastrophizing predicts the worst possible outcome; no prediction is being made here." },
+        { "text": "Mind reading", "correct": false, "rationale": "Mind reading assumes knowledge of others' thoughts; the distortion here concerns the meaning of the event." },
+        { "text": "Emotional reasoning", "correct": false, "rationale": "Emotional reasoning treats feelings as evidence of fact — 'I feel worthless, so I am'." }
+      ],
+      "explanation": "Common distortions to know: all-or-nothing thinking, overgeneralization, mental filter, disqualifying the positive, jumping to conclusions (mind reading and fortune telling), magnification/minimization, emotional reasoning, should statements, labelling, and personalization.",
+      "refs": ["statpearls-cbt", "div12-treatments"]
+    },
+    {
+      "id": "d3-cbt-034",
+      "type": "cloze",
+      "domain": "D3",
+      "task": "3L",
+      "cacrep": ["helping-relationships"],
+      "tags": ["cbt", "cognitive-model", "beck"],
+      "prompt": "In Beck's cognitive model, the cognitive triad in depression comprises negative views of {{the self, the world, and the future}}.",
+      "answer": "the self, the world, and the future",
+      "explanation": "Beneath automatic thoughts lie intermediate beliefs (rules, attitudes, assumptions) and core beliefs — typically clustering around helplessness, unlovability, or worthlessness. Therapy usually starts at the surface with automatic thoughts and works downward.",
+      "refs": ["statpearls-cbt", "nimh-depression"]
+    },
+    {
+      "id": "d3-loneliness-035",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3M",
+      "cacrep": ["helping-relationships"],
+      "tags": ["loneliness", "isolation", "intervention"],
+      "prompt": "What distinguishes loneliness from social isolation, and why does the distinction matter clinically?",
+      "choices": [
+        { "text": "Isolation is the objective absence of social contact; loneliness is the subjective distress at a gap between desired and actual connection — so increasing contact alone may not resolve loneliness", "correct": true, "rationale": "The two are only moderately correlated, and interventions that add contact without addressing perception often fail." },
+        { "text": "They are interchangeable terms for the same experience", "correct": false, "rationale": "A person can be isolated without feeling lonely, or lonely in a crowd." },
+        { "text": "Loneliness is objective and isolation is subjective", "correct": false, "rationale": "This reverses the definitions." },
+        { "text": "Loneliness affects only older adults", "correct": false, "rationale": "Loneliness is prevalent across the lifespan, with high rates reported among young adults." }
+      ],
+      "explanation": "Evidence suggests interventions addressing maladaptive social cognition — expectations of rejection, hypervigilance to social threat — outperform those that simply increase social opportunity.",
+      "refs": ["nimh-depression", "statpearls-erikson"]
+    },
+    {
+      "id": "d3-adjustment-036",
+      "type": "scenario",
+      "domain": "D3",
+      "task": "3A",
+      "cacrep": ["helping-relationships"],
+      "tags": ["disability", "chronic-illness", "adjustment"],
+      "prompt": "A client who recently acquired a spinal cord injury is angry and refuses to discuss rehabilitation. How should the counselor respond?",
+      "choices": [
+        { "text": "Accept the anger as a valid part of adjusting to a major loss, and work at the client's pace rather than pressing toward acceptance", "correct": true, "rationale": "Adjustment to acquired disability involves grieving lost function; pushing for acceptance tends to increase resistance and rupture the alliance." },
+        { "text": "Confront the client about the consequences of refusing rehabilitation", "correct": false, "rationale": "Confrontation at this stage typically entrenches the position." },
+        { "text": "Focus on positive reframing of the disability's benefits", "correct": false, "rationale": "Premature positivity invalidates the loss and is experienced as dismissive." },
+        { "text": "Defer counseling until the client is ready to engage with rehabilitation", "correct": false, "rationale": "Withdrawing support during acute adjustment removes help when it is most needed." }
+      ],
+      "explanation": "The social model of disability is also relevant: much of the difficulty comes from environmental and attitudinal barriers rather than the impairment itself. Counselors should avoid assuming that adjustment means acceptance of a diminished life.",
+      "refs": ["ada-title-iii", "statpearls-grief", "msjcc"]
+    },
+    {
+      "id": "d3-terminal-037",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AK",
+      "cacrep": ["helping-relationships"],
+      "tags": ["terminal-illness", "end-of-life", "palliative"],
+      "prompt": "What is the primary counseling focus with a client facing terminal illness?",
+      "choices": [
+        { "text": "Following the client's lead on meaning, legacy, unfinished business, fears, and quality of life as they define it", "correct": true, "rationale": "End-of-life counseling is client-directed; imposing an agenda — whether hope or acceptance — displaces the client's own priorities." },
+        { "text": "Encouraging the client to maintain hope for recovery at all times", "correct": false, "rationale": "Enforced optimism can isolate a client who needs to discuss dying." },
+        { "text": "Ensuring the client reaches acceptance before death", "correct": false, "rationale": "Acceptance is not a required endpoint, and pursuing it as a goal can invalidate the client's actual experience." },
+        { "text": "Focusing primarily on the family's needs, since the client's time is limited", "correct": false, "rationale": "The client remains the client; family support is important but secondary." }
+      ],
+      "explanation": "Dignity therapy and meaning-centred approaches have evidence in this population. Counselors also need awareness of their own death anxiety, which can drive premature reassurance or topic avoidance.",
+      "refs": ["statpearls-grief", "aca-ethics"]
+    },
+    {
+      "id": "d3-caregiver-038",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3E",
+      "cacrep": ["helping-relationships"],
+      "tags": ["caregiving", "burden", "burnout"],
+      "prompt": "A client caring for a parent with dementia reports exhaustion and guilt about resenting the role. What is the most helpful initial response?",
+      "choices": [
+        { "text": "Normalize ambivalence as a near-universal feature of caregiving and assess for burden, depression, and respite options", "correct": true, "rationale": "Guilt about resentment is common and isolating; normalizing it opens the conversation and permits practical problem-solving." },
+        { "text": "Explore why the client resents their parent, focusing on the childhood relationship", "correct": false, "rationale": "This may be relevant later but risks pathologizing a normal caregiving response and ignoring immediate burden." },
+        { "text": "Encourage the client to place the parent in residential care immediately", "correct": false, "rationale": "Directive advice on a major family decision exceeds the counselor's role." },
+        { "text": "Reassure the client that they should feel proud rather than resentful", "correct": false, "rationale": "Telling a client what to feel invalidates the disclosure they just risked making." }
+      ],
+      "explanation": "Caregiver burden predicts depression, physical illness, and elder mistreatment risk. Practical intervention — respite, support groups, care coordination — often matters as much as emotional processing.",
+      "refs": ["statpearls-burnout", "nimh-depression"]
+    },
+    {
+      "id": "d3-aging-039",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3B",
+      "cacrep": ["human-growth"],
+      "tags": ["aging", "depression", "ageism"],
+      "prompt": "An older adult client presents with low mood, withdrawal, and memory complaints. What common clinical error should the counselor avoid?",
+      "choices": [
+        { "text": "Attributing the symptoms to normal aging rather than assessing for depression and reversible causes", "correct": true, "rationale": "Depression is not a normal part of aging, and treating it as such is a well-documented source of under-treatment." },
+        { "text": "Assessing for medication interactions", "correct": false, "rationale": "This is appropriate practice, not an error — polypharmacy is a common contributor." },
+        { "text": "Screening for cognitive impairment", "correct": false, "rationale": "Appropriate, given the memory complaints." },
+        { "text": "Asking about recent losses", "correct": false, "rationale": "Appropriate, since accumulated loss is a significant factor in later life." }
+      ],
+      "explanation": "Depression in older adults can present as memory and concentration complaints — sometimes called pseudodementia — which improve when the depression is treated. Ageism among providers contributes to both under-diagnosis and under-treatment.",
+      "refs": ["nimh-depression", "statpearls-mse", "msjcc"]
+    },
+    {
+      "id": "d3-milestones-040",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3AQ",
+      "cacrep": ["human-growth"],
+      "tags": ["milestones", "child-development"],
+      "prompt": "Name approximate ages for these developmental milestones: first words, walking independently, two-word phrases, and parallel play.",
+      "answer": "Walking independently around 12 months (range roughly 9–15); first words around 12 months; two-word phrases around 24 months; parallel play — playing alongside but not with other children — is typical around ages 2 to 3, preceding cooperative play from about age 3 to 4.",
+      "explanation": "Counselors need enough milestone knowledge to recognize when a referral for developmental evaluation is warranted. Loss of previously acquired skills is always a red flag regardless of age.",
+      "refs": ["statpearls-milestones", "harvard-neglect"]
+    },
+    {
+      "id": "d3-separation-041",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AD",
+      "cacrep": ["human-growth"],
+      "tags": ["separation-anxiety", "development", "children"],
+      "prompt": "At what age is intense distress at separation from a caregiver developmentally normative rather than a sign of disorder?",
+      "choices": [
+        { "text": "Roughly 8 months to 3 years, peaking around 12–18 months", "correct": true, "rationale": "Separation anxiety emerges with object permanence and attachment, peaking in the second year and declining thereafter." },
+        { "text": "From birth onward, at consistent intensity", "correct": false, "rationale": "Newborns do not show differentiated separation distress; it requires attachment and object permanence to develop." },
+        { "text": "Only after age 6", "correct": false, "rationale": "By school age, marked separation distress may warrant assessment for separation anxiety disorder." },
+        { "text": "Throughout adolescence", "correct": false, "rationale": "Adolescence is characterized by increasing autonomy-seeking." }
+      ],
+      "explanation": "Separation anxiety disorder is diagnosed when the fear is developmentally excessive, persists at least four weeks in children, and causes significant impairment. Context matters: distress after a genuine disruption in caregiving is expected.",
+      "refs": ["statpearls-milestones", "nice-attachment", "dsm5tr"]
+    },
+    {
+      "id": "d3-adolescent-042",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3S",
+      "cacrep": ["human-growth"],
+      "tags": ["adolescence", "brain-development", "risk-taking"],
+      "prompt": "What neurodevelopmental factor best explains heightened risk-taking during adolescence?",
+      "choices": [
+        { "text": "The limbic reward system matures earlier than the prefrontal cortex responsible for impulse control and long-term planning", "correct": true, "rationale": "This developmental mismatch produces heightened reward sensitivity alongside still-maturing regulatory capacity." },
+        { "text": "Adolescents are cognitively unable to assess risk", "correct": false, "rationale": "Adolescents can reason about risk well in calm conditions; the difficulty arises in emotionally arousing, peer-present situations." },
+        { "text": "The prefrontal cortex is fully mature by age 14", "correct": false, "rationale": "Prefrontal maturation continues into the mid-twenties." },
+        { "text": "Adolescents have reduced dopamine responsiveness to reward", "correct": false, "rationale": "Reward responsiveness is heightened, not reduced, during this period." }
+      ],
+      "explanation": "This informs intervention design: information-only prevention programmes underperform because the deficit is not knowledge. Approaches that build regulation skills and address peer context work better.",
+      "refs": ["statpearls-milestones", "nimh-adhd", "harvard-neglect"]
+    },
+    {
+      "id": "d3-identity-043",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3J",
+      "cacrep": ["human-growth", "social-cultural"],
+      "tags": ["identity", "marcia", "adolescence"],
+      "prompt": "Name Marcia's four identity statuses and the two dimensions that define them.",
+      "answer": "The dimensions are exploration (crisis) and commitment. Identity diffusion — no exploration, no commitment. Foreclosure — commitment without exploration, typically adopting others' values wholesale. Moratorium — active exploration without commitment yet. Identity achievement — commitment following a period of exploration.",
+      "explanation": "Marcia operationalized Erikson's identity stage. Statuses are not a fixed sequence, and people can occupy different statuses across domains — achieved in occupation, foreclosed in religion. Moratorium is often the most distressing but is developmentally productive.",
+      "refs": ["statpearls-erikson"]
+    },
+    {
+      "id": "d3-gender-044",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3J",
+      "cacrep": ["social-cultural", "human-growth"],
+      "tags": ["gender-identity", "affirmative-practice"],
+      "prompt": "What is the appropriate counseling stance toward a client exploring their gender identity?",
+      "choices": [
+        { "text": "Affirmative and exploratory — supporting the client's own process of understanding without steering toward any particular outcome", "correct": true, "rationale": "Affirmative practice is the professional standard; attempts to change gender identity are ineffective and harmful." },
+        { "text": "Encouraging the client to accept their sex assigned at birth to avoid future difficulty", "correct": false, "rationale": "This is a form of conversion practice, which is ethically prohibited and associated with serious harm." },
+        { "text": "Encouraging medical transition as the goal of counseling", "correct": false, "rationale": "Steering toward any predetermined outcome, including transition, displaces the client's autonomy." },
+        { "text": "Referring all such clients elsewhere as a matter of policy", "correct": false, "rationale": "A blanket referral policy based on client identity is discriminatory rather than a competence-based referral." }
+      ],
+      "explanation": "Distinguish sex assigned at birth, gender identity, gender expression, and sexual orientation — they vary independently. Minority stress theory explains elevated mental health risk in this population as arising from stigma and discrimination, not from the identity itself.",
+      "refs": ["msjcc", "aca-ethics"]
+    },
+    {
+      "id": "d3-minority-stress-045",
+      "type": "cloze",
+      "domain": "D3",
+      "task": "3Z",
+      "cacrep": ["social-cultural"],
+      "tags": ["minority-stress", "discrimination", "health-disparities"],
+      "prompt": "{{Minority stress}} theory explains elevated rates of mental health problems in stigmatized groups as resulting from chronic exposure to prejudice, expectations of rejection, concealment, and internalized stigma — not from the identity itself.",
+      "answer": "Minority stress",
+      "explanation": "The theory distinguishes distal stressors (external events such as discrimination and violence) from proximal stressors (internal processes such as vigilance, concealment, and internalized negativity). It relocates the problem from the individual to the social environment.",
+      "refs": ["msjcc", "cdc-ace"]
+    },
+    {
+      "id": "d3-racism-046",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3Z",
+      "cacrep": ["social-cultural"],
+      "tags": ["microaggressions", "racism", "counseling"],
+      "prompt": "A client of colour describes repeated comments at work such as 'you're so articulate'. How should the counselor respond?",
+      "choices": [
+        { "text": "Validate the experience as a racial microaggression and explore its cumulative impact, without requiring the client to prove intent", "correct": true, "rationale": "Microaggressions are defined by impact rather than intent, and validation is the essential first response." },
+        { "text": "Suggest the client may be misinterpreting well-meant compliments", "correct": false, "rationale": "This is itself invalidating and replicates the dynamic the client is describing." },
+        { "text": "Advise the client to confront each colleague directly", "correct": false, "rationale": "Directive advice ignores the real professional risk the client may face and removes their choice." },
+        { "text": "Redirect to coping skills without discussing the racial content", "correct": false, "rationale": "Bypassing the racial content communicates that the topic is unwelcome." }
+      ],
+      "explanation": "Sue's taxonomy distinguishes microassaults (deliberate), microinsults (rudeness demeaning identity), and microinvalidations (negating lived experience). Cumulative exposure has documented health consequences. Counselors should be prepared for their own microaggressions and able to repair them.",
+      "refs": ["msjcc", "cdc-ace"]
+    },
+    {
+      "id": "d3-acculturation-047",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3F",
+      "cacrep": ["social-cultural"],
+      "tags": ["acculturation", "immigration", "berry"],
+      "prompt": "Name Berry's four acculturation strategies and the two questions that define them.",
+      "answer": "The two questions are whether the person maintains their heritage culture and whether they participate in the dominant culture. Integration — maintains heritage and participates in the new culture (generally associated with the best outcomes). Assimilation — adopts the dominant culture and relinquishes heritage. Separation — maintains heritage and avoids the dominant culture. Marginalization — neither maintained nor adopted, generally associated with the poorest outcomes.",
+      "explanation": "These strategies are constrained by the receiving society: integration requires that the dominant culture permit it. Acculturative stress is also frequently intergenerational, with parents and children acculturating at different rates.",
+      "refs": ["msjcc"]
+    },
+    {
+      "id": "d3-spiritual-048",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AG",
+      "cacrep": ["social-cultural", "helping-relationships"],
+      "tags": ["spirituality", "religion", "assessment"],
+      "prompt": "How should a counselor address a client's religious or spiritual beliefs?",
+      "choices": [
+        { "text": "Assess them as a potentially significant dimension of identity, coping, and meaning, and work within the client's framework", "correct": true, "rationale": "Spirituality is a recognized diversity dimension and frequently a major source of coping and meaning." },
+        { "text": "Avoid the topic entirely to maintain professional neutrality", "correct": false, "rationale": "Avoidance excludes a domain that may be central to the client's distress and resources." },
+        { "text": "Share the counselor's own beliefs to establish common ground", "correct": false, "rationale": "This risks imposing counselor values and shifts focus onto the counselor." },
+        { "text": "Challenge beliefs that appear to contribute to distress", "correct": false, "rationale": "Challenging beliefs is value imposition; exploring how the client relates to their beliefs is different from disputing them." }
+      ],
+      "explanation": "Religion and spirituality can function as protective resources or as sources of distress — religious struggle, moral injury, or communities that reject a client's identity. Both possibilities deserve exploration.",
+      "refs": ["msjcc", "aca-ethics"]
+    },
+    {
+      "id": "d3-existential-049",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3AG",
+      "cacrep": ["helping-relationships"],
+      "tags": ["existential", "yalom", "ultimate-concerns"],
+      "prompt": "Name Yalom's four ultimate existential concerns.",
+      "answer": "Death — the awareness of inevitable mortality. Freedom — the absence of external structure and the resulting responsibility for one's own choices. Isolation — the unbridgeable gap between oneself and others. Meaninglessness — the absence of inherent meaning in a universe indifferent to us, and the consequent need to create meaning.",
+      "explanation": "Existential approaches treat anxiety about these givens as an inherent part of being human rather than as pathology. This framework is particularly useful with clients facing mortality, major transitions, or a loss of purpose.",
+      "refs": ["statpearls-group-therapy", "aca-ethics"]
+    },
+    {
+      "id": "d3-financial-050",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3I",
+      "cacrep": ["social-cultural"],
+      "tags": ["financial-stress", "poverty", "scope"],
+      "prompt": "A client's primary distress stems from severe financial hardship and housing insecurity. What is the counselor's most appropriate role?",
+      "choices": [
+        { "text": "Address the psychological impact while connecting the client to concrete resources and advocating where appropriate", "correct": true, "rationale": "Material hardship is a genuine cause of distress; combining emotional support with resource linkage and advocacy is the competent response." },
+        { "text": "Focus only on the client's thoughts and feelings about money, since finances are outside scope", "correct": false, "rationale": "Treating a material problem as purely cognitive is a documented failure of class-blind practice." },
+        { "text": "Provide specific budgeting and debt-restructuring advice", "correct": false, "rationale": "Detailed financial advice is outside the counselor's competence; referral to a financial counselor is appropriate." },
+        { "text": "Defer counseling until the client's financial situation stabilizes", "correct": false, "rationale": "This withholds support at a point of high stress and may never be satisfied." }
+      ],
+      "explanation": "Maslow's hierarchy is a useful reminder: unmet basic needs constrain what psychological work is possible. Case management and advocacy are legitimate counseling functions, particularly in community settings.",
+      "refs": ["msjcc", "aca-ethics", "bls-ooh"]
+    },
+    {
+      "id": "d3-maslow-051",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3S",
+      "cacrep": ["human-growth"],
+      "tags": ["maslow", "hierarchy", "motivation"],
+      "prompt": "List Maslow's hierarchy of needs from base to peak.",
+      "answer": "Physiological needs (food, water, sleep, shelter); safety and security; love and belonging; esteem (achievement, recognition, self-respect); and self-actualization (realizing one's potential). Later formulations add cognitive and aesthetic needs below self-actualization, and self-transcendence above it.",
+      "explanation": "The hierarchy is heuristic rather than strictly sequential — people pursue higher needs while lower ones are imperfectly met. Its clinical value lies in prompting attention to unmet basic needs before psychological work.",
+      "refs": ["msjcc", "cacrep-standards"]
+    },
+    {
+      "id": "d3-behavioral-052",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3C",
+      "cacrep": ["helping-relationships"],
+      "tags": ["behavior", "reinforcement", "operant"],
+      "prompt": "A parent gives in to a child's tantrum after 20 minutes of shouting. What behavioural principle explains the likely increase in future tantrums?",
+      "choices": [
+        { "text": "Intermittent reinforcement, which makes the behaviour highly resistant to extinction", "correct": true, "rationale": "Occasional reinforcement produces more persistent behaviour than continuous reinforcement, precisely because non-reward does not signal that reward has ended." },
+        { "text": "Positive punishment", "correct": false, "rationale": "Punishment decreases behaviour by adding an aversive; giving in adds something desired." },
+        { "text": "Negative punishment", "correct": false, "rationale": "Negative punishment removes something desirable to decrease behaviour." },
+        { "text": "Classical conditioning", "correct": false, "rationale": "Classical conditioning pairs stimuli to produce reflexive responses; this is operant." }
+      ],
+      "explanation": "Note the dual contingency: the child is positively reinforced with the desired item, and the parent is negatively reinforced by the tantrum stopping — which is why the pattern is so durable on both sides. Expect an extinction burst when reinforcement stops.",
+      "refs": ["statpearls-cbt", "div12-treatments"]
+    },
+    {
+      "id": "d3-bullying-053",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3D",
+      "cacrep": ["human-growth", "social-cultural"],
+      "tags": ["bullying", "school", "intervention"],
+      "prompt": "What three features define bullying and distinguish it from ordinary peer conflict?",
+      "choices": [
+        { "text": "Intentional harm, repetition over time, and a power imbalance between the parties", "correct": true, "rationale": "These three criteria are the standard definition and are what separate bullying from conflict between equals." },
+        { "text": "Physical aggression, adult involvement, and property damage", "correct": false, "rationale": "Bullying is frequently verbal, relational, or online and need not involve any of these." },
+        { "text": "Occurring at school, involving multiple students, and being reported", "correct": false, "rationale": "Setting, group size, and reporting are not definitional." },
+        { "text": "Anonymity, severity, and duration of more than one school year", "correct": false, "rationale": "None of these are required." }
+      ],
+      "explanation": "The power imbalance is why conflict-resolution and peer-mediation approaches are contraindicated for bullying — they presume equal parties and can expose the targeted student to further harm. Whole-school approaches have the strongest evidence.",
+      "refs": ["cdc-ace", "harvard-neglect"]
+    },
+    {
+      "id": "d3-attention-054",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3N",
+      "cacrep": ["human-growth"],
+      "tags": ["attention", "adhd", "executive-function"],
+      "prompt": "Which best describes executive functioning?",
+      "choices": [
+        { "text": "A set of higher-order processes including working memory, inhibitory control, and cognitive flexibility that regulate goal-directed behaviour", "correct": true, "rationale": "These three core components underpin planning, organizing, initiating, and self-monitoring." },
+        { "text": "The capacity to store and recall factual information", "correct": false, "rationale": "That describes long-term declarative memory." },
+        { "text": "General intellectual ability as measured by IQ", "correct": false, "rationale": "Executive function is partly independent of IQ — someone can have high IQ with significant executive deficits." },
+        { "text": "The speed of processing sensory input", "correct": false, "rationale": "Processing speed is a distinct cognitive domain." }
+      ],
+      "explanation": "Executive difficulties appear across ADHD, acquired brain injury, depression, anxiety, and chronic stress. Interventions typically externalize the function — visual schedules, timers, checklists — rather than exhorting greater effort.",
+      "refs": ["nimh-adhd", "statpearls-milestones"]
+    },
+    {
+      "id": "d3-hallucination-055",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AL",
+      "cacrep": ["helping-relationships"],
+      "tags": ["psychosis", "hallucinations", "engagement"],
+      "prompt": "A client experiencing auditory hallucinations asks the counselor whether they hear the voices too. What is the best response?",
+      "choices": [
+        { "text": "Answer honestly that the counselor does not hear them, while affirming that the client's experience is real to them", "correct": true, "rationale": "Honesty preserves trust without disputing the client's experience — neither colluding with nor invalidating it." },
+        { "text": "Say yes, to build rapport and avoid distressing the client", "correct": false, "rationale": "Deception destroys trust and can reinforce the belief system." },
+        { "text": "Argue that the voices are not real and challenge the belief directly", "correct": false, "rationale": "Direct disputation typically increases distress and disengagement." },
+        { "text": "Avoid answering and change the subject", "correct": false, "rationale": "Evasion signals that the experience cannot be discussed." }
+      ],
+      "explanation": "The general stance in psychosis work: do not collude, do not confront. Focus instead on the distress and functional impact — how the voices affect the client's life and what helps. CBT for psychosis works with the relationship to the experience rather than debating its reality.",
+      "refs": ["nimh-schizophrenia", "div12-treatments", "statpearls-mse"]
+    },
+    {
+      "id": "d3-intellectual-056",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3O",
+      "cacrep": ["human-growth", "social-cultural"],
+      "tags": ["intellectual-disability", "adaptation", "counseling"],
+      "prompt": "How should counseling be adapted for a client with mild intellectual disability?",
+      "choices": [
+        { "text": "Use concrete language, shorter sessions, repetition, visual supports, and involve caregivers with consent as appropriate", "correct": true, "rationale": "Adapting the delivery preserves access to counseling; the client's capacity to benefit is not in question, only the format." },
+        { "text": "Assume counseling is not appropriate and refer to case management only", "correct": false, "rationale": "This is a documented form of diagnostic overshadowing that denies people access to mental health care." },
+        { "text": "Use the same approach as with any adult client, without adaptation", "correct": false, "rationale": "Unadapted abstract, verbally mediated therapy may be inaccessible." },
+        { "text": "Work exclusively through the caregiver rather than the client", "correct": false, "rationale": "This bypasses the client's autonomy and voice." }
+      ],
+      "explanation": "Diagnostic overshadowing — attributing all presenting difficulties to the disability and missing a treatable mental health condition — is a major source of unmet need in this population.",
+      "refs": ["dsm5tr", "msjcc", "ada-title-iii"]
+    },
+    {
+      "id": "d3-process-addiction-057",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3Y",
+      "cacrep": ["helping-relationships"],
+      "tags": ["gambling", "process-addiction", "dsm"],
+      "prompt": "Which behavioural addiction is recognized as a diagnosable disorder in DSM-5-TR?",
+      "choices": [
+        { "text": "Gambling disorder", "correct": true, "rationale": "Gambling disorder is the only behavioural addiction included in the substance-related and addictive disorders chapter." },
+        { "text": "Internet gaming disorder", "correct": false, "rationale": "Internet gaming disorder appears in Section III as a condition for further study, not as an established diagnosis." },
+        { "text": "Sexual addiction", "correct": false, "rationale": "Not a DSM diagnosis; compulsive sexual behaviour disorder appears in ICD-11 as an impulse control disorder." },
+        { "text": "Shopping addiction", "correct": false, "rationale": "Not recognized as a DSM diagnosis." }
+      ],
+      "explanation": "Gambling disorder was moved alongside substance use disorders in DSM-5 based on evidence of shared neurobiological reward pathways. Clients may present with financial crisis or relationship breakdown rather than naming the gambling itself.",
+      "refs": ["dsm5tr", "samhsa-tip42"]
+    },
+    {
+      "id": "d3-eating-058",
+      "type": "scenario",
+      "domain": "D3",
+      "task": "3Q",
+      "cacrep": ["helping-relationships"],
+      "tags": ["eating-disorders", "medical-risk", "coordination"],
+      "prompt": "A client with anorexia nervosa has lost further weight and reports dizziness and fainting. What is the counselor's priority?",
+      "choices": [
+        { "text": "Ensure immediate medical evaluation, since these signs may indicate cardiac or electrolyte instability", "correct": true, "rationale": "Anorexia carries serious medical risk; syncope and continued weight loss require urgent medical assessment, not further outpatient counseling alone." },
+        { "text": "Intensify cognitive work on body image distortion", "correct": false, "rationale": "Psychological work does not address acute medical risk and may be ineffective in a malnourished state." },
+        { "text": "Set a weight-gain goal and monitor it weekly in session", "correct": false, "rationale": "Weight monitoring belongs within coordinated medical care at this level of risk." },
+        { "text": "Explore the family dynamics contributing to the eating disorder", "correct": false, "rationale": "Family work may be indicated, but not while acute medical risk is unaddressed." }
+      ],
+      "explanation": "Eating disorders have the highest mortality of any psychiatric condition, from both medical complications and suicide. Malnutrition also impairs cognition, which limits what psychological intervention can achieve before nutritional restoration.",
+      "refs": ["nimh-eating-disorders", "dsm5tr", "asam-criteria"]
+    },
+    {
+      "id": "d3-body-image-059",
+      "type": "cloze",
+      "domain": "D3",
+      "task": "3Q",
+      "cacrep": ["helping-relationships"],
+      "tags": ["eating-disorders", "family-based-treatment"],
+      "prompt": "For adolescents with anorexia nervosa, the treatment with the strongest evidence base is {{family-based treatment (the Maudsley approach)}}, in which parents initially take charge of refeeding before control is gradually returned to the adolescent.",
+      "answer": "family-based treatment (the Maudsley approach)",
+      "explanation": "FBT explicitly rejects blaming families for causing the disorder and instead recruits them as the primary resource. Phase 1 is parental control of eating, phase 2 gradual return of control, phase 3 focus on normal adolescent development.",
+      "refs": ["div12-treatments", "nimh-eating-disorders"]
+    },
+    {
+      "id": "d3-sexual-060",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AE",
+      "cacrep": ["helping-relationships"],
+      "tags": ["sexual-concerns", "scope", "referral"],
+      "prompt": "A client raises a sexual functioning concern. What should the counselor do first?",
+      "choices": [
+        { "text": "Respond without embarrassment, assess the concern including possible medical and medication causes, and refer for medical evaluation or specialist care as indicated", "correct": true, "rationale": "Sexual concerns are legitimate clinical material; many have medical or pharmacological contributors that need ruling out." },
+        { "text": "Redirect the conversation, as sexuality is outside counseling scope", "correct": false, "rationale": "Avoidance signals the topic is shameful and misses clinically significant material." },
+        { "text": "Provide specific sexual technique instruction", "correct": false, "rationale": "This requires specialized training in sex therapy." },
+        { "text": "Assume the concern reflects underlying relationship dissatisfaction", "correct": false, "rationale": "Assuming a cause before assessment risks missing medical, trauma-related, or medication-related factors." }
+      ],
+      "explanation": "SSRIs are a very common and frequently unrecognized contributor to sexual dysfunction. Counselor comfort is a real competence issue here: discomfort transmits, and clients rarely raise the topic twice.",
+      "refs": ["aca-ethics", "nimh-depression", "dsm5tr"]
+    },
+    {
+      "id": "d3-religious-conflict-061",
+      "type": "scenario",
+      "domain": "D3",
+      "task": "3AA",
+      "cacrep": ["social-cultural"],
+      "tags": ["religious-conflict", "values", "identity"],
+      "prompt": "A client experiences intense conflict between their sexual orientation and their religious community's teachings. What is the appropriate counseling approach?",
+      "choices": [
+        { "text": "Help the client explore and integrate both aspects of identity on their own terms, without steering toward either resolution", "correct": true, "rationale": "Both religion and sexual orientation are core identity dimensions; the client determines how to hold them together." },
+        { "text": "Encourage the client to leave the religious community", "correct": false, "rationale": "This imposes a resolution and may sever a vital source of support and meaning." },
+        { "text": "Encourage the client to change or suppress their orientation to preserve their faith", "correct": false, "rationale": "This constitutes conversion practice, which is ineffective and associated with serious harm." },
+        { "text": "Advise the client that the conflict is irresolvable and focus on acceptance of distress", "correct": false, "rationale": "Many clients do find workable integrations; foreclosing that possibility is neither accurate nor helpful." }
+      ],
+      "explanation": "Outcomes vary widely — some clients reinterpret their tradition, some find an affirming community, some separate their faith from institutional belonging, some leave. The counselor's task is supporting the client's own process, not producing a particular endpoint.",
+      "refs": ["msjcc", "aca-ethics"]
+    },
+    {
+      "id": "d3-perinatal-062",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3S",
+      "cacrep": ["human-growth"],
+      "tags": ["perinatal", "postpartum", "screening"],
+      "prompt": "What distinguishes postpartum depression from the 'baby blues'?",
+      "choices": [
+        { "text": "Baby blues are mild, peak within the first week or two, and resolve spontaneously; postpartum depression is more severe, persists, and impairs functioning", "correct": true, "rationale": "Duration, severity, and functional impairment are the distinguishing features. Baby blues affect a majority of new mothers and remit without treatment." },
+        { "text": "Baby blues involve sadness while postpartum depression involves only anxiety", "correct": false, "rationale": "Both involve mood disturbance, and anxiety features are common in postpartum depression." },
+        { "text": "Postpartum depression occurs only after a first birth", "correct": false, "rationale": "It can occur after any birth, and a prior episode raises the risk." },
+        { "text": "Baby blues require medication while postpartum depression resolves on its own", "correct": false, "rationale": "This reverses the clinical picture entirely." }
+      ],
+      "explanation": "Postpartum psychosis is a distinct psychiatric emergency with risk to mother and infant, requiring immediate intervention. Screening — commonly with the Edinburgh Postnatal Depression Scale — is standard, and the DSM-5-TR specifier is 'with peripartum onset', reflecting that onset often begins during pregnancy.",
+      "refs": ["dsm5tr", "nimh-depression"]
+    },
+    {
+      "id": "d3-somatic-063",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3V",
+      "cacrep": ["helping-relationships"],
+      "tags": ["somatic-symptoms", "anxiety", "psychoeducation"],
+      "prompt": "A client with chronic unexplained physical symptoms insists they are 'not psychological'. What is the most productive stance?",
+      "choices": [
+        { "text": "Affirm that the symptoms are real and explore how stress and physical symptoms interact, without requiring the client to accept a psychological cause", "correct": true, "rationale": "Insisting on a psychological attribution creates a dispute; a bidirectional mind–body framing is both accurate and acceptable to the client." },
+        { "text": "Explain that the symptoms are caused by anxiety and will resolve once it is treated", "correct": false, "rationale": "This overstates certainty and typically triggers defensiveness and disengagement." },
+        { "text": "Agree the symptoms are purely physical and defer entirely to medical providers", "correct": false, "rationale": "This forecloses the counseling contribution and can reinforce a search for further investigations." },
+        { "text": "Focus on identifying secondary gain from the symptoms", "correct": false, "rationale": "Implying benefit from illness early on is experienced as accusatory and damages the alliance." }
+      ],
+      "explanation": "DSM-5 removed the requirement that somatic symptoms be medically unexplained: somatic symptom disorder is defined by disproportionate thoughts, feelings, and behaviours about symptoms, whether or not a medical explanation exists.",
+      "refs": ["dsm5tr", "nimh-anxiety", "statpearls-cbt"]
+    },
+    {
+      "id": "d3-dissociation-064",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3X",
+      "cacrep": ["assessment"],
+      "tags": ["dissociation", "trauma", "grounding"],
+      "prompt": "A client reports frequently 'losing time' and feeling detached from their body during stress. What is the most appropriate initial intervention?",
+      "choices": [
+        { "text": "Teach grounding techniques and build present-moment awareness before any trauma processing", "correct": true, "rationale": "Dissociation indicates the client is outside the window of tolerance; stabilization must precede processing." },
+        { "text": "Begin detailed exploration of the traumatic memories driving the dissociation", "correct": false, "rationale": "Processing before stabilization is likely to increase dissociation and destabilize the client." },
+        { "text": "Interpret the dissociation as avoidance and encourage the client to stay present through willpower", "correct": false, "rationale": "Dissociation is an involuntary protective response, not a choice, and framing it as avoidance is shaming." },
+        { "text": "Refer immediately for hospitalization", "correct": false, "rationale": "Dissociation alone, without acute risk, does not warrant hospitalization." }
+      ],
+      "explanation": "Grounding works through the senses — the 5-4-3-2-1 technique, physical anchoring, orienting to the room. Dissociation is common in complex trauma and requires slower pacing throughout treatment.",
+      "refs": ["samhsa-tip57", "nimh-ptsd", "behavioraltech-dbt"]
+    },
+    {
+      "id": "d3-resilience-065",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3S",
+      "cacrep": ["human-growth"],
+      "tags": ["resilience", "protective-factors"],
+      "prompt": "What factors most consistently predict resilience following adversity?",
+      "answer": "At least one stable, supportive relationship with a caring adult (the single most consistent factor for children); a sense of self-efficacy and perceived control; effective self-regulation and executive function skills; sources of meaning, faith, or hope; and supportive community, cultural, and material resources.",
+      "explanation": "Resilience is not a fixed trait but the product of interaction between a person and their supports, which means it can be built. The relationship finding is the most actionable: interventions that secure one reliable adult relationship have outsized effects.",
+      "refs": ["harvard-neglect", "cdc-ace", "samhsa-tip57"]
+    },
+    {
+      "id": "d3-medical-066",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3A",
+      "cacrep": ["helping-relationships"],
+      "tags": ["chronic-illness", "adherence", "coping"],
+      "prompt": "A client with diabetes struggles with treatment adherence. What counseling approach has the best evidence?",
+      "choices": [
+        { "text": "Motivational interviewing to explore ambivalence and strengthen the client's own reasons for change", "correct": true, "rationale": "MI has substantial evidence for improving health behaviour change and adherence, precisely because it avoids the persuasion that triggers resistance." },
+        { "text": "Educating the client about the consequences of non-adherence", "correct": false, "rationale": "Adherence problems are rarely knowledge deficits; information alone changes little." },
+        { "text": "Warning the client about complications to increase motivation through fear", "correct": false, "rationale": "Fear appeals often increase avoidance and defensiveness rather than behaviour change." },
+        { "text": "Arranging for a family member to supervise the treatment regimen", "correct": false, "rationale": "External monitoring can undermine autonomy and strain relationships without building durable self-management." }
+      ],
+      "explanation": "MI's four processes are engaging, focusing, evoking, and planning; its spirit is partnership, acceptance, compassion, and evocation. The 'righting reflex' — the urge to fix and persuade — is precisely what MI trains counselors to resist.",
+      "refs": ["samhsa-tip35", "mi-org", "div12-treatments"]
+    },
+    {
+      "id": "d3-worry-067",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AM",
+      "cacrep": ["helping-relationships"],
+      "tags": ["gad", "worry", "intolerance-of-uncertainty"],
+      "prompt": "Which cognitive process is considered central to generalized anxiety disorder?",
+      "choices": [
+        { "text": "Intolerance of uncertainty, driving persistent 'what if' worry as an attempt to achieve certainty", "correct": true, "rationale": "Intolerance of uncertainty is the most robustly supported maintaining process in GAD." },
+        { "text": "Catastrophic misinterpretation of bodily sensations", "correct": false, "rationale": "That is the central process in panic disorder." },
+        { "text": "Fear of negative evaluation by others", "correct": false, "rationale": "That is central to social anxiety disorder." },
+        { "text": "Intrusive trauma memories", "correct": false, "rationale": "That characterizes PTSD." }
+      ],
+      "explanation": "Many clients with GAD also hold positive beliefs about worry — that it prevents bad outcomes or shows responsibility — which must be addressed, since attacking worry directly while these beliefs persist tends to fail.",
+      "refs": ["nimh-anxiety", "statpearls-cbt", "div12-treatments"]
+    },
+    {
+      "id": "d3-adoption-068",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AN",
+      "cacrep": ["human-growth", "social-cultural"],
+      "tags": ["adoption", "identity", "family"],
+      "prompt": "An adopted adolescent expresses interest in finding their birth parents, and the adoptive parents feel hurt and rejected. How should the counselor frame this?",
+      "choices": [
+        { "text": "As a developmentally normal part of identity formation that does not indicate rejection of the adoptive parents", "correct": true, "rationale": "Search interest typically intensifies in adolescence alongside identity development and is not a verdict on the adoptive relationship." },
+        { "text": "As evidence of attachment problems in the adoptive family", "correct": false, "rationale": "Search interest occurs in securely attached adoptees and is not diagnostic of attachment difficulty." },
+        { "text": "As a phase best discouraged until adulthood", "correct": false, "rationale": "Suppressing the question tends to drive it underground and can damage trust." },
+        { "text": "As a matter solely between the adolescent and the birth family", "correct": false, "rationale": "The adoptive parents' feelings are real and part of the family work." }
+      ],
+      "explanation": "Adoption-competent practice avoids two errors: treating adoption as irrelevant, and attributing every difficulty to it. Genetic and medical history, identity questions, and loss are genuine themes; they are not the whole picture.",
+      "refs": ["statpearls-erikson", "nice-attachment", "msjcc"]
+    },
+    {
+      "id": "d3-neglect-069",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AP",
+      "cacrep": ["human-growth"],
+      "tags": ["neglect", "child-development", "impact"],
+      "prompt": "Why is chronic neglect sometimes more damaging to development than episodic physical abuse?",
+      "choices": [
+        { "text": "Because the developing brain requires responsive interaction to build architecture, and its sustained absence disrupts development broadly", "correct": true, "rationale": "Neglect deprives the child of the serve-and-return interaction that development depends on, producing pervasive rather than event-specific effects." },
+        { "text": "Because neglect is always accompanied by physical abuse", "correct": false, "rationale": "They frequently co-occur but neglect is damaging independently." },
+        { "text": "Because neglect is easier for children to remember", "correct": false, "rationale": "Chronic neglect is often harder to identify and articulate precisely because it involves absence rather than events." },
+        { "text": "Because physical abuse rarely has developmental consequences", "correct": false, "rationale": "Physical abuse has serious consequences; the point is that neglect is not the lesser harm it is often assumed to be." }
+      ],
+      "explanation": "Neglect is the most common form of child maltreatment and the most frequently under-recognized. The 'serve and return' framing captures why: development depends on reciprocal interaction, and its absence is a deprivation rather than an event.",
+      "refs": ["harvard-neglect", "cdc-ace", "childwelfare-reporting"]
+    },
+    {
+      "id": "d3-school-070",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3C",
+      "cacrep": ["human-growth"],
+      "tags": ["school-refusal", "anxiety", "intervention"],
+      "prompt": "A child refuses to attend school, with stomach aches each morning that resolve once they are allowed to stay home. What is the recommended approach?",
+      "choices": [
+        { "text": "Support a prompt, graduated return to school while treating the underlying anxiety, since prolonged absence entrenches the problem", "correct": true, "rationale": "Avoidance is negatively reinforced each time the child stays home, so return is both a goal and a treatment component." },
+        { "text": "Allow extended home schooling until the anxiety fully resolves", "correct": false, "rationale": "Extended absence strengthens the avoidance cycle and adds academic and social loss." },
+        { "text": "Focus on medical investigation of the stomach aches", "correct": false, "rationale": "Medical causes should be excluded, but the pattern here — resolving on staying home — points clearly to anxiety." },
+        { "text": "Apply disciplinary consequences until attendance resumes", "correct": false, "rationale": "Punishment without addressing the anxiety typically increases distress and resistance." }
+      ],
+      "explanation": "Differentiate school refusal driven by anxiety from truancy, which involves concealment and no distress about missing school. Effective intervention coordinates family, school, and clinician around a graduated return plan.",
+      "refs": ["nimh-anxiety", "statpearls-cbt", "div12-treatments"]
+    },
+    {
+      "id": "d3-selfharm-071",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AJ",
+      "cacrep": ["assessment", "helping-relationships"],
+      "tags": ["self-harm", "nssi", "function"],
+      "prompt": "What most commonly distinguishes non-suicidal self-injury from a suicide attempt?",
+      "choices": [
+        { "text": "Intent — NSSI typically functions to regulate overwhelming emotion rather than to end life", "correct": true, "rationale": "Function and intent are the defining difference; NSSI most often serves affect regulation." },
+        { "text": "Severity of tissue damage", "correct": false, "rationale": "Lethality of method does not reliably indicate intent in either direction." },
+        { "text": "Whether the person tells anyone afterwards", "correct": false, "rationale": "Disclosure patterns vary and do not establish intent." },
+        { "text": "Whether the person has a psychiatric diagnosis", "correct": false, "rationale": "Both occur with and without diagnoses." }
+      ],
+      "explanation": "The critical caveat: NSSI is one of the strongest predictors of future suicide attempt, so 'non-suicidal' does not mean low risk. Assess function and intent separately, and avoid dismissing self-injury as attention-seeking.",
+      "refs": ["nimh-suicide-prevention", "behavioraltech-dbt", "sprc"]
+    },
+    {
+      "id": "d3-hope-072",
+      "type": "cloze",
+      "domain": "D3",
+      "task": "3L",
+      "cacrep": ["helping-relationships"],
+      "tags": ["hope", "common-factors", "outcome"],
+      "prompt": "Across therapeutic approaches, factors such as the therapeutic alliance, client expectancy and hope, therapist empathy, and client resources are collectively called {{common factors}}, and account for a substantial share of outcome variance.",
+      "answer": "common factors",
+      "explanation": "The common factors literature explains the 'Dodo bird verdict' — the finding that bona fide therapies tend to produce broadly comparable outcomes. It does not mean technique is irrelevant, but it does mean the relationship is not merely a delivery vehicle.",
+      "refs": ["div12-treatments", "samhsa-tip65"]
+    },
+    {
+      "id": "d3-mindfulness-073",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AH",
+      "cacrep": ["helping-relationships"],
+      "tags": ["mindfulness", "mbsr", "acceptance"],
+      "prompt": "How do mindfulness-based approaches differ from traditional cognitive restructuring?",
+      "choices": [
+        { "text": "They change the client's relationship to thoughts — observing them without judgement — rather than changing the thoughts' content", "correct": true, "rationale": "Mindfulness cultivates decentring or defusion rather than disputation of content." },
+        { "text": "They eliminate negative thoughts more completely", "correct": false, "rationale": "Mindfulness does not aim to eliminate thoughts at all." },
+        { "text": "They avoid discussing thoughts entirely", "correct": false, "rationale": "Thoughts are attended to closely; the difference is in the stance taken toward them." },
+        { "text": "They replace negative thoughts with positive affirmations", "correct": false, "rationale": "This describes neither mindfulness nor accurate cognitive restructuring." }
+      ],
+      "explanation": "MBCT was developed specifically to prevent depressive relapse and has strong evidence for that indication. ACT similarly emphasizes cognitive defusion and psychological flexibility over content change.",
+      "refs": ["div12-treatments", "statpearls-cbt", "behavioraltech-dbt"]
+    },
+    {
+      "id": "d3-groupvsindividual-074",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3M",
+      "cacrep": ["group-work"],
+      "tags": ["group", "universality", "therapeutic-factors"],
+      "prompt": "A client in group therapy says 'I thought I was the only one who felt this way'. Which of Yalom's therapeutic factors is operating?",
+      "choices": [
+        { "text": "Universality", "correct": true, "rationale": "Universality is the recognition that one's experiences are shared, countering the isolation of feeling uniquely afflicted." },
+        { "text": "Instillation of hope", "correct": false, "rationale": "That comes from seeing others further along in their recovery." },
+        { "text": "Altruism", "correct": false, "rationale": "Altruism is the benefit derived from helping other members." },
+        { "text": "Catharsis", "correct": false, "rationale": "Catharsis is the emotional release of expressing strong feelings." }
+      ],
+      "explanation": "Universality is often the earliest and most immediately relieving factor in a new group. It is also the main reason group formats suit stigmatized or isolating problems particularly well.",
+      "refs": ["statpearls-group-therapy"]
+    },
+    {
+      "id": "d3-cultural-humility-075",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3F",
+      "cacrep": ["social-cultural"],
+      "tags": ["cultural-humility", "competence"],
+      "prompt": "How does cultural humility differ from cultural competence?",
+      "choices": [
+        { "text": "Cultural humility emphasizes lifelong self-reflection, openness to the client as the expert on their own experience, and attention to power imbalance, rather than an achievable body of knowledge", "correct": true, "rationale": "Humility reframes the goal as an ongoing stance rather than a competence to be attained and certified." },
+        { "text": "Cultural humility means avoiding discussion of cultural differences", "correct": false, "rationale": "It requires more engagement with difference, not less." },
+        { "text": "Cultural competence is a newer concept that has replaced cultural humility", "correct": false, "rationale": "The chronology runs the other way; humility emerged as a critique of competence models." },
+        { "text": "They are identical concepts with different names", "correct": false, "rationale": "They differ meaningfully in what they treat as the endpoint." }
+      ],
+      "explanation": "The critique of competence models is that they can license a false sense of mastery and encourage stereotyping by group. Humility positions the client as the authority on their own cultural experience — which is also more clinically accurate.",
+      "refs": ["msjcc", "aca-ethics"]
+    }
+  ]
+}

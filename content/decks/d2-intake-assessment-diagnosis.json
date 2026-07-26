@@ -1,0 +1,940 @@
+{
+  "domain": "D2",
+  "cards": [
+    {
+      "id": "d2-mse-001",
+      "type": "recall",
+      "domain": "D2",
+      "task": "2F",
+      "cacrep": ["assessment"],
+      "tags": ["mental-status-exam", "intake"],
+      "prompt": "List the standard components of a Mental Status Examination (MSE).",
+      "answer": "Appearance and behaviour; motor activity; speech; mood (reported) and affect (observed); thought process (how the client thinks); thought content (what they think about, including delusions, obsessions, suicidal or homicidal ideation); perceptual disturbances (hallucinations, illusions); cognition (orientation, attention, memory, concentration); insight; and judgement.",
+      "explanation": "The MSE is a snapshot of current functioning, not a history. The distinction most often missed on exams is mood versus affect: mood is what the client reports subjectively, affect is what the clinician observes.",
+      "refs": ["statpearls-mse"]
+    },
+    {
+      "id": "d2-mse-002",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2F",
+      "cacrep": ["assessment"],
+      "tags": ["mental-status-exam", "affect"],
+      "prompt": "A client reports feeling devastated about a recent death but smiles and laughs throughout the description. How is this best documented?",
+      "choices": [
+        { "text": "Mood depressed as reported; affect incongruent with stated mood", "correct": true, "rationale": "Mood is the client's self-report and affect is the observed expression; the mismatch is precisely what 'incongruent' names." },
+        { "text": "Mood euthymic; affect appropriate", "correct": false, "rationale": "This records only the observed presentation and discards the client's report of devastation." },
+        { "text": "Affect labile with rapid cycling", "correct": false, "rationale": "Lability means rapid shifting between affective states, which is not what is described here." },
+        { "text": "Affect blunted with restricted range", "correct": false, "rationale": "Blunted affect is markedly reduced expression; this client is expressive, just incongruently." }
+      ],
+      "explanation": "Affect is described by quality, range, intensity, stability, and congruence with mood. Common descriptors: euthymic, dysphoric, euphoric, flat, blunted, restricted, labile, congruent, incongruent.",
+      "refs": ["statpearls-mse"]
+    },
+    {
+      "id": "d2-suicide-003",
+      "type": "scenario",
+      "domain": "D2",
+      "task": "2S",
+      "cacrep": ["assessment"],
+      "tags": ["suicide-risk", "crisis", "assessment"],
+      "prompt": "A client says they have been thinking 'it would be easier if I weren't here'. What should the counselor do next?",
+      "choices": [
+        { "text": "Ask directly and specifically about suicidal ideation, including plan, means, intent, and timeframe", "correct": true, "rationale": "Direct questioning is the standard of care. Asking about suicide does not plant the idea, and vague statements must be clarified." },
+        { "text": "Note the comment and monitor it over the coming sessions", "correct": false, "rationale": "Passive monitoring of a possible suicidal statement is below the standard of care." },
+        { "text": "Reassure the client that things will improve and redirect to coping skills", "correct": false, "rationale": "Premature reassurance closes down disclosure before risk has been assessed." },
+        { "text": "Immediately call emergency services", "correct": false, "rationale": "Escalating before assessment is disproportionate and can destroy the client's willingness to disclose in future." }
+      ],
+      "explanation": "Assessment sequence: ideation, then plan, then means and access, then intent, then preparatory behaviour, then history of attempts. History of a prior attempt is among the strongest predictors of future attempt.",
+      "refs": ["columbia-cssrs", "nimh-suicide-prevention", "sprc"]
+    },
+    {
+      "id": "d2-suicide-004",
+      "type": "recall",
+      "domain": "D2",
+      "task": "2S",
+      "cacrep": ["assessment"],
+      "tags": ["suicide-risk", "risk-factors", "protective-factors"],
+      "prompt": "Distinguish risk factors, warning signs, and protective factors in suicide assessment, giving examples of each.",
+      "answer": "Risk factors are relatively stable characteristics raising long-term statistical likelihood — prior attempt, family history of suicide, psychiatric diagnosis, substance use, chronic pain or illness, access to lethal means, recent loss. Warning signs indicate acute, near-term risk — talking about wanting to die, seeking means, hopelessness, withdrawal, giving away possessions, sudden calm after severe depression. Protective factors reduce risk — strong social connection, responsibility for children or pets, engagement in treatment, religious or cultural beliefs against suicide, effective coping and problem-solving skills.",
+      "explanation": "The clinical error is treating risk factors as if they signalled imminence. Warning signs drive acute decisions; risk factors set the baseline. Sudden calm after severe depression is a classic warning sign, sometimes reflecting a resolved decision.",
+      "refs": ["sprc", "nimh-suicide-prevention", "cdc-suicide-data"]
+    },
+    {
+      "id": "d2-lethality-005",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2S",
+      "cacrep": ["assessment"],
+      "tags": ["suicide-risk", "means-restriction", "safety"],
+      "prompt": "A client with suicidal ideation reports keeping a firearm at home. What is the most important immediate intervention?",
+      "choices": [
+        { "text": "Work with the client on lethal means restriction — securing, removing, or transferring the firearm temporarily", "correct": true, "rationale": "Means restriction is among the most effective suicide prevention interventions, because many attempts are impulsive and firearm attempts are highly lethal." },
+        { "text": "Ask the client to sign a no-suicide contract", "correct": false, "rationale": "No-suicide contracts have no demonstrated efficacy and may create false reassurance. Safety planning has replaced them." },
+        { "text": "Schedule more frequent sessions and continue monitoring", "correct": false, "rationale": "Increased contact is useful but does not address immediate access to a highly lethal method." },
+        { "text": "Advise the client to avoid thinking about the firearm", "correct": false, "rationale": "Thought suppression is ineffective and leaves access unchanged." }
+      ],
+      "explanation": "The evidence base rests on the impulsivity of many attempts and the very high case fatality of firearms. A collaborative safety plan includes warning signs, internal coping strategies, social contacts, professional contacts, and means restriction.",
+      "refs": ["sprc", "cdc-suicide-data", "samhsa-988"]
+    },
+    {
+      "id": "d2-biopsych-006",
+      "type": "recall",
+      "domain": "D2",
+      "task": "2A",
+      "cacrep": ["assessment"],
+      "tags": ["biopsychosocial", "intake"],
+      "prompt": "What domains does a biopsychosocial assessment cover?",
+      "answer": "Biological — medical history, medications, substance use, sleep, appetite, family history of illness, disability. Psychological — presenting problem, symptom history, prior treatment, coping style, cognition, trauma history, mental status. Social — family and relationships, culture and identity, education and employment, housing and finances, legal involvement, spirituality, social support, and community context.",
+      "explanation": "The biopsychosocial model resists reducing distress to any single cause. Medical review matters clinically: thyroid disorders, anaemia, sleep apnoea, and medication side effects all mimic psychiatric presentations.",
+      "refs": ["samhsa-tip42", "statpearls-mse"]
+    },
+    {
+      "id": "d2-diagnosis-007",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2E",
+      "cacrep": ["assessment"],
+      "tags": ["dsm", "diagnosis", "differential"],
+      "prompt": "Before diagnosing a primary mental disorder, what must a clinician rule out first?",
+      "choices": [
+        { "text": "That the symptoms are attributable to a medical condition or the effects of a substance or medication", "correct": true, "rationale": "The DSM diagnostic hierarchy requires excluding substance-induced and medical aetiologies before assigning a primary disorder." },
+        { "text": "That the client has never had counseling before", "correct": false, "rationale": "Treatment history is clinically useful but is not an exclusion criterion." },
+        { "text": "That the client's family disputes the symptoms", "correct": false, "rationale": "Collateral disagreement does not determine diagnostic validity." },
+        { "text": "That the symptoms have lasted more than one year", "correct": false, "rationale": "Duration requirements are disorder-specific, not a universal rule." }
+      ],
+      "explanation": "Every DSM diagnosis also requires clinically significant distress or impairment in functioning. Symptoms alone are insufficient — a person may have low mood without meeting criteria for any disorder.",
+      "refs": ["dsm5tr", "icd11"]
+    },
+    {
+      "id": "d2-cfi-008",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2C",
+      "cacrep": ["assessment", "social-cultural"],
+      "tags": ["cultural-formulation", "dsm", "culture"],
+      "prompt": "What is the purpose of the DSM-5-TR Cultural Formulation Interview (CFI)?",
+      "choices": [
+        { "text": "To elicit the client's own cultural understanding of their problem, its causes, supports, and expectations of care", "correct": true, "rationale": "The CFI is a semi-structured interview centring the client's explanatory model and cultural context." },
+        { "text": "To determine the client's racial or ethnic category for records", "correct": false, "rationale": "The CFI concerns meaning and context, not demographic classification." },
+        { "text": "To decide whether a client requires an interpreter", "correct": false, "rationale": "Language access is a separate practical determination." },
+        { "text": "To assign a culture-bound syndrome diagnosis", "correct": false, "rationale": "The DSM-5-TR uses 'cultural concepts of distress' rather than culture-bound syndromes, and the CFI is broader than any such assignment." }
+      ],
+      "explanation": "The CFI covers cultural definition of the problem, cultural perceptions of cause and support, cultural factors affecting self-coping and help-seeking, and cultural factors affecting the current help-seeking relationship. It improves diagnostic accuracy where idioms of distress differ from DSM phrasing.",
+      "refs": ["dsm5tr", "msjcc"]
+    },
+    {
+      "id": "d2-loc-009",
+      "type": "scenario",
+      "domain": "D2",
+      "task": "2H",
+      "cacrep": ["assessment"],
+      "tags": ["level-of-care", "referral", "substance-use"],
+      "prompt": "A client with alcohol use disorder has failed two outpatient attempts, is drinking daily, and has no stable housing. Which level of care is most likely indicated?",
+      "choices": [
+        { "text": "A more intensive level such as residential or inpatient treatment, given withdrawal risk and an unsupportive recovery environment", "correct": true, "rationale": "Repeated outpatient failure, daily use with withdrawal potential, and an unstable environment all point to a higher level of care." },
+        { "text": "Continued weekly outpatient counseling with a new counselor", "correct": false, "rationale": "Repeating a level of care that has already failed twice, without addressing environment or withdrawal risk, is unlikely to help." },
+        { "text": "Monthly check-ins to support the client's autonomy", "correct": false, "rationale": "Reducing intensity as severity increases inverts the clinical logic." },
+        { "text": "Referral to a self-help group as the sole intervention", "correct": false, "rationale": "Mutual-help groups are valuable adjuncts but not a substitute for treatment at the indicated level." }
+      ],
+      "explanation": "The ASAM Criteria assess six dimensions: acute intoxication/withdrawal; biomedical conditions; emotional, behavioural, or cognitive conditions; readiness to change; relapse potential; and recovery environment. Placement should be at the least intensive level that is safe and effective.",
+      "refs": ["asam-criteria", "samhsa-tip42"]
+    },
+    {
+      "id": "d2-reliability-010",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2M",
+      "cacrep": ["assessment"],
+      "tags": ["reliability", "psychometrics"],
+      "prompt": "An instrument yields very similar scores when the same client takes it two weeks apart. Which property does this demonstrate?",
+      "choices": [
+        { "text": "Test–retest reliability", "correct": true, "rationale": "Consistency of scores across time for the same individual is exactly test–retest reliability." },
+        { "text": "Internal consistency", "correct": false, "rationale": "Internal consistency concerns how well items within a single administration hang together, measured by Cronbach's alpha." },
+        { "text": "Concurrent validity", "correct": false, "rationale": "Concurrent validity compares scores against an established criterion measured at the same time." },
+        { "text": "Interrater reliability", "correct": false, "rationale": "Interrater reliability concerns agreement between different scorers." }
+      ],
+      "explanation": "Reliability is consistency; validity is accuracy. An instrument can be highly reliable and completely invalid — consistently measuring the wrong thing. Reliability is necessary but not sufficient for validity.",
+      "refs": ["apa-testing-standards", "oer-research-methods"]
+    },
+    {
+      "id": "d2-validity-011",
+      "type": "recall",
+      "domain": "D2",
+      "task": "2M",
+      "cacrep": ["assessment"],
+      "tags": ["validity", "psychometrics"],
+      "prompt": "Define content, construct, concurrent, and predictive validity.",
+      "answer": "Content validity — the items adequately sample the full domain the test claims to measure. Construct validity — the test actually measures the theoretical construct it claims to (supported by convergent and discriminant evidence). Concurrent validity — scores correlate with an established criterion measured at the same time. Predictive validity — scores forecast a future criterion, such as an admissions test predicting later performance.",
+      "explanation": "Concurrent and predictive validity are the two forms of criterion-related validity, distinguished only by timing. Face validity — whether a test merely looks appropriate — is the weakest form and not real evidence.",
+      "refs": ["apa-testing-standards", "oer-research-methods"]
+    },
+    {
+      "id": "d2-sensitivity-012",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2L",
+      "cacrep": ["assessment"],
+      "tags": ["screening", "sensitivity", "specificity"],
+      "prompt": "A depression screening tool identifies nearly everyone who truly has depression but also flags many who do not. How is this tool best characterized?",
+      "choices": [
+        { "text": "High sensitivity, low specificity", "correct": true, "rationale": "Sensitivity is the ability to detect true cases; specificity is the ability to correctly exclude non-cases. Many false positives means low specificity." },
+        { "text": "High specificity, low sensitivity", "correct": false, "rationale": "That would mean missing true cases while rarely producing false positives — the opposite pattern." },
+        { "text": "High reliability, low validity", "correct": false, "rationale": "These are different properties; the item describes classification accuracy, not consistency." },
+        { "text": "Low sensitivity and low specificity", "correct": false, "rationale": "The tool detects nearly all true cases, so sensitivity is high." }
+      ],
+      "explanation": "Screening instruments are deliberately built for high sensitivity: it is safer to over-refer for further assessment than to miss a case. Diagnostic instruments prioritize specificity. SnNout and SpPin: a highly Sensitive test when Negative rules out; a highly Specific test when Positive rules in.",
+      "refs": ["statpearls-sensitivity-specificity", "apa-testing-standards"]
+    },
+    {
+      "id": "d2-standard-013",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2M",
+      "cacrep": ["assessment"],
+      "tags": ["standard-scores", "interpretation"],
+      "prompt": "A client scores at the 84th percentile on a normally distributed measure with a mean of 100 and standard deviation of 15. What is their approximate standard score?",
+      "choices": [
+        { "text": "115", "correct": true, "rationale": "The 84th percentile corresponds to about +1 SD. One SD above a mean of 100 with SD 15 gives 115." },
+        { "text": "84", "correct": false, "rationale": "This confuses the percentile rank with the standard score itself." },
+        { "text": "130", "correct": false, "rationale": "130 is +2 SD, corresponding to roughly the 98th percentile." },
+        { "text": "100", "correct": false, "rationale": "100 is the mean, corresponding to the 50th percentile." }
+      ],
+      "explanation": "Anchor points worth memorizing: −2 SD ≈ 2nd percentile, −1 SD ≈ 16th, mean = 50th, +1 SD ≈ 84th, +2 SD ≈ 98th. Percentile ranks are ordinal and bunch heavily near the middle, so equal percentile differences are not equal score differences.",
+      "refs": ["apa-testing-standards", "openstax-statistics"]
+    },
+    {
+      "id": "d2-sem-014",
+      "type": "cloze",
+      "domain": "D2",
+      "task": "2M",
+      "cacrep": ["assessment"],
+      "tags": ["standard-error", "confidence-interval"],
+      "prompt": "The {{standard error of measurement}} estimates the expected variability in an individual's obtained score due to measurement error, and is used to build a confidence interval around a test score.",
+      "answer": "standard error of measurement",
+      "explanation": "SEM is inversely related to reliability: the more reliable the instrument, the smaller the SEM. Reporting a score as a band rather than a point discourages over-interpretation of small differences.",
+      "refs": ["apa-testing-standards", "oer-research-methods"]
+    },
+    {
+      "id": "d2-trauma-015",
+      "type": "scenario",
+      "domain": "D2",
+      "task": "2O",
+      "cacrep": ["assessment"],
+      "tags": ["trauma", "assessment", "trauma-informed"],
+      "prompt": "During intake, a counselor wants to assess a trauma history. What approach best reflects trauma-informed practice?",
+      "choices": [
+        { "text": "Ask about trauma in a general, non-intrusive way, explain why the question is asked, and let the client control the level of detail", "correct": true, "rationale": "Trauma-informed assessment prioritizes safety, choice, and control — screening for the presence of trauma without requiring a detailed narrative at intake." },
+        { "text": "Obtain a full, detailed narrative of each traumatic event during the first session", "correct": false, "rationale": "Detailed recounting before stabilization or rapport can retraumatize and precipitate dysregulation." },
+        { "text": "Avoid the topic entirely until the client raises it themselves", "correct": false, "rationale": "Avoidance means missing a history that shapes diagnosis and treatment planning." },
+        { "text": "Use only a standardized checklist with no discussion", "correct": false, "rationale": "A checklist alone strips context and misses the client's own meaning." }
+      ],
+      "explanation": "SAMHSA's six principles of a trauma-informed approach: safety; trustworthiness and transparency; peer support; collaboration and mutuality; empowerment, voice and choice; and attention to cultural, historical and gender issues. The organizing question shifts from 'what is wrong with you?' to 'what happened to you?'",
+      "refs": ["samhsa-tip57", "nimh-ptsd", "cdc-ace"]
+    },
+    {
+      "id": "d2-substance-016",
+      "type": "recall",
+      "domain": "D2",
+      "task": "2P",
+      "cacrep": ["assessment"],
+      "tags": ["substance-use", "screening", "cage"],
+      "prompt": "What do the four CAGE questions screen for, and what score suggests further assessment?",
+      "answer": "CAGE screens for problem alcohol use: have you felt you should Cut down; have people Annoyed you by criticizing your drinking; have you felt Guilty about drinking; have you ever had a drink first thing in the morning as an Eye-opener. Two or more affirmative answers is the conventional threshold indicating the need for further assessment.",
+      "explanation": "CAGE is brief and easy to remember but does not assess quantity, frequency, or current use. AUDIT is more thorough and better at detecting hazardous drinking; the DSM-5-TR criteria for substance use disorder specify severity by symptom count.",
+      "refs": ["samhsa-tip42", "dsm5tr"]
+    },
+    {
+      "id": "d2-sud-017",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2G",
+      "cacrep": ["assessment"],
+      "tags": ["substance-use", "dsm", "severity"],
+      "prompt": "How does DSM-5-TR specify the severity of a substance use disorder?",
+      "choices": [
+        { "text": "By the number of criteria met — 2–3 mild, 4–5 moderate, 6 or more severe", "correct": true, "rationale": "DSM-5 merged abuse and dependence into a single disorder graded by symptom count." },
+        { "text": "By the quantity of substance consumed per week", "correct": false, "rationale": "Quantity is clinically relevant but is not the DSM severity specifier." },
+        { "text": "By whether the pattern constitutes abuse or dependence", "correct": false, "rationale": "The abuse/dependence distinction was removed in DSM-5; this is a frequently tested change." },
+        { "text": "By whether physiological withdrawal is present", "correct": false, "rationale": "Withdrawal is one criterion among eleven, not the severity determinant." }
+      ],
+      "explanation": "Craving was added as a criterion in DSM-5, and legal problems were removed. Note also that tolerance and withdrawal are not counted when the substance is taken as prescribed under medical supervision.",
+      "refs": ["dsm5tr", "samhsa-tip42"]
+    },
+    {
+      "id": "d2-depression-018",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2E",
+      "cacrep": ["assessment"],
+      "tags": ["depression", "dsm", "duration"],
+      "prompt": "What is the minimum symptom duration required for a diagnosis of major depressive episode?",
+      "choices": [
+        { "text": "Two weeks", "correct": true, "rationale": "A major depressive episode requires at least five symptoms present during the same two-week period, including depressed mood or loss of interest." },
+        { "text": "One week", "correct": false, "rationale": "One week is the minimum for a manic episode, not a depressive one." },
+        { "text": "One month", "correct": false, "rationale": "One month is associated with other diagnoses, such as the duration threshold for PTSD symptoms." },
+        { "text": "Two years", "correct": false, "rationale": "Two years is the adult duration for persistent depressive disorder (dysthymia); one year for children and adolescents." }
+      ],
+      "explanation": "Duration thresholds are heavily tested. Useful anchors: manic episode 1 week (or any duration if hospitalization is needed); hypomanic 4 days; major depressive episode 2 weeks; persistent depressive disorder 2 years in adults; PTSD symptoms more than 1 month; acute stress disorder 3 days to 1 month.",
+      "refs": ["dsm5tr", "nimh-depression"]
+    },
+    {
+      "id": "d2-bipolar-019",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2E",
+      "cacrep": ["assessment"],
+      "tags": ["bipolar", "dsm", "differential"],
+      "prompt": "What distinguishes bipolar I from bipolar II disorder?",
+      "choices": [
+        { "text": "Bipolar I requires at least one full manic episode; bipolar II requires a hypomanic episode plus a major depressive episode, and never a full manic episode", "correct": true, "rationale": "The presence of a full manic episode is the defining feature of bipolar I; a single manic episode moves the diagnosis to bipolar I permanently." },
+        { "text": "Bipolar II is a milder form of bipolar I with the same episode structure", "correct": false, "rationale": "Bipolar II is not simply milder; its depressive episodes are often more prolonged and disabling. The distinction is structural." },
+        { "text": "Bipolar I involves depression only; bipolar II involves mania only", "correct": false, "rationale": "This reverses and misstates both." },
+        { "text": "Bipolar II requires psychotic features", "correct": false, "rationale": "Psychotic features indicate mania and therefore bipolar I; their presence rules out hypomania." }
+      ],
+      "explanation": "Mania lasts at least a week (or requires hospitalization), causes marked impairment, and may include psychosis. Hypomania lasts at least four days, is observable by others, but does not cause marked impairment or include psychosis.",
+      "refs": ["dsm5tr", "nimh-bipolar"]
+    },
+    {
+      "id": "d2-ptsd-020",
+      "type": "recall",
+      "domain": "D2",
+      "task": "2O",
+      "cacrep": ["assessment"],
+      "tags": ["ptsd", "dsm", "symptom-clusters"],
+      "prompt": "Name the four symptom clusters required for a PTSD diagnosis in DSM-5-TR.",
+      "answer": "Intrusion (unwanted memories, nightmares, flashbacks, distress at reminders); avoidance (of internal reminders such as thoughts and feelings, or external reminders such as people and places); negative alterations in cognitions and mood (distorted blame, persistent negative emotional state, detachment, anhedonia, inability to recall aspects of the event); and alterations in arousal and reactivity (irritability, recklessness, hypervigilance, exaggerated startle, concentration and sleep problems).",
+      "explanation": "Symptoms must persist more than one month and cause significant distress or impairment. Under one month, consider acute stress disorder. DSM-5 moved PTSD out of the anxiety disorders into trauma- and stressor-related disorders.",
+      "refs": ["dsm5tr", "nimh-ptsd", "samhsa-tip57"]
+    },
+    {
+      "id": "d2-anxiety-021",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2E",
+      "cacrep": ["assessment"],
+      "tags": ["anxiety", "panic", "differential"],
+      "prompt": "A client experiences recurrent unexpected episodes of intense fear peaking within minutes, with palpitations, sweating, and fear of dying, followed by a month of worry about further attacks. What is the most likely diagnosis?",
+      "choices": [
+        { "text": "Panic disorder", "correct": true, "rationale": "Recurrent unexpected panic attacks plus at least a month of persistent concern about further attacks or maladaptive behaviour change defines panic disorder." },
+        { "text": "Generalized anxiety disorder", "correct": false, "rationale": "GAD involves persistent excessive worry across multiple domains for at least six months, not discrete attacks peaking in minutes." },
+        { "text": "Specific phobia", "correct": false, "rationale": "Phobic anxiety is cued by a specific object or situation; these attacks are unexpected." },
+        { "text": "Agoraphobia", "correct": false, "rationale": "Agoraphobia is fear of situations where escape is difficult; it may co-occur but is separately diagnosed and not described here." }
+      ],
+      "explanation": "A panic attack is a specifier that can accompany many disorders, not a diagnosis in itself. What makes it panic *disorder* is unexpected attacks plus the persistent anticipatory worry or behaviour change that follows.",
+      "refs": ["dsm5tr", "nimh-anxiety"]
+    },
+    {
+      "id": "d2-collateral-022",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2Q",
+      "cacrep": ["assessment"],
+      "tags": ["collateral", "self-report", "intake"],
+      "prompt": "Why should a counselor supplement client self-report with collateral information and direct observation where appropriate?",
+      "choices": [
+        { "text": "Because self-report is subject to limited insight, memory error, impression management, and symptom-dependent distortion", "correct": true, "rationale": "Multiple data sources compensate for the known limits of any single one, improving diagnostic accuracy." },
+        { "text": "Because clients generally intend to deceive their counselors", "correct": false, "rationale": "Deliberate deception is uncommon; ordinary cognitive and emotional distortion is the far more usual issue." },
+        { "text": "Because insurers require third-party verification of all symptoms", "correct": false, "rationale": "This is not a general requirement and is not the clinical rationale." },
+        { "text": "Because collateral sources are inherently more reliable than the client", "correct": false, "rationale": "Collateral sources have their own biases and agendas; they add perspective rather than replacing the client's account." }
+      ],
+      "explanation": "Multi-method, multi-informant assessment is the standard, particularly with children, where parent and teacher reports frequently diverge. Any collateral contact requires a release of information.",
+      "refs": ["apa-testing-standards", "statpearls-mse"]
+    },
+    {
+      "id": "d2-observation-023",
+      "type": "cloze",
+      "domain": "D2",
+      "task": "2N",
+      "cacrep": ["assessment"],
+      "tags": ["observation", "formal", "informal"],
+      "prompt": "Standardized instruments with established norms and scoring procedures are {{formal}} assessments, while clinical interviews, behavioural observation, and unstructured checklists are informal assessments.",
+      "answer": "formal",
+      "explanation": "Formal assessments allow comparison to a norm group; informal assessments provide contextual richness a standardized instrument cannot capture. Competent assessment triangulates both.",
+      "refs": ["apa-testing-standards"]
+    },
+    {
+      "id": "d2-norms-024",
+      "type": "scenario",
+      "domain": "D2",
+      "task": "2M",
+      "cacrep": ["assessment", "social-cultural"],
+      "tags": ["norms", "cultural-bias", "test-selection"],
+      "prompt": "A counselor plans to use an instrument normed exclusively on U.S.-born English speakers with a recently immigrated client who speaks English as a second language. What is the main concern?",
+      "choices": [
+        { "text": "The norm group does not represent the client, so scores may not be valid and could produce misleading conclusions", "correct": true, "rationale": "Normative comparison is only meaningful when the client resembles the reference group on relevant characteristics." },
+        { "text": "The test will take the client longer to complete", "correct": false, "rationale": "Administration time is a practical inconvenience, not the validity problem." },
+        { "text": "The client may find the questions culturally interesting", "correct": false, "rationale": "This does not address the measurement issue at all." },
+        { "text": "There is no concern as long as the client consents", "correct": false, "rationale": "Consent does not repair inappropriate norms; the counselor holds the responsibility for appropriate test selection." }
+      ],
+      "explanation": "Counselors must consider the normative sample, language, acculturation, and possible bias when selecting instruments, and must qualify interpretations accordingly. Where no appropriate instrument exists, that limitation belongs in the report.",
+      "refs": ["apa-testing-standards", "msjcc", "aca-ethics"]
+    },
+    {
+      "id": "d2-functioning-025",
+      "type": "recall",
+      "domain": "D2",
+      "task": "2K",
+      "cacrep": ["assessment"],
+      "tags": ["functioning", "who-das", "impairment"],
+      "prompt": "How does DSM-5-TR assess functional impairment, and what replaced the GAF scale?",
+      "answer": "DSM-5 discontinued the multiaxial system and the Global Assessment of Functioning (GAF) scale. Functional assessment is now handled through dimensional measures, principally the WHO Disability Assessment Schedule (WHODAS 2.0), which rates difficulty across cognition, mobility, self-care, getting along, life activities, and participation.",
+      "explanation": "The GAF was dropped because of poor reliability and conflation of symptom severity with functional impairment. Many agencies and payers still use it, so counselors encounter it in practice even though it is no longer part of the DSM.",
+      "refs": ["dsm5tr", "icd11"]
+    },
+    {
+      "id": "d2-intake-026",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2D",
+      "cacrep": ["assessment", "helping-relationships"],
+      "tags": ["intake", "rapport", "first-session"],
+      "prompt": "What is the primary competing demand in a first counseling session?",
+      "choices": [
+        { "text": "Gathering enough information to assess and plan while simultaneously building enough rapport that the client returns", "correct": true, "rationale": "Intake must accomplish both, and over-weighting either — interrogation or pure relationship-building — undermines the other." },
+        { "text": "Completing all required paperwork before any clinical conversation begins", "correct": false, "rationale": "Necessary paperwork should not consume the session or crowd out engagement." },
+        { "text": "Reaching a definitive diagnosis before the session ends", "correct": false, "rationale": "Diagnosis often requires more than one session; premature closure is a known error." },
+        { "text": "Establishing the full treatment plan and having the client sign it", "correct": false, "rationale": "Treatment planning follows assessment and should be collaborative, not rushed into session one." }
+      ],
+      "explanation": "Premature termination is most likely after the first session, which makes engagement a clinical priority rather than a nicety. Structured intake formats help, but should not turn the session into a checklist recitation.",
+      "refs": ["samhsa-tip65", "statpearls-mse"]
+    },
+    {
+      "id": "d2-modality-027",
+      "type": "scenario",
+      "domain": "D2",
+      "task": "2I",
+      "cacrep": ["assessment", "helping-relationships"],
+      "tags": ["modality", "family", "treatment-selection"],
+      "prompt": "A 10-year-old is referred for behaviour problems occurring only at home, while the parents describe frequent conflict about discipline. Which treatment modality is most indicated?",
+      "choices": [
+        { "text": "Family counseling, since the presenting problem appears embedded in family interaction patterns", "correct": true, "rationale": "Symptoms confined to one system and coinciding with conflict in that system point toward systemic intervention." },
+        { "text": "Individual play therapy for the child only", "correct": false, "rationale": "Treating only the child ignores the interactional context that appears to maintain the behaviour." },
+        { "text": "Group therapy with other children who have behaviour problems", "correct": false, "rationale": "Groups of behaviourally disordered peers can produce deviancy training and do not address the family dynamic." },
+        { "text": "Referral for medication evaluation as the first step", "correct": false, "rationale": "Situation-specific behaviour suggests context rather than a pervasive disorder requiring medication first." }
+      ],
+      "explanation": "The setting-specificity of symptoms is a strong diagnostic clue. Behaviour occurring across home, school, and community suggests something within the child; behaviour restricted to one setting suggests something about that setting.",
+      "refs": ["dsm5tr", "nimh-adhd"]
+    },
+    {
+      "id": "d2-outcome-028",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2T",
+      "cacrep": ["assessment", "research"],
+      "tags": ["pre-post", "outcome", "measurement"],
+      "prompt": "A counselor administers a symptom inventory at intake and every fourth session thereafter. What is the primary clinical purpose?",
+      "choices": [
+        { "text": "To detect whether the client is improving, plateauing, or deteriorating, so treatment can be adjusted", "correct": true, "rationale": "Routine outcome monitoring provides feedback that clinician judgement alone reliably misses, especially for deterioration." },
+        { "text": "To justify the diagnosis to the insurer", "correct": false, "rationale": "Documentation for payers is a secondary use, not the clinical purpose." },
+        { "text": "To determine the client's readiness for termination on a fixed schedule", "correct": false, "rationale": "Termination is a collaborative clinical decision informed by, not dictated by, scores." },
+        { "text": "To compare the client against other clients in the caseload", "correct": false, "rationale": "The relevant comparison is the client against their own baseline." }
+      ],
+      "explanation": "Repeated measurement also raises the issue of regression to the mean: clients typically enter treatment at their worst, so some early improvement occurs regardless of intervention. This is why controlled comparison matters for efficacy claims.",
+      "refs": ["oer-research-methods", "apa-testing-standards"]
+    },
+    {
+      "id": "d2-risk-029",
+      "type": "scenario",
+      "domain": "D2",
+      "task": "2S",
+      "cacrep": ["assessment"],
+      "tags": ["homicidal-ideation", "risk", "violence"],
+      "prompt": "A client expresses intense anger toward an unnamed group of 'people at work' but identifies no specific person and describes no plan. How should the counselor proceed?",
+      "choices": [
+        { "text": "Continue assessing systematically — specificity of target, plan, means, history of violence — and document the reasoning, recognizing no duty to warn has been triggered", "correct": true, "rationale": "Without an identifiable victim there is generally no duty to warn, but ongoing assessment and documentation remain essential." },
+        { "text": "Notify the client's employer immediately as a precaution", "correct": false, "rationale": "This breaches confidentiality without meeting the threshold for a protective disclosure." },
+        { "text": "Conclude that generalized anger poses no risk and move to another topic", "correct": false, "rationale": "Dismissing the disclosure forfeits assessment of a potentially escalating situation." },
+        { "text": "Terminate the session and refer to a forensic evaluator", "correct": false, "rationale": "Disproportionate to the presentation and disruptive to a client who is disclosing anger appropriately in session." }
+      ],
+      "explanation": "Duty-to-protect statutes generally require an identifiable victim and a serious, imminent threat. Best predictors of future violence: past violent behaviour, substance use, access to weapons, and specificity of plan.",
+      "refs": ["tarasoff", "aca-ethics", "sprc"]
+    },
+    {
+      "id": "d2-schizophrenia-030",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2E",
+      "cacrep": ["assessment"],
+      "tags": ["psychosis", "schizophrenia", "dsm"],
+      "prompt": "Which are considered negative symptoms of schizophrenia?",
+      "choices": [
+        { "text": "Diminished emotional expression and avolition", "correct": true, "rationale": "Negative symptoms are absences or reductions of normal function — flat affect, avolition, alogia, anhedonia, asociality." },
+        { "text": "Hallucinations and delusions", "correct": false, "rationale": "These are positive symptoms — additions to normal experience." },
+        { "text": "Disorganized speech and behaviour", "correct": false, "rationale": "These are also positive symptoms, reflecting distortion rather than absence." },
+        { "text": "Impaired memory and attention", "correct": false, "rationale": "These are cognitive symptoms, a third category distinct from positive and negative." }
+      ],
+      "explanation": "Diagnosis requires two or more characteristic symptoms for a significant portion of one month, with at least one being delusions, hallucinations, or disorganized speech, and continuous disturbance for at least six months. Negative symptoms respond least well to medication and drive much long-term disability.",
+      "refs": ["dsm5tr", "nimh-schizophrenia"]
+    },
+    {
+      "id": "d2-personality-031",
+      "type": "recall",
+      "domain": "D2",
+      "task": "2E",
+      "cacrep": ["assessment"],
+      "tags": ["personality-disorders", "clusters", "dsm"],
+      "prompt": "Name the three DSM personality disorder clusters, their descriptive theme, and the disorders in each.",
+      "answer": "Cluster A (odd or eccentric): paranoid, schizoid, schizotypal. Cluster B (dramatic, emotional, or erratic): antisocial, borderline, histrionic, narcissistic. Cluster C (anxious or fearful): avoidant, dependent, obsessive-compulsive personality disorder.",
+      "explanation": "Mnemonic: A = 'weird', B = 'wild', C = 'worried'. Personality disorders require an enduring, pervasive, inflexible pattern beginning by adolescence or early adulthood — distinguishing them from state-dependent presentations during acute episodes.",
+      "refs": ["dsm5tr", "nimh-bpd"]
+    },
+    {
+      "id": "d2-ocd-032",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2E",
+      "cacrep": ["assessment"],
+      "tags": ["ocd", "ocpd", "differential"],
+      "prompt": "What distinguishes obsessive-compulsive disorder (OCD) from obsessive-compulsive personality disorder (OCPD)?",
+      "choices": [
+        { "text": "OCD involves unwanted, distressing obsessions and compulsions the person recognizes as excessive; OCPD is an ego-syntonic pervasive pattern of perfectionism and control", "correct": true, "rationale": "The ego-dystonic/ego-syntonic distinction is the core difference: OCD symptoms are unwanted, OCPD traits feel like who the person is." },
+        { "text": "OCD is a personality disorder and OCPD is an anxiety disorder", "correct": false, "rationale": "This reverses the classification. OCD sits in obsessive-compulsive and related disorders; OCPD is a Cluster C personality disorder." },
+        { "text": "OCD occurs only in adults, OCPD only in children", "correct": false, "rationale": "OCD frequently begins in childhood or adolescence; personality disorders are not diagnosed until patterns are established." },
+        { "text": "They are the same condition at different severity levels", "correct": false, "rationale": "They are distinct disorders that can co-occur but frequently do not." }
+      ],
+      "explanation": "Ego-dystonic means experienced as alien and unwanted; ego-syntonic means consistent with one's self-image. A person with OCPD typically presents because others complain about their rigidity, not because they are distressed by it.",
+      "refs": ["dsm5tr", "nimh-ocd"]
+    },
+    {
+      "id": "d2-eating-033",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2E",
+      "cacrep": ["assessment"],
+      "tags": ["eating-disorders", "dsm", "medical-risk"],
+      "prompt": "What most clearly distinguishes anorexia nervosa from bulimia nervosa?",
+      "choices": [
+        { "text": "Anorexia involves restriction leading to significantly low body weight; in bulimia, weight is typically within or above the normal range", "correct": true, "rationale": "Significantly low body weight is the defining criterion of anorexia; binge-purge cycles can occur in both, but bulimia does not involve significantly low weight." },
+        { "text": "Only bulimia involves binge eating and purging", "correct": false, "rationale": "Anorexia has a binge-eating/purging subtype, so these behaviours do not distinguish the two." },
+        { "text": "Only anorexia involves body image disturbance", "correct": false, "rationale": "Both involve undue influence of body shape and weight on self-evaluation." },
+        { "text": "Bulimia is diagnosed only in adults", "correct": false, "rationale": "Both commonly begin in adolescence." }
+      ],
+      "explanation": "Eating disorders carry the highest mortality of any psychiatric condition, so medical monitoring and coordinated care are essential. Binge-eating disorder — recurrent binges without compensatory behaviours — became a distinct DSM-5 diagnosis.",
+      "refs": ["dsm5tr", "nimh-eating-disorders"]
+    },
+    {
+      "id": "d2-adhd-034",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2E",
+      "cacrep": ["assessment", "human-growth"],
+      "tags": ["adhd", "dsm", "onset"],
+      "prompt": "What are the age-of-onset and cross-setting requirements for an ADHD diagnosis?",
+      "choices": [
+        { "text": "Several symptoms present before age 12, and impairment in two or more settings", "correct": true, "rationale": "DSM-5 raised the onset threshold from age 7 to age 12 and requires cross-setting impairment." },
+        { "text": "Symptoms present before age 7 in a single setting", "correct": false, "rationale": "Age 7 was the DSM-IV threshold; DSM-5 changed it, and one setting is insufficient." },
+        { "text": "Onset at any age, with impairment in one setting", "correct": false, "rationale": "Childhood onset is required; adult-onset presentations warrant a differential." },
+        { "text": "Symptoms before age 18 in three or more settings", "correct": false, "rationale": "Neither the age nor the setting count matches the criteria." }
+      ],
+      "explanation": "Cross-setting impairment is what separates ADHD from a situational response — to a chaotic classroom, a stressful home, or an unrecognized learning disability. This is why teacher and parent rating scales are standard practice.",
+      "refs": ["dsm5tr", "nimh-adhd"]
+    },
+    {
+      "id": "d2-grief-035",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2E",
+      "cacrep": ["assessment"],
+      "tags": ["grief", "prolonged-grief", "differential"],
+      "prompt": "How should a counselor distinguish normal grief from prolonged grief disorder?",
+      "choices": [
+        { "text": "By duration and persistence — intense yearning and preoccupation continuing well beyond expected cultural norms with significant ongoing impairment", "correct": true, "rationale": "Prolonged grief disorder is defined by persistence and disabling intensity beyond the expected course, judged against cultural context." },
+        { "text": "By the presence of sadness and crying", "correct": false, "rationale": "These are ordinary features of normal grief." },
+        { "text": "By whether the client can describe the death without distress", "correct": false, "rationale": "Distress when discussing a loss is expected and not diagnostic." },
+        { "text": "By whether the death was sudden or anticipated", "correct": false, "rationale": "Circumstances influence risk but do not define the disorder." }
+      ],
+      "explanation": "DSM-5-TR added prolonged grief disorder with a duration threshold of at least 12 months for adults (6 months for children and adolescents). DSM-5 also removed the earlier bereavement exclusion for major depression — grief and depression can co-occur.",
+      "refs": ["dsm5tr", "statpearls-grief"]
+    },
+    {
+      "id": "d2-projective-036",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2M",
+      "cacrep": ["assessment"],
+      "tags": ["projective", "objective", "test-types"],
+      "prompt": "Which of these is a projective assessment technique?",
+      "choices": [
+        { "text": "The Thematic Apperception Test, in which the client constructs stories from ambiguous pictures", "correct": true, "rationale": "Projective techniques present ambiguous stimuli on the premise that responses reveal internal content." },
+        { "text": "The Minnesota Multiphasic Personality Inventory (MMPI)", "correct": false, "rationale": "The MMPI is an objective, structured self-report inventory with standardized scoring." },
+        { "text": "The Beck Depression Inventory", "correct": false, "rationale": "A structured objective self-report symptom measure." },
+        { "text": "The Wechsler Adult Intelligence Scale", "correct": false, "rationale": "A standardized objective measure of cognitive ability." }
+      ],
+      "explanation": "Projective techniques (Rorschach, TAT, sentence completion, draw-a-person) offer rich hypotheses but generally weaker psychometric properties. Objective instruments offer better reliability and norms with less idiographic depth.",
+      "refs": ["apa-testing-standards"]
+    },
+    {
+      "id": "d2-intelligence-037",
+      "type": "recall",
+      "domain": "D2",
+      "task": "2M",
+      "cacrep": ["assessment", "human-growth"],
+      "tags": ["intelligence", "iq", "testing"],
+      "prompt": "What is the mean and standard deviation of most modern IQ tests, and what score range indicates intellectual disability?",
+      "answer": "Most modern IQ tests use a mean of 100 and a standard deviation of 15. Scores approximately two standard deviations below the mean — around 70 or below, accounting for the standard error of measurement — are consistent with intellectual disability, but DSM-5-TR requires deficits in adaptive functioning as well, and severity is specified by adaptive functioning rather than IQ score.",
+      "explanation": "The shift to adaptive functioning as the severity determinant is a frequently tested DSM-5 change. Two people with the same IQ can differ greatly in the support they need.",
+      "refs": ["dsm5tr", "apa-testing-standards"]
+    },
+    {
+      "id": "d2-screening-038",
+      "type": "scenario",
+      "domain": "D2",
+      "task": "2L",
+      "cacrep": ["assessment"],
+      "tags": ["screening", "referral", "scope"],
+      "prompt": "A screening instrument administered at intake produces a result strongly suggesting a neurocognitive disorder. What should the counselor do?",
+      "choices": [
+        { "text": "Refer for comprehensive neuropsychological and medical evaluation, explaining that screening indicates the need for assessment rather than establishing a diagnosis", "correct": true, "rationale": "Screening flags the need for further evaluation; it does not diagnose, and neurocognitive presentations require medical workup." },
+        { "text": "Record the neurocognitive disorder diagnosis and begin treatment planning", "correct": false, "rationale": "Diagnosing from a screening result exceeds both the instrument's purpose and the counselor's scope." },
+        { "text": "Repeat the same screening instrument to confirm the result", "correct": false, "rationale": "Repetition does not add diagnostic information and delays appropriate referral." },
+        { "text": "Disregard the result, since screening tools produce many false positives", "correct": false, "rationale": "False positives are expected, which is exactly why the correct response is further evaluation rather than dismissal." }
+      ],
+      "explanation": "Cognitive decline has many reversible causes — medication effects, thyroid disease, B12 deficiency, depression presenting as pseudodementia — so medical evaluation is not merely procedural.",
+      "refs": ["statpearls-mse", "dsm5tr", "apa-testing-standards"]
+    },
+    {
+      "id": "d2-distress-039",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2J",
+      "cacrep": ["assessment"],
+      "tags": ["presenting-problem", "distress", "intake"],
+      "prompt": "A client presents saying 'my wife made me come'. What is the most useful initial assessment focus?",
+      "choices": [
+        { "text": "The client's own view of the problem and what, if anything, they would want to be different", "correct": true, "rationale": "Locating any goal the client owns is the foundation of engagement with a mandated or reluctant client." },
+        { "text": "The wife's account of the problem, as the more objective source", "correct": false, "rationale": "Treating the referring party's account as the real problem alienates the client and misidentifies the client." },
+        { "text": "Whether the client meets criteria for a diagnosable disorder", "correct": false, "rationale": "Diagnosis matters but does not solve the engagement problem that dominates this presentation." },
+        { "text": "The client's willingness to commit to a fixed number of sessions", "correct": false, "rationale": "Demanding commitment before any shared goal exists tends to increase resistance." }
+      ],
+      "explanation": "Reluctance is better understood as a normal response to external pressure than as a client trait. Motivational interviewing treats 'resistance' as a signal about the counselor's approach — a cue to shift toward reflective listening and eliciting the client's own concerns.",
+      "refs": ["samhsa-tip35", "mi-org", "stages-of-change"]
+    },
+    {
+      "id": "d2-readiness-040",
+      "type": "recall",
+      "domain": "D2",
+      "task": "2J",
+      "cacrep": ["assessment"],
+      "tags": ["stages-of-change", "transtheoretical", "readiness"],
+      "prompt": "Name the stages of the Transtheoretical Model and their defining feature.",
+      "answer": "Precontemplation — no intention to change, often unaware of a problem. Contemplation — aware of the problem and considering change, typically ambivalent, within about six months. Preparation — intending to act soon, taking small preliminary steps. Action — actively modifying behaviour, generally within the last six months. Maintenance — sustaining change and preventing relapse, beyond six months. Relapse or recycling is treated as a normal part of the process rather than failure.",
+      "explanation": "The clinical value is matching intervention to stage. Consciousness-raising and exploring ambivalence fit precontemplation and contemplation; action planning and reinforcement fit action and maintenance. Prescribing action to a precontemplative client reliably produces 'resistance'.",
+      "refs": ["stages-of-change", "samhsa-tip35"]
+    },
+    {
+      "id": "d2-diagnosis-041",
+      "type": "cloze",
+      "domain": "D2",
+      "task": "2G",
+      "cacrep": ["assessment"],
+      "tags": ["comorbidity", "co-occurring"],
+      "prompt": "When a mental disorder and a substance use disorder are present together, the recommended approach is {{integrated treatment addressing both conditions simultaneously}}, rather than treating one before the other.",
+      "answer": "integrated treatment addressing both conditions simultaneously",
+      "explanation": "Sequential and parallel models both leave clients falling between systems. Integrated treatment is the standard because each condition tends to maintain the other, and clients with co-occurring disorders have worse outcomes when required to resolve one first.",
+      "refs": ["samhsa-tip42"]
+    },
+    {
+      "id": "d2-interaction-042",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2R",
+      "cacrep": ["assessment", "helping-relationships"],
+      "tags": ["interactional-dynamics", "process", "observation"],
+      "prompt": "In a family session, a counselor notices that whenever the adolescent begins to speak, the mother answers for them. What is the most useful clinical framing?",
+      "choices": [
+        { "text": "Process data about the family's interactional pattern, which is itself assessment information", "correct": true, "rationale": "How family members interact in the room is direct evidence about the system, often more reliable than their descriptions of it." },
+        { "text": "A sign that the mother is the identified client", "correct": false, "rationale": "One behaviour does not reassign the identified client, and systemic work resists locating the problem in an individual." },
+        { "text": "Rudeness that should be corrected with a ground rule and then set aside", "correct": false, "rationale": "A rule may help, but discarding the observation loses valuable diagnostic material." },
+        { "text": "Evidence that the adolescent lacks verbal skills", "correct": false, "rationale": "The pattern concerns interaction, not the adolescent's capability." }
+      ],
+      "explanation": "The distinction between content (what is said) and process (how it is said and what happens between people) is central to systemic and group work. Process observations are frequently the richest assessment data available.",
+      "refs": ["statpearls-group-therapy", "samhsa-tip65"]
+    },
+    {
+      "id": "d2-malingering-043",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2Q",
+      "cacrep": ["assessment"],
+      "tags": ["malingering", "factitious", "secondary-gain"],
+      "prompt": "What distinguishes malingering from factitious disorder?",
+      "choices": [
+        { "text": "Malingering is intentional symptom production for external incentives; factitious disorder is intentional production motivated by assuming the sick role, without obvious external reward", "correct": true, "rationale": "Both involve deliberate production; the difference lies in motivation — external gain versus the sick role itself." },
+        { "text": "Malingering is unconscious; factitious disorder is conscious", "correct": false, "rationale": "Both are conscious and intentional. Unconscious symptom production describes somatic symptom and conversion presentations." },
+        { "text": "Malingering is a DSM diagnosis; factitious disorder is not", "correct": false, "rationale": "This reverses the truth: factitious disorder is a DSM diagnosis, while malingering is a V/Z code condition that may be a focus of clinical attention." },
+        { "text": "They are identical and used interchangeably", "correct": false, "rationale": "They differ in motivation and in diagnostic status." }
+      ],
+      "explanation": "A third category matters clinically: in somatic symptom disorder and conversion disorder, symptoms are genuinely experienced and not intentionally produced. Assuming deception without evidence is a serious clinical and ethical error.",
+      "refs": ["dsm5tr"]
+    },
+    {
+      "id": "d2-culture-044",
+      "type": "scenario",
+      "domain": "D2",
+      "task": "2C",
+      "cacrep": ["assessment", "social-cultural"],
+      "tags": ["culture", "idioms-of-distress", "diagnosis"],
+      "prompt": "A client from a Latin American background describes 'ataque de nervios' — episodes of shouting, trembling, and a sense of losing control following family conflict. How should the counselor interpret this?",
+      "choices": [
+        { "text": "As a cultural concept of distress that must be understood in context before mapping onto any DSM category", "correct": true, "rationale": "Cultural concepts of distress are locally meaningful expressions of suffering that may partially overlap with, but do not map neatly onto, DSM diagnoses." },
+        { "text": "As panic disorder, since the symptoms resemble a panic attack", "correct": false, "rationale": "Superficial symptom resemblance without cultural context is exactly how misdiagnosis occurs; ataque de nervios is typically triggered by a family stressor and is socially recognized." },
+        { "text": "As a psychotic episode, given the loss of control", "correct": false, "rationale": "There is no evidence of psychosis in the description." },
+        { "text": "As malingering, since the presentation is culturally specific", "correct": false, "rationale": "Cultural specificity is not evidence of feigning; this reasoning is itself a form of bias." }
+      ],
+      "explanation": "DSM-5-TR includes an appendix of cultural concepts of distress precisely to counter this error. Diagnostic disparities — for instance overdiagnosis of psychotic disorders in Black clients — are a documented consequence of assessing symptoms without cultural context.",
+      "refs": ["dsm5tr", "msjcc"]
+    },
+    {
+      "id": "d2-crisis-045",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2H",
+      "cacrep": ["assessment"],
+      "tags": ["crisis", "hospitalization", "commitment"],
+      "prompt": "What is generally the legal standard for involuntary psychiatric hospitalization?",
+      "choices": [
+        { "text": "Mental illness plus danger to self, danger to others, or grave disability such that basic needs cannot be met", "correct": true, "rationale": "These are the standard statutory grounds across jurisdictions, though the precise wording and duration vary by state." },
+        { "text": "Any diagnosis of a serious mental illness", "correct": false, "rationale": "Diagnosis alone is never sufficient; dangerousness or grave disability must also be present." },
+        { "text": "Refusal of recommended outpatient treatment", "correct": false, "rationale": "Competent adults may refuse treatment; refusal is not grounds for commitment." },
+        { "text": "A family member's request for hospitalization", "correct": false, "rationale": "Family concern may prompt evaluation but does not itself meet the legal standard." }
+      ],
+      "explanation": "Commitment is designed to be a last resort under a least-restrictive-alternative principle. Counselors typically initiate evaluation rather than commit directly, and specific procedures and hold durations are state-defined.",
+      "refs": ["aca-ethics", "sprc", "samhsa-988"]
+    },
+    {
+      "id": "d2-somatic-046",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2A",
+      "cacrep": ["assessment"],
+      "tags": ["somatic", "medical", "differential"],
+      "prompt": "A client reports fatigue, weight change, poor concentration, and low mood over three months. What should the counselor ensure before attributing this to depression?",
+      "choices": [
+        { "text": "That the client has had a recent medical evaluation, since thyroid disease, anaemia, sleep apnoea, and medication effects produce the same picture", "correct": true, "rationale": "Ruling out medical aetiology is a diagnostic requirement, and these symptoms overlap heavily with common medical conditions." },
+        { "text": "That the client has no family history of mental illness", "correct": false, "rationale": "Family history informs risk but does not rule anything in or out diagnostically." },
+        { "text": "That the client has tried self-help strategies first", "correct": false, "rationale": "Irrelevant to differential diagnosis." },
+        { "text": "That the symptoms have lasted at least six months", "correct": false, "rationale": "Major depressive episode requires two weeks, not six months." }
+      ],
+      "explanation": "Coordinating with medical providers is standard practice, not an optional courtesy. The vegetative symptoms of depression are precisely the ones most likely to have a medical explanation.",
+      "refs": ["dsm5tr", "nimh-depression", "statpearls-insomnia"]
+    },
+    {
+      "id": "d2-selfreport-047",
+      "type": "cloze",
+      "domain": "D2",
+      "task": "2Q",
+      "cacrep": ["assessment"],
+      "tags": ["response-bias", "self-report"],
+      "prompt": "The tendency for respondents to answer in a way they believe will be viewed favourably by others is called {{social desirability bias}}, and many personality inventories include validity scales to detect it.",
+      "answer": "social desirability bias",
+      "explanation": "Related response sets include acquiescence (agreeing regardless of content), extreme responding, and central tendency bias. MMPI validity scales (L, F, K) exist specifically to detect defensive or exaggerated response patterns.",
+      "refs": ["apa-testing-standards", "oer-research-methods"]
+    },
+    {
+      "id": "d2-ipv-048",
+      "type": "scenario",
+      "domain": "D2",
+      "task": "2S",
+      "cacrep": ["assessment"],
+      "tags": ["intimate-partner-violence", "safety", "screening"],
+      "prompt": "A counselor suspects intimate partner violence in a couple presenting for relationship counseling. What is the appropriate step?",
+      "choices": [
+        { "text": "Screen each partner separately and privately, and reconsider whether conjoint counseling is safe and appropriate", "correct": true, "rationale": "Screening in the presence of the partner is unsafe, and conjoint therapy is generally contraindicated where ongoing violence and coercive control are present." },
+        { "text": "Raise the concern directly in the joint session so both partners can respond", "correct": false, "rationale": "Disclosing in a joint session can trigger retaliation after the session ends." },
+        { "text": "Continue couples counseling and add anger management for the aggressive partner", "correct": false, "rationale": "Anger management is not the indicated intervention for coercive control, and continuing conjoint work can increase danger." },
+        { "text": "Refer both partners immediately without further discussion", "correct": false, "rationale": "An abrupt referral without safety assessment or planning leaves the at-risk partner without support." }
+      ],
+      "explanation": "The safety concern is specific: conjoint sessions can expose disclosures that the abusive partner punishes afterwards. Assessment should include lethality indicators — strangulation history, weapon access, threats to kill, escalation, and separation, which is a period of elevated risk.",
+      "refs": ["cdc-ipv", "samhsa-tip57", "aca-ethics"]
+    },
+    {
+      "id": "d2-child-049",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2D",
+      "cacrep": ["assessment", "human-growth"],
+      "tags": ["child-assessment", "development", "informants"],
+      "prompt": "What is the most important adaptation when assessing a young child?",
+      "choices": [
+        { "text": "Use developmentally appropriate methods — play, drawing, observation — and gather information from multiple informants across settings", "correct": true, "rationale": "Young children cannot provide reliable verbal self-report about internal states, so method and informant diversity are essential." },
+        { "text": "Rely primarily on the child's verbal self-report to preserve their voice", "correct": false, "rationale": "Verbal self-report is developmentally limited in young children, though their perspective still matters." },
+        { "text": "Rely solely on parent report, as parents know the child best", "correct": false, "rationale": "Parents may miss internalizing symptoms and bring their own interpretive frame; teacher report often diverges." },
+        { "text": "Use adult instruments with simplified wording", "correct": false, "rationale": "Simplifying wording does not make an adult instrument valid for a child; norms and constructs differ." }
+      ],
+      "explanation": "Parent–teacher agreement on child symptoms is typically modest, and that divergence is itself informative — it may indicate setting-specific difficulty rather than unreliable reporting.",
+      "refs": ["statpearls-milestones", "apa-testing-standards", "nimh-adhd"]
+    },
+    {
+      "id": "d2-effectiveness-050",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2U",
+      "cacrep": ["assessment", "research"],
+      "tags": ["effectiveness", "efficacy", "research"],
+      "prompt": "What is the difference between efficacy and effectiveness research?",
+      "choices": [
+        { "text": "Efficacy studies test whether a treatment works under controlled conditions; effectiveness studies test whether it works in real-world clinical settings", "correct": true, "rationale": "Efficacy prioritizes internal validity through tight control; effectiveness prioritizes external validity in routine practice." },
+        { "text": "Efficacy concerns cost; effectiveness concerns outcome", "correct": false, "rationale": "Cost analysis is a separate consideration — cost-effectiveness research." },
+        { "text": "Efficacy applies to medication and effectiveness to psychotherapy", "correct": false, "rationale": "Both apply to any intervention." },
+        { "text": "They are synonymous in outcome research", "correct": false, "rationale": "The distinction is standard and consequential in interpreting the literature." }
+      ],
+      "explanation": "Efficacy trials use strict inclusion criteria, manualized treatment, and controlled conditions — often excluding the comorbidity typical of real caseloads. A treatment can be efficacious in trials and disappoint in practice, which is why both literatures matter.",
+      "refs": ["oer-research-methods", "div12-treatments"]
+    },
+    {
+      "id": "d2-hallucination-051",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2F",
+      "cacrep": ["assessment"],
+      "tags": ["hallucination", "illusion", "delusion"],
+      "prompt": "A client insists their neighbour is broadcasting thoughts into their head despite clear evidence to the contrary. How is this best classified?",
+      "choices": [
+        { "text": "A delusion — a fixed false belief maintained despite contradictory evidence", "correct": true, "rationale": "Fixed, false, and impervious to evidence is the definition of a delusion; this is a thought-content disturbance." },
+        { "text": "A hallucination — a perception occurring without any external stimulus", "correct": false, "rationale": "Hallucinations are perceptual disturbances such as hearing voices; this client reports a belief about what a neighbour is doing, which is thought content." },
+        { "text": "An illusion — a misinterpretation of a real external stimulus", "correct": false, "rationale": "An illusion misperceives something actually present, such as mistaking a coat for a person." },
+        { "text": "An obsession — an intrusive thought recognized as one's own and unwanted", "correct": false, "rationale": "Obsessions are ego-dystonic and recognized as products of one's own mind; delusions are held as true." }
+      ],
+      "explanation": "MSE terminology: delusions and obsessions are thought-content phenomena; hallucinations and illusions are perceptual. Loose associations, tangentiality, and flight of ideas describe thought process — how thinking is organized.",
+      "refs": ["statpearls-mse", "dsm5tr", "nimh-schizophrenia"]
+    },
+    {
+      "id": "d2-sleep-052",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2A",
+      "cacrep": ["assessment"],
+      "tags": ["sleep", "insomnia", "assessment"],
+      "prompt": "Why is sleep assessment a routine part of intake rather than an optional add-on?",
+      "choices": [
+        { "text": "Because sleep disturbance is both a symptom and a driver of most psychiatric conditions, and treating it often improves other symptoms", "correct": true, "rationale": "Sleep problems cut across diagnoses bidirectionally, and insomnia independently predicts onset and relapse of depression." },
+        { "text": "Because insurers require sleep data for reimbursement", "correct": false, "rationale": "Not a general requirement and not the clinical rationale." },
+        { "text": "Because sleep problems always indicate a primary sleep disorder", "correct": false, "rationale": "They frequently accompany other conditions rather than constituting a separate primary disorder." },
+        { "text": "Because poor sleep rules out depression", "correct": false, "rationale": "Sleep disturbance is a criterion symptom of depression, not an exclusion." }
+      ],
+      "explanation": "CBT-I is the first-line treatment for chronic insomnia, ahead of medication. Sleep hygiene alone is generally insufficient as a standalone treatment, though it is a reasonable component.",
+      "refs": ["statpearls-insomnia", "nimh-depression", "div12-treatments"]
+    },
+    {
+      "id": "d2-strengths-053",
+      "type": "recall",
+      "domain": "D2",
+      "task": "2K",
+      "cacrep": ["assessment"],
+      "tags": ["strengths", "resilience", "assessment"],
+      "prompt": "Why should assessment include client strengths and resources, not only symptoms and deficits?",
+      "answer": "Strengths and resources predict outcome and shape what interventions are feasible; they identify protective factors relevant to risk assessment; they support client engagement and hope; and they align with a wellness-oriented professional identity rather than a purely pathology-focused one. Relevant areas include coping skills, social support, motivation, past successes, cultural and spiritual resources, talents, and material resources.",
+      "explanation": "The counseling profession has historically distinguished itself through developmental, wellness, and prevention orientations. A treatment plan built only on deficits often has no scaffolding to build on.",
+      "refs": ["samhsa-tip65", "msjcc", "cacrep-standards"]
+    },
+    {
+      "id": "d2-diagnosis-054",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2E",
+      "cacrep": ["assessment"],
+      "tags": ["adjustment-disorder", "differential"],
+      "prompt": "When is adjustment disorder the appropriate diagnosis?",
+      "choices": [
+        { "text": "When emotional or behavioural symptoms develop within three months of an identifiable stressor, are out of proportion or impairing, and do not meet criteria for another disorder", "correct": true, "rationale": "Adjustment disorder is a residual category requiring an identifiable stressor and the absence of a better-fitting diagnosis." },
+        { "text": "Whenever a client is experiencing a significant life stressor", "correct": false, "rationale": "A stressor alone is insufficient; normal reactions to stress are not disorders." },
+        { "text": "When symptoms have persisted for more than one year after the stressor ends", "correct": false, "rationale": "Symptoms should not persist more than six months after the stressor or its consequences have ended." },
+        { "text": "When a client meets criteria for depression following a loss", "correct": false, "rationale": "If full criteria for another disorder are met, that diagnosis takes precedence." }
+      ],
+      "explanation": "Adjustment disorder is often the appropriate and least stigmatizing diagnosis for clients in genuine distress who do not meet criteria for anything else — but it should not be used as a default when full criteria for another disorder are present.",
+      "refs": ["dsm5tr"]
+    },
+    {
+      "id": "d2-suicide-055",
+      "type": "cloze",
+      "domain": "D2",
+      "task": "2S",
+      "cacrep": ["assessment"],
+      "tags": ["safety-planning", "crisis"],
+      "prompt": "Evidence-based practice has replaced the no-suicide contract with the {{safety plan}}, a collaboratively written list of warning signs, internal coping strategies, social contacts and settings that provide distraction, people to ask for help, professional and crisis contacts, and steps to make the environment safer.",
+      "answer": "safety plan",
+      "explanation": "The order matters: it moves from what the client can do alone toward external help, so that the earliest steps are within their own control. Contracts for safety have no evidence of effectiveness and offer no legal protection.",
+      "refs": ["sprc", "samhsa-988", "nimh-suicide-prevention"]
+    },
+    {
+      "id": "d2-referral-056",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2L",
+      "cacrep": ["assessment"],
+      "tags": ["screening", "referral", "coordination"],
+      "prompt": "A counselor screens a new client and determines their needs exceed what the agency provides. What must the referral include?",
+      "choices": [
+        { "text": "Specific, appropriate alternatives with attention to accessibility, plus follow-up to confirm the client connected with services", "correct": true, "rationale": "A referral is only meaningful if the client can actually use it; verifying connection is part of the duty of care." },
+        { "text": "A list of every provider in the region so the client can choose freely", "correct": false, "rationale": "An undifferentiated list places the assessment burden on a client in distress and often results in no contact at all." },
+        { "text": "The name of one provider, with no further involvement", "correct": false, "rationale": "A single unverified name with no follow-up risks the client falling through the gap." },
+        { "text": "A referral only after the client has attended at least six sessions", "correct": false, "rationale": "Arbitrary delay serves no clinical purpose and postpones appropriate care." }
+      ],
+      "explanation": "Accessibility is the frequently overlooked element: insurance acceptance, wait times, transport, language, and hours all determine whether a referral is real or nominal.",
+      "refs": ["aca-ethics", "asam-criteria"]
+    },
+    {
+      "id": "d2-interview-057",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2B",
+      "cacrep": ["assessment"],
+      "tags": ["structured-interview", "diagnostic-interview"],
+      "prompt": "What advantage does a structured diagnostic interview have over an unstructured clinical interview?",
+      "choices": [
+        { "text": "Higher diagnostic reliability, because all clients are asked the same questions in the same order against explicit criteria", "correct": true, "rationale": "Standardization is what raises interrater reliability and reduces the influence of clinician idiosyncrasy." },
+        { "text": "Greater rapport, because the format is predictable", "correct": false, "rationale": "Structured formats typically constrain rapport-building relative to a flexible conversation." },
+        { "text": "Shorter administration time in all cases", "correct": false, "rationale": "Structured interviews are often longer, since they cover criteria systematically." },
+        { "text": "Elimination of the need for clinical judgement", "correct": false, "rationale": "Judgement is still required to interpret responses and apply criteria." }
+      ],
+      "explanation": "The trade-off is reliability against flexibility and rapport. Semi-structured interviews attempt a middle path, providing required probes while permitting clinician follow-up.",
+      "refs": ["apa-testing-standards", "dsm5tr"]
+    },
+    {
+      "id": "d2-feedback-058",
+      "type": "scenario",
+      "domain": "D2",
+      "task": "2M",
+      "cacrep": ["assessment"],
+      "tags": ["test-feedback", "interpretation", "communication"],
+      "prompt": "How should a counselor deliver assessment results to a client?",
+      "choices": [
+        { "text": "In accessible language, with context about what the instrument does and does not measure, its limitations, and space for the client to respond and disagree", "correct": true, "rationale": "Clients have a right to understandable explanations of results, and feedback is most useful as a collaborative interpretive conversation." },
+        { "text": "By providing the numerical scores and computer-generated report without interpretation", "correct": false, "rationale": "Raw scores and automated narratives are readily misinterpreted and can be harmful without clinical framing." },
+        { "text": "By withholding results that might upset the client", "correct": false, "rationale": "Paternalistic withholding conflicts with the client's right to information about their own assessment." },
+        { "text": "Only to the referring party, who can decide what to share", "correct": false, "rationale": "The client is entitled to feedback regardless of who requested the assessment." }
+      ],
+      "explanation": "Therapeutic assessment treats feedback as an intervention in its own right — collaborative discussion of results has been shown to produce symptom improvement independent of any subsequent treatment.",
+      "refs": ["apa-testing-standards", "aca-ethics"]
+    },
+    {
+      "id": "d2-neurodev-059",
+      "type": "recall",
+      "domain": "D2",
+      "task": "2E",
+      "cacrep": ["assessment", "human-growth"],
+      "tags": ["autism", "neurodevelopmental", "dsm"],
+      "prompt": "What are the two core symptom domains required for a diagnosis of autism spectrum disorder in DSM-5-TR?",
+      "answer": "First, persistent deficits in social communication and social interaction across multiple contexts — including deficits in social-emotional reciprocity, nonverbal communicative behaviours, and developing, maintaining, and understanding relationships. Second, restricted, repetitive patterns of behaviour, interests, or activities — such as stereotyped movements or speech, insistence on sameness and routines, highly restricted fixated interests, or hyper- or hyporeactivity to sensory input. Symptoms must be present in early development and cause clinically significant impairment.",
+      "explanation": "DSM-5 consolidated autistic disorder, Asperger's disorder, and PDD-NOS into a single spectrum diagnosis with severity levels based on support needs. DSM-5 also permits ADHD and ASD to be diagnosed together, which DSM-IV did not.",
+      "refs": ["dsm5tr", "statpearls-milestones"]
+    },
+    {
+      "id": "d2-documentation-060",
+      "type": "mcq",
+      "domain": "D2",
+      "task": "2E",
+      "cacrep": ["assessment"],
+      "tags": ["provisional", "rule-out", "documentation"],
+      "prompt": "A counselor believes a client likely has a specific disorder but lacks sufficient information to be confident. How should this be recorded?",
+      "choices": [
+        { "text": "As a provisional diagnosis, with documentation of what additional information is needed to confirm or rule it out", "correct": true, "rationale": "The 'provisional' specifier exists exactly for a presumptive diagnosis pending further information." },
+        { "text": "As a confirmed diagnosis, to be corrected later if wrong", "correct": false, "rationale": "Recording unwarranted certainty misrepresents the clinical picture and follows the client through their records." },
+        { "text": "With no diagnosis recorded until certainty is achieved", "correct": false, "rationale": "This may impede treatment planning and coordination; a provisional diagnosis is the intended solution." },
+        { "text": "As 'unspecified' permanently, to avoid committing", "correct": false, "rationale": "Unspecified categories exist for genuine presentations that do not meet full criteria, not as an indefinite hedge." }
+      ],
+      "explanation": "Diagnostic humility is a clinical virtue with a documentation format. Revisiting and revising diagnoses as information accumulates is expected practice, not an admission of error.",
+      "refs": ["dsm5tr", "aca-ethics"]
+    }
+  ]
+}

@@ -1,0 +1,1235 @@
+{
+  "domain": "D5",
+  "cards": [
+    {
+      "id": "d5-reflect-001",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5AC",
+      "cacrep": ["helping-relationships"],
+      "tags": ["reflection", "basic-skills", "empathy"],
+      "prompt": "A client says 'I keep applying for jobs and hearing nothing back. I don't even know why I bother anymore.' Which response is a reflection of feeling?",
+      "choices": [
+        { "text": "'It sounds discouraging — like the effort isn't getting you anywhere.'", "correct": true, "rationale": "This names the underlying emotion and links it to the situation, which is precisely what a reflection of feeling does." },
+        { "text": "'So you've been applying for jobs and not getting responses.'", "correct": false, "rationale": "This is a paraphrase or restatement of content, without the emotional dimension." },
+        { "text": "'How many applications have you sent?'", "correct": false, "rationale": "A closed information-gathering question." },
+        { "text": "'You shouldn't give up — persistence pays off eventually.'", "correct": false, "rationale": "Reassurance and advice, which close down exploration rather than deepening it." }
+      ],
+      "explanation": "The distinction tested here recurs throughout the exam: paraphrase mirrors content, reflection of feeling names emotion, and summarization ties several threads together. Reflection communicates that the client's experience has been understood, not just heard.",
+      "refs": ["samhsa-tip65", "samhsa-tip35"]
+    },
+    {
+      "id": "d5-questions-002",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5T",
+      "cacrep": ["helping-relationships"],
+      "tags": ["questions", "open-ended", "basic-skills"],
+      "prompt": "Which is an open-ended question?",
+      "choices": [
+        { "text": "'What was that like for you?'", "correct": true, "rationale": "It cannot be answered yes/no and invites the client to determine the content and depth of the answer." },
+        { "text": "'Were you upset when that happened?'", "correct": false, "rationale": "A closed question that also supplies the emotion, narrowing the client's options." },
+        { "text": "'Did you talk to your sister about it?'", "correct": false, "rationale": "Answerable with a single word." },
+        { "text": "'Don't you think that was unfair?'", "correct": false, "rationale": "A leading question that embeds the counselor's judgement." }
+      ],
+      "explanation": "Closed questions have legitimate uses — establishing facts, assessing risk, confirming details. The error is a session driven by them, which produces an interview rather than a conversation and puts the counselor in charge of direction.",
+      "refs": ["samhsa-tip35", "mi-org", "samhsa-tip65"]
+    },
+    {
+      "id": "d5-summarize-003",
+      "type": "recall",
+      "domain": "D5",
+      "task": "5AA",
+      "cacrep": ["helping-relationships"],
+      "tags": ["summarizing", "basic-skills"],
+      "prompt": "What purposes does summarizing serve in a counseling session?",
+      "answer": "It demonstrates that the counselor has been listening and integrating; it pulls together several threads so the client can see connections and patterns; it provides a transition between topics or into a new phase of the session; it checks accuracy of understanding and invites correction; it can highlight discrepancies or ambivalence by placing both sides together; and it closes a session by consolidating what was covered.",
+      "explanation": "In motivational interviewing, collecting summaries are used strategically — gathering change talk together amplifies it, and a double-sided summary of ambivalence lets the client hear both sides at once without the counselor arguing either.",
+      "refs": ["samhsa-tip35", "mi-org"]
+    },
+    {
+      "id": "d5-empathy-004",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5AC",
+      "cacrep": ["helping-relationships"],
+      "tags": ["empathy", "advanced-accurate-empathy"],
+      "prompt": "What distinguishes advanced accurate empathy from basic empathy?",
+      "choices": [
+        { "text": "It goes slightly beyond what the client has explicitly stated, articulating implied or partially expressed meaning", "correct": true, "rationale": "Advanced empathy adds something — naming what the client has hinted at but not yet said — while remaining grounded in their material." },
+        { "text": "It uses more sophisticated psychological vocabulary", "correct": false, "rationale": "Vocabulary complexity is not the distinction and often impedes understanding." },
+        { "text": "It interprets the client's unconscious motivations from theory", "correct": false, "rationale": "That is interpretation, which draws on the counselor's theoretical frame rather than the client's implied meaning." },
+        { "text": "It is delivered with greater emotional intensity", "correct": false, "rationale": "Intensity is not the defining feature." }
+      ],
+      "explanation": "Timing governs whether advanced empathy lands. Offered too early or too far beyond the client's awareness, it feels intrusive or simply wrong; offered tentatively at the right moment, it deepens the work.",
+      "refs": ["samhsa-tip65", "div12-treatments"]
+    },
+    {
+      "id": "d5-silence-005",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5S",
+      "cacrep": ["helping-relationships"],
+      "tags": ["silence", "basic-skills", "pacing"],
+      "prompt": "A client falls silent after describing a painful memory. What is usually the best response?",
+      "choices": [
+        { "text": "Allow the silence, attending to the client, so they have space to process before continuing", "correct": true, "rationale": "Silence after emotionally significant material is usually productive; filling it interrupts the client's processing." },
+        { "text": "Ask a question immediately to keep the session moving", "correct": false, "rationale": "This typically serves the counselor's discomfort rather than the client's need." },
+        { "text": "Change to a lighter topic to reduce the client's distress", "correct": false, "rationale": "Rescuing the client from an important feeling communicates that it cannot be tolerated here." },
+        { "text": "Offer reassurance that everything will be alright", "correct": false, "rationale": "Premature reassurance closes down the material." }
+      ],
+      "explanation": "Counselor discomfort with silence is one of the most common novice difficulties. Distinguish productive silence — the client is thinking or feeling — from stuck silence, where a gentle process comment such as 'I notice it got quiet; what's happening for you?' is appropriate.",
+      "refs": ["samhsa-tip65"]
+    },
+    {
+      "id": "d5-confrontation-006",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5AE",
+      "cacrep": ["helping-relationships"],
+      "tags": ["confrontation", "discrepancy", "technique"],
+      "prompt": "What does constructive confrontation involve in counseling?",
+      "choices": [
+        { "text": "Gently pointing out a discrepancy — between words and behaviour, or between stated goals and actions — within a supportive relationship", "correct": true, "rationale": "Confrontation in counseling means highlighting inconsistency, not challenging or attacking the client." },
+        { "text": "Directly challenging the client's denial to break through resistance", "correct": false, "rationale": "Aggressive confrontation has poor evidence, particularly in substance use treatment, where it increases dropout." },
+        { "text": "Telling the client the consequences of continuing their current behaviour", "correct": false, "rationale": "That is warning or advice-giving, not confrontation." },
+        { "text": "Expressing the counselor's disapproval of the client's choices", "correct": false, "rationale": "Disapproval is a values imposition and damages the alliance." }
+      ],
+      "explanation": "Note the historical shift: confrontational styles were once standard in addiction treatment and are now understood to predict worse outcomes. A useful format is 'On the one hand... and on the other hand...' delivered without judgement.",
+      "refs": ["samhsa-tip35", "samhsa-tip65", "mi-org"]
+    },
+    {
+      "id": "d5-reframe-007",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5AB",
+      "cacrep": ["helping-relationships"],
+      "tags": ["reframing", "technique"],
+      "prompt": "A parent describes their teenager as 'impossible — always arguing with everything I say'. Which response is a reframe?",
+      "choices": [
+        { "text": "'It sounds like she has strong opinions and is willing to defend them — even when it's exhausting for you.'", "correct": true, "rationale": "The behaviour is unchanged but is given an alternative meaning, opening different responses to it." },
+        { "text": "'That must be very frustrating for you.'", "correct": false, "rationale": "A reflection of feeling, which validates but does not shift meaning." },
+        { "text": "'How often does the arguing happen?'", "correct": false, "rationale": "An assessment question." },
+        { "text": "'Teenagers often behave that way; it's normal.'", "correct": false, "rationale": "Normalizing, which reassures but does not reframe the specific behaviour." }
+      ],
+      "explanation": "Reframing must be plausible to the client to work; a reframe that feels like spin will be rejected and can damage credibility. It is a shared technique across strategic, solution-focused, and cognitive approaches.",
+      "refs": ["samhsa-tip65", "samhsa-tip35"]
+    },
+    {
+      "id": "d5-immediacy-008",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5AF",
+      "cacrep": ["helping-relationships"],
+      "tags": ["immediacy", "here-and-now", "process"],
+      "prompt": "A counselor says 'I notice that whenever we get close to talking about your father, you change the subject — I'm wondering what happens for you in those moments.' What technique is this?",
+      "choices": [
+        { "text": "Immediacy — commenting on what is happening in the present moment of the relationship", "correct": true, "rationale": "Immediacy addresses the here-and-now process between counselor and client, or within the session itself." },
+        { "text": "Interpretation", "correct": false, "rationale": "Interpretation would offer an explanation of why, typically linked to unconscious material or history." },
+        { "text": "Paraphrasing", "correct": false, "rationale": "Paraphrasing restates the client's expressed content." },
+        { "text": "Self-disclosure", "correct": false, "rationale": "Although the counselor uses 'I', the focus is on the client's in-session pattern, not the counselor's own experience." }
+      ],
+      "explanation": "Immediacy is powerful and often uncomfortable, so it requires an established alliance and a tentative delivery. Its value is that in-session patterns usually mirror the client's patterns outside, making them observable rather than merely reported.",
+      "refs": ["samhsa-tip65", "statpearls-group-therapy"]
+    },
+    {
+      "id": "d5-selfdisclosure-009",
+      "type": "scenario",
+      "domain": "D5",
+      "task": "5AD",
+      "cacrep": ["helping-relationships"],
+      "tags": ["self-disclosure", "boundaries", "technique"],
+      "prompt": "A client asks the counselor directly whether they have ever experienced depression. What is the most appropriate response?",
+      "choices": [
+        { "text": "Briefly explore what the answer would mean to the client, then respond in a way that serves their goals and returns focus to them", "correct": true, "rationale": "Understanding the question's function — usually about being understood or about the counselor's credibility — guides whether and how to answer." },
+        { "text": "Provide a detailed account of the counselor's own history to build connection", "correct": false, "rationale": "Extended disclosure shifts focus to the counselor and can burden the client." },
+        { "text": "Decline to answer any personal question as a matter of policy", "correct": false, "rationale": "A rigid refusal can feel withholding and may itself rupture the relationship." },
+        { "text": "Deflect by asking why the client is avoiding their own material", "correct": false, "rationale": "This is dismissive and mischaracterizes a reasonable question." }
+      ],
+      "explanation": "The governing test is whose needs the disclosure serves. Brief, relevant disclosure that returns focus to the client can strengthen the alliance; extended disclosure reverses the roles.",
+      "refs": ["aca-ethics", "samhsa-tip65"]
+    },
+    {
+      "id": "d5-alliance-010",
+      "type": "recall",
+      "domain": "D5",
+      "task": "5E",
+      "cacrep": ["helping-relationships"],
+      "tags": ["therapeutic-alliance", "bordin"],
+      "prompt": "Name the three components of the therapeutic alliance in Bordin's model.",
+      "answer": "Agreement on the goals of counseling; agreement on the tasks — the activities and methods used to pursue those goals; and the bond, the affective quality of the relationship including trust, respect, and liking.",
+      "explanation": "Alliance is one of the most robust predictors of outcome across orientations, and early alliance predicts outcome better than late alliance. Ruptures are common; repairing them is associated with better outcomes than never having one.",
+      "refs": ["div12-treatments", "samhsa-tip65"]
+    },
+    {
+      "id": "d5-motivation-011",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5O",
+      "cacrep": ["helping-relationships"],
+      "tags": ["motivational-interviewing", "spirit", "oars"],
+      "prompt": "What does the OARS acronym stand for in motivational interviewing?",
+      "choices": [
+        { "text": "Open questions, Affirmations, Reflective listening, Summaries", "correct": true, "rationale": "These are MI's four core communication skills, used throughout all four processes." },
+        { "text": "Observe, Assess, Respond, Support", "correct": false, "rationale": "Not an MI framework." },
+        { "text": "Openness, Acceptance, Respect, Sincerity", "correct": false, "rationale": "These resemble relationship conditions rather than MI skills." },
+        { "text": "Orient, Analyze, Reframe, Solve", "correct": false, "rationale": "Not an MI framework." }
+      ],
+      "explanation": "Affirmations are the most frequently misunderstood: they affirm a specific strength, effort, or value the client has demonstrated — not generic praise, which can feel evaluative and patronizing.",
+      "refs": ["samhsa-tip35", "mi-org"]
+    },
+    {
+      "id": "d5-motivation-012",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5O",
+      "cacrep": ["helping-relationships"],
+      "tags": ["motivational-interviewing", "discord", "resistance"],
+      "prompt": "A client becomes argumentative when the counselor suggests reducing their drinking. In MI terms, how is this best understood?",
+      "choices": [
+        { "text": "As discord in the relationship, signalling that the counselor should change approach rather than push harder", "correct": true, "rationale": "MI reframes 'resistance' as a signal about the interaction, and the indicated response is to shift stance." },
+        { "text": "As client denial requiring firmer confrontation", "correct": false, "rationale": "Confrontation reliably increases sustain talk and worsens outcomes." },
+        { "text": "As evidence the client is not ready for treatment and should be discharged", "correct": false, "rationale": "Ambivalence is the normal condition of clients considering change, not a disqualification." },
+        { "text": "As a personality trait requiring diagnostic assessment", "correct": false, "rationale": "It is a relational and situational phenomenon, not a trait." }
+      ],
+      "explanation": "MI distinguishes sustain talk (arguments for the status quo, a normal part of ambivalence) from discord (friction in the relationship itself). Both call for rolling with it — reflecting, emphasizing autonomy, shifting focus — rather than pressing.",
+      "refs": ["samhsa-tip35", "mi-org", "stages-of-change"]
+    },
+    {
+      "id": "d5-motivation-013",
+      "type": "cloze",
+      "domain": "D5",
+      "task": "5O",
+      "cacrep": ["helping-relationships"],
+      "tags": ["motivational-interviewing", "righting-reflex"],
+      "prompt": "The counselor's urge to fix a client's problem by arguing for change is called the {{righting reflex}}, and in motivational interviewing it is deliberately suppressed because it evokes the client's counter-arguments.",
+      "answer": "righting reflex",
+      "explanation": "The underlying principle is that people are persuaded more by what they hear themselves say than by what they are told. When the counselor voices the arguments for change, the client is left to voice the arguments against it.",
+      "refs": ["samhsa-tip35", "mi-org"]
+    },
+    {
+      "id": "d5-crisis-014",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5Q",
+      "cacrep": ["helping-relationships"],
+      "tags": ["crisis-intervention", "de-escalation"],
+      "prompt": "A highly agitated client is pacing and shouting in the counselor's office. What should the counselor do first?",
+      "choices": [
+        { "text": "Ensure physical safety — including their own exit access — while speaking calmly, allowing space, and avoiding escalating gestures", "correct": true, "rationale": "Safety precedes intervention. Maintaining access to an exit and reducing stimulation are standard de-escalation practice." },
+        { "text": "Instruct the client firmly to sit down and calm themselves", "correct": false, "rationale": "Commands and demands typically escalate an agitated person." },
+        { "text": "Move closer to the client to establish a reassuring physical connection", "correct": false, "rationale": "Reducing personal space during agitation is a known escalation trigger." },
+        { "text": "Immediately call security without attempting verbal de-escalation", "correct": false, "rationale": "Premature escalation may inflame the situation; verbal de-escalation is the first-line response absent immediate danger." }
+      ],
+      "explanation": "De-escalation basics: respect personal space, keep your own posture non-threatening and hands visible, speak slowly and simply, avoid arguing, set clear and enforceable limits, and offer choices to restore the person's sense of control.",
+      "refs": ["samhsa-tip57", "samhsa-988"]
+    },
+    {
+      "id": "d5-safety-015",
+      "type": "recall",
+      "domain": "D5",
+      "task": "5V",
+      "cacrep": ["helping-relationships"],
+      "tags": ["safety-plan", "suicide", "steps"],
+      "prompt": "List the standard components of a collaborative safety plan, in order.",
+      "answer": "1. Warning signs — the thoughts, images, moods, and behaviours that signal a crisis is developing. 2. Internal coping strategies the client can use alone. 3. People and social settings that provide distraction. 4. People the client can ask for help. 5. Professionals and agencies to contact, with numbers. 6. Making the environment safer, including lethal means restriction.",
+      "explanation": "The ordering is deliberate: it moves from what the client can do independently toward external help, so the earliest steps preserve their sense of agency. Written in the client's own words and kept accessible, it should be reviewed and updated periodically.",
+      "refs": ["sprc", "samhsa-988", "nimh-suicide-prevention"]
+    },
+    {
+      "id": "d5-theory-016",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5F",
+      "cacrep": ["helping-relationships"],
+      "tags": ["cbt", "socratic-questioning", "technique"],
+      "prompt": "A counselor asks 'What evidence supports that belief? What evidence might argue against it? If a friend told you this, what would you say to them?' Which technique is this?",
+      "choices": [
+        { "text": "Socratic questioning / guided discovery", "correct": true, "rationale": "Guided discovery leads the client to evaluate their own beliefs through questioning rather than by being told they are wrong." },
+        { "text": "Direct disputation", "correct": false, "rationale": "Disputation, more characteristic of REBT, argues against the belief rather than guiding the client to examine it." },
+        { "text": "Systematic desensitization", "correct": false, "rationale": "A behavioural exposure procedure." },
+        { "text": "Free association", "correct": false, "rationale": "A psychoanalytic technique of uncensored verbalization." }
+      ],
+      "explanation": "Guided discovery is more durable than being told, because the client generates the counter-evidence themselves. Behavioural experiments extend it — testing a belief in the world rather than only in discussion.",
+      "refs": ["statpearls-cbt", "div12-treatments"]
+    },
+    {
+      "id": "d5-theory-017",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5F",
+      "cacrep": ["helping-relationships"],
+      "tags": ["exposure", "hierarchy", "anxiety"],
+      "prompt": "What distinguishes systematic desensitization from flooding?",
+      "choices": [
+        { "text": "Systematic desensitization proceeds gradually up a fear hierarchy paired with relaxation; flooding presents the most feared stimulus at full intensity from the start", "correct": true, "rationale": "The difference is gradation and the use of a competing relaxation response." },
+        { "text": "Systematic desensitization uses imagined stimuli and flooding uses only real ones", "correct": false, "rationale": "Both can be conducted in imagination or in vivo." },
+        { "text": "Flooding is used only for PTSD and desensitization only for phobias", "correct": false, "rationale": "Both apply across anxiety presentations." },
+        { "text": "Systematic desensitization requires medication and flooding does not", "correct": false, "rationale": "Neither requires medication." }
+      ],
+      "explanation": "Both rely on extinction of the conditioned fear response. Flooding is faster but far more distressing and carries a higher dropout risk, so graduated exposure is generally preferred. Modern practice emphasizes inhibitory learning over habituation as the mechanism.",
+      "refs": ["statpearls-cbt", "nimh-anxiety", "div12-treatments"]
+    },
+    {
+      "id": "d5-theory-018",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5F",
+      "cacrep": ["helping-relationships"],
+      "tags": ["person-centred", "non-directive", "rogers"],
+      "prompt": "Which counselor behaviour is most inconsistent with a person-centred approach?",
+      "choices": [
+        { "text": "Setting the session agenda and assigning between-session tasks", "correct": true, "rationale": "Person-centred therapy is non-directive; the client leads content and direction, which agenda-setting and homework override." },
+        { "text": "Reflecting the client's feelings accurately", "correct": false, "rationale": "Core to the approach." },
+        { "text": "Communicating acceptance without conditions", "correct": false, "rationale": "Unconditional positive regard is a core condition." },
+        { "text": "Being genuine and transparent in the relationship", "correct": false, "rationale": "Congruence is a core condition." }
+      ],
+      "explanation": "The theoretical basis is the actualizing tendency — the assumption that clients move toward growth given the right relational conditions, so direction from the counselor is unnecessary and potentially harmful. Contrast with CBT, which is structured and collaborative by design.",
+      "refs": ["samhsa-tip65", "div12-treatments"]
+    },
+    {
+      "id": "d5-theory-019",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5F",
+      "cacrep": ["helping-relationships"],
+      "tags": ["act", "psychological-flexibility", "acceptance"],
+      "prompt": "What is the central therapeutic goal of Acceptance and Commitment Therapy?",
+      "choices": [
+        { "text": "Psychological flexibility — accepting internal experience while acting in line with chosen values", "correct": true, "rationale": "ACT targets flexibility rather than symptom reduction, treating experiential avoidance as the core problem." },
+        { "text": "Elimination of distressing thoughts and feelings", "correct": false, "rationale": "ACT explicitly rejects symptom elimination as the goal, treating the struggle against experience as the problem." },
+        { "text": "Insight into the childhood origins of current difficulties", "correct": false, "rationale": "That is a psychodynamic aim." },
+        { "text": "Correction of irrational beliefs", "correct": false, "rationale": "That is the cognitive-therapy aim; ACT changes the relationship to thoughts rather than their content." }
+      ],
+      "explanation": "ACT's six processes — acceptance, cognitive defusion, present-moment contact, self-as-context, values, and committed action — form the hexaflex. The clinical implication is that a client can move toward what matters while distress is still present.",
+      "refs": ["div12-treatments", "behavioraltech-dbt", "statpearls-cbt"]
+    },
+    {
+      "id": "d5-theory-020",
+      "type": "recall",
+      "domain": "D5",
+      "task": "5F",
+      "cacrep": ["helping-relationships"],
+      "tags": ["theory-matching", "orientation"],
+      "prompt": "Match each core aim to its theoretical orientation: insight into unconscious conflict; modifying maladaptive thinking; providing relational conditions for growth; changing observable behaviour through learning principles; and taking responsibility for choices in the face of life's givens.",
+      "answer": "Insight into unconscious conflict — psychodynamic/psychoanalytic. Modifying maladaptive thinking — cognitive (Beck) and REBT (Ellis). Providing relational conditions for growth — person-centred/humanistic (Rogers). Changing observable behaviour through learning principles — behavioural. Taking responsibility for choices in the face of life's givens — existential.",
+      "explanation": "Exam items frequently describe a counselor's action and ask which orientation it reflects. The quickest sort is by the assumed mechanism of change: awareness, cognition, relationship, learning, or responsibility.",
+      "refs": ["samhsa-tip65", "div12-treatments", "statpearls-cbt"]
+    },
+    {
+      "id": "d5-developmental-021",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5A",
+      "cacrep": ["human-growth", "helping-relationships"],
+      "tags": ["developmental-level", "children", "adaptation"],
+      "prompt": "Why is play therapy developmentally appropriate for young children?",
+      "choices": [
+        { "text": "Because play is children's natural medium of expression and processing, before abstract verbal reflection is available to them", "correct": true, "rationale": "Young children lack the abstract verbal capacity that talk therapy depends on; play provides symbolic access to their experience." },
+        { "text": "Because children find talking boring and need entertainment to stay engaged", "correct": false, "rationale": "This trivializes play as a distraction rather than a therapeutic medium." },
+        { "text": "Because play avoids the need to address difficult material", "correct": false, "rationale": "Play is often precisely how difficult material is approached and worked through." },
+        { "text": "Because it requires less counselor training than verbal therapy", "correct": false, "rationale": "Play therapy requires specific specialized training." }
+      ],
+      "explanation": "Non-directive play therapy (Axline, drawing on Rogers) follows the child's lead; directive approaches structure activities toward specific goals. Matching intervention to developmental level is the general principle this illustrates.",
+      "refs": ["statpearls-piaget", "statpearls-milestones", "div12-treatments"]
+    },
+    {
+      "id": "d5-developmental-022",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5A",
+      "cacrep": ["human-growth", "helping-relationships"],
+      "tags": ["adolescents", "engagement", "autonomy"],
+      "prompt": "What most improves engagement with adolescent clients?",
+      "choices": [
+        { "text": "Respecting their autonomy, being straightforward about confidentiality limits, and avoiding an authority-figure stance", "correct": true, "rationale": "Adolescents are acutely sensitive to control and to being deceived; transparency and respect for autonomy are the key engagement levers." },
+        { "text": "Adopting adolescent slang and presenting as a peer", "correct": false, "rationale": "Attempts to seem like a peer are typically read as inauthentic and reduce credibility." },
+        { "text": "Aligning explicitly with the parents' concerns to provide structure", "correct": false, "rationale": "Being perceived as the parents' agent is the fastest route to disengagement." },
+        { "text": "Requiring a fixed commitment to attend a set number of sessions", "correct": false, "rationale": "Imposed commitment conflicts with the autonomy needs that drive adolescent engagement." }
+      ],
+      "explanation": "Be precise about what will and will not be shared with parents, and say so at the start. Adolescents will usually tolerate limits they knew about in advance; discovering an unannounced disclosure typically ends the work.",
+      "refs": ["aca-ethics", "statpearls-erikson", "samhsa-tip35"]
+    },
+    {
+      "id": "d5-culture-023",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5H",
+      "cacrep": ["social-cultural"],
+      "tags": ["broaching", "race", "technique"],
+      "prompt": "What is 'broaching' in multicultural counseling?",
+      "choices": [
+        { "text": "The counselor deliberately raising the topic of racial, ethnic, or cultural differences and their possible impact on the counseling relationship", "correct": true, "rationale": "Broaching is an intentional, ongoing invitation to discuss cultural factors, initiated by the counselor rather than left to the client." },
+        { "text": "Waiting for the client to raise cultural issues if they consider them relevant", "correct": false, "rationale": "Placing the burden on the client is precisely what broaching is designed to avoid." },
+        { "text": "Assessing the client's level of acculturation using a formal instrument", "correct": false, "rationale": "That is acculturation assessment, a different activity." },
+        { "text": "Referring clients to counselors who share their cultural background", "correct": false, "rationale": "Matching is a separate question and is not broaching." }
+      ],
+      "explanation": "Counselors who broach are generally rated as more culturally responsive and credible. Avoiding the topic does not make it neutral — silence about visible difference is itself a message.",
+      "refs": ["msjcc", "aca-ethics"]
+    },
+    {
+      "id": "d5-culture-024",
+      "type": "scenario",
+      "domain": "D5",
+      "task": "5C",
+      "cacrep": ["social-cultural", "helping-relationships"],
+      "tags": ["adaptation", "population", "intervention"],
+      "prompt": "A counselor plans to use a standard CBT protocol with a client from a cultural background very different from the one it was developed in. What is the best approach?",
+      "choices": [
+        { "text": "Culturally adapt the protocol — language, examples, metaphors, values framing, and family involvement — while retaining its core active ingredients", "correct": true, "rationale": "Cultural adaptation preserves the evidence-based mechanisms while changing surface features that affect acceptability and fit." },
+        { "text": "Apply the protocol exactly as manualized, since fidelity determines effectiveness", "correct": false, "rationale": "Rigid fidelity without adaptation can reduce engagement and relevance." },
+        { "text": "Abandon the protocol and rely entirely on supportive counseling", "correct": false, "rationale": "Discarding an effective treatment is not the alternative to adapting it." },
+        { "text": "Ask the client to adjust their expectations to fit the protocol", "correct": false, "rationale": "This places the burden of fit on the client." }
+      ],
+      "explanation": "The distinction between surface structure (language, imagery, delivery setting) and deep structure (cultural values and explanatory models) is standard in the adaptation literature. Adapted interventions generally outperform unadapted ones with the populations they were adapted for.",
+      "refs": ["msjcc", "div12-treatments", "samhsa-tip65"]
+    },
+    {
+      "id": "d5-psychoed-025",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5Z",
+      "cacrep": ["helping-relationships"],
+      "tags": ["psychoeducation", "normalization"],
+      "prompt": "What is the primary therapeutic value of psychoeducation about a client's condition?",
+      "choices": [
+        { "text": "It normalizes the experience, reduces self-blame, provides a framework for making sense of symptoms, and supports informed participation in treatment", "correct": true, "rationale": "Understanding one's condition reduces the isolating sense of personal defect and enables collaboration." },
+        { "text": "It replaces the need for other interventions", "correct": false, "rationale": "Information alone rarely produces behavioural change." },
+        { "text": "It demonstrates the counselor's expertise and builds credibility", "correct": false, "rationale": "Credibility may follow but is not the therapeutic purpose." },
+        { "text": "It shortens treatment by reducing the questions clients ask", "correct": false, "rationale": "Not a legitimate clinical rationale." }
+      ],
+      "explanation": "Family psychoeducation has particularly strong evidence in serious mental illness, reducing relapse and rehospitalization. Delivery matters: information should be paced, checked for understanding, and revisited rather than delivered as a lecture.",
+      "refs": ["nimh-schizophrenia", "div12-treatments", "samhsa-tip42"]
+    },
+    {
+      "id": "d5-skills-026",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5M",
+      "cacrep": ["helping-relationships"],
+      "tags": ["skill-building", "role-play", "rehearsal"],
+      "prompt": "Why is in-session behavioural rehearsal more effective than simply discussing a skill?",
+      "choices": [
+        { "text": "Because performing the behaviour builds competence and self-efficacy, and reveals difficulties that discussion alone would miss", "correct": true, "rationale": "Enactive mastery is the strongest source of self-efficacy, and rehearsal surfaces obstacles in a place where they can be coached." },
+        { "text": "Because clients remember spoken instructions poorly", "correct": false, "rationale": "Memory is a factor but not the primary mechanism." },
+        { "text": "Because role-play is more enjoyable and improves session attendance", "correct": false, "rationale": "Engagement is a side benefit, not the mechanism." },
+        { "text": "Because it allows the counselor to evaluate whether the client is being truthful", "correct": false, "rationale": "Rehearsal is not a credibility test." }
+      ],
+      "explanation": "Effective sequence: model the skill, rehearse it with the client, give specific feedback, rehearse again, then assign real-world practice. Skipping straight to real-world assignment is a frequent reason skills 'don't work'.",
+      "refs": ["statpearls-cbt", "div12-treatments", "samhsa-tip65"]
+    },
+    {
+      "id": "d5-support-027",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5N",
+      "cacrep": ["helping-relationships"],
+      "tags": ["social-support", "network", "intervention"],
+      "prompt": "A socially isolated client has no supportive relationships. What is the most effective counseling approach?",
+      "choices": [
+        { "text": "Work on both building new connections through structured, low-risk opportunities and addressing the beliefs and skills that maintain the isolation", "correct": true, "rationale": "Opportunity alone rarely suffices if expectations of rejection and skill deficits go unaddressed." },
+        { "text": "Provide the counseling relationship as the client's primary source of support", "correct": false, "rationale": "This fosters dependence and leaves the client without support after termination." },
+        { "text": "Advise the client to join several social groups immediately", "correct": false, "rationale": "Advice without addressing the barriers usually produces failure experiences that confirm the client's fears." },
+        { "text": "Focus on helping the client become comfortable with solitude", "correct": false, "rationale": "Acceptance may be part of the work, but writing off connection when the client wants it is not the goal." }
+      ],
+      "explanation": "Social support is among the most robust protective factors across mental and physical health outcomes. Building it is a legitimate primary treatment goal, not a peripheral concern.",
+      "refs": ["nimh-depression", "sprc", "statpearls-group-therapy"]
+    },
+    {
+      "id": "d5-telehealth-028",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5X",
+      "cacrep": ["helping-relationships"],
+      "tags": ["telehealth", "practice", "emergency"],
+      "prompt": "What should a counselor verify at the start of every telemental health session?",
+      "choices": [
+        { "text": "The client's identity and current physical location, plus a way to reach them if the connection fails", "correct": true, "rationale": "Location determines applicable licensure law and which emergency services to contact, and it can change between sessions." },
+        { "text": "Only that the video and audio are working", "correct": false, "rationale": "Technical function does not address the safety and jurisdictional issues." },
+        { "text": "That the client has read the practice's privacy policy", "correct": false, "rationale": "This belongs to onboarding, not every session." },
+        { "text": "That no one else is in the client's home", "correct": false, "rationale": "Privacy should be discussed, but presence of others in the home is not itself disqualifying — the relevant question is whether the client can speak freely." }
+      ],
+      "explanation": "Location verification is the item most often skipped. A client who has travelled to another state may place the counselor outside their licensure, and an emergency at an unknown address cannot be responded to.",
+      "refs": ["aca-ethics", "nbcc-ethics", "counseling-compact"]
+    },
+    {
+      "id": "d5-addiction-029",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5G",
+      "cacrep": ["helping-relationships"],
+      "tags": ["substance-use", "contingency-management"],
+      "prompt": "Which intervention has the strongest evidence for stimulant use disorder, for which no medication is approved?",
+      "choices": [
+        { "text": "Contingency management — providing tangible reinforcers for verified abstinence", "correct": true, "rationale": "Contingency management has the most robust evidence for stimulant use disorder, where pharmacotherapy is unavailable." },
+        { "text": "Confrontational group therapy", "correct": false, "rationale": "Confrontational approaches perform poorly and increase dropout." },
+        { "text": "Insight-oriented psychodynamic therapy", "correct": false, "rationale": "Limited evidence for this indication." },
+        { "text": "Educational lectures about the health effects of stimulants", "correct": false, "rationale": "Information-only approaches do not change use." }
+      ],
+      "explanation": "Contingency management is often underused because incentives feel counterintuitive to providers, despite consistently strong trial results. Its main practical limitations are funding and durability after incentives end.",
+      "refs": ["samhsa-tip42", "div12-treatments", "samhsa-tip65"]
+    },
+    {
+      "id": "d5-addiction-030",
+      "type": "cloze",
+      "domain": "D5",
+      "task": "5G",
+      "cacrep": ["helping-relationships"],
+      "tags": ["substance-use", "ambivalence", "decisional-balance"],
+      "prompt": "Exploring both the benefits and costs of continuing a behaviour and of changing it is called {{decisional balance}}, and it is used with clients who are genuinely ambivalent rather than already committed to change.",
+      "answer": "decisional balance",
+      "explanation": "The caveat matters: with a client who has already begun leaning toward change, systematically eliciting the pros of the status quo can strengthen sustain talk and stall progress. It suits contemplation, not preparation or action.",
+      "refs": ["samhsa-tip35", "stages-of-change", "mi-org"]
+    },
+    {
+      "id": "d5-trauma-031",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5F",
+      "cacrep": ["helping-relationships"],
+      "tags": ["ptsd", "evidence-based", "treatment"],
+      "prompt": "Which treatments have the strongest evidence for PTSD?",
+      "choices": [
+        { "text": "Trauma-focused approaches including prolonged exposure, cognitive processing therapy, and EMDR", "correct": true, "rationale": "These trauma-focused therapies have the most consistent support across treatment guidelines." },
+        { "text": "Supportive counseling and relaxation training alone", "correct": false, "rationale": "These are frequently used as comparison conditions and perform less well than trauma-focused approaches." },
+        { "text": "Single-session psychological debriefing", "correct": false, "rationale": "Not effective and potentially harmful." },
+        { "text": "Long-term insight-oriented psychodynamic therapy", "correct": false, "rationale": "Less evidence than the trauma-focused protocols." }
+      ],
+      "explanation": "Cognitive processing therapy focuses on stuck points and beliefs about the trauma; prolonged exposure uses imaginal and in vivo exposure; EMDR pairs recall with bilateral stimulation. All three require adequate stabilization first.",
+      "refs": ["div12-treatments", "nimh-ptsd", "samhsa-tip57"]
+    },
+    {
+      "id": "d5-goalsetting-032",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5D",
+      "cacrep": ["helping-relationships"],
+      "tags": ["session-structure", "agenda"],
+      "prompt": "How is a typical CBT session structured?",
+      "choices": [
+        { "text": "Mood check, agenda setting, review of homework, work on agenda items, new homework, and summary with feedback", "correct": true, "rationale": "This structure is a defining feature of CBT and supports efficient, focused use of session time." },
+        { "text": "Unstructured exploration following whatever the client raises", "correct": false, "rationale": "That is closer to person-centred or psychodynamic practice." },
+        { "text": "Free association followed by the counselor's interpretation", "correct": false, "rationale": "A psychoanalytic format." },
+        { "text": "Skills teaching for the full session with no review of prior work", "correct": false, "rationale": "Homework review is a core structural element; omitting it signals that between-session work does not matter." }
+      ],
+      "explanation": "Eliciting feedback at the end of each session is a specific and often-skipped element. It catches misunderstandings and alliance ruptures early, which is a large part of why structured CBT performs consistently.",
+      "refs": ["statpearls-cbt", "div12-treatments"]
+    },
+    {
+      "id": "d5-homework-033",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5M",
+      "cacrep": ["helping-relationships"],
+      "tags": ["homework", "between-session", "design"],
+      "prompt": "What most improves the likelihood that a client completes between-session work?",
+      "choices": [
+        { "text": "Designing the task collaboratively, giving a clear rationale, making it specific and manageable, and rehearsing or anticipating obstacles in session", "correct": true, "rationale": "Collaborative, specific, rehearsed tasks with an explicit rationale are markedly more likely to be completed." },
+        { "text": "Assigning more demanding tasks to convey confidence in the client", "correct": false, "rationale": "Over-ambitious tasks produce failure experiences that reduce future engagement." },
+        { "text": "Introducing the task in the last minute of the session", "correct": false, "rationale": "Rushed assignment without rationale or rehearsal is one of the strongest predictors of non-completion." },
+        { "text": "Requiring written proof of completion", "correct": false, "rationale": "Surveillance does not build motivation and can damage the alliance." }
+      ],
+      "explanation": "Between-session practice is where most change actually happens, and homework completion predicts outcome across CBT trials. Calling it 'practice' or 'an experiment' rather than 'homework' often reduces the schoolwork associations.",
+      "refs": ["statpearls-cbt", "div12-treatments", "samhsa-tip65"]
+    },
+    {
+      "id": "d5-resistance-034",
+      "type": "scenario",
+      "domain": "D5",
+      "task": "5O",
+      "cacrep": ["helping-relationships"],
+      "tags": ["resistance", "ambivalence", "process"],
+      "prompt": "A client agrees with every suggestion in session but never follows through, and never voices disagreement. How should the counselor respond?",
+      "choices": [
+        { "text": "Name the pattern gently and explicitly invite disagreement, making it safe to say no", "correct": true, "rationale": "Surface compliance often masks unvoiced disagreement; making dissent safe surfaces the real obstacle." },
+        { "text": "Take the agreement at face value and increase accountability measures", "correct": false, "rationale": "Adding accountability to unvoiced disagreement deepens the compliance pattern." },
+        { "text": "Interpret the behaviour as passive-aggressive and confront it", "correct": false, "rationale": "A pejorative framing tends to shut down the very disclosure needed." },
+        { "text": "Reduce the number of suggestions and let the client set all direction", "correct": false, "rationale": "Withdrawing entirely may replicate a dynamic in which the client's real view is never sought." }
+      ],
+      "explanation": "Habitual agreement often reflects a relational pattern — placating authority, avoiding conflict — that appears elsewhere in the client's life. Naming it in the room makes it available as material rather than just an obstacle.",
+      "refs": ["samhsa-tip35", "samhsa-tip65", "mi-org"]
+    },
+    {
+      "id": "d5-scaling-035",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5M",
+      "cacrep": ["helping-relationships"],
+      "tags": ["scaling", "solution-focused", "technique"],
+      "prompt": "A counselor asks 'On a scale of 0 to 10, where are you now? What would one point higher look like?' What is the purpose of the second question?",
+      "choices": [
+        { "text": "To identify a small, concrete, achievable next step rather than a leap to the ideal", "correct": true, "rationale": "Scaling makes change incremental and specific, which is more actionable than aiming directly at 10." },
+        { "text": "To measure the client's symptoms reliably for outcome tracking", "correct": false, "rationale": "Scaling questions are a clinical technique, not a validated measurement instrument." },
+        { "text": "To determine whether the client is exaggerating their distress", "correct": false, "rationale": "Not a credibility test." },
+        { "text": "To compare the client against typical clients at that stage", "correct": false, "rationale": "The scale is entirely self-referenced." }
+      ],
+      "explanation": "Scaling is versatile: confidence to change, importance of change, progress toward a goal, or severity of a problem. Asking why the client is at a 4 rather than a 2 also elicits strengths and existing resources.",
+      "refs": ["samhsa-tip35", "samhsa-tip65", "mi-org"]
+    },
+    {
+      "id": "d5-conflict-036",
+      "type": "recall",
+      "domain": "D5",
+      "task": "5U",
+      "cacrep": ["helping-relationships"],
+      "tags": ["conflict-resolution", "strategies"],
+      "prompt": "Name the five conflict-handling styles in the Thomas-Kilmann framework and their position on assertiveness and cooperativeness.",
+      "answer": "Competing — high assertiveness, low cooperativeness. Collaborating — high on both, seeking a solution satisfying everyone. Compromising — moderate on both, each party gives something up. Avoiding — low on both, withdrawing from the conflict. Accommodating — low assertiveness, high cooperativeness, yielding to the other party.",
+      "explanation": "No style is universally best: avoiding can be appropriate for trivial matters or when emotions are too high, and accommodating is appropriate when the issue matters far more to the other person. Habitual reliance on any single style is the clinical concern.",
+      "refs": ["samhsa-tip65", "statpearls-group-therapy"]
+    },
+    {
+      "id": "d5-assertive-037",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5Y",
+      "cacrep": ["helping-relationships"],
+      "tags": ["assertiveness", "communication", "training"],
+      "prompt": "How is assertive communication best distinguished from aggressive and passive communication?",
+      "choices": [
+        { "text": "Assertive communication expresses one's own needs directly while respecting the other person's rights; aggressive disregards the other's rights; passive disregards one's own", "correct": true, "rationale": "The distinction turns on whose rights are respected, not on volume or intensity." },
+        { "text": "Assertive communication means always getting what you want", "correct": false, "rationale": "Assertiveness concerns how needs are expressed, not whether they are met." },
+        { "text": "Assertive communication avoids conflict entirely", "correct": false, "rationale": "That describes passive or avoidant communication." },
+        { "text": "Assertive communication means expressing feelings with strong emotion", "correct": false, "rationale": "Intensity is unrelated to assertiveness." }
+      ],
+      "explanation": "Passive-aggressive communication is a fourth pattern: indirect expression of one's needs through sarcasm, delay, or withdrawal. Assertiveness training is particularly relevant with clients whose difficulties involve chronic accommodation.",
+      "refs": ["samhsa-tip65", "div12-treatments"]
+    },
+    {
+      "id": "d5-relapse-038",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5G",
+      "cacrep": ["helping-relationships"],
+      "tags": ["urge-surfing", "craving", "mindfulness"],
+      "prompt": "A counselor teaches a client to observe a craving rise and fall without acting on it. What is this technique called?",
+      "choices": [
+        { "text": "Urge surfing", "correct": true, "rationale": "Urge surfing uses mindful observation of a craving's natural rise and decline, undermining the belief that it must be acted on." },
+        { "text": "Thought stopping", "correct": false, "rationale": "Thought stopping attempts to suppress the experience, which is ineffective and can intensify it." },
+        { "text": "Systematic desensitization", "correct": false, "rationale": "A graduated exposure procedure for fear, paired with relaxation." },
+        { "text": "Contingency management", "correct": false, "rationale": "Providing reinforcers for verified behaviour change." }
+      ],
+      "explanation": "The psychoeducation that makes it work: cravings are time-limited and typically peak and subside within roughly 20 to 30 minutes. Clients often believe a craving will escalate indefinitely until they use.",
+      "refs": ["samhsa-tip65", "samhsa-tip42", "behavioraltech-dbt"]
+    },
+    {
+      "id": "d5-defense-039",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5R",
+      "cacrep": ["helping-relationships"],
+      "tags": ["defenses", "psychoeducation", "timing"],
+      "prompt": "When is it appropriate to help a client become aware of their defensive patterns?",
+      "choices": [
+        { "text": "When the alliance is strong enough to tolerate it and the defense is causing identifiable problems in the client's life", "correct": true, "rationale": "Defenses are protective; challenging them prematurely or without cause removes coping without offering a replacement." },
+        { "text": "As early as possible, since insight accelerates change", "correct": false, "rationale": "Early challenge to defenses commonly produces rupture or increased defensiveness." },
+        { "text": "Whenever the counselor identifies a defense, regardless of context", "correct": false, "rationale": "Naming every defense observed is more about the counselor's perceptiveness than the client's need." },
+        { "text": "Only after the client has independently named the pattern", "correct": false, "rationale": "Waiting indefinitely forgoes a useful intervention; the criterion is readiness, not client-initiated insight." }
+      ],
+      "explanation": "The standard framing is that a defense should be addressed when its cost exceeds its protective value, and that the client needs alternative coping in place before it is dismantled.",
+      "refs": ["statpearls-defense-mechanisms", "samhsa-tip65"]
+    },
+    {
+      "id": "d5-transference-040",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5R",
+      "cacrep": ["helping-relationships"],
+      "tags": ["transference", "psychoeducation", "relationship"],
+      "prompt": "A client reacts to mild feedback with intense anger, later saying the counselor 'sounded exactly like my father'. How is this best used therapeutically?",
+      "choices": [
+        { "text": "As live material about the client's relational patterns, explored collaboratively in the here-and-now", "correct": true, "rationale": "Transference reactions make the client's patterns observable in the room, where they can be examined directly rather than only recounted." },
+        { "text": "As evidence the counselor made an error that requires an apology", "correct": false, "rationale": "The disproportionate reaction is informative; treating it purely as counselor error forgoes the material." },
+        { "text": "As a sign the client should be transferred to a different counselor", "correct": false, "rationale": "Transference is expected in therapeutic relationships, not grounds for transfer." },
+        { "text": "As something to be ignored so the client's dignity is preserved", "correct": false, "rationale": "Ignoring it leaves an important pattern unexamined." }
+      ],
+      "explanation": "Even counselors who do not work psychodynamically benefit from recognizing transference, because it explains reactions that otherwise seem disproportionate. The counterpart, countertransference, is managed through self-awareness and supervision.",
+      "refs": ["statpearls-defense-mechanisms", "samhsa-tip65", "aca-ethics"]
+    },
+    {
+      "id": "d5-modality-041",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5B",
+      "cacrep": ["helping-relationships", "group-work"],
+      "tags": ["modality", "indication", "group"],
+      "prompt": "Which client concern is most strongly indicated for group rather than individual counseling?",
+      "choices": [
+        { "text": "Difficulty forming and maintaining relationships, where interpersonal patterns can be observed and worked with directly", "correct": true, "rationale": "Groups provide a live social microcosm — interpersonal patterns appear in the room rather than only in report." },
+        { "text": "A need for detailed trauma memory processing in the early phase of treatment", "correct": false, "rationale": "Individual work is generally preferred for detailed trauma processing, particularly early on." },
+        { "text": "Acute suicidal crisis requiring intensive individual risk management", "correct": false, "rationale": "Acute risk requires individual attention and possibly a higher level of care." },
+        { "text": "A situation requiring a high degree of confidentiality about a legal matter", "correct": false, "rationale": "Group confidentiality cannot be guaranteed by the leader." }
+      ],
+      "explanation": "Yalom's social microcosm concept is the rationale: given time, group members reproduce their characteristic interpersonal patterns within the group, making those patterns available for feedback and change.",
+      "refs": ["statpearls-group-therapy", "aca-ethics"]
+    },
+    {
+      "id": "d5-termination-042",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5D",
+      "cacrep": ["helping-relationships"],
+      "tags": ["dependence", "autonomy", "process"],
+      "prompt": "A client says they could not cope without their weekly sessions and becomes anxious when termination is mentioned. What should the counselor do?",
+      "choices": [
+        { "text": "Explore the dependence openly and shift focus toward building the client's own coping resources and outside supports", "correct": true, "rationale": "Fostering autonomy is an ethical obligation; dependence on the counselor is a clinical issue to be addressed, not a sign of successful therapy." },
+        { "text": "Continue weekly sessions indefinitely to maintain the client's stability", "correct": false, "rationale": "Indefinite continuation may sustain the dependence rather than resolve it." },
+        { "text": "Terminate promptly to force the client to develop independence", "correct": false, "rationale": "Abrupt termination is abandonment and unlikely to build capability." },
+        { "text": "Reassure the client that they will always be able to return", "correct": false, "rationale": "True but insufficient on its own; it does not address the underlying dependence." }
+      ],
+      "explanation": "Gradual tapering, deliberate attribution of gains to the client's own efforts, and building outside supports are the standard tools. Some dependence early in treatment is normal; the issue is whether it decreases over time.",
+      "refs": ["aca-ethics", "samhsa-tip65", "statpearls-cbt"]
+    },
+    {
+      "id": "d5-observation-043",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5S",
+      "cacrep": ["helping-relationships"],
+      "tags": ["nonverbal", "attending", "observation"],
+      "prompt": "What does the SOLER acronym describe in counseling microskills?",
+      "choices": [
+        { "text": "Attending behaviour: Square posture, Open posture, Lean forward, Eye contact, Relaxed", "correct": true, "rationale": "Egan's SOLER summarizes nonverbal attending behaviours that communicate presence and interest." },
+        { "text": "A structure for treatment planning", "correct": false, "rationale": "It concerns nonverbal attending, not planning." },
+        { "text": "A model for ethical decision making", "correct": false, "rationale": "Not an ethics framework." },
+        { "text": "A sequence for conducting a risk assessment", "correct": false, "rationale": "Not a risk assessment protocol." }
+      ],
+      "explanation": "SOLER should be applied with cultural awareness: sustained direct eye contact is respectful in some cultures and confrontational in others, and comfortable interpersonal distance varies considerably. The principle is communicating attentiveness, not the specific posture.",
+      "refs": ["samhsa-tip65", "msjcc"]
+    },
+    {
+      "id": "d5-spirituality-044",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5L",
+      "cacrep": ["social-cultural", "helping-relationships"],
+      "tags": ["spirituality", "integration", "intervention"],
+      "prompt": "When may a counselor incorporate a client's spiritual practices into treatment?",
+      "choices": [
+        { "text": "When the client identifies them as meaningful, consents to their inclusion, and the counselor works within the client's framework rather than their own", "correct": true, "rationale": "Client-initiated and client-framed spiritual integration respects autonomy and avoids imposing the counselor's beliefs." },
+        { "text": "Whenever the counselor believes spiritual practice would benefit the client", "correct": false, "rationale": "Counselor-initiated spiritual intervention risks value imposition." },
+        { "text": "Never, since spirituality falls outside counseling scope", "correct": false, "rationale": "Spirituality is a recognized diversity dimension and legitimate clinical content." },
+        { "text": "Only if the counselor shares the client's religious tradition", "correct": false, "rationale": "Shared belief is not required; respectful competence and working within the client's frame are." }
+      ],
+      "explanation": "Integrating a client's own prayer, meditation, scripture, or community involvement as a coping resource is different from the counselor introducing religious content. The line is who supplies the framework.",
+      "refs": ["msjcc", "aca-ethics"]
+    },
+    {
+      "id": "d5-hope-045",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5O",
+      "cacrep": ["helping-relationships"],
+      "tags": ["hope", "expectancy", "common-factors"],
+      "prompt": "Why is instilling realistic hope considered an active ingredient rather than mere encouragement?",
+      "choices": [
+        { "text": "Because client expectancy of improvement is an established common factor that independently predicts outcome", "correct": true, "rationale": "Expectancy effects are a well-documented contributor to therapeutic change across orientations." },
+        { "text": "Because optimistic clients are easier to work with", "correct": false, "rationale": "Counselor convenience is not the mechanism." },
+        { "text": "Because hope eliminates the need for specific techniques", "correct": false, "rationale": "Expectancy operates alongside technique rather than replacing it." },
+        { "text": "Because hopeful clients report better outcomes even when nothing has changed", "correct": false, "rationale": "This mischaracterizes expectancy as reporting bias rather than genuine change." }
+      ],
+      "explanation": "The qualifier 'realistic' matters. False reassurance damages credibility when disconfirmed, whereas grounded hope — based on the client's own past successes, an explained treatment rationale, and evidence that the approach helps — is durable.",
+      "refs": ["div12-treatments", "statpearls-group-therapy", "samhsa-tip65"]
+    },
+    {
+      "id": "d5-boundaries-046",
+      "type": "scenario",
+      "domain": "D5",
+      "task": "5S",
+      "cacrep": ["helping-relationships", "professional-ethics"],
+      "tags": ["boundaries", "session-management", "structure"],
+      "prompt": "A client routinely raises their most significant material in the final two minutes of session. How should the counselor respond?",
+      "choices": [
+        { "text": "Name the pattern with the client and explore what makes it hard to raise earlier, while holding the session boundary", "correct": true, "rationale": "The 'doorknob disclosure' pattern is clinically meaningful; naming it addresses the avoidance while maintaining structure." },
+        { "text": "Routinely extend the session to accommodate the disclosure", "correct": false, "rationale": "Extending reinforces the pattern and erodes the frame." },
+        { "text": "Ignore the late material and begin the next session with a fresh agenda", "correct": false, "rationale": "Ignoring important disclosures is clinically and ethically problematic." },
+        { "text": "Tell the client that late disclosures will not be discussed", "correct": false, "rationale": "A punitive rule discourages disclosure rather than exploring the reason for it." }
+      ],
+      "explanation": "A workable response is to acknowledge the importance, note there is not enough time to do it justice, and place it first on the next agenda — while gently exploring what makes the beginning of the session harder.",
+      "refs": ["aca-ethics", "samhsa-tip65"]
+    },
+    {
+      "id": "d5-cultural-047",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5C",
+      "cacrep": ["social-cultural"],
+      "tags": ["veterans", "population", "competence"],
+      "prompt": "What is most important when counseling military veterans?",
+      "choices": [
+        { "text": "Understanding military culture, the meaning of service and unit cohesion, and avoiding assumptions that every veteran is traumatized", "correct": true, "rationale": "Cultural competence with veterans includes recognizing that military experience is not uniformly traumatic and often carries pride and identity." },
+        { "text": "Assuming PTSD is present and screening primarily for combat trauma", "correct": false, "rationale": "Assuming trauma is itself a stereotype; many veterans present with transition, moral injury, or unrelated concerns." },
+        { "text": "Encouraging the client to distance themselves from military identity to adapt to civilian life", "correct": false, "rationale": "Military identity is often a source of meaning and belonging, and disparaging it damages the alliance." },
+        { "text": "Avoiding discussion of service experiences unless the client raises them", "correct": false, "rationale": "Complete avoidance can communicate discomfort; respectful inquiry is appropriate." }
+      ],
+      "explanation": "Concrete competence markers include understanding rank structure, deployment cycles, the difference between branches, and the meaning of terms clients use. Not knowing these signals an outsider unfamiliar with the client's world.",
+      "refs": ["msjcc", "samhsa-tip57", "nimh-ptsd"]
+    },
+    {
+      "id": "d5-strengths-048",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5M",
+      "cacrep": ["helping-relationships"],
+      "tags": ["coping-skills", "generalization", "practice"],
+      "prompt": "A client can use a coping skill perfectly in session but never uses it when distressed at home. What is most likely missing?",
+      "choices": [
+        { "text": "Practice under conditions resembling the real situation, including at higher levels of arousal, plus cues to prompt use", "correct": true, "rationale": "Skills learned in calm conditions frequently fail to transfer to high-arousal situations without graded practice and prompts." },
+        { "text": "Understanding of the skill's rationale", "correct": false, "rationale": "The client can perform the skill, so comprehension is not the gap." },
+        { "text": "Motivation to improve", "correct": false, "rationale": "Assuming a motivation deficit overlooks the well-documented state-dependence of skill use." },
+        { "text": "A different, more advanced skill", "correct": false, "rationale": "Adding complexity does not solve a transfer problem." }
+      ],
+      "explanation": "Generalization must be planned rather than assumed: rehearse in progressively more realistic conditions, attach the skill to a specific cue, and identify in advance the moment it will be used.",
+      "refs": ["statpearls-cbt", "behavioraltech-dbt", "div12-treatments"]
+    },
+    {
+      "id": "d5-grief-049",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5F",
+      "cacrep": ["helping-relationships"],
+      "tags": ["grief-counseling", "intervention", "evidence"],
+      "prompt": "What does the evidence suggest about routine grief counseling for all bereaved people?",
+      "choices": [
+        { "text": "It shows little benefit for uncomplicated grief, and should be targeted at those with complicated or prolonged grief or elevated risk", "correct": true, "rationale": "Most bereaved people recover with natural supports; universal intervention shows minimal benefit and may occasionally interfere." },
+        { "text": "It substantially benefits all bereaved individuals and should be offered universally", "correct": false, "rationale": "This is not supported by outcome research." },
+        { "text": "It is contraindicated in all circumstances", "correct": false, "rationale": "It is clearly beneficial for complicated and prolonged grief." },
+        { "text": "It is effective only when begun within one week of the death", "correct": false, "rationale": "No such timing requirement is supported." }
+      ],
+      "explanation": "This parallels the psychological debriefing finding: intervention is most useful where natural recovery processes have not worked. Screening and targeting outperform universal provision.",
+      "refs": ["statpearls-grief", "div12-treatments", "samhsa-tip57"]
+    },
+    {
+      "id": "d5-pacing-050",
+      "type": "cloze",
+      "domain": "D5",
+      "task": "5AL",
+      "cacrep": ["helping-relationships"],
+      "tags": ["affect-regulation", "containment", "pacing"],
+      "prompt": "When a client becomes overwhelmed by emotion in session, the counselor's task is {{containment}} — helping the client regulate and return to a tolerable level of arousal before the session ends.",
+      "answer": "containment",
+      "explanation": "Practically this means reserving time at the end of emotionally intense sessions for grounding and re-orientation. Sending a dysregulated client out of the door is a common and avoidable error, particularly in trauma work.",
+      "refs": ["samhsa-tip57", "behavioraltech-dbt"]
+    },
+    {
+      "id": "d5-feedback-051",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5AJ",
+      "cacrep": ["helping-relationships", "group-work"],
+      "tags": ["feedback", "modeling", "skills"],
+      "prompt": "What characterizes effective feedback in counseling and group work?",
+      "choices": [
+        { "text": "Specific, behavioural, timely, and focused on something the recipient can act on", "correct": true, "rationale": "Feedback that describes observable behaviour and is actionable is far more usable than global evaluation." },
+        { "text": "Comprehensive, covering all observed difficulties at once", "correct": false, "rationale": "Volume overwhelms and reduces the likelihood any of it is used." },
+        { "text": "General and positive, to protect the relationship", "correct": false, "rationale": "Vague praise carries no information and can feel insincere." },
+        { "text": "Delivered anonymously to reduce defensiveness", "correct": false, "rationale": "Anonymity in a counseling or group context undermines the relational learning feedback is meant to provide." }
+      ],
+      "explanation": "In group work the leader models this explicitly, teaching members to give feedback about specific behaviour and its impact on them rather than delivering character judgements. Feedback about impact is generally better received than feedback about traits.",
+      "refs": ["statpearls-group-therapy", "samhsa-tip65"]
+    },
+    {
+      "id": "d5-mandated-052",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5C",
+      "cacrep": ["helping-relationships"],
+      "tags": ["mandated", "engagement", "transparency"],
+      "prompt": "What most improves engagement with mandated clients?",
+      "choices": [
+        { "text": "Transparency about reporting requirements, acknowledgement of the client's lack of choice, and emphasis on whatever choices remain available to them", "correct": true, "rationale": "Naming the coercive context honestly and locating remaining autonomy is the most reliable engagement strategy." },
+        { "text": "Downplaying the mandate to help the client feel the counseling is voluntary", "correct": false, "rationale": "Pretending the coercion does not exist damages credibility once it surfaces." },
+        { "text": "Emphasizing the consequences of non-compliance to motivate participation", "correct": false, "rationale": "Threat-based motivation produces compliance rather than change." },
+        { "text": "Deferring any goal-setting until the client acknowledges the referring problem", "correct": false, "rationale": "Requiring an admission as a precondition typically entrenches resistance." }
+      ],
+      "explanation": "Emphasizing personal choice and control is a core MI strategy and is especially potent where autonomy has been externally restricted. Even under mandate, the client chooses how to engage.",
+      "refs": ["samhsa-tip35", "mi-org", "aca-ethics"]
+    },
+    {
+      "id": "d5-psychoed-053",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5Y",
+      "cacrep": ["helping-relationships"],
+      "tags": ["stress-management", "psychoeducation", "resources"],
+      "prompt": "A counselor provides a client with a workbook on stress management to use between sessions. What is the key consideration?",
+      "choices": [
+        { "text": "That the material matches the client's literacy, language, and cultural context, and that its use is reviewed in session", "correct": true, "rationale": "Unreviewed and mismatched materials are rarely used; fit and follow-up determine whether a resource helps." },
+        { "text": "That the workbook is the most comprehensive available", "correct": false, "rationale": "Comprehensiveness often reduces usability." },
+        { "text": "That the client completes it entirely before the next session", "correct": false, "rationale": "An unrealistic demand that sets up failure." },
+        { "text": "That the material replaces the need for in-session skills work", "correct": false, "rationale": "Bibliotherapy supplements rather than replaces active intervention." }
+      ],
+      "explanation": "Guided self-help — materials plus periodic professional contact — consistently outperforms pure self-help. The contact is what makes it work, so handing over a resource without review is close to handing over nothing.",
+      "refs": ["div12-treatments", "msjcc", "statpearls-cbt"]
+    },
+    {
+      "id": "d5-suicide-054",
+      "type": "scenario",
+      "domain": "D5",
+      "task": "5Q",
+      "cacrep": ["helping-relationships"],
+      "tags": ["suicide", "crisis-response", "intervention"],
+      "prompt": "A client calls between sessions in acute distress with suicidal thoughts but no plan. What is the appropriate response sequence?",
+      "choices": [
+        { "text": "Assess current safety and intent, activate the existing safety plan, mobilize supports, and arrange follow-up contact", "correct": true, "rationale": "Assessment then structured response using the existing plan is the standard approach, escalating only as indicated." },
+        { "text": "Instruct the client to go to the emergency department immediately", "correct": false, "rationale": "Escalating to emergency care before assessment is disproportionate for ideation without plan or intent." },
+        { "text": "Advise the client to wait until their next scheduled session", "correct": false, "rationale": "Deferring an acute call fails to respond to expressed distress." },
+        { "text": "Contact emergency services without informing the client", "correct": false, "rationale": "Covert escalation destroys trust and is unwarranted at this level of risk." }
+      ],
+      "explanation": "This is precisely why safety plans are built in advance: the crisis is not the moment to design one. Note the graded response — ideation without plan or intent does not automatically warrant emergency escalation.",
+      "refs": ["sprc", "samhsa-988", "nimh-suicide-prevention"]
+    },
+    {
+      "id": "d5-empathy-055",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5AC",
+      "cacrep": ["helping-relationships"],
+      "tags": ["sympathy", "empathy", "distinction"],
+      "prompt": "What distinguishes empathy from sympathy in counseling?",
+      "choices": [
+        { "text": "Empathy is understanding the client's experience from their frame of reference; sympathy is feeling for the client from one's own frame, often with pity", "correct": true, "rationale": "The distinction is whose frame of reference is occupied, and whether the stance implies being above the client." },
+        { "text": "Empathy involves stronger emotional reactions than sympathy", "correct": false, "rationale": "Intensity is not the distinction." },
+        { "text": "Sympathy is more professional and empathy more personal", "correct": false, "rationale": "This reverses the professional preference; empathy is the therapeutic stance." },
+        { "text": "They are interchangeable in counseling practice", "correct": false, "rationale": "The distinction is standard and clinically consequential." }
+      ],
+      "explanation": "Sympathy tends to place the counselor above the client and can feel diminishing. Rogers also stressed the 'as if' quality of empathy — sensing the client's world as if it were one's own, without losing that 'as if'.",
+      "refs": ["samhsa-tip65", "div12-treatments"]
+    },
+    {
+      "id": "d5-planning-056",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5D",
+      "cacrep": ["helping-relationships"],
+      "tags": ["session-planning", "flexibility"],
+      "prompt": "A counselor has planned a session on cognitive restructuring, but the client arrives having just lost their job. What should the counselor do?",
+      "choices": [
+        { "text": "Set aside the plan and respond to the current situation, integrating planned material only if it fits naturally", "correct": true, "rationale": "Responsiveness to the client's present reality takes precedence over an agenda set the previous week." },
+        { "text": "Proceed with the planned material to maintain treatment structure", "correct": false, "rationale": "Rigid adherence in the face of a significant event is experienced as not being heard." },
+        { "text": "Spend the session only on emotional support with no structure at all", "correct": false, "rationale": "Support is needed, but abandoning all structure is not required and may leave the client without direction." },
+        { "text": "Reschedule the session for when the client is less distressed", "correct": false, "rationale": "Turning away a distressed client is the opposite of what the moment requires." }
+      ],
+      "explanation": "Structured therapies explicitly permit agenda revision — collaborative agenda-setting means asking at the top of the session what needs attention today, which surfaces exactly this kind of event.",
+      "refs": ["statpearls-cbt", "samhsa-tip65", "div12-treatments"]
+    },
+    {
+      "id": "d5-normalizing-057",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5Z",
+      "cacrep": ["helping-relationships"],
+      "tags": ["normalization", "validation", "distinction"],
+      "prompt": "What is the risk of normalizing a client's experience too quickly?",
+      "choices": [
+        { "text": "It can minimize the client's distress and imply their reaction does not warrant attention", "correct": true, "rationale": "Premature normalization functions as dismissal, however well intended." },
+        { "text": "It gives the client false hope about their prognosis", "correct": false, "rationale": "Normalizing concerns the commonness of an experience, not prognosis." },
+        { "text": "It encourages the client to compare themselves to others unfavourably", "correct": false, "rationale": "Not the primary risk." },
+        { "text": "There is no risk; normalization is always therapeutic", "correct": false, "rationale": "Timing determines whether it helps or dismisses." }
+      ],
+      "explanation": "Validation should precede normalization: acknowledge the specific experience and its impact first, then situate it as understandable and common. 'Lots of people feel that way' offered too early lands as 'your feeling is unremarkable'.",
+      "refs": ["behavioraltech-dbt", "samhsa-tip65", "samhsa-tip57"]
+    },
+    {
+      "id": "d5-validation-058",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5AL",
+      "cacrep": ["helping-relationships"],
+      "tags": ["validation", "dbt", "technique"],
+      "prompt": "In DBT, what does validation mean?",
+      "choices": [
+        { "text": "Communicating that the client's response makes sense given their history and current circumstances, without necessarily endorsing the behaviour", "correct": true, "rationale": "Validation acknowledges the understandability of a reaction; it is distinct from approval or agreement." },
+        { "text": "Agreeing that the client's behaviour was appropriate and justified", "correct": false, "rationale": "Validation is not endorsement; a behaviour can be understandable and still ineffective." },
+        { "text": "Reassuring the client that their feelings will pass", "correct": false, "rationale": "That is reassurance, which can be invalidating in the moment." },
+        { "text": "Confirming the accuracy of the client's account of events", "correct": false, "rationale": "Validation addresses the emotional response, not factual verification." }
+      ],
+      "explanation": "This is the acceptance half of DBT's central dialectic — clients are validated as doing the best they can *and* asked to do better. Chronic invalidation in a client's history is precisely what makes the validating stance therapeutic.",
+      "refs": ["behavioraltech-dbt", "nimh-bpd", "div12-treatments"]
+    },
+    {
+      "id": "d5-goal-059",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5M",
+      "cacrep": ["helping-relationships"],
+      "tags": ["problem-solving", "structured", "technique"],
+      "prompt": "What are the steps of structured problem-solving therapy?",
+      "choices": [
+        { "text": "Define the problem specifically, generate multiple options without evaluating, evaluate options against criteria, select and plan implementation, then review the outcome", "correct": true, "rationale": "The deliberate separation of generation from evaluation is the distinctive element that prevents premature narrowing." },
+        { "text": "Identify the problem, ask the counselor for the best solution, then implement it", "correct": false, "rationale": "Counselor-supplied solutions build no transferable capability." },
+        { "text": "Explore the problem's origins, gain insight, and wait for resolution to follow", "correct": false, "rationale": "That describes an insight-oriented approach, not problem-solving therapy." },
+        { "text": "List all problems and address them simultaneously", "correct": false, "rationale": "Diffuse effort is precisely what the structured method avoids." }
+      ],
+      "explanation": "Problem-solving therapy has good evidence for depression, particularly in primary care and with older adults. Clients frequently skip the generation step and settle on the first option, which is where coaching adds most value.",
+      "refs": ["div12-treatments", "nimh-depression", "statpearls-cbt"]
+    },
+    {
+      "id": "d5-attending-060",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5S",
+      "cacrep": ["helping-relationships"],
+      "tags": ["minimal-encouragers", "basic-skills"],
+      "prompt": "What is the function of minimal encouragers such as 'mm-hmm', 'go on', and brief head nods?",
+      "choices": [
+        { "text": "To signal attentive listening and invite the client to continue without redirecting the content", "correct": true, "rationale": "They keep the client talking and the counselor unobtrusive, maintaining the client's control of direction." },
+        { "text": "To signal agreement with what the client is saying", "correct": false, "rationale": "They indicate attention, not endorsement." },
+        { "text": "To fill silences that would otherwise become uncomfortable", "correct": false, "rationale": "Using them to relieve counselor discomfort is a misuse; productive silence should be allowed." },
+        { "text": "To indicate the counselor wishes to change topic", "correct": false, "rationale": "They serve the opposite function." }
+      ],
+      "explanation": "Overuse becomes mechanical and can read as inattention. They are most valuable during extended client narratives, where any fuller response would interrupt.",
+      "refs": ["samhsa-tip65", "samhsa-tip35"]
+    },
+    {
+      "id": "d5-interpretation-061",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5R",
+      "cacrep": ["helping-relationships"],
+      "tags": ["interpretation", "timing", "technique"],
+      "prompt": "What most determines whether an interpretation is therapeutically useful?",
+      "choices": [
+        { "text": "Timing and the client's readiness to consider it, together with a tentative delivery that invites the client's own reaction", "correct": true, "rationale": "Accuracy alone is insufficient; a correct interpretation offered before the client can use it produces defensiveness rather than insight." },
+        { "text": "Its theoretical accuracy according to the counselor's orientation", "correct": false, "rationale": "Theoretical correctness does not make an interpretation usable." },
+        { "text": "The confidence with which it is delivered", "correct": false, "rationale": "Confident delivery can foreclose the client's own exploration." },
+        { "text": "Whether it addresses early childhood experience", "correct": false, "rationale": "Content focus is not what determines usefulness." }
+      ],
+      "explanation": "The standard guidance is to interpret slightly ahead of the client's current awareness — close enough to be recognizable, far enough to add something. Tentative phrasing ('I wonder whether...') leaves room for the client to disagree.",
+      "refs": ["samhsa-tip65", "statpearls-defense-mechanisms"]
+    },
+    {
+      "id": "d5-multicultural-062",
+      "type": "scenario",
+      "domain": "D5",
+      "task": "5H",
+      "cacrep": ["social-cultural"],
+      "tags": ["microaggression", "rupture", "repair"],
+      "prompt": "A client points out that something the counselor said felt racially insensitive. What is the appropriate response?",
+      "choices": [
+        { "text": "Listen non-defensively, acknowledge the impact, take responsibility without over-explaining intent, and explore the effect on the relationship", "correct": true, "rationale": "Non-defensive acknowledgement and repair is the professional standard; impact matters more than intent." },
+        { "text": "Explain that no offence was intended and move on", "correct": false, "rationale": "Centring intent dismisses the client's experience and typically deepens the rupture." },
+        { "text": "Apologize profusely and repeatedly to demonstrate sincerity", "correct": false, "rationale": "Excessive apology shifts the burden to the client to reassure the counselor." },
+        { "text": "Suggest the client may be over-sensitive due to past experiences", "correct": false, "rationale": "This is itself a microinvalidation and compounds the harm." }
+      ],
+      "explanation": "Counselors commit microaggressions; the professional question is what happens next. Well-handled repair frequently strengthens the alliance, whereas defensiveness is a common cause of premature termination among clients of colour.",
+      "refs": ["msjcc", "aca-ethics"]
+    },
+    {
+      "id": "d5-motivation-063",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5O",
+      "cacrep": ["helping-relationships"],
+      "tags": ["self-efficacy", "bandura", "sources"],
+      "prompt": "According to Bandura, which is the strongest source of self-efficacy?",
+      "choices": [
+        { "text": "Mastery experience — succeeding at the task oneself", "correct": true, "rationale": "Direct successful performance is the most powerful source of efficacy beliefs." },
+        { "text": "Vicarious experience — seeing similar others succeed", "correct": false, "rationale": "Influential, particularly when the model is similar, but weaker than direct mastery." },
+        { "text": "Verbal persuasion — being told one is capable", "correct": false, "rationale": "The weakest of the four sources and easily undone by failure." },
+        { "text": "Physiological and emotional states", "correct": false, "rationale": "These influence efficacy judgements but are not the strongest source." }
+      ],
+      "explanation": "The clinical implication is direct: arrange for the client to succeed at something. Graded task assignment, behavioural experiments, and shaping all exploit mastery experience rather than relying on encouragement.",
+      "refs": ["statpearls-cbt", "ncda", "div12-treatments"]
+    },
+    {
+      "id": "d5-termination-064",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5D",
+      "cacrep": ["helping-relationships"],
+      "tags": ["counselor-leaving", "transfer", "ethics"],
+      "prompt": "A counselor is leaving their agency in one month. What should they do about ongoing clients?",
+      "choices": [
+        { "text": "Inform clients as soon as possible, process the ending, and arrange appropriate transfers with adequate handover", "correct": true, "rationale": "Clients deserve notice sufficient to process the ending and to transition with continuity of care." },
+        { "text": "Inform clients in the final session to avoid distressing them prematurely", "correct": false, "rationale": "Late notice removes the opportunity to process an ending that may reactivate loss." },
+        { "text": "Let the agency notify clients after the counselor has left", "correct": false, "rationale": "This is abandonment and denies clients any closure with their counselor." },
+        { "text": "Offer to continue seeing clients privately outside the agency", "correct": false, "rationale": "This raises contractual and ethical issues and should not be the default; agency agreements typically govern it." }
+      ],
+      "explanation": "Planned counselor-initiated endings are clinically significant, particularly for clients with histories of abandonment. Adequate notice, processing, and warm handover distinguish a professional transfer from abandonment.",
+      "refs": ["aca-ethics", "nbcc-ethics"]
+    },
+    {
+      "id": "d5-strengths-065",
+      "type": "cloze",
+      "domain": "D5",
+      "task": "5O",
+      "cacrep": ["helping-relationships"],
+      "tags": ["exception", "solution-focused", "resources"],
+      "prompt": "Asking a client 'How have you managed to keep going despite all this?' is a {{coping question}}, used to surface resilience and existing resources in clients who feel overwhelmed.",
+      "answer": "coping question",
+      "explanation": "Coping questions are particularly useful when a client rejects exception-finding because 'nothing has ever been better'. They locate strength inside the difficulty rather than requiring an exception to it.",
+      "refs": ["samhsa-tip65", "samhsa-tip35"]
+    },
+    {
+      "id": "d5-systemic-066",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5J",
+      "cacrep": ["helping-relationships"],
+      "tags": ["circular-causality", "systems", "family"],
+      "prompt": "What does circular causality mean in systems thinking?",
+      "choices": [
+        { "text": "That behaviours mutually influence one another in ongoing feedback loops, rather than one event simply causing another in a straight line", "correct": true, "rationale": "Systemic thinking replaces linear cause-and-effect with reciprocal influence, which is why blame becomes less useful than pattern description." },
+        { "text": "That family problems always recur in cycles across generations", "correct": false, "rationale": "That describes multigenerational transmission, a different concept." },
+        { "text": "That the identified patient causes the family's dysfunction", "correct": false, "rationale": "This is linear thinking and the opposite of the systemic view." },
+        { "text": "That every family member is equally responsible for all problems", "correct": false, "rationale": "Circular causality describes mutual influence, not equal culpability — an important caveat where abuse is present." }
+      ],
+      "explanation": "That last caveat is clinically essential: circular causality must never be used to imply shared responsibility for abuse. The pattern framing describes interaction, not accountability for harm.",
+      "refs": ["samhsa-tip65", "cdc-ipv"]
+    },
+    {
+      "id": "d5-family-067",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5K",
+      "cacrep": ["helping-relationships"],
+      "tags": ["identified-patient", "systems", "reframe"],
+      "prompt": "A family presents 'because of' their son's behaviour. How does a systemic counselor typically frame this?",
+      "choices": [
+        { "text": "The son is the identified patient whose symptoms may express or stabilize wider family patterns", "correct": true, "rationale": "The systemic view treats the symptom as embedded in and serving a function within the family system." },
+        { "text": "The son is the client and the family are collateral informants", "correct": false, "rationale": "That is an individual framing; in family therapy the system is the client." },
+        { "text": "The parents are the true clients and the son is symptomatic of their marriage", "correct": false, "rationale": "This simply relocates linear blame onto the parents." },
+        { "text": "The presenting complaint should be accepted at face value without reframing", "correct": false, "rationale": "Systemic work characteristically reframes the individual complaint as a family pattern." }
+      ],
+      "explanation": "The practical skill is reframing without blaming: moving the family from 'fix him' to 'how do we all participate in this pattern' while ensuring no one, particularly the identified patient, feels accused.",
+      "refs": ["samhsa-tip65"]
+    },
+    {
+      "id": "d5-motivation-068",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5O",
+      "cacrep": ["helping-relationships"],
+      "tags": ["autonomy-support", "self-determination-theory"],
+      "prompt": "According to self-determination theory, which three basic psychological needs support intrinsic motivation?",
+      "choices": [
+        { "text": "Autonomy, competence, and relatedness", "correct": true, "rationale": "Deci and Ryan identify these three needs; satisfying them supports intrinsic motivation and wellbeing." },
+        { "text": "Safety, esteem, and self-actualization", "correct": false, "rationale": "These are levels in Maslow's hierarchy." },
+        { "text": "Achievement, affiliation, and power", "correct": false, "rationale": "These are McClelland's needs." },
+        { "text": "Survival, love, and freedom", "correct": false, "rationale": "These appear in Glasser's choice theory." }
+      ],
+      "explanation": "The counseling implication is that externally imposed goals produce controlled motivation, which is less durable than intrinsic motivation. Supporting autonomy — offering choices and rationales rather than directives — is the practical application.",
+      "refs": ["samhsa-tip35", "mi-org", "ncda"]
+    },
+    {
+      "id": "d5-boundaries-069",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5S",
+      "cacrep": ["helping-relationships"],
+      "tags": ["trust", "safety", "early-sessions"],
+      "prompt": "What most establishes psychological safety in early counseling sessions?",
+      "choices": [
+        { "text": "Predictability and reliability — clear structure, consistent boundaries, transparency about the process, and following through on what was said", "correct": true, "rationale": "Trust is built by demonstrated consistency rather than by declarations of trustworthiness." },
+        { "text": "Extensive counselor self-disclosure to reduce the power differential", "correct": false, "rationale": "Disclosure can shift focus to the counselor and does not build safety reliably." },
+        { "text": "Assuring the client that everything they say is completely confidential", "correct": false, "rationale": "This is inaccurate, and being contradicted later is precisely what destroys trust." },
+        { "text": "Moving quickly to the client's most difficult material to demonstrate willingness to go there", "correct": false, "rationale": "Depth before safety commonly produces dropout." }
+      ],
+      "explanation": "For clients with trauma or attachment disruption, predictability matters more than warmth. Starting and ending on time, doing what you said you would do, and being accurate about confidentiality limits are the concrete mechanisms.",
+      "refs": ["samhsa-tip57", "nice-attachment", "aca-ethics"]
+    },
+    {
+      "id": "d5-cognitive-070",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5F",
+      "cacrep": ["helping-relationships"],
+      "tags": ["behavioral-experiment", "cbt", "technique"],
+      "prompt": "How does a behavioural experiment differ from ordinary exposure?",
+      "choices": [
+        { "text": "It is designed to test a specific prediction the client holds, with the belief and the outcome explicitly specified in advance", "correct": true, "rationale": "The defining feature is a stated hypothesis and a designed test of it, rather than repeated contact for habituation." },
+        { "text": "It is conducted only in imagination rather than in real situations", "correct": false, "rationale": "Behavioural experiments are typically conducted in real situations." },
+        { "text": "It requires the client to experience maximum anxiety", "correct": false, "rationale": "That is closer to flooding, and is not the point of an experiment." },
+        { "text": "It is performed by the counselor while the client observes", "correct": false, "rationale": "Counselor demonstration may occur but does not define the technique." }
+      ],
+      "explanation": "The specificity is what gives it power: 'If I speak up in the meeting, everyone will notice me shaking and think I'm incompetent' can be tested and disconfirmed, whereas 'meetings are awful' cannot.",
+      "refs": ["statpearls-cbt", "div12-treatments", "nimh-anxiety"]
+    },
+    {
+      "id": "d5-culture-071",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5I",
+      "cacrep": ["social-cultural", "helping-relationships"],
+      "tags": ["family-structure", "culture", "assessment"],
+      "prompt": "A client's household includes grandparents, aunts, and cousins sharing childcare. How should the counselor treat this?",
+      "choices": [
+        { "text": "As the client's family structure, to be understood on its own terms and included in planning as the client wishes", "correct": true, "rationale": "Extended and multigenerational households are normative in many cultures and are a resource, not a deviation." },
+        { "text": "As a boundary problem requiring clarification of the nuclear family unit", "correct": false, "rationale": "Applying a nuclear-family template as the standard is a culturally biased judgement." },
+        { "text": "As evidence of financial hardship requiring intervention", "correct": false, "rationale": "An assumption that may be entirely wrong and reflects an economic reading of a cultural pattern." },
+        { "text": "As irrelevant if the client attends counseling alone", "correct": false, "rationale": "Household structure shapes support, obligation, and what change is feasible." }
+      ],
+      "explanation": "Ask who the client considers family rather than assuming from household composition or biology. Fictive kin — people treated as family without biological or legal ties — are significant in many communities.",
+      "refs": ["msjcc", "samhsa-tip65"]
+    },
+    {
+      "id": "d5-progress-072",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5D",
+      "cacrep": ["helping-relationships"],
+      "tags": ["deterioration", "monitoring", "response"],
+      "prompt": "A client's symptoms worsen measurably over several sessions. What should the counselor do?",
+      "choices": [
+        { "text": "Discuss the deterioration openly with the client, reassess the formulation and safety, and consider consultation or a change of approach", "correct": true, "rationale": "Deterioration requires active response — reassessment, safety review, and consultation — not continuation." },
+        { "text": "Continue the current approach, since worsening often precedes improvement", "correct": false, "rationale": "Temporary increases occur in some treatments such as exposure, but sustained deterioration must not be assumed benign." },
+        { "text": "Reduce session frequency to give the client space", "correct": false, "rationale": "Reducing contact during deterioration is the wrong direction." },
+        { "text": "Attribute the worsening to external stressors and continue unchanged", "correct": false, "rationale": "External stressors may contribute but do not remove the obligation to reassess." }
+      ],
+      "explanation": "A meaningful minority of clients deteriorate during treatment, and clinicians detect it poorly without measurement. This is the strongest practical argument for routine outcome monitoring.",
+      "refs": ["div12-treatments", "aca-ethics", "apa-testing-standards"]
+    },
+    {
+      "id": "d5-referral-073",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5C",
+      "cacrep": ["social-cultural", "helping-relationships"],
+      "tags": ["disability", "accommodation", "practice"],
+      "prompt": "A client with significant hearing loss attends in person. What is the appropriate practice?",
+      "choices": [
+        { "text": "Ask the client what accommodations work best for them and arrange them, rather than assuming what is needed", "correct": true, "rationale": "The client is the authority on their own access needs; assumption frequently produces the wrong accommodation." },
+        { "text": "Speak louder and more slowly throughout the session", "correct": false, "rationale": "Not universally helpful and can be patronizing; some hearing loss is not addressed by volume." },
+        { "text": "Communicate primarily in writing to avoid difficulty", "correct": false, "rationale": "Imposing a mode without asking may be unnecessary and slows the work." },
+        { "text": "Refer the client to a specialist provider", "correct": false, "rationale": "Referring rather than accommodating is a form of discrimination when accommodation is feasible." }
+      ],
+      "explanation": "The general principle across disabilities: ask rather than assume. Access needs are individual, and the client has usually solved this problem many times before.",
+      "refs": ["ada-title-iii", "msjcc", "aca-ethics"]
+    },
+    {
+      "id": "d5-relapse-074",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5M",
+      "cacrep": ["helping-relationships"],
+      "tags": ["coping-cards", "cues", "maintenance"],
+      "prompt": "Why are written coping cards or reminder prompts useful for clients?",
+      "choices": [
+        { "text": "Because access to reasoned alternatives is impaired during high emotional arousal, and an external prompt does not depend on recall in the moment", "correct": true, "rationale": "State-dependent retrieval means clients often cannot generate learned responses when most distressed." },
+        { "text": "Because clients are unlikely to remember the content of sessions", "correct": false, "rationale": "General memory is not the issue; state-dependent access is." },
+        { "text": "Because written material is more authoritative than spoken discussion", "correct": false, "rationale": "Authority is not the mechanism." },
+        { "text": "Because they reduce the number of sessions required", "correct": false, "rationale": "Not the rationale." }
+      ],
+      "explanation": "Cards work best when written in the client's own words during a calm moment, and kept somewhere reachable at the point of need — a phone lock screen or wallet rather than a folder at home.",
+      "refs": ["statpearls-cbt", "behavioraltech-dbt", "sprc"]
+    },
+    {
+      "id": "d5-process-075",
+      "type": "mcq",
+      "domain": "D5",
+      "task": "5AF",
+      "cacrep": ["helping-relationships"],
+      "tags": ["content-process", "distinction"],
+      "prompt": "What is the difference between content and process in a counseling session?",
+      "choices": [
+        { "text": "Content is what is discussed; process is how it is discussed and what occurs between the people involved", "correct": true, "rationale": "The distinction directs attention to interaction and manner, which frequently carry more clinical information than the topic." },
+        { "text": "Content is the client's material and process is the counselor's technique", "correct": false, "rationale": "Process concerns the interaction, not just the counselor's actions." },
+        { "text": "Content is factual information and process is emotional expression", "correct": false, "rationale": "Emotion can be content; process is about the manner and dynamics of communication." },
+        { "text": "Content occurs in session and process occurs between sessions", "correct": false, "rationale": "Both occur within the session." }
+      ],
+      "explanation": "Process comments — 'I notice you laugh whenever you mention your mother' — surface material invisible at the content level. This distinction is central in group work, where process is often the primary therapeutic medium.",
+      "refs": ["statpearls-group-therapy", "samhsa-tip65"]
+    }
+  ]
+}

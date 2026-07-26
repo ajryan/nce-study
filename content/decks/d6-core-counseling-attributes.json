@@ -1,0 +1,660 @@
+{
+  "domain": "D6",
+  "cards": [
+    {
+      "id": "d6-congruence-001",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6C",
+      "cacrep": ["helping-relationships"],
+      "tags": ["congruence", "genuineness", "rogers"],
+      "prompt": "What does congruence require of a counselor?",
+      "choices": [
+        { "text": "That their inner experience, awareness of it, and outward expression are aligned — being genuinely themselves rather than performing a professional role", "correct": true, "rationale": "Congruence is the integration of experiencing, awareness, and communication; it is the condition Rogers considered most fundamental." },
+        { "text": "That they agree with the client's perspective", "correct": false, "rationale": "Congruence concerns the counselor's internal consistency, not agreement with the client." },
+        { "text": "That they disclose all their reactions to the client as they arise", "correct": false, "rationale": "Congruence does not require total transparency; it requires not being false. Disclosure remains governed by therapeutic usefulness." },
+        { "text": "That their theoretical orientation matches their interventions", "correct": false, "rationale": "That is treatment fidelity, a different concept." }
+      ],
+      "explanation": "The distinction that matters clinically: a counselor can be congruent without voicing everything. Congruence rules out pretending — projecting warmth while feeling irritation — rather than requiring constant disclosure.",
+      "refs": ["samhsa-tip65", "div12-treatments"]
+    },
+    {
+      "id": "d6-genuineness-002",
+      "type": "scenario",
+      "domain": "D6",
+      "task": "6B",
+      "cacrep": ["helping-relationships"],
+      "tags": ["genuineness", "incongruence", "alliance"],
+      "prompt": "A counselor feels bored and disengaged with a particular client but continues presenting warmth and interest. What is the likely consequence?",
+      "choices": [
+        { "text": "The client will probably sense the incongruence, and the relationship will feel subtly unsafe or false", "correct": true, "rationale": "Clients are generally sensitive to mismatch between a counselor's expressed and actual state, even when they cannot name it." },
+        { "text": "No consequence, provided the counselor's outward behaviour remains professional", "correct": false, "rationale": "Incongruence tends to be perceived and undermines the relationship regardless of surface behaviour." },
+        { "text": "The client will improve faster due to the counselor's consistent positive regard", "correct": false, "rationale": "Simulated regard is not unconditional positive regard." },
+        { "text": "The boredom will resolve on its own once the client makes progress", "correct": false, "rationale": "Persistent disengagement is a signal requiring attention, not something to wait out." }
+      ],
+      "explanation": "Counselor boredom is clinical information — it may reflect the client's avoidance, an unaddressed rupture, a stalled formulation, or the counselor's own state. Supervision is the appropriate venue for it, not suppression.",
+      "refs": ["samhsa-tip65", "aca-ethics", "statpearls-burnout"]
+    },
+    {
+      "id": "d6-upr-003",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6K",
+      "cacrep": ["helping-relationships"],
+      "tags": ["unconditional-positive-regard", "acceptance"],
+      "prompt": "What does unconditional positive regard mean in practice?",
+      "choices": [
+        { "text": "Accepting and valuing the client as a person without conditions, while still being able to address harmful behaviour", "correct": true, "rationale": "UPR attaches to the person, not to approval of every behaviour — which is what makes challenge possible within it." },
+        { "text": "Approving of everything the client does", "correct": false, "rationale": "Approval of behaviour is not required and would preclude necessary clinical work." },
+        { "text": "Never expressing disagreement with the client", "correct": false, "rationale": "Disagreement is compatible with regard for the person." },
+        { "text": "Withholding all evaluation and remaining entirely neutral", "correct": false, "rationale": "UPR is warm acceptance rather than neutral detachment." }
+      ],
+      "explanation": "Rogers linked this to conditions of worth — the client's learned belief that they are valuable only when meeting others' conditions. UPR is therapeutic precisely because it disconfirms that belief.",
+      "refs": ["samhsa-tip65", "div12-treatments"]
+    },
+    {
+      "id": "d6-empathy-004",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6G",
+      "cacrep": ["helping-relationships"],
+      "tags": ["empathic-attunement", "presence"],
+      "prompt": "What does empathic attunement involve beyond understanding the client's words?",
+      "choices": [
+        { "text": "Sensing the client's emotional state and its shifts moment to moment, including what is felt but not spoken", "correct": true, "rationale": "Attunement tracks affect in real time rather than comprehending content after the fact." },
+        { "text": "Experiencing the same emotions as the client at the same intensity", "correct": false, "rationale": "That is emotional contagion, which impairs rather than aids the counselor's usefulness." },
+        { "text": "Predicting accurately what the client will say next", "correct": false, "rationale": "Prediction is not attunement." },
+        { "text": "Interpreting the client's emotions through a theoretical framework", "correct": false, "rationale": "That is formulation, a cognitive activity distinct from attunement." }
+      ],
+      "explanation": "Rogers's 'as if' quality is the safeguard: sensing the client's world as if it were one's own, without losing that condition. Losing it produces over-identification, which reduces the counselor's capacity to help.",
+      "refs": ["samhsa-tip65", "nice-attachment"]
+    },
+    {
+      "id": "d6-empathy-005",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6H",
+      "cacrep": ["helping-relationships"],
+      "tags": ["empathic-responding", "accuracy"],
+      "prompt": "A counselor offers an empathic reflection and the client says 'no, that's not quite it'. What is the best response?",
+      "choices": [
+        { "text": "Accept the correction readily and invite the client to describe it more accurately", "correct": true, "rationale": "Being corrected is part of the process; the willingness to be corrected communicates that the client is the authority on their own experience." },
+        { "text": "Explain the reasoning behind the reflection to help the client see it", "correct": false, "rationale": "Defending a reflection makes the counselor's accuracy the priority over the client's experience." },
+        { "text": "Note the disagreement as possible resistance to insight", "correct": false, "rationale": "Interpreting a correction as resistance is a serious misuse of the concept." },
+        { "text": "Avoid further reflections with this client", "correct": false, "rationale": "Withdrawal over-corrects; inaccurate reflections that get corrected still advance understanding." }
+      ],
+      "explanation": "An inaccurate reflection followed by graceful correction is often more valuable than an accurate one, because it demonstrates that the client can disagree safely and that their view governs.",
+      "refs": ["samhsa-tip65", "samhsa-tip35"]
+    },
+    {
+      "id": "d6-selfawareness-006",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6A",
+      "cacrep": ["professional-ethics", "helping-relationships"],
+      "tags": ["self-awareness", "impact", "blind-spots"],
+      "prompt": "Why is counselor self-awareness treated as a core professional attribute rather than a personal virtue?",
+      "choices": [
+        { "text": "Because unexamined reactions, values, and biases directly shape what a counselor notices, avoids, and does with clients", "correct": true, "rationale": "Self-awareness has direct clinical consequences, which is why it is an ethical and professional expectation." },
+        { "text": "Because self-aware counselors experience less job stress", "correct": false, "rationale": "A possible benefit, but not the professional rationale." },
+        { "text": "Because licensing examinations assess personal insight", "correct": false, "rationale": "Not the reason it is a core attribute." },
+        { "text": "Because clients expect counselors to have resolved their own difficulties", "correct": false, "rationale": "Counselors are not required to be free of difficulty, only aware of how their own material operates in the room." }
+      ],
+      "explanation": "The MSJCC place counselor self-awareness first among the four domains for exactly this reason: a counselor unaware of their own assumptions cannot accurately perceive a client's worldview.",
+      "refs": ["msjcc", "aca-ethics"]
+    },
+    {
+      "id": "d6-selfawareness-007",
+      "type": "recall",
+      "domain": "D6",
+      "task": "6A",
+      "cacrep": ["professional-ethics"],
+      "tags": ["self-awareness", "supervision", "development"],
+      "prompt": "What are the main avenues through which counselors develop and maintain self-awareness?",
+      "answer": "Clinical supervision and consultation; personal counseling or therapy; reflective practice such as journalling and case review; feedback from colleagues and clients; deliberate examination of one's cultural identities, privileges, and biases; attention to one's own emotional reactions in sessions; and continuing education addressing values and worldview.",
+      "explanation": "Personal therapy is not universally required in counselor training but is widely encouraged, on the reasoning that a counselor's unresolved material is most likely to intrude precisely where they cannot see it.",
+      "refs": ["aca-ethics", "msjcc", "statpearls-burnout"]
+    },
+    {
+      "id": "d6-bias-008",
+      "type": "scenario",
+      "domain": "D6",
+      "task": "6A",
+      "cacrep": ["social-cultural", "professional-ethics"],
+      "tags": ["bias", "self-awareness", "supervision"],
+      "prompt": "A counselor notices they consistently feel impatient with clients who remain in relationships the counselor considers unhealthy. What should they do?",
+      "choices": [
+        { "text": "Bring the pattern to supervision, examine its personal sources, and monitor how it affects their work with those clients", "correct": true, "rationale": "Recognizing a consistent reaction is the beginning; supervision is where its sources and clinical effects get examined." },
+        { "text": "Refer all such clients to other counselors", "correct": false, "rationale": "Wholesale referral avoids professional development and may deny clients access." },
+        { "text": "Suppress the reaction and continue as normal", "correct": false, "rationale": "Suppressed reactions leak into behaviour and remain unexamined." },
+        { "text": "Disclose the impatience to clients so they understand the counselor's position", "correct": false, "rationale": "This burdens clients with the counselor's material and is likely to feel judgemental." }
+      ],
+      "explanation": "The clinical risk here is concrete: impatience of this kind tends to produce subtly directive interventions toward leaving, which is both a values imposition and, where partner violence is present, potentially dangerous.",
+      "refs": ["aca-ethics", "msjcc", "cdc-ipv"]
+    },
+    {
+      "id": "d6-nonjudgment-009",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6J",
+      "cacrep": ["helping-relationships"],
+      "tags": ["non-judgmental", "stance", "disclosure"],
+      "prompt": "A client discloses behaviour the counselor finds morally troubling. What does a non-judgemental stance require?",
+      "choices": [
+        { "text": "Maintaining regard for the client and curiosity about their experience, while managing one's own reaction internally and in supervision", "correct": true, "rationale": "Non-judgement concerns the counselor's stance toward the person; it does not require having no reaction, only not imposing it." },
+        { "text": "Having no personal reaction to the disclosure", "correct": false, "rationale": "Counselors have reactions; the requirement is awareness and management, not absence." },
+        { "text": "Communicating approval of the behaviour to preserve the alliance", "correct": false, "rationale": "Approval is not required and would be incongruent." },
+        { "text": "Avoiding any exploration of the behaviour to prevent seeming judgemental", "correct": false, "rationale": "Avoidance is itself a communication and forgoes clinically important material." }
+      ],
+      "explanation": "The functional test is whether the client feels able to keep disclosing. A visible flinch or a change of subject teaches the client what is unspeakable here, which narrows the work permanently.",
+      "refs": ["aca-ethics", "samhsa-tip65", "samhsa-tip35"]
+    },
+    {
+      "id": "d6-diversity-010",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6L",
+      "cacrep": ["social-cultural"],
+      "tags": ["respect", "diversity", "acceptance"],
+      "prompt": "What best demonstrates genuine respect for client diversity?",
+      "choices": [
+        { "text": "Treating the client as the authority on their own cultural experience while taking responsibility for one's own learning", "correct": true, "rationale": "This combines cultural humility with the counselor's obligation not to make the client their teacher on everything." },
+        { "text": "Learning comprehensive facts about the client's cultural group before the first session", "correct": false, "rationale": "Group-level knowledge risks stereotyping and cannot substitute for the individual client's account." },
+        { "text": "Asking the client to explain all aspects of their culture", "correct": false, "rationale": "Placing the full educational burden on the client is itself a failure of responsibility." },
+        { "text": "Treating cultural background as irrelevant to the counseling process", "correct": false, "rationale": "That is colorblind practice, a documented harm." }
+      ],
+      "explanation": "The balance is the point: general cultural knowledge orients the counselor and prevents naive errors, while the individual client determines how much any of it applies to them.",
+      "refs": ["msjcc", "aca-ethics"]
+    },
+    {
+      "id": "d6-gender-011",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6D",
+      "cacrep": ["social-cultural"],
+      "tags": ["gender", "pronouns", "affirmative"],
+      "prompt": "What is appropriate practice regarding a client's name and pronouns?",
+      "choices": [
+        { "text": "Ask, use what the client provides, correct oneself briefly if a mistake occurs, and record their chosen name alongside any legal name required for billing", "correct": true, "rationale": "Asking rather than assuming, and handling errors without excessive apology, is the professional standard." },
+        { "text": "Use only the legal name on record to ensure documentation accuracy", "correct": false, "rationale": "Records can accommodate both; using only the legal name disregards the client's identity." },
+        { "text": "Wait for the client to correct the counselor if an assumption is wrong", "correct": false, "rationale": "Placing the correction burden on the client is avoidable by simply asking." },
+        { "text": "Apologize at length after any mistake to demonstrate sincerity", "correct": false, "rationale": "Extended apology shifts the burden to the client to reassure the counselor." }
+      ],
+      "explanation": "The brief-correction norm matters: 'she — sorry, he — described...' and continue. Prolonged apology makes the moment about the counselor's discomfort rather than the client's experience.",
+      "refs": ["msjcc", "aca-ethics"]
+    },
+    {
+      "id": "d6-gender-012",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6D",
+      "cacrep": ["social-cultural"],
+      "tags": ["gender-issues", "socialization", "awareness"],
+      "prompt": "How might gender socialization affect what clients bring to counseling?",
+      "choices": [
+        { "text": "It can shape which emotions feel permissible to express, help-seeking willingness, and how distress is communicated", "correct": true, "rationale": "Gender socialization influences emotional expression norms and help-seeking, which affects presentation and engagement." },
+        { "text": "It has no meaningful effect once a client has entered counseling", "correct": false, "rationale": "Socialization operates within the counseling relationship as much as outside it." },
+        { "text": "It affects only clients from traditional cultural backgrounds", "correct": false, "rationale": "Gender socialization operates across all cultural contexts." },
+        { "text": "It determines which diagnoses a client will receive", "correct": false, "rationale": "Diagnostic disparities exist, but socialization shapes presentation rather than determining diagnosis." }
+      ],
+      "explanation": "A frequently cited example: men socialized against expressing vulnerability may present depression as irritability, anger, or somatic complaint, contributing to under-recognition and under-treatment.",
+      "refs": ["msjcc", "nimh-depression"]
+    },
+    {
+      "id": "d6-multicultural-013",
+      "type": "cloze",
+      "domain": "D6",
+      "task": "6E",
+      "cacrep": ["social-cultural"],
+      "tags": ["cultural-encapsulation", "bias"],
+      "prompt": "The tendency to define reality according to one's own cultural assumptions, disregard cultural variation, and judge others by one's own norms is called cultural {{encapsulation}}.",
+      "answer": "encapsulation",
+      "explanation": "Wrenn's term names the default condition counselors must actively work against — it is not an unusual failing but the natural result of unexamined immersion in one's own culture.",
+      "refs": ["msjcc"]
+    },
+    {
+      "id": "d6-conflict-014",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6F",
+      "cacrep": ["helping-relationships"],
+      "tags": ["conflict-tolerance", "counselor-attribute"],
+      "prompt": "Why is tolerance for conflict considered a core counselor attribute?",
+      "choices": [
+        { "text": "Because a counselor uncomfortable with conflict will steer clients away from necessary confrontation, difficult feelings, and productive rupture", "correct": true, "rationale": "Counselor avoidance of conflict systematically narrows what the work can address." },
+        { "text": "Because counseling frequently involves arguments between counselor and client", "correct": false, "rationale": "Overt argument is not the typical form conflict takes in counseling." },
+        { "text": "Because conflict tolerance predicts counselor career longevity", "correct": false, "rationale": "Not the clinical rationale." },
+        { "text": "Because clients respect counselors who can win disagreements", "correct": false, "rationale": "Winning disagreements is not a therapeutic goal." }
+      ],
+      "explanation": "This shows up most visibly in group and couples work, where a leader who cannot tolerate conflict smooths over the storming stage or the couple's real disagreements — and the work stays superficial.",
+      "refs": ["statpearls-group-therapy", "samhsa-tip65"]
+    },
+    {
+      "id": "d6-groupfactors-015",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6I",
+      "cacrep": ["group-work"],
+      "tags": ["therapeutic-factors", "leader-role"],
+      "prompt": "How does a group leader foster the emergence of therapeutic factors rather than producing them directly?",
+      "choices": [
+        { "text": "By establishing norms, modelling desired behaviour, linking members, and creating conditions in which members help one another", "correct": true, "rationale": "The therapeutic factors arise between members; the leader's role is to create the conditions for them." },
+        { "text": "By providing the majority of interpretations and interventions personally", "correct": false, "rationale": "Leader-centred groups suppress the member-to-member interaction that produces the factors." },
+        { "text": "By directing each member in turn to disclose their difficulties", "correct": false, "rationale": "Turn-taking disclosure produces serial individual therapy rather than group process." },
+        { "text": "By minimizing member interaction to maintain control", "correct": false, "rationale": "This eliminates the mechanism of group work." }
+      ],
+      "explanation": "The developmental arc is that the leader is most active early — setting norms and building safety — and progressively less directive as the group takes over its own work. A group still dependent on the leader in later stages has usually not been given room.",
+      "refs": ["statpearls-group-therapy"]
+    },
+    {
+      "id": "d6-listening-016",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6M",
+      "cacrep": ["helping-relationships"],
+      "tags": ["active-listening", "attending", "foundational"],
+      "prompt": "What distinguishes active listening from ordinary attentive listening?",
+      "choices": [
+        { "text": "The listener actively demonstrates understanding through reflection, paraphrase, and clarification, and checks accuracy rather than assuming it", "correct": true, "rationale": "Active listening makes understanding visible and verifiable rather than internal." },
+        { "text": "The listener remains completely silent to avoid interrupting", "correct": false, "rationale": "Silence alone does not demonstrate or verify understanding." },
+        { "text": "The listener takes detailed written notes throughout", "correct": false, "rationale": "Note-taking can impede presence and is not what defines active listening." },
+        { "text": "The listener asks a question after every statement", "correct": false, "rationale": "Continuous questioning is interrogation and shifts control to the counselor." }
+      ],
+      "explanation": "The verification element is the key: a counselor who understands perfectly but never demonstrates it leaves the client uncertain of being understood, which is much of the therapeutic effect.",
+      "refs": ["samhsa-tip65", "samhsa-tip35"]
+    },
+    {
+      "id": "d6-listening-017",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6M",
+      "cacrep": ["helping-relationships"],
+      "tags": ["barriers", "listening", "errors"],
+      "prompt": "Which counselor behaviour most commonly interferes with effective listening?",
+      "choices": [
+        { "text": "Mentally formulating the next response while the client is still speaking", "correct": true, "rationale": "Internal rehearsal diverts attention from what is actually being said and is the most common listening failure." },
+        { "text": "Allowing brief pauses before responding", "correct": false, "rationale": "Pauses support listening rather than impede it." },
+        { "text": "Occasionally asking for clarification", "correct": false, "rationale": "Clarification is part of active listening." },
+        { "text": "Reflecting the client's feelings back to them", "correct": false, "rationale": "A core listening skill." }
+      ],
+      "explanation": "Novice counselors commonly report the anxiety of not knowing what to say next, which drives exactly this behaviour. Tolerating a pause before responding is both a skill and a form of anxiety management.",
+      "refs": ["samhsa-tip65"]
+    },
+    {
+      "id": "d6-presence-018",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6A",
+      "cacrep": ["helping-relationships"],
+      "tags": ["presence", "attention", "quality"],
+      "prompt": "What is therapeutic presence?",
+      "choices": [
+        { "text": "Being fully attentive and available in the moment with the client, physically, emotionally, and cognitively", "correct": true, "rationale": "Presence is undivided availability, which clients consistently identify as a marker of good counseling." },
+        { "text": "Physically attending every scheduled session", "correct": false, "rationale": "Attendance is necessary but not what presence describes." },
+        { "text": "Maintaining continuous eye contact throughout the session", "correct": false, "rationale": "Sustained eye contact is not universally appropriate and is not the construct." },
+        { "text": "Remembering all details of the client's history", "correct": false, "rationale": "Recall is useful but distinct from present-moment availability." }
+      ],
+      "explanation": "Presence is what fatigue, distraction, and burnout erode first, and clients notice it before the counselor does. This is a direct clinical argument for self-care rather than a wellness aside.",
+      "refs": ["statpearls-burnout", "samhsa-tip65", "aca-ethics"]
+    },
+    {
+      "id": "d6-humility-019",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6L",
+      "cacrep": ["social-cultural"],
+      "tags": ["cultural-humility", "attribute", "lifelong"],
+      "prompt": "Which counselor stance best reflects cultural humility?",
+      "choices": [
+        { "text": "'I may misunderstand something about your experience — please tell me if I do.'", "correct": true, "rationale": "It acknowledges limitation, invites correction, and positions the client as the authority." },
+        { "text": "'I've worked with many clients from your background, so I understand your situation.'", "correct": false, "rationale": "Claiming understanding based on group membership is precisely the assumption humility guards against." },
+        { "text": "'I don't really see cultural differences between my clients.'", "correct": false, "rationale": "A colorblind stance, which is invalidating." },
+        { "text": "'Tell me everything about your culture so I can understand.'", "correct": false, "rationale": "Places the full educational burden on the client." }
+      ],
+      "explanation": "Cultural humility involves lifelong self-reflection, redressing power imbalance, and institutional accountability. It reframes the goal from a competence one attains to a stance one maintains.",
+      "refs": ["msjcc", "aca-ethics"]
+    },
+    {
+      "id": "d6-patience-020",
+      "type": "scenario",
+      "domain": "D6",
+      "task": "6A",
+      "cacrep": ["helping-relationships"],
+      "tags": ["pacing", "counselor-needs", "patience"],
+      "prompt": "A counselor feels frustrated that a client is not progressing as quickly as expected. What is the most useful first step?",
+      "choices": [
+        { "text": "Examine whose expectations and timeline are driving the frustration, and reassess the formulation and goals with the client", "correct": true, "rationale": "Frustration about pace usually signals counselor expectations rather than client failure, and may indicate a formulation that needs revision." },
+        { "text": "Communicate the concern to the client to increase their motivation", "correct": false, "rationale": "Conveying disappointment tends to induce shame and reduce disclosure." },
+        { "text": "Increase the intensity of interventions to accelerate change", "correct": false, "rationale": "Escalating without reassessment risks overwhelming the client." },
+        { "text": "Prepare to terminate, since the client is not benefiting", "correct": false, "rationale": "Premature; reassessment and consultation come first." }
+      ],
+      "explanation": "Two possibilities deserve equal weight: the counselor's timeline may be unrealistic, or the treatment may genuinely not be working. Both require reassessment rather than pressure on the client.",
+      "refs": ["aca-ethics", "div12-treatments", "samhsa-tip35"]
+    },
+    {
+      "id": "d6-power-021",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6A",
+      "cacrep": ["professional-ethics", "social-cultural"],
+      "tags": ["power", "differential", "awareness"],
+      "prompt": "Why must counselors remain aware of the power differential in the counseling relationship?",
+      "choices": [
+        { "text": "Because it affects the client's ability to disagree, refuse, or set boundaries, and creates potential for exploitation even without intent", "correct": true, "rationale": "The differential is structural, and unawareness of it is what makes exploitation and subtle coercion possible." },
+        { "text": "Because clients should be reminded of the counselor's expertise", "correct": false, "rationale": "The concern is mitigating the differential, not asserting it." },
+        { "text": "Because power differentials disappear once rapport is established", "correct": false, "rationale": "Rapport does not eliminate the structural asymmetry." },
+        { "text": "Because it only matters in involuntary or mandated treatment", "correct": false, "rationale": "It is present in all counseling relationships, though heightened under mandate." }
+      ],
+      "explanation": "It is intensified by intersecting social identities and by the client's vulnerability at the point of seeking help. This awareness underlies the rules on multiple relationships, boundaries, and the five-year post-termination standard.",
+      "refs": ["aca-ethics", "msjcc", "nbcc-ethics"]
+    },
+    {
+      "id": "d6-boundaries-022",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6A",
+      "cacrep": ["professional-ethics"],
+      "tags": ["boundary-crossing", "violation", "distinction"],
+      "prompt": "What distinguishes a boundary crossing from a boundary violation?",
+      "choices": [
+        { "text": "A crossing is a departure from usual practice that may be benign or even helpful; a violation is exploitative or harmful to the client", "correct": true, "rationale": "The distinction turns on harm and exploitation, not merely on departure from convention." },
+        { "text": "A crossing is accidental and a violation is deliberate", "correct": false, "rationale": "Intent is not the distinguishing factor; harm is." },
+        { "text": "A crossing involves physical contact and a violation involves sexual contact", "correct": false, "rationale": "Neither category is defined by physical contact." },
+        { "text": "They are interchangeable terms", "correct": false, "rationale": "The distinction is standard and consequential." }
+      ],
+      "explanation": "Attending a client's graduation may be a helpful crossing in one case and a harmful one in another; the assessment depends on the client, the context, and the counselor's motivation. Documented consultation is the standard safeguard.",
+      "refs": ["aca-ethics", "nbcc-ethics"]
+    },
+    {
+      "id": "d6-humor-023",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6B",
+      "cacrep": ["helping-relationships"],
+      "tags": ["humor", "genuineness", "technique"],
+      "prompt": "When is humour appropriate in counseling?",
+      "choices": [
+        { "text": "When it arises genuinely, is shared with rather than directed at the client, and fits the client's state and the relationship", "correct": true, "rationale": "Genuine, well-timed humour can strengthen the alliance and provide perspective; direction and timing are what matter." },
+        { "text": "Never, since counseling addresses serious matters", "correct": false, "rationale": "Blanket prohibition eliminates a genuine relational resource." },
+        { "text": "Whenever a session becomes emotionally heavy, to provide relief", "correct": false, "rationale": "Using humour to relieve the counselor's discomfort deflects from important material." },
+        { "text": "As a standard technique to build rapport in early sessions", "correct": false, "rationale": "Deployed as technique rather than arising naturally, it tends to feel forced." }
+      ],
+      "explanation": "The diagnostic question is whose discomfort the humour serves. Humour that punctures a client's distress at the moment they finally reached it is a deflection, however warmly intended.",
+      "refs": ["samhsa-tip65", "statpearls-defense-mechanisms"]
+    },
+    {
+      "id": "d6-selfcare-024",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6A",
+      "cacrep": ["professional-ethics"],
+      "tags": ["self-care", "sustainability", "ethics"],
+      "prompt": "Why is counselor self-care framed as an ethical obligation rather than a personal choice?",
+      "choices": [
+        { "text": "Because impairment from burnout, vicarious trauma, or personal distress directly compromises client care", "correct": true, "rationale": "The obligation follows from client welfare: a depleted counselor cannot provide competent care." },
+        { "text": "Because agencies require documented wellness activities", "correct": false, "rationale": "Institutional requirements are not the ethical basis." },
+        { "text": "Because self-care improves the counselor's personal satisfaction", "correct": false, "rationale": "True but not the professional rationale." },
+        { "text": "Because clients model their own self-care on the counselor's", "correct": false, "rationale": "Not the basis of the obligation." }
+      ],
+      "explanation": "The codes pair self-monitoring with the duty to limit, suspend, or terminate professional duties when impaired. Self-care is the preventive side of that same obligation.",
+      "refs": ["aca-ethics", "statpearls-burnout", "nbcc-ethics"]
+    },
+    {
+      "id": "d6-selfcare-025",
+      "type": "recall",
+      "domain": "D6",
+      "task": "6A",
+      "cacrep": ["professional-ethics"],
+      "tags": ["burnout", "warning-signs", "monitoring"],
+      "prompt": "What warning signs suggest a counselor may be approaching burnout or impairment?",
+      "answer": "Emotional exhaustion and dread before sessions; cynicism or depersonalization toward clients; reduced sense of accomplishment; declining empathy or increased irritability; boundary slippage such as running late or skipping documentation; intrusive thoughts about client material; sleep disturbance; increased substance use; social withdrawal; and loss of meaning in the work.",
+      "explanation": "Depersonalization — beginning to think of clients as cases or problems rather than people — is a particularly reliable and early indicator, and one counselors often notice in their own language before anywhere else.",
+      "refs": ["statpearls-burnout", "aca-ethics", "samhsa-tip57"]
+    },
+    {
+      "id": "d6-attitude-026",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6J",
+      "cacrep": ["helping-relationships"],
+      "tags": ["hope", "attitude", "expectancy"],
+      "prompt": "How does a counselor's belief about a client's capacity for change affect outcome?",
+      "choices": [
+        { "text": "It shapes the counselor's behaviour and the client's expectancy, and is associated with actual outcome differences", "correct": true, "rationale": "Counselor expectancy is communicated behaviourally and contributes to the client's own hope, which is an established common factor." },
+        { "text": "It has no effect provided the counselor applies techniques correctly", "correct": false, "rationale": "Technique is not independent of the relational context in which it is delivered." },
+        { "text": "It matters only for clients who ask about their prognosis", "correct": false, "rationale": "Expectancy is communicated implicitly regardless of explicit discussion." },
+        { "text": "Optimism is harmful because it produces unrealistic expectations", "correct": false, "rationale": "The relevant quality is realistic hope, not false optimism." }
+      ],
+      "explanation": "This connects to the therapist effects literature: counselors differ consistently in outcomes, and attitudes toward difficult clients are one plausible contributor. Clients with stigmatized presentations are most affected by low counselor expectancy.",
+      "refs": ["div12-treatments", "statpearls-group-therapy", "msjcc"]
+    },
+    {
+      "id": "d6-flexibility-027",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6A",
+      "cacrep": ["helping-relationships"],
+      "tags": ["flexibility", "adaptability", "attribute"],
+      "prompt": "Why is flexibility considered a core counselor attribute?",
+      "choices": [
+        { "text": "Because clients differ substantially, and rigid application of one approach regardless of response produces poorer outcomes", "correct": true, "rationale": "Appropriate responsiveness — adjusting to the individual client — is associated with better outcomes than uniform delivery." },
+        { "text": "Because counselors should change approach whenever a client expresses discomfort", "correct": false, "rationale": "Discomfort is sometimes part of productive work; flexibility is not the absence of challenge." },
+        { "text": "Because flexible counselors need less training in specific models", "correct": false, "rationale": "Flexibility presupposes competence in what is being flexed." },
+        { "text": "Because agencies require counselors to work across multiple modalities", "correct": false, "rationale": "An administrative reality rather than the clinical rationale." }
+      ],
+      "explanation": "Flexibility without a framework becomes incoherent improvisation, which the profession criticizes as syncretism. The competence is holding a coherent formulation while adapting how it is delivered.",
+      "refs": ["div12-treatments", "samhsa-tip65", "cacrep-standards"]
+    },
+    {
+      "id": "d6-trust-028",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6K",
+      "cacrep": ["helping-relationships"],
+      "tags": ["trustworthiness", "reliability", "fidelity"],
+      "prompt": "What most establishes a counselor's trustworthiness with clients?",
+      "choices": [
+        { "text": "Consistency between what is said and what is done — keeping appointments, honouring stated limits, and following through on commitments", "correct": true, "rationale": "Trust accrues from demonstrated reliability rather than from assurances." },
+        { "text": "Extensive credentials displayed in the office", "correct": false, "rationale": "Credentials establish qualification, not relational trust." },
+        { "text": "Assuring the client early that they can be trusted", "correct": false, "rationale": "Declaring trustworthiness does not create it." },
+        { "text": "Sharing personal information to demonstrate openness", "correct": false, "rationale": "Disclosure does not establish reliability and may shift focus to the counselor." }
+      ],
+      "explanation": "Fidelity — honouring commitments — is one of the core moral principles for exactly this reason. For clients whose histories involve unreliable caregiving, demonstrated consistency may be the most therapeutic feature of the relationship.",
+      "refs": ["aca-ethics", "nice-attachment", "samhsa-tip57"]
+    },
+    {
+      "id": "d6-mistakes-029",
+      "type": "scenario",
+      "domain": "D6",
+      "task": "6B",
+      "cacrep": ["helping-relationships"],
+      "tags": ["mistakes", "repair", "modeling"],
+      "prompt": "A counselor realizes mid-session that they forgot a significant detail the client shared last week. What is the best response?",
+      "choices": [
+        { "text": "Acknowledge it simply, apologize briefly, and ask the client to remind them — then continue", "correct": true, "rationale": "Straightforward acknowledgement models non-defensive error handling and is generally experienced as human rather than incompetent." },
+        { "text": "Conceal the lapse and infer the detail from context", "correct": false, "rationale": "Concealment risks compounding the error and being detected, which damages trust more." },
+        { "text": "Apologize at length and explain the circumstances", "correct": false, "rationale": "Extended apology makes the moment about the counselor and burdens the client with reassuring them." },
+        { "text": "Attribute the lapse to the volume of the counselor's caseload", "correct": false, "rationale": "Explaining via caseload signals to the client that they are one of many." }
+      ],
+      "explanation": "How a counselor handles their own mistakes is one of the most powerful things they model. Many clients have never seen someone acknowledge an error without either collapsing into shame or becoming defensive.",
+      "refs": ["samhsa-tip65", "aca-ethics"]
+    },
+    {
+      "id": "d6-warmth-030",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6K",
+      "cacrep": ["helping-relationships"],
+      "tags": ["warmth", "nonpossessive", "regard"],
+      "prompt": "What does 'nonpossessive warmth' mean?",
+      "choices": [
+        { "text": "Caring about the client's wellbeing without needing them to change, improve, or respond in particular ways for the counselor's sake", "correct": true, "rationale": "The 'nonpossessive' qualifier rules out warmth contingent on the client meeting the counselor's needs." },
+        { "text": "Maintaining emotional distance to preserve objectivity", "correct": false, "rationale": "Warmth is not distance; the qualifier concerns conditionality." },
+        { "text": "Expressing affection openly and frequently", "correct": false, "rationale": "Intensity of expression is not the construct." },
+        { "text": "Caring equally about all clients regardless of presentation", "correct": false, "rationale": "Not the meaning; counselors will have differing responses, which is a matter for self-awareness." }
+      ],
+      "explanation": "The practical test is whether the counselor's warmth wavers when a client relapses, refuses a suggestion, or fails to progress. Warmth that is contingent on the client's cooperation is possessive.",
+      "refs": ["samhsa-tip65", "div12-treatments"]
+    },
+    {
+      "id": "d6-tolerance-031",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6F",
+      "cacrep": ["helping-relationships"],
+      "tags": ["ambiguity", "uncertainty", "attribute"],
+      "prompt": "Why is tolerance of ambiguity important for counselors?",
+      "choices": [
+        { "text": "Because clinical work involves incomplete information, uncertain diagnoses, and unresolved situations that cannot be forced to closure", "correct": true, "rationale": "Premature closure — settling on an explanation to relieve uncertainty — is a documented source of clinical error." },
+        { "text": "Because counselors should avoid making any clinical judgements", "correct": false, "rationale": "Judgements are required; the point is holding them provisionally." },
+        { "text": "Because ambiguity protects against liability", "correct": false, "rationale": "Not a clinical rationale." },
+        { "text": "Because clients prefer counselors who avoid giving direct answers", "correct": false, "rationale": "Not the reason, and not generally true." }
+      ],
+      "explanation": "The specific risk is diagnostic premature closure: fixing on an early formulation and then interpreting subsequent information to fit it. Holding a formulation as a working hypothesis is the corrective.",
+      "refs": ["dsm5tr", "aca-ethics", "samhsa-tip65"]
+    },
+    {
+      "id": "d6-selfefficacy-032",
+      "type": "cloze",
+      "domain": "D6",
+      "task": "6A",
+      "cacrep": ["professional-ethics"],
+      "tags": ["reflective-practice", "development"],
+      "prompt": "The deliberate practice of examining one's own clinical decisions, reactions, and assumptions in order to learn from them is called {{reflective practice}}.",
+      "answer": "reflective practice",
+      "explanation": "Schön distinguished reflection-in-action, occurring during the session, from reflection-on-action, occurring afterwards. Both are needed: the first enables real-time adjustment, the second enables development.",
+      "refs": ["aca-ethics", "cacrep-standards", "msjcc"]
+    },
+    {
+      "id": "d6-emotional-033",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6G",
+      "cacrep": ["helping-relationships"],
+      "tags": ["emotional-regulation", "counselor", "containment"],
+      "prompt": "Why must counselors be able to regulate their own emotional responses in session?",
+      "choices": [
+        { "text": "Because a dysregulated counselor cannot provide containment, and clients often calibrate their own safety by the counselor's steadiness", "correct": true, "rationale": "The counselor's regulation is the basis for the client's capacity to approach difficult material." },
+        { "text": "Because counselors should not experience emotional responses to clients", "correct": false, "rationale": "Responses are inevitable and informative; the requirement is regulation, not absence." },
+        { "text": "Because expressing emotion is unprofessional", "correct": false, "rationale": "Appropriate emotional expression can be therapeutic and congruent." },
+        { "text": "Because clients will otherwise take responsibility for the counselor's feelings", "correct": false, "rationale": "A real risk, but the primary rationale is containment." }
+      ],
+      "explanation": "Co-regulation is the mechanism: a client disclosing something they consider unspeakable is watching for the counselor's reaction. Visible alarm confirms that the material is too much, and the disclosure typically stops there.",
+      "refs": ["samhsa-tip57", "nice-attachment", "behavioraltech-dbt"]
+    },
+    {
+      "id": "d6-advocacy-034",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6L",
+      "cacrep": ["social-cultural"],
+      "tags": ["allyship", "privilege", "awareness"],
+      "prompt": "What does examining one's own privilege contribute to counseling competence?",
+      "choices": [
+        { "text": "It reveals assumptions the counselor may treat as universal, and clarifies experiences of oppression they have not had", "correct": true, "rationale": "Unexamined privilege renders one's own experience invisible as a particular standpoint rather than the default." },
+        { "text": "It allows the counselor to apologize to clients for systemic injustice", "correct": false, "rationale": "Apologizing on behalf of systems is not the clinical purpose and can burden the client." },
+        { "text": "It is primarily relevant for counselors working in social justice settings", "correct": false, "rationale": "It is relevant across all counseling contexts." },
+        { "text": "It establishes the counselor's credibility with marginalized clients", "correct": false, "rationale": "Credibility follows from competent, respectful practice rather than from declared awareness." }
+      ],
+      "explanation": "The MSJCC frame this as examining both privileged and marginalized statuses in counselor and client, and the interaction between them. Everyone holds some of each, which makes this an analytic tool rather than a moral scorecard.",
+      "refs": ["msjcc", "aca-ethics"]
+    },
+    {
+      "id": "d6-curiosity-035",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6J",
+      "cacrep": ["helping-relationships"],
+      "tags": ["curiosity", "not-knowing", "stance"],
+      "prompt": "What does a 'not-knowing' stance mean in counseling?",
+      "choices": [
+        { "text": "Approaching each client with genuine curiosity rather than assuming their experience is already understood from theory or prior cases", "correct": true, "rationale": "The not-knowing stance treats the client as the expert on their own experience and resists premature categorization." },
+        { "text": "Withholding clinical expertise from the client", "correct": false, "rationale": "Expertise is retained; what is suspended is the assumption of already understanding this person." },
+        { "text": "Declining to form any clinical impressions", "correct": false, "rationale": "Impressions are necessary; they are held provisionally." },
+        { "text": "Telling clients the counselor does not know how to help them", "correct": false, "rationale": "Not the meaning of the term." }
+      ],
+      "explanation": "The stance comes from postmodern and narrative approaches and pairs naturally with cultural humility. Its practical marker is asking about meaning rather than assuming it — 'what was that like for you?' rather than 'that must have been devastating'.",
+      "refs": ["samhsa-tip65", "msjcc"]
+    },
+    {
+      "id": "d6-values-036",
+      "type": "scenario",
+      "domain": "D6",
+      "task": "6E",
+      "cacrep": ["social-cultural", "professional-ethics"],
+      "tags": ["values", "religion", "counselor-client"],
+      "prompt": "A deeply religious counselor works with a client considering abortion. What does professional practice require?",
+      "choices": [
+        { "text": "Bracketing personal values, supporting the client's own decision-making process, and seeking supervision to manage the internal conflict", "correct": true, "rationale": "Bracketing plus supervision is the required approach; the client's autonomy over their own decision is not conditional on the counselor's agreement." },
+        { "text": "Disclosing the counselor's religious position so the client can make an informed choice about continuing", "correct": false, "rationale": "This introduces pressure and shifts focus to the counselor's beliefs." },
+        { "text": "Referring the client to another counselor because of the values conflict", "correct": false, "rationale": "Value-based referral is prohibited; referral requires a competence deficit, not disagreement." },
+        { "text": "Gently exploring whether the client has considered the moral dimensions the counselor finds significant", "correct": false, "rationale": "This is steering under the guise of exploration." }
+      ],
+      "explanation": "Counselors are not required to abandon their values — they are required not to impose them. Where the conflict is genuinely unmanageable, the response is supervision and professional development, not withdrawing from the client.",
+      "refs": ["aca-ethics", "msjcc", "nbcc-ethics"]
+    },
+    {
+      "id": "d6-identity-037",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6A",
+      "cacrep": ["professional-ethics"],
+      "tags": ["professional-identity", "counseling"],
+      "prompt": "What most distinguishes the counseling profession's identity from adjacent mental health professions?",
+      "choices": [
+        { "text": "Its emphasis on wellness, development across the lifespan, prevention, and empowerment alongside remediation of disorder", "correct": true, "rationale": "The developmental, wellness, and prevention orientation is the profession's defining identity claim." },
+        { "text": "Exclusive authority to diagnose mental disorders", "correct": false, "rationale": "Diagnostic authority is shared with other licensed professions." },
+        { "text": "A prohibition on using medical terminology", "correct": false, "rationale": "No such prohibition exists." },
+        { "text": "Restriction to short-term interventions", "correct": false, "rationale": "Counselors provide both short- and long-term treatment." }
+      ],
+      "explanation": "This matters for exam reasoning: when options are otherwise comparable, the answer consistent with a developmental, strengths-based, contextual view of the client is usually the intended one.",
+      "refs": ["cacrep-standards", "aca-ethics", "nbcc-nce-page"]
+    },
+    {
+      "id": "d6-attunement-038",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6G",
+      "cacrep": ["helping-relationships"],
+      "tags": ["overidentification", "boundaries", "empathy"],
+      "prompt": "A counselor who has experienced a similar loss finds themselves assuming they know exactly how a bereaved client feels. What is the risk?",
+      "choices": [
+        { "text": "Over-identification — projecting the counselor's own experience onto the client and missing how theirs actually differs", "correct": true, "rationale": "Shared experience can produce assumed understanding, which substitutes the counselor's meaning for the client's." },
+        { "text": "There is no risk; shared experience always enhances empathy", "correct": false, "rationale": "Shared experience helps only when it does not replace curiosity about this client's particular meaning." },
+        { "text": "The counselor will be unable to remain emotionally engaged", "correct": false, "rationale": "The characteristic risk is over-engagement, not disengagement." },
+        { "text": "The client will inevitably detect the counselor's history", "correct": false, "rationale": "Detection is not the primary concern." }
+      ],
+      "explanation": "This is where the 'as if' quality of empathy protects both parties. Grief in particular varies enormously by relationship, circumstance, culture, and meaning — assumed similarity is more likely to mislead here than almost anywhere.",
+      "refs": ["statpearls-grief", "samhsa-tip65", "aca-ethics"]
+    },
+    {
+      "id": "d6-final-039",
+      "type": "recall",
+      "domain": "D6",
+      "task": "6A",
+      "cacrep": ["professional-ethics", "helping-relationships"],
+      "tags": ["core-attributes", "summary"],
+      "prompt": "Summarize the core dispositions and attributes expected of effective counselors.",
+      "answer": "Self-awareness of one's values, biases, reactions, and impact on clients; genuineness and congruence; unconditional positive regard and nonpossessive warmth; accurate empathy and attunement; a non-judgemental stance; respect for and acceptance of diversity, including cultural humility; tolerance for conflict, ambiguity, and strong affect; emotional self-regulation; trustworthiness and follow-through; flexibility and responsiveness; and active engagement in self-care and reflective practice.",
+      "explanation": "These are not personality traits one either possesses or lacks — the profession treats them as developable dispositions, cultivated through supervision, reflection, feedback, and personal work.",
+      "refs": ["aca-ethics", "msjcc", "cacrep-standards", "samhsa-tip65"]
+    },
+    {
+      "id": "d6-final-040",
+      "type": "mcq",
+      "domain": "D6",
+      "task": "6M",
+      "cacrep": ["helping-relationships"],
+      "tags": ["foundational-skills", "integration"],
+      "prompt": "Why are foundational listening, attending, and reflecting skills treated as attributes rather than merely techniques?",
+      "choices": [
+        { "text": "Because when genuinely integrated they express the counselor's underlying stance toward the client, rather than being applied as procedures", "correct": true, "rationale": "Skills performed without the underlying regard are experienced as technique; integrated, they communicate the core conditions." },
+        { "text": "Because they require no training to perform correctly", "correct": false, "rationale": "They require substantial training and practice." },
+        { "text": "Because they are used only in the early sessions", "correct": false, "rationale": "They operate throughout the counseling relationship." },
+        { "text": "Because they replace the need for theoretical grounding", "correct": false, "rationale": "They complement rather than replace theory." }
+      ],
+      "explanation": "Clients readily detect the difference between being reflected at and being understood. This is why the exam's Core Counseling Attributes domain sits alongside the skills domain rather than inside it — the same behaviour can be either.",
+      "refs": ["samhsa-tip65", "div12-treatments", "msjcc"]
+    }
+  ]
+}

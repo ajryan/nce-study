@@ -1,0 +1,19 @@
+{
+  "name": "NCE Study — Spaced Repetition",
+  "short_name": "NCE Study",
+  "description": "Local-first spaced-repetition study app for the National Counselor Examination.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#fffaf2",
+  "theme_color": "#0d9488",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

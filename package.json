@@ -1,0 +1,32 @@
+{
+  "name": "nce-anki",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first spaced-repetition study app for the National Counselor Examination (NCE)",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "build:single": "tsc --noEmit && vite build --mode single && node -e \"const{renameSync,rmSync}=require('fs');renameSync('dist-single/index.html','dist-single/nce-study.html');for(const f of ['sw.js','manifest.webmanifest'])try{rmSync('dist-single/'+f)}catch{}\"",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "validate": "tsx scripts/validate-content.ts",
+    "coverage": "tsx scripts/coverage-report.ts",
+    "check": "npm run validate && npm run coverage && npm run test"
+  },
+  "dependencies": {
+    "idb": "^8.0.3",
+    "ts-fsrs": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^28.0.3",
+    "@types/node": "^26.1.1",
+    "jsdom": "^29.1.1",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2",
+    "vite": "^8.1.5",
+    "vite-plugin-singlefile": "^2.3.3",
+    "vitest": "^4.1.10"
+  }
+}

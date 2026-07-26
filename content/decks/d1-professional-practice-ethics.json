@@ -1,0 +1,931 @@
+{
+  "domain": "D1",
+  "cards": [
+    {
+      "id": "d1-conf-001",
+      "type": "scenario",
+      "domain": "D1",
+      "task": "1F",
+      "cacrep": ["professional-ethics"],
+      "tags": ["confidentiality", "duty-to-warn", "crisis"],
+      "prompt": "During a session, a client describes in detail an intention to seriously harm a specific, named coworker, including a plan and the means to carry it out. What should the counselor do first?",
+      "choices": [
+        { "text": "Take reasonable steps to protect the identified person, consistent with state law and the code of ethics", "correct": true, "rationale": "A serious and foreseeable threat to an identifiable person is the classic exception to confidentiality. The duty is to act protectively — warning, notifying authorities, or pursuing hospitalization, depending on jurisdiction." },
+        { "text": "Maintain confidentiality absolutely, because disclosure would damage the therapeutic alliance", "correct": false, "rationale": "Confidentiality is not absolute. Protecting an identifiable third party from serious, foreseeable harm is a recognized exception." },
+        { "text": "Immediately terminate the counseling relationship and refer the client elsewhere", "correct": false, "rationale": "Abandoning a client in crisis compounds the danger and does not discharge the duty to protect the third party." },
+        { "text": "Wait until the next scheduled session to see whether the client repeats the threat", "correct": false, "rationale": "Delay is the central failure here. A credible, imminent threat requires action now." }
+      ],
+      "explanation": "Tarasoff established that the protective privilege ends where the public peril begins. The duty is jurisdiction-specific — some states mandate warning, others permit it — so competent practice means knowing your own state statute alongside the code.",
+      "refs": ["tarasoff", "aca-ethics", "nbcc-ethics"]
+    },
+    {
+      "id": "d1-consent-002",
+      "type": "recall",
+      "domain": "D1",
+      "task": "1L",
+      "cacrep": ["professional-ethics"],
+      "tags": ["informed-consent", "documentation"],
+      "prompt": "Name the core elements informed consent in counseling must cover.",
+      "answer": "Nature and goals of counseling; counselor qualifications and credentials; techniques and procedures used; risks and benefits; fees and billing; limits of confidentiality; the right to refuse or withdraw at any time; how records are handled; and arrangements for counselor unavailability or continuation of care.",
+      "explanation": "Informed consent is an ongoing process, not a form signed once at intake. It must be delivered in language the client understands and revisited when the treatment plan, modality, or fee structure materially changes.",
+      "refs": ["aca-ethics", "nbcc-ethics"]
+    },
+    {
+      "id": "d1-selfcare-003",
+      "type": "cloze",
+      "domain": "D1",
+      "task": "1X",
+      "cacrep": ["professional-ethics"],
+      "tags": ["self-care", "burnout", "impairment"],
+      "prompt": "A counselor experiencing burnout, vicarious trauma, or personal distress that impairs professional judgement is ethically obligated to {{seek supervision or consultation, and to limit, suspend, or terminate professional duties until the impairment is resolved}}.",
+      "answer": "seek supervision or consultation, and to limit, suspend, or terminate professional duties until the impairment is resolved",
+      "explanation": "Self-monitoring is an affirmative ethical duty, not a wellness suggestion. Impairment sits alongside competence in the codes: practising while impaired risks client harm regardless of intent.",
+      "refs": ["aca-ethics", "statpearls-burnout"]
+    },
+    {
+      "id": "d1-competence-004",
+      "type": "scenario",
+      "domain": "D1",
+      "task": "1A",
+      "cacrep": ["professional-ethics"],
+      "tags": ["competence", "scope-of-practice", "referral"],
+      "prompt": "A long-term client discloses a severe eating disorder. The counselor has no training in eating disorder treatment and no local supervisor with that expertise. What is the most ethical course of action?",
+      "choices": [
+        { "text": "Refer the client to a qualified provider while arranging continuity of care, and pursue consultation or training if continuing in any capacity", "correct": true, "rationale": "Practising outside one's boundary of competence risks harm. The ethical path pairs referral with continuity so the client is not abandoned." },
+        { "text": "Continue treatment and read about eating disorders between sessions", "correct": false, "rationale": "Self-directed reading does not establish competence for a high-risk specialty. Eating disorders carry medical risk that requires trained oversight." },
+        { "text": "Continue treatment because the therapeutic alliance is more predictive of outcome than technique", "correct": false, "rationale": "Alliance matters, but it does not substitute for competence in a condition with serious medical morbidity." },
+        { "text": "End the relationship immediately so the client is free to find a specialist", "correct": false, "rationale": "An abrupt end without referral or continuity planning is abandonment." }
+      ],
+      "explanation": "Boundaries of competence are defined by education, training, supervised experience, and credentials. Gaining new competence is legitimate, but it requires structured study plus supervision — not improvisation on a live high-risk case.",
+      "refs": ["aca-ethics", "nbcc-ethics", "nimh-eating-disorders"]
+    },
+    {
+      "id": "d1-stats-005",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1B",
+      "cacrep": ["research"],
+      "tags": ["statistics", "type-i-error", "research"],
+      "prompt": "A researcher rejects the null hypothesis when the null hypothesis is actually true. What kind of error is this?",
+      "choices": [
+        { "text": "Type I error (false positive)", "correct": true, "rationale": "Rejecting a true null is a Type I error. Its probability is alpha, conventionally set at .05." },
+        { "text": "Type II error (false negative)", "correct": false, "rationale": "A Type II error is failing to reject a null that is actually false. Its probability is beta." },
+        { "text": "Sampling error", "correct": false, "rationale": "Sampling error is ordinary variation between a sample statistic and the population parameter, not a decision error about a hypothesis." },
+        { "text": "Standard error of measurement", "correct": false, "rationale": "The standard error of measurement describes expected variability in an individual's test score, a psychometric concept rather than a hypothesis-testing error." }
+      ],
+      "explanation": "Mnemonic: a Type I error asserts something is there when it is not — one false claim. A Type II error misses something real. Lowering alpha reduces Type I risk but raises Type II risk and lowers power.",
+      "refs": ["statpearls-type-i-ii", "openstax-statistics"]
+    },
+    {
+      "id": "d1-stats-006",
+      "type": "recall",
+      "domain": "D1",
+      "task": "1B",
+      "cacrep": ["research"],
+      "tags": ["statistics", "power"],
+      "prompt": "Define statistical power and list the main factors that increase it.",
+      "answer": "Power is the probability of correctly rejecting a false null hypothesis (1 − beta); it is the likelihood of detecting a real effect. Power increases with larger sample size, a larger true effect size, lower measurement error, and a higher (less stringent) alpha. Convention targets power of at least .80.",
+      "explanation": "Underpowered studies produce nonsignificant results that get misread as evidence of no effect. Sample size is the factor a researcher controls most directly.",
+      "refs": ["statpearls-type-i-ii", "oer-research-methods"]
+    },
+    {
+      "id": "d1-stats-007",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1B",
+      "cacrep": ["research"],
+      "tags": ["statistics", "distribution", "measures-of-central-tendency"],
+      "prompt": "In a perfectly normal distribution, what is true of the mean, median, and mode?",
+      "choices": [
+        { "text": "All three are equal and fall at the centre of the distribution", "correct": true, "rationale": "A normal curve is symmetric and unimodal, so the three measures of central tendency coincide." },
+        { "text": "The mean is greater than the median, which is greater than the mode", "correct": false, "rationale": "That ordering describes a positively (right) skewed distribution." },
+        { "text": "The mode is greater than the median, which is greater than the mean", "correct": false, "rationale": "That ordering describes a negatively (left) skewed distribution." },
+        { "text": "The median and mode are equal, but the mean is undefined", "correct": false, "rationale": "The mean is always defined for a normal distribution." }
+      ],
+      "explanation": "In a normal distribution roughly 68% of cases fall within 1 SD of the mean, 95% within 2 SD, and 99.7% within 3 SD. Skew is easiest to identify by where the mean sits relative to the median: the mean is pulled toward the tail.",
+      "refs": ["openstax-statistics", "apa-testing-standards"]
+    },
+    {
+      "id": "d1-privilege-008",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1K",
+      "cacrep": ["professional-ethics"],
+      "tags": ["privilege", "confidentiality", "legal"],
+      "prompt": "What is the key distinction between confidentiality and privileged communication?",
+      "choices": [
+        { "text": "Confidentiality is an ethical duty owed by the counselor; privilege is a legal right held by the client that protects disclosure in legal proceedings", "correct": true, "rationale": "Confidentiality is professional and ethical in origin; privilege is statutory and belongs to the client, who may waive it." },
+        { "text": "Confidentiality is a legal right; privilege is an ethical courtesy", "correct": false, "rationale": "This reverses the two. Privilege is the legal concept." },
+        { "text": "They are the same concept described in different professional languages", "correct": false, "rationale": "They overlap but are distinct in source, holder, and scope of application." },
+        { "text": "Privilege is held by the counselor and may be asserted over the client's objection", "correct": false, "rationale": "Privilege belongs to the client. The counselor asserts it on the client's behalf but cannot override the client's waiver." }
+      ],
+      "explanation": "Jaffee v. Redmond recognized a federal psychotherapist–patient privilege that extends to licensed social workers and, by extension, comparable licensed mental health professionals. Because the client holds the privilege, the client can waive it — and once waived, the counselor may be compelled to testify.",
+      "refs": ["jaffee-redmond", "aca-ethics"]
+    },
+    {
+      "id": "d1-minors-009",
+      "type": "scenario",
+      "domain": "D1",
+      "task": "1E",
+      "cacrep": ["professional-ethics"],
+      "tags": ["minors", "confidentiality", "parents"],
+      "prompt": "A 15-year-old client asks whether their parents will be told what is discussed in session. What is the most appropriate response?",
+      "choices": [
+        { "text": "Explain, at the outset and in developmentally appropriate language, what will and will not be shared with parents, and what would require disclosure", "correct": true, "rationale": "Clarity about the limits of confidentiality belongs at the beginning of the relationship. Minors need to know the actual boundaries before deciding what to disclose." },
+        { "text": "Promise that nothing at all will be shared with the parents", "correct": false, "rationale": "This is a promise the counselor cannot keep. Parents/guardians typically hold legal rights over records, and safety disclosures may be required." },
+        { "text": "Tell the client that everything will be reported to parents after each session", "correct": false, "rationale": "Blanket disclosure destroys any workable therapeutic space and generally exceeds what is ethically necessary." },
+        { "text": "Decline to answer, since the parents are the legal clients", "correct": false, "rationale": "Evading the question undermines trust, and the minor is the client even when a guardian consents to treatment." }
+      ],
+      "explanation": "With minors, counselors balance the child's developing autonomy against parents' legal rights. Best practice is an explicit up-front agreement — with the minor and the guardian — about what is shared, in what circumstances, and how.",
+      "refs": ["aca-ethics", "nbcc-ethics"]
+    },
+    {
+      "id": "d1-mandated-010",
+      "type": "scenario",
+      "domain": "D1",
+      "task": "1C",
+      "cacrep": ["professional-ethics"],
+      "tags": ["mandated-reporting", "child-abuse", "legal"],
+      "prompt": "A client mentions in passing that their partner regularly leaves their 4-year-old alone at home for several hours. What is the counselor's obligation?",
+      "choices": [
+        { "text": "Make a report to the appropriate child protective agency, as required of mandated reporters when there is reasonable suspicion of neglect", "correct": true, "rationale": "Mandated reporters act on reasonable suspicion; they are not required to investigate or confirm before reporting." },
+        { "text": "Investigate further over several sessions and report only once abuse is confirmed", "correct": false, "rationale": "Confirming abuse is the agency's job, not the counselor's. Waiting for proof delays protection and can violate reporting statutes." },
+        { "text": "Report only if the client consents to the disclosure", "correct": false, "rationale": "Mandated reporting does not depend on client consent; it is a legal duty that overrides confidentiality." },
+        { "text": "Do nothing, because the information concerns the partner's conduct rather than the client's", "correct": false, "rationale": "The duty attaches to suspicion of child maltreatment however the counselor learns of it." }
+      ],
+      "explanation": "All U.S. states designate counselors as mandated reporters. The threshold is reasonable suspicion, not certainty. Good practice is to tell the client about this limit during informed consent, and where clinically safe, to discuss the report with them.",
+      "refs": ["childwelfare-reporting", "aca-ethics"]
+    },
+    {
+      "id": "d1-hipaa-011",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1W",
+      "cacrep": ["professional-ethics"],
+      "tags": ["hipaa", "documentation", "psychotherapy-notes"],
+      "prompt": "Under HIPAA, what distinguishes 'psychotherapy notes' from the rest of the medical record?",
+      "choices": [
+        { "text": "They are the counselor's private process notes kept separate from the record, and receive heightened protection requiring specific authorization to disclose", "correct": true, "rationale": "Psychotherapy notes get special protection only if they are physically and administratively kept separate from the designated record set." },
+        { "text": "They are the official treatment record and must be provided to any insurer on request", "correct": false, "rationale": "That describes the general medical record. Psychotherapy notes are specifically excluded from routine disclosure for payment." },
+        { "text": "They include medication records, session start and stop times, and treatment plans", "correct": false, "rationale": "Those items are explicitly excluded from the definition of psychotherapy notes and belong to the ordinary record." },
+        { "text": "They may never be disclosed under any circumstance", "correct": false, "rationale": "They can be disclosed with specific client authorization, and certain mandated exceptions still apply." }
+      ],
+      "explanation": "The practical implication: if you keep process notes inside the main chart, they lose the heightened protection. Separation is what creates the protection.",
+      "refs": ["hhs-mental-health", "hhs-hipaa-privacy"]
+    },
+    {
+      "id": "d1-socialmedia-012",
+      "type": "scenario",
+      "domain": "D1",
+      "task": "1J",
+      "cacrep": ["professional-ethics"],
+      "tags": ["social-media", "boundaries", "technology"],
+      "prompt": "A current client sends the counselor a friend request on a personal social media account. What is the most appropriate response?",
+      "choices": [
+        { "text": "Decline, and discuss the request in session along with the practice's social media policy", "correct": true, "rationale": "Declining preserves the boundary, and processing it in session turns a potential rupture into clinically useful material." },
+        { "text": "Accept, to strengthen the therapeutic alliance through a shared informal channel", "correct": false, "rationale": "Accepting creates a multiple relationship, exposes personal information, and blurs the professional boundary." },
+        { "text": "Ignore the request and never mention it", "correct": false, "rationale": "Silence leaves the client to interpret the non-response, risking an unaddressed rupture." },
+        { "text": "Accept but immediately restrict the client's view of all content", "correct": false, "rationale": "The connection itself is the boundary problem; privacy settings do not resolve the dual relationship." }
+      ],
+      "explanation": "The codes now address virtual relationships directly: counselors are expected to have an explicit social media policy, keep personal and professional presences separate, and cover it during informed consent — before a request arrives.",
+      "refs": ["aca-ethics", "nbcc-ethics"]
+    },
+    {
+      "id": "d1-multiple-013",
+      "type": "recall",
+      "domain": "D1",
+      "task": "1D",
+      "cacrep": ["professional-ethics"],
+      "tags": ["boundaries", "multiple-relationships", "dual-relationship"],
+      "prompt": "What is a multiple (dual) relationship, and when might a non-professional interaction with a client be ethically acceptable?",
+      "answer": "A multiple relationship exists when a counselor occupies a second role with a client — social, financial, familial, or otherwise — alongside the professional one. Sexual or romantic relationships with current clients are always prohibited. Other non-professional interactions may be acceptable when they are potentially beneficial to the client, are entered deliberately, are documented with the rationale and expected benefit, and involve informed consent.",
+      "explanation": "The test is not whether harm occurred but whether the interaction risks impairing objectivity, competence, or effectiveness, or risks exploiting the client. Unavoidable overlaps in rural or small communities are managed with documentation and consultation rather than pretending they do not exist.",
+      "refs": ["aca-ethics", "nbcc-ethics"]
+    },
+    {
+      "id": "d1-sexual-014",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1D",
+      "cacrep": ["professional-ethics"],
+      "tags": ["boundaries", "sexual-relationships", "former-clients"],
+      "prompt": "Under the ACA Code of Ethics, what is the minimum period that must elapse before any sexual or romantic relationship with a former client could even be considered?",
+      "choices": [
+        { "text": "Five years since the last professional contact", "correct": true, "rationale": "The ACA code sets a five-year minimum, and even then requires the counselor to document consideration of exploitation and harm." },
+        { "text": "Two years since the last professional contact", "correct": false, "rationale": "Two years is the standard in some other professions' codes, but not the current ACA standard for counselors." },
+        { "text": "Six months since termination", "correct": false, "rationale": "Far too short; no major counseling code permits this." },
+        { "text": "There is no waiting period once the professional relationship has formally ended", "correct": false, "rationale": "Formal termination does not dissolve the power differential, and the codes explicitly impose a waiting period." }
+      ],
+      "explanation": "Even after five years the burden falls on the counselor to demonstrate the relationship is not exploitative, considering time elapsed, the nature of the counseling, and the client's circumstances. Relationships with current clients are prohibited outright with no waiting period.",
+      "refs": ["aca-ethics"]
+    },
+    {
+      "id": "d1-supervision-015",
+      "type": "scenario",
+      "domain": "D1",
+      "task": "1V",
+      "cacrep": ["professional-ethics"],
+      "tags": ["supervision", "consultation"],
+      "prompt": "A pre-licensed counselor is unsure whether a client's disclosure triggers a reporting duty. What is the best immediate step?",
+      "choices": [
+        { "text": "Consult the clinical supervisor promptly, and document both the consultation and the reasoning behind the decision", "correct": true, "rationale": "Supervision exists precisely for ambiguous, high-stakes judgement calls, and documenting the reasoning is what demonstrates a defensible standard of care." },
+        { "text": "Decide alone based on personal judgement, to protect the client's confidentiality from a third party", "correct": false, "rationale": "Supervision is a permitted disclosure and part of standard practice; deciding alone on a reporting question is inadvisable for a pre-licensed clinician." },
+        { "text": "Post an anonymized description of the case in an online counselor forum for crowd-sourced advice", "correct": false, "rationale": "Public forums are not a secure or accountable consultation channel, and anonymization is rarely as complete as assumed." },
+        { "text": "Ask the client to decide whether a report should be filed", "correct": false, "rationale": "The reporting duty belongs to the counselor and cannot be delegated to the client." }
+      ],
+      "explanation": "Documented consultation is the single most protective habit in ambiguous ethical situations. It shows a reasoned, professionally informed process rather than an isolated guess.",
+      "refs": ["aca-ethics", "nbcc-ethics"]
+    },
+    {
+      "id": "d1-records-016",
+      "type": "cloze",
+      "domain": "D1",
+      "task": "1Q",
+      "cacrep": ["professional-ethics"],
+      "tags": ["records", "client-access", "documentation"],
+      "prompt": "Clients generally have a right of access to their own counseling records; a counselor may limit that access only when {{there is compelling evidence that access would cause harm to the client}}, and the reason must be documented.",
+      "answer": "there is compelling evidence that access would cause harm to the client",
+      "explanation": "The presumption runs toward client access. Counselor discomfort with how notes are worded is not a legitimate basis for withholding, which is a good argument for writing notes you would be willing to have read.",
+      "refs": ["aca-ethics", "hhs-hipaa-privacy"]
+    },
+    {
+      "id": "d1-ada-017",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1R",
+      "cacrep": ["professional-ethics", "social-cultural"],
+      "tags": ["ada", "accessibility", "accommodations"],
+      "prompt": "A private counseling practice is asked by a Deaf client to provide a sign language interpreter. Under the ADA, who is generally responsible for the cost?",
+      "choices": [
+        { "text": "The practice, as a place of public accommodation required to provide auxiliary aids unless doing so is an undue burden", "correct": true, "rationale": "Title III obliges public accommodations to furnish auxiliary aids and services at their own expense, subject to an undue-burden defence." },
+        { "text": "The client, since the accommodation is for their personal benefit", "correct": false, "rationale": "Passing the cost to the client is specifically prohibited — a surcharge for accommodation is not permitted." },
+        { "text": "The client's health insurer, in all cases", "correct": false, "rationale": "Insurers do not generally cover interpreter costs, and the legal duty rests with the provider regardless." },
+        { "text": "No one; the practice may simply refer the client elsewhere", "correct": false, "rationale": "Referring a client away to avoid providing an accommodation is a form of discrimination, not a solution." }
+      ],
+      "explanation": "Professional offices, including private counseling practices, are places of public accommodation under ADA Title III. The undue-burden analysis considers the resources of the whole practice, not just the fee for a single session.",
+      "refs": ["ada-title-iii", "aca-ethics"]
+    },
+    {
+      "id": "d1-fees-018",
+      "type": "scenario",
+      "domain": "D1",
+      "task": "1H",
+      "cacrep": ["professional-ethics"],
+      "tags": ["fees", "bartering", "business"],
+      "prompt": "A client who has lost their job offers to repaint the counselor's office in exchange for continued sessions. How should the counselor evaluate this?",
+      "choices": [
+        { "text": "Consider it only if bartering is not clinically contraindicated, is not exploitative, is customary in the community, and is agreed in a written contract at fair value", "correct": true, "rationale": "The codes permit bartering under narrow conditions, all of which must hold simultaneously." },
+        { "text": "Accept immediately, since it preserves access to care for a client in financial hardship", "correct": false, "rationale": "Good intent does not remove the risk of exploitation, valuation disputes, or a compromised boundary." },
+        { "text": "Refuse outright, because bartering is prohibited in all circumstances", "correct": false, "rationale": "Bartering is restricted, not banned. A blanket refusal misstates the standard." },
+        { "text": "Accept services now and determine their value after the work is finished", "correct": false, "rationale": "Undefined value invites conflict and exploitation; the arrangement must be specified in advance." }
+      ],
+      "explanation": "Bartering goods is generally less fraught than bartering services, because services extend the relationship over time and create performance judgements. A sliding fee scale or referral to lower-cost care is usually the cleaner answer.",
+      "refs": ["aca-ethics", "nbcc-ethics"]
+    },
+    {
+      "id": "d1-telehealth-019",
+      "type": "recall",
+      "domain": "D1",
+      "task": "1M",
+      "cacrep": ["professional-ethics"],
+      "tags": ["telehealth", "technology", "confidentiality"],
+      "prompt": "What additional informed-consent elements are required specifically for distance counseling and electronic communication?",
+      "answer": "Distance credentials and jurisdiction of licensure; the technology used and its security limits; risks of confidentiality breach in electronic transmission; procedures if technology fails; emergency and local crisis resources at the client's physical location; response times for messages; how records are stored; and time-zone or cross-jurisdiction issues.",
+      "explanation": "The single most frequently missed element is verifying the client's physical location at each session — it determines which state's licensure law and emergency resources apply. Verifying identity and location at the start of every telehealth session is standard practice.",
+      "refs": ["aca-ethics", "nbcc-ethics", "counseling-compact"]
+    },
+    {
+      "id": "d1-advocacy-020",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1U",
+      "cacrep": ["professional-ethics", "social-cultural"],
+      "tags": ["advocacy", "social-justice"],
+      "prompt": "A counselor notices that several clients from the same neighbourhood cannot access care because the only bus route was cut. Working to restore the route is an example of advocacy at which level?",
+      "choices": [
+        { "text": "Systems or public-arena advocacy, addressing an environmental barrier affecting a population", "correct": true, "rationale": "The intervention targets a structural barrier beyond any individual client, which is the defining feature of systems-level advocacy." },
+        { "text": "Client-level empowerment, since it ultimately helps individual clients attend", "correct": false, "rationale": "Empowerment works with the individual client on self-advocacy skills; here the counselor acts on the system itself." },
+        { "text": "Consultation, because the counselor works with a third party", "correct": false, "rationale": "Consultation is a professional relationship focused on a consultee's work with clients, not advocacy for policy change." },
+        { "text": "Supervision, because it involves oversight of practice conditions", "correct": false, "rationale": "Supervision concerns oversight of a supervisee's clinical work." }
+      ],
+      "explanation": "Advocacy competencies distinguish acting *with* clients from acting *on behalf of* clients, and scale from individual to community to public policy. The MSJCC frame these as counseling actions within the intrapersonal, interpersonal, institutional, community, public policy, and international/global domains.",
+      "refs": ["msjcc", "aca-ethics"]
+    },
+    {
+      "id": "d1-referral-021",
+      "type": "scenario",
+      "domain": "D1",
+      "task": "1T",
+      "cacrep": ["professional-ethics", "social-cultural"],
+      "tags": ["referral", "values", "discrimination"],
+      "prompt": "A counselor's personal religious beliefs conflict with a client's same-sex relationship. The counselor wishes to refer the client to another provider on that basis. Is this ethically permissible?",
+      "choices": [
+        { "text": "No — referral based on the counselor's personal values rather than a competence deficit is prohibited; the counselor must seek training to serve the client competently", "correct": true, "rationale": "The codes explicitly bar value-based referrals. The obligation is to develop competence, not to route the client elsewhere for holding a different identity." },
+        { "text": "Yes, provided the referral is handled respectfully and promptly", "correct": false, "rationale": "Respectful delivery does not cure the underlying problem: the client is being refused service because of who they are." },
+        { "text": "Yes, because imposing counselor values on a client is itself unethical", "correct": false, "rationale": "The remedy for a values conflict is bracketing one's values and getting supervision — not withdrawing care." },
+        { "text": "Only if the client agrees the referral is in their best interest", "correct": false, "rationale": "Client agreement, likely given under pressure, does not make a discriminatory referral acceptable." }
+      ],
+      "explanation": "This standard hardened after litigation in counselor education. Referral is appropriate for a genuine lack of *skill* — never for disagreement with a client's identity, orientation, or beliefs. Counselors are expected to bracket personal values and seek supervision.",
+      "refs": ["aca-ethics", "msjcc"]
+    },
+    {
+      "id": "d1-group-022",
+      "type": "recall",
+      "domain": "D1",
+      "task": "1N",
+      "cacrep": ["group-work", "professional-ethics"],
+      "tags": ["group", "confidentiality", "screening"],
+      "prompt": "Why can a group leader guarantee their own confidentiality but not the group's, and what follows from that?",
+      "choices": null,
+      "answer": "The leader is bound by professional ethics and law, but group members are not — they are bound only by an agreement the leader cannot enforce. It follows that the leader must state this limit explicitly during screening and informed consent, establish and repeat confidentiality norms, and screen prospective members for suitability so that people whose disclosures would be unsafe if repeated are not placed at unnecessary risk.",
+      "explanation": "Pre-group screening is an ethical requirement, not an administrative formality. It protects both the individual and the group's viability, and it is the moment to set explicit ground rules for confidentiality, attendance, and termination.",
+      "refs": ["aca-ethics", "statpearls-group-therapy"]
+    },
+    {
+      "id": "d1-thirdparty-023",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1S",
+      "cacrep": ["professional-ethics"],
+      "tags": ["release-of-information", "documentation"],
+      "prompt": "What must a valid release of information (ROI) include?",
+      "choices": [
+        { "text": "Identification of who may disclose and receive, the specific information covered, the purpose, an expiration date, and notice of the right to revoke", "correct": true, "rationale": "These are the standard required elements; an ROI missing any of them is legally vulnerable." },
+        { "text": "Only the client's signature and the date", "correct": false, "rationale": "A signature alone gives no scope, purpose, or endpoint, making the authorization effectively unbounded." },
+        { "text": "A blanket authorization allowing release of the full record to anyone the counselor deems appropriate", "correct": false, "rationale": "Blanket releases fail the specificity requirement and the minimum-necessary principle." },
+        { "text": "Approval from the counselor's supervisor rather than the client", "correct": false, "rationale": "The authorization belongs to the client; a supervisor cannot consent on their behalf." }
+      ],
+      "explanation": "Alongside a valid ROI, disclosures should follow the minimum-necessary principle: release only what the stated purpose requires. Records concerning substance use disorder treatment carry additional restrictions under 42 CFR Part 2.",
+      "refs": ["hhs-hipaa-privacy", "cfr-42-part-2", "aca-ethics"]
+    },
+    {
+      "id": "d1-part2-024",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1C",
+      "cacrep": ["professional-ethics"],
+      "tags": ["42-cfr-part-2", "substance-use", "confidentiality"],
+      "prompt": "How does 42 CFR Part 2 differ from HIPAA in protecting substance use disorder treatment records?",
+      "choices": [
+        { "text": "It is more restrictive, generally requiring specific written consent even for disclosures that HIPAA would permit for treatment, payment, or operations", "correct": true, "rationale": "Part 2 was written to encourage people to seek SUD treatment without fear of legal exposure, so its consent requirements exceed HIPAA's." },
+        { "text": "It is less restrictive, allowing broader sharing among treatment providers", "correct": false, "rationale": "The opposite is true; Part 2 narrows what may be shared." },
+        { "text": "It applies only to records held by private practitioners", "correct": false, "rationale": "Part 2 applies to federally assisted programs holding themselves out as providing SUD diagnosis, treatment, or referral." },
+        { "text": "It replaces HIPAA entirely for all behavioral health records", "correct": false, "rationale": "Both can apply; where they differ, the more protective standard generally governs." }
+      ],
+      "explanation": "Practical rule: when two privacy standards both apply, follow the more protective one. Part 2 also restricts using records in legal proceedings without a court order meeting specific criteria.",
+      "refs": ["cfr-42-part-2", "hhs-hipaa-privacy"]
+    },
+    {
+      "id": "d1-ferpa-025",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1K",
+      "cacrep": ["professional-ethics"],
+      "tags": ["ferpa", "school-counseling", "records"],
+      "prompt": "A school counselor keeps personal notes about student sessions in a locked drawer, shared with no one. Under FERPA, how are these usually classified?",
+      "choices": [
+        { "text": "Sole-possession records, which are not education records so long as they stay private and are used only as a personal memory aid", "correct": true, "rationale": "FERPA excludes records kept in the sole possession of the maker, used only as a personal memory aid, and not accessible to anyone else." },
+        { "text": "Education records, which parents may inspect on request", "correct": false, "rationale": "They become education records only once shared with another party." },
+        { "text": "Psychotherapy notes protected under HIPAA", "correct": false, "rationale": "School records are generally governed by FERPA rather than HIPAA, and the HIPAA psychotherapy-notes category does not apply here." },
+        { "text": "Directory information that may be released without consent", "correct": false, "rationale": "Directory information covers items like name and address, not counseling content." }
+      ],
+      "explanation": "The exclusion is fragile: the moment a sole-possession note is shared with a colleague, substitute, or administrator, it becomes an education record subject to parental inspection rights.",
+      "refs": ["ed-ferpa"]
+    },
+    {
+      "id": "d1-endoflife-026",
+      "type": "scenario",
+      "domain": "D1",
+      "task": "1C",
+      "cacrep": ["professional-ethics"],
+      "tags": ["end-of-life", "confidentiality", "terminal-illness"],
+      "prompt": "A client with a terminal illness discusses hastening their own death. According to the ACA Code of Ethics, what latitude does the counselor have regarding confidentiality?",
+      "choices": [
+        { "text": "Counselors may choose to break or maintain confidentiality, and should seek consultation and supervision given the complexity of the situation", "correct": true, "rationale": "The code carves out an explicit exception for end-of-life decisions by terminally ill clients, permitting professional discretion rather than mandating disclosure." },
+        { "text": "Confidentiality must always be broken, exactly as with any other suicidal ideation", "correct": false, "rationale": "The code deliberately distinguishes end-of-life decisions in terminal illness from other suicidal ideation." },
+        { "text": "Confidentiality must always be maintained without exception", "correct": false, "rationale": "The standard permits discretion in both directions, not mandatory silence." },
+        { "text": "The counselor must withdraw from the case immediately", "correct": false, "rationale": "Withdrawal is not required and may abandon the client at a critical time." }
+      ],
+      "explanation": "This is one of the few places the code grants explicit discretion rather than a rule, which is exactly why it is heavily tested. Note the qualifier: it applies to *terminally ill* clients exploring end-of-life options, and state law may constrain it further.",
+      "refs": ["aca-ethics"]
+    },
+    {
+      "id": "d1-documentation-027",
+      "type": "recall",
+      "domain": "D1",
+      "task": "1W",
+      "cacrep": ["professional-ethics"],
+      "tags": ["documentation", "progress-notes", "soap"],
+      "prompt": "What do the letters in the SOAP progress-note format stand for?",
+      "answer": "Subjective (the client's reported experience, in their words); Objective (observable, measurable data — appearance, affect, behaviour, test results); Assessment (the clinician's interpretation, including progress toward goals and any diagnostic impression); Plan (next steps, interventions, homework, and the timing of the next session).",
+      "explanation": "DAP (Data, Assessment, Plan) and BIRP (Behavior, Intervention, Response, Plan) are common alternatives. Whatever the format, notes should be timely, factual, and written with the awareness that the client or a court may read them.",
+      "refs": ["aca-ethics", "nbcc-ethics"]
+    },
+    {
+      "id": "d1-termination-028",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1T",
+      "cacrep": ["professional-ethics"],
+      "tags": ["termination", "abandonment"],
+      "prompt": "Which of these best describes client abandonment?",
+      "choices": [
+        { "text": "Ending or interrupting services without adequate notice, referral, or arrangements for continued care", "correct": true, "rationale": "Abandonment is about the *process* of ending — inadequate notice and no continuity — not about the decision to end itself." },
+        { "text": "Terminating counseling because the client is no longer benefiting", "correct": false, "rationale": "This is an ethical obligation, not abandonment. Counselors must not continue services that no longer help." },
+        { "text": "Referring a client whose needs exceed the counselor's competence", "correct": false, "rationale": "Appropriate referral with continuity of care is good practice." },
+        { "text": "Taking a planned vacation with coverage arranged in advance", "correct": false, "rationale": "Planned absence with coverage is precisely how abandonment is avoided." }
+      ],
+      "explanation": "Counselors are obliged to terminate when a client is no longer benefiting or is being harmed. The ethical requirement attaches to *how* it is done: adequate notice, pre-termination counseling, referrals, and documentation.",
+      "refs": ["aca-ethics", "nbcc-ethics"]
+    },
+    {
+      "id": "d1-research-029",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1B",
+      "cacrep": ["research"],
+      "tags": ["research", "validity", "design"],
+      "prompt": "A study finds that clients who received a new intervention improved more than those who did not — but participants chose their own group. What is the principal threat to internal validity?",
+      "choices": [
+        { "text": "Selection bias, because pre-existing differences between self-selected groups may explain the outcome", "correct": true, "rationale": "Without random assignment, groups may differ systematically at baseline, confounding the treatment effect." },
+        { "text": "Low statistical power", "correct": false, "rationale": "Power concerns the ability to detect an effect; here the problem is that a detected effect cannot be attributed to the intervention." },
+        { "text": "Poor external validity", "correct": false, "rationale": "External validity concerns generalizability to other settings and populations, a separate issue from causal inference within the study." },
+        { "text": "Low test–retest reliability", "correct": false, "rationale": "That is a property of a measurement instrument, not of the study design." }
+      ],
+      "explanation": "Random assignment is what licenses causal claims, by making groups probabilistically equivalent at baseline. Internal validity asks 'did the treatment cause the change?'; external validity asks 'does it generalize?'",
+      "refs": ["oer-research-methods", "statpearls-type-i-ii"]
+    },
+    {
+      "id": "d1-research-030",
+      "type": "cloze",
+      "domain": "D1",
+      "task": "1B",
+      "cacrep": ["research"],
+      "tags": ["research", "effect-size"],
+      "prompt": "Statistical significance tells you whether an effect is likely to be real; {{effect size}} tells you how large and practically meaningful it is.",
+      "answer": "effect size",
+      "explanation": "With a large enough sample, trivially small differences become statistically significant. Cohen's d is the common standardized effect size for group differences: roughly .2 small, .5 medium, .8 large.",
+      "refs": ["oer-research-methods", "openstax-statistics"]
+    },
+    {
+      "id": "d1-consent-capacity-031",
+      "type": "scenario",
+      "domain": "D1",
+      "task": "1O",
+      "cacrep": ["professional-ethics"],
+      "tags": ["capacity", "informed-consent", "cognitive-impairment"],
+      "prompt": "A client with moderate dementia arrives for an intake accompanied by an adult child. How should the counselor approach consent?",
+      "choices": [
+        { "text": "Assess the client's capacity to consent, seek their assent and involvement to the extent they are able, and obtain formal consent from the legally authorized representative as needed", "correct": true, "rationale": "Capacity is decision-specific and often partial. Ethical practice preserves the client's participation while securing legally valid consent." },
+        { "text": "Obtain consent solely from the adult child, since the diagnosis establishes incapacity", "correct": false, "rationale": "A diagnosis does not by itself establish incapacity, and bypassing the client disregards their remaining autonomy." },
+        { "text": "Obtain consent solely from the client, since adults are presumed competent", "correct": false, "rationale": "The presumption of competence can be rebutted; ignoring evident impairment risks an invalid consent." },
+        { "text": "Proceed without formal consent and document the client's cognitive limitations", "correct": false, "rationale": "Documentation is not a substitute for consent." }
+      ],
+      "explanation": "Assent versus consent is the key distinction: consent is the legally effective authorization, while assent is the client's own agreement, sought regardless of legal capacity. The same structure applies to minors and to adults with guardians.",
+      "refs": ["aca-ethics", "nbcc-ethics"]
+    },
+    {
+      "id": "d1-policies-032",
+      "type": "recall",
+      "domain": "D1",
+      "task": "1G",
+      "cacrep": ["professional-ethics"],
+      "tags": ["agency-policy", "ethics-conflict"],
+      "prompt": "What should a counselor do when an employer's policy conflicts with the code of ethics?",
+      "answer": "Make the conflict explicit, inform the supervisor or employer of the ethical obligation, and attempt to resolve it through appropriate internal channels. If it cannot be resolved, the counselor should pursue other avenues — consultation, ethics committees, or licensing bodies — and may ultimately need to withdraw from the employment. Adherence to the code takes precedence, and a counselor may not use institutional policy as a justification for unethical conduct.",
+      "explanation": "'I was following agency policy' is not a defence in a licensure complaint. Documenting the attempt to resolve the conflict internally is important both ethically and protectively.",
+      "refs": ["aca-ethics", "nbcc-ethics"]
+    },
+    {
+      "id": "d1-alliance-033",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1P",
+      "cacrep": ["helping-relationships"],
+      "tags": ["therapeutic-alliance", "rupture"],
+      "prompt": "A client becomes withdrawn and gives short answers after the counselor challenged them last session. What is the most therapeutic response?",
+      "choices": [
+        { "text": "Name the shift directly and invite the client to talk about their reaction to the previous session", "correct": true, "rationale": "Explicitly addressing a suspected rupture is the evidence-supported repair strategy, and repaired ruptures often strengthen the alliance." },
+        { "text": "Continue with the planned agenda and hope the client re-engages", "correct": false, "rationale": "Unaddressed ruptures are a leading predictor of premature termination." },
+        { "text": "Apologize and commit to never challenging the client again", "correct": false, "rationale": "Over-correcting removes a legitimate clinical tool and can feel to the client like the counselor cannot tolerate their reaction." },
+        { "text": "Interpret the withdrawal as resistance and confront it more firmly", "correct": false, "rationale": "Escalating confrontation into an active rupture typically deepens it." }
+      ],
+      "explanation": "The alliance has three components: agreement on goals, agreement on tasks, and the emotional bond. Ruptures usually show up first as a breakdown in one of the first two, and monitoring the relationship is an ongoing counselor responsibility.",
+      "refs": ["aca-ethics", "div12-treatments"]
+    },
+    {
+      "id": "d1-conf-034",
+      "type": "cloze",
+      "domain": "D1",
+      "task": "1F",
+      "cacrep": ["professional-ethics"],
+      "tags": ["confidentiality", "limits"],
+      "prompt": "The standard exceptions to confidentiality include serious and foreseeable harm to self or others, suspected abuse or neglect of a child or vulnerable adult, {{a court order or valid subpoena}}, and disclosures authorized by the client.",
+      "answer": "a court order or valid subpoena",
+      "explanation": "A subpoena is not automatically sufficient: the counselor should assert privilege on the client's behalf and seek legal consultation, disclosing only under a valid court order or with client authorization.",
+      "refs": ["aca-ethics", "jaffee-redmond"]
+    },
+    {
+      "id": "d1-credential-035",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1C",
+      "cacrep": ["professional-ethics"],
+      "tags": ["credentials", "licensure", "titles"],
+      "prompt": "What is the difference between certification and licensure?",
+      "choices": [
+        { "text": "Licensure is a state-granted legal authorization to practise; certification is typically a voluntary national credential recognizing a standard of competence", "correct": true, "rationale": "Licensure is regulatory and jurisdiction-bound; certification such as the NCC is voluntary and national." },
+        { "text": "Certification is granted by states, and licensure by national boards", "correct": false, "rationale": "This reverses the two." },
+        { "text": "They are interchangeable terms for the same credential", "correct": false, "rationale": "They differ in issuing body, legal force, and scope." },
+        { "text": "Licensure is voluntary, while certification is legally required to practise", "correct": false, "rationale": "Licensure is what legally permits practice and title use." }
+      ],
+      "explanation": "The NCE serves both paths: it is used for the National Certified Counselor credential and is adopted by many states as a licensure examination. Only licensure confers the legal right to practise independently in a given state.",
+      "refs": ["nbcc-nce-page", "nbcc-handbook-licensure", "counseling-compact"]
+    },
+    {
+      "id": "d1-values-036",
+      "type": "recall",
+      "domain": "D1",
+      "task": "1D",
+      "cacrep": ["professional-ethics", "social-cultural"],
+      "tags": ["values", "bracketing", "imposition"],
+      "prompt": "What does it mean to 'bracket' personal values in counseling, and why is it required?",
+      "answer": "Bracketing means deliberately setting aside one's own beliefs, assumptions, and reactions so they do not shape the direction of the client's work. It is required because counselors are prohibited from imposing their values, attitudes, beliefs, and behaviors on clients — particularly where they are inconsistent with the client's goals or discriminatory in nature.",
+      "explanation": "Bracketing is not pretending to have no values. It is monitoring them, recognizing when they are activated, and seeking supervision when they threaten to intrude on the client's autonomy.",
+      "refs": ["aca-ethics", "msjcc"]
+    },
+    {
+      "id": "d1-gifts-037",
+      "type": "scenario",
+      "domain": "D1",
+      "task": "1D",
+      "cacrep": ["professional-ethics", "social-cultural"],
+      "tags": ["gifts", "boundaries", "culture"],
+      "prompt": "At the final session, a client from a culture where gift-giving signals respect offers the counselor a small handmade item. What should guide the counselor's decision?",
+      "choices": [
+        { "text": "Consider the cultural meaning of the gift, its monetary value, the client's motivation, and the counselor's own motivation for accepting or declining", "correct": true, "rationale": "The codes direct counselors to weigh exactly these factors rather than applying a blanket rule." },
+        { "text": "Decline all gifts as a matter of policy, to keep boundaries unambiguous", "correct": false, "rationale": "A rigid refusal can be experienced as a cultural insult and is not what the codes require." },
+        { "text": "Accept all gifts, since refusing risks damaging the relationship", "correct": false, "rationale": "Accepting a high-value gift can create obligation and compromise objectivity." },
+        { "text": "Accept the gift but bill the client for its value to avoid an imbalance", "correct": false, "rationale": "This is transactional, confusing, and does not address the boundary question." }
+      ],
+      "explanation": "Small, culturally meaningful gifts at termination sit very differently from expensive gifts early in treatment. The code names cultural significance explicitly as a factor to weigh.",
+      "refs": ["aca-ethics", "msjcc"]
+    },
+    {
+      "id": "d1-research-038",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1B",
+      "cacrep": ["research"],
+      "tags": ["correlation", "statistics"],
+      "prompt": "A study reports a correlation of r = −.85 between counseling session attendance and symptom severity. How should this be interpreted?",
+      "choices": [
+        { "text": "A strong negative relationship: higher attendance is associated with lower symptom severity, though causation is not established", "correct": true, "rationale": "The magnitude (.85) indicates a strong relationship and the sign indicates an inverse direction; correlation alone does not establish causation." },
+        { "text": "A weak relationship, because the coefficient is negative", "correct": false, "rationale": "A negative sign indicates direction, not weakness. Strength is given by the absolute value." },
+        { "text": "Attending more sessions causes symptoms to decrease", "correct": false, "rationale": "Correlational data cannot support a causal claim; a third variable such as motivation could drive both." },
+        { "text": "85% of the variance in symptom severity is explained by attendance", "correct": false, "rationale": "Variance explained is r², here about 72% — a common trap." }
+      ],
+      "explanation": "Two habits handle most correlation items: read the sign as direction and the absolute value as strength, and remember that the proportion of shared variance is r², not r.",
+      "refs": ["openstax-statistics", "oer-research-methods"]
+    },
+    {
+      "id": "d1-crisis-policy-039",
+      "type": "recall",
+      "domain": "D1",
+      "task": "1I",
+      "cacrep": ["professional-ethics"],
+      "tags": ["informed-consent", "risks", "process"],
+      "prompt": "Why must informed consent include the risks of counseling, and what are examples of such risks?",
+      "answer": "Clients need a realistic basis for deciding whether to participate, and counseling is not risk-free. Examples include temporary increases in distress when processing trauma, disruption to existing relationships as the client changes, unwanted emotional reactions, the possibility that goals are not met, and the limits of confidentiality that could affect legal or employment matters.",
+      "explanation": "Presenting only benefits is a subtle form of misrepresentation. Naming likely discomfort in advance also has clinical value: it normalizes an early symptom spike rather than letting the client read it as failure.",
+      "refs": ["aca-ethics", "nbcc-ethics"]
+    },
+    {
+      "id": "d1-conflict-040",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1C",
+      "cacrep": ["professional-ethics"],
+      "tags": ["ethical-decision-making", "models"],
+      "prompt": "What is the first step in most formal ethical decision-making models?",
+      "choices": [
+        { "text": "Identify the problem clearly, separating ethical, legal, clinical, and professional dimensions", "correct": true, "rationale": "Every mainstream model begins with problem identification; acting before the dilemma is defined is the commonest error." },
+        { "text": "Consult an attorney", "correct": false, "rationale": "Legal consultation may follow, but it is not the first step and does not resolve ethical questions." },
+        { "text": "Choose the course of action least likely to result in a complaint", "correct": false, "rationale": "Defensive practice is not an ethical framework and can conflict with client welfare." },
+        { "text": "Inform the client that an ethical dilemma exists", "correct": false, "rationale": "Client involvement is often appropriate later, but the dilemma must first be defined." }
+      ],
+      "explanation": "A typical sequence: identify the problem, apply the code, determine the nature and dimensions of the dilemma, generate options, consider consequences, evaluate the chosen course, and implement. Consultation runs throughout, and the whole process should be documented.",
+      "refs": ["aca-ethics", "nbcc-ethics"]
+    },
+    {
+      "id": "d1-fidelity-041",
+      "type": "recall",
+      "domain": "D1",
+      "task": "1C",
+      "cacrep": ["professional-ethics"],
+      "tags": ["moral-principles", "autonomy", "beneficence"],
+      "prompt": "Name and define the five (sometimes six) core moral principles underlying counseling ethics.",
+      "answer": "Autonomy — respecting the client's right to self-determination. Nonmaleficence — avoiding actions that cause harm. Beneficence — working for the client's good and promoting welfare. Justice — treating clients fairly and equitably. Fidelity — honouring commitments and being trustworthy. Veracity — being truthful in professional dealings, is often added as a sixth.",
+      "explanation": "These principles are the reasoning tools used when the code does not settle a case. Nonmaleficence is generally treated as the most binding when principles conflict: first, do no harm.",
+      "refs": ["aca-ethics", "nbcc-ethics"]
+    },
+    {
+      "id": "d1-tech-042",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1M",
+      "cacrep": ["professional-ethics"],
+      "tags": ["technology", "email", "confidentiality"],
+      "prompt": "A client asks to communicate between sessions by ordinary email. What is the counselor's obligation?",
+      "choices": [
+        { "text": "Explain the confidentiality limits of unencrypted email, document the client's informed choice, and agree what may be sent through that channel", "correct": true, "rationale": "Clients may choose a less secure channel once they genuinely understand the risk, but the counselor must explain it and document the decision." },
+        { "text": "Refuse all email contact, since it can never be made confidential", "correct": false, "rationale": "Email is not prohibited; it must be used with informed consent and appropriate limits." },
+        { "text": "Agree without discussion, since the client chose the channel", "correct": false, "rationale": "Client preference does not remove the duty to inform about risks." },
+        { "text": "Use email only for clinical content and the phone for scheduling", "correct": false, "rationale": "This inverts sensible risk management; low-sensitivity logistics are the safer use of an insecure channel." }
+      ],
+      "explanation": "A workable agreement usually restricts email to scheduling and administrative matters, states expected response times, and makes explicit that email is not for emergencies — with crisis resources given separately.",
+      "refs": ["aca-ethics", "hhs-hipaa-privacy"]
+    },
+    {
+      "id": "d1-deceased-043",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1F",
+      "cacrep": ["professional-ethics"],
+      "tags": ["confidentiality", "deceased-clients"],
+      "prompt": "Does the duty of confidentiality end when a client dies?",
+      "choices": [
+        { "text": "No — confidentiality continues after death, subject to legal requirements and documented client wishes", "correct": true, "rationale": "The codes direct counselors to protect confidentiality after a client's death consistent with law and any prior client instructions." },
+        { "text": "Yes, the duty ends because the client can no longer be harmed", "correct": false, "rationale": "Posthumous disclosure can still harm the client's reputation and surviving family, and the duty persists." },
+        { "text": "Yes, and records may be released to any family member on request", "correct": false, "rationale": "Family members have no automatic right of access; authority usually rests with the personal representative of the estate." },
+        { "text": "Only if the client left written instructions before death", "correct": false, "rationale": "The duty exists by default, not only when instructions were left." }
+      ],
+      "explanation": "This is also why a professional will matters: it names who will handle records and notify clients if the counselor dies or becomes incapacitated, which is itself an ethical expectation.",
+      "refs": ["aca-ethics", "hhs-hipaa-privacy"]
+    },
+    {
+      "id": "d1-retention-044",
+      "type": "recall",
+      "domain": "D1",
+      "task": "1W",
+      "cacrep": ["professional-ethics"],
+      "tags": ["records", "retention", "professional-will"],
+      "prompt": "What governs how long counseling records must be retained, and what is a professional will?",
+      "answer": "Retention periods are set primarily by state law and by any applicable agency or payer requirements; the ethical codes require retention for the period required by law and disposal in a way that preserves confidentiality. Records for minors are typically kept for a period after the client reaches the age of majority. A professional will is a written plan naming a colleague to take custody of records, notify clients, and manage the practice should the counselor die or become incapacitated.",
+      "explanation": "Because retention rules are jurisdictional, the exam-safe answer is 'as required by state law' rather than a specific number of years. A professional will is the counterpart obligation for continuity of care.",
+      "refs": ["aca-ethics", "nbcc-ethics", "hhs-hipaa-privacy"]
+    },
+    {
+      "id": "d1-testing-045",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1A",
+      "cacrep": ["assessment", "professional-ethics"],
+      "tags": ["assessment", "competence", "test-user"],
+      "prompt": "A counselor wants to administer a personality inventory that requires advanced qualifications they do not hold. What is the ethical requirement?",
+      "choices": [
+        { "text": "Administer, score, and interpret only those instruments for which they have the required training and qualifications", "correct": true, "rationale": "Test-user qualification is an explicit ethical standard; instrument publishers also restrict purchase by qualification level." },
+        { "text": "Administer it and have a qualified colleague interpret the results afterwards", "correct": false, "rationale": "Competence is required for administration as well as interpretation; improper administration invalidates the results." },
+        { "text": "Administer it as long as results are shared only with the client", "correct": false, "rationale": "Limiting the audience does not cure the competence problem or the risk of a wrong interpretation." },
+        { "text": "Administer it if the client provides written informed consent", "correct": false, "rationale": "Clients cannot consent a counselor into competence." }
+      ],
+      "explanation": "Assessment competence covers selection, administration, scoring, interpretation, and communication of results, and includes understanding the instrument's psychometric properties and the populations on which it was normed.",
+      "refs": ["apa-testing-standards", "aca-ethics"]
+    },
+    {
+      "id": "d1-diversity-046",
+      "type": "cloze",
+      "domain": "D1",
+      "task": "1A",
+      "cacrep": ["social-cultural", "professional-ethics"],
+      "tags": ["multicultural-competence", "self-awareness"],
+      "prompt": "The MSJCC describe developmental competence across four domains, beginning with {{counselor self-awareness}}, then client worldview, the counseling relationship, and counseling and advocacy interventions.",
+      "answer": "counselor self-awareness",
+      "explanation": "Self-awareness comes first deliberately: a counselor unaware of their own assumptions, privileges, and biases cannot accurately perceive a client's worldview. Each domain is examined through attitudes/beliefs, knowledge, skills, and action.",
+      "refs": ["msjcc"]
+    },
+    {
+      "id": "d1-billing-047",
+      "type": "scenario",
+      "domain": "D1",
+      "task": "1H",
+      "cacrep": ["professional-ethics"],
+      "tags": ["billing", "insurance", "fraud"],
+      "prompt": "A client's insurance covers treatment only for a diagnosable disorder. The client presents with ordinary work stress that does not meet criteria for any diagnosis, and asks the counselor to 'put down anxiety' so sessions are covered. What should the counselor do?",
+      "choices": [
+        { "text": "Decline, explain why an inaccurate diagnosis cannot be recorded, and discuss self-pay options or a sliding fee", "correct": true, "rationale": "Recording a diagnosis the client does not meet is insurance fraud and falsifies the clinical record." },
+        { "text": "Record the diagnosis, since the client is genuinely distressed and needs care", "correct": false, "rationale": "Sympathetic motive does not make a false claim lawful, and the inaccurate diagnosis follows the client through their records." },
+        { "text": "Record a provisional diagnosis and revisit it later", "correct": false, "rationale": "A provisional label used to obtain payment rather than to describe clinical reality is the same misrepresentation." },
+        { "text": "Bill for a longer session type to offset the reduced fee", "correct": false, "rationale": "Upcoding is itself a distinct form of fraud." }
+      ],
+      "explanation": "Diagnosis carries lasting consequences for insurability, employment, and legal matters, which is why accuracy is an ethical obligation independent of billing. Discussing those consequences with clients is part of informed consent around diagnosis.",
+      "refs": ["aca-ethics", "nbcc-ethics", "dsm5tr"]
+    },
+    {
+      "id": "d1-supervision-048",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1V",
+      "cacrep": ["professional-ethics"],
+      "tags": ["supervision", "liability", "supervisee"],
+      "prompt": "Who holds ultimate responsibility for the welfare of clients seen by a pre-licensed supervisee?",
+      "choices": [
+        { "text": "The clinical supervisor, who retains ultimate professional and legal responsibility for those clients", "correct": true, "rationale": "Vicarious liability means the supervisor is answerable for the supervisee's clinical work, which is why supervision must be substantive rather than nominal." },
+        { "text": "The supervisee, who conducts the sessions directly", "correct": false, "rationale": "Supervisees hold real responsibility, but not ultimate responsibility." },
+        { "text": "The employing agency's administrative director", "correct": false, "rationale": "Administrative oversight is distinct from clinical supervisory responsibility." },
+        { "text": "Responsibility is shared equally between supervisor and supervisee", "correct": false, "rationale": "The codes place ultimate responsibility with the supervisor." }
+      ],
+      "explanation": "Practical consequences: clients must be informed they are being seen by a supervisee and who the supervisor is; supervisors must have the competence to supervise; and supervisors must act when a supervisee's work endangers a client.",
+      "refs": ["aca-ethics", "nbcc-ethics"]
+    },
+    {
+      "id": "d1-conf-049",
+      "type": "scenario",
+      "domain": "D1",
+      "task": "1F",
+      "cacrep": ["professional-ethics"],
+      "tags": ["confidentiality", "couples", "secrets"],
+      "prompt": "In couples counseling, one partner phones the counselor between sessions and discloses an ongoing affair, asking that it be kept from the other partner. What is the best approach?",
+      "choices": [
+        { "text": "Rely on the confidentiality policy about secrets that was established at the outset, and address the disclosure in line with it", "correct": true, "rationale": "The problem is prevented by policy, not solved after the fact. Counselors should state up front whether they hold individual secrets." },
+        { "text": "Immediately disclose the affair to the other partner in the next session", "correct": false, "rationale": "Unilateral disclosure without a prior agreement breaches the confidence and typically destroys the therapy." },
+        { "text": "Keep the secret indefinitely and continue couples work as before", "correct": false, "rationale": "Holding a significant secret usually makes genuine couples work impossible and compromises the counselor's neutrality." },
+        { "text": "Terminate with both partners immediately without explanation", "correct": false, "rationale": "Abrupt unexplained termination is abandonment and reveals something by implication anyway." }
+      ],
+      "explanation": "Two defensible policies exist — 'no secrets' (anything disclosed may be brought into joint sessions) and a limited-confidence policy — but the choice must be made and explained *before* treatment begins. In couples and family work, identifying who the client is shapes every subsequent confidentiality question.",
+      "refs": ["aca-ethics", "nbcc-ethics"]
+    },
+    {
+      "id": "d1-research-050",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1B",
+      "cacrep": ["research"],
+      "tags": ["statistics", "scales-of-measurement"],
+      "prompt": "A counselor records client responses as 'strongly disagree, disagree, agree, strongly agree'. What scale of measurement is this?",
+      "choices": [
+        { "text": "Ordinal — the categories are ranked, but the intervals between them are not known to be equal", "correct": true, "rationale": "Rank order without equal intervals is the definition of an ordinal scale." },
+        { "text": "Nominal — the responses are simply named categories", "correct": false, "rationale": "Nominal categories have no inherent order; these are clearly ordered." },
+        { "text": "Interval — the distances between response options are equal", "correct": false, "rationale": "Equal spacing between Likert-type options cannot be assumed, though in practice they are often analysed as interval." },
+        { "text": "Ratio — the scale has a true zero point", "correct": false, "rationale": "There is no meaningful zero for agreement." }
+      ],
+      "explanation": "Mnemonic NOIR: Nominal (names), Ordinal (order), Interval (equal intervals, arbitrary zero — e.g. IQ, temperature in °F), Ratio (true zero — e.g. number of sessions attended). The scale constrains which statistics are legitimate.",
+      "refs": ["openstax-statistics", "apa-testing-standards"]
+    },
+    {
+      "id": "d1-conf-051",
+      "type": "recall",
+      "domain": "D1",
+      "task": "1F",
+      "cacrep": ["professional-ethics"],
+      "tags": ["confidentiality", "hiv", "communicable-disease"],
+      "prompt": "What conditions must be met before a counselor may disclose that a client has a life-threatening communicable disease to an identifiable third party at risk?",
+      "answer": "The disease must be known to be both communicable and life-threatening; the third party must be identifiable and at demonstrable and high risk of contracting it; the counselor should first assess whether the client has already informed the third party or intends to do so imminently; and the counselor should consider applicable laws, which vary considerably by state and sometimes prohibit disclosure.",
+      "explanation": "The code permits — it does not require — disclosure, and state public health law may override the ethical latitude in either direction. Consultation and documentation are essential here.",
+      "refs": ["aca-ethics", "nbcc-ethics"]
+    },
+    {
+      "id": "d1-selfdisclosure-052",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1D",
+      "cacrep": ["helping-relationships", "professional-ethics"],
+      "tags": ["self-disclosure", "boundaries"],
+      "prompt": "What is the guiding test for whether counselor self-disclosure is appropriate?",
+      "choices": [
+        { "text": "Whether it serves the client's therapeutic goals rather than the counselor's own needs", "correct": true, "rationale": "Purpose is the discriminating factor: disclosure is a clinical intervention, judged by whether it advances the client's work." },
+        { "text": "Whether the counselor feels comfortable sharing the information", "correct": false, "rationale": "Counselor comfort is about the counselor, which is exactly the wrong reference point." },
+        { "text": "Whether the client has asked a direct question", "correct": false, "rationale": "A direct question warrants a thoughtful response, but does not by itself make disclosure therapeutic." },
+        { "text": "Whether the disclosure concerns events more than five years in the past", "correct": false, "rationale": "There is no such time rule; relevance and purpose govern." }
+      ],
+      "explanation": "Useful self-disclosure is brief, relevant, and returns focus to the client. A reliable warning sign is noticing that the client has begun attending to the counselor's experience instead of their own.",
+      "refs": ["aca-ethics", "samhsa-tip65"]
+    },
+    {
+      "id": "d1-impairment-053",
+      "type": "scenario",
+      "domain": "D1",
+      "task": "1V",
+      "cacrep": ["professional-ethics"],
+      "tags": ["colleague-impairment", "reporting"],
+      "prompt": "A counselor observes that a colleague repeatedly smells of alcohol before afternoon sessions. What is the appropriate response?",
+      "choices": [
+        { "text": "Address it with the colleague directly where feasible, and if that fails or clients are at risk, report through the appropriate institutional or licensing channel", "correct": true, "rationale": "The codes prefer informal resolution first when it stands a reasonable chance and would not violate confidentiality, escalating when it does not." },
+        { "text": "Do nothing, since the colleague's health is a private matter", "correct": false, "rationale": "Client safety overrides collegial discretion where impairment is suspected." },
+        { "text": "Report anonymously to the licensing board immediately without any other step", "correct": false, "rationale": "Immediate escalation may be warranted when risk is severe, but the codes generally favour attempting informal resolution first." },
+        { "text": "Tell the colleague's clients so they can decide whether to continue", "correct": false, "rationale": "This breaches the colleague's privacy and puts clients in an untenable position without resolving anything." }
+      ],
+      "explanation": "The parallel duty to self-monitoring is monitoring colleagues. The general sequence is informal resolution, then institutional channels, then the licensing body, with the sequence compressed when clients face immediate risk.",
+      "refs": ["aca-ethics", "nbcc-ethics", "statpearls-burnout"]
+    },
+    {
+      "id": "d1-outcome-054",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1B",
+      "cacrep": ["research"],
+      "tags": ["outcome-measurement", "practice-evaluation"],
+      "prompt": "Why is routine outcome monitoring considered an ethical practice and not merely a research activity?",
+      "choices": [
+        { "text": "Because counselors are obliged to monitor effectiveness and discontinue or modify services that are not helping the client", "correct": true, "rationale": "The obligation to avoid continuing ineffective services requires some systematic means of knowing whether they are effective." },
+        { "text": "Because insurers require it for reimbursement", "correct": false, "rationale": "Payer requirements may exist but are not the ethical rationale." },
+        { "text": "Because it produces publishable data on treatment efficacy", "correct": false, "rationale": "Contribution to knowledge is a by-product, not the ethical basis for monitoring an individual client's progress." },
+        { "text": "Because it protects the counselor against malpractice claims", "correct": false, "rationale": "Risk management is a side benefit; the ethical grounding is client welfare." }
+      ],
+      "explanation": "Deterioration is common enough — and clinician judgement poor enough at detecting it — that systematic feedback measurably improves outcomes. Pre- and post-measures also give the client concrete evidence of change.",
+      "refs": ["aca-ethics", "oer-research-methods", "apa-testing-standards"]
+    },
+    {
+      "id": "d1-subpoena-055",
+      "type": "scenario",
+      "domain": "D1",
+      "task": "1S",
+      "cacrep": ["professional-ethics"],
+      "tags": ["subpoena", "court", "records"],
+      "prompt": "A counselor receives a subpoena from an attorney demanding a client's complete file. What should the counselor do first?",
+      "choices": [
+        { "text": "Contact the client, assert privilege on their behalf unless they authorize release, and seek legal consultation", "correct": true, "rationale": "A subpoena from an attorney is a request that must be responded to, not automatic authorization to disclose. Privilege belongs to the client." },
+        { "text": "Send the complete file immediately, since a subpoena is a legal order", "correct": false, "rationale": "An attorney-issued subpoena is not a court order, and complying without asserting privilege can itself be a breach." },
+        { "text": "Ignore the subpoena, because counseling records are always privileged", "correct": false, "rationale": "Ignoring a subpoena risks contempt; it must be responded to even if the response asserts privilege." },
+        { "text": "Send a summary of the treatment instead of the file, without consulting anyone", "correct": false, "rationale": "Substituting a summary on one's own initiative is still an unauthorized disclosure." }
+      ],
+      "explanation": "The distinction that matters: a subpoena compels a response, while a court order signed by a judge can compel disclosure. Between the two sits the client's privilege, which the counselor asserts on their behalf.",
+      "refs": ["jaffee-redmond", "aca-ethics", "hhs-hipaa-privacy"]
+    },
+    {
+      "id": "d1-research-056",
+      "type": "recall",
+      "domain": "D1",
+      "task": "1B",
+      "cacrep": ["research"],
+      "tags": ["research-ethics", "irb", "consent"],
+      "prompt": "What core protections must research involving human participants provide?",
+      "answer": "Voluntary informed consent describing purpose, procedures, risks, and benefits; the right to withdraw at any point without penalty; confidentiality or anonymity of data; protection of vulnerable populations with additional safeguards; independent review (an IRB or equivalent); and debriefing where any deception was used.",
+      "explanation": "Counselors doing research with their own clients face an inherent power differential, so extra care is needed to ensure participation is genuinely voluntary and that declining does not affect care.",
+      "refs": ["oer-research-methods", "aca-ethics"]
+    },
+    {
+      "id": "d1-ai-057",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1M",
+      "cacrep": ["professional-ethics"],
+      "tags": ["technology", "ai", "confidentiality"],
+      "prompt": "A counselor wants to use an AI transcription service to draft progress notes from session recordings. What is the primary ethical consideration?",
+      "choices": [
+        { "text": "Whether client information is protected — requiring informed consent, a business associate agreement, and understanding of how the vendor stores and uses the data", "correct": true, "rationale": "Sending session content to a third-party processor is a disclosure of protected health information and must be handled as one." },
+        { "text": "Whether the transcription is grammatically accurate", "correct": false, "rationale": "Accuracy matters clinically but is secondary to the confidentiality exposure." },
+        { "text": "Whether using AI reduces the counselor's billable time", "correct": false, "rationale": "Efficiency is a business consideration, not the governing ethical one." },
+        { "text": "There is no ethical concern, since the counselor reviews the output before filing", "correct": false, "rationale": "Review does not undo the transmission of client data to an outside service." }
+      ],
+      "explanation": "Recording requires client consent in its own right, separate from consent to use a vendor. This area is developing quickly: NBCC's 2027 specification adds explicit content on the ethical and legal use of AI in counseling practice.",
+      "refs": ["aca-ethics", "hhs-hipaa-privacy", "nbcc-2027-spec"]
+    },
+    {
+      "id": "d1-cultural-058",
+      "type": "scenario",
+      "domain": "D1",
+      "task": "1E",
+      "cacrep": ["social-cultural", "professional-ethics"],
+      "tags": ["interpreter", "language-access", "culture"],
+      "prompt": "A client's English is limited and their teenage child offers to interpret during sessions. How should the counselor respond?",
+      "choices": [
+        { "text": "Decline the child's help and arrange a trained, impartial interpreter", "correct": true, "rationale": "Using a family member — particularly a child — creates role reversal, compromises accuracy, and destroys confidentiality within the family." },
+        { "text": "Accept, because a family member understands the client's context best", "correct": false, "rationale": "Contextual knowledge does not outweigh the harm of parentification and the loss of candour." },
+        { "text": "Accept for the intake only, then arrange an interpreter afterwards", "correct": false, "rationale": "Intake is often the most sensitive session, containing history the client may not want their child to hear." },
+        { "text": "Proceed in English and simplify vocabulary", "correct": false, "rationale": "This denies meaningful access and will produce an unreliable clinical picture." }
+      ],
+      "explanation": "Trained interpreters are bound by confidentiality and trained to render meaning without editing. Best practice includes briefing the interpreter beforehand, speaking directly to the client, and allowing extra session time.",
+      "refs": ["aca-ethics", "msjcc", "ada-title-iii"]
+    },
+    {
+      "id": "d1-diagnosis-059",
+      "type": "cloze",
+      "domain": "D1",
+      "task": "1C",
+      "cacrep": ["professional-ethics", "assessment"],
+      "tags": ["diagnosis", "culture", "harm"],
+      "prompt": "Counselors may refrain from making or reporting a diagnosis when they believe {{it would cause harm to the client or others}}, and must recognize that culture affects how presenting problems are defined and experienced.",
+      "answer": "it would cause harm to the client or others",
+      "explanation": "The code pairs this discretion with a duty to consider historical and social prejudices in the misdiagnosis and pathologizing of particular groups — a caution grounded in documented diagnostic disparities.",
+      "refs": ["aca-ethics", "dsm5tr", "msjcc"]
+    },
+    {
+      "id": "d1-scope-060",
+      "type": "mcq",
+      "domain": "D1",
+      "task": "1D",
+      "cacrep": ["professional-ethics"],
+      "tags": ["scope-of-practice", "medication", "collaboration"],
+      "prompt": "A client asks the counselor whether they should stop taking their prescribed antidepressant. What is the appropriate response?",
+      "choices": [
+        { "text": "Explore the client's concerns and encourage them to discuss the question with the prescriber, offering to coordinate care with a release", "correct": true, "rationale": "Medication decisions lie outside counseling scope of practice; the counselor's role is to explore, support, and coordinate." },
+        { "text": "Advise the client to taper the medication gradually to avoid withdrawal effects", "correct": false, "rationale": "This is direct medical advice and outside scope, regardless of how sound it sounds." },
+        { "text": "Advise the client to continue the medication because stopping would be dangerous", "correct": false, "rationale": "Also medical advice, and equally outside scope even though the direction is more conservative." },
+        { "text": "Decline to discuss medication at all, since it is a medical matter", "correct": false, "rationale": "Refusing to explore the client's concerns abandons a clinically important topic; the boundary is on advising, not discussing." }
+      ],
+      "explanation": "Counselors need working knowledge of common psychotropics — their effects, side effects, and adherence issues — to explore concerns competently and coordinate with prescribers, without ever directing medication decisions themselves.",
+      "refs": ["aca-ethics", "nimh-depression", "samhsa-tip42"]
+    }
+  ]
+}

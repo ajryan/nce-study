@@ -1,0 +1,1120 @@
+{
+  "domain": "D3",
+  "cards": [
+    {
+      "id": "d3-sud-076",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AI",
+      "cacrep": ["helping-relationships"],
+      "tags": ["substance-use", "withdrawal", "medical-risk"],
+      "prompt": "Withdrawal from which substance class is most likely to be life-threatening without medical management?",
+      "choices": [
+        { "text": "Alcohol and benzodiazepines", "correct": true, "rationale": "CNS depressant withdrawal can produce seizures and delirium tremens, which carry real mortality risk and require medical detoxification." },
+        { "text": "Opioids", "correct": false, "rationale": "Opioid withdrawal is intensely uncomfortable but rarely fatal in otherwise healthy adults, though it is dangerous in pregnancy and after loss of tolerance." },
+        { "text": "Cannabis", "correct": false, "rationale": "Cannabis withdrawal produces irritability, sleep disturbance, and appetite change, but is not life-threatening." },
+        { "text": "Stimulants such as cocaine and methamphetamine", "correct": false, "rationale": "Stimulant withdrawal produces severe dysphoria, fatigue, and suicide risk, but not the autonomic instability of CNS depressant withdrawal." }
+      ],
+      "explanation": "This is a high-yield safety item. A client drinking heavily and daily should never be advised to stop abruptly without medical evaluation. Note the counterintuitive point: opioid withdrawal feels far worse but alcohol withdrawal is the one that kills.",
+      "refs": ["samhsa-tip42", "asam-criteria"]
+    },
+    {
+      "id": "d3-sud-077",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AI",
+      "cacrep": ["helping-relationships"],
+      "tags": ["harm-reduction", "abstinence", "philosophy"],
+      "prompt": "What best characterizes a harm reduction approach to substance use?",
+      "choices": [
+        { "text": "Meeting clients where they are and reducing the negative consequences of use, without requiring abstinence as a precondition for services", "correct": true, "rationale": "Harm reduction prioritizes reducing morbidity and mortality and keeps people engaged with services regardless of their use status." },
+        { "text": "Encouraging continued substance use as a treatment goal", "correct": false, "rationale": "Harm reduction does not promote use; it reduces the damage associated with it and often serves as a pathway to reduced use." },
+        { "text": "Requiring abstinence before any other intervention can begin", "correct": false, "rationale": "That describes an abstinence-only model, which harm reduction was developed as an alternative to." },
+        { "text": "Providing services only to clients in sustained recovery", "correct": false, "rationale": "This inverts the approach entirely." }
+      ],
+      "explanation": "Naloxone distribution, syringe services, medication for opioid use disorder, and safer-use education are all harm reduction. The evidence is strong: these approaches reduce overdose death and increase, rather than decrease, eventual treatment entry.",
+      "refs": ["samhsa-tip42", "samhsa-tip65"]
+    },
+    {
+      "id": "d3-sud-078",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3AI",
+      "cacrep": ["helping-relationships"],
+      "tags": ["moud", "medication", "opioids"],
+      "prompt": "Name the three FDA-approved medications for opioid use disorder and their mechanism.",
+      "answer": "Methadone — a full opioid agonist, dispensed through licensed opioid treatment programs. Buprenorphine — a partial opioid agonist with a ceiling effect that reduces overdose risk, prescribable in office-based settings. Naltrexone — an opioid antagonist that blocks the effects of opioids, available as a monthly injection, requiring full detoxification before initiation.",
+      "explanation": "Medication for opioid use disorder substantially reduces mortality and is the standard of care, yet remains stigmatized as 'replacing one drug with another'. Counselors should be able to correct that misconception rather than reinforce it.",
+      "refs": ["samhsa-tip42", "asam-criteria"]
+    },
+    {
+      "id": "d3-sud-079",
+      "type": "scenario",
+      "domain": "D3",
+      "task": "3AI",
+      "cacrep": ["helping-relationships"],
+      "tags": ["relapse", "lapse", "prevention"],
+      "prompt": "A client six months into recovery drinks at a wedding, then concludes they have ruined everything and resumes daily drinking. What cognitive process does this illustrate?",
+      "choices": [
+        { "text": "The abstinence violation effect — attributing a lapse to a stable internal failure, which converts a slip into a full relapse", "correct": true, "rationale": "Marlatt's concept describes exactly this: the meaning assigned to a lapse drives whether it escalates." },
+        { "text": "Tolerance", "correct": false, "rationale": "Tolerance is the physiological need for increased amounts to achieve the same effect." },
+        { "text": "Craving", "correct": false, "rationale": "Craving may have preceded the lapse but does not explain the escalation that followed it." },
+        { "text": "Withdrawal", "correct": false, "rationale": "Withdrawal is the physiological response to cessation, not the cognitive response to a lapse." }
+      ],
+      "explanation": "Relapse prevention therefore includes preparing clients for lapses in advance and framing them as recoverable events rather than proof of failure. Distinguishing lapse (a single episode) from relapse (return to the prior pattern) is a deliberate part of the intervention.",
+      "refs": ["samhsa-tip65", "stages-of-change", "samhsa-tip42"]
+    },
+    {
+      "id": "d3-sud-080",
+      "type": "cloze",
+      "domain": "D3",
+      "task": "3AI",
+      "cacrep": ["helping-relationships"],
+      "tags": ["motivational-interviewing", "change-talk"],
+      "prompt": "In motivational interviewing, client statements favouring change — desire, ability, reasons, need, commitment, activation, and taking steps — are collectively called {{change talk}}, and the counselor's task is to evoke and reinforce it.",
+      "answer": "change talk",
+      "explanation": "Mnemonic DARN-CAT: Desire, Ability, Reasons, Need (preparatory change talk); Commitment, Activation, Taking steps (mobilizing change talk). Its opposite is sustain talk, and arguing for change reliably produces more of it from the client.",
+      "refs": ["samhsa-tip35", "mi-org"]
+    },
+    {
+      "id": "d3-sud-081",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AI",
+      "cacrep": ["helping-relationships", "social-cultural"],
+      "tags": ["twelve-step", "mutual-help", "referral"],
+      "prompt": "A client is uncomfortable with the spiritual language of Alcoholics Anonymous. What is the most appropriate counselor response?",
+      "choices": [
+        { "text": "Acknowledge the concern and offer information about alternative mutual-help options such as SMART Recovery or secular groups", "correct": true, "rationale": "Multiple pathways to recovery exist, and fit with the client's worldview improves engagement." },
+        { "text": "Explain that AA is the only approach with proven results and encourage persistence", "correct": false, "rationale": "This overstates the evidence and disregards a legitimate concern; several pathways have support." },
+        { "text": "Advise the client that mutual-help groups are unnecessary if they attend counseling", "correct": false, "rationale": "Mutual-help participation is associated with better outcomes and should not be dismissed." },
+        { "text": "Suggest the client reinterpret 'higher power' as whatever they prefer, and drop the topic", "correct": false, "rationale": "This reframing helps some clients, but presenting it as the only option forecloses genuine alternatives." }
+      ],
+      "explanation": "Twelve-step facilitation has good evidence, but so does matching the client to an acceptable pathway. Imposing a single model regardless of fit is a frequent source of disengagement.",
+      "refs": ["samhsa-tip42", "samhsa-tip65", "div12-treatments"]
+    },
+    {
+      "id": "d3-sud-082",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AI",
+      "cacrep": ["helping-relationships"],
+      "tags": ["enabling", "codependency", "family"],
+      "prompt": "A client's partner repeatedly calls in sick to the client's employer to cover for their drinking. How is this best addressed?",
+      "choices": [
+        { "text": "Explore with the family how well-intentioned protective actions can remove natural consequences and inadvertently sustain the drinking", "correct": true, "rationale": "Framing it non-judgementally as an understandable protective response opens change; labelling the partner as an enabler tends to close it down." },
+        { "text": "Tell the partner they are enabling and must stop immediately", "correct": false, "rationale": "Blaming language typically produces defensiveness and ignores the fear driving the behaviour." },
+        { "text": "Advise the partner to end the relationship", "correct": false, "rationale": "Directing a major relationship decision exceeds the counselor's role." },
+        { "text": "Focus only on the client and exclude the partner from treatment", "correct": false, "rationale": "Family involvement improves substance use outcomes and the family system is part of what maintains the pattern." }
+      ],
+      "explanation": "Approaches such as CRAFT (Community Reinforcement and Family Training) work with concerned significant others and have evidence for both getting the person into treatment and improving the family member's own wellbeing.",
+      "refs": ["samhsa-tip42", "samhsa-tip65"]
+    },
+    {
+      "id": "d3-family-083",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3AW",
+      "cacrep": ["helping-relationships"],
+      "tags": ["bowen", "differentiation", "family-systems"],
+      "prompt": "Define differentiation of self and triangulation in Bowen family systems theory.",
+      "answer": "Differentiation of self is the capacity to maintain a clear sense of one's own thoughts and values while staying emotionally connected to the family — balancing individuality against togetherness, and separating intellectual from emotional functioning. Triangulation is the process by which a two-person system under stress draws in a third party to stabilize the anxiety, diffusing tension but preventing resolution of the original dyadic issue.",
+      "explanation": "Other core Bowen concepts: the nuclear family emotional system, family projection process, emotional cutoff, multigenerational transmission process, sibling position, and societal emotional process. The genogram is his signature assessment tool.",
+      "refs": ["samhsa-tip65", "statpearls-group-therapy"]
+    },
+    {
+      "id": "d3-family-084",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AW",
+      "cacrep": ["helping-relationships"],
+      "tags": ["minuchin", "structural", "boundaries"],
+      "prompt": "In structural family therapy, a family in which a parent and child share an over-close alliance that excludes the other parent would be described as having what?",
+      "choices": [
+        { "text": "Diffuse boundaries producing enmeshment, and likely a cross-generational coalition", "correct": true, "rationale": "Minuchin described boundaries on a continuum from rigid (disengaged) to diffuse (enmeshed), with cross-generational coalitions as a common dysfunctional structure." },
+        { "text": "Rigid boundaries producing disengagement", "correct": false, "rationale": "Rigid boundaries produce distance and low involvement, the opposite of what is described." },
+        { "text": "A double bind", "correct": false, "rationale": "The double bind is a Bateson communication concept involving contradictory messages that cannot be escaped or commented on." },
+        { "text": "Complementary schismogenesis", "correct": false, "rationale": "Not a structural family therapy concept for this pattern." }
+      ],
+      "explanation": "Minuchin's interventions include joining, enactment (having the family demonstrate the pattern in session), boundary-making, and unbalancing. The therapeutic goal is restructuring the family's organization, particularly restoring a functional parental subsystem.",
+      "refs": ["samhsa-tip65"]
+    },
+    {
+      "id": "d3-family-085",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AW",
+      "cacrep": ["helping-relationships"],
+      "tags": ["strategic", "paradox", "family-therapy"],
+      "prompt": "A therapist instructs a couple who argue nightly to schedule a deliberate argument at a set time each evening. What technique is this?",
+      "choices": [
+        { "text": "Prescribing the symptom — a paradoxical intervention", "correct": true, "rationale": "Deliberately prescribing the problem behaviour places it under voluntary control and disrupts the pattern that sustains it." },
+        { "text": "Reframing", "correct": false, "rationale": "Reframing changes the meaning attached to a behaviour rather than directing its performance." },
+        { "text": "Enactment", "correct": false, "rationale": "Enactment has the family perform their interaction in session so the therapist can observe and intervene." },
+        { "text": "Miracle question", "correct": false, "rationale": "The miracle question is a solution-focused technique for eliciting a picture of the preferred future." }
+      ],
+      "explanation": "Paradoxical interventions come from strategic and Milan approaches (Haley, Madanes, Selvini Palazzoli). They require care and a solid alliance, and are generally contraindicated where there is risk of harm.",
+      "refs": ["samhsa-tip65"]
+    },
+    {
+      "id": "d3-family-086",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3AO",
+      "cacrep": ["helping-relationships"],
+      "tags": ["blended-family", "stepfamily", "development"],
+      "prompt": "What are the most common early challenges in blended (step) families, and what guidance follows?",
+      "answer": "Unrealistic expectations of instant love and cohesion; loyalty conflicts for children between a stepparent and a non-residential biological parent; unclear stepparent role and discipline authority; grief over the original family that persists alongside the new one; differing parenting styles and household rules; and boundary issues with ex-partners. Guidance: allow years rather than months for integration, keep discipline with the biological parent initially while the stepparent builds a relationship first, maintain the couple as a strong subsystem, and normalize ambivalence.",
+      "explanation": "The single most consistent recommendation is that stepparents build a friendly relationship before assuming a disciplinary role. Attempting authority early is the most common precipitant of stepfamily conflict.",
+      "refs": ["samhsa-tip65", "statpearls-erikson"]
+    },
+    {
+      "id": "d3-divorce-087",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AS",
+      "cacrep": ["human-growth"],
+      "tags": ["divorce", "children", "adjustment"],
+      "prompt": "What most strongly predicts poor child adjustment following parental divorce?",
+      "choices": [
+        { "text": "Ongoing high-conflict between parents, especially conflict the child is drawn into", "correct": true, "rationale": "Inter-parental conflict, not the divorce itself, is the most consistent predictor of child difficulty." },
+        { "text": "The divorce itself, regardless of how it is handled", "correct": false, "rationale": "Most children adjust within about two years when conflict is contained; the event alone is not determinative." },
+        { "text": "Whether the parents remarry", "correct": false, "rationale": "Remarriage introduces its own adjustments but is not the strongest predictor." },
+        { "text": "The child's age at the time of the divorce", "correct": false, "rationale": "Age shapes how difficulties are expressed rather than the overall level of risk." }
+      ],
+      "explanation": "This gives clear intervention targets: reduce conflict, keep children out of the middle, avoid using them as messengers or confidants, and support consistent parenting across households. Children in high-conflict intact families often fare worse than those in low-conflict divorced ones.",
+      "refs": ["cdc-ace", "harvard-neglect", "samhsa-tip65"]
+    },
+    {
+      "id": "d3-coparenting-088",
+      "type": "scenario",
+      "domain": "D3",
+      "task": "3AW",
+      "cacrep": ["helping-relationships"],
+      "tags": ["co-parenting", "conflict", "children"],
+      "prompt": "Divorced parents in counseling repeatedly relitigate the marriage rather than discuss their child. How should the counselor redirect?",
+      "choices": [
+        { "text": "Establish an explicit co-parenting focus, containing marital history and redirecting to concrete, child-centred decisions", "correct": true, "rationale": "Co-parenting counseling has a defined scope; without that boundary the sessions reproduce the conflict they are meant to reduce." },
+        { "text": "Allow full processing of marital grievances until they are exhausted", "correct": false, "rationale": "In high-conflict dyads this typically escalates rather than resolves, and it is not the presenting purpose." },
+        { "text": "Meet with each parent separately and relay messages between them", "correct": false, "rationale": "Becoming the message conduit places the counselor in a triangulated position." },
+        { "text": "Recommend the parents cease all communication", "correct": false, "rationale": "Co-parents must communicate about the child; the goal is structuring it, not ending it." }
+      ],
+      "explanation": "Parallel parenting — minimal direct contact with communication through structured written channels — is a legitimate option for high-conflict pairs who cannot cooperate. Counselors should also clarify at the outset that this role is distinct from custody evaluation.",
+      "refs": ["samhsa-tip65", "aca-ethics"]
+    },
+    {
+      "id": "d3-couples-089",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3AV",
+      "cacrep": ["helping-relationships"],
+      "tags": ["gottman", "couples", "communication"],
+      "prompt": "Name Gottman's 'Four Horsemen' and their antidotes.",
+      "answer": "Criticism — attacking character rather than behaviour; antidote is a gentle start-up using 'I' statements about a specific behaviour. Contempt — expressions of superiority such as mockery, sarcasm, or eye-rolling; antidote is building a culture of appreciation and respect. Defensiveness — warding off blame or counter-attacking; antidote is taking responsibility for even part of the problem. Stonewalling — withdrawing and shutting down; antidote is physiological self-soothing and taking a structured break.",
+      "explanation": "Contempt is the single strongest predictor of relationship dissolution in Gottman's research. Stonewalling frequently reflects physiological flooding rather than indifference, which is why the antidote is a timed break rather than pushing to continue.",
+      "refs": ["samhsa-tip65", "div12-treatments"]
+    },
+    {
+      "id": "d3-couples-090",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AR",
+      "cacrep": ["helping-relationships"],
+      "tags": ["eft", "attachment", "couples"],
+      "prompt": "Emotionally Focused Therapy for couples understands relationship distress primarily as what?",
+      "choices": [
+        { "text": "A disruption of attachment security, with negative interaction cycles driven by unmet attachment needs and protest behaviours", "correct": true, "rationale": "EFT is explicitly attachment-based; the surface conflict is understood as protest against disconnection." },
+        { "text": "A deficit in communication skills requiring training", "correct": false, "rationale": "Skills-based models exist, but EFT locates the problem in emotional connection rather than technique." },
+        { "text": "The result of irrational beliefs about the relationship", "correct": false, "rationale": "That is closer to a cognitive-behavioural couples approach." },
+        { "text": "An imbalance in the exchange of rewards between partners", "correct": false, "rationale": "That describes social exchange or behavioural marital therapy." }
+      ],
+      "explanation": "EFT's classic cycle is pursue–withdraw: one partner escalates to gain connection while the other withdraws to reduce conflict, each move confirming the other's fear. EFT has strong empirical support for couple distress.",
+      "refs": ["div12-treatments", "nice-attachment", "samhsa-tip65"]
+    },
+    {
+      "id": "d3-ipv-091",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AU",
+      "cacrep": ["assessment", "helping-relationships"],
+      "tags": ["intimate-partner-violence", "coercive-control", "safety"],
+      "prompt": "Which factor is most associated with lethality risk in intimate partner violence?",
+      "choices": [
+        { "text": "A history of strangulation, access to firearms, threats to kill, and recent separation", "correct": true, "rationale": "These are established high-lethality indicators; non-fatal strangulation is a particularly strong predictor of later homicide." },
+        { "text": "Frequency of verbal arguments", "correct": false, "rationale": "Argument frequency does not distinguish violence from ordinary conflict or predict lethality." },
+        { "text": "Length of the relationship", "correct": false, "rationale": "Duration is not a lethality indicator." },
+        { "text": "Whether the couple has attended counseling before", "correct": false, "rationale": "Prior counseling is not a risk marker." }
+      ],
+      "explanation": "Separation is a period of markedly elevated danger, which is why 'why doesn't she just leave' misreads the risk. Safety planning must account for this rather than assuming leaving resolves the threat.",
+      "refs": ["cdc-ipv", "sprc", "samhsa-tip57"]
+    },
+    {
+      "id": "d3-ipv-092",
+      "type": "cloze",
+      "domain": "D3",
+      "task": "3AT",
+      "cacrep": ["helping-relationships"],
+      "tags": ["coercive-control", "power", "abuse"],
+      "prompt": "The Power and Control Wheel frames intimate partner abuse as a pattern of {{coercive control}} — including intimidation, isolation, economic control, and using children — rather than as isolated incidents of physical violence.",
+      "answer": "coercive control",
+      "explanation": "This framing matters clinically because it captures abuse that leaves no physical evidence, and explains why 'the violence stopped' does not mean the abuse ended. It also clarifies why conjoint therapy is generally contraindicated.",
+      "refs": ["cdc-ipv", "samhsa-tip57"]
+    },
+    {
+      "id": "d3-childabuse-093",
+      "type": "scenario",
+      "domain": "D3",
+      "task": "3AP",
+      "cacrep": ["assessment"],
+      "tags": ["child-abuse", "disclosure", "interviewing"],
+      "prompt": "A 7-year-old begins disclosing possible sexual abuse. What is the appropriate counselor response?",
+      "choices": [
+        { "text": "Listen supportively with open-ended prompts, avoid leading or repeated questioning, document the child's own words, and report", "correct": true, "rationale": "Detailed investigative interviewing is the role of trained forensic interviewers; repeated or leading questioning can contaminate the account and harm any prosecution." },
+        { "text": "Ask detailed clarifying questions to establish exactly what happened before reporting", "correct": false, "rationale": "Attempting to substantiate the allegation risks contaminating evidence and exceeds the counselor's role." },
+        { "text": "Tell the child you will keep it a secret so they feel safe continuing", "correct": false, "rationale": "This is a promise that cannot be kept and that will be broken by the mandated report." },
+        { "text": "Wait to see whether the child repeats the disclosure at the next session", "correct": false, "rationale": "Mandated reporting is triggered by reasonable suspicion; waiting delays protection." }
+      ],
+      "explanation": "Say something like 'I'm glad you told me, and I need to tell someone whose job is keeping kids safe.' Never promise secrecy, and never suggest the child was at fault. Documentation should quote the child verbatim rather than paraphrasing.",
+      "refs": ["childwelfare-reporting", "samhsa-tip57", "aca-ethics"]
+    },
+    {
+      "id": "d3-attachment-094",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AD",
+      "cacrep": ["human-growth"],
+      "tags": ["foster-care", "attachment", "placement"],
+      "prompt": "A child in foster care has had six placements in three years. What is the primary developmental concern?",
+      "choices": [
+        { "text": "Disrupted attachment and the internalization of relationships as unreliable, affecting later trust and regulation", "correct": true, "rationale": "Repeated placement disruption undermines the stable caregiving relationships attachment depends on." },
+        { "text": "Academic delay as the sole significant consequence", "correct": false, "rationale": "Academic effects are real but secondary to the relational impact." },
+        { "text": "That the child is inherently difficult to place", "correct": false, "rationale": "This locates the problem in the child rather than the system and is a harmful framing." },
+        { "text": "Loss of contact with biological siblings only", "correct": false, "rationale": "Sibling separation matters but is not the primary developmental concern named here." }
+      ],
+      "explanation": "Placement stability is one of the strongest modifiable predictors of outcome in foster care. Behaviour that gets a child labelled 'hard to place' is frequently an adaptive response to earlier disruption, which is why trauma-informed foster care training matters.",
+      "refs": ["nice-attachment", "harvard-neglect", "samhsa-tip57"]
+    },
+    {
+      "id": "d3-parenting-095",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3AW",
+      "cacrep": ["human-growth"],
+      "tags": ["parenting-styles", "baumrind"],
+      "prompt": "Name Baumrind's parenting styles across the dimensions of demandingness and responsiveness, and their typical outcomes.",
+      "answer": "Authoritative — high demandingness, high responsiveness; associated with the best outcomes in social competence, self-regulation, and academic achievement. Authoritarian — high demandingness, low responsiveness; associated with obedience but lower self-esteem and social competence. Permissive/indulgent — low demandingness, high responsiveness; associated with poor impulse control and difficulty with authority. Neglectful/uninvolved — low on both; associated with the poorest outcomes across domains.",
+      "explanation": "The frequently confused pair is authoritative versus authoritarian. Authoritative parenting combines firm expectations with warmth and explanation; authoritarian combines demands with low warmth and 'because I said so'.",
+      "refs": ["statpearls-milestones", "harvard-neglect"]
+    },
+    {
+      "id": "d3-parenting-096",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AW",
+      "cacrep": ["human-growth", "social-cultural"],
+      "tags": ["parenting", "culture", "bias"],
+      "prompt": "How should a counselor apply parenting-style research across cultures?",
+      "choices": [
+        { "text": "Cautiously — the association between authoritative parenting and outcomes was established largely in White middle-class U.S. samples and does not replicate uniformly across cultural groups", "correct": true, "rationale": "Cross-cultural research shows that more directive parenting is associated with good outcomes in some cultural contexts, particularly where it is normative and paired with warmth." },
+        { "text": "Universally — authoritative parenting produces the best outcomes in all cultural contexts", "correct": false, "rationale": "This overgeneralizes from a limited sample base and can pathologize normative practices." },
+        { "text": "By disregarding parenting research entirely as culturally biased", "correct": false, "rationale": "The research retains value; the requirement is contextual interpretation, not dismissal." },
+        { "text": "By assessing only whether parents use physical discipline", "correct": false, "rationale": "This reduces a multidimensional construct to a single practice." }
+      ],
+      "explanation": "This is a good example of the general caution about normative samples. The distinction between culturally normative firm parenting and maltreatment remains important, but the line is not drawn by comparing against a single cultural template.",
+      "refs": ["msjcc", "statpearls-milestones", "childwelfare-reporting"]
+    },
+    {
+      "id": "d3-dating-097",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AR",
+      "cacrep": ["helping-relationships"],
+      "tags": ["dating", "relationships", "young-adults"],
+      "prompt": "A young adult client repeatedly enters relationships with emotionally unavailable partners and cannot understand why. What framework is most immediately useful?",
+      "choices": [
+        { "text": "Attachment patterns and internal working models formed in earlier relationships, which shape partner selection and expectations", "correct": true, "rationale": "Repetitive relational patterns are well explained by internal working models operating outside awareness." },
+        { "text": "A skills deficit requiring dating technique instruction", "correct": false, "rationale": "The pattern is about selection and expectation, not technique." },
+        { "text": "Random chance in partner availability", "correct": false, "rationale": "A consistent repeating pattern is unlikely to be chance and forecloses useful exploration." },
+        { "text": "A personality disorder requiring formal diagnosis", "correct": false, "rationale": "Relational patterns of this kind are common and do not by themselves indicate a personality disorder." }
+      ],
+      "explanation": "This is the relational parallel to the psychodynamic idea of repetition compulsion and to schema therapy's early maladaptive schemas. The therapeutic relationship often provides live material, since the same expectations appear there.",
+      "refs": ["nice-attachment", "statpearls-erikson", "div12-treatments"]
+    },
+    {
+      "id": "d3-remarriage-098",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3R",
+      "cacrep": ["helping-relationships"],
+      "tags": ["remarriage", "commitment", "transitions"],
+      "prompt": "A couple entering remarriage asks what most commonly causes difficulty in second marriages. What does the evidence suggest?",
+      "choices": [
+        { "text": "Stepfamily and financial complexity, unresolved issues from the previous marriage, and unrealistic expectations", "correct": true, "rationale": "Remarriages carry structural complications absent from first marriages, and prior unresolved patterns tend to reappear." },
+        { "text": "That second marriages fail primarily because of lack of love", "correct": false, "rationale": "This is not supported and offers no actionable focus." },
+        { "text": "That remarriage difficulty is entirely explained by age differences", "correct": false, "rationale": "Not a primary factor in the research." },
+        { "text": "That there are no distinctive challenges beyond those of first marriages", "correct": false, "rationale": "The added complexity of stepchildren, ex-partners, and finances is well documented." }
+      ],
+      "explanation": "Premarital counseling for remarriage should explicitly cover stepparenting roles, financial arrangements including obligations to prior families, relationships with ex-partners, and realistic timelines for family integration.",
+      "refs": ["samhsa-tip65"]
+    },
+    {
+      "id": "d3-communication-099",
+      "type": "scenario",
+      "domain": "D3",
+      "task": "3AV",
+      "cacrep": ["helping-relationships"],
+      "tags": ["communication", "couples", "technique"],
+      "prompt": "A partner says 'You never help around here — you're lazy'. How would a counselor coach a more effective version?",
+      "choices": [
+        { "text": "A specific 'I' statement about behaviour, feeling, and request: 'When the dishes are left overnight, I feel overwhelmed. Could we agree who does them?'", "correct": true, "rationale": "This replaces character attack with a specific behaviour, an owned feeling, and an actionable request — Gottman's gentle start-up." },
+        { "text": "'I feel like you're lazy' — reframed as an I-statement", "correct": false, "rationale": "Prefacing a character judgement with 'I feel like' does not make it an I-statement; it is still criticism." },
+        { "text": "Waiting until resentment builds and then raising several complaints at once", "correct": false, "rationale": "Accumulated grievance-dumping virtually guarantees defensiveness." },
+        { "text": "Withdrawing from the conversation to avoid conflict", "correct": false, "rationale": "This is stonewalling, one of the Four Horsemen." }
+      ],
+      "explanation": "The reliable test for a genuine I-statement is whether the sentence describes the speaker's internal state and a specific observable behaviour, or smuggles in a judgement of the other person. 'Always' and 'never' are usually signals of criticism.",
+      "refs": ["samhsa-tip65", "div12-treatments"]
+    },
+    {
+      "id": "d3-extended-100",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AO",
+      "cacrep": ["social-cultural", "helping-relationships"],
+      "tags": ["extended-family", "culture", "systems"],
+      "prompt": "A client from a collectivist cultural background makes major decisions in consultation with extended family. How should the counselor view this?",
+      "choices": [
+        { "text": "As a culturally normative decision-making structure to be respected and worked with, not as enmeshment to be corrected", "correct": true, "rationale": "Independence-oriented norms are culturally specific; pathologizing family involvement imposes an individualist value." },
+        { "text": "As enmeshment requiring intervention to increase differentiation", "correct": false, "rationale": "Applying differentiation as a universal goal is a well-documented culturally biased error." },
+        { "text": "As evidence the client lacks autonomy and self-efficacy", "correct": false, "rationale": "Collective decision-making is a different structure, not an absence of agency." },
+        { "text": "As irrelevant to counseling since the client attends alone", "correct": false, "rationale": "The family context shapes what change is feasible and acceptable." }
+      ],
+      "explanation": "Concepts such as differentiation, boundaries, and enmeshment were developed within an individualist frame and must be applied with cultural awareness. The clinical question is whether the arrangement is working for the client, not whether it matches a template.",
+      "refs": ["msjcc", "samhsa-tip65"]
+    },
+    {
+      "id": "d3-genogram-101",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3AW",
+      "cacrep": ["assessment", "helping-relationships"],
+      "tags": ["genogram", "assessment", "family"],
+      "prompt": "What is a genogram and what does it capture beyond a family tree?",
+      "answer": "A genogram is a graphic map of at least three generations of a family that records not only structure and biological relationships but also relationship quality (close, conflictual, cutoff, fused), significant events (deaths, divorces, migrations), patterns of illness, substance use, mental health, occupations, and cultural or religious affiliations.",
+      "explanation": "Its clinical value is making multigenerational patterns visible — repeated cutoffs, recurring ages at which crises occur, transmitted roles. Constructing it collaboratively is itself an intervention, often generating insight for the client during the drawing.",
+      "refs": ["samhsa-tip65"]
+    },
+    {
+      "id": "d3-solution-102",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3C",
+      "cacrep": ["helping-relationships"],
+      "tags": ["solution-focused", "exceptions", "brief"],
+      "prompt": "A counselor asks 'Tell me about a time recently when the problem was less of an issue — what was different then?' Which approach does this reflect?",
+      "choices": [
+        { "text": "Solution-focused brief therapy, using exception-finding", "correct": true, "rationale": "Exception questions locate times the problem was absent or reduced, in order to amplify what already works." },
+        { "text": "Cognitive restructuring", "correct": false, "rationale": "Restructuring examines and tests the accuracy of specific thoughts." },
+        { "text": "Psychodynamic interpretation", "correct": false, "rationale": "Interpretation links current material to unconscious processes or past relationships." },
+        { "text": "Systematic desensitization", "correct": false, "rationale": "A behavioural exposure technique pairing relaxation with a fear hierarchy." }
+      ],
+      "explanation": "Core solution-focused techniques: the miracle question, exception-finding, scaling questions, and coping questions. The stance is that clients already possess resources and that detailed problem analysis is often unnecessary for change.",
+      "refs": ["samhsa-tip65", "div12-treatments"]
+    },
+    {
+      "id": "d3-narrative-103",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3C",
+      "cacrep": ["helping-relationships"],
+      "tags": ["narrative", "externalization", "white"],
+      "prompt": "A counselor asks a client 'When did Anxiety first start telling you what you could and couldn't do?' What technique is this?",
+      "choices": [
+        { "text": "Externalizing the problem, from narrative therapy", "correct": true, "rationale": "Externalization separates the person from the problem — the person is not the problem, the problem is the problem." },
+        { "text": "Socratic questioning", "correct": false, "rationale": "Socratic questioning guides the client to examine the evidence for a belief." },
+        { "text": "Confrontation", "correct": false, "rationale": "Confrontation points out discrepancies in the client's account or behaviour." },
+        { "text": "Reflection of feeling", "correct": false, "rationale": "Reflection mirrors the client's emotional content back to them." }
+      ],
+      "explanation": "Narrative therapy (White and Epston) also uses unique outcomes — moments inconsistent with the problem-saturated story — re-authoring, and definitional ceremonies with outsider witnesses. Externalizing language reduces shame and blame.",
+      "refs": ["samhsa-tip65"]
+    },
+    {
+      "id": "d3-adlerian-104",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3S",
+      "cacrep": ["helping-relationships"],
+      "tags": ["adler", "birth-order", "lifestyle"],
+      "prompt": "Summarize the key concepts of Adlerian individual psychology.",
+      "answer": "Social interest (Gemeinschaftsgefühl) — a sense of connectedness and contribution to others, taken as the measure of mental health. Striving for superiority or significance — moving from a felt minus to a felt plus. Inferiority feelings and the inferiority complex. Lifestyle — the unique pattern of beliefs and strategies formed in early childhood. Family constellation and psychological birth order. Fictional finalism — the guiding self-created goal. Early recollections as a projective assessment of lifestyle.",
+      "explanation": "Adler emphasized psychological rather than chronological birth order — how the child experienced their position, not the order of birth itself. His holistic, socially embedded, goal-oriented view strongly influenced the counseling profession's developmental and wellness orientation.",
+      "refs": ["statpearls-erikson", "samhsa-tip65"]
+    },
+    {
+      "id": "d3-gestalt-105",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3C",
+      "cacrep": ["helping-relationships"],
+      "tags": ["gestalt", "empty-chair", "here-and-now"],
+      "prompt": "A counselor invites a client to speak to an imagined deceased parent seated in an empty chair. Which approach is this drawn from?",
+      "choices": [
+        { "text": "Gestalt therapy", "correct": true, "rationale": "The empty chair technique is Perls's signature method for working through unfinished business in the present moment." },
+        { "text": "Rational emotive behavior therapy", "correct": false, "rationale": "REBT disputes irrational beliefs using the ABCDE framework." },
+        { "text": "Reality therapy", "correct": false, "rationale": "Reality therapy uses the WDEP process focused on current behaviour and choice." },
+        { "text": "Person-centred therapy", "correct": false, "rationale": "Person-centred therapy is non-directive and does not prescribe structured techniques of this kind." }
+      ],
+      "explanation": "Gestalt emphasizes present-moment awareness, contact, and the integration of disowned parts. Related concepts include unfinished business, the topdog/underdog split, and attending to how a client speaks rather than only what they say.",
+      "refs": ["samhsa-tip65", "statpearls-group-therapy"]
+    },
+    {
+      "id": "d3-rebt-106",
+      "type": "cloze",
+      "domain": "D3",
+      "task": "3C",
+      "cacrep": ["helping-relationships"],
+      "tags": ["rebt", "ellis", "abc-model"],
+      "prompt": "In Ellis's REBT, the ABC model holds that emotional consequences follow not from the activating event itself but from the person's {{beliefs}} about it, which are then Disputed to produce a new Effect.",
+      "answer": "beliefs",
+      "explanation": "Ellis targeted core irrational beliefs — demandingness ('musts' and 'shoulds'), awfulizing, low frustration tolerance, and global self-rating. REBT disputes beliefs more forcefully and philosophically than Beck's cognitive therapy, which tests them more empirically.",
+      "refs": ["statpearls-cbt", "div12-treatments"]
+    },
+    {
+      "id": "d3-reality-107",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3C",
+      "cacrep": ["helping-relationships"],
+      "tags": ["reality-therapy", "glasser", "choice-theory"],
+      "prompt": "What does the WDEP system in reality therapy stand for?",
+      "choices": [
+        { "text": "Wants, Doing, Evaluation, Planning", "correct": true, "rationale": "Glasser's framework: what the client wants, what they are doing, self-evaluation of whether it is working, and planning a different course." },
+        { "text": "Worry, Distress, Emotion, Process", "correct": false, "rationale": "Not a recognized model." },
+        { "text": "Willingness, Determination, Effort, Persistence", "correct": false, "rationale": "Not the WDEP acronym." },
+        { "text": "Warmth, Directness, Empathy, Positivity", "correct": false, "rationale": "These resemble relationship conditions rather than the WDEP process." }
+      ],
+      "explanation": "Reality therapy rests on choice theory: behaviour is chosen to meet five basic needs — survival, love and belonging, power, freedom, and fun. Its most distinctive move is client self-evaluation, since the counselor does not judge whether the behaviour is working.",
+      "refs": ["samhsa-tip65"]
+    },
+    {
+      "id": "d3-personcentred-108",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3C",
+      "cacrep": ["helping-relationships"],
+      "tags": ["rogers", "core-conditions", "person-centred"],
+      "prompt": "Name Rogers's three core conditions and explain what each requires of the counselor.",
+      "answer": "Congruence (genuineness) — the counselor is integrated and real in the relationship, not presenting a professional facade. Unconditional positive regard — non-possessive warmth and acceptance of the client without conditions of worth attached. Empathic understanding — accurately sensing the client's internal frame of reference and communicating that understanding back.",
+      "explanation": "Rogers proposed six necessary and sufficient conditions in total, which also include psychological contact, client incongruence, and the client perceiving the counselor's empathy and regard. That last point is easily missed: the conditions must be received, not merely offered.",
+      "refs": ["samhsa-tip65", "div12-treatments"]
+    },
+    {
+      "id": "d3-psychodynamic-109",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3C",
+      "cacrep": ["helping-relationships"],
+      "tags": ["transference", "countertransference", "psychodynamic"],
+      "prompt": "A counselor notices persistent irritation with a client that seems disproportionate, and realizes the client resembles a demanding relative. What is this?",
+      "choices": [
+        { "text": "Countertransference, which should be managed through self-reflection and supervision", "correct": true, "rationale": "Countertransference is the counselor's redirected feelings toward the client; recognizing and managing it is a professional responsibility." },
+        { "text": "Transference", "correct": false, "rationale": "Transference is the client's redirection of feelings onto the counselor." },
+        { "text": "Projection by the client", "correct": false, "rationale": "The feelings described originate in the counselor." },
+        { "text": "Compassion fatigue", "correct": false, "rationale": "Compassion fatigue is emotional depletion from sustained exposure to others' suffering, not a person-specific reaction." }
+      ],
+      "explanation": "Countertransference is not a failure — it is information, sometimes about the client's relational impact on others. It becomes a problem only when unrecognized and acted upon. Supervision is the standard place to work with it.",
+      "refs": ["statpearls-defense-mechanisms", "aca-ethics", "samhsa-tip65"]
+    },
+    {
+      "id": "d3-defenses-110",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3C",
+      "cacrep": ["helping-relationships"],
+      "tags": ["defense-mechanisms", "psychodynamic"],
+      "prompt": "Define projection, displacement, reaction formation, sublimation, and rationalization.",
+      "answer": "Projection — attributing one's own unacceptable feelings or impulses to another person. Displacement — redirecting an impulse from a threatening target to a safer one. Reaction formation — behaving in a manner opposite to one's actual unacceptable impulse, often with exaggerated intensity. Sublimation — channelling an unacceptable impulse into a socially valued activity, generally considered the most mature defense. Rationalization — constructing plausible but inaccurate explanations to justify behaviour driven by other motives.",
+      "explanation": "Defenses exist on a maturity continuum from psychotic (denial, distortion) through immature (acting out, projection) and neurotic (repression, displacement, reaction formation) to mature (sublimation, humour, altruism, suppression). They are normal and protective; the clinical question is rigidity and cost.",
+      "refs": ["statpearls-defense-mechanisms"]
+    },
+    {
+      "id": "d3-defenses-111",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3C",
+      "cacrep": ["helping-relationships"],
+      "tags": ["defense-mechanisms", "identification"],
+      "prompt": "A client who is furious with their supervisor comes home and shouts at their partner over a trivial matter. Which defense is this?",
+      "choices": [
+        { "text": "Displacement", "correct": true, "rationale": "The impulse is redirected from a threatening target (the supervisor) to a safer one (the partner)." },
+        { "text": "Projection", "correct": false, "rationale": "Projection would involve believing the supervisor or partner was the angry one." },
+        { "text": "Sublimation", "correct": false, "rationale": "Sublimation would channel the anger into something constructive, such as intense exercise or creative work." },
+        { "text": "Regression", "correct": false, "rationale": "Regression is a return to an earlier developmental mode of functioning under stress." }
+      ],
+      "explanation": "Distinguish displacement (same impulse, different target) from sublimation (same impulse, socially valued outlet) and from reaction formation (opposite behaviour to the impulse).",
+      "refs": ["statpearls-defense-mechanisms"]
+    },
+    {
+      "id": "d3-crisis-112",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AJ",
+      "cacrep": ["helping-relationships"],
+      "tags": ["crisis-intervention", "abc-model", "acute"],
+      "prompt": "What is the primary goal of crisis intervention, as distinct from ongoing counseling?",
+      "choices": [
+        { "text": "Restoring the client to at least their pre-crisis level of functioning through immediate, time-limited, directive support", "correct": true, "rationale": "Crisis intervention is stabilization-focused and short-term, not insight-oriented or personality-changing." },
+        { "text": "Achieving lasting personality change through insight", "correct": false, "rationale": "That is a goal of long-term therapy, not crisis work." },
+        { "text": "Establishing a formal diagnosis before any intervention", "correct": false, "rationale": "Diagnosis is secondary during an acute crisis; safety and stabilization come first." },
+        { "text": "Exploring the developmental origins of the client's vulnerability", "correct": false, "rationale": "Historical exploration is not the focus during acute crisis." }
+      ],
+      "explanation": "Crisis is defined by the perception of an event as intolerable combined with the failure of usual coping resources. Crisis work is more directive than ordinary counseling and follows a sequence of safety, support, and concrete problem-solving.",
+      "refs": ["samhsa-988", "sprc", "samhsa-tip57"]
+    },
+    {
+      "id": "d3-crisis-113",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AJ",
+      "cacrep": ["helping-relationships"],
+      "tags": ["psychological-first-aid", "disaster", "debriefing"],
+      "prompt": "What is the current evidence-based recommendation regarding single-session psychological debriefing after disasters?",
+      "choices": [
+        { "text": "It is not recommended; Psychological First Aid is preferred, since mandatory single-session debriefing has shown no benefit and may impede natural recovery", "correct": true, "rationale": "Critical Incident Stress Debriefing has not demonstrated preventive benefit and some trials suggest harm; PFA is the recommended approach." },
+        { "text": "It should be mandatory for all exposed individuals within 72 hours", "correct": false, "rationale": "Mandatory universal debriefing is precisely what the evidence argues against." },
+        { "text": "It is the most effective known prevention for PTSD", "correct": false, "rationale": "It has not been shown to prevent PTSD." },
+        { "text": "It should replace all other early intervention after mass trauma", "correct": false, "rationale": "The recommendation runs the other way." }
+      ],
+      "explanation": "Psychological First Aid emphasizes safety, comfort, stabilization, practical assistance, connection to social support, and linkage to services — without requiring anyone to recount the event. This is a case where an intuitive practice was overturned by evidence.",
+      "refs": ["samhsa-tip57", "nimh-ptsd"]
+    },
+    {
+      "id": "d3-vicarious-114",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3X",
+      "cacrep": ["professional-ethics", "helping-relationships"],
+      "tags": ["vicarious-trauma", "burnout", "self-care"],
+      "prompt": "What distinguishes vicarious trauma from burnout?",
+      "choices": [
+        { "text": "Vicarious trauma involves a shift in the counselor's core beliefs and worldview from empathic engagement with clients' trauma; burnout is emotional exhaustion and depersonalization arising from chronic workplace stress", "correct": true, "rationale": "The mechanisms differ: vicarious trauma is content-specific and cognitive; burnout is workload- and environment-driven." },
+        { "text": "They are two names for the same condition", "correct": false, "rationale": "They have different causes, features, and remedies, though they can co-occur." },
+        { "text": "Burnout affects only new counselors, while vicarious trauma affects only experienced ones", "correct": false, "rationale": "Neither is limited by experience level." },
+        { "text": "Vicarious trauma resolves with rest, while burnout requires clinical treatment", "correct": false, "rationale": "This reverses the typical picture; rest addresses exhaustion, whereas belief change usually requires processing and supervision." }
+      ],
+      "explanation": "Maslach's three burnout dimensions are emotional exhaustion, depersonalization, and reduced personal accomplishment. Compassion fatigue overlaps with vicarious trauma. All three are occupational hazards that the codes treat as requiring active monitoring.",
+      "refs": ["statpearls-burnout", "samhsa-tip57", "aca-ethics"]
+    },
+    {
+      "id": "d3-military-115",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3X",
+      "cacrep": ["social-cultural", "helping-relationships"],
+      "tags": ["veterans", "moral-injury", "military"],
+      "prompt": "A veteran describes guilt and shame about actions taken during deployment that violated their moral code, without meeting full PTSD criteria. What concept best fits?",
+      "choices": [
+        { "text": "Moral injury — distress arising from perpetrating, failing to prevent, or witnessing acts that transgress deeply held moral beliefs", "correct": true, "rationale": "Moral injury centres on guilt, shame, and betrayal rather than fear-based trauma symptoms." },
+        { "text": "Post-traumatic stress disorder", "correct": false, "rationale": "PTSD is fear-based and requires the four symptom clusters, which the client does not meet." },
+        { "text": "Adjustment disorder", "correct": false, "rationale": "Adjustment disorder is a residual category tied to an identifiable recent stressor, not this specific moral phenomenology." },
+        { "text": "Malingering", "correct": false, "rationale": "Nothing suggests feigned symptoms." }
+      ],
+      "explanation": "Moral injury is not a DSM diagnosis but is clinically important, particularly with veterans, first responders, and healthcare workers. Exposure-based PTSD protocols may not address it, since the core issue is moral and existential rather than fear-conditioned.",
+      "refs": ["samhsa-tip57", "nimh-ptsd", "msjcc"]
+    },
+    {
+      "id": "d3-disability-116",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3O",
+      "cacrep": ["social-cultural"],
+      "tags": ["disability", "models", "identity"],
+      "prompt": "What distinguishes the social model of disability from the medical model?",
+      "choices": [
+        { "text": "The social model locates disability in environmental and attitudinal barriers rather than in the individual's impairment", "correct": true, "rationale": "The social model separates impairment from disability, treating the latter as produced by an inaccessible society." },
+        { "text": "The social model denies that impairments exist", "correct": false, "rationale": "It acknowledges impairment while distinguishing it from socially produced disability." },
+        { "text": "The medical model emphasizes community integration", "correct": false, "rationale": "The medical model focuses on diagnosis, treatment, and cure of the individual." },
+        { "text": "They differ only in terminology", "correct": false, "rationale": "They differ in where the problem is located and therefore in what should change." }
+      ],
+      "explanation": "The practical consequence is the target of intervention: the medical model changes the person, the social model changes the environment. Many disabled clients experience the medical model's framing of their lives as inherently tragic as itself a source of harm.",
+      "refs": ["ada-title-iii", "msjcc"]
+    },
+    {
+      "id": "d3-poverty-117",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3I",
+      "cacrep": ["social-cultural"],
+      "tags": ["classism", "poverty", "bias"],
+      "prompt": "Which counselor assumption most reflects unexamined class bias?",
+      "choices": [
+        { "text": "Interpreting missed appointments as resistance without considering transport, childcare, shift work, or phone access", "correct": true, "rationale": "Attributing structural barriers to motivation is a classic expression of class bias in clinical judgement." },
+        { "text": "Asking about a client's employment and financial situation during intake", "correct": false, "rationale": "This is appropriate assessment." },
+        { "text": "Offering a sliding fee scale", "correct": false, "rationale": "This is an accessibility measure, not a bias." },
+        { "text": "Connecting a client to community resources", "correct": false, "rationale": "Resource linkage is competent practice." }
+      ],
+      "explanation": "Attendance barriers are among the most commonly misread signals in community settings. Asking what would make attending easier usually produces more useful information than interpreting the absence.",
+      "refs": ["msjcc", "aca-ethics"]
+    },
+    {
+      "id": "d3-immigration-118",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3F",
+      "cacrep": ["social-cultural"],
+      "tags": ["immigration", "documentation-status", "trauma"],
+      "prompt": "A client with uncertain immigration status presents with severe anxiety. What should the counselor keep in mind?",
+      "choices": [
+        { "text": "That fear of disclosure and deportation is a realistic stressor, and confidentiality practices and documentation should be handled with particular care", "correct": true, "rationale": "The anxiety may be a proportionate response to genuine threat, and records themselves can carry risk." },
+        { "text": "That the anxiety is likely disproportionate and should be cognitively restructured", "correct": false, "rationale": "Restructuring a realistic fear invalidates the client and misapplies the technique." },
+        { "text": "That the counselor is obliged to report the client's status", "correct": false, "rationale": "There is no such reporting obligation for counselors." },
+        { "text": "That immigration concerns are outside the scope of counseling", "correct": false, "rationale": "They are central to the client's presenting distress and context." }
+      ],
+      "explanation": "Cognitive techniques presuppose that the fear is distorted. When the threat is real, the appropriate response is validation, safety planning, and referral to legal resources — not disputation.",
+      "refs": ["msjcc", "aca-ethics", "samhsa-tip57"]
+    },
+    {
+      "id": "d3-racial-identity-119",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3Z",
+      "cacrep": ["social-cultural"],
+      "tags": ["racial-identity", "cross", "development"],
+      "prompt": "Outline the stages of Cross's model of Black racial identity development (Nigrescence).",
+      "answer": "Pre-encounter — race is de-emphasized, and dominant cultural values may be internalized. Encounter — an event forces reconsideration of racial identity. Immersion–Emersion — intense immersion in Black culture, often with rejection of White culture, gradually moderating. Internalization — a secure, internalized Black identity with the capacity for relationships across groups. Internalization–Commitment — sustained commitment to the concerns of Black people over time.",
+      "explanation": "Helms's White racial identity model runs a parallel course (contact, disintegration, reintegration, pseudo-independence, immersion/emersion, autonomy). Counselors should attend to the interaction of their own and the client's identity statuses in the dyad.",
+      "refs": ["msjcc"]
+    },
+    {
+      "id": "d3-worldview-120",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3F",
+      "cacrep": ["social-cultural"],
+      "tags": ["worldview", "value-orientation", "culture"],
+      "prompt": "A counselor emphasizes independence and self-reliance as therapy goals for a client whose culture prioritizes interdependence and family obligation. What error is this?",
+      "choices": [
+        { "text": "Imposing the counselor's cultural value orientation as a universal standard of health", "correct": true, "rationale": "Treating autonomy as the definition of psychological health imposes a culturally specific value." },
+        { "text": "Appropriate promotion of client autonomy", "correct": false, "rationale": "Autonomy means the client's right to set their own goals — which here would mean respecting their interdependent orientation." },
+        { "text": "A necessary correction of dependency", "correct": false, "rationale": "Interdependence is not dependency, and framing it that way is the bias in question." },
+        { "text": "Culturally neutral goal-setting", "correct": false, "rationale": "No goal-setting is culturally neutral; the individualist frame is itself cultural." }
+      ],
+      "explanation": "Value orientation frameworks compare cultures on dimensions such as individualism–collectivism, time orientation, relationship to nature, and activity orientation. These are tendencies to explore with a client, not categories to assign them to.",
+      "refs": ["msjcc", "aca-ethics"]
+    },
+    {
+      "id": "d3-mental-health-disparity-121",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3Z",
+      "cacrep": ["social-cultural"],
+      "tags": ["disparities", "access", "diagnosis"],
+      "prompt": "Research has documented that Black clients in the U.S. are, relative to White clients with similar presentations, more likely to receive which diagnosis?",
+      "choices": [
+        { "text": "Schizophrenia and other psychotic disorders", "correct": true, "rationale": "Overdiagnosis of psychotic disorders and underdiagnosis of mood disorders in Black clients is a well-documented disparity." },
+        { "text": "Generalized anxiety disorder", "correct": false, "rationale": "Anxiety disorders are, if anything, underdiagnosed in this population." },
+        { "text": "Adjustment disorder", "correct": false, "rationale": "Not the documented pattern." },
+        { "text": "Specific phobia", "correct": false, "rationale": "Not the documented pattern." }
+      ],
+      "explanation": "Contributing factors include clinician bias, misreading cultural mistrust as paranoia, and failure to account for context. Awareness of this pattern is a concrete reason for the ethical requirement to consider historical prejudice in diagnosis.",
+      "refs": ["msjcc", "dsm5tr", "aca-ethics"]
+    },
+    {
+      "id": "d3-help-seeking-122",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3F",
+      "cacrep": ["social-cultural"],
+      "tags": ["help-seeking", "stigma", "access"],
+      "prompt": "A client's family regards seeking counseling as shameful. How should the counselor respond?",
+      "choices": [
+        { "text": "Acknowledge the cultural meaning of help-seeking, explore what it cost the client to attend, and discuss confidentiality and framing explicitly", "correct": true, "rationale": "Naming the barrier honours the client's effort and addresses a real risk to continued attendance." },
+        { "text": "Encourage the client to educate their family about mental health", "correct": false, "rationale": "This places a burden on the client and may expose them to further conflict." },
+        { "text": "Suggest the family's view is simply misinformed", "correct": false, "rationale": "Dismissive of a cultural context the client remains embedded in." },
+        { "text": "Avoid the topic to prevent increasing the client's discomfort", "correct": false, "rationale": "Avoidance leaves a major obstacle to engagement unaddressed." }
+      ],
+      "explanation": "Practical accommodations matter here: appointment timing, discretion in communications, and framing the work in terms the client can use with their family. Cultural mistrust rooted in documented historical harms is also a rational stance, not resistance.",
+      "refs": ["msjcc", "aca-ethics"]
+    },
+    {
+      "id": "d3-behavior-123",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3C",
+      "cacrep": ["helping-relationships"],
+      "tags": ["token-economy", "behavior-management", "reinforcement"],
+      "prompt": "A residential program awards points exchangeable for privileges when residents complete target behaviours. What is this called?",
+      "choices": [
+        { "text": "A token economy", "correct": true, "rationale": "Token economies deliver conditioned reinforcers exchangeable for backup reinforcers, contingent on specified behaviour." },
+        { "text": "Systematic desensitization", "correct": false, "rationale": "A graduated exposure technique paired with relaxation." },
+        { "text": "Aversion therapy", "correct": false, "rationale": "Pairs an unwanted behaviour with an aversive stimulus." },
+        { "text": "Flooding", "correct": false, "rationale": "Exposure at full intensity without gradual progression." }
+      ],
+      "explanation": "The main design challenge is generalization — behaviour maintained by tokens often does not transfer once the system is withdrawn. Effective programmes plan the fade to natural reinforcers from the outset.",
+      "refs": ["statpearls-cbt", "div12-treatments"]
+    },
+    {
+      "id": "d3-behavior-124",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3C",
+      "cacrep": ["helping-relationships"],
+      "tags": ["shaping", "successive-approximation"],
+      "prompt": "A counselor helping a socially anxious client reinforces first making eye contact, then greeting one person, then holding a brief conversation. What behavioural principle is this?",
+      "choices": [
+        { "text": "Shaping through successive approximations", "correct": true, "rationale": "Shaping reinforces progressively closer approximations to a target behaviour that is not yet in the repertoire." },
+        { "text": "Extinction", "correct": false, "rationale": "Extinction withholds reinforcement to reduce a behaviour." },
+        { "text": "Negative reinforcement", "correct": false, "rationale": "Negative reinforcement removes an aversive stimulus to increase behaviour." },
+        { "text": "Punishment", "correct": false, "rationale": "Punishment decreases behaviour." }
+      ],
+      "explanation": "Shaping is the answer whenever a target behaviour is too large or absent to reinforce directly. It underlies graded exposure hierarchies and most skills-training sequences.",
+      "refs": ["statpearls-cbt", "div12-treatments"]
+    },
+    {
+      "id": "d3-learning-125",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3C",
+      "cacrep": ["human-growth"],
+      "tags": ["classical-conditioning", "pavlov", "phobia"],
+      "prompt": "A client involved in a serious car accident now feels intense fear when hearing screeching tyres. In classical conditioning terms, what is the screeching sound?",
+      "choices": [
+        { "text": "A conditioned stimulus producing a conditioned response", "correct": true, "rationale": "A previously neutral stimulus paired with the traumatic event now elicits the fear response on its own." },
+        { "text": "An unconditioned stimulus", "correct": false, "rationale": "The unconditioned stimulus was the accident itself, which produced fear without prior learning." },
+        { "text": "An unconditioned response", "correct": false, "rationale": "The sound is a stimulus, not a response." },
+        { "text": "A discriminative stimulus", "correct": false, "rationale": "A discriminative stimulus signals reinforcement availability in operant conditioning." }
+      ],
+      "explanation": "Classical conditioning explains phobia acquisition; operant conditioning explains its maintenance through avoidance. Exposure works by extinction of the conditioned response, and spontaneous recovery explains why fear can briefly return after treatment.",
+      "refs": ["statpearls-cbt", "nimh-anxiety"]
+    },
+    {
+      "id": "d3-relapse-126",
+      "type": "recall",
+      "domain": "D3",
+      "task": "3AI",
+      "cacrep": ["helping-relationships"],
+      "tags": ["relapse-prevention", "triggers", "coping"],
+      "prompt": "What are the core components of a relapse prevention plan?",
+      "answer": "Identification of high-risk situations and internal and external triggers; specific coping strategies for each; recognition of early warning signs, including subtle 'seemingly irrelevant decisions'; a concrete plan for what to do if a lapse occurs; supportive people to contact; lifestyle balance to reduce baseline vulnerability; and building self-efficacy through rehearsal of coping responses.",
+      "explanation": "Marlatt's model emphasizes that relapse is a process, not an event. Seemingly irrelevant decisions — taking a route past a former bar 'for convenience' — are a distinctive and clinically useful part of the framework.",
+      "refs": ["samhsa-tip42", "samhsa-tip65", "stages-of-change"]
+    },
+    {
+      "id": "d3-adolescent-sud-127",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AI",
+      "cacrep": ["human-growth", "helping-relationships"],
+      "tags": ["adolescent", "substance-use", "prevention"],
+      "prompt": "Which approach to adolescent substance use prevention has the weakest evidence?",
+      "choices": [
+        { "text": "Scare tactics and information-only programmes", "correct": true, "rationale": "Fear-based and purely informational approaches have consistently failed to change behaviour and can increase interest." },
+        { "text": "Family-based interventions that improve parental monitoring and communication", "correct": false, "rationale": "Family-based approaches have good evidence." },
+        { "text": "Programmes building refusal and social competence skills", "correct": false, "rationale": "Skills-based programmes have reasonable support." },
+        { "text": "Normative education correcting overestimates of peer use", "correct": false, "rationale": "Correcting misperceived norms has demonstrated effects." }
+      ],
+      "explanation": "A related design caution: grouping high-risk adolescents together can produce deviancy training, where peers reinforce one another's problem behaviour. Prevention programme design is not intuitive, and some well-intentioned formats do harm.",
+      "refs": ["samhsa-tip42", "div12-treatments", "harvard-neglect"]
+    },
+    {
+      "id": "d3-gaming-128",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3Y",
+      "cacrep": ["human-growth"],
+      "tags": ["technology", "screen-use", "adolescents"],
+      "prompt": "Parents report their teenager 'is addicted to their phone'. What is the most clinically useful first step?",
+      "choices": [
+        { "text": "Assess functional impact — sleep, school, relationships, physical activity, mood — rather than screen time alone", "correct": true, "rationale": "Impairment and displacement of essential activities are what matter clinically; raw hours are a poor indicator." },
+        { "text": "Recommend eliminating all screen use immediately", "correct": false, "rationale": "Abrupt elimination is usually unenforceable and severs a primary social channel." },
+        { "text": "Diagnose internet gaming disorder", "correct": false, "rationale": "It is a condition for further study in DSM-5-TR, not an established diagnosis." },
+        { "text": "Reassure parents that heavy screen use is universal and harmless", "correct": false, "rationale": "Dismissal ignores the possibility of genuine functional impairment." }
+      ],
+      "explanation": "Also worth exploring is what the screen use is doing for the adolescent — social connection, escape from anxiety, avoidance of family conflict — since the function determines what would need to replace it.",
+      "refs": ["dsm5tr", "statpearls-insomnia", "nimh-adhd"]
+    },
+    {
+      "id": "d3-chronicpain-129",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3A",
+      "cacrep": ["helping-relationships"],
+      "tags": ["chronic-pain", "acceptance", "function"],
+      "prompt": "What is the primary goal of psychological intervention for chronic pain?",
+      "choices": [
+        { "text": "Improving function and quality of life, and reducing suffering and disability, rather than eliminating pain sensation", "correct": true, "rationale": "Pain elimination is often unattainable; acceptance and function-focused approaches have the better evidence." },
+        { "text": "Complete elimination of the pain sensation", "correct": false, "rationale": "This sets an unattainable goal and frequently increases distress when unmet." },
+        { "text": "Demonstrating that the pain is psychological in origin", "correct": false, "rationale": "Chronic pain is real regardless of aetiology; this framing damages the alliance." },
+        { "text": "Encouraging rest and activity avoidance to prevent flare-ups", "correct": false, "rationale": "Activity avoidance leads to deconditioning and worsens disability over time." }
+      ],
+      "explanation": "ACT and CBT for chronic pain both target the fear-avoidance cycle, in which pain leads to avoidance, then deconditioning, then more pain and disability. Pacing — activity graded by plan rather than by symptoms — is a core technique.",
+      "refs": ["div12-treatments", "statpearls-cbt"]
+    },
+    {
+      "id": "d3-caregiver-130",
+      "type": "cloze",
+      "domain": "D3",
+      "task": "3E",
+      "cacrep": ["human-growth"],
+      "tags": ["dementia", "caregiving", "communication"],
+      "prompt": "When a person with dementia states something factually incorrect but emotionally meaningful, the recommended response is {{validation — responding to the underlying feeling rather than correcting the facts}}.",
+      "answer": "validation — responding to the underlying feeling rather than correcting the facts",
+      "explanation": "Repeated reality orientation with moderate to advanced dementia typically produces distress without lasting correction. Attending to the emotion behind the statement — for example, loneliness behind asking for a long-dead parent — is both kinder and more effective.",
+      "refs": ["statpearls-mse", "nimh-depression"]
+    },
+    {
+      "id": "d3-medication-131",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3L",
+      "cacrep": ["helping-relationships"],
+      "tags": ["psychopharmacology", "ssri", "onset"],
+      "prompt": "A client started an SSRI ten days ago and reports no improvement, wanting to stop. What is the most accurate psychoeducation?",
+      "choices": [
+        { "text": "That antidepressants typically require four to six weeks for full therapeutic effect, and that they should discuss any change with the prescriber rather than stopping abruptly", "correct": true, "rationale": "Premature discontinuation from unmet expectations is common, and abrupt cessation can produce discontinuation symptoms." },
+        { "text": "That the medication has clearly failed and an alternative should be requested", "correct": false, "rationale": "Ten days is insufficient to judge efficacy." },
+        { "text": "That the client should double the dose to accelerate the effect", "correct": false, "rationale": "Dose advice is outside counseling scope and unsafe." },
+        { "text": "That antidepressants work immediately if they are going to work at all", "correct": false, "rationale": "Factually incorrect." }
+      ],
+      "explanation": "Counselors need enough working knowledge to support adherence and recognize side effects without giving medical advice. Also important: activation and increased energy can precede mood improvement, a period associated with elevated suicide risk in some clients.",
+      "refs": ["nimh-depression", "aca-ethics", "nimh-suicide-prevention"]
+    },
+    {
+      "id": "d3-cultural-grief-132",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3G",
+      "cacrep": ["social-cultural"],
+      "tags": ["grief", "culture", "mourning"],
+      "prompt": "A client's cultural mourning practices involve prolonged, highly expressive public grieving. How should the counselor assess this?",
+      "choices": [
+        { "text": "Against the norms of the client's own cultural community, since expressions of grief vary widely and duration norms are culturally specific", "correct": true, "rationale": "Prolonged grief disorder criteria explicitly require judging duration and intensity relative to cultural norms." },
+        { "text": "Against DSM duration criteria applied uniformly regardless of background", "correct": false, "rationale": "This would pathologize normative mourning in many cultures." },
+        { "text": "As evidence of complicated grief requiring intervention", "correct": false, "rationale": "Expressiveness alone is not evidence of disorder." },
+        { "text": "As a coping deficit requiring emotion regulation skills", "correct": false, "rationale": "This imposes a restrained-expression norm as the standard of health." }
+      ],
+      "explanation": "The DSM includes this cultural qualifier precisely because grief expression is among the most culturally variable human behaviours. The clinical question is functional impairment as understood in the client's own context.",
+      "refs": ["dsm5tr", "statpearls-grief", "msjcc"]
+    },
+    {
+      "id": "d3-hoarding-133",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3T",
+      "cacrep": ["assessment"],
+      "tags": ["hoarding", "dsm", "differential"],
+      "prompt": "How is hoarding disorder classified in DSM-5-TR?",
+      "choices": [
+        { "text": "As a distinct disorder within obsessive-compulsive and related disorders", "correct": true, "rationale": "DSM-5 established hoarding disorder as its own diagnosis rather than a subtype of OCD or OCPD." },
+        { "text": "As a subtype of obsessive-compulsive disorder", "correct": false, "rationale": "It was separated from OCD in DSM-5, a frequently tested change." },
+        { "text": "As a specifier of obsessive-compulsive personality disorder", "correct": false, "rationale": "OCPD includes a hoarding-adjacent trait, but hoarding disorder is separate." },
+        { "text": "As an impulse control disorder", "correct": false, "rationale": "It is not classified there." }
+      ],
+      "explanation": "Hoarding is defined by persistent difficulty discarding possessions due to a perceived need to save them and distress at discarding, resulting in clutter that compromises the living space. It responds less well to standard OCD protocols and carries real safety and eviction risks.",
+      "refs": ["dsm5tr", "nimh-ocd"]
+    },
+    {
+      "id": "d3-first-responders-134",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AH",
+      "cacrep": ["social-cultural", "helping-relationships"],
+      "tags": ["first-responders", "occupational-stress", "culture"],
+      "prompt": "What is a distinctive barrier to help-seeking among first responders and military personnel?",
+      "choices": [
+        { "text": "Occupational cultures valuing stoicism, plus realistic concerns about career and fitness-for-duty consequences of disclosure", "correct": true, "rationale": "Both cultural norms and concrete institutional risks suppress help-seeking in these populations." },
+        { "text": "A lack of available services", "correct": false, "rationale": "Services often exist; utilization is the problem." },
+        { "text": "Low rates of exposure to traumatic events", "correct": false, "rationale": "Exposure is high by the nature of the work." },
+        { "text": "An inability to recognize symptoms", "correct": false, "rationale": "Recognition is generally not the primary barrier." }
+      ],
+      "explanation": "Confidentiality assurances carry unusual weight with these clients, and counselors should be precise about limits — particularly where employment-linked services involve reporting relationships.",
+      "refs": ["samhsa-tip57", "msjcc", "aca-ethics"]
+    },
+    {
+      "id": "d3-lgbtq-135",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3J",
+      "cacrep": ["social-cultural"],
+      "tags": ["lgbtq", "coming-out", "family"],
+      "prompt": "An adolescent client is considering disclosing their sexual orientation to unsupportive parents. What is the counselor's role?",
+      "choices": [
+        { "text": "Explore the risks and benefits with the client, including safety and housing, and support their own timing and decision", "correct": true, "rationale": "Disclosure carries real risk for some youth, including family rejection and homelessness, so timing must be the client's decision." },
+        { "text": "Encourage disclosure, since authenticity improves wellbeing", "correct": false, "rationale": "Pushing disclosure disregards the client's assessment of their own safety." },
+        { "text": "Discourage disclosure until the client is financially independent", "correct": false, "rationale": "Blanket discouragement also removes the client's agency." },
+        { "text": "Inform the parents so the family can begin processing it together", "correct": false, "rationale": "This would be a serious breach of confidentiality and could endanger the client." }
+      ],
+      "explanation": "Family rejection is strongly associated with elevated risk of depression, substance use, and suicide attempt among LGBTQ+ youth, while family acceptance is protective. That is exactly why the decision and its timing belong to the client.",
+      "refs": ["msjcc", "nimh-suicide-prevention", "aca-ethics"]
+    },
+    {
+      "id": "d3-mindfulness-136",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AH",
+      "cacrep": ["helping-relationships"],
+      "tags": ["relaxation", "breathing", "arousal"],
+      "prompt": "Why is diaphragmatic breathing effective for acute anxiety?",
+      "choices": [
+        { "text": "Slow diaphragmatic breathing with extended exhalation increases parasympathetic activity, counteracting sympathetic arousal", "correct": true, "rationale": "The physiological mechanism is vagal activation; the longer exhale is the operative element." },
+        { "text": "It distracts the client from anxious thoughts", "correct": false, "rationale": "Distraction may occur but is not the primary mechanism and, used as avoidance, can be counterproductive." },
+        { "text": "It increases oxygen intake to the brain", "correct": false, "rationale": "Anxious clients are typically over-breathing already; the issue is CO2 balance, not oxygen deficit." },
+        { "text": "It suppresses the amygdala directly", "correct": false, "rationale": "Too simplistic and not the established mechanism." }
+      ],
+      "explanation": "A practical caution: relaxation techniques used to escape anxiety can become safety behaviours that undermine exposure. They are best framed as tools for tolerating arousal rather than eliminating it.",
+      "refs": ["nimh-anxiety", "statpearls-cbt", "samhsa-tip57"]
+    },
+    {
+      "id": "d3-psychoeducation-137",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AH",
+      "cacrep": ["helping-relationships"],
+      "tags": ["stress", "gas", "selye"],
+      "prompt": "What are the three stages of Selye's General Adaptation Syndrome?",
+      "choices": [
+        { "text": "Alarm, resistance, exhaustion", "correct": true, "rationale": "Selye described an initial alarm reaction, a resistance phase of sustained adaptation, and eventual exhaustion when resources are depleted." },
+        { "text": "Denial, anger, acceptance", "correct": false, "rationale": "These are drawn from grief stage models." },
+        { "text": "Fight, flight, freeze", "correct": false, "rationale": "These are acute threat responses, not the phases of prolonged stress." },
+        { "text": "Appraisal, coping, adaptation", "correct": false, "rationale": "Closer to the Lazarus transactional model." }
+      ],
+      "explanation": "The exhaustion stage explains why chronic stress produces physical illness rather than only psychological symptoms — useful psychoeducation for clients who dismiss stress as 'just in the mind'.",
+      "refs": ["statpearls-burnout", "samhsa-tip57"]
+    },
+    {
+      "id": "d3-wellness-138",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AH",
+      "cacrep": ["helping-relationships"],
+      "tags": ["wellness", "prevention", "professional-identity"],
+      "prompt": "Why is a wellness orientation considered central to counselor professional identity?",
+      "choices": [
+        { "text": "Because counseling has historically defined itself through developmental, preventive, and strengths-based practice rather than a purely medical-pathology model", "correct": true, "rationale": "The wellness, developmental, and prevention emphases are what distinguish counseling from adjacent mental health professions." },
+        { "text": "Because counselors are prohibited from diagnosing mental disorders", "correct": false, "rationale": "Licensed counselors do diagnose; the orientation is about framing rather than scope." },
+        { "text": "Because wellness approaches are less costly to deliver", "correct": false, "rationale": "Cost is not the basis of the professional identity claim." },
+        { "text": "Because insurers require wellness framing for reimbursement", "correct": false, "rationale": "Reimbursement generally requires diagnosis, if anything cutting the other way." }
+      ],
+      "explanation": "This shows up in exam items as a preference for answers that consider development, context, strengths, and prevention alongside pathology — not instead of it.",
+      "refs": ["cacrep-standards", "aca-ethics", "msjcc"]
+    },
+    {
+      "id": "d3-groups-139",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3M",
+      "cacrep": ["group-work"],
+      "tags": ["support-group", "psychoeducational", "group-types"],
+      "prompt": "Which group type is primarily focused on information and skills rather than personality change?",
+      "choices": [
+        { "text": "Psychoeducational group", "correct": true, "rationale": "Psychoeducational groups are structured around imparting information and teaching skills, often with a curriculum." },
+        { "text": "Psychotherapy group", "correct": false, "rationale": "Therapy groups address remediation of significant psychological difficulty and personality change." },
+        { "text": "Counseling group", "correct": false, "rationale": "Counseling groups focus on interpersonal problem-solving and situational concerns." },
+        { "text": "Task/work group", "correct": false, "rationale": "Task groups exist to accomplish an identified work product." }
+      ],
+      "explanation": "The four ASGW group types are task/work, psychoeducational, counseling, and psychotherapy, distinguished by purpose, depth, and leader training required. Exam items often test matching a described group to its type.",
+      "refs": ["statpearls-group-therapy", "cacrep-standards"]
+    },
+    {
+      "id": "d3-culture-140",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3F",
+      "cacrep": ["social-cultural"],
+      "tags": ["intersectionality", "identity"],
+      "prompt": "What does intersectionality describe?",
+      "choices": [
+        { "text": "How multiple social identities combine to produce distinct experiences of privilege and oppression that are not reducible to any single identity", "correct": true, "rationale": "Crenshaw's concept holds that overlapping identities generate qualitatively distinct experiences, not merely additive ones." },
+        { "text": "The point at which a client's problems intersect with their family's", "correct": false, "rationale": "Not the meaning of the term." },
+        { "text": "The overlap between different theoretical orientations in integrative practice", "correct": false, "rationale": "Unrelated to the concept." },
+        { "text": "The combined effect of biological and environmental factors on development", "correct": false, "rationale": "That describes a biopsychosocial or diathesis-stress framing." }
+      ],
+      "explanation": "Practically, this means a counselor cannot understand a client by treating race, gender, class, disability, and orientation as separate variables. The MSJCC build this in by attending to privileged and marginalized status in both counselor and client.",
+      "refs": ["msjcc"]
+    },
+    {
+      "id": "d3-suicide-141",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3AJ",
+      "cacrep": ["assessment"],
+      "tags": ["suicide", "myths", "psychoeducation"],
+      "prompt": "Which statement about suicide is accurate?",
+      "choices": [
+        { "text": "Asking directly about suicide does not increase risk and is a necessary part of assessment", "correct": true, "rationale": "Research consistently finds that direct inquiry does not induce ideation and often relieves the person." },
+        { "text": "People who talk about suicide are unlikely to act on it", "correct": false, "rationale": "A dangerous myth; most people who die by suicide communicated intent beforehand." },
+        { "text": "Improvement in mood always indicates reduced risk", "correct": false, "rationale": "Sudden improvement can follow a decision to act, and increased energy during recovery can enable action." },
+        { "text": "Suicide occurs without warning in the majority of cases", "correct": false, "rationale": "Warning signs are usually present, though they may be recognized only in hindsight." }
+      ],
+      "explanation": "The clinical implication of the third option is important: the period of early recovery, when energy returns before mood fully lifts, warrants continued vigilance rather than relaxed monitoring.",
+      "refs": ["nimh-suicide-prevention", "sprc", "columbia-cssrs"]
+    },
+    {
+      "id": "d3-postvention-142",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3K",
+      "cacrep": ["helping-relationships"],
+      "tags": ["postvention", "suicide-loss", "contagion"],
+      "prompt": "Following a student's death by suicide, what is the recommended approach for a school community?",
+      "choices": [
+        { "text": "Provide support and accurate information while avoiding memorialization that glamorizes the death, given contagion risk", "correct": true, "rationale": "Postvention balances genuine grief support against the documented risk of suicide contagion, particularly among adolescents." },
+        { "text": "Hold a large public memorial assembly honouring the student", "correct": false, "rationale": "Elaborate memorialization is specifically discouraged because it can inadvertently present suicide as a route to recognition." },
+        { "text": "Avoid mentioning the death at all to prevent distress", "correct": false, "rationale": "Silence fuels rumour and leaves affected students unsupported." },
+        { "text": "Describe the method in detail so students understand the reality", "correct": false, "rationale": "Method details are contraindicated in all safe messaging guidance." }
+      ],
+      "explanation": "Safe messaging guidelines: avoid method and location details, avoid presenting suicide as a solution or as inexplicable, include crisis resources, and identify and support those most affected. Contagion risk is highest among adolescents.",
+      "refs": ["sprc", "samhsa-988", "nimh-suicide-prevention"]
+    },
+    {
+      "id": "d3-ambiguous-143",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3K",
+      "cacrep": ["helping-relationships"],
+      "tags": ["ambiguous-loss", "boss", "grief"],
+      "prompt": "A client's spouse has advanced dementia and no longer recognizes them. Which concept best describes the client's grief?",
+      "choices": [
+        { "text": "Ambiguous loss — physical presence with psychological absence, producing grief without closure", "correct": true, "rationale": "Pauline Boss's concept covers exactly this: the person is here and not here, so ordinary mourning rituals do not apply." },
+        { "text": "Anticipatory grief only", "correct": false, "rationale": "Anticipatory grief is part of it, but the defining feature here is the unresolved presence/absence." },
+        { "text": "Prolonged grief disorder", "correct": false, "rationale": "That diagnosis follows a death; no death has occurred." },
+        { "text": "Complicated bereavement following death", "correct": false, "rationale": "There has been no death." }
+      ],
+      "explanation": "Boss identified two types: physical absence with psychological presence (a missing person, an estranged relative), and physical presence with psychological absence (dementia, addiction, brain injury). The goal is building tolerance for ambiguity rather than achieving closure.",
+      "refs": ["statpearls-grief", "statpearls-mse"]
+    },
+    {
+      "id": "d3-integration-144",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3C",
+      "cacrep": ["helping-relationships"],
+      "tags": ["eclecticism", "integration", "theory"],
+      "prompt": "What distinguishes theoretical integration from technical eclecticism?",
+      "choices": [
+        { "text": "Integration blends the underlying theories into a coherent framework; technical eclecticism selects techniques that work without requiring their parent theories to be reconciled", "correct": true, "rationale": "The difference lies at the level of theory versus technique." },
+        { "text": "Integration uses only one theory while eclecticism uses several", "correct": false, "rationale": "Both draw on multiple sources." },
+        { "text": "Eclecticism is unethical while integration is the professional standard", "correct": false, "rationale": "Both are legitimate; the caution is against unsystematic, atheoretical improvisation." },
+        { "text": "They are synonymous terms", "correct": false, "rationale": "They are distinct approaches to combining orientations." }
+      ],
+      "explanation": "A third route is the common factors approach, which builds practice around the ingredients shared across therapies. The problematic version is 'syncretism' — unsystematic mixing without rationale, which the profession does criticize.",
+      "refs": ["div12-treatments", "samhsa-tip65", "cacrep-standards"]
+    },
+    {
+      "id": "d3-evidence-145",
+      "type": "mcq",
+      "domain": "D3",
+      "task": "3C",
+      "cacrep": ["research", "helping-relationships"],
+      "tags": ["evidence-based-practice", "definition"],
+      "prompt": "What are the three components of evidence-based practice?",
+      "choices": [
+        { "text": "Best available research evidence, clinical expertise, and client characteristics, values, and preferences", "correct": true, "rationale": "All three components are required; evidence-based practice is not the mechanical application of research findings." },
+        { "text": "Randomized controlled trials, meta-analyses, and systematic reviews", "correct": false, "rationale": "These are evidence types, not the components of the practice model." },
+        { "text": "Diagnosis, treatment planning, and outcome measurement", "correct": false, "rationale": "This is a clinical process rather than the EBP definition." },
+        { "text": "Manualized treatment, fidelity monitoring, and supervision", "correct": false, "rationale": "These support implementation but are not the definition." }
+      ],
+      "explanation": "The third component is the one most often dropped. A treatment with strong trial support that a client will not accept is not the evidence-based choice for that client — which is why EBP and client autonomy are not in tension.",
+      "refs": ["div12-treatments", "oer-research-methods", "aca-ethics"]
+    }
+  ]
+}

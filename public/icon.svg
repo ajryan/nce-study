@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="NCE Study">
+  <rect width="512" height="512" rx="96" fill="#1f6f6b"/>
+  <g fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Stylised card stack: the deck being reviewed -->
+    <rect x="120" y="168" width="272" height="180" rx="20"/>
+    <path d="M160 128h232a24 24 0 0 1 24 24"/>
+    <path d="M196 92h196a56 56 0 0 1 56 56"/>
+    <!-- Recall tick inside the top card -->
+    <path d="M186 258l44 44 96-96"/>
+  </g>
+</svg>
