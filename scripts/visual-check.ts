@@ -17,7 +17,7 @@ import { spawn } from 'node:child_process';
 
 const HEADED = process.argv.includes('--ui');
 const PORT = 4178;
-const BASE = `http://localhost:${PORT}/nce-anki/`;
+const BASE = `http://localhost:${PORT}/nce-study/`;
 const SHOTS = '.screenshots';
 
 const failures: string[] = [];

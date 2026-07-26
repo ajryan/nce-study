@@ -44,7 +44,7 @@ alarm red), and never leave the user at a dead end without an obvious next actio
 ## Commands
 
 ```bash
-npm run dev            # dev server (http://localhost:5173/nce-anki/)
+npm run dev            # dev server (http://localhost:5173/nce-study/)
 npm run build          # Pages build → dist/
 npm run build:single   # portable single file → dist-single/nce-study.html
 npm test               # all tests
@@ -160,7 +160,10 @@ clear and rebuild; `AppState.onChange` triggers a re-render.
 
 One codebase, two outputs, keyed off `mode === 'single'`:
 
-- default → `dist/`, base path `/nce-anki/` (override with `PAGES_BASE`), service worker
+- default → `dist/`, base path `/nce-study/` (override with `PAGES_BASE`; CI derives it from
+  the repo name), service worker. Live at https://ajryan.github.io/nce-study/ — Pages is set
+  to build from GitHub Actions, so **`dist/` is never committed**; the workflow builds and
+  deploys it.
 - `--mode single` → `dist-single/nce-study.html`, base `./`, everything inlined, manifest
   link stripped, SW never registered (`__SINGLE_FILE__` guard in `main.ts`)
 

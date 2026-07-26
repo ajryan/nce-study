@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => {
   const single = mode === 'single';
 
   return {
-    base: single ? './' : process.env.PAGES_BASE ?? '/nce-anki/',
+    base: single ? './' : process.env.PAGES_BASE ?? '/nce-study/',
     plugins: single
       ? [
           viteSingleFile(),

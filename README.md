@@ -13,7 +13,7 @@ links to a public source you can check.
 
 ```bash
 npm install
-npm run dev          # http://localhost:5173
+npm run dev          # http://localhost:5173/nce-study/
 ```
 
 ### Two ways to use it
@@ -21,7 +21,7 @@ npm run dev          # http://localhost:5173
 | | GitHub Pages build | Single-file build |
 |---|---|---|
 | Command | `npm run build` → `dist/` | `npm run build:single` → `dist-single/nce-study.html` |
-| Distribution | Push to `main`; the workflow deploys it | One 700 KB HTML file — email it, drop it on a USB stick |
+| Distribution | Push to `main`; the workflow deploys it to [ajryan.github.io/nce-study](https://ajryan.github.io/nce-study/) | One 700 KB HTML file — email it, drop it on a USB stick |
 | Offline | Yes, installable PWA with service worker | Yes, nothing to fetch at all |
 | **Saves progress** | **Yes** | **Usually not — see below** |
 
