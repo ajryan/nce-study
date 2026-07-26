@@ -14,7 +14,8 @@
     "validate": "tsx scripts/validate-content.ts",
     "coverage": "tsx scripts/coverage-report.ts",
     "check": "npm run validate && npm run coverage && npm run bias && npm run test",
-    "bias": "tsx scripts/answer-bias.ts"
+    "bias": "tsx scripts/answer-bias.ts",
+    "visual": "tsx scripts/visual-check.ts"
   },
   "dependencies": {
     "idb": "^8.0.3",
@@ -24,6 +25,7 @@
     "@types/jsdom": "^28.0.3",
     "@types/node": "^26.1.1",
     "jsdom": "^29.1.1",
+    "playwright": "^1.62.0",
     "tsx": "^4.20.3",
     "typescript": "^5.9.2",
     "vite": "^8.1.5",

@@ -47,6 +47,15 @@
 
 * { box-sizing: border-box; }
 
+/* Always reserve the scrollbar's width, so the layout doesn't jump sideways
+   when a short card is replaced by one tall enough to scroll. */
+html {
+  scrollbar-gutter: stable;
+}
+@supports not (scrollbar-gutter: stable) {
+  html { overflow-y: scroll; }
+}
+
 body {
   margin: 0;
   background: var(--bg);
@@ -490,8 +499,30 @@ table.grid td.num, table.grid th.num { text-align: right; font-family: var(--mon
 .empty { text-align: center; padding: 3rem 1rem; color: var(--text-dim); }
 .empty .big { font-size: 2.75rem; }
 
-@media (max-width: 560px) {
-  .grading button { flex: 1 1 45%; }
+@media (max-width: 620px) {
   .brand small { display: none; }
+  .brand { font-size: 0.95rem; white-space: nowrap; flex: none; }
   .hero h1 { font-size: 1.45rem; }
+
+  /* Keep the tabs on one line and let them scroll, rather than wrapping to
+     three rows and stealing height from the card. */
+  .topbar-inner { gap: 0.5rem; flex-wrap: nowrap; }
+  nav.tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  nav.tabs::-webkit-scrollbar { display: none; }
+  nav.tabs button { white-space: nowrap; font-size: 0.82rem; padding: 0.35rem 0.65rem; }
+
+  /* The action bar is pinned, so every pixel it takes is a pixel of card lost.
+     Tighten it, and drop the keyboard hint — there is no keyboard here. */
+  .actionbar { padding: 0.5rem 0.75rem calc(0.5rem + env(safe-area-inset-bottom, 0px)); }
+  .actionbar .kbd-hint { display: none; }
+  .grading { gap: 0.4rem; }
+  .grading button { flex: 1 1 0; padding: 0.5rem 0.4rem; font-size: 0.9rem; min-width: 0; }
+  .grading .ivl { font-size: 0.65rem; }
+  .prompt { font-size: 1.02rem; }
+  .card { padding: 0.9rem 1rem; }
 }

@@ -144,10 +144,10 @@ export function renderReview(app: AppState, root: HTMLElement, go?: (view: ViewN
     );
   }
   if (actions.childNodes.length > 0) {
-    actions.appendChild(renderHints(isChoiceCard));
+    actions.appendChild(renderHints(isChoiceCard, local.revealed));
     root.appendChild(actions);
   } else {
-    root.appendChild(renderHints(isChoiceCard));
+    root.appendChild(renderHints(isChoiceCard, local.revealed));
   }
 }
 
@@ -267,21 +267,16 @@ function renderGrading(app: AppState, isChoiceCard: boolean): HTMLElement {
   return wrap;
 }
 
-function renderHints(isChoiceCard: boolean): HTMLElement {
-  return el(
-    'div',
-    { class: 'kbd-hint' },
-    isChoiceCard
-      ? frag(
-          el('kbd', {}, '1'),
-          '–',
-          el('kbd', {}, '4'),
-          ' answer · ',
-        )
-      : frag(el('kbd', {}, 'space'), ' reveal · ', el('kbd', {}, '1'), '–', el('kbd', {}, '4'), ' grade · '),
-    el('kbd', {}, 'h'),
-    ' hide this card',
-  );
+/** Hints must describe what the number keys do *now* — they answer before the
+ *  reveal and rate after it, and a stale hint is worse than none. */
+function renderHints(isChoiceCard: boolean, revealed: boolean): HTMLElement {
+  const lead = revealed
+    ? frag(el('kbd', {}, '1'), '–', el('kbd', {}, '4'), ' rate how it went · ')
+    : isChoiceCard
+      ? frag(el('kbd', {}, '1'), '–', el('kbd', {}, '4'), ' pick an answer · ')
+      : frag(el('kbd', {}, 'space'), ' show the answer · ');
+
+  return el('div', { class: 'kbd-hint' }, lead, el('kbd', {}, 'h'), ' hide this card');
 }
 
 /** Encouragement that reflects how the chunk actually went, without grading the person. */
