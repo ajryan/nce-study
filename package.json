@@ -13,7 +13,8 @@
     "test:watch": "vitest",
     "validate": "tsx scripts/validate-content.ts",
     "coverage": "tsx scripts/coverage-report.ts",
-    "check": "npm run validate && npm run coverage && npm run test"
+    "check": "npm run validate && npm run coverage && npm run bias && npm run test",
+    "bias": "tsx scripts/answer-bias.ts"
   },
   "dependencies": {
     "idb": "^8.0.3",

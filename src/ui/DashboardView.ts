@@ -65,13 +65,13 @@ export function renderDashboard(app: AppState, root: HTMLElement): void {
           ? el(
               'p',
               { class: 'small muted', style: 'margin:.4rem 0 0' },
-              `To see every remaining card at least once, introduce ${needed} new card${needed === 1 ? '' : 's'} per day ` +
-                `(your current limit is ${settings.maxNewPerDay}).` +
-                (needed > settings.maxNewPerDay ? ' Your limit is too low to finish in time.' : ''),
+              `To get through everything in time, aim for about ${needed} new card${needed === 1 ? '' : 's'} a day ` +
+                `(you're set to ${settings.maxNewPerDay}).` +
+                (needed > settings.maxNewPerDay ? ' That’s more than your current setting allows.' : ''),
             )
           : needed === Infinity
-            ? el('p', { class: 'small muted', style: 'margin:.4rem 0 0' }, `${counts.new} card(s) remain unseen.`)
-            : el('p', { class: 'small muted', style: 'margin:.4rem 0 0' }, 'Every card has been seen at least once.'),
+            ? el('p', { class: 'small muted', style: 'margin:.4rem 0 0' }, `${counts.new} cards still to start.`)
+            : el('p', { class: 'small muted', style: 'margin:.4rem 0 0' }, 'You’ve started every card at least once. Nice.'),
       ),
     );
   }
@@ -92,11 +92,11 @@ export function renderDashboard(app: AppState, root: HTMLElement): void {
       el(
         'tr',
         {},
-        el('th', {}, 'Domain'),
+        el('th', {}, 'Topic'),
         el('th', { class: 'num' }, 'Cards'),
-        el('th', { class: 'num' }, 'Mastered'),
-        el('th', { class: 'num' }, 'Exam wt.'),
-        el('th', {}, 'Coverage'),
+        el('th', { class: 'num' }, 'Sticking'),
+        el('th', { class: 'num' }, 'Share of exam'),
+        el('th', {}, 'Progress'),
       ),
     ),
   );
@@ -114,7 +114,7 @@ export function renderDashboard(app: AppState, root: HTMLElement): void {
       el(
         'tr',
         {},
-        el('td', {}, `${domain.id} · ${domain.name}`),
+        el('td', {}, domain.name),
         el('td', { class: 'num' }, String(domainCards.length)),
         el('td', { class: 'num' }, `${mastered}/${domainCards.length}`),
         el('td', { class: 'num' }, `${domain.weight}%`),
@@ -147,7 +147,7 @@ export function renderDashboard(app: AppState, root: HTMLElement): void {
   const cacrepTable = el(
     'table',
     { class: 'grid' },
-    el('thead', {}, el('tr', {}, el('th', {}, 'Core area'), el('th', { class: 'num' }, 'Cards'), el('th', { class: 'num' }, 'Mastered'), el('th', {}, ''))),
+    el('thead', {}, el('tr', {}, el('th', {}, 'Subject'), el('th', { class: 'num' }, 'Cards'), el('th', { class: 'num' }, 'Sticking'), el('th', {}, ''))),
   );
   const cbody = el('tbody');
   for (const area of blueprint.cacrepAreas) {
@@ -168,7 +168,7 @@ export function renderDashboard(app: AppState, root: HTMLElement): void {
           'td',
           {},
           areaCards.length === 0
-            ? el('span', { class: 'small', style: 'color:var(--warn)' }, 'no cards')
+            ? el('span', { class: 'small', style: 'color:var(--warn)' }, 'none yet')
             : el(
                 'div',
                 { class: 'meter' },

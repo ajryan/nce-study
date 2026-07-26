@@ -55,18 +55,18 @@ function renderSetup(app: AppState, root: HTMLElement): HTMLElement {
     el(
       'p',
       { class: 'muted' },
-      `A timed mock built to the live blueprint: ${exam.scoredItems} scored-equivalent items drawn ` +
-        `in domain proportion, ${exam.optionsPerItem} options each, ` +
-        `${Math.floor(exam.timeLimitMinutes / 60)}h${exam.timeLimitMinutes % 60}m on the clock.`,
+      'A timed practice run that works like the real thing: the same mix of topics, the same ' +
+        `${exam.optionsPerItem} answers per question, and the same clock. Useful once you’ve ` +
+        'covered a fair bit — and remember, a practice score is just information, not a verdict.',
     ),
   );
 
-  // Show what can actually be drawn per domain, so a thin deck is visible
-  // up front rather than silently producing a skewed exam.
+  // Show what can actually be drawn per topic, so a thin deck is visible up
+  // front rather than silently producing a lopsided test.
   const table = el(
     'table',
     { class: 'grid' },
-    el('thead', {}, el('tr', {}, el('th', {}, 'Domain'), el('th', { class: 'num' }, 'Wanted'), el('th', { class: 'num' }, 'Available'))),
+    el('thead', {}, el('tr', {}, el('th', {}, 'Topic'), el('th', { class: 'num' }, 'Questions'), el('th', { class: 'num' }, 'Cards available'))),
   );
   const tbody = el('tbody');
   let shortfall = 0;
@@ -78,7 +78,7 @@ function renderSetup(app: AppState, root: HTMLElement): HTMLElement {
       el(
         'tr',
         {},
-        el('td', {}, `${domain.id} · ${domain.name}`),
+        el('td', {}, domain.name),
         el('td', { class: 'num' }, String(wanted)),
         el(
           'td',
@@ -96,15 +96,15 @@ function renderSetup(app: AppState, root: HTMLElement): HTMLElement {
       el(
         'div',
         { class: 'banner warn', style: 'margin-top:1rem' },
-        `The deck is ${shortfall} item(s) short of a full blueprint-proportional exam. ` +
-          'The mock will run with what exists, so domain weighting will be approximate.',
+        `There aren’t quite enough cards for a perfectly balanced test — we’re short ${shortfall}. ` +
+          'It’ll still run, but the topic mix won’t exactly match the real exam.',
       ),
     );
   }
 
   const lengthSelect = el('select', {}) as HTMLSelectElement;
   for (const n of [25, 50, 100, exam.scoredItems]) {
-    lengthSelect.appendChild(el('option', { value: String(n) }, `${n} items`));
+    lengthSelect.appendChild(el('option', { value: String(n) }, `${n} questions`));
   }
   lengthSelect.value = String(exam.scoredItems);
 
@@ -112,7 +112,7 @@ function renderSetup(app: AppState, root: HTMLElement): HTMLElement {
     el(
       'div',
       { class: 'row', style: 'margin-top:1.25rem' },
-      el('label', { class: 'small muted' }, 'Length'),
+      el('label', { class: 'small muted' }, 'How many questions?'),
       lengthSelect,
       el(
         'button',
@@ -124,14 +124,14 @@ function renderSetup(app: AppState, root: HTMLElement): HTMLElement {
             renderExam(app, root);
           },
         },
-        'Start exam',
+        'Start the practice test',
       ),
     ),
   );
 
   if (eligible.length === 0) {
     wrap.appendChild(
-      el('p', { class: 'small muted' }, 'No multiple-choice cards are loaded, so no exam can be built.'),
+      el('p', { class: 'small muted' }, 'There aren’t any multiple-choice cards loaded yet, so there’s nothing to build a test from.'),
     );
   }
 
@@ -323,7 +323,7 @@ function renderQuestion(app: AppState, root: HTMLElement): void {
           class: 'btn small',
           onclick: () => { abandon(); rerender(); },
         },
-        'Abandon exam',
+        'Stop this test',
       ),
     ),
   );
@@ -380,28 +380,28 @@ function renderResults(app: AppState, root: HTMLElement): HTMLElement {
   const elapsed = (s.endedAt ?? Date.now()) - s.startedAt;
 
   const wrap = el('div');
-  wrap.appendChild(el('h1', {}, 'Exam results'));
+  wrap.appendChild(el('h1', {}, 'How your practice test went'));
 
   const stats = el('div', { class: 'stats' });
   stats.appendChild(
     el('div', { class: 'stat' },
       el('div', { class: 'n' }, pct(correctCount, s.items.length)),
-      el('div', { class: 'l' }, 'Overall')),
+      el('div', { class: 'l' }, 'overall')),
   );
   stats.appendChild(
     el('div', { class: 'stat' },
       el('div', { class: 'n' }, `${correctCount}/${s.items.length}`),
-      el('div', { class: 'l' }, 'Correct')),
+      el('div', { class: 'l' }, 'got right')),
   );
   stats.appendChild(
     el('div', { class: 'stat' },
       el('div', { class: 'n' }, formatClock(elapsed)),
-      el('div', { class: 'l' }, 'Time used')),
+      el('div', { class: 'l' }, 'time taken')),
   );
   stats.appendChild(
     el('div', { class: 'stat' },
       el('div', { class: 'n' }, String(s.answers.filter((a) => a === null).length)),
-      el('div', { class: 'l' }, 'Unanswered')),
+      el('div', { class: 'l' }, 'left blank')),
   );
   wrap.appendChild(stats);
 
@@ -409,17 +409,18 @@ function renderResults(app: AppState, root: HTMLElement): HTMLElement {
     el(
       'p',
       { class: 'small muted' },
-      'NBCC sets the passing score by a standard-setting procedure and does not publish a fixed ' +
-        'percentage, so this score is a study signal — not a predicted pass or fail.',
+      'There’s no official pass mark to compare this against — the real exam’s cut-off isn’t ' +
+        'published as a percentage. Treat this as a guide to where to put your time next, not ' +
+        'as a prediction of how you’ll do on the day.',
     ),
   );
 
   // Per-domain breakdown is the actionable part.
-  wrap.appendChild(el('h2', {}, 'By domain'));
+  wrap.appendChild(el('h2', {}, 'How you did by topic'));
   const table = el(
     'table',
     { class: 'grid' },
-    el('thead', {}, el('tr', {}, el('th', {}, 'Domain'), el('th', { class: 'num' }, 'Score'), el('th', { class: 'num' }, '%'), el('th', {}, ''))),
+    el('thead', {}, el('tr', {}, el('th', {}, 'Topic'), el('th', { class: 'num' }, 'Score'), el('th', { class: 'num' }, '%'), el('th', {}, ''))),
   );
   const tbody = el('tbody');
   for (const domain of blueprint.domains) {
@@ -431,7 +432,7 @@ function renderResults(app: AppState, root: HTMLElement): HTMLElement {
       el(
         'tr',
         {},
-        el('td', {}, `${domain.id} · ${domain.name}`),
+        el('td', {}, domain.name),
         el('td', { class: 'num' }, `${got}/${rows.length}`),
         el('td', { class: 'num' }, pct(got, rows.length)),
         el('td', {}, el('div', { class: 'meter' }, el('div', { class: 'fill', style: `width:${share * 100}%` }))),
@@ -454,20 +455,22 @@ function renderResults(app: AppState, root: HTMLElement): HTMLElement {
         disabled: missed.length === 0,
         onclick: () => {
           void reinjectMissed(app, missed.map((m) => m.card)).then(() => {
-            status.textContent = `${missed.length} missed item(s) queued for review.`;
+            status.textContent = `Done — those ${missed.length} will come back around soon.`;
             app.rebuildQueue();
           });
         },
       },
-      `Send ${missed.length} missed item(s) back to study`,
+      missed.length === 1
+        ? 'Add the 1 I missed back to my cards'
+        : `Add the ${missed.length} I missed back to my cards`,
     ),
   );
-  actions.appendChild(el('button', { class: 'btn', onclick: () => { session = null; rerender(); } }, 'New exam'));
+  actions.appendChild(el('button', { class: 'btn', onclick: () => { session = null; rerender(); } }, 'Try another test'));
   actions.appendChild(status);
   wrap.appendChild(actions);
 
   // Full review of every item.
-  wrap.appendChild(el('h2', {}, 'Review every item'));
+  wrap.appendChild(el('h2', {}, 'Go through every question'));
   graded.forEach((g, i) => {
     const details = el('details', { class: 'browse-item' });
     details.appendChild(
@@ -476,7 +479,7 @@ function renderResults(app: AppState, root: HTMLElement): HTMLElement {
         {},
         el('span', { style: g.correct ? 'color:var(--correct)' : 'color:var(--wrong)' }, g.correct ? '✓ ' : '✗ '),
         el('span', {}, `${i + 1}. ${g.card.prompt.slice(0, 100)}${g.card.prompt.length > 100 ? '…' : ''}`),
-        el('div', { class: 'meta' }, `${domainById(g.card.domain)?.id ?? g.card.domain} · ${g.card.task}`),
+        el('div', { class: 'meta' }, domainById(g.card.domain)?.name ?? g.card.domain),
       ),
     );
 
@@ -491,7 +494,7 @@ function renderResults(app: AppState, root: HTMLElement): HTMLElement {
           'li',
           { style: choice.correct ? 'color:var(--correct);font-weight:600' : ci === g.chosen ? 'color:var(--wrong)' : '' },
           choice.text,
-          marks ? el('span', { class: 'small muted' }, ` (${marks})`) : null,
+          marks ? el('span', { class: 'small muted' }, ` — ${marks}`) : null,
           el('span', { class: 'rationale' }, choice.rationale),
         ),
       );

@@ -143,13 +143,19 @@ export function renderReview(app: AppState, root: HTMLElement, go?: (view: ViewN
   root.appendChild(renderHints(isChoiceCard));
 }
 
+/** The blueprint task in words, trimmed to fit a chip — never the raw code. */
+function shortTask(card: Card): string {
+  const label = taskLabel(card);
+  return label.length > 46 ? `${label.slice(0, 44)}…` : label;
+}
+
 function renderTags(card: Card): HTMLElement {
   const domain = domainById(card.domain);
   return el(
     'div',
     { class: 'taglist' },
-    el('span', { class: 'tag domain' }, domain ? `${domain.id} · ${domain.name}` : card.domain),
-    el('span', { class: 'tag', title: taskLabel(card) }, card.task),
+    el('span', { class: 'tag domain' }, domain ? domain.name : card.domain),
+    el('span', { class: 'tag', title: taskLabel(card) }, shortTask(card)),
     ...card.tags.slice(0, 4).map((t) => el('span', { class: 'tag' }, t)),
   );
 }
@@ -243,7 +249,7 @@ function renderGrading(app: AppState, isChoiceCard: boolean): HTMLElement {
   }
 
   wrap.appendChild(
-    el('button', { class: 'btn', onclick: () => void app.suspendCurrent() }, 'Suspend (s)'),
+    el('button', { class: 'btn', onclick: () => void app.suspendCurrent() }, 'Hide this card (h)'),
   );
 
   return wrap;
@@ -261,8 +267,8 @@ function renderHints(isChoiceCard: boolean): HTMLElement {
           ' answer · ',
         )
       : frag(el('kbd', {}, 'space'), ' reveal · ', el('kbd', {}, '1'), '–', el('kbd', {}, '4'), ' grade · '),
-    el('kbd', {}, 's'),
-    ' suspend',
+    el('kbd', {}, 'h'),
+    ' hide this card',
   );
 }
 
@@ -426,7 +432,7 @@ export function handleReviewKey(app: AppState, event: KeyboardEvent): boolean {
   const key = event.key.toLowerCase();
   const isChoiceCard = item.card.type === 'mcq' || item.card.type === 'scenario';
 
-  if (key === 's') {
+  if (key === 'h' || key === 's') {
     void app.suspendCurrent();
     return true;
   }

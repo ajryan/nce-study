@@ -22,7 +22,10 @@ let shown = PAGE_SIZE;
 
 export function renderBrowse(app: AppState, root: HTMLElement): void {
   clear(root);
-  root.appendChild(el('h1', {}, 'Browse deck'));
+  root.appendChild(el('h1', {}, 'All the cards'));
+  root.appendChild(
+    el('p', { class: 'lede' }, 'Read anything you like here — nothing is scored and nothing gets scheduled.'),
+  );
 
   const rerender = () => renderBrowse(app, root);
   const onFilterChange = () => {
@@ -36,7 +39,7 @@ export function renderBrowse(app: AppState, root: HTMLElement): void {
   bar.appendChild(
     el('input', {
       type: 'search',
-      placeholder: 'Search prompts, answers, tags…',
+      placeholder: 'Search for anything…',
       value: filters.query,
       oninput: (e: Event) => {
         filters.query = (e.target as HTMLInputElement).value;
@@ -48,7 +51,7 @@ export function renderBrowse(app: AppState, root: HTMLElement): void {
   bar.appendChild(
     select(
       filters.domain,
-      [['', 'All domains'], ...blueprint.domains.map((d) => [d.id, `${d.id} · ${d.name}`] as [string, string])],
+      [['', 'All topics'], ...blueprint.domains.map((d) => [d.id, d.name] as [string, string])],
       (v) => {
         filters.domain = v;
         onFilterChange();
@@ -59,7 +62,7 @@ export function renderBrowse(app: AppState, root: HTMLElement): void {
   bar.appendChild(
     select(
       filters.cacrep,
-      [['', 'All CACREP areas'], ...blueprint.cacrepAreas.map((a) => [a.id, a.name] as [string, string])],
+      [['', 'All subject areas'], ...blueprint.cacrepAreas.map((a) => [a.id, a.name] as [string, string])],
       (v) => {
         filters.cacrep = v;
         onFilterChange();
@@ -71,13 +74,13 @@ export function renderBrowse(app: AppState, root: HTMLElement): void {
     select(
       filters.state,
       [
-        ['', 'Any state'],
-        ['new', 'Unseen'],
-        ['learning', 'Learning'],
-        ['review', 'In review'],
-        ['due', 'Due now'],
-        ['suspended', 'Suspended'],
-        ['lapsed', 'Has lapses'],
+        ['', 'Any card'],
+        ['new', 'Not started yet'],
+        ['learning', 'Still learning'],
+        ['review', 'Sticking well'],
+        ['due', 'Ready to review now'],
+        ['suspended', 'Hidden'],
+        ['lapsed', 'Ones I keep missing'],
       ],
       (v) => {
         filters.state = v;
@@ -90,11 +93,11 @@ export function renderBrowse(app: AppState, root: HTMLElement): void {
     select(
       filters.type,
       [
-        ['', 'Any type'],
-        ['mcq', 'MCQ'],
-        ['scenario', 'Scenario'],
-        ['recall', 'Recall'],
-        ['cloze', 'Cloze'],
+        ['', 'Any kind'],
+        ['mcq', 'Multiple choice'],
+        ['scenario', 'What would you do'],
+        ['recall', 'Question and answer'],
+        ['cloze', 'Fill in the blank'],
       ],
       (v) => {
         filters.type = v;
@@ -177,12 +180,12 @@ function renderRow(app: AppState, card: Card, rerender: () => void): HTMLElement
   const stateLabel = !p
     ? 'unknown'
     : p.suspended
-      ? 'suspended'
+      ? 'hidden'
       : p.state === State.New
-        ? 'unseen'
+        ? 'not started yet'
         : p.state === State.Review
-          ? `review · due ${formatInterval((new Date(p.due).getTime() - Date.now()) / 86_400_000)}`
-          : 'learning';
+          ? `next review in ${formatInterval((new Date(p.due).getTime() - Date.now()) / 86_400_000)}`
+          : 'still learning';
 
   const details = el('details', { class: 'browse-item' });
   details.appendChild(
@@ -193,9 +196,8 @@ function renderRow(app: AppState, card: Card, rerender: () => void): HTMLElement
       el(
         'div',
         { class: 'meta' },
-        `${domain?.id ?? card.domain} · ${card.task} · ${card.type} · ${stateLabel}` +
-          (p && p.answerCount > 0 ? ` · ${p.correctCount}/${p.answerCount} correct` : '') +
-          (p && p.lapses > 0 ? ` · ${p.lapses} lapse${p.lapses === 1 ? '' : 's'}` : ''),
+        `${domain?.name ?? card.domain} · ${stateLabel}` +
+          (p && p.answerCount > 0 ? ` · you've got this right ${p.correctCount} of ${p.answerCount} times` : ''),
       ),
     ),
   );
@@ -252,12 +254,14 @@ function renderRow(app: AppState, card: Card, rerender: () => void): HTMLElement
               });
             },
           },
-          p.suspended ? 'Unsuspend' : 'Suspend',
+          p.suspended ? 'Show this card again' : 'Hide this card',
         ),
         el(
           'span',
           { class: 'small muted mono' },
-          `stability ${p.stability.toFixed(1)}d · difficulty ${p.difficulty.toFixed(1)} · reps ${p.reps}`,
+          p.reps > 0
+            ? `Seen ${p.reps} time${p.reps === 1 ? '' : 's'} so far`
+            : 'Not started yet',
         ),
       ),
     );

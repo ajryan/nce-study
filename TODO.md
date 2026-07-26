@@ -4,7 +4,22 @@
 
 In priority order:
 
-_(nothing outstanding)_
+1. **Finish removing the answer-length tell from the remaining 325 multiple-choice cards.**
+   Correct answers were systematically the longest, most-qualified option, so the deck could
+   be scored highly on shape alone without knowing any counseling. Measured at 94.1% before
+   any fix (`npm run bias`); chance is 25%.
+
+   D1 (41 cards) and D4 (38) are rebalanced, bringing the deck to 83.4%. Still to do:
+   D2 (~40), D3 (~110), D5 (~120), D6 (~30). Method: rewrite only the option text via
+   `scripts/apply-choice-texts.ts` with a patch file keyed by card id — trim the caveats off
+   the correct answer (they belong in the rationale, where they already are) and make each
+   distractor specific and comparable in length. Target is ≤40% longest and a length ratio
+   of 0.85–1.15.
+
+   **`npm run check` fails until this is finished, and that is deliberate** — the gate is
+   reporting real outstanding work rather than being tuned to pass.
+
+2. The hard/good/easy/suspend UX is usually "below the fold" and requires scrolling up and down after answering each question. References can be hidden behind some expansion UX. As for the answer details and difficulty rating, let's see if we can ensure the difficulty rating UX is always above the fold. It's OK for the answer details to require some scrolling to read all of it.
 
 ## Done
 
@@ -30,3 +45,22 @@ Move from the not-yet-done category after completing.
    the queue lands on a warm completion screen with onward options rather than a dead end.
    Dashboard headings rewritten in plain language ("How you're doing", "Your progress by
    exam topic").
+
+3. Plain-language pass over every screen — the copy was too technical.
+
+   Settings was the worst offender and was rewritten wholesale: "Target retention" became
+   "How well do you want to remember things?", "Interleave domains within a session" became
+   "Mix up the topics while you study", "Storage in use: IndexedDB (persistent)" became
+   "✅ Your progress is being saved on this device", and Export/Import became "Save a copy" /
+   "Load a saved copy". The same pass covered the practice test ("A timed mock built to the
+   live blueprint: 160 scored-equivalent items drawn in domain proportion" → "A timed
+   practice run that works like the real thing"), the card browser, and the dashboard tables
+   ("Domain" → "Topic", "Mastered" → "Sticking", "Exam wt." → "Share of exam").
+
+   "Suspend" was replaced everywhere with "Hide this card" / "Show this card again", and the
+   keyboard shortcut moved to `h` (with `s` still accepted). Raw blueprint codes like
+   "D1 · 1F" no longer appear on cards — the topic and task are shown in words.
+
+   A regex guard in `tests/ui.test.ts` now fails the build if the Settings screen renders
+   any of: retention, interval, IndexedDB, localStorage, FSRS, domain, scheduling, JSON,
+   serialize. Copy drifts technical again on the next edit; a comment doesn't stop that.

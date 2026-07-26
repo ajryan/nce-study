@@ -245,14 +245,14 @@ describe('other views render against real data', () => {
     expect(root.textContent).toMatch(/day[s]? until the exam/);
   });
 
-  it('browse renders and filters by domain', async () => {
+  it('browse renders and filters by topic', async () => {
     const app = await bootedApp();
     const root = container();
     renderBrowse(app, root);
     expect(root.querySelectorAll('.browse-item').length).toBeGreaterThan(0);
 
     const select = [...root.querySelectorAll('select')].find((s) =>
-      s.textContent?.includes('All domains'),
+      s.textContent?.includes('All topics'),
     ) as HTMLSelectElement;
     select.value = 'D6';
     select.dispatchEvent(new Event('change'));

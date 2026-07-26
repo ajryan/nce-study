@@ -6,730 +6,1773 @@
       "type": "recall",
       "domain": "D4",
       "task": "4B",
-      "cacrep": ["helping-relationships"],
-      "tags": ["smart-goals", "treatment-plan", "objectives"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "smart-goals",
+        "treatment-plan",
+        "objectives"
+      ],
       "prompt": "What does the SMART acronym stand for in goal setting, and how does a goal differ from an objective?",
       "answer": "Specific, Measurable, Attainable (or Achievable), Relevant (or Realistic), and Time-bound. A goal is the broad desired outcome — 'reduce depressive symptoms'; an objective is a specific, measurable step toward it — 'client will complete three scheduled pleasant activities per week for four weeks, tracked in a log'.",
       "explanation": "The most commonly failed criterion is measurability. 'Feel better about myself' cannot be evaluated; 'reduce PHQ-9 score from 18 to below 10 within twelve weeks' can. Measurable objectives also give the client visible evidence of progress.",
-      "refs": ["aca-ethics", "samhsa-tip65"]
+      "refs": [
+        "aca-ethics",
+        "samhsa-tip65"
+      ]
     },
     {
       "id": "d4-collab-002",
       "type": "mcq",
       "domain": "D4",
       "task": "4A",
-      "cacrep": ["helping-relationships"],
-      "tags": ["collaboration", "goals", "alliance"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "collaboration",
+        "goals",
+        "alliance"
+      ],
       "prompt": "Why must treatment goals be developed collaboratively rather than assigned by the counselor?",
       "choices": [
-        { "text": "Because agreement on goals is a core component of the therapeutic alliance and predicts outcome, and clients rarely pursue goals they did not choose", "correct": true, "rationale": "Bordin's alliance model identifies goal agreement, task agreement, and bond as the three components; imposed goals undermine the first two." },
-        { "text": "Because counselors lack the expertise to identify appropriate goals", "correct": false, "rationale": "Counselors contribute genuine clinical expertise; collaboration means combining it with the client's priorities, not abdicating it." },
-        { "text": "Because agency policy typically requires a client signature", "correct": false, "rationale": "A signature requirement is administrative and does not explain the clinical rationale." },
-        { "text": "Because collaborative goals are easier to document for insurers", "correct": false, "rationale": "Documentation convenience is not the reason." }
+        {
+          "text": "Shared goals predict outcome, and imposed ones rarely get pursued",
+          "correct": true,
+          "rationale": "Bordin's alliance model identifies goal agreement, task agreement, and bond as the three components; imposed goals undermine the first two."
+        },
+        {
+          "text": "Counselors lack the expertise to pick appropriate goals",
+          "correct": false,
+          "rationale": "Counselors contribute genuine clinical expertise; collaboration means combining it with the client's priorities, not abdicating it."
+        },
+        {
+          "text": "Agency policy usually requires the client to sign the plan",
+          "correct": false,
+          "rationale": "A signature requirement is administrative and does not explain the clinical rationale."
+        },
+        {
+          "text": "Collaborative goals are easier to document for insurers",
+          "correct": false,
+          "rationale": "Documentation convenience is not the reason."
+        }
       ],
       "explanation": "A frequent exam pattern: when a client's stated goal differs from what the counselor thinks is most important, the correct move is to explore and negotiate rather than override. Working on a goal the client does not own is the commonest cause of stalled treatment.",
-      "refs": ["aca-ethics", "samhsa-tip65", "div12-treatments"]
+      "refs": [
+        "aca-ethics",
+        "samhsa-tip65",
+        "div12-treatments"
+      ]
     },
     {
       "id": "d4-barriers-003",
       "type": "scenario",
       "domain": "D4",
       "task": "4C",
-      "cacrep": ["helping-relationships"],
-      "tags": ["barriers", "adherence", "planning"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "barriers",
+        "adherence",
+        "planning"
+      ],
       "prompt": "A client agrees to a homework assignment but never completes it across several weeks. What should the counselor do first?",
       "choices": [
-        { "text": "Explore the barriers collaboratively — whether the task was too large, unclear, poorly timed, or not meaningful to the client", "correct": true, "rationale": "Repeated non-completion is usually information about the task's fit rather than evidence of the client's motivation." },
-        { "text": "Confront the client about their lack of commitment to change", "correct": false, "rationale": "Attributing non-completion to character typically produces defensiveness and misses the actual obstacle." },
-        { "text": "Discontinue homework assignments entirely", "correct": false, "rationale": "Abandoning between-session work removes an active ingredient of several effective treatments." },
-        { "text": "Assign a larger task to increase the client's commitment", "correct": false, "rationale": "Escalating demand when the current one is unmet reliably makes matters worse." }
+        {
+          "text": "Explore the barrier — size, clarity, timing, or relevance",
+          "correct": true,
+          "rationale": "Repeated non-completion is usually information about the task's fit rather than evidence of the client's motivation."
+        },
+        {
+          "text": "Confront the client about their lack of commitment to change",
+          "correct": false,
+          "rationale": "Attributing non-completion to character typically produces defensiveness and misses the actual obstacle."
+        },
+        {
+          "text": "Stop setting between-session work with this client entirely",
+          "correct": false,
+          "rationale": "Abandoning between-session work removes an active ingredient of several effective treatments."
+        },
+        {
+          "text": "Set a larger task, to raise the client's level of commitment",
+          "correct": false,
+          "rationale": "Escalating demand when the current one is unmet reliably makes matters worse."
+        }
       ],
       "explanation": "Common fixable barriers: the task was set at the end of a session without rehearsal, the rationale was never made explicit, or it required resources the client does not have. Designing the task with the client and anticipating obstacles in session markedly improves completion.",
-      "refs": ["samhsa-tip35", "statpearls-cbt", "mi-org"]
+      "refs": [
+        "samhsa-tip35",
+        "statpearls-cbt",
+        "mi-org"
+      ]
     },
     {
       "id": "d4-strengths-004",
       "type": "mcq",
       "domain": "D4",
       "task": "4D",
-      "cacrep": ["helping-relationships"],
-      "tags": ["strengths", "resources", "planning"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "strengths",
+        "resources",
+        "planning"
+      ],
       "prompt": "How should client strengths be used in treatment planning?",
       "choices": [
-        { "text": "As concrete resources built into interventions — using existing skills, relationships, and past successes as the mechanism of change", "correct": true, "rationale": "Strengths are most useful when operationalized into the plan, not merely listed on an intake form." },
-        { "text": "As an encouraging preamble before addressing the real problems", "correct": false, "rationale": "Treating strengths as a courtesy wastes the clinical information they carry." },
-        { "text": "As evidence that formal treatment may be unnecessary", "correct": false, "rationale": "Having strengths does not mean the presenting problem resolves itself." },
-        { "text": "As a way to reassure clients who are anxious about diagnosis", "correct": false, "rationale": "Reassurance is not the planning function of a strengths assessment." }
+        {
+          "text": "As working parts of the plan — skills and past successes used",
+          "correct": true,
+          "rationale": "Strengths are most useful when operationalized into the plan, not merely listed on an intake form."
+        },
+        {
+          "text": "As an encouraging opener before the real problems are raised",
+          "correct": false,
+          "rationale": "Treating strengths as a courtesy wastes the clinical information they carry."
+        },
+        {
+          "text": "As a sign that formal treatment may not be necessary at all",
+          "correct": false,
+          "rationale": "Having strengths does not mean the presenting problem resolves itself."
+        },
+        {
+          "text": "As reassurance for clients made anxious by their diagnosis",
+          "correct": false,
+          "rationale": "Reassurance is not the planning function of a strengths assessment."
+        }
       ],
       "explanation": "A useful test: does the plan name a specific strength and specify how it will be used? 'Client is resilient' is decoration; 'client successfully quit smoking in 2019 using a written plan and daily tracking — we will adapt that method to sleep routine' is a strength put to work.",
-      "refs": ["samhsa-tip65", "msjcc"]
+      "refs": [
+        "samhsa-tip65",
+        "msjcc"
+      ]
     },
     {
       "id": "d4-loc-005",
       "type": "mcq",
       "domain": "D4",
       "task": "4E",
-      "cacrep": ["helping-relationships"],
-      "tags": ["level-of-care", "least-restrictive"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "level-of-care",
+        "least-restrictive"
+      ],
       "prompt": "What principle should guide selection of a level of care?",
       "choices": [
-        { "text": "The least restrictive setting that can safely and effectively meet the client's needs", "correct": true, "rationale": "The least-restrictive-alternative principle balances safety against autonomy and avoids unnecessary disruption to the client's life." },
-        { "text": "The most intensive available setting, to maximize safety", "correct": false, "rationale": "Over-restriction carries its own harms — loss of employment, housing, autonomy, and often iatrogenic effects." },
-        { "text": "Whatever level the client's insurance most readily authorizes", "correct": false, "rationale": "Coverage is a practical constraint, not a clinical standard." },
-        { "text": "The setting most convenient for the counselor's caseload", "correct": false, "rationale": "Counselor convenience is not a clinical criterion." }
+        {
+          "text": "The least restrictive setting that can safely meet their needs",
+          "correct": true,
+          "rationale": "The least-restrictive-alternative principle balances safety against autonomy and avoids unnecessary disruption to the client's life."
+        },
+        {
+          "text": "The most intensive setting available, to maximise safety",
+          "correct": false,
+          "rationale": "Over-restriction carries its own harms — loss of employment, housing, autonomy, and often iatrogenic effects."
+        },
+        {
+          "text": "Whatever level the client's insurance most readily approves",
+          "correct": false,
+          "rationale": "Coverage is a practical constraint, not a clinical standard."
+        },
+        {
+          "text": "Whichever setting best suits the counselor's own caseload",
+          "correct": false,
+          "rationale": "Counselor convenience is not a clinical criterion."
+        }
       ],
       "explanation": "Levels run roughly from outpatient, through intensive outpatient and partial hospitalization, to residential and inpatient. ASAM's six dimensions provide the structured version of this judgement for substance use.",
-      "refs": ["asam-criteria", "samhsa-tip42", "aca-ethics"]
+      "refs": [
+        "asam-criteria",
+        "samhsa-tip42",
+        "aca-ethics"
+      ]
     },
     {
       "id": "d4-termination-006",
       "type": "recall",
       "domain": "D4",
       "task": "4H",
-      "cacrep": ["helping-relationships"],
-      "tags": ["termination", "planning", "process"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "termination",
+        "planning",
+        "process"
+      ],
       "prompt": "What should a well-planned termination include?",
       "answer": "Advance discussion so termination is anticipated rather than abrupt; review of progress against the original goals; consolidation of gains and identification of what produced them; anticipation of future challenges and a relapse or maintenance plan; processing feelings about ending, including any sense of loss; clarification of how to return to services if needed; and appropriate referrals where ongoing needs remain.",
       "explanation": "Termination is a clinical phase, not an administrative event. For clients whose histories involve abandonment or unresolved loss, a well-handled ending is often the most therapeutically significant part of the work.",
-      "refs": ["aca-ethics", "samhsa-tip65"]
+      "refs": [
+        "aca-ethics",
+        "samhsa-tip65"
+      ]
     },
     {
       "id": "d4-termination-007",
       "type": "scenario",
       "domain": "D4",
       "task": "4H",
-      "cacrep": ["helping-relationships"],
-      "tags": ["termination", "premature", "engagement"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "termination",
+        "premature",
+        "engagement"
+      ],
       "prompt": "A client announces at the end of a session that this will be their last, having previously discussed no such plan. What is the best response?",
       "choices": [
-        { "text": "Explore the decision without pressure, offer at least one closing session to review progress and plan next steps, and respect the client's right to decide", "correct": true, "rationale": "Clients may end at any time; the counselor's role is to understand, offer a proper ending, and not coerce continuation." },
-        { "text": "Accept the decision immediately without discussion, to respect autonomy", "correct": false, "rationale": "Respecting autonomy does not preclude exploring the decision — sometimes it reflects an unaddressed rupture." },
-        { "text": "Warn the client about the risks of ending prematurely to encourage them to stay", "correct": false, "rationale": "Using risk to pressure a client is coercive and often confirms whatever prompted the decision." },
-        { "text": "Ask the client to commit to a further six sessions before deciding", "correct": false, "rationale": "Bargaining for continuation prioritizes the counselor's agenda." }
+        {
+          "text": "Explore it without pressure and offer a closing session",
+          "correct": true,
+          "rationale": "Clients may end at any time; the counselor's role is to understand, offer a proper ending, and not coerce continuation."
+        },
+        {
+          "text": "Accept it at once without discussion, to respect autonomy",
+          "correct": false,
+          "rationale": "Respecting autonomy does not preclude exploring the decision — sometimes it reflects an unaddressed rupture."
+        },
+        {
+          "text": "Warn them about the risks of stopping early, to keep them in",
+          "correct": false,
+          "rationale": "Using risk to pressure a client is coercive and often confirms whatever prompted the decision."
+        },
+        {
+          "text": "Ask them to commit to six more sessions before deciding",
+          "correct": false,
+          "rationale": "Bargaining for continuation prioritizes the counselor's agenda."
+        }
       ],
       "explanation": "Sudden termination announcements are frequently linked to an unspoken rupture, a fear of the next stage of work, or a practical barrier. Asking about it non-defensively sometimes resolves it — and when it does not, the client still deserves a proper ending.",
-      "refs": ["aca-ethics", "div12-treatments"]
+      "refs": [
+        "aca-ethics",
+        "div12-treatments"
+      ]
     },
     {
       "id": "d4-referral-008",
       "type": "mcq",
       "domain": "D4",
       "task": "4F",
-      "cacrep": ["helping-relationships"],
-      "tags": ["concurrent-treatment", "coordination"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "concurrent-treatment",
+        "coordination"
+      ],
       "prompt": "A client in counseling begins seeing a second therapist for the same concerns without informing either. What is the appropriate response?",
       "choices": [
-        { "text": "Discuss the situation openly with the client, explain the risks of uncoordinated concurrent treatment, and seek consent to coordinate or help the client choose", "correct": true, "rationale": "Concurrent treatment is not prohibited, but it must be coordinated to avoid conflicting plans and split treatment." },
-        { "text": "Terminate immediately, since the client has violated the treatment agreement", "correct": false, "rationale": "This is not an ethical violation by the client, and termination is disproportionate." },
-        { "text": "Contact the other therapist directly to resolve the overlap", "correct": false, "rationale": "Contacting another provider requires the client's authorization." },
-        { "text": "Ignore it, since clients may see whomever they choose", "correct": false, "rationale": "Client choice is real, but uncoordinated parallel treatment can produce contradictory interventions and should be addressed." }
+        {
+          "text": "Discuss it openly and seek consent to coordinate care",
+          "correct": true,
+          "rationale": "Concurrent treatment is not prohibited, but it must be coordinated to avoid conflicting plans and split treatment."
+        },
+        {
+          "text": "End it at once, since the treatment agreement was broken",
+          "correct": false,
+          "rationale": "This is not an ethical violation by the client, and termination is disproportionate."
+        },
+        {
+          "text": "Contact the other therapist directly to sort out the overlap",
+          "correct": false,
+          "rationale": "Contacting another provider requires the client's authorization."
+        },
+        {
+          "text": "Leave it alone, since clients may see whomever they like",
+          "correct": false,
+          "rationale": "Client choice is real, but uncoordinated parallel treatment can produce contradictory interventions and should be addressed."
+        }
       ],
       "explanation": "The codes direct counselors to discuss the potential benefits and risks and, with consent, coordinate. Coordination is especially important where medication, differing theoretical approaches, or safety planning are involved.",
-      "refs": ["aca-ethics", "nbcc-ethics"]
+      "refs": [
+        "aca-ethics",
+        "nbcc-ethics"
+      ]
     },
     {
       "id": "d4-revision-009",
       "type": "mcq",
       "domain": "D4",
       "task": "4L",
-      "cacrep": ["helping-relationships"],
-      "tags": ["plan-revision", "monitoring"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "plan-revision",
+        "monitoring"
+      ],
       "prompt": "After twelve sessions a client shows no measurable improvement. What is the counselor's obligation?",
       "choices": [
-        { "text": "Review and revise the treatment plan, consider consultation, and discuss alternatives including referral if the approach continues to be ineffective", "correct": true, "rationale": "Counselors must not continue services that are not benefiting the client; lack of progress triggers reassessment rather than persistence." },
-        { "text": "Continue the same approach, since change takes time", "correct": false, "rationale": "Persisting unchanged with an ineffective approach is precisely what the codes prohibit." },
-        { "text": "Attribute the lack of progress to client resistance and address that", "correct": false, "rationale": "Locating failure in the client avoids examining the treatment and the fit." },
-        { "text": "Terminate immediately without alternatives", "correct": false, "rationale": "Termination without referral or planning is abandonment." }
+        {
+          "text": "Revise the plan, seek consultation, and consider referral",
+          "correct": true,
+          "rationale": "Counselors must not continue services that are not benefiting the client; lack of progress triggers reassessment rather than persistence."
+        },
+        {
+          "text": "Carry on with the same approach, since change takes time",
+          "correct": false,
+          "rationale": "Persisting unchanged with an ineffective approach is precisely what the codes prohibit."
+        },
+        {
+          "text": "Put the lack of progress down to resistance and work on that",
+          "correct": false,
+          "rationale": "Locating failure in the client avoids examining the treatment and the fit."
+        },
+        {
+          "text": "End the counseling now, without offering any alternatives",
+          "correct": false,
+          "rationale": "Termination without referral or planning is abandonment."
+        }
       ],
       "explanation": "The treatment plan is a working hypothesis. Non-response is data about the hypothesis — possibly about the diagnosis, the alliance, an unaddressed barrier such as ongoing substance use or an unsafe home, or the modality itself.",
-      "refs": ["aca-ethics", "div12-treatments", "oer-research-methods"]
+      "refs": [
+        "aca-ethics",
+        "div12-treatments",
+        "oer-research-methods"
+      ]
     },
     {
       "id": "d4-progress-010",
       "type": "mcq",
       "domain": "D4",
       "task": "4M",
-      "cacrep": ["helping-relationships", "assessment"],
-      "tags": ["progress-review", "feedback", "client-involvement"],
+      "cacrep": [
+        "helping-relationships",
+        "assessment"
+      ],
+      "tags": [
+        "progress-review",
+        "feedback",
+        "client-involvement"
+      ],
       "prompt": "What is the benefit of formally reviewing progress with the client at regular intervals?",
       "choices": [
-        { "text": "It makes gains visible, surfaces disagreement about direction early, and gives the client an active role in evaluating the work", "correct": true, "rationale": "Explicit review catches misalignment before it becomes dropout and counters the client's tendency to discount gradual change." },
-        { "text": "It satisfies documentation requirements with minimal clinical value", "correct": false, "rationale": "The clinical value is substantial; treating it as paperwork wastes it." },
-        { "text": "It allows the counselor to demonstrate expertise", "correct": false, "rationale": "The purpose is collaborative evaluation, not demonstration." },
-        { "text": "It shortens treatment by encouraging early termination", "correct": false, "rationale": "The purpose is accurate evaluation, whatever that implies for duration." }
+        {
+          "text": "It makes gains visible and surfaces disagreement early",
+          "correct": true,
+          "rationale": "Explicit review catches misalignment before it becomes dropout and counters the client's tendency to discount gradual change."
+        },
+        {
+          "text": "It meets documentation rules but adds little clinical value",
+          "correct": false,
+          "rationale": "The clinical value is substantial; treating it as paperwork wastes it."
+        },
+        {
+          "text": "It gives the counselor a chance to demonstrate expertise",
+          "correct": false,
+          "rationale": "The purpose is collaborative evaluation, not demonstration."
+        },
+        {
+          "text": "It shortens treatment by nudging clients to finish earlier",
+          "correct": false,
+          "rationale": "The purpose is accurate evaluation, whatever that implies for duration."
+        }
       ],
       "explanation": "Depressed clients in particular tend to underestimate improvement because their memory of the earlier baseline is mood-congruent. Comparing current scores against intake data can be a genuinely therapeutic intervention.",
-      "refs": ["apa-testing-standards", "div12-treatments", "nimh-depression"]
+      "refs": [
+        "apa-testing-standards",
+        "div12-treatments",
+        "nimh-depression"
+      ]
     },
     {
       "id": "d4-diagnosis-011",
       "type": "mcq",
       "domain": "D4",
       "task": "4B",
-      "cacrep": ["helping-relationships", "assessment"],
-      "tags": ["diagnosis", "goals", "consistency"],
+      "cacrep": [
+        "helping-relationships",
+        "assessment"
+      ],
+      "tags": [
+        "diagnosis",
+        "goals",
+        "consistency"
+      ],
       "prompt": "Why must treatment goals be consistent with the client's diagnosis?",
       "choices": [
-        { "text": "Because the plan should target the mechanisms maintaining the diagnosed condition, and because payers and auditors expect a coherent link between diagnosis, goals, and interventions", "correct": true, "rationale": "Both clinical logic and documentation standards require the plan to follow from the assessment." },
-        { "text": "Because diagnosis determines the number of sessions permitted", "correct": false, "rationale": "Session limits are payer rules, not a diagnostic property." },
-        { "text": "Because goals unrelated to the diagnosis are unethical", "correct": false, "rationale": "Clients legitimately bring concerns beyond the diagnosis; the requirement is coherence, not exclusivity." },
-        { "text": "Because the diagnosis dictates a single correct intervention", "correct": false, "rationale": "Multiple effective approaches usually exist for any diagnosis." }
+        {
+          "text": "The plan should target what keeps the condition going",
+          "correct": true,
+          "rationale": "Both clinical logic and documentation standards require the plan to follow from the assessment."
+        },
+        {
+          "text": "The diagnosis sets how many sessions are permitted",
+          "correct": false,
+          "rationale": "Session limits are payer rules, not a diagnostic property."
+        },
+        {
+          "text": "Goals unrelated to the diagnosis are themselves unethical",
+          "correct": false,
+          "rationale": "Clients legitimately bring concerns beyond the diagnosis; the requirement is coherence, not exclusivity."
+        },
+        {
+          "text": "Each diagnosis points to one single correct intervention",
+          "correct": false,
+          "rationale": "Multiple effective approaches usually exist for any diagnosis."
+        }
       ],
       "explanation": "A plan that reads 'diagnosis: PTSD; goal: improve time management' signals either a wrong diagnosis or a plan disconnected from it. Reviewers look for the through-line from presenting problem to diagnosis to goal to intervention.",
-      "refs": ["dsm5tr", "aca-ethics", "div12-treatments"]
+      "refs": [
+        "dsm5tr",
+        "aca-ethics",
+        "div12-treatments"
+      ]
     },
     {
       "id": "d4-shortlong-012",
       "type": "cloze",
       "domain": "D4",
       "task": "4B",
-      "cacrep": ["helping-relationships"],
-      "tags": ["goals", "sequencing"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "goals",
+        "sequencing"
+      ],
       "prompt": "Effective treatment plans sequence goals so that {{safety and stabilization}} are addressed before deeper processing or long-term change work.",
       "answer": "safety and stabilization",
       "explanation": "This sequencing principle recurs across trauma treatment, substance use, eating disorders, and suicidality. On exam items, when a client presents with both acute risk and long-standing issues, the risk is addressed first.",
-      "refs": ["samhsa-tip57", "sprc", "asam-criteria"]
+      "refs": [
+        "samhsa-tip57",
+        "sprc",
+        "asam-criteria"
+      ]
     },
     {
       "id": "d4-transitions-013",
       "type": "mcq",
       "domain": "D4",
       "task": "4I",
-      "cacrep": ["group-work"],
-      "tags": ["group", "membership", "transitions"],
+      "cacrep": [
+        "group-work"
+      ],
+      "tags": [
+        "group",
+        "membership",
+        "transitions"
+      ],
       "prompt": "How should a group leader handle a new member joining an established open group?",
       "choices": [
-        { "text": "Prepare the new member individually beforehand, and prepare existing members for the addition, allowing time to process reactions", "correct": true, "rationale": "Membership change disrupts group cohesion; preparing both sides preserves it and treats the change as clinical material." },
-        { "text": "Introduce the new member without prior discussion to keep the process natural", "correct": false, "rationale": "Unprepared additions commonly produce withdrawal or resentment among existing members." },
-        { "text": "Have the new member observe silently for several sessions before participating", "correct": false, "rationale": "Enforced silence marks the member as an outsider and impedes integration." },
-        { "text": "Ask existing members to repeat their histories for the new member's benefit", "correct": false, "rationale": "This places a burden on existing members and stalls the group's current work." }
+        {
+          "text": "Prepare the newcomer and the group, and process reactions",
+          "correct": true,
+          "rationale": "Membership change disrupts group cohesion; preparing both sides preserves it and treats the change as clinical material."
+        },
+        {
+          "text": "Bring them in unannounced, to keep the process natural",
+          "correct": false,
+          "rationale": "Unprepared additions commonly produce withdrawal or resentment among existing members."
+        },
+        {
+          "text": "Have them sit silently for several sessions before joining in",
+          "correct": false,
+          "rationale": "Enforced silence marks the member as an outsider and impedes integration."
+        },
+        {
+          "text": "Ask existing members to retell their histories for the newcomer",
+          "correct": false,
+          "rationale": "This places a burden on existing members and stalls the group's current work."
+        }
       ],
       "explanation": "Open groups gain accessibility and continuity of service at the cost of cohesion; closed groups gain depth and safety at the cost of flexibility. Either way, arrivals and departures are events the group should be helped to process.",
-      "refs": ["statpearls-group-therapy", "aca-ethics"]
+      "refs": [
+        "statpearls-group-therapy",
+        "aca-ethics"
+      ]
     },
     {
       "id": "d4-followup-014",
       "type": "mcq",
       "domain": "D4",
       "task": "4J",
-      "cacrep": ["helping-relationships"],
-      "tags": ["follow-up", "discharge", "aftercare"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "follow-up",
+        "discharge",
+        "aftercare"
+      ],
       "prompt": "What is the purpose of post-discharge follow-up contact?",
       "choices": [
-        { "text": "To check on maintenance of gains, detect early deterioration, and facilitate re-engagement before a full relapse occurs", "correct": true, "rationale": "The period after discharge carries elevated relapse risk, and brief contact has evidence for reducing it." },
-        { "text": "To collect outcome data for the agency's reporting requirements only", "correct": false, "rationale": "Data collection may occur, but the clinical purpose is continuity." },
-        { "text": "To encourage the client to resume regular sessions", "correct": false, "rationale": "The aim is monitoring and support, not marketing further treatment." },
-        { "text": "To formally close the case file", "correct": false, "rationale": "That is an administrative step, not the purpose of clinical follow-up." }
+        {
+          "text": "To catch early slipping and help them re-engage in time",
+          "correct": true,
+          "rationale": "The period after discharge carries elevated relapse risk, and brief contact has evidence for reducing it."
+        },
+        {
+          "text": "To gather outcome data for the agency's reporting only",
+          "correct": false,
+          "rationale": "Data collection may occur, but the clinical purpose is continuity."
+        },
+        {
+          "text": "To encourage the client to start regular sessions again",
+          "correct": false,
+          "rationale": "The aim is monitoring and support, not marketing further treatment."
+        },
+        {
+          "text": "To formally close the case file and finish the paperwork",
+          "correct": false,
+          "rationale": "That is an administrative step, not the purpose of clinical follow-up."
+        }
       ],
       "explanation": "Brief post-discharge contacts — including caring letters or calls — have evidence for reducing suicide risk following psychiatric hospitalization. Follow-up plans should be agreed before discharge, not improvised afterwards.",
-      "refs": ["sprc", "samhsa-tip42", "nimh-suicide-prevention"]
+      "refs": [
+        "sprc",
+        "samhsa-tip42",
+        "nimh-suicide-prevention"
+      ]
     },
     {
       "id": "d4-assessment-015",
       "type": "mcq",
       "domain": "D4",
       "task": "4K",
-      "cacrep": ["assessment", "career"],
-      "tags": ["assessment-results", "decision-making", "career"],
+      "cacrep": [
+        "assessment",
+        "career"
+      ],
+      "tags": [
+        "assessment-results",
+        "decision-making",
+        "career"
+      ],
       "prompt": "How should career interest inventory results be used in decision making with a client?",
       "choices": [
-        { "text": "As one source of information to explore and test against the client's experience, not as a prescription of the right occupation", "correct": true, "rationale": "Interest inventories generate hypotheses for exploration; they do not determine occupational choice." },
-        { "text": "As a definitive indication of the occupations the client should pursue", "correct": false, "rationale": "No inventory has the predictive precision to prescribe a career." },
-        { "text": "As a screening device to eliminate unsuitable options from consideration", "correct": false, "rationale": "Premature elimination replicates the circumscription problem counseling often needs to undo." },
-        { "text": "As a measure of the client's aptitude for particular fields", "correct": false, "rationale": "Interest and aptitude are distinct constructs; interest inventories do not measure ability." }
+        {
+          "text": "As one input to explore against the client's own experience",
+          "correct": true,
+          "rationale": "Interest inventories generate hypotheses for exploration; they do not determine occupational choice."
+        },
+        {
+          "text": "As a definitive statement of which occupations to pursue",
+          "correct": false,
+          "rationale": "No inventory has the predictive precision to prescribe a career."
+        },
+        {
+          "text": "As a screen for ruling unsuitable options out of consideration",
+          "correct": false,
+          "rationale": "Premature elimination replicates the circumscription problem counseling often needs to undo."
+        },
+        {
+          "text": "As a measure of the client's aptitude for particular fields",
+          "correct": false,
+          "rationale": "Interest and aptitude are distinct constructs; interest inventories do not measure ability."
+        }
       ],
       "explanation": "The interest/aptitude distinction is frequently tested. Liking an activity and being able to do it well are different questions, and career decisions usually require values, constraints, and labour-market information alongside both.",
-      "refs": ["onet", "bls-ooh", "apa-testing-standards", "ncda"]
+      "refs": [
+        "onet",
+        "bls-ooh",
+        "apa-testing-standards",
+        "ncda"
+      ]
     },
     {
       "id": "d4-coordination-016",
       "type": "scenario",
       "domain": "D4",
       "task": "4N",
-      "cacrep": ["helping-relationships"],
-      "tags": ["care-coordination", "documentation", "release"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "care-coordination",
+        "documentation",
+        "release"
+      ],
       "prompt": "A client's psychiatrist requests a progress update. What must the counselor do before responding?",
       "choices": [
-        { "text": "Obtain a valid release of information from the client, then share only what is necessary for the coordination purpose", "correct": true, "rationale": "Authorization is required, and the minimum-necessary principle limits what should be disclosed even once it exists." },
-        { "text": "Respond fully, since both are treating providers", "correct": false, "rationale": "Being a fellow provider does not itself authorize disclosure of counseling records." },
-        { "text": "Decline, since counseling records may never be shared with other providers", "correct": false, "rationale": "Sharing with authorization is routine and often clinically important." },
-        { "text": "Share verbally but not in writing, to avoid a record", "correct": false, "rationale": "The medium does not change the authorization requirement, and avoiding documentation is itself poor practice." }
+        {
+          "text": "Get a signed release, then share only what is needed",
+          "correct": true,
+          "rationale": "Authorization is required, and the minimum-necessary principle limits what should be disclosed even once it exists."
+        },
+        {
+          "text": "Answer fully, since both of them are treating providers",
+          "correct": false,
+          "rationale": "Being a fellow provider does not itself authorize disclosure of counseling records."
+        },
+        {
+          "text": "Decline, since counseling records are never shared out",
+          "correct": false,
+          "rationale": "Sharing with authorization is routine and often clinically important."
+        },
+        {
+          "text": "Share it verbally rather than in writing, to avoid a record",
+          "correct": false,
+          "rationale": "The medium does not change the authorization requirement, and avoiding documentation is itself poor practice."
+        }
       ],
       "explanation": "Good coordination summaries are focused: current diagnosis, treatment focus, relevant progress, and specific questions or concerns — not a transcript of session content.",
-      "refs": ["hhs-hipaa-privacy", "aca-ethics", "cfr-42-part-2"]
+      "refs": [
+        "hhs-hipaa-privacy",
+        "aca-ethics",
+        "cfr-42-part-2"
+      ]
     },
     {
       "id": "d4-maintenance-017",
       "type": "recall",
       "domain": "D4",
       "task": "4O",
-      "cacrep": ["helping-relationships"],
-      "tags": ["maintenance", "generalization", "gains"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "maintenance",
+        "generalization",
+        "gains"
+      ],
       "prompt": "What strategies help clients maintain therapeutic gains after treatment ends?",
       "answer": "Attributing progress to the client's own efforts and skills rather than to the counselor; practising skills in real-world settings during treatment rather than only in session; identifying likely future stressors and rehearsing responses in advance; writing a personal maintenance or relapse-prevention plan; building ongoing support systems outside therapy; tapering session frequency rather than stopping abruptly; and normalizing setbacks as recoverable rather than as failure.",
       "explanation": "Attribution matters more than it first appears: clients who credit their improvement to the counselor's presence tend to relapse faster once it is withdrawn. Explicitly crediting the client's work is a maintenance intervention.",
-      "refs": ["samhsa-tip65", "statpearls-cbt", "stages-of-change"]
+      "refs": [
+        "samhsa-tip65",
+        "statpearls-cbt",
+        "stages-of-change"
+      ]
     },
     {
       "id": "d4-compliance-018",
       "type": "mcq",
       "domain": "D4",
       "task": "4P",
-      "cacrep": ["helping-relationships"],
-      "tags": ["adherence", "engagement", "motivation"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "adherence",
+        "engagement",
+        "motivation"
+      ],
       "prompt": "A client says the treatment plan 'sounds like a lot of work'. What is the most useful response?",
       "choices": [
-        { "text": "Explore their concerns and renegotiate scope and pacing so the plan matches what they are willing and able to do", "correct": true, "rationale": "A plan the client cannot sustain is not a good plan; ambivalence about effort is information for revision." },
-        { "text": "Emphasize the consequences of not following the plan", "correct": false, "rationale": "Consequence-based persuasion tends to increase sustain talk rather than commitment." },
-        { "text": "Reassure the client that the counselor will handle most of the work", "correct": false, "rationale": "Inaccurate and undermines the client's agency in their own change." },
-        { "text": "Proceed as planned, since clients often underestimate their capacity", "correct": false, "rationale": "Overriding a stated concern reliably produces disengagement." }
+        {
+          "text": "Explore the concern and renegotiate the scope and pace",
+          "correct": true,
+          "rationale": "A plan the client cannot sustain is not a good plan; ambivalence about effort is information for revision."
+        },
+        {
+          "text": "Spell out the consequences of not following the plan",
+          "correct": false,
+          "rationale": "Consequence-based persuasion tends to increase sustain talk rather than commitment."
+        },
+        {
+          "text": "Reassure them that the counselor will do most of the work",
+          "correct": false,
+          "rationale": "Inaccurate and undermines the client's agency in their own change."
+        },
+        {
+          "text": "Carry on as planned, since clients underestimate themselves",
+          "correct": false,
+          "rationale": "Overriding a stated concern reliably produces disengagement."
+        }
       ],
       "explanation": "This is an MI moment: the counselor's righting reflex is to argue for the plan, which typically evokes the client's arguments against it. Rolling with it and negotiating a smaller first step usually produces more actual change.",
-      "refs": ["samhsa-tip35", "mi-org", "stages-of-change"]
+      "refs": [
+        "samhsa-tip35",
+        "mi-org",
+        "stages-of-change"
+      ]
     },
     {
       "id": "d4-crisis-plan-019",
       "type": "mcq",
       "domain": "D4",
       "task": "4G",
-      "cacrep": ["helping-relationships"],
-      "tags": ["crisis-planning", "safety", "documentation"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "crisis-planning",
+        "safety",
+        "documentation"
+      ],
       "prompt": "What should a treatment plan include for a client with a history of suicidal crises, even during periods of stability?",
       "choices": [
-        { "text": "A current safety plan with warning signs, coping strategies, supports, and crisis contacts, reviewed and updated periodically", "correct": true, "rationale": "Risk fluctuates; a plan created during stability is available when capacity to create one is diminished." },
-        { "text": "Nothing specific, since the client is currently stable", "correct": false, "rationale": "Waiting for a crisis to plan for it is precisely the wrong sequence." },
-        { "text": "A signed contract promising not to attempt suicide", "correct": false, "rationale": "No-suicide contracts lack evidence and have been superseded by safety planning." },
-        { "text": "A standing instruction to attend the emergency department for any distress", "correct": false, "rationale": "Over-broad escalation is unsustainable and skips the client's own coping resources." }
+        {
+          "text": "A current safety plan, reviewed and updated from time to time",
+          "correct": true,
+          "rationale": "Risk fluctuates; a plan created during stability is available when capacity to create one is diminished."
+        },
+        {
+          "text": "Nothing in particular, since the client is currently stable",
+          "correct": false,
+          "rationale": "Waiting for a crisis to plan for it is precisely the wrong sequence."
+        },
+        {
+          "text": "A signed contract promising not to attempt suicide",
+          "correct": false,
+          "rationale": "No-suicide contracts lack evidence and have been superseded by safety planning."
+        },
+        {
+          "text": "A standing instruction to go to A&E whenever distressed",
+          "correct": false,
+          "rationale": "Over-broad escalation is unsustainable and skips the client's own coping resources."
+        }
       ],
       "explanation": "Safety plans should be written in the client's own words, kept somewhere accessible, and revisited — an out-of-date plan naming an unavailable support person is worse than it looks.",
-      "refs": ["sprc", "samhsa-988", "nimh-suicide-prevention"]
+      "refs": [
+        "sprc",
+        "samhsa-988",
+        "nimh-suicide-prevention"
+      ]
     },
     {
       "id": "d4-cultural-020",
       "type": "mcq",
       "domain": "D4",
       "task": "4A",
-      "cacrep": ["social-cultural", "helping-relationships"],
-      "tags": ["culture", "treatment-planning", "goals"],
+      "cacrep": [
+        "social-cultural",
+        "helping-relationships"
+      ],
+      "tags": [
+        "culture",
+        "treatment-planning",
+        "goals"
+      ],
       "prompt": "How should cultural considerations shape treatment planning?",
       "choices": [
-        { "text": "By informing goal selection, intervention choice, involvement of family or community, and how progress is defined and measured", "correct": true, "rationale": "Culture affects what counts as a good outcome, not merely how the counselor communicates." },
-        { "text": "Only by adjusting the counselor's communication style", "correct": false, "rationale": "Limiting culture to communication style misses its influence on goals and outcome definitions." },
-        { "text": "By selecting only interventions developed within the client's culture", "correct": false, "rationale": "Adaptation is usually more feasible than restriction, and clients vary in identification with their heritage culture." },
-        { "text": "It should not, since treatment should be applied uniformly for fairness", "correct": false, "rationale": "Uniform application is not equity; it privileges whichever cultural frame the model was built in." }
+        {
+          "text": "By shaping goals, methods, who is involved, and what counts",
+          "correct": true,
+          "rationale": "Culture affects what counts as a good outcome, not merely how the counselor communicates."
+        },
+        {
+          "text": "Only by adjusting how the counselor communicates in session",
+          "correct": false,
+          "rationale": "Limiting culture to communication style misses its influence on goals and outcome definitions."
+        },
+        {
+          "text": "By using only interventions built within the client's culture",
+          "correct": false,
+          "rationale": "Adaptation is usually more feasible than restriction, and clients vary in identification with their heritage culture."
+        },
+        {
+          "text": "It should not — treatment applied uniformly is the fairest",
+          "correct": false,
+          "rationale": "Uniform application is not equity; it privileges whichever cultural frame the model was built in."
+        }
       ],
       "explanation": "Concretely: whether family members participate in goal-setting, whether an individual or relational outcome is the target, and whether spiritual practice is integrated are all planning decisions with cultural content.",
-      "refs": ["msjcc", "dsm5tr", "aca-ethics"]
+      "refs": [
+        "msjcc",
+        "dsm5tr",
+        "aca-ethics"
+      ]
     },
     {
       "id": "d4-mandated-021",
       "type": "scenario",
       "domain": "D4",
       "task": "4A",
-      "cacrep": ["helping-relationships"],
-      "tags": ["mandated-clients", "goals", "engagement"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "mandated-clients",
+        "goals",
+        "engagement"
+      ],
       "prompt": "A court-mandated client states they have no problems and only want the required paperwork signed. How should the counselor approach treatment planning?",
       "choices": [
-        { "text": "Be transparent about the mandate's requirements and look for any goal the client genuinely owns, however modest, to build on", "correct": true, "rationale": "Mandated clients almost always have some goal — ending court involvement, keeping a job, seeing their children — which can anchor genuine work." },
-        { "text": "Write a plan addressing the problems identified by the court, regardless of the client's view", "correct": false, "rationale": "A plan the client rejects entirely produces compliance at best and no change." },
-        { "text": "Refuse to work with the client until they acknowledge the referring problem", "correct": false, "rationale": "Demanding an admission as a precondition typically entrenches denial." },
-        { "text": "Sign the paperwork and end the involvement, since the client is not motivated", "correct": false, "rationale": "This abandons both the client and the counselor's professional obligation." }
+        {
+          "text": "Be straight about the mandate and find a goal they own",
+          "correct": true,
+          "rationale": "Mandated clients almost always have some goal — ending court involvement, keeping a job, seeing their children — which can anchor genuine work."
+        },
+        {
+          "text": "Write a plan around the problems the court identified",
+          "correct": false,
+          "rationale": "A plan the client rejects entirely produces compliance at best and no change."
+        },
+        {
+          "text": "Refuse to work until they admit the referring problem",
+          "correct": false,
+          "rationale": "Demanding an admission as a precondition typically entrenches denial."
+        },
+        {
+          "text": "Sign the paperwork and end it, since they are not motivated",
+          "correct": false,
+          "rationale": "This abandons both the client and the counselor's professional obligation."
+        }
       ],
       "explanation": "Clarify at the outset what will be reported to the court and what remains confidential — mandated clients need to know the boundaries before they decide what to disclose. 'Getting the court off my back' is a legitimate starting goal.",
-      "refs": ["samhsa-tip35", "aca-ethics", "samhsa-tip65"]
+      "refs": [
+        "samhsa-tip35",
+        "aca-ethics",
+        "samhsa-tip65"
+      ]
     },
     {
       "id": "d4-documentation-022",
       "type": "mcq",
       "domain": "D4",
       "task": "4N",
-      "cacrep": ["helping-relationships"],
-      "tags": ["golden-thread", "documentation", "audit"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "golden-thread",
+        "documentation",
+        "audit"
+      ],
       "prompt": "What does the 'golden thread' refer to in clinical documentation?",
       "choices": [
-        { "text": "The traceable consistency running from presenting problem to assessment, diagnosis, treatment plan goals, session interventions, and progress notes", "correct": true, "rationale": "Auditors and reviewers look for this coherence; each document should follow logically from the last." },
-        { "text": "The requirement to use gold-standard assessment instruments", "correct": false, "rationale": "Not the meaning of the term." },
-        { "text": "The chronological ordering of notes in the file", "correct": false, "rationale": "Ordering is not the concept; logical linkage is." },
-        { "text": "The confidential portion of the record kept separate from the chart", "correct": false, "rationale": "That describes psychotherapy notes." }
+        {
+          "text": "The thread linking problem, diagnosis, goals, and each note",
+          "correct": true,
+          "rationale": "Auditors and reviewers look for this coherence; each document should follow logically from the last."
+        },
+        {
+          "text": "The requirement to use gold-standard assessment instruments",
+          "correct": false,
+          "rationale": "Not the meaning of the term."
+        },
+        {
+          "text": "The strict chronological ordering of notes within the file",
+          "correct": false,
+          "rationale": "Ordering is not the concept; logical linkage is."
+        },
+        {
+          "text": "The confidential notes kept separately from the main chart",
+          "correct": false,
+          "rationale": "That describes psychotherapy notes."
+        }
       ],
       "explanation": "In practice this means each progress note should reference the plan goal it addressed and the intervention used. Notes that describe the session without connecting to the plan are the most common audit finding.",
-      "refs": ["aca-ethics", "hhs-hipaa-privacy"]
+      "refs": [
+        "aca-ethics",
+        "hhs-hipaa-privacy"
+      ]
     },
     {
       "id": "d4-modality-023",
       "type": "mcq",
       "domain": "D4",
       "task": "4G",
-      "cacrep": ["helping-relationships", "group-work"],
-      "tags": ["modality-selection", "group", "individual"],
+      "cacrep": [
+        "helping-relationships",
+        "group-work"
+      ],
+      "tags": [
+        "modality-selection",
+        "group",
+        "individual"
+      ],
       "prompt": "Which client is generally the poorest candidate for a process-oriented therapy group?",
       "choices": [
-        { "text": "A client in acute crisis with active psychosis and significant difficulty tolerating interpersonal stimulation", "correct": true, "rationale": "Acute instability and difficulty processing interpersonal input make process groups overwhelming and disruptive for the member and the group." },
-        { "text": "A client with social anxiety who avoids group settings", "correct": false, "rationale": "Social anxiety is often an indication for group work, which provides in-vivo practice." },
-        { "text": "A client who feels isolated and believes their problems are unique", "correct": false, "rationale": "Universality makes this an excellent group indication." },
-        { "text": "A client with interpersonal difficulties that appear in most relationships", "correct": false, "rationale": "Interpersonal patterns are exactly what process groups are designed to surface and address." }
+        {
+          "text": "Someone in acute crisis who cannot tolerate group contact",
+          "correct": true,
+          "rationale": "Acute instability and difficulty processing interpersonal input make process groups overwhelming and disruptive for the member and the group."
+        },
+        {
+          "text": "Someone with social anxiety who avoids group settings",
+          "correct": false,
+          "rationale": "Social anxiety is often an indication for group work, which provides in-vivo practice."
+        },
+        {
+          "text": "Someone isolated who believes their problems are unique",
+          "correct": false,
+          "rationale": "Universality makes this an excellent group indication."
+        },
+        {
+          "text": "Someone whose difficulties show up in most relationships",
+          "correct": false,
+          "rationale": "Interpersonal patterns are exactly what process groups are designed to surface and address."
+        }
       ],
       "explanation": "Standard exclusion considerations include acute psychosis, active suicidality, severe cognitive impairment, and inability to tolerate the group format. This is a central purpose of pre-group screening.",
-      "refs": ["statpearls-group-therapy", "aca-ethics"]
+      "refs": [
+        "statpearls-group-therapy",
+        "aca-ethics"
+      ]
     },
     {
       "id": "d4-dosage-024",
       "type": "mcq",
       "domain": "D4",
       "task": "4B",
-      "cacrep": ["research", "helping-relationships"],
-      "tags": ["dose-response", "session-frequency"],
+      "cacrep": [
+        "research",
+        "helping-relationships"
+      ],
+      "tags": [
+        "dose-response",
+        "session-frequency"
+      ],
       "prompt": "What does psychotherapy dose–response research generally find?",
       "choices": [
-        { "text": "Improvement follows a negatively accelerating curve, with the largest gains early and diminishing returns as sessions accumulate", "correct": true, "rationale": "Most improvement occurs in the earlier sessions, though clients with more severe or chronic presentations require more." },
-        { "text": "Improvement increases linearly with the number of sessions indefinitely", "correct": false, "rationale": "The curve flattens rather than rising indefinitely." },
-        { "text": "Session count is unrelated to outcome", "correct": false, "rationale": "Dose does matter, particularly early." },
-        { "text": "Outcomes are best with a single session for all presentations", "correct": false, "rationale": "Single-session work helps some clients but is not generally optimal." }
+        {
+          "text": "Gains are largest early, then returns steadily diminish",
+          "correct": true,
+          "rationale": "Most improvement occurs in the earlier sessions, though clients with more severe or chronic presentations require more."
+        },
+        {
+          "text": "Improvement rises steadily with sessions, without limit",
+          "correct": false,
+          "rationale": "The curve flattens rather than rising indefinitely."
+        },
+        {
+          "text": "The number of sessions has no bearing on the outcome",
+          "correct": false,
+          "rationale": "Dose does matter, particularly early."
+        },
+        {
+          "text": "A single session gives the best outcome for everyone",
+          "correct": false,
+          "rationale": "Single-session work helps some clients but is not generally optimal."
+        }
       ],
       "explanation": "The practical reading is not that treatment should always be brief, but that progress should be visible early. Absence of any early response is a signal to reassess rather than to simply continue.",
-      "refs": ["oer-research-methods", "div12-treatments"]
+      "refs": [
+        "oer-research-methods",
+        "div12-treatments"
+      ]
     },
     {
       "id": "d4-comorbid-025",
       "type": "scenario",
       "domain": "D4",
       "task": "4G",
-      "cacrep": ["helping-relationships"],
-      "tags": ["comorbidity", "sequencing", "planning"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "comorbidity",
+        "sequencing",
+        "planning"
+      ],
       "prompt": "A client presents with PTSD and active daily alcohol use. How should treatment be sequenced?",
       "choices": [
-        { "text": "Use an integrated approach addressing both, with attention to stabilization and withdrawal safety before trauma processing begins", "correct": true, "rationale": "Integrated treatment is the standard for co-occurring disorders, and processing trauma while intoxicated or in withdrawal is unsafe and ineffective." },
-        { "text": "Require complete abstinence for six months before addressing the trauma at all", "correct": false, "rationale": "Sequential models frequently fail because untreated trauma drives the drinking." },
-        { "text": "Begin trauma processing immediately, since the trauma is the root cause", "correct": false, "rationale": "Processing without stabilization risks increased use and destabilization." },
-        { "text": "Refer to substance use treatment and close the counseling case", "correct": false, "rationale": "Splitting the client between systems is exactly the failure integrated care was designed to prevent." }
+        {
+          "text": "Treat both together, stabilising before any trauma work",
+          "correct": true,
+          "rationale": "Integrated treatment is the standard for co-occurring disorders, and processing trauma while intoxicated or in withdrawal is unsafe and ineffective."
+        },
+        {
+          "text": "Require six months of abstinence before touching the trauma",
+          "correct": false,
+          "rationale": "Sequential models frequently fail because untreated trauma drives the drinking."
+        },
+        {
+          "text": "Start trauma processing now, since it is the root cause",
+          "correct": false,
+          "rationale": "Processing without stabilization risks increased use and destabilization."
+        },
+        {
+          "text": "Refer them to substance use treatment and close the case",
+          "correct": false,
+          "rationale": "Splitting the client between systems is exactly the failure integrated care was designed to prevent."
+        }
       ],
       "explanation": "This item captures the tension the exam likes: integrated treatment is the standard, and within it, stabilization still precedes processing. Both principles hold simultaneously.",
-      "refs": ["samhsa-tip42", "samhsa-tip57", "asam-criteria"]
+      "refs": [
+        "samhsa-tip42",
+        "samhsa-tip57",
+        "asam-criteria"
+      ]
     },
     {
       "id": "d4-measurement-026",
       "type": "mcq",
       "domain": "D4",
       "task": "4M",
-      "cacrep": ["assessment"],
-      "tags": ["measurable-objectives", "documentation"],
+      "cacrep": [
+        "assessment"
+      ],
+      "tags": [
+        "measurable-objectives",
+        "documentation"
+      ],
       "prompt": "Which is the best-written treatment objective?",
       "choices": [
-        { "text": "Client will use a taught grounding technique at least three times per week when anxiety exceeds 6/10, recorded in a daily log, for the next four weeks", "correct": true, "rationale": "Specific behaviour, frequency, trigger threshold, measurement method, and timeframe are all present." },
-        { "text": "Client will work on managing anxiety", "correct": false, "rationale": "No specificity, measurement, or timeframe — this cannot be evaluated." },
-        { "text": "Client will feel less anxious and more confident", "correct": false, "rationale": "Internal states without a measurement method are not objectives." },
-        { "text": "Counselor will teach relaxation techniques to the client", "correct": false, "rationale": "This describes the counselor's intervention, not a client objective." }
+        {
+          "text": "Use a grounding skill three times a week when anxiety tops 6/10",
+          "correct": true,
+          "rationale": "Specific behaviour, frequency, trigger threshold, measurement method, and timeframe are all present."
+        },
+        {
+          "text": "Work on managing anxiety more effectively than at present",
+          "correct": false,
+          "rationale": "No specificity, measurement, or timeframe — this cannot be evaluated."
+        },
+        {
+          "text": "Feel less anxious day to day and more confident in themselves",
+          "correct": false,
+          "rationale": "Internal states without a measurement method are not objectives."
+        },
+        {
+          "text": "Counselor will teach the client a set of relaxation techniques",
+          "correct": false,
+          "rationale": "This describes the counselor's intervention, not a client objective."
+        }
       ],
       "explanation": "That last distractor is a frequent real-world error: objectives describe what the *client* will do, while interventions describe what the *counselor* will do. Plans should contain both, clearly distinguished.",
-      "refs": ["aca-ethics", "apa-testing-standards"]
+      "refs": [
+        "aca-ethics",
+        "apa-testing-standards"
+      ]
     },
     {
       "id": "d4-family-027",
       "type": "mcq",
       "domain": "D4",
       "task": "4N",
-      "cacrep": ["helping-relationships"],
-      "tags": ["family-involvement", "support-system", "consent"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "family-involvement",
+        "support-system",
+        "consent"
+      ],
       "prompt": "When is involving family members in an adult client's treatment appropriate?",
       "choices": [
-        { "text": "When the client consents and it serves the treatment goals, with the client's role in defining the involvement respected", "correct": true, "rationale": "Family involvement can substantially improve outcomes, but it requires the adult client's authorization and agreement on scope." },
-        { "text": "Whenever the family requests involvement", "correct": false, "rationale": "Family interest does not override the client's authorization." },
-        { "text": "Only when the client is unable to make decisions independently", "correct": false, "rationale": "Family involvement is valuable well beyond incapacity." },
-        { "text": "Never, since adult counseling is inherently individual", "correct": false, "rationale": "Family involvement has strong evidence in serious mental illness and substance use." }
+        {
+          "text": "When the client consents and it serves the agreed goals",
+          "correct": true,
+          "rationale": "Family involvement can substantially improve outcomes, but it requires the adult client's authorization and agreement on scope."
+        },
+        {
+          "text": "Whenever the family themselves ask to be involved in it",
+          "correct": false,
+          "rationale": "Family interest does not override the client's authorization."
+        },
+        {
+          "text": "Only when the client cannot make decisions independently",
+          "correct": false,
+          "rationale": "Family involvement is valuable well beyond incapacity."
+        },
+        {
+          "text": "Never, since counseling an adult is inherently individual",
+          "correct": false,
+          "rationale": "Family involvement has strong evidence in serious mental illness and substance use."
+        }
       ],
       "explanation": "Family psychoeducation is among the best-supported interventions for schizophrenia and bipolar disorder, reducing relapse and hospitalization. Even so, scope should be explicit: what will be discussed, with whom, and what stays confidential.",
-      "refs": ["nimh-schizophrenia", "div12-treatments", "aca-ethics"]
+      "refs": [
+        "nimh-schizophrenia",
+        "div12-treatments",
+        "aca-ethics"
+      ]
     },
     {
       "id": "d4-psychoeducation-028",
       "type": "cloze",
       "domain": "D4",
       "task": "4P",
-      "cacrep": ["helping-relationships"],
-      "tags": ["psychoeducation", "rationale", "buy-in"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "psychoeducation",
+        "rationale",
+        "buy-in"
+      ],
       "prompt": "Providing a clear {{treatment rationale}} — explaining why a given intervention should help and how it works — increases client engagement and is associated with better outcomes.",
       "answer": "treatment rationale",
       "explanation": "This is a common factor: a credible explanation gives the client a framework for their distress and grounds for expecting change. It is why exposure therapy sessions begin with a rationale rather than with exposure.",
-      "refs": ["div12-treatments", "statpearls-cbt", "samhsa-tip65"]
+      "refs": [
+        "div12-treatments",
+        "statpearls-cbt",
+        "samhsa-tip65"
+      ]
     },
     {
       "id": "d4-relapse-029",
       "type": "mcq",
       "domain": "D4",
       "task": "4O",
-      "cacrep": ["helping-relationships"],
-      "tags": ["booster-sessions", "maintenance"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "booster-sessions",
+        "maintenance"
+      ],
       "prompt": "What is the purpose of booster sessions after the main course of treatment concludes?",
       "choices": [
-        { "text": "To reinforce skills, review the maintenance plan, and address emerging difficulties before they escalate", "correct": true, "rationale": "Boosters extend gains and catch deterioration early, without resuming full treatment." },
-        { "text": "To restart treatment from the beginning", "correct": false, "rationale": "Boosters are brief consolidation contacts, not a fresh course." },
-        { "text": "To gather outcome data for the agency", "correct": false, "rationale": "Data may be collected but is not the purpose." },
-        { "text": "To maintain the counselor's caseload numbers", "correct": false, "rationale": "Not a legitimate clinical rationale." }
+        {
+          "text": "To top up skills and catch difficulties before they grow",
+          "correct": true,
+          "rationale": "Boosters extend gains and catch deterioration early, without resuming full treatment."
+        },
+        {
+          "text": "To restart the whole course of treatment from the beginning",
+          "correct": false,
+          "rationale": "Boosters are brief consolidation contacts, not a fresh course."
+        },
+        {
+          "text": "To collect outcome data on behalf of the agency's reporting",
+          "correct": false,
+          "rationale": "Data may be collected but is not the purpose."
+        },
+        {
+          "text": "To keep the counselor's caseload numbers where they need to be",
+          "correct": false,
+          "rationale": "Not a legitimate clinical rationale."
+        }
       ],
       "explanation": "Tapering — moving from weekly to fortnightly to monthly before ending — serves a similar function, letting the client practise independence while support remains available.",
-      "refs": ["statpearls-cbt", "samhsa-tip42", "div12-treatments"]
+      "refs": [
+        "statpearls-cbt",
+        "samhsa-tip42",
+        "div12-treatments"
+      ]
     },
     {
       "id": "d4-scope-030",
       "type": "mcq",
       "domain": "D4",
       "task": "4E",
-      "cacrep": ["helping-relationships"],
-      "tags": ["referral", "specialty", "planning"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "referral",
+        "specialty",
+        "planning"
+      ],
       "prompt": "A treatment plan identifies a need the counselor cannot meet. What should the plan document?",
       "choices": [
-        { "text": "The specific referral made, the rationale, and how coordination and follow-up will occur", "correct": true, "rationale": "A documented referral with rationale and follow-up demonstrates that the identified need was actually addressed." },
-        { "text": "That the need is outside scope, with no further detail", "correct": false, "rationale": "Naming a limitation without action leaves the need unaddressed in the record." },
-        { "text": "Only the client's refusal, if they decline the referral", "correct": false, "rationale": "Refusal should be documented, but so should the offer, rationale, and any alternatives discussed." },
-        { "text": "Nothing, since the plan should cover only what the counselor provides", "correct": false, "rationale": "The plan should address the client's needs comprehensively, including those met elsewhere." }
+        {
+          "text": "The referral made, why, and how follow-up will happen",
+          "correct": true,
+          "rationale": "A documented referral with rationale and follow-up demonstrates that the identified need was actually addressed."
+        },
+        {
+          "text": "That the need falls outside scope, with no further detail",
+          "correct": false,
+          "rationale": "Naming a limitation without action leaves the need unaddressed in the record."
+        },
+        {
+          "text": "Only the client's refusal, if they turn the referral down",
+          "correct": false,
+          "rationale": "Refusal should be documented, but so should the offer, rationale, and any alternatives discussed."
+        },
+        {
+          "text": "Nothing — the plan covers what the counselor provides",
+          "correct": false,
+          "rationale": "The plan should address the client's needs comprehensively, including those met elsewhere."
+        }
       ],
       "explanation": "If a client declines a recommended referral, document the recommendation, the discussion of risks, the client's decision, and any agreed monitoring — that record is both clinically and legally important.",
-      "refs": ["aca-ethics", "asam-criteria"]
+      "refs": [
+        "aca-ethics",
+        "asam-criteria"
+      ]
     },
     {
       "id": "d4-severity-031",
       "type": "mcq",
       "domain": "D4",
       "task": "4B",
-      "cacrep": ["helping-relationships"],
-      "tags": ["stepped-care", "intensity"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "stepped-care",
+        "intensity"
+      ],
       "prompt": "What is the stepped care model?",
       "choices": [
-        { "text": "Beginning with the least intensive intervention likely to be effective and stepping up based on monitored response", "correct": true, "rationale": "Stepped care allocates resources efficiently while ensuring non-responders are escalated promptly." },
-        { "text": "Beginning with the most intensive intervention and stepping down as the client improves", "correct": false, "rationale": "That describes a step-down model, used in different circumstances such as post-hospitalization." },
-        { "text": "Providing the same intensity of service to all clients for equity", "correct": false, "rationale": "Uniform intensity is neither efficient nor clinically appropriate." },
-        { "text": "Assigning intensity based on insurance authorization", "correct": false, "rationale": "Payer rules are a constraint, not a care model." }
+        {
+          "text": "Start with the lightest touch likely to work, then step up",
+          "correct": true,
+          "rationale": "Stepped care allocates resources efficiently while ensuring non-responders are escalated promptly."
+        },
+        {
+          "text": "Start with the most intensive option and step down over time",
+          "correct": false,
+          "rationale": "That describes a step-down model, used in different circumstances such as post-hospitalization."
+        },
+        {
+          "text": "Give every client the same intensity of service, for fairness",
+          "correct": false,
+          "rationale": "Uniform intensity is neither efficient nor clinically appropriate."
+        },
+        {
+          "text": "Set the intensity by whatever the insurer has authorised",
+          "correct": false,
+          "rationale": "Payer rules are a constraint, not a care model."
+        }
       ],
       "explanation": "Stepped care depends entirely on the monitoring component. Without systematic review, low-intensity first steps become a way of leaving non-responders under-treated rather than a route to appropriate escalation.",
-      "refs": ["asam-criteria", "div12-treatments", "oer-research-methods"]
+      "refs": [
+        "asam-criteria",
+        "div12-treatments",
+        "oer-research-methods"
+      ]
     },
     {
       "id": "d4-goals-032",
       "type": "scenario",
       "domain": "D4",
       "task": "4A",
-      "cacrep": ["helping-relationships", "professional-ethics"],
-      "tags": ["goal-conflict", "autonomy", "values"],
+      "cacrep": [
+        "helping-relationships",
+        "professional-ethics"
+      ],
+      "tags": [
+        "goal-conflict",
+        "autonomy",
+        "values"
+      ],
       "prompt": "A client's stated goal is to save a marriage the counselor privately believes is harmful to them. How should the counselor proceed?",
       "choices": [
-        { "text": "Work toward the client's stated goal while ensuring they have full information, and monitor for any safety concerns", "correct": true, "rationale": "Client self-determination governs goal selection; the counselor's private assessment does not replace it, absent a safety issue." },
-        { "text": "Redirect the work toward helping the client leave the marriage", "correct": false, "rationale": "This substitutes the counselor's judgement for the client's and imposes counselor values." },
-        { "text": "Refuse to work on the goal and refer the client elsewhere", "correct": false, "rationale": "Referral based on disagreement with a client's legitimate goal is not a competence-based referral." },
-        { "text": "Agree outwardly while steering the client toward separation over time", "correct": false, "rationale": "Covert steering is a serious violation of transparency and autonomy." }
+        {
+          "text": "Work toward their stated goal, watching for safety concerns",
+          "correct": true,
+          "rationale": "Client self-determination governs goal selection; the counselor's private assessment does not replace it, absent a safety issue."
+        },
+        {
+          "text": "Steer the work toward helping the client leave the marriage",
+          "correct": false,
+          "rationale": "This substitutes the counselor's judgement for the client's and imposes counselor values."
+        },
+        {
+          "text": "Decline to work on that goal and refer the client elsewhere",
+          "correct": false,
+          "rationale": "Referral based on disagreement with a client's legitimate goal is not a competence-based referral."
+        },
+        {
+          "text": "Agree outwardly, then steer toward separation over time",
+          "correct": false,
+          "rationale": "Covert steering is a serious violation of transparency and autonomy."
+        }
       ],
       "explanation": "The exception is genuine safety risk — where intimate partner violence is present, safety assessment and planning take precedence, though even then the decision to leave remains the client's.",
-      "refs": ["aca-ethics", "cdc-ipv", "msjcc"]
+      "refs": [
+        "aca-ethics",
+        "cdc-ipv",
+        "msjcc"
+      ]
     },
     {
       "id": "d4-review-033",
       "type": "mcq",
       "domain": "D4",
       "task": "4L",
-      "cacrep": ["helping-relationships"],
-      "tags": ["plan-review", "frequency", "standards"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "plan-review",
+        "frequency",
+        "standards"
+      ],
       "prompt": "How often should a treatment plan be formally reviewed and updated?",
       "choices": [
-        { "text": "At intervals set by clinical need, agency policy, and payer requirements — and whenever there is a significant change in the client's status or goals", "correct": true, "rationale": "Both scheduled review and event-triggered review are required; the specific interval varies by setting." },
-        { "text": "Only at termination", "correct": false, "rationale": "A plan reviewed only at the end cannot guide treatment." },
-        { "text": "Annually, regardless of setting or acuity", "correct": false, "rationale": "Far too infrequent for most clinical settings." },
-        { "text": "Only when the client requests a change", "correct": false, "rationale": "Review is the counselor's responsibility, not contingent on client initiative." }
+        {
+          "text": "As clinical need and policy require, and on any real change",
+          "correct": true,
+          "rationale": "Both scheduled review and event-triggered review are required; the specific interval varies by setting."
+        },
+        {
+          "text": "Only at the very end, when the counseling is terminated",
+          "correct": false,
+          "rationale": "A plan reviewed only at the end cannot guide treatment."
+        },
+        {
+          "text": "Once a year, whatever the setting or the client's acuity",
+          "correct": false,
+          "rationale": "Far too infrequent for most clinical settings."
+        },
+        {
+          "text": "Only when the client themselves asks for something to change",
+          "correct": false,
+          "rationale": "Review is the counselor's responsibility, not contingent on client initiative."
+        }
       ],
       "explanation": "Event triggers matter as much as the calendar: a new diagnosis, a hospitalization, a suicide attempt, a major life change, or a lack of progress should all prompt review regardless of when the last one occurred.",
-      "refs": ["aca-ethics", "asam-criteria"]
+      "refs": [
+        "aca-ethics",
+        "asam-criteria"
+      ]
     },
     {
       "id": "d4-outcome-034",
       "type": "mcq",
       "domain": "D4",
       "task": "4M",
-      "cacrep": ["assessment", "research"],
-      "tags": ["clinical-significance", "outcome"],
+      "cacrep": [
+        "assessment",
+        "research"
+      ],
+      "tags": [
+        "clinical-significance",
+        "outcome"
+      ],
       "prompt": "What does 'clinically significant change' mean, as distinct from statistically significant change?",
       "choices": [
-        { "text": "Change large enough to make a real difference in the client's functioning — often defined as moving from the dysfunctional to the functional range and exceeding measurement error", "correct": true, "rationale": "Jacobson and Truax's criteria combine a reliable change index with a cutoff for movement into the normal range." },
-        { "text": "Any change that reaches p < .05", "correct": false, "rationale": "That is statistical significance, which can attach to trivially small changes in large samples." },
-        { "text": "Change that the counselor judges to be meaningful", "correct": false, "rationale": "Clinical significance is defined by explicit criteria rather than impression." },
-        { "text": "Change maintained for at least five years", "correct": false, "rationale": "Durability is a separate question from magnitude." }
+        {
+          "text": "Change big enough to matter in the client's actual life",
+          "correct": true,
+          "rationale": "Jacobson and Truax's criteria combine a reliable change index with a cutoff for movement into the normal range."
+        },
+        {
+          "text": "Any change that reaches statistical significance at p < .05",
+          "correct": false,
+          "rationale": "That is statistical significance, which can attach to trivially small changes in large samples."
+        },
+        {
+          "text": "Whatever change the counselor judges to be meaningful",
+          "correct": false,
+          "rationale": "Clinical significance is defined by explicit criteria rather than impression."
+        },
+        {
+          "text": "Change that has held steady for at least five years",
+          "correct": false,
+          "rationale": "Durability is a separate question from magnitude."
+        }
       ],
       "explanation": "This distinction is the individual-client counterpart of effect size in group research. A client can improve by a statistically reliable amount and still be substantially impaired.",
-      "refs": ["oer-research-methods", "apa-testing-standards", "statpearls-type-i-ii"]
+      "refs": [
+        "oer-research-methods",
+        "apa-testing-standards",
+        "statpearls-type-i-ii"
+      ]
     },
     {
       "id": "d4-crisis-035",
       "type": "mcq",
       "domain": "D4",
       "task": "4G",
-      "cacrep": ["helping-relationships"],
-      "tags": ["treatment-planning", "acute-risk", "priority"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "treatment-planning",
+        "acute-risk",
+        "priority"
+      ],
       "prompt": "A client arrives for a scheduled session on assertiveness skills but discloses acute suicidal ideation with a plan. What takes priority?",
       "choices": [
-        { "text": "Risk assessment and safety planning, deferring the planned session content", "correct": true, "rationale": "Acute risk overrides the planned agenda; safety is always the first-order concern." },
-        { "text": "Completing the planned assertiveness work to maintain treatment consistency", "correct": false, "rationale": "Adhering to an agenda in the face of acute risk is a serious clinical error." },
-        { "text": "Splitting the session evenly between the two", "correct": false, "rationale": "Acute risk requires whatever time it needs, not a fixed allocation." },
-        { "text": "Referring the client to a crisis line and ending the session", "correct": false, "rationale": "Handing off rather than assessing abandons the client at the point of greatest need." }
+        {
+          "text": "Assess the risk and build a safety plan, setting the agenda aside",
+          "correct": true,
+          "rationale": "Acute risk overrides the planned agenda; safety is always the first-order concern."
+        },
+        {
+          "text": "Finish the planned assertiveness work, to keep treatment consistent",
+          "correct": false,
+          "rationale": "Adhering to an agenda in the face of acute risk is a serious clinical error."
+        },
+        {
+          "text": "Split the session evenly between the risk and the planned work",
+          "correct": false,
+          "rationale": "Acute risk requires whatever time it needs, not a fixed allocation."
+        },
+        {
+          "text": "Refer the client to a crisis line and bring the session to an end",
+          "correct": false,
+          "rationale": "Handing off rather than assessing abandons the client at the point of greatest need."
+        }
       ],
       "explanation": "Plans are subordinate to presentation. On exam items, an emergent safety concern always displaces the scheduled agenda — and 'refer to a crisis line' is rarely the right answer when the client is sitting in front of you.",
-      "refs": ["sprc", "samhsa-988", "nimh-suicide-prevention"]
+      "refs": [
+        "sprc",
+        "samhsa-988",
+        "nimh-suicide-prevention"
+      ]
     },
     {
       "id": "d4-group-036",
       "type": "mcq",
       "domain": "D4",
       "task": "4I",
-      "cacrep": ["group-work"],
-      "tags": ["group", "termination", "closure"],
+      "cacrep": [
+        "group-work"
+      ],
+      "tags": [
+        "group",
+        "termination",
+        "closure"
+      ],
       "prompt": "How should a closed group's final sessions be structured?",
       "choices": [
-        { "text": "Reserve time to review individual and group progress, process feelings about ending, give and receive feedback, and plan for applying gains outside the group", "correct": true, "rationale": "Group termination is a shared process requiring explicit attention, not an abrupt final meeting." },
-        { "text": "Continue normal work until the final session, then simply announce the end", "correct": false, "rationale": "Unprepared endings leave members without closure and can undo relational gains." },
-        { "text": "Encourage members to exchange contact details and continue meeting independently", "correct": false, "rationale": "Extra-group contact raises confidentiality and boundary issues and should be addressed carefully, not encouraged by default." },
-        { "text": "Focus the final sessions on new material to maximize benefit", "correct": false, "rationale": "Introducing new content at termination leaves it unprocessed." }
+        {
+          "text": "Review progress, process the ending, and plan for afterwards",
+          "correct": true,
+          "rationale": "Group termination is a shared process requiring explicit attention, not an abrupt final meeting."
+        },
+        {
+          "text": "Work as normal until the last session, then announce the end",
+          "correct": false,
+          "rationale": "Unprepared endings leave members without closure and can undo relational gains."
+        },
+        {
+          "text": "Encourage members to swap details and carry on meeting alone",
+          "correct": false,
+          "rationale": "Extra-group contact raises confidentiality and boundary issues and should be addressed carefully, not encouraged by default."
+        },
+        {
+          "text": "Spend the final sessions on new material, to maximise benefit",
+          "correct": false,
+          "rationale": "Introducing new content at termination leaves it unprocessed."
+        }
       ],
       "explanation": "Endings can reactivate members' histories of loss, which makes the termination phase clinically rich. Leaders should begin signalling the ending several sessions in advance.",
-      "refs": ["statpearls-group-therapy", "aca-ethics"]
+      "refs": [
+        "statpearls-group-therapy",
+        "aca-ethics"
+      ]
     },
     {
       "id": "d4-teleheath-037",
       "type": "mcq",
       "domain": "D4",
       "task": "4G",
-      "cacrep": ["helping-relationships"],
-      "tags": ["telehealth", "suitability", "planning"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "telehealth",
+        "suitability",
+        "planning"
+      ],
       "prompt": "Which factor most affects whether telemental health is appropriate for a given client?",
       "choices": [
-        { "text": "Clinical suitability — including risk level, the client's private space and technology access, and whether local emergency resources can be reached if needed", "correct": true, "rationale": "Suitability assessment covers acuity, environment, and the practicality of an emergency response at the client's location." },
-        { "text": "The counselor's comfort with the technology", "correct": false, "rationale": "Counselor competence matters but the determination is about client suitability." },
-        { "text": "Whether the client prefers video to telephone", "correct": false, "rationale": "Modality preference is secondary to safety and clinical appropriateness." },
-        { "text": "The client's age alone", "correct": false, "rationale": "Age is not by itself determinative." }
+        {
+          "text": "Whether it is clinically safe — risk, privacy, and local help",
+          "correct": true,
+          "rationale": "Suitability assessment covers acuity, environment, and the practicality of an emergency response at the client's location."
+        },
+        {
+          "text": "How comfortable the counselor is with the technology involved",
+          "correct": false,
+          "rationale": "Counselor competence matters but the determination is about client suitability."
+        },
+        {
+          "text": "Whether the client would rather use video or the telephone",
+          "correct": false,
+          "rationale": "Modality preference is secondary to safety and clinical appropriateness."
+        },
+        {
+          "text": "The client's age, taken on its own as the deciding factor",
+          "correct": false,
+          "rationale": "Age is not by itself determinative."
+        }
       ],
       "explanation": "The frequently overlooked element is a private space: a client who cannot speak freely because family members are present is not receiving equivalent care, regardless of connection quality.",
-      "refs": ["aca-ethics", "nbcc-ethics", "counseling-compact"]
+      "refs": [
+        "aca-ethics",
+        "nbcc-ethics",
+        "counseling-compact"
+      ]
     },
     {
       "id": "d4-motivation-038",
       "type": "mcq",
       "domain": "D4",
       "task": "4A",
-      "cacrep": ["helping-relationships"],
-      "tags": ["stages-of-change", "matching", "planning"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "stages-of-change",
+        "matching",
+        "planning"
+      ],
       "prompt": "A client in the contemplation stage is given a detailed action plan with weekly behavioural targets. What is the likely result?",
       "choices": [
-        { "text": "Disengagement or apparent resistance, because the intervention is mismatched to the client's stage", "correct": true, "rationale": "Action-stage interventions given to contemplative clients typically produce non-adherence, which is then misread as resistance." },
-        { "text": "Rapid progress, since structure resolves ambivalence", "correct": false, "rationale": "Structure does not resolve ambivalence; exploring it does." },
-        { "text": "No effect either way", "correct": false, "rationale": "Mismatch has a real cost in engagement." },
-        { "text": "Immediate movement to the preparation stage", "correct": false, "rationale": "Stage movement follows resolution of ambivalence, not imposition of a plan." }
+        {
+          "text": "Disengagement, because the plan is ahead of where they are",
+          "correct": true,
+          "rationale": "Action-stage interventions given to contemplative clients typically produce non-adherence, which is then misread as resistance."
+        },
+        {
+          "text": "Rapid progress, since clear structure resolves ambivalence",
+          "correct": false,
+          "rationale": "Structure does not resolve ambivalence; exploring it does."
+        },
+        {
+          "text": "No real effect on the work in either direction",
+          "correct": false,
+          "rationale": "Mismatch has a real cost in engagement."
+        },
+        {
+          "text": "An immediate jump forward to the preparation stage",
+          "correct": false,
+          "rationale": "Stage movement follows resolution of ambivalence, not imposition of a plan."
+        }
       ],
       "explanation": "For a contemplative client, the indicated work is decisional balance, exploring ambivalence, and eliciting change talk — not scheduling targets. This stage–intervention matching principle appears frequently in exam items.",
-      "refs": ["stages-of-change", "samhsa-tip35", "mi-org"]
+      "refs": [
+        "stages-of-change",
+        "samhsa-tip35",
+        "mi-org"
+      ]
     },
     {
       "id": "d4-record-039",
       "type": "mcq",
       "domain": "D4",
       "task": "4N",
-      "cacrep": ["helping-relationships"],
-      "tags": ["report-writing", "audience", "documentation"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "report-writing",
+        "audience",
+        "documentation"
+      ],
       "prompt": "What most affects how a clinical report should be written?",
       "choices": [
-        { "text": "The intended audience and purpose — a report for a court, a school, a physician, or the client requires different content and language", "correct": true, "rationale": "Reports must be fit for purpose, disclosing what is relevant to the recipient's decision and no more." },
-        { "text": "The length required by agency policy", "correct": false, "rationale": "Length is a formatting matter, not the governing consideration." },
-        { "text": "The counselor's theoretical orientation", "correct": false, "rationale": "Orientation may shape formulation but does not determine report structure or disclosure scope." },
-        { "text": "Whether the client has requested a copy", "correct": false, "rationale": "Client access is a separate right; reports should be written appropriately regardless." }
+        {
+          "text": "Who will read it and why — a court needs a different report",
+          "correct": true,
+          "rationale": "Reports must be fit for purpose, disclosing what is relevant to the recipient's decision and no more."
+        },
+        {
+          "text": "The length that the counselor's agency policy calls for",
+          "correct": false,
+          "rationale": "Length is a formatting matter, not the governing consideration."
+        },
+        {
+          "text": "The theoretical orientation the counselor works from",
+          "correct": false,
+          "rationale": "Orientation may shape formulation but does not determine report structure or disclosure scope."
+        },
+        {
+          "text": "Whether the client has asked to be given a copy of it",
+          "correct": false,
+          "rationale": "Client access is a separate right; reports should be written appropriately regardless."
+        }
       ],
       "explanation": "Avoid jargon that a non-clinical recipient will misread, and be careful with speculative statements — a report written for a school may end up in a custody proceeding. Write everything as if it will be read aloud in court.",
-      "refs": ["aca-ethics", "hhs-hipaa-privacy", "apa-testing-standards"]
+      "refs": [
+        "aca-ethics",
+        "hhs-hipaa-privacy",
+        "apa-testing-standards"
+      ]
     },
     {
       "id": "d4-prioritize-040",
       "type": "scenario",
       "domain": "D4",
       "task": "4A",
-      "cacrep": ["helping-relationships"],
-      "tags": ["prioritization", "multiple-problems"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "prioritization",
+        "multiple-problems"
+      ],
       "prompt": "A client presents with unemployment, marital conflict, heavy drinking, and depression. How should the counselor prioritize?",
       "choices": [
-        { "text": "Assess for safety first, then work with the client to identify which problem to address first, considering interdependence between them and the client's own priority", "correct": true, "rationale": "Safety comes first; beyond that, the client's priority and the causal relationships between problems guide sequencing." },
-        { "text": "Address the problems in the order the client listed them", "correct": false, "rationale": "Order of mention does not indicate priority or clinical logic." },
-        { "text": "Address all four simultaneously with equal intensity", "correct": false, "rationale": "Diffuse effort across four fronts usually produces movement on none." },
-        { "text": "Address the drinking first in all cases, since substance use blocks other progress", "correct": false, "rationale": "Often true but not universal; imposing this without the client's agreement risks disengagement." }
+        {
+          "text": "Check safety, then agree with the client where to start",
+          "correct": true,
+          "rationale": "Safety comes first; beyond that, the client's priority and the causal relationships between problems guide sequencing."
+        },
+        {
+          "text": "Take the problems in the order the client happened to list them",
+          "correct": false,
+          "rationale": "Order of mention does not indicate priority or clinical logic."
+        },
+        {
+          "text": "Work on all four at once, giving each the same attention",
+          "correct": false,
+          "rationale": "Diffuse effort across four fronts usually produces movement on none."
+        },
+        {
+          "text": "Always start with the drinking, since it blocks other progress",
+          "correct": false,
+          "rationale": "Often true but not universal; imposing this without the client's agreement risks disengagement."
+        }
       ],
       "explanation": "These problems are typically interlocking — drinking worsens the marriage and employability, unemployment worsens depression. Naming the loop with the client often reveals a leverage point they are willing to start with.",
-      "refs": ["samhsa-tip42", "samhsa-tip35", "asam-criteria"]
+      "refs": [
+        "samhsa-tip42",
+        "samhsa-tip35",
+        "asam-criteria"
+      ]
     },
     {
       "id": "d4-evidence-041",
       "type": "mcq",
       "domain": "D4",
       "task": "4G",
-      "cacrep": ["research", "helping-relationships"],
-      "tags": ["treatment-selection", "evidence", "fit"],
+      "cacrep": [
+        "research",
+        "helping-relationships"
+      ],
+      "tags": [
+        "treatment-selection",
+        "evidence",
+        "fit"
+      ],
       "prompt": "A well-supported treatment exists for a client's diagnosis, but the client has tried it before and found it unhelpful and aversive. What should guide planning?",
       "choices": [
-        { "text": "Client preference and prior response are legitimate evidence-based practice inputs; another supported approach should be considered", "correct": true, "rationale": "EBP explicitly incorporates client characteristics, values, and preferences alongside research evidence." },
-        { "text": "The research evidence should override the client's prior experience", "correct": false, "rationale": "This misreads EBP as the mechanical application of trial results." },
-        { "text": "The counselor should repeat the same treatment with better fidelity", "correct": false, "rationale": "Possible in some cases, but not the default when the client explicitly found it aversive." },
-        { "text": "The client should be referred out for lacking motivation", "correct": false, "rationale": "Declining a previously unhelpful treatment is not a motivational deficit." }
+        {
+          "text": "Their preference and past response count as evidence too",
+          "correct": true,
+          "rationale": "EBP explicitly incorporates client characteristics, values, and preferences alongside research evidence."
+        },
+        {
+          "text": "The research evidence should outweigh their past experience",
+          "correct": false,
+          "rationale": "This misreads EBP as the mechanical application of trial results."
+        },
+        {
+          "text": "The same treatment should be repeated, with better fidelity",
+          "correct": false,
+          "rationale": "Possible in some cases, but not the default when the client explicitly found it aversive."
+        },
+        {
+          "text": "The client should be referred on for lacking motivation",
+          "correct": false,
+          "rationale": "Declining a previously unhelpful treatment is not a motivational deficit."
+        }
       ],
       "explanation": "Most diagnoses have more than one supported treatment, which makes preference a usable input rather than a compromise. A treatment the client will actually engage with usually outperforms a nominally superior one they will not.",
-      "refs": ["div12-treatments", "aca-ethics", "oer-research-methods"]
+      "refs": [
+        "div12-treatments",
+        "aca-ethics",
+        "oer-research-methods"
+      ]
     },
     {
       "id": "d4-discharge-042",
       "type": "recall",
       "domain": "D4",
       "task": "4J",
-      "cacrep": ["helping-relationships"],
-      "tags": ["discharge-planning", "continuity"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "discharge-planning",
+        "continuity"
+      ],
       "prompt": "What should a discharge plan from a higher level of care include?",
       "answer": "The next level of care with specific appointments already scheduled where possible; medication arrangements and prescriber follow-up; a current safety or crisis plan with contacts; identified supports and housing arrangements; relapse warning signs and the response to each; practical needs such as transport, benefits, and childcare; and a named contact for questions after discharge.",
       "explanation": "The transition between levels of care is a high-risk period — the weeks after psychiatric hospitalization carry markedly elevated suicide risk. A scheduled appointment before discharge is far more effective than a list of phone numbers.",
-      "refs": ["sprc", "asam-criteria", "samhsa-tip42"]
+      "refs": [
+        "sprc",
+        "asam-criteria",
+        "samhsa-tip42"
+      ]
     },
     {
       "id": "d4-selfdetermination-043",
       "type": "cloze",
       "domain": "D4",
       "task": "4A",
-      "cacrep": ["helping-relationships", "professional-ethics"],
-      "tags": ["autonomy", "self-determination"],
+      "cacrep": [
+        "helping-relationships",
+        "professional-ethics"
+      ],
+      "tags": [
+        "autonomy",
+        "self-determination"
+      ],
       "prompt": "The ethical principle that clients have the right to choose their own goals and direction in counseling, even when the counselor disagrees, is {{autonomy (client self-determination)}}.",
       "answer": "autonomy (client self-determination)",
       "explanation": "Autonomy is limited principally by risk of serious harm to self or others, and by genuine incapacity to make an informed decision. Disagreement with the counselor's clinical judgement is not, in itself, a limit.",
-      "refs": ["aca-ethics", "nbcc-ethics"]
+      "refs": [
+        "aca-ethics",
+        "nbcc-ethics"
+      ]
     },
     {
       "id": "d4-outcome-044",
       "type": "mcq",
       "domain": "D4",
       "task": "4M",
-      "cacrep": ["helping-relationships"],
-      "tags": ["feedback-informed", "alliance-monitoring"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "feedback-informed",
+        "alliance-monitoring"
+      ],
       "prompt": "What is feedback-informed treatment?",
       "choices": [
-        { "text": "Routinely collecting brief client ratings of outcome and alliance each session and using them to adjust the work", "correct": true, "rationale": "FIT uses systematic session-by-session feedback, particularly to detect alliance problems and non-response early." },
-        { "text": "Providing the client with feedback about their progress at termination", "correct": false, "rationale": "FIT collects feedback *from* the client continuously, not only to them at the end." },
-        { "text": "Obtaining supervisor feedback on recorded sessions", "correct": false, "rationale": "That is supervision, a different practice." },
-        { "text": "Surveying clients about satisfaction after discharge", "correct": false, "rationale": "Satisfaction surveys after the fact cannot inform the treatment they refer to." }
+        {
+          "text": "Brief session-by-session ratings used to adjust the work",
+          "correct": true,
+          "rationale": "FIT uses systematic session-by-session feedback, particularly to detect alliance problems and non-response early."
+        },
+        {
+          "text": "Giving the client feedback on their progress at the end",
+          "correct": false,
+          "rationale": "FIT collects feedback *from* the client continuously, not only to them at the end."
+        },
+        {
+          "text": "Getting a supervisor's feedback on recorded sessions",
+          "correct": false,
+          "rationale": "That is supervision, a different practice."
+        },
+        {
+          "text": "Surveying clients about satisfaction after they finish",
+          "correct": false,
+          "rationale": "Satisfaction surveys after the fact cannot inform the treatment they refer to."
+        }
       ],
       "explanation": "The evidence is strongest for its effect on clients who are not responding — it prompts a conversation and a change of course before they drop out. Alliance ratings in particular tend to surface ruptures the counselor has not noticed.",
-      "refs": ["div12-treatments", "oer-research-methods", "apa-testing-standards"]
+      "refs": [
+        "div12-treatments",
+        "oer-research-methods",
+        "apa-testing-standards"
+      ]
     },
     {
       "id": "d4-planning-045",
       "type": "mcq",
       "domain": "D4",
       "task": "4C",
-      "cacrep": ["helping-relationships", "social-cultural"],
-      "tags": ["barriers", "access", "structural"],
+      "cacrep": [
+        "helping-relationships",
+        "social-cultural"
+      ],
+      "tags": [
+        "barriers",
+        "access",
+        "structural"
+      ],
       "prompt": "A client repeatedly misses sessions scheduled during their work hours. What does good treatment planning require?",
       "choices": [
-        { "text": "Identifying the structural barrier and adjusting scheduling or modality where possible, rather than interpreting the pattern clinically", "correct": true, "rationale": "Practical obstacles should be addressed practically before any clinical interpretation of the absences." },
-        { "text": "Exploring the unconscious meaning of the missed appointments", "correct": false, "rationale": "Interpreting a scheduling conflict as ambivalence is a common and avoidable error." },
-        { "text": "Instituting a no-show fee to improve attendance", "correct": false, "rationale": "Penalizing a client for a barrier the plan created is inequitable and unlikely to help." },
-        { "text": "Discharging the client for non-attendance", "correct": false, "rationale": "Discharge for an unaddressed structural barrier is inappropriate." }
+        {
+          "text": "Spot the practical barrier and change the time or format",
+          "correct": true,
+          "rationale": "Practical obstacles should be addressed practically before any clinical interpretation of the absences."
+        },
+        {
+          "text": "Explore what the missed appointments might unconsciously mean",
+          "correct": false,
+          "rationale": "Interpreting a scheduling conflict as ambivalence is a common and avoidable error."
+        },
+        {
+          "text": "Bring in a no-show fee, to improve the attendance rate",
+          "correct": false,
+          "rationale": "Penalizing a client for a barrier the plan created is inequitable and unlikely to help."
+        },
+        {
+          "text": "Discharge the client on the grounds of non-attendance",
+          "correct": false,
+          "rationale": "Discharge for an unaddressed structural barrier is inappropriate."
+        }
       ],
       "explanation": "Barriers are part of the plan, not obstacles to it. Telehealth, early or evening slots, and coordinating with the client's actual schedule are legitimate planning interventions.",
-      "refs": ["msjcc", "aca-ethics", "counseling-compact"]
+      "refs": [
+        "msjcc",
+        "aca-ethics",
+        "counseling-compact"
+      ]
     }
   ]
 }
