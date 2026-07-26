@@ -4,10 +4,7 @@
 
 In priority order:
 
-1. **Get GitHub Pages live.** (Filed as "commit the dist"; the actual blocker was
-   different — see below.)
-
-2. **Show practice test results on the Progress page, with a placeholder before the first
+1. **Show practice test results on the Progress page, with a placeholder before the first
    one.** Right now a practice test score is the single most exam-like signal in the app and
    it is thrown away the moment you navigate off the results screen.
 
@@ -26,10 +23,10 @@ In priority order:
    Worth deciding while building: whether the Progress headline should stay
    coverage-based or blend in practice-test performance once one exists.
 
-3. **Confirm settings changes visually.** Settings save silently on change, so there is no
+2. **Confirm settings changes visually.** Settings save silently on change, so there is no
    feedback that anything happened. Add an unobtrusive saved indicator.
 
-4. **When the exam date changes, offer the daily new-card number.** The Progress page
+3. **When the exam date changes, offer the daily new-card number.** The Progress page
    already computes the required cards-per-day to finish in time. On changing the exam date,
    surface that as a prompt with a button that applies it, rather than making the user work
    out the arithmetic and find the right field.
@@ -38,6 +35,23 @@ In priority order:
 ## Done
 
 Move from the not-yet-done category after completing.
+
+1. Commit the dist so that we can set up GitHub Pages.
+
+   **Done differently, and the difference matters.** `dist/` was not committed and should
+   not be — the repo already carries a workflow that builds and deploys via
+   `actions/deploy-pages`. The real blocker was that Pages had never been enabled, so every
+   run failed at `actions/configure-pages` with "Get Pages site failed. Please verify that
+   the repository has Pages enabled and configured to build using GitHub Actions." Enabling
+   it with `build_type: workflow` fixed it; the next push deployed green.
+
+   Also found: the base path still said `/nce-anki/` while the repo is `nce-study`. CI
+   derives it from the repo name so deploys were unaffected, but a plain local
+   `npm run build` produced a bundle with wrong asset paths. Defaults now match.
+
+   Live at **https://ajryan.github.io/nce-study/** — verified in a browser, not just by
+   status code: four cards with four buttons, and studying a real card off the bundled deck
+   with no console errors.
 
 1. **Only the action button on a home card should be clickable.** The whole card currently
    carries a click handler as a convenience, but that makes the card's own hover lift a
