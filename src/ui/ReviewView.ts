@@ -128,19 +128,27 @@ export function renderReview(app: AppState, root: HTMLElement, go?: (view: ViewN
     }
     body.appendChild(el('div', { class: 'explanation' }, card.explanation));
     body.appendChild(renderRefs(card));
-    body.appendChild(renderGrading(app, isChoiceCard));
-  } else if (!isChoiceCard) {
-    body.appendChild(
-      el(
-        'div',
-        { style: 'margin-top:1rem' },
-        el('button', { class: 'btn primary', onclick: () => reveal(app) }, 'Show answer'),
-      ),
-    );
   }
 
   root.appendChild(body);
-  root.appendChild(renderHints(isChoiceCard));
+
+  // The action bar is a sticky sibling of the card rather than living inside
+  // it, so the rating controls stay on screen however long the explanation
+  // runs. Reading the detail may need scrolling; rating never should.
+  const actions = el('div', { class: 'actionbar' });
+  if (local.revealed) {
+    actions.appendChild(renderGrading(app, isChoiceCard));
+  } else if (!isChoiceCard) {
+    actions.appendChild(
+      el('button', { class: 'btn primary', onclick: () => reveal(app) }, 'Show answer'),
+    );
+  }
+  if (actions.childNodes.length > 0) {
+    actions.appendChild(renderHints(isChoiceCard));
+    root.appendChild(actions);
+  } else {
+    root.appendChild(renderHints(isChoiceCard));
+  }
 }
 
 /** The blueprint task in words, trimmed to fit a chip — never the raw code. */
@@ -200,9 +208,13 @@ function renderRefs(card: Card): HTMLElement {
   const missing = card.refs.length - refs.length;
 
   return el(
-    'div',
+    'details',
     { class: 'refs' },
-    el('strong', {}, 'References'),
+    el(
+      'summary',
+      {},
+      `Where this comes from (${refs.length} source${refs.length === 1 ? '' : 's'})`,
+    ),
     el(
       'ul',
       {},

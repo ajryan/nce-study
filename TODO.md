@@ -4,13 +4,29 @@
 
 In priority order:
 
-1. The hard/good/easy/suspend UX is usually "below the fold" and requires scrolling up and down after answering each question. References can be hidden behind some expansion UX. As for the answer details and difficulty rating, let's see if we can ensure the difficulty rating UX is always above the fold. It's OK for the answer details to require some scrolling to read all of it.
+_(nothing outstanding)_
 
 ## Done
 
 Move from the not-yet-done category after completing.
 
-1. **Remove the answer-length tell from the multiple-choice cards.** Correct answers were
+1. The hard/good/easy/suspend UX is usually "below the fold" and requires scrolling up and down after answering each question. References can be hidden behind some expansion UX. As for the answer details and difficulty rating, let's see if we can ensure the difficulty rating UX is always above the fold. It's OK for the answer details to require some scrolling to read all of it.
+
+   The rating controls now live in a sticky action bar (`.actionbar`) that is a sibling of
+   the card rather than inside it, pinned to the bottom of the viewport with
+   `position: sticky; bottom: 0`. However long the explanation runs, Again/Hard/Good/Easy and
+   "Hide this card" stay on screen — no scrolling back down to rate. The reveal button for
+   recall and cloze cards sits there too, so the primary action is always in the same place.
+
+   References are folded into a `<details>` expander labelled "Where this comes from
+   (N sources)", collapsed by default. The explanation is capped at `40vh` with its own
+   scroll, so a long one can be read without pushing everything else off screen.
+
+   Three tests in `tests/ui.test.ts` lock the structure in: the grading element must be
+   inside `.actionbar` and *not* inside `.card`, the bar must follow the card in document
+   order, and references must be a closed `<details>` that still contains its links.
+
+2. **Remove the answer-length tell from the multiple-choice cards.** Correct answers were
    systematically the longest, most-qualified option — measured at 94.1% (chance is 25%), so
    someone who always picked the longest option would have scored 94% without knowing any
    counseling. That makes the deck actively misleading as practice.
@@ -25,7 +41,7 @@ Move from the not-yet-done category after completing.
    guesser no signal. The headline number is the expected score for always guessing longest,
    which is what actually matters.
 
-2. The user has some anxiety about this test. Change the color theme to be more bright and cheerful. Only ship a light theme. No need for a dark theme and no need to respect system light/dark preferences.
+3. The user has some anxiety about this test. Change the color theme to be more bright and cheerful. Only ship a light theme. No need for a dark theme and no need to respect system light/dark preferences.
 
    Removed the dark theme and all `prefers-color-scheme` handling. New warm palette in
    `src/styles/app.css`: cream background with soft sunrise gradients, teal primary, amber
@@ -33,7 +49,7 @@ Move from the not-yet-done category after completing.
    as information instead of failure. Recorded in `CLAUDE.md` under "Design direction" so
    it doesn't get reintroduced.
 
-3. On the same token as 1, change the interface to be more hand-holding and friendly. For example, the top navigation "Study," "Readiness," "Browse," etc feels to "programmery." The user needs to be led through the application in a more guided way. When the page first loads, offer a more "Choose your path" experience. After the user completes a chunk of cards, guide them to select whether to view their readiness, etc.
+4. On the same token as 1, change the interface to be more hand-holding and friendly. For example, the top navigation "Study," "Readiness," "Browse," etc feels to "programmery." The user needs to be led through the application in a more guided way. When the page first loads, offer a more "Choose your path" experience. After the user completes a chunk of cards, guide them to select whether to view their readiness, etc.
 
    The app now opens on a "choose your path" home screen (`src/ui/HomeView.ts`) with a
    time-of-day greeting, one featured next action, and plain-language alternatives.
@@ -46,7 +62,7 @@ Move from the not-yet-done category after completing.
    Dashboard headings rewritten in plain language ("How you're doing", "Your progress by
    exam topic").
 
-4. Plain-language pass over every screen — the copy was too technical.
+5. Plain-language pass over every screen — the copy was too technical.
 
    Settings was the worst offender and was rewritten wholesale: "Target retention" became
    "How well do you want to remember things?", "Interleave domains within a session" became

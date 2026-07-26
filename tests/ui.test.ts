@@ -179,6 +179,55 @@ describe('review view', () => {
     expect(root.querySelector('.cloze')).not.toBeNull();
   });
 
+  it('keeps the rating controls out of the scrolling card so they stay on screen', async () => {
+    const app = await bootedApp({ maxNewPerDay: 200 });
+    app.queueIndex = app.queue.findIndex((i) => i.card.choices);
+    const root = container();
+    app.onChange = () => renderReview(app, root);
+    renderReview(app, root);
+    (root.querySelector('ol.choices button') as HTMLButtonElement).click();
+
+    const bar = root.querySelector('.actionbar');
+    expect(bar).not.toBeNull();
+
+    // Rating buttons must live in the sticky bar, never inside the card body,
+    // or a long explanation pushes them below the fold.
+    const grading = root.querySelector('.grading')!;
+    expect(bar!.contains(grading)).toBe(true);
+    expect(root.querySelector('.card')!.contains(grading)).toBe(false);
+
+    // And the bar comes after the card, so it pins to the bottom.
+    const card = root.querySelector('.card')!;
+    expect(card.compareDocumentPosition(bar!) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+  });
+
+  it('tucks references behind an expander, collapsed by default', async () => {
+    const app = await bootedApp({ maxNewPerDay: 200 });
+    app.queueIndex = app.queue.findIndex((i) => i.card.choices);
+    const root = container();
+    app.onChange = () => renderReview(app, root);
+    renderReview(app, root);
+    (root.querySelector('ol.choices button') as HTMLButtonElement).click();
+
+    const refs = root.querySelector('details.refs') as HTMLDetailsElement;
+    expect(refs).not.toBeNull();
+    expect(refs.open).toBe(false);
+    expect(refs.querySelector('summary')!.textContent).toMatch(/Where this comes from/);
+    // The links are still there, just folded away.
+    expect(refs.querySelectorAll('a').length).toBeGreaterThan(0);
+  });
+
+  it('puts the reveal button in the action bar for recall cards too', async () => {
+    const app = await bootedApp({ maxNewPerDay: 400 });
+    app.queueIndex = app.queue.findIndex((i) => i.card.type === 'recall');
+    const root = container();
+    app.onChange = () => renderReview(app, root);
+    renderReview(app, root);
+
+    const bar = root.querySelector('.actionbar')!;
+    expect(bar.textContent).toContain('Show answer');
+  });
+
   it('re-queues a lapsed card later in the same session', async () => {
     const app = await bootedApp({ maxNewPerDay: 5 });
     const length = app.queue.length;

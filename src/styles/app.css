@@ -116,7 +116,7 @@ nav.tabs button[aria-current="page"] {
   font-weight: 600;
 }
 
-main { flex: 1; max-width: var(--maxw); width: 100%; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
+main { flex: 1; max-width: var(--maxw); width: 100%; margin: 0 auto; padding: 1.5rem 1rem 1rem; }
 
 /* ---- generic ---- */
 h1 { font-size: 1.45rem; margin: 0 0 0.5rem; letter-spacing: -0.02em; }
@@ -327,6 +327,8 @@ button.wrong .rationale { color: #9a3412; }
 }
 
 .explanation {
+  max-height: 40vh;
+  overflow-y: auto;
   border-left: 4px solid var(--joy);
   background: var(--joy-soft);
   border-radius: 0 var(--radius) var(--radius) 0;
@@ -336,6 +338,19 @@ button.wrong .rationale { color: #9a3412; }
 }
 
 .refs { font-size: 0.85rem; margin-top: 0.9rem; }
+.refs > summary {
+  cursor: pointer;
+  color: var(--accent-strong);
+  font-weight: 600;
+  padding: 0.35rem 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.refs > summary::-webkit-details-marker { display: none; }
+.refs > summary::before { content: '▸'; transition: transform 0.15s; }
+.refs[open] > summary::before { transform: rotate(90deg); }
 .refs ul { margin: 0.3rem 0 0; padding-left: 1.1rem; }
 .refs li { margin-bottom: 0.3rem; }
 .refs .cite { color: var(--text-dim); font-size: 0.79rem; display: block; }
@@ -343,6 +358,24 @@ button.wrong .rationale { color: #9a3412; }
 .grading { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1.15rem; }
 .grading button { flex: 1 1 8rem; text-align: center; }
 .grading .ivl { display: block; font-size: 0.72rem; opacity: 0.85; font-family: var(--mono); }
+
+/* ---- sticky action bar ----
+   The rating controls sit outside the card and stick to the bottom of the
+   viewport, so answering never requires scrolling back down. Long explanations
+   scroll underneath it. */
+.actionbar {
+  position: sticky;
+  bottom: 0;
+  z-index: 15;
+  margin: 0 -1rem;
+  padding: 0.7rem 1rem calc(0.7rem + env(safe-area-inset-bottom, 0px));
+  background: rgba(255, 250, 242, 0.94);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -6px 18px rgba(80, 60, 30, 0.06);
+}
+.actionbar .grading { margin-top: 0; }
+.actionbar .kbd-hint { margin-top: 0.55rem; text-align: center; }
 
 /* ---- checkpoint / session complete ---- */
 .checkpoint {
