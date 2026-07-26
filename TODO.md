@@ -36,6 +36,17 @@ In priority order:
 
 Move from the not-yet-done category after completing.
 
+1. **Only the action button on a home card should be clickable.** The whole card currently
+   carries a click handler as a convenience, but that makes the card's own hover lift a
+   promise about a region that shouldn't be a target. Confine the click to the button, and
+   drop the card-level affordances (pointer cursor, hover lift) that imply otherwise.
+
+   **Done.** The card-level `onclick` is gone, along with the `stopPropagation` the button
+   needed to work around it. The pointer cursor and hover lift moved off the card and onto
+   the button, so the only thing that looks pressable is the only thing that is. A test
+   clicks the card, its title and its description and asserts nothing navigates, then clicks
+   the button and asserts it does.
+
 1. **Home cards don't look clickable, and the fourth falls below the fold.** The whole home
    screen is four `<button class="path">` elements styled as panels. They work, but nothing
    signals that — no affordance beyond a hover state, which is invisible on touch. For an

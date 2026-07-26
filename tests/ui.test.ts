@@ -491,11 +491,30 @@ describe('guided flow', () => {
       expect((cta!.textContent ?? '').trim().length).toBeGreaterThan(0);
     }
 
-    // Clicking the button navigates, not just the card.
+    // Only the buttons navigate — the cards themselves are not click targets.
     (paths.map((c) => c.querySelector('button.cta')) as HTMLButtonElement[]).forEach((b) =>
       b.click(),
     );
     expect(new Set(visited)).toEqual(new Set(['study', 'dashboard', 'exam', 'browse']));
+  });
+
+  it('navigates only from the button, not from the card body', async () => {
+    const app = await bootedApp();
+    const root = container();
+    const visited: string[] = [];
+    renderHome(app, root, (v) => visited.push(v));
+
+    const card = root.querySelector('.path.featured') as HTMLElement;
+
+    // Clicking the card itself, its title, and its description must do nothing.
+    card.click();
+    (card.querySelector('.title') as HTMLElement).click();
+    (card.querySelector('.desc') as HTMLElement).click();
+    expect(visited).toEqual([]);
+
+    // Only the button navigates.
+    (card.querySelector('button.cta') as HTMLButtonElement).click();
+    expect(visited).toEqual(['study']);
   });
 
   it('features studying as the primary path and shows how many are ready', async () => {

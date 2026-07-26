@@ -214,16 +214,13 @@ button.btn.ghost { box-shadow: none; background: transparent; }
   background: var(--surface);
   border-radius: var(--radius-lg);
   padding: 0.9rem 1rem 0.85rem;
-  cursor: pointer;
   color: var(--text);
   box-shadow: var(--shadow);
-  transition: transform 0.12s, box-shadow 0.12s, border-color 0.12s;
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
   justify-content: space-between;
 }
-.path:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); border-color: var(--accent); }
 .path-body { display: flex; gap: 0.6rem; align-items: flex-start; }
 .path .icon { font-size: 1.35rem; line-height: 1.2; flex: none; }
 .path .title { font-weight: 700; font-size: 0.98rem; letter-spacing: -0.01em; display: block; }
@@ -236,6 +233,9 @@ button.btn.ghost { box-shadow: none; background: transparent; }
   color: var(--accent-strong);
 }
 .path .cta { width: 100%; text-align: center; font-size: 0.88rem; padding: 0.45rem 0.8rem; }
+/* The lift lives on the button now, since that is the only thing you can press. */
+.path .cta { transition: transform 0.12s, box-shadow 0.12s, background 0.15s, border-color 0.15s; }
+.path .cta:hover { transform: translateY(-1px); box-shadow: var(--shadow-lift); }
 
 .path.featured {
   background: linear-gradient(150deg, #0d9488 0%, #0f766e 100%);
@@ -258,7 +258,6 @@ button.btn.ghost { box-shadow: none; background: transparent; }
   font-weight: 700;
 }
 .path.featured .cta:hover { background: var(--joy-soft); border-color: var(--joy-soft); }
-.path.featured:hover { border-color: #0b5f58; }
 
 /* ---- review ---- */
 .progressbar {

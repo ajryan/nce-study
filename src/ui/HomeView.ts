@@ -148,17 +148,14 @@ interface PathOptions {
  * which says nothing on touch and left the entry point ambiguous — the worst
  * place to be unsure, since everything else sits behind it.
  *
- * The whole card is still clickable for convenience, but the button is what
- * communicates that it can be.
+ * Only the button is a click target. A card-wide handler would make the card's
+ * hover lift a promise about a region that isn't really a control, and it gives
+ * the mouse a hit area the keyboard has no equivalent for.
  */
 function pathCard(o: PathOptions): HTMLElement {
   return el(
     'div',
-    {
-      class: `path${o.featured ? ' featured' : ''}`,
-      onclick: o.onClick,
-      role: 'group',
-    },
+    { class: `path${o.featured ? ' featured' : ''}` },
     el(
       'div',
       { class: 'path-body' },
@@ -171,10 +168,6 @@ function pathCard(o: PathOptions): HTMLElement {
         o.count ? el('span', { class: 'count' }, o.count) : null,
       ),
     ),
-    el(
-      'button',
-      { class: 'btn primary cta', onclick: (e: Event) => { e.stopPropagation(); o.onClick(); } },
-      o.cta,
-    ),
+    el('button', { class: 'btn primary cta', onclick: o.onClick }, o.cta),
   );
 }
