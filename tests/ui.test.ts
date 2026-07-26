@@ -13,6 +13,7 @@ import { AppState, CHECKPOINT_EVERY } from '../src/app';
 import { MemoryStore, __setStore } from '../src/storage/db';
 import { renderReview, handleReviewKey, resetReviewView } from '../src/ui/ReviewView';
 import { renderHome } from '../src/ui/HomeView';
+import { formatInterval } from '../src/ui/dom';
 import { renderDashboard, resetDashboardView } from '../src/ui/DashboardView';
 import { renderBrowse } from '../src/ui/BrowseView';
 import { renderSettings } from '../src/ui/SettingsView';
@@ -42,6 +43,36 @@ beforeEach(() => {
   document.body.innerHTML = '';
   resetReviewView();
   resetDashboardView();
+});
+
+describe('formatInterval', () => {
+  it('never abbreviates a unit ambiguously', () => {
+    // "1m" was the bug: minute or month, told apart only by an "o".
+    expect(formatInterval(1 / 1440)).toBe('1 minute');
+    expect(formatInterval(45 / 1440)).toBe('45 minutes');
+    expect(formatInterval(3 / 24)).toBe('3 hours');
+    expect(formatInterval(1)).toBe('1 day');
+    expect(formatInterval(10)).toBe('10 days');
+    expect(formatInterval(60)).toBe('2 months');
+    expect(formatInterval(400)).toBe('1.1 years');
+  });
+
+  it('singularises correctly', () => {
+    expect(formatInterval(31)).toBe('1 month');
+    expect(formatInterval(366)).toBe('1 year');
+  });
+
+  it('handles overdue and zero without nonsense', () => {
+    expect(formatInterval(0)).toBe('now');
+    expect(formatInterval(-5)).toBe('now');
+  });
+
+  it('is always a duration, so callers can prefix it', () => {
+    // A point in time like "tomorrow" would produce "in tomorrow".
+    for (const d of [0.5, 1, 7, 45, 500]) {
+      expect(`in ${formatInterval(d)}`).not.toMatch(/in (tomorrow|today|now)/);
+    }
+  });
 });
 
 describe('deck loading', () => {

@@ -53,17 +53,46 @@ export function frag(...children: Child[]): DocumentFragment {
   return f;
 }
 
-/** Formats a scheduling interval the way a study app should: coarse, not exact. */
+/**
+ * Formats a scheduling interval in words.
+ *
+ * Abbreviations were actively misleading here: "1m" reads as either a minute or
+ * a month, and the distinction was carried entirely by whether the unit was "m"
+ * or "mo" — which nobody should have to notice, least of all under a button
+ * they press hundreds of times.
+ */
 export function formatInterval(days: number): string {
-  if (days < 1 / 24) return '<1m';
-  if (days < 1) {
-    const hours = days * 24;
-    if (hours < 1) return `${Math.round(hours * 60)}m`;
-    return `${Math.round(hours)}h`;
+  // Always a *duration*, never a point in time. "tomorrow" would be friendlier
+  // in isolation but breaks every caller that prefixes it ("in tomorrow"), so
+  // phrasing like that belongs to the caller.
+  if (days <= 0) return 'now';
+
+  const minutes = days * 24 * 60;
+  if (minutes < 1) return 'under a minute';
+  if (minutes < 60) {
+    const m = Math.round(minutes);
+    return `${m} ${m === 1 ? 'minute' : 'minutes'}`;
   }
-  if (days < 30) return `${Math.round(days)}d`;
-  if (days < 365) return `${(days / 30.44).toFixed(1)}mo`;
-  return `${(days / 365.25).toFixed(1)}y`;
+
+  const hours = days * 24;
+  if (hours < 24) {
+    const h = Math.round(hours);
+    return `${h} ${h === 1 ? 'hour' : 'hours'}`;
+  }
+
+  if (days < 31) {
+    const d = Math.round(days);
+    return `${d} ${d === 1 ? 'day' : 'days'}`;
+  }
+
+  if (days < 365) {
+    const mo = Math.round(days / 30.44);
+    return `${mo} ${mo === 1 ? 'month' : 'months'}`;
+  }
+
+  const y = days / 365.25;
+  const rounded = y < 10 ? Math.round(y * 10) / 10 : Math.round(y);
+  return `${rounded} ${rounded === 1 ? 'year' : 'years'}`;
 }
 
 export function pct(n: number, total: number): string {

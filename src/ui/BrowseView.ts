@@ -184,7 +184,10 @@ function renderRow(app: AppState, card: Card, rerender: () => void): HTMLElement
       : p.state === State.New
         ? 'not started yet'
         : p.state === State.Review
-          ? `next review in ${formatInterval((new Date(p.due).getTime() - Date.now()) / 86_400_000)}`
+          ? (() => {
+              const d = (new Date(p.due).getTime() - Date.now()) / 86_400_000;
+              return d <= 0 ? 'ready to review now' : `next review in ${formatInterval(d)}`;
+            })()
           : 'still learning';
 
   const details = el('details', { class: 'browse-item' });

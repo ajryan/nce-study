@@ -33,6 +33,24 @@ In priority order:
 
 Move from the not-yet-done category after completing.
 
+1. **Spell out the timing labels under the difficulty buttons.** "1m" is ambiguous — minute
+   or month — and it appears under every rating on every card. Months currently render as
+   "mo" and minutes as "m", which is a distinction no one should have to notice.
+
+   **Done.** `formatInterval` now returns words — "10 minutes", "3 hours", "8 days",
+   "2 months", "1.1 years" — and buttons read "in 8 days" rather than "8d".
+
+   Two things fell out of it. It now always returns a *duration*, never a point in time: a
+   friendlier "tomorrow" would have produced "in tomorrow" at every call site that prefixes
+   it, so that phrasing belongs to the caller. And negative intervals — overdue cards in the
+   browser — used to fall through to "under a minute"; they return "now", with Browse saying
+   "ready to review now".
+
+   The longer labels then broke the mobile layout, wrapping every button onto three or four
+   lines and re-inflating the action bar the sticky-bar work had just trimmed. Grading is now
+   two-up on phones instead of four, and the "(2)" shortcut hints are hidden there since
+   there is no keyboard. Bar measures 155px on desktop and 189px on a 780px phone.
+
 1. **Show practice test results on the Progress page, with a placeholder before the first
    one.** Right now a practice test score is the single most exam-like signal in the app and
    it is thrown away the moment you navigate off the results screen.

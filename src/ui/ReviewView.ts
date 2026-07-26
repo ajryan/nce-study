@@ -173,6 +173,12 @@ export function renderReview(app: AppState, root: HTMLElement, go?: (view: ViewN
   }
 }
 
+/** "in 3 days" reads as a time; "3d" reads as a code. Worth the extra width. */
+function intervalLabel(days: number): string {
+  const phrase = formatInterval(days);
+  return phrase === 'now' ? 'again shortly' : `in ${phrase}`;
+}
+
 /** The blueprint task in words, trimmed to fit a chip — never the raw code. */
 function shortTask(card: Card): string {
   const label = taskLabel(card);
@@ -278,14 +284,20 @@ function renderGrading(app: AppState, isChoiceCard: boolean): HTMLElement {
             (grade === Rating.Again ? ' again' : ''),
           onclick: () => grade_(app, grade),
         },
-        `${label} (${key})`,
-        el('span', { class: 'ivl' }, formatInterval(preview[grade])),
+        el('span', { class: 'glabel' }, label),
+        el('span', { class: 'gkey' }, ` (${key})`),
+        el('span', { class: 'ivl' }, intervalLabel(preview[grade])),
       ),
     );
   }
 
   wrap.appendChild(
-    el('button', { class: 'btn', onclick: () => void app.suspendCurrent() }, 'Hide this card (h)'),
+    el(
+      'button',
+      { class: 'btn', onclick: () => void app.suspendCurrent() },
+      el('span', { class: 'glabel' }, 'Hide this card'),
+      el('span', { class: 'gkey' }, ' (h)'),
+    ),
   );
 
   return wrap;

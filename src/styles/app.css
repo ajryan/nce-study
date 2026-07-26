@@ -392,8 +392,9 @@ button.wrong .rationale { color: #9a3412; }
   font-weight: 650;
 }
 .grading button.again:hover { border-color: var(--wrong); background: #ffe0c4; }
-.grading button { flex: 1 1 8rem; text-align: center; }
-.grading .ivl { display: block; font-size: 0.72rem; opacity: 0.85; font-family: var(--mono); }
+.grading button { flex: 1 1 8rem; text-align: center; line-height: 1.25; }
+.grading .glabel { white-space: nowrap; }
+.grading .ivl { display: block; font-size: 0.7rem; opacity: 0.8; margin-top: 0.1rem; }
 
 /* ---- sticky action bar ----
    The rating controls sit outside the card and stick to the bottom of the
@@ -650,9 +651,13 @@ table.grid td.barcell { width: 38%; min-width: 120px; }
      Tighten it, and drop the keyboard hint — there is no keyboard here. */
   .actionbar { padding: 0.5rem 0.75rem calc(0.5rem + env(safe-area-inset-bottom, 0px)); }
   .actionbar .kbd-hint { display: none; }
+  /* Two per row rather than four: the verbose interval needs the width, and
+     four columns wrapped every label onto three lines. */
   .grading { gap: 0.4rem; }
-  .grading button { flex: 1 1 0; padding: 0.5rem 0.4rem; font-size: 0.9rem; min-width: 0; }
-  .grading .ivl { font-size: 0.65rem; }
+  .grading button { flex: 1 1 calc(50% - 0.2rem); padding: 0.45rem 0.4rem; font-size: 0.88rem; min-width: 0; }
+  .grading .ivl { font-size: 0.66rem; }
+  /* No keyboard on a phone, so the shortcut hint is pure noise. */
+  .grading .gkey { display: none; }
   .prompt { font-size: 1.02rem; }
   .card { padding: 0.9rem 1rem; }
   .headline { padding: 1.1rem; }
