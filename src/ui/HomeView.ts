@@ -41,18 +41,14 @@ export function renderHome(app: AppState, root: HTMLElement, go: (view: ViewName
       'p',
       { class: 'encourage' },
       stats.total > 0
-        ? "There's no rush and no wrong pace. Do a few cards or do a lot — either way you're moving forward."
-        : 'Nothing is due right now. Come back later, or pick something else below if you feel like it.',
+        ? 'No rush and no wrong pace — a few cards still counts.'
+        : 'Nothing is due right now. Pick anything below if you feel like it.',
     ),
   );
 
   if (doneToday > 0) {
     hero.appendChild(
-      el(
-        'div',
-        { class: 'streak' },
-        `🎉 ${doneToday} card${doneToday === 1 ? '' : 's'} done today`,
-      ),
+      el('div', { class: 'streak' }, `🎉 ${doneToday} card${doneToday === 1 ? '' : 's'} done today`),
     );
   }
   root.appendChild(hero);
@@ -62,8 +58,9 @@ export function renderHome(app: AppState, root: HTMLElement, go: (view: ViewName
 
   // Featured: the one thing we want them to do.
   paths.appendChild(
-    pathButton({
+    pathCard({
       featured: true,
+      cta: stats.total > 0 ? 'Start studying' : 'Look through cards',
       icon: stats.total > 0 ? '📚' : '✨',
       title: stats.total > 0 ? 'Study your cards' : 'Study anyway',
       desc:
@@ -80,8 +77,9 @@ export function renderHome(app: AppState, root: HTMLElement, go: (view: ViewName
   );
 
   paths.appendChild(
-    pathButton({
+    pathCard({
       icon: '🌱',
+      cta: 'See my progress',
       title: 'See how I’m doing',
       desc: 'Your progress across every exam topic, and an honest read on what still needs work.',
       count: `${pct(seen, app.cards.length)} of the deck seen`,
@@ -90,8 +88,9 @@ export function renderHome(app: AppState, root: HTMLElement, go: (view: ViewName
   );
 
   paths.appendChild(
-    pathButton({
+    pathCard({
       icon: '📝',
+      cta: 'Start a practice test',
       title: 'Take a practice test',
       desc: 'A timed mock built to the real exam’s topic mix. Useful once you have covered a fair bit.',
       count: days !== null && days > 0 ? `${days} day${days === 1 ? '' : 's'} until your exam` : undefined,
@@ -100,8 +99,9 @@ export function renderHome(app: AppState, root: HTMLElement, go: (view: ViewName
   );
 
   paths.appendChild(
-    pathButton({
+    pathCard({
       icon: '🔎',
+      cta: 'Browse the cards',
       title: 'Look through the cards',
       desc: 'Search and read any card at your own pace — nothing is scored and nothing is scheduled.',
       count: `${app.cards.length} cards`,
@@ -136,18 +136,45 @@ interface PathOptions {
   icon: string;
   title: string;
   desc: string;
+  cta: string;
   count?: string;
   featured?: boolean;
   onClick: () => void;
 }
 
-function pathButton(o: PathOptions): HTMLElement {
+/**
+ * A card with an explicit button inside it, rather than a card that *is* a
+ * button. The old version relied on a hover state to signal it was clickable,
+ * which says nothing on touch and left the entry point ambiguous — the worst
+ * place to be unsure, since everything else sits behind it.
+ *
+ * The whole card is still clickable for convenience, but the button is what
+ * communicates that it can be.
+ */
+function pathCard(o: PathOptions): HTMLElement {
   return el(
-    'button',
-    { class: `path${o.featured ? ' featured' : ''}`, onclick: o.onClick },
-    el('span', { class: 'icon' }, o.icon),
-    el('span', { class: 'title' }, o.title),
-    el('span', { class: 'desc' }, o.desc),
-    o.count ? el('span', { class: 'count' }, o.count) : null,
+    'div',
+    {
+      class: `path${o.featured ? ' featured' : ''}`,
+      onclick: o.onClick,
+      role: 'group',
+    },
+    el(
+      'div',
+      { class: 'path-body' },
+      el('span', { class: 'icon' }, o.icon),
+      el(
+        'div',
+        {},
+        el('span', { class: 'title' }, o.title),
+        el('span', { class: 'desc' }, o.desc),
+        o.count ? el('span', { class: 'count' }, o.count) : null,
+      ),
+    ),
+    el(
+      'button',
+      { class: 'btn primary cta', onclick: (e: Event) => { e.stopPropagation(); o.onClick(); } },
+      o.cta,
+    ),
   );
 }

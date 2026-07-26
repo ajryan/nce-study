@@ -36,6 +36,30 @@ In priority order:
 
 Move from the not-yet-done category after completing.
 
+1. **Home cards don't look clickable, and the fourth falls below the fold.** The whole home
+   screen is four `<button class="path">` elements styled as panels. They work, but nothing
+   signals that — no affordance beyond a hover state, which is invisible on touch. For an
+   anxious user the failure mode is being unsure how to start at all, and this is the front
+   door: everything else is unreachable behind it.
+
+   Make them plain cards with an explicit call-to-action button inside each, so the action
+   is a button that looks like a button. Then make all four fit above the fold on ordinary
+   laptop and phone viewports — exceptionally short windows excepted — which means the hero
+   and the card padding both have to come down. Verify by measurement in the browser, not by
+   eye.
+
+   **Done.** Each path is now a `div.path` containing a real `button.cta` — "Start
+   studying", "See my progress", "Start a practice test", "Browse the cards" — so the action
+   looks like an action. The whole card stays clickable for convenience, but the button is
+   what communicates it.
+
+   To fit all four above the fold the hero lost a line and shrank, card padding came down,
+   and the featured card went horizontal so it costs one row instead of two. On phones the
+   descriptions are hidden and the featured card stacks. Measured rather than eyeballed:
+   `npm run visual` now asserts the last card's bottom edge against the viewport at 1000x700,
+   1440x800 and 390x780 — currently 507px, 507px and 693px. Two jsdom tests also require
+   every card to carry a non-empty CTA button that navigates on its own click.
+
 1. **Rating labels are not a parallel construction.** "Hard / Good / Easy" mixes a judgement
    of the question with a judgement of the answer, so the three do not answer one question.
    All three should complete "how difficult was this?" — e.g. Hard / OK / Easy, or

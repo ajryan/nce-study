@@ -59,7 +59,7 @@ async function startServer(): Promise<() => void> {
 
 /** Click through the home screen into a card and answer it. */
 async function answerOneCard(page: Page): Promise<void> {
-  await page.getByRole('button', { name: /Study your cards/i }).click();
+  await page.locator('.path.featured button.cta').click();
   await page.waitForSelector('.prompt');
   const choice = page.locator('ol.choices button').first();
   if (await choice.count()) {
@@ -87,9 +87,33 @@ async function main(): Promise<void> {
     page.on('pageerror', (e) => errors.push(e.message));
 
     // ---- home ----
-    await page.waitForSelector('button.path.featured');
+    await page.waitForSelector('.path.featured');
     await page.screenshot({ path: `${SHOTS}/1-home.png` });
-    check(await page.locator('button.path').count() >= 4, 'home shows the choose-your-path options');
+    check((await page.locator('.path').count()) >= 4, 'home shows the choose-your-path options');
+
+    // Every card must carry a visible button — hover alone signals nothing on
+    // touch, and this is the entry point to everything else.
+    const ctas = page.locator('.path button.cta');
+    check((await ctas.count()) >= 4, 'every home card has an explicit call-to-action button');
+    check(await ctas.first().isVisible(), 'call-to-action buttons are visible');
+
+    // ...and all four have to clear the fold at ordinary viewport sizes.
+    for (const [w, h, label] of [
+      [1000, 700, 'laptop'],
+      [1440, 800, 'desktop'],
+      [390, 780, 'phone'],
+    ] as Array<[number, number, string]>) {
+      await page.setViewportSize({ width: w, height: h });
+      await page.waitForTimeout(180);
+      const lowest = await page.locator('.path').last().evaluate((el) => el.getBoundingClientRect().bottom);
+      check(
+        lowest <= h,
+        `all four home cards are above the fold (${label} ${w}x${h})`,
+        `last card ends at ${Math.round(lowest)}px`,
+      );
+    }
+    await page.setViewportSize({ width: 1000, height: 700 });
+    await page.waitForTimeout(150);
 
     // ---- layout shift when a scrollbar appears ----
     // Measure the content box with and without forced overflow.

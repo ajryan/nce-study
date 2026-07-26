@@ -183,69 +183,82 @@ button.btn.ghost { box-shadow: none; background: transparent; }
 .banner.warn { background: var(--warn-bg); border-color: #fde047; color: var(--warn); }
 .banner.warn strong { color: inherit; }
 
-/* ---- home / choose your path ---- */
-.hero {
-  text-align: center;
-  padding: 1.5rem 0 0.5rem;
-}
-.hero h1 { font-size: 1.75rem; margin-bottom: 0.35rem; }
-.hero .greeting { color: var(--text-dim); font-size: 1.02rem; margin: 0 0 0.35rem; }
+/* ---- home / choose your path ----
+   Cards with a real button inside, not cards that *are* buttons. The old
+   version signalled clickability only through :hover, which says nothing on
+   touch. Sized so all four clear the fold on ordinary laptop and phone
+   viewports — measured in scripts/visual-check.ts, not eyeballed. */
+.hero { text-align: center; padding: 0.9rem 0 0.35rem; }
+.hero h1 { font-size: 1.5rem; margin-bottom: 0.2rem; }
+.hero .greeting { color: var(--text-dim); font-size: 0.92rem; margin: 0 0 0.2rem; }
+.hero .encourage { font-size: 0.9rem; margin: 0 auto; }
 .hero .streak {
   display: inline-block;
   background: var(--joy-soft);
   color: #92400e;
   border-radius: 999px;
-  padding: 0.25rem 0.85rem;
-  font-size: 0.85rem;
+  padding: 0.15rem 0.7rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  margin-top: 0.5rem;
+  margin-top: 0.4rem;
 }
 
 .paths {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 0.9rem;
-  margin: 1.5rem 0 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+  gap: 0.7rem;
+  margin: 1rem 0 0.5rem;
 }
-button.path {
-  font: inherit;
-  text-align: left;
+.path {
   border: 1px solid var(--border);
   background: var(--surface);
   border-radius: var(--radius-lg);
-  padding: 1.15rem 1.2rem;
+  padding: 0.9rem 1rem 0.85rem;
   cursor: pointer;
   color: var(--text);
   box-shadow: var(--shadow);
   transition: transform 0.12s, box-shadow 0.12s, border-color 0.12s;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
-  min-height: 100%;
+  gap: 0.6rem;
+  justify-content: space-between;
 }
-button.path:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lift);
-  border-color: var(--accent);
-}
-button.path .icon { font-size: 1.6rem; line-height: 1; margin-bottom: 0.15rem; }
-button.path .title { font-weight: 700; font-size: 1.02rem; letter-spacing: -0.01em; }
-button.path .desc { color: var(--text-dim); font-size: 0.87rem; line-height: 1.45; }
-button.path .count {
-  margin-top: 0.35rem;
-  font-size: 0.8rem;
+.path:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); border-color: var(--accent); }
+.path-body { display: flex; gap: 0.6rem; align-items: flex-start; }
+.path .icon { font-size: 1.35rem; line-height: 1.2; flex: none; }
+.path .title { font-weight: 700; font-size: 0.98rem; letter-spacing: -0.01em; display: block; }
+.path .desc { color: var(--text-dim); font-size: 0.83rem; line-height: 1.4; display: block; margin-top: 0.1rem; }
+.path .count {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.78rem;
   font-weight: 650;
   color: var(--accent-strong);
 }
-button.path.featured {
+.path .cta { width: 100%; text-align: center; font-size: 0.88rem; padding: 0.45rem 0.8rem; }
+
+.path.featured {
   background: linear-gradient(150deg, #0d9488 0%, #0f766e 100%);
   border-color: var(--accent-strong);
   color: #fff;
   grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
 }
-button.path.featured .desc { color: rgba(255, 255, 255, 0.88); }
-button.path.featured .count { color: #ffe9b8; }
-button.path.featured:hover { border-color: #0b5f58; }
+.path.featured .path-body { flex: 1; }
+.path.featured .desc { color: rgba(255, 255, 255, 0.88); }
+.path.featured .count { color: #ffe9b8; }
+.path.featured .cta {
+  width: auto;
+  flex: none;
+  background: #fff;
+  color: var(--accent-strong);
+  border-color: #fff;
+  font-weight: 700;
+}
+.path.featured .cta:hover { background: var(--joy-soft); border-color: var(--joy-soft); }
+.path.featured:hover { border-color: #0b5f58; }
 
 /* ---- review ---- */
 .progressbar {
@@ -615,6 +628,13 @@ table.grid td.barcell { width: 38%; min-width: 120px; }
   .prompt { font-size: 1.02rem; }
   .card { padding: 0.9rem 1rem; }
   .headline { padding: 1.1rem; }
+  .hero { padding: 0.5rem 0 0.2rem; }
+  .hero .encourage { font-size: 0.85rem; }
+  .paths { grid-template-columns: 1fr; gap: 0.55rem; margin-top: 0.75rem; }
+  .path { padding: 0.75rem 0.85rem; gap: 0.5rem; }
+  .path.featured { flex-direction: column; align-items: stretch; }
+  .path.featured .cta { width: 100%; }
+  .path .desc { display: none; }
   .headline .big { font-size: 2.4rem; }
   .substats { gap: 1.1rem; }
   .switch { width: 100%; justify-content: center; }

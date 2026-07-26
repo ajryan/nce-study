@@ -480,9 +480,21 @@ describe('guided flow', () => {
     const visited: string[] = [];
     renderHome(app, root, (v) => visited.push(v));
 
-    const paths = [...root.querySelectorAll('button.path')] as HTMLButtonElement[];
+    const paths = [...root.querySelectorAll('.path')] as HTMLElement[];
     expect(paths.length).toBeGreaterThanOrEqual(4);
-    paths.forEach((b) => b.click());
+
+    // Every card carries an explicit button — a hover state alone said nothing
+    // on touch, and left the entry point ambiguous.
+    for (const card of paths) {
+      const cta = card.querySelector('button.cta');
+      expect(cta).not.toBeNull();
+      expect((cta!.textContent ?? '').trim().length).toBeGreaterThan(0);
+    }
+
+    // Clicking the button navigates, not just the card.
+    (paths.map((c) => c.querySelector('button.cta')) as HTMLButtonElement[]).forEach((b) =>
+      b.click(),
+    );
     expect(new Set(visited)).toEqual(new Set(['study', 'dashboard', 'exam', 'browse']));
   });
 
@@ -490,9 +502,10 @@ describe('guided flow', () => {
     const app = await bootedApp({ maxNewPerDay: 7 });
     const root = container();
     renderHome(app, root, () => {});
-    const featured = root.querySelector('button.path.featured');
+    const featured = root.querySelector('.path.featured');
     expect(featured).not.toBeNull();
     expect(featured!.textContent).toContain('7 cards ready');
+    expect(featured!.querySelector('button.cta')!.textContent).toMatch(/start studying/i);
   });
 
   it('pauses for a checkpoint after a chunk and offers a choice', async () => {
