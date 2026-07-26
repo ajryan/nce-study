@@ -4,6 +4,29 @@
 
 In priority order:
 
+1. **Tell the user when a new version is available, and reassure them about their progress.**
+   The site now deploys on every push, and the service worker serves cached hashed assets,
+   so someone with the app open — or installed as a PWA — can sit on a stale build without
+   knowing. Detect a waiting service worker and offer a refresh.
+
+   The reassurance is the point, not a nicety: this user is anxious, and "reload to update"
+   reads as "lose your place". Progress lives in IndexedDB and survives a refresh entirely,
+   so the prompt should say so plainly. Must not be a blocking modal — never interrupt
+   mid-card.
+
+2. **Confirm settings changes visually.** Settings save silently on change, so there is no
+   feedback that anything happened. Add an unobtrusive saved indicator.
+
+3. **When the exam date changes, offer the daily new-card number.** The Progress page
+   already computes the required cards-per-day to finish in time. On changing the exam date,
+   surface that as a prompt with a button that applies it, rather than making the user work
+   out the arithmetic and find the right field.
+
+
+## Done
+
+Move from the not-yet-done category after completing.
+
 1. **Let the user type their answer on short-answer cards.** On recall and cloze cards
    there is nothing to do before revealing, so it is easy to think "yes, I knew that" without
    ever having produced the answer — which is the weakest form of practice. Give them a box
@@ -15,28 +38,18 @@ In priority order:
    Store it per card and show it beside the real answer. Never scored or graded — it is the
    user's own note, and the honest self-check is the whole value.
 
-2. **Tell the user when a new version is available, and reassure them about their progress.**
-   The site now deploys on every push, and the service worker serves cached hashed assets,
-   so someone with the app open — or installed as a PWA — can sit on a stale build without
-   knowing. Detect a waiting service worker and offer a refresh.
+   **Done.** Recall and cloze cards now open with a text box and the exact prompt requested.
+   On reveal, what they wrote appears in a quiet dashed box labelled "What you wrote",
+   directly above the card's answer in green — that order matters, since reading your own
+   attempt first makes it a self-check rather than a verdict. Nothing is scored.
 
-   The reassurance is the point, not a nicety: this user is anxious, and "reload to update"
-   reads as "lose your place". Progress lives in IndexedDB and survives a refresh entirely,
-   so the prompt should say so plainly. Must not be a blocking modal — never interrupt
-   mid-card.
+   Notes persist per card and ride along in export/import. Coming back to a card shows
+   "Last time you wrote: …" under the box while answering, and if nothing is typed this time
+   the old note still stands beside the answer. Whitespace-only input is discarded rather
+   than stored. Multiple-choice cards are untouched — they already have something to do.
 
-3. **Confirm settings changes visually.** Settings save silently on change, so there is no
-   feedback that anything happened. Add an unobtrusive saved indicator.
-
-4. **When the exam date changes, offer the daily new-card number.** The Progress page
-   already computes the required cards-per-day to finish in time. On changing the exam date,
-   surface that as a prompt with a button that applies it, rather than making the user work
-   out the arithmetic and find the right field.
-
-
-## Done
-
-Move from the not-yet-done category after completing.
+   The global keyboard handler already ignored `INPUT`/`TEXTAREA`, so typing a space or an
+   "h" writes text instead of firing a shortcut.
 
 1. **Prompt for the exam date on the home screen when it isn't set.** There is a tip in the
    home footer today, but it sits below everything and reads as optional. The exam date

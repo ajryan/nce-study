@@ -195,11 +195,25 @@ describe('backup', () => {
     expect(target.getExamResults()).toHaveLength(1);
   });
 
+  it('carries typed answer notes through export and import', async () => {
+    await repo.setNote('a', 'what I wrote last time');
+
+    const parsed = parseBackup(serializeBackup(repo));
+    expect(parsed.notes).toEqual({ a: 'what I wrote last time' });
+
+    __setStore(new MemoryStore());
+    const target = new ProgressRepository();
+    await target.load();
+    await target.replaceAll(parsed);
+    expect(target.getNote('a')).toBe('what I wrote last time');
+  });
+
   it('tolerates a backup written before practice-test history existed', () => {
     const old = JSON.stringify({
       format: 'nce-study-backup', version: 1, progress: {},
     });
     expect(parseBackup(old).exams).toEqual([]);
+    expect(parseBackup(old).notes).toEqual({});
   });
 
   it('rejects malformed JSON', () => {

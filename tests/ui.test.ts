@@ -196,6 +196,82 @@ describe('review view', () => {
     await vi.waitFor(() => expect(app.current?.card.id).not.toBe(before));
   });
 
+  it('offers a place to write the answer on a short-answer card', async () => {
+    const app = await bootedApp({ maxNewPerDay: 400 });
+    app.queueIndex = app.queue.findIndex((i) => i.card.type === 'recall');
+    const root = container();
+    app.onChange = () => renderReview(app, root);
+    renderReview(app, root);
+
+    const input = root.querySelector('textarea.answer-input') as HTMLTextAreaElement;
+    expect(input).not.toBeNull();
+    expect(root.querySelector('.note-hint')!.textContent).toBe(
+      'This is just a note. It will be shown next to the real answer the next time you see this question.',
+    );
+    // Multiple-choice cards have something to do already, so no box there.
+    expect(root.querySelector('.answerbox')).toBeNull();
+  });
+
+  it('shows what you wrote beside the real answer, and remembers it', async () => {
+    const app = await bootedApp({ maxNewPerDay: 400 });
+    app.queueIndex = app.queue.findIndex((i) => i.card.type === 'recall');
+    const cardId = app.current!.card.id;
+    const root = container();
+    app.onChange = () => renderReview(app, root);
+    renderReview(app, root);
+
+    const input = root.querySelector('textarea.answer-input') as HTMLTextAreaElement;
+    input.value = 'a stable supportive relationship';
+    input.dispatchEvent(new Event('input'));
+    handleReviewKey(app, new KeyboardEvent('keydown', { key: ' ' }));
+
+    // Both are on screen, the attempt above the answer.
+    const mine = root.querySelector('.yourgo')!;
+    const real = root.querySelector('.answerbox')!;
+    expect(mine.textContent).toContain('a stable supportive relationship');
+    expect(mine.compareDocumentPosition(real) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+
+    // And it is kept for next time.
+    await vi.waitFor(() =>
+      expect(app.repo.getNote(cardId)).toBe('a stable supportive relationship'),
+    );
+  });
+
+  it('surfaces a previous note when the card comes round again', async () => {
+    const app = await bootedApp({ maxNewPerDay: 400 });
+    app.queueIndex = app.queue.findIndex((i) => i.card.type === 'recall');
+    const cardId = app.current!.card.id;
+    await app.repo.setNote(cardId, 'my earlier attempt');
+
+    const root = container();
+    app.onChange = () => renderReview(app, root);
+    renderReview(app, root);
+    expect(root.querySelector('.note-prev')!.textContent).toContain('my earlier attempt');
+
+    // With nothing typed this time, the old note still stands beside the answer.
+    handleReviewKey(app, new KeyboardEvent('keydown', { key: ' ' }));
+    const mine = root.querySelector('.yourgo')!;
+    expect(mine.textContent).toContain('Your note from last time');
+    expect(mine.textContent).toContain('my earlier attempt');
+  });
+
+  it('does not store an empty or whitespace-only note', async () => {
+    const app = await bootedApp({ maxNewPerDay: 400 });
+    app.queueIndex = app.queue.findIndex((i) => i.card.type === 'recall');
+    const cardId = app.current!.card.id;
+    const root = container();
+    app.onChange = () => renderReview(app, root);
+    renderReview(app, root);
+
+    const input = root.querySelector('textarea.answer-input') as HTMLTextAreaElement;
+    input.value = '   ';
+    input.dispatchEvent(new Event('input'));
+    handleReviewKey(app, new KeyboardEvent('keydown', { key: ' ' }));
+
+    expect(app.repo.getNote(cardId)).toBeUndefined();
+    expect(root.querySelector('.yourgo')).toBeNull();
+  });
+
   it('masks the deletion on a cloze card until revealed', async () => {
     const app = await bootedApp({ maxNewPerDay: 600 });
     const idx = app.queue.findIndex((i) => i.card.type === 'cloze');

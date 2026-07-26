@@ -44,9 +44,19 @@ interface ViewLocalState {
   shownAt: number;
   /** Choice order is shuffled per presentation so position isn't memorised. */
   order: number[];
+  /** What the user has typed on a short-answer card this time round. */
+  typed: string;
+  /** Their note from a previous encounter, shown once the answer is revealed. */
+  previousNote?: string;
 }
 
-let local: ViewLocalState = { revealed: false, selectedIndex: null, shownAt: Date.now(), order: [] };
+let local: ViewLocalState = {
+  revealed: false,
+  selectedIndex: null,
+  shownAt: Date.now(),
+  order: [],
+  typed: '',
+};
 let boundCardId: string | null = null;
 
 function resetLocal(card: Card): void {
@@ -56,7 +66,7 @@ function resetLocal(card: Card): void {
     const j = Math.floor(Math.random() * (i + 1));
     [order[i], order[j]] = [order[j]!, order[i]!];
   }
-  local = { revealed: false, selectedIndex: null, shownAt: Date.now(), order };
+  local = { revealed: false, selectedIndex: null, shownAt: Date.now(), order, typed: '' };
   boundCardId = card.id;
 }
 
@@ -119,7 +129,37 @@ export function renderReview(app: AppState, root: HTMLElement, go?: (view: ViewN
   if (isChoiceCard && card.choices) {
     body.appendChild(renderChoices(app, card.choices));
   } else if (local.revealed) {
-    body.appendChild(el('div', { class: 'answerbox' }, card.answer ?? ''));
+    // Their attempt first, then the card's answer — reading in that order is
+    // what makes it a self-check rather than a quiz result.
+    if (local.typed.trim()) {
+      body.appendChild(
+        el(
+          'div',
+          { class: 'yourgo' },
+          el('div', { class: 'lbl' }, 'What you wrote'),
+          el('div', {}, local.typed.trim()),
+        ),
+      );
+    } else if (local.previousNote) {
+      body.appendChild(
+        el(
+          'div',
+          { class: 'yourgo' },
+          el('div', { class: 'lbl' }, 'Your note from last time'),
+          el('div', {}, local.previousNote),
+        ),
+      );
+    }
+    body.appendChild(
+      el(
+        'div',
+        { class: 'answerbox' },
+        el('div', { class: 'lbl' }, 'The answer'),
+        el('div', {}, card.answer ?? ''),
+      ),
+    );
+  } else {
+    body.appendChild(renderAnswerInput(app, card));
   }
 
   if (local.revealed) {
@@ -171,6 +211,43 @@ export function renderReview(app: AppState, root: HTMLElement, go?: (view: ViewN
   } else {
     root.appendChild(renderHints(isChoiceCard, local.revealed));
   }
+}
+
+/**
+ * A place to write the answer before revealing it.
+ *
+ * On a short-answer card there is otherwise nothing to do but think "yes, I knew
+ * that" — the weakest form of practice, because it never tests whether you can
+ * actually produce the answer. Typing it is the point; nothing here is scored.
+ */
+function renderAnswerInput(app: AppState, card: Card): HTMLElement {
+  const previous = app.repo.getNote(card.id);
+  local.previousNote = previous;
+
+  const input = el('textarea', {
+    class: 'answer-input',
+    rows: '3',
+    placeholder: 'Write your answer here…',
+    oninput: (e: Event) => {
+      local.typed = (e.target as HTMLTextAreaElement).value;
+    },
+  }) as HTMLTextAreaElement;
+  input.value = local.typed;
+
+  return el(
+    'div',
+    { class: 'answer-entry' },
+    input,
+    el(
+      'p',
+      { class: 'note-hint' },
+      'This is just a note. It will be shown next to the real answer the next time you see ' +
+        'this question.',
+    ),
+    previous
+      ? el('p', { class: 'note-prev' }, `Last time you wrote: “${previous}”`)
+      : null,
+  );
 }
 
 /** "in 3 days" reads as a time; "3d" reads as a code. Worth the extra width. */
@@ -455,6 +532,8 @@ function selectChoice(app: AppState, index: number): void {
 function reveal(app: AppState): void {
   if (local.revealed) return;
   local.revealed = true;
+  const card = app.current?.card;
+  if (card && local.typed.trim()) void app.repo.setNote(card.id, local.typed);
   app.onChange();
 }
 

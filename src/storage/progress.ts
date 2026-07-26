@@ -13,6 +13,7 @@ const KEY_SETTINGS = 'settings';
 const KEY_DAILY = 'daily';
 const KEY_LOG = 'reviewLog';
 const KEY_EXAMS = 'examResults';
+const KEY_NOTES = 'answerNotes';
 
 /** Keeps the log useful for stats without letting it grow without bound. */
 const MAX_LOG_ENTRIES = 20_000;
@@ -63,6 +64,12 @@ export class ProgressRepository {
   private daily: DailyCounts = { date: todayKey(), new: 0, review: 0 };
   private log: ReviewLogEntry[] = [];
   private exams: ExamResult[] = [];
+  /**
+   * What the user typed as their own answer on a short-answer card, by card id.
+   * Never scored — it exists so the next encounter can show what they said last
+   * to next to what the card says.
+   */
+  private notes = new Map<string, string>();
   private loaded = false;
   tier: StorageTier = 'memory';
 
@@ -70,18 +77,20 @@ export class ProgressRepository {
     const store = await getStore();
     this.tier = store.tier;
 
-    const [progress, settings, daily, log, exams] = await Promise.all([
+    const [progress, settings, daily, log, exams, notes] = await Promise.all([
       store.get<Record<string, CardProgress>>(KEY_PROGRESS),
       store.get<Partial<SchedulerSettings>>(KEY_SETTINGS),
       store.get<DailyCounts>(KEY_DAILY),
       store.get<ReviewLogEntry[]>(KEY_LOG),
       store.get<ExamResult[]>(KEY_EXAMS),
+      store.get<Record<string, string>>(KEY_NOTES),
     ]);
 
     this.progress = new Map(Object.entries(progress ?? {}));
     this.settings = { ...DEFAULT_SETTINGS, ...(settings ?? {}) };
     this.log = log ?? [];
     this.exams = exams ?? [];
+    this.notes = new Map(Object.entries(notes ?? {}));
 
     const today = todayKey();
     this.daily = daily?.date === today ? daily : { date: today, new: 0, review: 0 };
@@ -136,6 +145,18 @@ export class ProgressRepository {
     await store.set(KEY_EXAMS, this.exams);
   }
 
+  getNote(cardId: string): string | undefined {
+    return this.notes.get(cardId);
+  }
+
+  async setNote(cardId: string, text: string): Promise<void> {
+    const trimmed = text.trim();
+    if (trimmed) this.notes.set(cardId, trimmed);
+    else this.notes.delete(cardId);
+    const store = await getStore();
+    await store.set(KEY_NOTES, Object.fromEntries(this.notes));
+  }
+
   async updateSettings(patch: Partial<SchedulerSettings>): Promise<void> {
     this.settings = { ...this.settings, ...patch };
     const store = await getStore();
@@ -175,6 +196,7 @@ export class ProgressRepository {
       store.set(KEY_DAILY, this.daily),
       store.set(KEY_LOG, this.log),
       store.set(KEY_EXAMS, this.exams),
+      store.set(KEY_NOTES, Object.fromEntries(this.notes)),
     ]);
   }
 
@@ -184,6 +206,7 @@ export class ProgressRepository {
     this.progress.clear();
     this.log = [];
     this.exams = [];
+    this.notes.clear();
     this.daily = { date: todayKey(), new: 0, review: 0 };
     this.settings = { ...DEFAULT_SETTINGS };
   }
@@ -195,12 +218,14 @@ export class ProgressRepository {
     daily: DailyCounts;
     log: ReviewLogEntry[];
     exams?: ExamResult[];
+    notes?: Record<string, string>;
   }): Promise<void> {
     this.progress = new Map(Object.entries(state.progress));
     this.settings = { ...DEFAULT_SETTINGS, ...state.settings };
     this.daily = state.daily;
     this.log = state.log;
     this.exams = state.exams ?? [];
+    this.notes = new Map(Object.entries(state.notes ?? {}));
     const store = await getStore();
     await store.set(KEY_SETTINGS, this.settings);
     await this.persist();
@@ -213,6 +238,7 @@ export class ProgressRepository {
       daily: this.daily,
       log: this.log,
       exams: this.exams,
+      notes: Object.fromEntries(this.notes),
     };
   }
 

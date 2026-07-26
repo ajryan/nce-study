@@ -19,6 +19,8 @@ export interface BackupFile {
   daily: DailyCounts;
   log: ReviewLogEntry[];
   exams: ExamResult[];
+  /** The user's own typed answers, by card id. */
+  notes: Record<string, string>;
 }
 
 export function buildBackup(repo: ProgressRepository): BackupFile {
@@ -73,6 +75,7 @@ export function parseBackup(raw: string): BackupFile {
     log: data.log ?? [],
     // Absent in backups written before practice-test history existed.
     exams: data.exams ?? [],
+    notes: data.notes ?? {},
   };
 }
 

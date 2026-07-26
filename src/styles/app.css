@@ -354,6 +354,57 @@ button.wrong .rationale { color: #9a3412; }
 .verdict.wrong { color: var(--wrong); }
 .verdict .emoji { font-size: 1.2rem; }
 
+/* Writing the answer before revealing it — the point is production, not recall
+   by recognition, so this sits in the flow rather than behind a disclosure. */
+.answer-entry { margin: 0.9rem 0 0; }
+.answer-input {
+  font: inherit;
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  resize: vertical;
+  min-height: 4.5rem;
+  line-height: 1.5;
+}
+.answer-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.note-hint { font-size: 0.78rem; color: var(--text-dim); margin: 0.4rem 0 0; line-height: 1.45; }
+.note-prev {
+  font-size: 0.8rem;
+  color: var(--warn);
+  background: var(--joy-soft);
+  border-radius: var(--radius);
+  padding: 0.4rem 0.65rem;
+  margin: 0.5rem 0 0;
+}
+
+/* Their attempt sits above the real answer, in a quieter colour, so the two
+   read as a comparison rather than as a mark. */
+.yourgo {
+  border: 1px dashed var(--border);
+  background: var(--surface-2);
+  border-radius: var(--radius);
+  padding: 0.7rem 0.9rem;
+  margin: 0.85rem 0 0.5rem;
+  font-size: 0.95rem;
+}
+.yourgo .lbl,
+.answerbox .lbl {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: var(--text-dim);
+  margin-bottom: 0.2rem;
+}
+.answerbox .lbl { color: var(--correct); }
+
 .answerbox {
   border: 1px solid var(--correct-border);
   background: var(--correct-bg);
