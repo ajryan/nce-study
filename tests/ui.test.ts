@@ -13,7 +13,7 @@ import { AppState, CHECKPOINT_EVERY } from '../src/app';
 import { MemoryStore, __setStore } from '../src/storage/db';
 import { renderReview, handleReviewKey, resetReviewView } from '../src/ui/ReviewView';
 import { renderHome } from '../src/ui/HomeView';
-import { renderDashboard } from '../src/ui/DashboardView';
+import { renderDashboard, resetDashboardView } from '../src/ui/DashboardView';
 import { renderBrowse } from '../src/ui/BrowseView';
 import { renderSettings } from '../src/ui/SettingsView';
 import { renderExam } from '../src/ui/ExamView';
@@ -41,6 +41,7 @@ async function bootedApp(patch: Record<string, unknown> = {}): Promise<AppState>
 beforeEach(() => {
   document.body.innerHTML = '';
   resetReviewView();
+  resetDashboardView();
 });
 
 describe('deck loading', () => {
@@ -86,7 +87,10 @@ describe('review view', () => {
     renderReview(app, root);
 
     expect(root.querySelector('.prompt')).not.toBeNull();
-    expect(root.textContent).toContain(app.current!.card.prompt.slice(0, 40));
+    // Cloze prompts render with the {{deletion}} masked, so compare against the
+    // leading text before any deletion rather than the raw source.
+    const shown = app.current!.card.prompt.split('{{')[0]!.slice(0, 40);
+    expect(root.textContent).toContain(shown);
   });
 
   it('shows choices for an MCQ and hides rationales until answered', async () => {
@@ -274,16 +278,24 @@ describe('review view', () => {
 });
 
 describe('other views render against real data', () => {
-  it('dashboard renders both coverage axes', async () => {
+  it('dashboard reaches both coverage axes through the switcher', async () => {
     const app = await bootedApp();
     const root = container();
     renderDashboard(app, root);
 
-    expect(root.textContent).toContain('Your progress by exam topic');
-    expect(root.textContent).toContain('Your progress by subject area');
-    // Every domain and every core area has a row.
+    // Exam topics are the default view.
     for (const d of blueprint.domains) expect(root.textContent).toContain(d.name);
+
+    // The other axis is one click away, not a second table.
+    const subjectTab = [...root.querySelectorAll('.switch button')].find((b) =>
+      /subject/i.test(b.textContent ?? ''),
+    ) as HTMLButtonElement;
+    expect(subjectTab).toBeDefined();
+    subjectTab.click();
     for (const a of blueprint.cacrepAreas) expect(root.textContent).toContain(a.name);
+
+    // One table on screen at a time.
+    expect(root.querySelectorAll('table.grid').length).toBe(1);
   });
 
   it('dashboard shows an exam countdown when a date is set', async () => {
@@ -291,7 +303,58 @@ describe('other views render against real data', () => {
     const app = await bootedApp({ examDate: future });
     const root = container();
     renderDashboard(app, root);
-    expect(root.textContent).toMatch(/day[s]? until the exam/);
+    expect(root.textContent).toMatch(/day[s]? until your exam/);
+  });
+
+  it('the headline moves after a single answered card', async () => {
+    // The old headline was stability-based and read 0% however well a first
+    // session went, which is demoralising and uninformative.
+    const app = await bootedApp({ maxNewPerDay: 40 });
+    const root = container();
+
+    renderDashboard(app, root);
+    expect(root.querySelector('.headline .big')!.textContent).toBe('0');
+
+    await app.answerCurrent(3 as never, true, 500);
+    renderDashboard(app, root);
+    // One card in 512 is 0% when rounded, so the headline is a count.
+    expect(root.querySelector('.headline .big')!.textContent).toBe('1');
+  });
+
+  it('every bar decomposes the headline into the same three states', async () => {
+    const app = await bootedApp({ maxNewPerDay: 40 });
+    await app.answerCurrent(3 as never, true, 500);
+    const root = container();
+    renderDashboard(app, root);
+
+    // Headline bar plus one per row, all the same component.
+    const stacks = root.querySelectorAll('.stack');
+    expect(stacks.length).toBe(1 + blueprint.domains.length);
+    for (const stack of stacks) {
+      expect(stack.querySelector('.seg.solid')).not.toBeNull();
+      expect(stack.querySelector('.seg.learning')).not.toBeNull();
+    }
+    // The legend names the three states the segments represent.
+    const legend = root.querySelector('.legend')!.textContent!;
+    expect(legend).toMatch(/solid/);
+    expect(legend).toMatch(/still learning/);
+    expect(legend).toMatch(/not started/);
+  });
+
+  it('drops vocabulary that does not appear on the rating buttons', async () => {
+    const app = await bootedApp();
+    const root = container();
+    renderDashboard(app, root);
+    // "Sticking" and "feeling solid" meant nothing to the user — neither is a
+    // rating they can give, so neither should describe their progress.
+    expect(root.textContent).not.toMatch(/sticking|feeling solid/i);
+  });
+
+  it('hides the forecast entirely when nothing is scheduled', async () => {
+    const app = await bootedApp();
+    const root = container();
+    renderDashboard(app, root);
+    expect(root.textContent).not.toContain('What’s coming up');
   });
 
   it('browse renders and filters by topic', async () => {

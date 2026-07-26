@@ -410,26 +410,100 @@ button.wrong .rationale { color: #9a3412; }
 .checkpoint .actions { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; margin-top: 0.5rem; }
 .encourage { color: var(--text-dim); max-width: 34rem; margin: 0 auto; }
 
-/* ---- dashboard ---- */
-.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.8rem; margin-bottom: 1.2rem; }
-.stat {
+/* ---- dashboard ----
+   One headline with a stacked bar, then everything else visibly subordinate.
+   The three colours mean the same thing wherever they appear. */
+.headline {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 0.9rem 1rem;
+  border-radius: var(--radius-lg);
+  padding: 1.35rem 1.4rem 1.2rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 0.9rem;
+}
+.headline .big {
+  font-size: 3rem;
+  font-weight: 750;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--accent-strong);
+}
+.headline .label { color: var(--text-dim); margin: 0.15rem 0 0.9rem; font-size: 0.98rem; }
+
+.stack {
+  display: flex;
+  height: 14px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--bg-tint);
+  border: 1px solid var(--border-soft);
+}
+.stack .seg { height: 100%; transition: width 0.3s ease; }
+.stack .seg.solid { background: linear-gradient(90deg, var(--accent) 0%, #2dd4bf 100%); }
+.stack .seg.learning { background: var(--joy); }
+
+.legend { display: flex; gap: 1.1rem; flex-wrap: wrap; margin-top: 0.7rem; font-size: 0.84rem; color: var(--text-dim); }
+.legend-item { display: inline-flex; align-items: center; gap: 0.35rem; }
+.legend-item strong { color: var(--text); font-weight: 650; }
+.swatch { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.swatch.solid { background: var(--accent); }
+.swatch.learning { background: var(--joy); }
+.swatch.rest { background: var(--bg-tint); border: 1px solid var(--border); }
+
+.substats { display: flex; gap: 1.75rem; flex-wrap: wrap; margin: 0 0 1rem 0.15rem; }
+.substat .n { font-size: 1.15rem; font-weight: 650; line-height: 1.2; }
+.substat .l { font-size: 0.78rem; color: var(--text-dim); }
+
+/* Tabbed switcher replacing the two near-identical tables. */
+.switch {
+  display: inline-flex;
+  gap: 0.2rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.2rem;
+  margin-bottom: 0.75rem;
+}
+.switch button {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.85rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+}
+.switch button[aria-pressed="true"] {
+  background: var(--surface);
+  color: var(--accent-strong);
+  font-weight: 650;
   box-shadow: var(--shadow);
 }
-.stat .n { font-size: 1.7rem; font-weight: 700; line-height: 1.1; color: var(--accent-strong); }
-.stat .l { font-size: 0.78rem; color: var(--text-dim); }
 
-table.grid { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
-table.grid th, table.grid td { text-align: left; padding: 0.5rem; border-bottom: 1px solid var(--border-soft); }
+table.grid { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+table.grid th, table.grid td { text-align: left; padding: 0.6rem 0.5rem; border-bottom: 1px solid var(--border-soft); vertical-align: middle; }
 table.grid th { color: var(--text-dim); font-weight: 650; font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.04em; }
-table.grid td.num, table.grid th.num { text-align: right; font-family: var(--mono); }
+table.grid td.num, table.grid th.num { text-align: right; font-variant-numeric: tabular-nums; }
+table.grid td.barcell { width: 38%; min-width: 120px; }
+.rownote { font-size: 0.75rem; color: var(--text-dim); font-weight: 400; }
 
-.meter { height: 10px; background: var(--bg-tint); border-radius: 999px; overflow: hidden; position: relative; min-width: 90px; }
-.meter > .fill { height: 100%; background: linear-gradient(90deg, var(--accent) 0%, #2dd4bf 100%); border-radius: 999px; }
-.meter > .target { position: absolute; top: -2px; bottom: -2px; width: 2px; background: var(--joy); }
+.forecast { display: flex; align-items: flex-end; gap: 5px; height: 96px; }
+.forecast .fbar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+  height: 100%;
+}
+.forecast .fbar .fill {
+  width: 100%;
+  background: linear-gradient(180deg, #2dd4bf 0%, var(--accent) 100%);
+  border-radius: 4px 4px 0 0;
+}
+.forecast .fbar span { font-size: 0.65rem; color: var(--text-dim); }
 
 .tablewrap { overflow-x: auto; }
 
@@ -525,4 +599,9 @@ table.grid td.num, table.grid th.num { text-align: right; font-family: var(--mon
   .grading .ivl { font-size: 0.65rem; }
   .prompt { font-size: 1.02rem; }
   .card { padding: 0.9rem 1rem; }
+  .headline { padding: 1.1rem; }
+  .headline .big { font-size: 2.4rem; }
+  .substats { gap: 1.1rem; }
+  .switch { width: 100%; justify-content: center; }
+  table.grid td.barcell { width: 30%; min-width: 80px; }
 }

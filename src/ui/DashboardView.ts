@@ -1,21 +1,85 @@
 /**
- * Readiness dashboard.
+ * "My Progress".
  *
- * Reports coverage on both axes that matter. The NBCC domain table answers
- * "am I studying in proportion to the exam?"; the CACREP table answers "am I
- * neglecting a whole subject?" — which the domain table alone cannot show,
- * because the six domains are work behaviours and subjects like career theory
- * and research methods are spread across them.
+ * Three rules this screen is built around, learned from the version before it:
+ *
+ * 1. **One headline, and it must move on day one.** The old headline was
+ *    "feeling solid", defined as FSRS stability past a 21-day horizon — which
+ *    nothing can reach in early sessions, so it read 0% after a genuinely good
+ *    run of 14 cards. A number that cannot move is worse than no number,
+ *    especially for someone anxious about this exam.
+ * 2. **Name states in the words the rating buttons already use.** The user rates
+ *    Again / Hard / Good / Easy; "sticking" appeared nowhere in that vocabulary
+ *    and so meant nothing. States are Solid / Learning / Not started, and
+ *    "Solid" has a behavioural definition — the card graduated out of learning
+ *    because it was rated well enough, which starts happening in session one.
+ * 3. **Bars decompose the headline.** Every bar is the same three-colour stack,
+ *    so a row reads as "this is what the headline is made of" rather than
+ *    duplicating the share-of-exam column, which is what the old bars did.
+ *
+ * Both coverage axes still matter — the six NBCC domains are work behaviours,
+ * and subjects like career theory are spread across them — but they are now one
+ * table behind a switcher rather than two near-identical tables.
  */
 import type { AppState } from '../app';
 import { blueprint } from '../data/loader';
 import { el, clear, pct } from './dom';
 import { State } from '../scheduler/fsrs';
-import { daysUntilExam, readinessPct, requiredNewPerDay } from '../scheduler/examDate';
-import type { CacrepArea } from '../data/schema';
+import { daysUntilExam, requiredNewPerDay } from '../scheduler/examDate';
+import type { CacrepArea, Card } from '../data/schema';
+
+/** Which breakdown the table is showing. Module-level so it survives re-render. */
+let axis: 'topic' | 'subject' = 'topic';
+
+/** Test seam — the tab choice is deliberately sticky for users, not for tests. */
+export function resetDashboardView(): void {
+  axis = 'topic';
+}
+
+export interface Breakdown {
+  solid: number;
+  learning: number;
+  notStarted: number;
+  total: number;
+}
+
+/**
+ * Split cards into the three states used everywhere on this page. "Solid" is the
+ * FSRS Review state: the card graduated out of learning. That reflects something
+ * the user actually did, and it is reachable immediately.
+ */
+export function breakdown(app: AppState, cards: Card[]): Breakdown {
+  let solid = 0;
+  let learning = 0;
+  let notStarted = 0;
+
+  for (const card of cards) {
+    const p = app.progressFor(card.id);
+    if (!p || p.suspended || p.state === State.New) notStarted++;
+    else if (p.state === State.Review) solid++;
+    else learning++;
+  }
+  return { solid, learning, notStarted, total: cards.length };
+}
+
+/** The stacked bar that every row and the headline share. */
+function stackedBar(b: Breakdown): HTMLElement {
+  const share = (n: number) => (b.total > 0 ? (n / b.total) * 100 : 0);
+  return el(
+    'div',
+    {
+      class: 'stack',
+      title: `${b.solid} solid · ${b.learning} still learning · ${b.notStarted} not started`,
+    },
+    el('div', { class: 'seg solid', style: `width:${share(b.solid)}%` }),
+    el('div', { class: 'seg learning', style: `width:${share(b.learning)}%` }),
+  );
+}
 
 export function renderDashboard(app: AppState, root: HTMLElement): void {
   clear(root);
+  const rerender = () => renderDashboard(app, root);
+
   root.appendChild(el('h1', {}, 'How you’re doing'));
   root.appendChild(
     el(
@@ -25,65 +89,125 @@ export function renderDashboard(app: AppState, root: HTMLElement): void {
     ),
   );
 
-  const counts = app.countsByState();
-  const total = app.cards.length;
-  const settings = app.settings;
-  const days = daysUntilExam(settings.examDate);
-
-  // Horizon for "strong": stability must carry the card to the exam, or 21
-  // days out when no exam date is set.
-  const horizon = days !== null && days > 0 ? days : 21;
-  const strong = app.strongCount(horizon);
-  const readiness = readinessPct({ totalCards: total, strongCards: strong, seenCards: total - counts.new });
-
+  const all = breakdown(app, app.cards);
+  const started = all.solid + all.learning;
+  const startedPct = all.total > 0 ? Math.round((started / all.total) * 100) : 0;
+  const days = daysUntilExam(app.settings.examDate);
   const recent = app.recentAccuracy(100);
-  const lifetime = app.accuracy();
+  const daily = app.repo.getDaily();
 
-  // ---- headline stats ----
-  const stats = el('div', { class: 'stats' });
-  stats.appendChild(stat(`${readiness}%`, 'Feeling solid'));
-  stats.appendChild(stat(String(counts.new), 'Not started yet'));
-  stats.appendChild(stat(String(counts.learning), 'Still learning'));
-  stats.appendChild(stat(String(counts.review), 'Sticking well'));
-  stats.appendChild(
-    stat(recent.total > 0 ? pct(recent.correct, recent.total) : '—', `Recent answers right`),
+  // ---- headline ----------------------------------------------------------
+  // The big number is a *count*, not a percentage: with 512 cards a percentage
+  // still rounds to 0% after the first two answers, which is the very problem
+  // this rewrite exists to fix. A count moves on card one and is honest.
+  const headline = el('div', { class: 'headline' });
+  headline.appendChild(el('div', { class: 'big' }, String(started)));
+  headline.appendChild(
+    el(
+      'div',
+      { class: 'label' },
+      started === 1
+        ? `card worked through — that’s ${startedPct}% of the deck`
+        : `cards worked through — that’s ${startedPct}% of the deck`,
+    ),
   );
-  stats.appendChild(
-    stat(lifetime.total > 0 ? pct(lifetime.correct, lifetime.total) : '—', 'All-time answers right'),
+  headline.appendChild(stackedBar(all));
+  headline.appendChild(
+    el(
+      'div',
+      { class: 'legend' },
+      legendItem('solid', all.solid, 'solid'),
+      legendItem('learning', all.learning, 'still learning'),
+      legendItem('rest', all.notStarted, 'not started yet'),
+    ),
   );
-  root.appendChild(stats);
+  root.appendChild(headline);
 
-  // ---- exam countdown ----
+  // ---- secondary stats, deliberately subordinate --------------------------
+  const stats = el('div', { class: 'substats' });
+  stats.appendChild(
+    substat(
+      recent.total > 0 ? pct(recent.correct, recent.total) : '—',
+      recent.total > 0 ? `right, last ${recent.total} answer${recent.total === 1 ? '' : 's'}` : 'no answers yet',
+    ),
+  );
+  stats.appendChild(substat(String(daily.new + daily.review), 'done today'));
   if (days !== null) {
-    const needed = requiredNewPerDay(counts.new, settings.examDate);
-    root.appendChild(
-      el(
-        'div',
-        { class: 'card' },
-        el('strong', {}, days > 0 ? `${days} day${days === 1 ? '' : 's'} until the exam` : days === 0 ? 'Exam is today' : `Exam was ${-days} day(s) ago`),
-        needed !== null && needed !== Infinity && needed > 0
-          ? el(
-              'p',
-              { class: 'small muted', style: 'margin:.4rem 0 0' },
-              `To get through everything in time, aim for about ${needed} new card${needed === 1 ? '' : 's'} a day ` +
-                `(you're set to ${settings.maxNewPerDay}).` +
-                (needed > settings.maxNewPerDay ? ' That’s more than your current setting allows.' : ''),
-            )
-          : needed === Infinity
-            ? el('p', { class: 'small muted', style: 'margin:.4rem 0 0' }, `${counts.new} cards still to start.`)
-            : el('p', { class: 'small muted', style: 'margin:.4rem 0 0' }, 'You’ve started every card at least once. Nice.'),
+    stats.appendChild(
+      substat(
+        days > 0 ? String(days) : days === 0 ? 'today' : 'past',
+        days > 0 ? `day${days === 1 ? '' : 's'} until your exam` : 'your exam date',
       ),
     );
   }
+  root.appendChild(stats);
 
-  // ---- domain coverage ----
-  root.appendChild(el('h2', {}, 'Your progress by exam topic'));
+  // ---- pacing -------------------------------------------------------------
+  if (days !== null && days > 0) {
+    const needed = requiredNewPerDay(all.notStarted, app.settings.examDate);
+    if (needed !== null && needed !== Infinity && needed > 0) {
+      root.appendChild(
+        el(
+          'p',
+          { class: 'small muted' },
+          `To get through everything in time, aim for about ${needed} new card${needed === 1 ? '' : 's'} a day ` +
+            `(you’re set to ${app.settings.maxNewPerDay}).` +
+            (needed > app.settings.maxNewPerDay ? ' That’s more than your current setting allows.' : ''),
+        ),
+      );
+    } else if (needed === 0) {
+      root.appendChild(
+        el('p', { class: 'small muted' }, 'You’ve started every card at least once. Nice.'),
+      );
+    }
+  }
+
+  // ---- one table, two views ----------------------------------------------
+  root.appendChild(el('h2', {}, 'Where your time has gone'));
+
+  const tabs = el('div', { class: 'switch' });
+  for (const [id, label] of [
+    ['topic', 'By exam topic'],
+    ['subject', 'By subject area'],
+  ] as Array<['topic' | 'subject', string]>) {
+    tabs.appendChild(
+      el(
+        'button',
+        {
+          'aria-pressed': axis === id ? 'true' : 'false',
+          onclick: () => {
+            axis = id;
+            rerender();
+          },
+        },
+        label,
+      ),
+    );
+  }
+  root.appendChild(tabs);
   root.appendChild(
-    el('p', { class: 'small muted', style: 'margin-top:-.3rem' },
-      'The bar shows how much of each topic is sticking. The small marker is how heavily that topic is tested.'),
+    el(
+      'p',
+      { class: 'small muted', style: 'margin-top:-.35rem' },
+      axis === 'topic'
+        ? 'The same three colours as above, split by the exam’s own topics.'
+        : 'The same cards sliced another way — a topic can look fine while a subject inside it is thin.',
+    ),
   );
 
-  const domainTable = el(
+  const rows: Array<{ name: string; note?: string; cards: Card[] }> =
+    axis === 'topic'
+      ? blueprint.domains.map((d) => ({
+          name: d.name,
+          note: `${d.weight}% of the exam`,
+          cards: app.cards.filter((c) => c.domain === d.id),
+        }))
+      : blueprint.cacrepAreas.map((a) => ({
+          name: a.name,
+          cards: app.cards.filter((c) => c.cacrep.includes(a.id as CacrepArea)),
+        }));
+
+  const table = el(
     'table',
     { class: 'grid' },
     el(
@@ -92,115 +216,76 @@ export function renderDashboard(app: AppState, root: HTMLElement): void {
       el(
         'tr',
         {},
-        el('th', {}, 'Topic'),
-        el('th', { class: 'num' }, 'Cards'),
-        el('th', { class: 'num' }, 'Sticking'),
-        el('th', { class: 'num' }, 'Share of exam'),
-        el('th', {}, 'Progress'),
+        el('th', {}, axis === 'topic' ? 'Topic' : 'Subject'),
+        el('th', { class: 'num' }, 'Worked through'),
+        el('th', {}, 'Breakdown'),
       ),
     ),
   );
 
   const tbody = el('tbody');
-  for (const domain of blueprint.domains) {
-    const domainCards = app.cards.filter((c) => c.domain === domain.id);
-    const mastered = domainCards.filter((c) => {
-      const p = app.progressFor(c.id);
-      return p && !p.suspended && p.state === State.Review && p.stability >= horizon;
-    }).length;
-    const share = domainCards.length / Math.max(total, 1);
-
+  for (const row of rows) {
+    const b = breakdown(app, row.cards);
+    const done = b.solid + b.learning;
     tbody.appendChild(
       el(
         'tr',
         {},
-        el('td', {}, domain.name),
-        el('td', { class: 'num' }, String(domainCards.length)),
-        el('td', { class: 'num' }, `${mastered}/${domainCards.length}`),
-        el('td', { class: 'num' }, `${domain.weight}%`),
         el(
           'td',
           {},
-          el(
-            'div',
-            { class: 'meter', title: `${Math.round(share * 100)}% of deck vs ${domain.weight}% of exam` },
-            el('div', {
-              class: 'fill',
-              style: `width:${domainCards.length ? (mastered / domainCards.length) * 100 : 0}%`,
-            }),
-            el('div', { class: 'target', style: `left:${domain.weight * 2}%` }),
-          ),
+          el('div', {}, row.name),
+          row.note ? el('div', { class: 'rownote' }, row.note) : null,
         ),
-      ),
-    );
-  }
-  domainTable.appendChild(tbody);
-  root.appendChild(el('div', { class: 'tablewrap' }, domainTable));
-
-  // ---- CACREP coverage ----
-  root.appendChild(el('h2', {}, 'Your progress by subject area'));
-  root.appendChild(
-    el('p', { class: 'small muted', style: 'margin-top:-.3rem' },
-      'A second way of slicing the same cards — a topic can look fine while a subject inside it is thin.'),
-  );
-
-  const cacrepTable = el(
-    'table',
-    { class: 'grid' },
-    el('thead', {}, el('tr', {}, el('th', {}, 'Subject'), el('th', { class: 'num' }, 'Cards'), el('th', { class: 'num' }, 'Sticking'), el('th', {}, ''))),
-  );
-  const cbody = el('tbody');
-  for (const area of blueprint.cacrepAreas) {
-    const areaCards = app.cards.filter((c) => c.cacrep.includes(area.id as CacrepArea));
-    const mastered = areaCards.filter((c) => {
-      const p = app.progressFor(c.id);
-      return p && !p.suspended && p.state === State.Review && p.stability >= horizon;
-    }).length;
-
-    cbody.appendChild(
-      el(
-        'tr',
-        {},
-        el('td', {}, area.name),
-        el('td', { class: 'num' }, String(areaCards.length)),
-        el('td', { class: 'num' }, areaCards.length ? `${mastered}/${areaCards.length}` : '—'),
         el(
           'td',
-          {},
-          areaCards.length === 0
-            ? el('span', { class: 'small', style: 'color:var(--warn)' }, 'none yet')
-            : el(
-                'div',
-                { class: 'meter' },
-                el('div', { class: 'fill', style: `width:${(mastered / areaCards.length) * 100}%` }),
-              ),
+          { class: 'num' },
+          b.total > 0 ? `${Math.round((done / b.total) * 100)}%` : '—',
+          el('div', { class: 'rownote' }, `${done} of ${b.total}`),
         ),
+        el('td', { class: 'barcell' }, stackedBar(b)),
       ),
     );
   }
-  cacrepTable.appendChild(cbody);
-  root.appendChild(el('div', { class: 'tablewrap' }, cacrepTable));
+  table.appendChild(tbody);
+  root.appendChild(el('div', { class: 'tablewrap' }, table));
 
-  // ---- forecast ----
-  root.appendChild(el('h2', {}, 'What’s coming up over the next two weeks'));
+  // ---- forecast, only when it has something to say ------------------------
   const forecast = app.dueForecast(14);
-  const max = Math.max(1, ...forecast);
-  const bars = el('div', { class: 'row', style: 'align-items:flex-end;gap:4px;height:90px' });
-  forecast.forEach((n, i) => {
-    bars.appendChild(
-      el(
-        'div',
-        { style: 'flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:3px', title: `${n} due` },
-        el('div', {
-          style: `width:100%;background:var(--accent);border-radius:3px 3px 0 0;height:${(n / max) * 62}px;min-height:${n > 0 ? 2 : 0}px`,
-        }),
-        el('span', { class: 'small muted', style: 'font-size:.65rem' }, i === 0 ? 'now' : String(i)),
-      ),
-    );
-  });
-  root.appendChild(el('div', { class: 'card' }, bars));
+  if (forecast.some((n) => n > 0)) {
+    root.appendChild(el('h2', {}, 'What’s coming up'));
+    // Trim the empty tail rather than showing thirteen blank slots.
+    const lastDay = forecast.reduce((last, n, i) => (n > 0 ? i : last), 0);
+    const shown = forecast.slice(0, Math.max(7, lastDay + 1));
+    const max = Math.max(1, ...shown);
+    const bars = el('div', { class: 'forecast' });
+    shown.forEach((n, i) => {
+      bars.appendChild(
+        el(
+          'div',
+          { class: 'fbar', title: `${n} card${n === 1 ? '' : 's'} due` },
+          el('div', {
+            class: 'fill',
+            style: `height:${(n / max) * 100}%;min-height:${n > 0 ? 3 : 0}px`,
+          }),
+          el('span', {}, i === 0 ? 'today' : i === 1 ? 'tmrw' : `+${i}`),
+        ),
+      );
+    });
+    root.appendChild(el('div', { class: 'card' }, bars));
+  }
 }
 
-function stat(n: string, label: string): HTMLElement {
-  return el('div', { class: 'stat' }, el('div', { class: 'n' }, n), el('div', { class: 'l' }, label));
+function legendItem(cls: string, n: number, label: string): HTMLElement {
+  return el(
+    'span',
+    { class: 'legend-item' },
+    el('i', { class: `swatch ${cls}` }),
+    el('strong', {}, String(n)),
+    ` ${label}`,
+  );
+}
+
+function substat(value: string, label: string): HTMLElement {
+  return el('div', { class: 'substat' }, el('div', { class: 'n' }, value), el('div', { class: 'l' }, label));
 }

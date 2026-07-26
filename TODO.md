@@ -10,6 +10,48 @@ _(nothing outstanding)_
 
 Move from the not-yet-done category after completing.
 
+1. **Rework the "My Progress" page.** It is the weakest screen in the app and currently
+   works against the design direction — for someone anxious about this exam it leads with
+   "0% feeling solid" and "498 not started yet".
+
+   Raised directly:
+
+   - The six stat cards all carry the same visual weight but mix percentages and counts
+     (0% / 498 / 14 / 0 / 29% / 29%). No hierarchy, and no reason why "Feeling solid" is a
+     percentage while "Still learning" and "Sticking well" are counts.
+   - "Sticking" means nothing to the user: it is not one of the choices on the rating UI
+     (Again / Hard / Good / Easy), so the vocabulary doesn't connect to anything they do.
+   - The per-topic progress bars look like a duplicate of the "Share of exam" column. They
+     should instead break down whatever percentage the headline stat card reports.
+   - Two near-identical tables (by exam topic, by subject area) — probably one table behind
+     a tabbed switcher.
+
+   Also found while looking at it:
+
+   - "Feeling solid" is computed as stability ≥ a 21-day horizon, which nothing can reach
+     in early sessions. So it reads 0% after a genuinely good run of 14 cards. A headline
+     number that cannot move on day one is worse than no headline number.
+   - "Not started yet: 498" is the largest figure on the page and the most discouraging.
+   - "Recent answers right" and "All-time answers right" are the same number until well
+     into a deck, so one of them is noise.
+   - The 14-day forecast is one bar and thirteen empty slots.
+
+   Direction: one clear headline that moves from the first card, secondary stats visibly
+   subordinate to it, progress states named in the same vocabulary as the rating buttons,
+   per-topic bars that decompose the headline (stacked: solid / learning / not started),
+   and the two tables merged behind tabs.
+
+   **Done.** Headline is now a single count — "14 cards worked through — that's 3% of the
+   deck" — because with 512 cards a percentage still rounds to 0% after the first two
+   answers, which was the original complaint. Secondary stats are visibly smaller. The three
+   states are Solid / Still learning / Not started, where "Solid" means the card graduated
+   out of learning by being rated well enough, so it describes something the user did.
+   "Sticking" and "feeling solid" are gone, with a test asserting neither returns. Every bar
+   — headline and per-row — is the same stacked breakdown of those three states, so a row
+   decomposes the headline instead of echoing the share-of-exam column. The two tables are
+   one table behind a By exam topic / By subject area switcher. The duplicate accuracy stat
+   is gone and the forecast is hidden until it has something to show.
+
 1. The hard/good/easy/suspend UX is usually "below the fold" and requires scrolling up and down after answering each question. References can be hidden behind some expansion UX. As for the answer details and difficulty rating, let's see if we can ensure the difficulty rating UX is always above the fold. It's OK for the answer details to require some scrolling to read all of it.
 
    The rating controls now live in a sticky action bar (`.actionbar`) that is a sibling of
