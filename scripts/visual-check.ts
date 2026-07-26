@@ -106,9 +106,10 @@ async function main(): Promise<void> {
       await page.setViewportSize({ width: w, height: h });
       await page.waitForTimeout(180);
       const lowest = await page.locator('.path').last().evaluate((el) => el.getBoundingClientRect().bottom);
+      const withNudge = (await page.locator('.datenudge').count()) > 0;
       check(
         lowest <= h,
-        `all four home cards are above the fold (${label} ${w}x${h})`,
+        `all four home cards are above the fold (${label} ${w}x${h}${withNudge ? ', exam-date prompt showing' : ''})`,
         `last card ends at ${Math.round(lowest)}px`,
       );
     }

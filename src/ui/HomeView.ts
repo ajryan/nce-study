@@ -53,6 +53,32 @@ export function renderHome(app: AppState, root: HTMLElement, go: (view: ViewName
   }
   root.appendChild(hero);
 
+  // ---- exam date prompt ----
+  // Without a date, interval capping, the retention ramp and the pacing advice
+  // all quietly do nothing, so this sits above the study card rather than in a
+  // footer tip where it read as optional.
+  if (days === null) {
+    root.appendChild(
+      el(
+        'div',
+        { class: 'datenudge' },
+        el('span', { class: 'icon' }, '📅'),
+        el(
+          'div',
+          { class: 'body' },
+          el('strong', {}, 'When is your exam?'),
+          el(
+            'span',
+            {},
+            'Tell us and we’ll pace your reviews to land before it, and make sure every card ' +
+              'comes back around at least once beforehand.',
+          ),
+        ),
+        el('button', { class: 'btn primary', onclick: () => go('settings') }, 'Set exam date'),
+      ),
+    );
+  }
+
   // ---- the paths ----
   const paths = el('div', { class: 'paths' });
 
@@ -119,15 +145,9 @@ export function renderHome(app: AppState, root: HTMLElement, go: (view: ViewName
         `Your exam is in ${days} day${days === 1 ? '' : 's'}. Reviews are scheduled to land before then. `,
       ),
     );
-  } else if (days === null) {
-    footer.appendChild(document.createTextNode('Tip: adding your exam date helps pace your reviews. '));
   }
   footer.appendChild(
-    el(
-      'button',
-      { class: 'btn ghost small', onclick: () => go('settings') },
-      days === null ? 'Add exam date' : 'Settings',
-    ),
+    el('button', { class: 'btn ghost small', onclick: () => go('settings') }, 'Settings'),
   );
   root.appendChild(footer);
 }

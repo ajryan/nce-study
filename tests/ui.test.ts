@@ -601,6 +601,32 @@ describe('guided flow', () => {
     expect(new Set(visited)).toEqual(new Set(['study', 'dashboard', 'exam', 'browse']));
   });
 
+  it('prompts for the exam date when it is not set, above the study card', async () => {
+    const app = await bootedApp();
+    const root = container();
+    const visited: string[] = [];
+    renderHome(app, root, (v) => visited.push(v));
+
+    const nudge = root.querySelector('.datenudge');
+    expect(nudge).not.toBeNull();
+    expect(nudge!.textContent).toContain('When is your exam?');
+
+    // Above the study card, not tucked in a footer.
+    const featured = root.querySelector('.path.featured')!;
+    expect(nudge!.compareDocumentPosition(featured) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+
+    (nudge!.querySelector('button') as HTMLButtonElement).click();
+    expect(visited).toEqual(['settings']);
+  });
+
+  it('drops the exam-date prompt once a date is set', async () => {
+    const future = new Date(Date.now() + 60 * 86_400_000).toISOString().slice(0, 10);
+    const app = await bootedApp({ examDate: future });
+    const root = container();
+    renderHome(app, root, () => {});
+    expect(root.querySelector('.datenudge')).toBeNull();
+  });
+
   it('navigates only from the button, not from the card body', async () => {
     const app = await bootedApp();
     const root = container();

@@ -203,6 +203,22 @@ button.btn.ghost { box-shadow: none; background: transparent; }
   margin-top: 0.4rem;
 }
 
+.datenudge {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: var(--joy-soft);
+  border: 1px solid #fcd34d;
+  border-radius: var(--radius-lg);
+  padding: 0.8rem 1rem;
+  margin-top: 0.9rem;
+}
+.datenudge .icon { font-size: 1.4rem; line-height: 1; flex: none; }
+.datenudge .body { flex: 1; display: flex; flex-direction: column; gap: 0.1rem; }
+.datenudge strong { font-size: 0.95rem; color: #92400e; }
+.datenudge span { font-size: 0.83rem; color: #a16207; line-height: 1.4; }
+.datenudge .btn { flex: none; }
+
 .paths {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
@@ -664,6 +680,15 @@ table.grid td.barcell { width: 38%; min-width: 120px; }
   .hero { padding: 0.5rem 0 0.2rem; }
   .hero .encourage { font-size: 0.85rem; }
   .paths { grid-template-columns: 1fr; gap: 0.55rem; margin-top: 0.75rem; }
+  /* One tight row on a phone — wrapping the button to full width pushed the
+     fourth card past the fold. */
+  .datenudge { flex-wrap: nowrap; padding: 0.5rem 0.7rem; gap: 0.55rem; margin-top: 0.6rem; }
+  .datenudge span { display: none; }
+  .datenudge .icon { font-size: 1.15rem; }
+  .datenudge strong { font-size: 0.87rem; }
+  .datenudge .btn { width: auto; padding: 0.35rem 0.7rem; font-size: 0.82rem; white-space: nowrap; }
+  .hero h1 { font-size: 1.3rem; }
+  .hero .greeting { font-size: 0.85rem; }
   .path { padding: 0.75rem 0.85rem; gap: 0.5rem; }
   .path.featured { flex-direction: column; align-items: stretch; }
   .path.featured .cta { width: 100%; }

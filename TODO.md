@@ -4,11 +4,16 @@
 
 In priority order:
 
-1. **Prompt for the exam date on the home screen when it isn't set.** There is a tip in the
-   home footer today, but it sits below everything and reads as optional. The exam date
-   drives interval capping, the retention ramp and the pacing advice — with it unset, all
-   three quietly do nothing — so it deserves a prompt above the "Study your cards" card,
-   with a button through to Settings.
+1. **Let the user type their answer on short-answer cards.** On recall and cloze cards
+   there is nothing to do before revealing, so it is easy to think "yes, I knew that" without
+   ever having produced the answer — which is the weakest form of practice. Give them a box
+   to write in, with the prompt:
+
+   > This is just a note. It will be shown next to the real answer the next time you see
+   > this question.
+
+   Store it per card and show it beside the real answer. Never scored or graded — it is the
+   user's own note, and the honest self-check is the whole value.
 
 2. **Tell the user when a new version is available, and reassure them about their progress.**
    The site now deploys on every push, and the service worker serves cached hashed assets,
@@ -32,6 +37,23 @@ In priority order:
 ## Done
 
 Move from the not-yet-done category after completing.
+
+1. **Prompt for the exam date on the home screen when it isn't set.** There is a tip in the
+   home footer today, but it sits below everything and reads as optional. The exam date
+   drives interval capping, the retention ramp and the pacing advice — with it unset, all
+   three quietly do nothing — so it deserves a prompt above the "Study your cards" card,
+   with a button through to Settings.
+
+   **Done.** An amber prompt now sits directly above the "Study your cards" card whenever no
+   date is set — "When is your exam?" with a "Set exam date" button through to Settings — and
+   disappears once one exists. The old footer tip is gone, since it said the same thing
+   somewhere nobody looks.
+
+   Adding it pushed the fourth card past the fold on a phone (808px against a 780px
+   viewport), which the visual check caught rather than a reviewer. The prompt is now one
+   tight row on small screens with the description hidden and the button inline instead of
+   full-width; the hero also lost a little. Back to 750px, and the fold assertion now names
+   whether the prompt was showing so the harder case is the one being measured.
 
 1. **Spell out the timing labels under the difficulty buttons.** "1m" is ambiguous — minute
    or month — and it appears under every rating on every card. Months currently render as
