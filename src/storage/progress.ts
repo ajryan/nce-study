@@ -12,9 +12,12 @@ const KEY_PROGRESS = 'progress';
 const KEY_SETTINGS = 'settings';
 const KEY_DAILY = 'daily';
 const KEY_LOG = 'reviewLog';
+const KEY_EXAMS = 'examResults';
 
 /** Keeps the log useful for stats without letting it grow without bound. */
 const MAX_LOG_ENTRIES = 20_000;
+/** Practice tests are rare and each record is small; this is plenty of history. */
+const MAX_EXAM_RESULTS = 50;
 
 export interface ReviewLogEntry {
   cardId: string;
@@ -24,6 +27,24 @@ export interface ReviewLogEntry {
   domain: string;
   /** Milliseconds spent on the card. */
   elapsedMs: number;
+}
+
+/**
+ * A completed practice test. Stored rather than shown once and discarded,
+ * because the trend across attempts is the part that actually tells you whether
+ * you are getting exam-ready, and the per-topic split is measured under exam
+ * conditions rather than inferred from spaced-repetition state.
+ */
+export interface ExamResult {
+  id: string;
+  at: string;
+  /** Questions asked. May be less than a full-length paper. */
+  total: number;
+  correct: number;
+  unanswered: number;
+  durationMs: number;
+  /** Per NBCC domain id: how many right out of how many asked. */
+  byDomain: Record<string, { correct: number; total: number }>;
 }
 
 export interface DailyCounts {
@@ -41,6 +62,7 @@ export class ProgressRepository {
   private settings: SchedulerSettings = { ...DEFAULT_SETTINGS };
   private daily: DailyCounts = { date: todayKey(), new: 0, review: 0 };
   private log: ReviewLogEntry[] = [];
+  private exams: ExamResult[] = [];
   private loaded = false;
   tier: StorageTier = 'memory';
 
@@ -48,16 +70,18 @@ export class ProgressRepository {
     const store = await getStore();
     this.tier = store.tier;
 
-    const [progress, settings, daily, log] = await Promise.all([
+    const [progress, settings, daily, log, exams] = await Promise.all([
       store.get<Record<string, CardProgress>>(KEY_PROGRESS),
       store.get<Partial<SchedulerSettings>>(KEY_SETTINGS),
       store.get<DailyCounts>(KEY_DAILY),
       store.get<ReviewLogEntry[]>(KEY_LOG),
+      store.get<ExamResult[]>(KEY_EXAMS),
     ]);
 
     this.progress = new Map(Object.entries(progress ?? {}));
     this.settings = { ...DEFAULT_SETTINGS, ...(settings ?? {}) };
     this.log = log ?? [];
+    this.exams = exams ?? [];
 
     const today = todayKey();
     this.daily = daily?.date === today ? daily : { date: today, new: 0, review: 0 };
@@ -98,6 +122,20 @@ export class ProgressRepository {
     return this.log;
   }
 
+  /** Oldest first, so a chart reads left to right without re-sorting. */
+  getExamResults(): ExamResult[] {
+    return this.exams;
+  }
+
+  async recordExamResult(result: ExamResult): Promise<void> {
+    this.exams.push(result);
+    if (this.exams.length > MAX_EXAM_RESULTS) {
+      this.exams = this.exams.slice(-MAX_EXAM_RESULTS);
+    }
+    const store = await getStore();
+    await store.set(KEY_EXAMS, this.exams);
+  }
+
   async updateSettings(patch: Partial<SchedulerSettings>): Promise<void> {
     this.settings = { ...this.settings, ...patch };
     const store = await getStore();
@@ -136,6 +174,7 @@ export class ProgressRepository {
       store.set(KEY_PROGRESS, Object.fromEntries(this.progress)),
       store.set(KEY_DAILY, this.daily),
       store.set(KEY_LOG, this.log),
+      store.set(KEY_EXAMS, this.exams),
     ]);
   }
 
@@ -144,6 +183,7 @@ export class ProgressRepository {
     await store.clear();
     this.progress.clear();
     this.log = [];
+    this.exams = [];
     this.daily = { date: todayKey(), new: 0, review: 0 };
     this.settings = { ...DEFAULT_SETTINGS };
   }
@@ -154,11 +194,13 @@ export class ProgressRepository {
     settings: SchedulerSettings;
     daily: DailyCounts;
     log: ReviewLogEntry[];
+    exams?: ExamResult[];
   }): Promise<void> {
     this.progress = new Map(Object.entries(state.progress));
     this.settings = { ...DEFAULT_SETTINGS, ...state.settings };
     this.daily = state.daily;
     this.log = state.log;
+    this.exams = state.exams ?? [];
     const store = await getStore();
     await store.set(KEY_SETTINGS, this.settings);
     await this.persist();
@@ -170,6 +212,7 @@ export class ProgressRepository {
       settings: this.settings,
       daily: this.daily,
       log: this.log,
+      exams: this.exams,
     };
   }
 

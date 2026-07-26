@@ -76,7 +76,7 @@ function render(): void {
   switch (app.view) {
     case 'home': renderHome(app, main, go); break;
     case 'study': renderReview(app, main, go); break;
-    case 'dashboard': renderDashboard(app, main); break;
+    case 'dashboard': renderDashboard(app, main, go); break;
     case 'browse': renderBrowse(app, main); break;
     case 'exam': renderExam(app, main); break;
     case 'settings': renderSettings(app, main); break;

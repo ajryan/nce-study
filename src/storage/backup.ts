@@ -6,7 +6,7 @@
  * format is plain versioned JSON with no cleverness.
  */
 import type { CardProgress, SchedulerSettings } from '../scheduler/fsrs';
-import type { DailyCounts, ReviewLogEntry, ProgressRepository } from './progress';
+import type { DailyCounts, ExamResult, ReviewLogEntry, ProgressRepository } from './progress';
 
 export const BACKUP_VERSION = 1;
 
@@ -18,6 +18,7 @@ export interface BackupFile {
   settings: SchedulerSettings;
   daily: DailyCounts;
   log: ReviewLogEntry[];
+  exams: ExamResult[];
 }
 
 export function buildBackup(repo: ProgressRepository): BackupFile {
@@ -70,6 +71,8 @@ export function parseBackup(raw: string): BackupFile {
     settings: data.settings as SchedulerSettings,
     daily: data.daily ?? { date: '', new: 0, review: 0 },
     log: data.log ?? [],
+    // Absent in backups written before practice-test history existed.
+    exams: data.exams ?? [],
   };
 }
 

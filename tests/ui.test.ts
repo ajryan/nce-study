@@ -393,6 +393,78 @@ describe('other views render against real data', () => {
     expect(root.textContent).not.toMatch(/sticking|feeling solid/i);
   });
 
+  it('shows a placeholder before any practice test has been taken', async () => {
+    const app = await bootedApp();
+    const root = container();
+    const visited: string[] = [];
+    renderDashboard(app, root, (v) => visited.push(v));
+
+    const panel = root.querySelector('.empty-panel')!;
+    expect(panel).not.toBeNull();
+    expect(panel.textContent).toContain('No practice tests yet');
+    // The placeholder explains the value and offers the action, rather than
+    // being an empty box.
+    (panel.querySelector('button') as HTMLButtonElement).click();
+    expect(visited).toEqual(['exam']);
+  });
+
+  it('shows the most recent score and a per-topic breakdown once a test exists', async () => {
+    const app = await bootedApp();
+    await app.repo.recordExamResult({
+      id: 'e1',
+      at: new Date().toISOString(),
+      total: 10,
+      correct: 7,
+      unanswered: 0,
+      durationMs: 600_000,
+      byDomain: { D1: { correct: 3, total: 4 }, D5: { correct: 4, total: 6 } },
+    });
+
+    const root = container();
+    renderDashboard(app, root);
+    expect(root.querySelector('.empty-panel')).toBeNull();
+    expect(root.textContent).toContain('70%');
+    expect(root.textContent).toContain('most recent');
+    // Named topics, not domain codes.
+    expect(root.textContent).toContain('Professional Practice and Ethics');
+    expect(root.textContent).toContain('3/4');
+  });
+
+  it('reports the change between the last two tests', async () => {
+    const app = await bootedApp();
+    const base = {
+      at: new Date().toISOString(),
+      total: 10,
+      unanswered: 0,
+      durationMs: 1000,
+      byDomain: {},
+    };
+    await app.repo.recordExamResult({ ...base, id: 'e1', correct: 5 });
+    await app.repo.recordExamResult({ ...base, id: 'e2', correct: 8 });
+
+    const root = container();
+    renderDashboard(app, root);
+    expect(root.textContent).toContain('+30');
+    expect(root.textContent).toContain('points since last time');
+    expect(root.querySelectorAll('.trend .tbar').length).toBe(2);
+  });
+
+  it('keeps practice results out of the coverage headline', async () => {
+    // Blending "how much have I seen" with "how did I score" makes the headline
+    // uninterpretable; the interesting part is where the two disagree.
+    const app = await bootedApp();
+    const root = container();
+    renderDashboard(app, root);
+    const before = root.querySelector('.headline .big')!.textContent;
+
+    await app.repo.recordExamResult({
+      id: 'e1', at: new Date().toISOString(), total: 10, correct: 10,
+      unanswered: 0, durationMs: 1000, byDomain: {},
+    });
+    renderDashboard(app, root);
+    expect(root.querySelector('.headline .big')!.textContent).toBe(before);
+  });
+
   it('hides the forecast entirely when nothing is scheduled', async () => {
     const app = await bootedApp();
     const root = container();

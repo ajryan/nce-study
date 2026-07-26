@@ -178,6 +178,30 @@ describe('backup', () => {
     expect(target.getSettings().examDate).toBe('2026-12-01');
   });
 
+  it('carries practice-test history through export and import', async () => {
+    await repo.recordExamResult({
+      id: 'e1', at: '2026-07-26T00:00:00.000Z', total: 10, correct: 7,
+      unanswered: 1, durationMs: 900_000, byDomain: { D1: { correct: 3, total: 4 } },
+    });
+
+    const parsed = parseBackup(serializeBackup(repo));
+    expect(parsed.exams).toHaveLength(1);
+    expect(parsed.exams[0]!.correct).toBe(7);
+
+    __setStore(new MemoryStore());
+    const target = new ProgressRepository();
+    await target.load();
+    await target.replaceAll(parsed);
+    expect(target.getExamResults()).toHaveLength(1);
+  });
+
+  it('tolerates a backup written before practice-test history existed', () => {
+    const old = JSON.stringify({
+      format: 'nce-study-backup', version: 1, progress: {},
+    });
+    expect(parseBackup(old).exams).toEqual([]);
+  });
+
   it('rejects malformed JSON', () => {
     expect(() => parseBackup('{not json')).toThrow(BackupParseError);
   });

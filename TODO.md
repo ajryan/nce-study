@@ -4,6 +4,35 @@
 
 In priority order:
 
+1. **Prompt for the exam date on the home screen when it isn't set.** There is a tip in the
+   home footer today, but it sits below everything and reads as optional. The exam date
+   drives interval capping, the retention ramp and the pacing advice — with it unset, all
+   three quietly do nothing — so it deserves a prompt above the "Study your cards" card,
+   with a button through to Settings.
+
+2. **Tell the user when a new version is available, and reassure them about their progress.**
+   The site now deploys on every push, and the service worker serves cached hashed assets,
+   so someone with the app open — or installed as a PWA — can sit on a stale build without
+   knowing. Detect a waiting service worker and offer a refresh.
+
+   The reassurance is the point, not a nicety: this user is anxious, and "reload to update"
+   reads as "lose your place". Progress lives in IndexedDB and survives a refresh entirely,
+   so the prompt should say so plainly. Must not be a blocking modal — never interrupt
+   mid-card.
+
+3. **Confirm settings changes visually.** Settings save silently on change, so there is no
+   feedback that anything happened. Add an unobtrusive saved indicator.
+
+4. **When the exam date changes, offer the daily new-card number.** The Progress page
+   already computes the required cards-per-day to finish in time. On changing the exam date,
+   surface that as a prompt with a button that applies it, rather than making the user work
+   out the arithmetic and find the right field.
+
+
+## Done
+
+Move from the not-yet-done category after completing.
+
 1. **Show practice test results on the Progress page, with a placeholder before the first
    one.** Right now a practice test score is the single most exam-like signal in the app and
    it is thrown away the moment you navigate off the results screen.
@@ -23,18 +52,20 @@ In priority order:
    Worth deciding while building: whether the Progress headline should stay
    coverage-based or blend in practice-test performance once one exists.
 
-2. **Confirm settings changes visually.** Settings save silently on change, so there is no
-   feedback that anything happened. Add an unobtrusive saved indicator.
+   **Done.** Results are now persisted (`ExamResult` in `src/storage/progress.ts`, last 50,
+   included in export/import so switching devices doesn't lose them). The panel shows the
+   most recent score, the change in points since the previous attempt, a trend bar per
+   attempt once there are two, and a per-topic breakdown of the latest test — bars turn teal
+   at 70% and stay amber below.
 
-3. **When the exam date changes, offer the daily new-card number.** The Progress page
-   already computes the required cards-per-day to finish in time. On changing the exam date,
-   surface that as a prompt with a button that applies it, rather than making the user work
-   out the arithmetic and find the right field.
+   Before the first attempt there is a placeholder that argues for taking one ("it measures
+   something the numbers above cannot: how you do under time pressure") with a button
+   straight into it, rather than an empty box.
 
-
-## Done
-
-Move from the not-yet-done category after completing.
+   The headline stays coverage-only, as proposed, with a test asserting a perfect practice
+   score does not move it. The first end-to-end run made the case by accident: coverage read
+   0 cards worked through while the test scored 40%. They measure different things, and
+   collapsing them into one number would hide exactly the disagreement worth seeing.
 
 1. Commit the dist so that we can set up GitHub Pages.
 

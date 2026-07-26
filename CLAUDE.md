@@ -20,6 +20,10 @@ pending product direction in priority order.
   things seen on every card outrank things seen once in Settings.
 - **Move an item from `## Not yet done` to `## Done` when it is finished**, keeping the
   user's original wording and appending what was actually done.
+- **Commit *and push* after every completed item.** The site is live at
+  https://ajryan.github.io/nce-study/ and deploys from `main` on push, so an unpushed commit
+  is work the user cannot see. Check the run went green (`gh run list`) before reporting
+  done.
 - Verify claims about behaviour against the code before writing them into a TODO — several
   items here were sharpened by checking rather than assuming.
 

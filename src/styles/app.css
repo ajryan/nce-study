@@ -534,6 +534,35 @@ table.grid td.barcell { width: 38%; min-width: 120px; }
 
 .tablewrap { overflow-x: auto; }
 
+/* ---- practice test panel ---- */
+.empty-panel { text-align: center; padding: 1.6rem 1.25rem; }
+.empty-panel .big { font-size: 2.2rem; line-height: 1; margin-bottom: 0.4rem; }
+.empty-panel .title { font-weight: 700; font-size: 1.02rem; margin: 0 0 0.35rem; }
+.empty-panel .muted { max-width: 34rem; margin: 0 auto 1rem; }
+
+.exam-summary { display: flex; gap: 2rem; flex-wrap: wrap; }
+.exam-summary .n { font-size: 1.9rem; font-weight: 700; line-height: 1.1; color: var(--accent-strong); }
+.exam-summary .n.up { color: var(--correct); }
+.exam-summary .n.down { color: var(--wrong); }
+.exam-summary .l { font-size: 0.78rem; color: var(--text-dim); }
+
+.trend { display: flex; align-items: flex-end; gap: 6px; height: 90px; margin-top: 1.1rem; }
+.trend .tbar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+  height: 100%;
+}
+.trend .tbar .fill {
+  width: 100%;
+  background: linear-gradient(180deg, #2dd4bf 0%, var(--accent) 100%);
+  border-radius: 4px 4px 0 0;
+}
+.trend .tbar span { font-size: 0.65rem; color: var(--text-dim); }
+
 /* ---- browse ---- */
 .filters { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
 .filters input, .filters select {

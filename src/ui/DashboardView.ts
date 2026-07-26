@@ -27,6 +27,7 @@ import { el, clear, pct } from './dom';
 import { State } from '../scheduler/fsrs';
 import { daysUntilExam, requiredNewPerDay } from '../scheduler/examDate';
 import type { CacrepArea, Card } from '../data/schema';
+import type { ExamResult } from '../storage/progress';
 
 /** Which breakdown the table is showing. Module-level so it survives re-render. */
 let axis: 'topic' | 'subject' = 'topic';
@@ -76,9 +77,13 @@ function stackedBar(b: Breakdown): HTMLElement {
   );
 }
 
-export function renderDashboard(app: AppState, root: HTMLElement): void {
+export function renderDashboard(
+  app: AppState,
+  root: HTMLElement,
+  go: (view: 'exam') => void = () => {},
+): void {
   clear(root);
-  const rerender = () => renderDashboard(app, root);
+  const rerender = () => renderDashboard(app, root, go);
 
   root.appendChild(el('h1', {}, 'How you’re doing'));
   root.appendChild(
@@ -250,6 +255,10 @@ export function renderDashboard(app: AppState, root: HTMLElement): void {
   table.appendChild(tbody);
   root.appendChild(el('div', { class: 'tablewrap' }, table));
 
+  // ---- practice tests -----------------------------------------------------
+  root.appendChild(el('h2', {}, 'Practice tests'));
+  root.appendChild(renderExamPanel(app, go));
+
   // ---- forecast, only when it has something to say ------------------------
   const forecast = app.dueForecast(14);
   if (forecast.some((n) => n > 0)) {
@@ -288,4 +297,140 @@ function legendItem(cls: string, n: number, label: string): HTMLElement {
 
 function substat(value: string, label: string): HTMLElement {
   return el('div', { class: 'substat' }, el('div', { class: 'n' }, value), el('div', { class: 'l' }, label));
+}
+
+
+/**
+ * Practice-test panel.
+ *
+ * Deliberately separate from the coverage headline rather than folded into it:
+ * a single number mixing "how much have I seen" with "how did I score under
+ * time pressure" is hard to interpret, and the interesting thing is precisely
+ * where the two disagree — a topic can look well covered here and still fall
+ * over in a timed test.
+ */
+function renderExamPanel(app: AppState, go: (view: 'exam') => void): HTMLElement {
+  const results = app.repo.getExamResults();
+
+  if (results.length === 0) {
+    // A placeholder that explains the value, rather than an empty box.
+    return el(
+      'div',
+      { class: 'card empty-panel' },
+      el('div', { class: 'big' }, '📝'),
+      el('p', { class: 'title' }, 'No practice tests yet'),
+      el(
+        'p',
+        { class: 'muted small' },
+        'A timed test is the closest thing here to the real exam, and it measures something ' +
+          'the numbers above cannot: how you do under time pressure. Your scores will show ' +
+          'up here so you can watch them move.',
+      ),
+      el('button', { class: 'btn primary', onclick: () => go('exam') }, 'Take your first one'),
+    );
+  }
+
+  const latest = results[results.length - 1]!;
+  const previous = results.length > 1 ? results[results.length - 2] : undefined;
+  const share = (r: ExamResult) => (r.total > 0 ? (r.correct / r.total) * 100 : 0);
+  const delta = previous ? Math.round(share(latest) - share(previous)) : null;
+
+  const wrap = el('div', { class: 'card' });
+
+  wrap.appendChild(
+    el(
+      'div',
+      { class: 'exam-summary' },
+      el(
+        'div',
+        {},
+        el('div', { class: 'n' }, `${Math.round(share(latest))}%`),
+        el('div', { class: 'l' }, `most recent · ${latest.correct} of ${latest.total}`),
+      ),
+      delta !== null
+        ? el(
+            'div',
+            {},
+            el(
+              'div',
+              { class: `n ${delta >= 0 ? 'up' : 'down'}` },
+              `${delta > 0 ? '+' : ''}${delta}`,
+            ),
+            el('div', { class: 'l' }, 'points since last time'),
+          )
+        : null,
+      el(
+        'div',
+        {},
+        el('div', { class: 'n' }, String(results.length)),
+        el('div', { class: 'l' }, `test${results.length === 1 ? '' : 's'} taken`),
+      ),
+    ),
+  );
+
+  // Trend, once there is something to compare against.
+  if (results.length > 1) {
+    const bars = el('div', { class: 'trend' });
+    for (const r of results.slice(-10)) {
+      const p = Math.round(share(r));
+      bars.appendChild(
+        el(
+          'div',
+          { class: 'tbar', title: `${p}% on ${new Date(r.at).toLocaleDateString()}` },
+          el('div', { class: 'fill', style: `height:${Math.max(p, 2)}%` }),
+          el('span', {}, `${p}%`),
+        ),
+      );
+    }
+    wrap.appendChild(bars);
+  }
+
+  // Per-topic, from the most recent test. This is the actionable part.
+  const rows = blueprint.domains
+    .map((d) => ({ name: d.name, r: latest.byDomain[d.id] }))
+    .filter((x): x is { name: string; r: { correct: number; total: number } } => !!x.r);
+
+  if (rows.length > 0) {
+    wrap.appendChild(
+      el(
+        'p',
+        { class: 'small muted', style: 'margin:1rem 0 .35rem' },
+        'How the most recent test went, topic by topic:',
+      ),
+    );
+    const table = el('table', { class: 'grid' });
+    const tbody = el('tbody');
+    for (const row of rows) {
+      const p = Math.round((row.r.correct / row.r.total) * 100);
+      tbody.appendChild(
+        el(
+          'tr',
+          {},
+          el('td', {}, row.name),
+          el('td', { class: 'num' }, `${row.r.correct}/${row.r.total}`),
+          el(
+            'td',
+            { class: 'barcell' },
+            el(
+              'div',
+              { class: 'stack' },
+              el('div', { class: `seg ${p >= 70 ? 'solid' : 'learning'}`, style: `width:${p}%` }),
+            ),
+          ),
+        ),
+      );
+    }
+    table.appendChild(tbody);
+    wrap.appendChild(el('div', { class: 'tablewrap' }, table));
+  }
+
+  wrap.appendChild(
+    el(
+      'div',
+      { style: 'margin-top:1rem' },
+      el('button', { class: 'btn', onclick: () => go('exam') }, 'Take another'),
+    ),
+  );
+
+  return wrap;
 }

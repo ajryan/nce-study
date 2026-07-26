@@ -344,7 +344,34 @@ function finish(app: AppState): void {
   session.finished = true;
   session.endedAt = Date.now();
   stopTick();
-  void app;
+
+  // Persist the result. A score shown once and discarded wastes the most
+  // exam-like signal the app produces — the trend across attempts is what
+  // actually says whether you are getting ready.
+  const s = session;
+  const byDomain: Record<string, { correct: number; total: number }> = {};
+  let correct = 0;
+  let unanswered = 0;
+
+  s.items.forEach((card, i) => {
+    const chosen = s.answers[i] ?? null;
+    const right = chosen !== null && (card.choices![chosen]?.correct ?? false);
+    if (chosen === null) unanswered++;
+    if (right) correct++;
+    const bucket = (byDomain[card.domain] ??= { correct: 0, total: 0 });
+    bucket.total++;
+    if (right) bucket.correct++;
+  });
+
+  void app.repo.recordExamResult({
+    id: `exam-${s.startedAt}`,
+    at: new Date(s.startedAt).toISOString(),
+    total: s.items.length,
+    correct,
+    unanswered,
+    durationMs: (s.endedAt ?? Date.now()) - s.startedAt,
+    byDomain,
+  });
 }
 
 function abandon(): void {
