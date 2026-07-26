@@ -4,7 +4,55 @@
 
 In priority order:
 
-_(nothing outstanding)_
+1. **Exam-date changes don't reschedule cards that were already rated.** Confirmed in the
+   code, not assumed: `capDueDate` is only applied inside `review()` and `previewIntervals()`
+   in `src/scheduler/fsrs.ts`, both at rating time. `AppState.rebuildQueue` re-filters by
+   stored due date but never re-caps it, and `ProgressRepository.updateSettings` writes the
+   setting without touching progress.
+
+   So a card rated before the exam date was set — or before it was moved earlier — keeps a
+   due date that can fall *after* the exam. That silently defeats the headline promise of
+   "Make sure everything comes up before exam day", and it fails in the least visible
+   direction: the cards that drop out are the well-known ones with the longest intervals.
+
+   Fix: re-cap every stored due date when the exam date changes (and when the capping
+   setting is toggled on). Needs a test that sets a far-future exam, matures a card past it,
+   then moves the exam earlier and asserts the card is pulled back inside the window.
+
+2. **Rating labels are not a parallel construction.** "Hard / Good / Easy" mixes a judgement
+   of the question with a judgement of the answer, so the three do not answer one question.
+   All three should complete "how difficult was this?" — e.g. Hard / OK / Easy, or
+   "A struggle / Took a moment / Straight away". "Again" is a fourth case and genuinely
+   different: it means *wrong*, not a difficulty. Keep it visually distinct rather than
+   forcing it into the same scale.
+
+3. **Show practice test results on the Progress page, with a placeholder before the first
+   one.** Right now a practice test score is the single most exam-like signal in the app and
+   it is thrown away the moment you navigate off the results screen.
+
+   Prerequisite, confirmed in the code: results are not persisted at all. `session` in
+   `src/ui/ExamView.ts` is module-level state, cleared by `abandon()` and by "Try another
+   test", and storage only holds `progress`, `settings`, `daily` and `reviewLog` — there is
+   no exam key. So this needs a stored history first: date, length, score, time taken, and
+   the per-topic breakdown.
+
+   On the Progress page: most recent score, the trend across attempts once there are two or
+   more, and per-topic performance — which is the interesting part, because it is measured
+   under exam conditions rather than inferred from spaced-repetition state, and the two can
+   disagree. Before the first attempt, a placeholder that explains what a practice test adds
+   and links straight to it, rather than an empty panel.
+
+   Worth deciding while building: whether the Progress headline should stay
+   coverage-based or blend in practice-test performance once one exists.
+
+4. **Confirm settings changes visually.** Settings save silently on change, so there is no
+   feedback that anything happened. Add an unobtrusive saved indicator.
+
+5. **When the exam date changes, offer the daily new-card number.** The Progress page
+   already computes the required cards-per-day to finish in time. On changing the exam date,
+   surface that as a prompt with a button that applies it, rather than making the user work
+   out the arithmetic and find the right field.
+
 
 ## Done
 
