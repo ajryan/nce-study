@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   newProgress,
+  reapplyExamDate,
   review,
   deriveRating,
   previewIntervals,
@@ -174,5 +175,93 @@ describe('isDue', () => {
     const p = newProgress('card-11', now);
     const scheduled = review(p, Rating.Easy, settings(), now).progress;
     expect(isDue(scheduled, now)).toBe(false);
+  });
+});
+
+
+describe('reapplyExamDate', () => {
+  /** Grow a card to a long interval with no exam set, so nothing is capped yet. */
+  function matured(id: string) {
+    let cur = newProgress(id, now);
+    let at = now;
+    for (let i = 0; i < 5; i++) {
+      cur = review(cur, Rating.Easy, settings({ examDate: null }), at).progress;
+      at = new Date(cur.due);
+    }
+    return cur;
+  }
+
+  it('pulls back cards that were already scheduled past a newly set exam', () => {
+    // The original bug: capping only ran at rating time, so a card rated before
+    // the date was set kept a due date after the exam — and the cards that
+    // escaped were the well-known ones with the longest intervals.
+    const card = matured('recap-1');
+    const dueBefore = new Date(card.due);
+    const exam = new Date(dueBefore.getTime() - 30 * 86_400_000);
+    const examDate = exam.toISOString().slice(0, 10);
+
+    const map = new Map([[card.cardId, card]]);
+    const moved = reapplyExamDate(map, settings({ examDate }), now);
+
+    expect(moved).toBe(1);
+    const after = new Date(map.get('recap-1')!.due);
+    expect(after.getTime()).toBeLessThan(dueBefore.getTime());
+    expect(after.getTime()).toBeLessThan(exam.getTime());
+  });
+
+  it('restores the original interval when the exam is moved back out again', () => {
+    // Recomputing from naturalDue rather than the capped value is what makes
+    // this reversible; capping an already-capped date would ratchet intervals
+    // permanently shorter with every edit.
+    const card = matured('recap-2');
+    const natural = new Date(card.due);
+    const map = new Map([[card.cardId, card]]);
+
+    const near = new Date(natural.getTime() - 40 * 86_400_000).toISOString().slice(0, 10);
+    reapplyExamDate(map, settings({ examDate: near }), now);
+    expect(new Date(map.get('recap-2')!.due).getTime()).toBeLessThan(natural.getTime());
+
+    reapplyExamDate(map, settings({ examDate: null }), now);
+    expect(new Date(map.get('recap-2')!.due).getTime()).toBe(natural.getTime());
+  });
+
+  it('does not ratchet intervals shorter across repeated edits', () => {
+    const card = matured('recap-3');
+    const natural = new Date(card.due);
+    const map = new Map([[card.cardId, card]]);
+
+    for (const offset of [40, 30, 50, 20]) {
+      const d = new Date(natural.getTime() - offset * 86_400_000).toISOString().slice(0, 10);
+      reapplyExamDate(map, settings({ examDate: d }), now);
+    }
+    reapplyExamDate(map, settings({ examDate: null }), now);
+    expect(new Date(map.get('recap-3')!.due).getTime()).toBe(natural.getTime());
+  });
+
+  it('leaves everything alone when capping is switched off', () => {
+    const card = matured('recap-4');
+    const natural = card.due;
+    const map = new Map([[card.cardId, card]]);
+    const examDate = new Date(new Date(natural).getTime() - 40 * 86_400_000)
+      .toISOString()
+      .slice(0, 10);
+
+    reapplyExamDate(map, settings({ examDate, capIntervalsAtExam: false }), now);
+    expect(map.get('recap-4')!.due).toBe(natural);
+  });
+
+  it('ignores new cards, which are already due', () => {
+    const fresh = newProgress('recap-5', now);
+    const map = new Map([[fresh.cardId, fresh]]);
+    const moved = reapplyExamDate(map, settings({ examDate: '2026-09-01' }), now);
+    expect(moved).toBe(0);
+  });
+
+  it('backfills naturalDue for progress saved before it existed', () => {
+    const card = matured('recap-6');
+    delete card.naturalDue;
+    const map = new Map([[card.cardId, card]]);
+    reapplyExamDate(map, settings({ examDate: null }), now);
+    expect(map.get('recap-6')!.naturalDue).toBeDefined();
   });
 });

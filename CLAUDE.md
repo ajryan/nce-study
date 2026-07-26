@@ -8,9 +8,20 @@ A local-first spaced-repetition study app for the **National Counselor Examinati
 No backend, no accounts, no network calls at runtime — all 512 cards are bundled into the
 JS payload and all progress stays in the browser.
 
-**Read `TODO.md` at the start of a session.** It carries the user's pending product
-direction in priority order, and the convention is to move an item from `## Not yet done`
-to `## Done` once completed.
+## Working agreement
+
+**Read `TODO.md` at the start of a session, and keep working it.** It carries the user's
+pending product direction in priority order.
+
+- **At every stopping point, continue with the next TODO item in priority order.** Do not
+  stop and ask what to do next while items remain — finish, report, and carry on.
+- **When the user gives a new TODO, write it into `TODO.md` yourself and place it in the
+  order you judge best.** Say where you put it and why. Correctness bugs outrank polish;
+  things seen on every card outrank things seen once in Settings.
+- **Move an item from `## Not yet done` to `## Done` when it is finished**, keeping the
+  user's original wording and appending what was actually done.
+- Verify claims about behaviour against the code before writing them into a TODO — several
+  items here were sharpened by checking rather than assuming.
 
 ## Design direction — non-negotiable
 

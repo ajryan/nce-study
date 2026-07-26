@@ -58,6 +58,14 @@ export interface CardProgress {
   learning_steps: number;
   state: State;
   last_review?: string;
+  /**
+   * The due date FSRS chose, before any exam-date capping. Kept so that moving
+   * the exam — in either direction — can recompute `due` from the scheduler's
+   * intent rather than from an already-capped value, which would ratchet
+   * intervals permanently shorter. Absent on progress saved before this existed;
+   * callers fall back to `due`.
+   */
+  naturalDue?: string;
   /** Answer history summary, used by the dashboard. */
   correctCount: number;
   answerCount: number;
@@ -74,6 +82,7 @@ export function toProgress(
   correctCount: number,
   answerCount: number,
   suspended = false,
+  naturalDue?: Date,
 ): CardProgress {
   return {
     cardId,
@@ -87,6 +96,7 @@ export function toProgress(
     learning_steps: card.learning_steps,
     state: card.state,
     ...(card.last_review ? { last_review: card.last_review.toISOString() } : {}),
+    ...(naturalDue ? { naturalDue: naturalDue.toISOString() } : {}),
     correctCount,
     answerCount,
     suspended,
@@ -183,6 +193,7 @@ export function review(
     progress.correctCount + (correct ? 1 : 0),
     progress.answerCount + 1,
     progress.suspended ?? false,
+    card.due,
   );
 
   return {
@@ -218,4 +229,51 @@ export function isDue(progress: CardProgress, now: Date = new Date()): boolean {
 
 export function isNew(progress: CardProgress): boolean {
   return progress.state === State.New;
+}
+
+
+/**
+ * Recompute every stored due date against the current exam settings.
+ *
+ * Capping used to be applied only at the moment of rating, so changing the exam
+ * date left everything already scheduled untouched — a card rated before the
+ * date was set could still fall after the exam, which is precisely what the
+ * setting promises to prevent. It failed silently and in the worst direction:
+ * the cards that slipped past the exam were the well-known ones with the
+ * longest intervals.
+ *
+ * Recomputing from `naturalDue` rather than from the current `due` matters. If
+ * we capped an already-capped value, moving the exam later could never restore
+ * an interval, and repeated edits would ratchet everything shorter.
+ *
+ * Returns the number of cards whose due date actually moved.
+ */
+export function reapplyExamDate(
+  progress: Map<string, CardProgress>,
+  settings: SchedulerSettings,
+  now: Date = new Date(),
+): number {
+  let changed = 0;
+
+  for (const p of progress.values()) {
+    // New cards are due immediately and have nothing to pull back.
+    if (p.state === State.New) continue;
+
+    const natural = new Date(p.naturalDue ?? p.due);
+    const target =
+      settings.capIntervalsAtExam && settings.examDate
+        ? capDueDate(natural, now, settings.examDate)
+        : natural;
+
+    const iso = target.toISOString();
+    if (iso !== p.due) {
+      p.due = iso;
+      changed++;
+    }
+    // Backfill for progress saved before naturalDue existed, so the next edit
+    // has an honest baseline to work from.
+    p.naturalDue ??= natural.toISOString();
+  }
+
+  return changed;
 }

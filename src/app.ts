@@ -12,6 +12,7 @@ import { isDurable } from './storage/db';
 import {
   review as scheduleReview,
   deriveRating,
+  reapplyExamDate,
   Rating,
   State,
   type CardProgress,
@@ -70,6 +71,35 @@ export class AppState {
     this.repo.ensureCards(this.cards.map((c) => c.id));
     await this.repo.persist();
     this.rebuildQueue();
+  }
+
+  /**
+   * The only route for changing settings. Exam-date and capping changes have to
+   * reschedule everything already rated, so this lives here rather than in the
+   * settings view — a caller that forgot would silently leave cards scheduled
+   * past the exam.
+   *
+   * Returns how many cards were rescheduled, so the UI can say so.
+   */
+  async updateSettings(
+    patch: Partial<SchedulerSettings>,
+    now: Date = new Date(),
+  ): Promise<{ rescheduled: number }> {
+    const before = this.settings;
+    await this.repo.updateSettings(patch);
+
+    const examChanged =
+      ('examDate' in patch && patch.examDate !== before.examDate) ||
+      ('capIntervalsAtExam' in patch && patch.capIntervalsAtExam !== before.capIntervalsAtExam);
+
+    let rescheduled = 0;
+    if (examChanged) {
+      rescheduled = reapplyExamDate(this.repo.getProgress(), this.settings, now);
+      if (rescheduled > 0) await this.repo.persist();
+    }
+
+    this.rebuildQueue(now);
+    return { rescheduled };
   }
 
   rebuildQueue(now: Date = new Date()): void {

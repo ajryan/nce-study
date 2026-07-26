@@ -12,6 +12,9 @@ import { el, clear } from './dom';
 import { downloadBackup, parseBackup, BackupParseError } from '../storage/backup';
 import { RAMP_WINDOW_DAYS } from '../scheduler/examDate';
 
+/** Surfaced after an exam-date change so the reshuffle isn't invisible. */
+let lastReschedule = 0;
+
 export function renderSettings(app: AppState, root: HTMLElement): void {
   clear(root);
   root.appendChild(el('h1', {}, 'Settings'));
@@ -26,8 +29,8 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
   const s = app.settings;
   const rerender = () => renderSettings(app, root);
   const update = async (patch: Parameters<typeof app.repo.updateSettings>[0]) => {
-    await app.repo.updateSettings(patch);
-    app.rebuildQueue();
+    const { rescheduled } = await app.updateSettings(patch);
+    lastReschedule = rescheduled;
     rerender();
   };
 
@@ -47,6 +50,16 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
         'around at least once before the day itself.',
     ),
   );
+
+  if (lastReschedule > 0) {
+    scheduling.appendChild(
+      el(
+        'p',
+        { class: 'small', style: 'color:var(--accent-strong);margin:-.6rem 0 1rem' },
+        `✅ Moved ${lastReschedule} card${lastReschedule === 1 ? '' : 's'} so they come up before your exam.`,
+      ),
+    );
+  }
 
   scheduling.appendChild(
     field(

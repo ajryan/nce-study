@@ -4,29 +4,14 @@
 
 In priority order:
 
-1. **Exam-date changes don't reschedule cards that were already rated.** Confirmed in the
-   code, not assumed: `capDueDate` is only applied inside `review()` and `previewIntervals()`
-   in `src/scheduler/fsrs.ts`, both at rating time. `AppState.rebuildQueue` re-filters by
-   stored due date but never re-caps it, and `ProgressRepository.updateSettings` writes the
-   setting without touching progress.
-
-   So a card rated before the exam date was set — or before it was moved earlier — keeps a
-   due date that can fall *after* the exam. That silently defeats the headline promise of
-   "Make sure everything comes up before exam day", and it fails in the least visible
-   direction: the cards that drop out are the well-known ones with the longest intervals.
-
-   Fix: re-cap every stored due date when the exam date changes (and when the capping
-   setting is toggled on). Needs a test that sets a far-future exam, matures a card past it,
-   then moves the exam earlier and asserts the card is pulled back inside the window.
-
-2. **Rating labels are not a parallel construction.** "Hard / Good / Easy" mixes a judgement
+1. **Rating labels are not a parallel construction.** "Hard / Good / Easy" mixes a judgement
    of the question with a judgement of the answer, so the three do not answer one question.
    All three should complete "how difficult was this?" — e.g. Hard / OK / Easy, or
    "A struggle / Took a moment / Straight away". "Again" is a fourth case and genuinely
    different: it means *wrong*, not a difficulty. Keep it visually distinct rather than
    forcing it into the same scale.
 
-3. **Show practice test results on the Progress page, with a placeholder before the first
+2. **Show practice test results on the Progress page, with a placeholder before the first
    one.** Right now a practice test score is the single most exam-like signal in the app and
    it is thrown away the moment you navigate off the results screen.
 
@@ -45,10 +30,10 @@ In priority order:
    Worth deciding while building: whether the Progress headline should stay
    coverage-based or blend in practice-test performance once one exists.
 
-4. **Confirm settings changes visually.** Settings save silently on change, so there is no
+3. **Confirm settings changes visually.** Settings save silently on change, so there is no
    feedback that anything happened. Add an unobtrusive saved indicator.
 
-5. **When the exam date changes, offer the daily new-card number.** The Progress page
+4. **When the exam date changes, offer the daily new-card number.** The Progress page
    already computes the required cards-per-day to finish in time. On changing the exam date,
    surface that as a prompt with a button that applies it, rather than making the user work
    out the arithmetic and find the right field.
@@ -57,6 +42,33 @@ In priority order:
 ## Done
 
 Move from the not-yet-done category after completing.
+
+1. **Exam-date changes don't reschedule cards that were already rated.** Confirmed in the
+   code, not assumed: `capDueDate` is only applied inside `review()` and `previewIntervals()`
+   in `src/scheduler/fsrs.ts`, both at rating time. `AppState.rebuildQueue` re-filters by
+   stored due date but never re-caps it, and `ProgressRepository.updateSettings` writes the
+   setting without touching progress.
+
+   So a card rated before the exam date was set — or before it was moved earlier — keeps a
+   due date that can fall *after* the exam. That silently defeats the headline promise of
+   "Make sure everything comes up before exam day", and it fails in the least visible
+   direction: the cards that drop out are the well-known ones with the longest intervals.
+
+   Fix: re-cap every stored due date when the exam date changes (and when the capping
+   setting is toggled on). Needs a test that sets a far-future exam, matures a card past it,
+   then moves the exam earlier and asserts the card is pulled back inside the window.
+
+   **Done.** `reapplyExamDate` in `src/scheduler/fsrs.ts` recomputes every stored due date,
+   and `AppState.updateSettings` is now the only route for changing settings so no caller
+   can forget to trigger it. Settings confirms with "Moved N cards so they come up before
+   your exam."
+
+   The subtlety worth keeping: `CardProgress` now also stores `naturalDue`, the date FSRS
+   chose before capping. Recomputing from that rather than from the current `due` is what
+   makes the change reversible — capping an already-capped value would ratchet intervals
+   permanently shorter with every edit, and moving the exam later could never restore them.
+   Six tests cover both directions, repeated edits, capping switched off, new cards, and
+   backfilling `naturalDue` for progress saved before it existed.
 
 1. **Rework the "My Progress" page.** It is the weakest screen in the app and currently
    works against the design direction — for someone anxious about this exam it leads with
