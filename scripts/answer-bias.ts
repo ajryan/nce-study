@@ -16,7 +16,14 @@
 import { loadDecks, allCards } from './lib/content';
 import type { Card } from '../src/data/schema';
 
-/** Share of cards where the correct answer is the longest option. */
+/**
+ * Share of cards where the correct answer is *strictly* longer than every
+ * distractor. Ties are excluded deliberately: if two options are the same
+ * length, a length-guesser gains nothing from them, so counting a tie as a
+ * "tell" overstates the problem. The expected score for someone who always
+ * guesses longest is reported separately and is the number that actually
+ * matters.
+ */
 const MAX_LONGEST_SHARE = 0.4;
 /** Mean correct length ÷ mean distractor length. */
 const MAX_LENGTH_RATIO = 1.15;
@@ -27,6 +34,9 @@ const MAX_CARD_RATIO = 2.0;
 interface Stats {
   n: number;
   longest: number;
+  ties: number;
+  /** Expected score for someone who always picks the longest option. */
+  guessScore: number;
   shortest: number;
   meanCorrect: number;
   meanDistractor: number;
@@ -41,6 +51,8 @@ export function analyse(cards: Card[]): Stats {
   let sumCorrect = 0;
   let sumDistractor = 0;
   let nDistractor = 0;
+  let ties = 0;
+  let guessScore = 0;
   const worst: Stats['worst'] = [];
 
   for (const card of mcq) {
@@ -50,8 +62,19 @@ export function analyse(cards: Card[]): Stats {
     if (ci < 0) continue;
 
     const correctLen = lens[ci]!;
-    if (correctLen === Math.max(...lens)) longest++;
-    if (correctLen === Math.min(...lens)) shortest++;
+    const otherLens = lens.filter((_, i) => i !== ci);
+    const maxOther = Math.max(...otherLens);
+
+    if (correctLen > maxOther) {
+      longest++;
+      guessScore += 1;
+    } else if (correctLen === maxOther) {
+      ties++;
+      // A guesser picking at random among the equal-longest options.
+      const tiedCount = lens.filter((l) => l === correctLen).length;
+      guessScore += 1 / tiedCount;
+    }
+    if (correctLen < Math.min(...otherLens)) shortest++;
 
     const distractors = lens.filter((_, i) => i !== ci);
     const meanD = distractors.reduce((a, b) => a + b, 0) / Math.max(distractors.length, 1);
@@ -72,6 +95,8 @@ export function analyse(cards: Card[]): Stats {
   return {
     n: mcq.length,
     longest,
+    ties,
+    guessScore,
     shortest,
     meanCorrect,
     meanDistractor,
@@ -93,16 +118,20 @@ const shortestShare = s.shortest / s.n;
 const chance = 1 / (cards.find((c) => c.choices)?.choices?.length ?? 4);
 
 console.log(`Answer-length bias across ${s.n} multiple-choice cards\n`);
-console.log(`  Correct answer is the longest option   ${(longestShare * 100).toFixed(1)}%  (chance ${(chance * 100).toFixed(0)}%, limit ${MAX_LONGEST_SHARE * 100}%)`);
-console.log(`  Correct answer is the shortest option  ${(shortestShare * 100).toFixed(1)}%`);
+console.log(`  Correct is strictly the longest option  ${(longestShare * 100).toFixed(1)}%  (chance ${(chance * 100).toFixed(0)}%, limit ${MAX_LONGEST_SHARE * 100}%)`);
+console.log(`  Tied for longest (no signal either way) ${((s.ties / s.n) * 100).toFixed(1)}%`);
+console.log(`  Correct is strictly the shortest option ${(shortestShare * 100).toFixed(1)}%`);
 console.log(`  Mean length — correct ${s.meanCorrect.toFixed(1)} chars, distractors ${s.meanDistractor.toFixed(1)} chars`);
 console.log(`  Length ratio                           ${s.ratio.toFixed(3)}  (target ${MIN_LENGTH_RATIO}–${MAX_LENGTH_RATIO})`);
-console.log(`\n  A test-taker who always picked the longest option would score ${(longestShare * 100).toFixed(1)}%.`);
+console.log(
+  `\n  Always picking the longest option would score ${((s.guessScore / s.n) * 100).toFixed(1)}% ` +
+    `(chance is ${(chance * 100).toFixed(0)}%).`,
+);
 
 const failures: string[] = [];
 if (longestShare > MAX_LONGEST_SHARE) {
   failures.push(
-    `correct answer is the longest option in ${(longestShare * 100).toFixed(1)}% of cards ` +
+    `correct answer is strictly the longest in ${(longestShare * 100).toFixed(1)}% of cards ` +
       `(limit ${MAX_LONGEST_SHARE * 100}%) — the deck can be gamed on shape alone`,
   );
 }

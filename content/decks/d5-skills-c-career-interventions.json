@@ -7,63 +7,154 @@
       "type": "mcq",
       "domain": "D5",
       "task": "5Y",
-      "cacrep": ["career", "assessment"],
-      "tags": ["career-assessment", "types", "selection"],
+      "cacrep": [
+        "career",
+        "assessment"
+      ],
+      "tags": [
+        "career-assessment",
+        "types",
+        "selection"
+      ],
       "prompt": "A client wants to know 'what job I'd be good at'. Which type of career assessment actually addresses that question?",
       "choices": [
-        { "text": "An aptitude or ability measure, since interest inventories measure preference rather than capability", "correct": true, "rationale": "Interest and aptitude are distinct constructs; 'what would I be good at' is an ability question." },
-        { "text": "An interest inventory such as the Strong or Self-Directed Search", "correct": false, "rationale": "Interest inventories measure what a person likes, which correlates only modestly with ability." },
-        { "text": "A work values inventory", "correct": false, "rationale": "Values measures address what matters to the person, not capability." },
-        { "text": "A personality inventory such as the MBTI", "correct": false, "rationale": "Personality measures describe style and preference, not aptitude." }
+        {
+          "text": "An aptitude measure, since interests aren't ability",
+          "correct": true,
+          "rationale": "Interest and aptitude are distinct constructs; 'what would I be good at' is an ability question."
+        },
+        {
+          "text": "An interest inventory, such as the Self-Directed Search",
+          "correct": false,
+          "rationale": "Interest inventories measure what a person likes, which correlates only modestly with ability."
+        },
+        {
+          "text": "A work values inventory covering what matters to them",
+          "correct": false,
+          "rationale": "Values measures address what matters to the person, not capability."
+        },
+        {
+          "text": "A personality inventory, such as the MBTI or the NEO",
+          "correct": false,
+          "rationale": "Personality measures describe style and preference, not aptitude."
+        }
       ],
       "explanation": "Comprehensive career assessment usually samples four domains — interests, aptitudes, values, and personality — because each answers a different question. Clarifying which question the client is actually asking is the first step in selecting an instrument.",
-      "refs": ["apa-testing-standards", "onet", "ncda"]
+      "refs": [
+        "apa-testing-standards",
+        "onet",
+        "ncda"
+      ]
     },
     {
       "id": "d5-career-152",
       "type": "mcq",
       "domain": "D5",
       "task": "5Y",
-      "cacrep": ["career"],
-      "tags": ["occupational-information", "resources", "onet"],
+      "cacrep": [
+        "career"
+      ],
+      "tags": [
+        "occupational-information",
+        "resources",
+        "onet"
+      ],
       "prompt": "Where should a counselor direct a client seeking reliable, current information about a specific occupation's tasks, required skills, wages, and outlook?",
       "choices": [
-        { "text": "O*NET OnLine and the Bureau of Labor Statistics Occupational Outlook Handbook", "correct": true, "rationale": "These are the primary free, authoritative U.S. sources for occupational data, updated regularly." },
-        { "text": "Job postings on commercial recruitment sites", "correct": false, "rationale": "Postings reflect current openings and employer wording, not systematic occupational data or outlook." },
-        { "text": "The counselor's own knowledge of the field", "correct": false, "rationale": "Counselors cannot hold current data across occupations, and outdated impressions mislead clients." },
-        { "text": "Informal conversations with the client's family and friends", "correct": false, "rationale": "Useful for perspective but not a reliable basis for occupational facts." }
+        {
+          "text": "O*NET and the Occupational Outlook Handbook",
+          "correct": true,
+          "rationale": "These are the primary free, authoritative U.S. sources for occupational data, updated regularly."
+        },
+        {
+          "text": "Job postings on the commercial recruitment sites",
+          "correct": false,
+          "rationale": "Postings reflect current openings and employer wording, not systematic occupational data or outlook."
+        },
+        {
+          "text": "The counselor's own knowledge of that field of work",
+          "correct": false,
+          "rationale": "Counselors cannot hold current data across occupations, and outdated impressions mislead clients."
+        },
+        {
+          "text": "Informal chats with the client's family and friends",
+          "correct": false,
+          "rationale": "Useful for perspective but not a reliable basis for occupational facts."
+        }
       ],
       "explanation": "Directing clients to primary sources also builds a transferable skill: career decisions recur across a working life, and a client who knows how to research an occupation does not need to return for each one.",
-      "refs": ["onet", "bls-ooh", "ncda"]
+      "refs": [
+        "onet",
+        "bls-ooh",
+        "ncda"
+      ]
     },
     {
       "id": "d5-career-153",
       "type": "mcq",
       "domain": "D5",
       "task": "5Y",
-      "cacrep": ["career", "helping-relationships"],
-      "tags": ["career-counseling", "integration", "personal"],
+      "cacrep": [
+        "career",
+        "helping-relationships"
+      ],
+      "tags": [
+        "career-counseling",
+        "integration",
+        "personal"
+      ],
       "prompt": "A client presenting for career counseling begins describing significant depressive symptoms. How should the counselor proceed?",
       "choices": [
-        { "text": "Recognize that career and personal concerns are intertwined, assess the mental health presentation, and address both rather than treating career counseling as separate", "correct": true, "rationale": "The artificial separation of career from personal counseling is long-criticized; depression impairs decision-making capacity and job search persistence." },
-        { "text": "Complete the career work first, then refer for mental health treatment afterwards", "correct": false, "rationale": "Untreated depression will undermine the career work itself." },
-        { "text": "Refer the client out entirely, since the presenting concern has changed", "correct": false, "rationale": "Counselors are trained in both; referral is unnecessary unless the presentation exceeds competence." },
-        { "text": "Continue with career assessment and disregard the mood symptoms as situational", "correct": false, "rationale": "Assuming the symptoms are situational without assessment risks missing a treatable disorder." }
+        {
+          "text": "Treat both — career and mood are bound up together",
+          "correct": true,
+          "rationale": "The artificial separation of career from personal counseling is long-criticized; depression impairs decision-making capacity and job search persistence."
+        },
+        {
+          "text": "Finish the career work first, then refer for the depression",
+          "correct": false,
+          "rationale": "Untreated depression will undermine the career work itself."
+        },
+        {
+          "text": "Refer them out entirely, since the presenting concern changed",
+          "correct": false,
+          "rationale": "Counselors are trained in both; referral is unnecessary unless the presentation exceeds competence."
+        },
+        {
+          "text": "Carry on with the career assessment and treat the mood as situational",
+          "correct": false,
+          "rationale": "Assuming the symptoms are situational without assessment risks missing a treatable disorder."
+        }
       ],
       "explanation": "Career counseling is not a lesser or separate specialty. Depression, anxiety, trauma, and substance use all shape career functioning, and unemployment or job dissatisfaction in turn worsen mental health — the relationship runs both ways.",
-      "refs": ["ncda", "nimh-depression", "cacrep-standards", "aca-ethics"]
+      "refs": [
+        "ncda",
+        "nimh-depression",
+        "cacrep-standards",
+        "aca-ethics"
+      ]
     },
     {
       "id": "d5-career-154",
       "type": "cloze",
       "domain": "D5",
       "task": "5Y",
-      "cacrep": ["career"],
-      "tags": ["informational-interview", "exploration", "technique"],
+      "cacrep": [
+        "career"
+      ],
+      "tags": [
+        "informational-interview",
+        "exploration",
+        "technique"
+      ],
       "prompt": "Arranging for a client to speak with someone working in an occupation they are considering — to learn about the day-to-day reality rather than the idealized version — is called an {{informational interview}}.",
       "answer": "informational interview",
       "explanation": "It serves two purposes at once: correcting inaccurate occupational images that drive poor choices, and building the network through which most positions are actually filled. It also gives anxious clients a low-stakes first step into a field.",
-      "refs": ["ncda", "onet", "bls-ooh"]
+      "refs": [
+        "ncda",
+        "onet",
+        "bls-ooh"
+      ]
     }
   ]
 }

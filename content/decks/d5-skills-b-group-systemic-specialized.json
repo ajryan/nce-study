@@ -6,1235 +6,2980 @@
       "type": "recall",
       "domain": "D5",
       "task": "5AS",
-      "cacrep": ["group-work"],
-      "tags": ["group-stages", "tuckman"],
+      "cacrep": [
+        "group-work"
+      ],
+      "tags": [
+        "group-stages",
+        "tuckman"
+      ],
       "prompt": "Name Tuckman's stages of group development and what characterizes each.",
       "answer": "Forming — orientation, dependence on the leader, polite and tentative interaction, testing what is acceptable. Storming — conflict, challenges to the leader, competition for roles, resistance to the task. Norming — cohesion develops, norms are established, members begin working together. Performing — productive work toward goals with flexible roles. Adjourning — termination, review, and separation.",
       "explanation": "The storming stage is developmentally necessary rather than a failure. Leaders who suppress conflict to keep things pleasant frequently produce groups that never reach genuine working depth.",
-      "refs": ["statpearls-group-therapy"]
+      "refs": [
+        "statpearls-group-therapy"
+      ]
     },
     {
       "id": "d5-group-077",
       "type": "mcq",
       "domain": "D5",
       "task": "5AU",
-      "cacrep": ["group-work"],
-      "tags": ["group-stages", "leader-role"],
+      "cacrep": [
+        "group-work"
+      ],
+      "tags": [
+        "group-stages",
+        "leader-role"
+      ],
       "prompt": "During the storming stage, members begin challenging the leader's authority. What is the most appropriate leader response?",
       "choices": [
-        { "text": "Accept the challenge non-defensively and help the group process the conflict, treating it as necessary developmental work", "correct": true, "rationale": "Surviving the challenge without retaliating or collapsing is what allows the group to develop trust and move toward norming." },
-        { "text": "Reassert authority firmly to restore order", "correct": false, "rationale": "Suppressing the challenge halts development and teaches members that conflict is unsafe here." },
-        { "text": "Withdraw and let the group resolve it without leader involvement", "correct": false, "rationale": "Abdication leaves the group without containment at its most volatile point." },
-        { "text": "Remove the most challenging member to protect group cohesion", "correct": false, "rationale": "Scapegoating a member for expressing what many feel is harmful and misreads the dynamic." }
+        {
+          "text": "Take the challenge without defending, and process it",
+          "correct": true,
+          "rationale": "Surviving the challenge without retaliating or collapsing is what allows the group to develop trust and move toward norming."
+        },
+        {
+          "text": "Reassert your authority firmly, so order is restored",
+          "correct": false,
+          "rationale": "Suppressing the challenge halts development and teaches members that conflict is unsafe here."
+        },
+        {
+          "text": "Step back and let the group sort it out among themselves",
+          "correct": false,
+          "rationale": "Abdication leaves the group without containment at its most volatile point."
+        },
+        {
+          "text": "Remove the member who is challenging most, to protect it",
+          "correct": false,
+          "rationale": "Scapegoating a member for expressing what many feel is harmful and misreads the dynamic."
+        }
       ],
       "explanation": "Leader interventions shift by stage: more structure and safety-building in forming, active conflict facilitation in storming, and progressively less direction as the group takes over its own work in performing.",
-      "refs": ["statpearls-group-therapy", "aca-ethics"]
+      "refs": [
+        "statpearls-group-therapy",
+        "aca-ethics"
+      ]
     },
     {
       "id": "d5-group-078",
       "type": "recall",
       "domain": "D5",
       "task": "5AT",
-      "cacrep": ["group-work"],
-      "tags": ["yalom", "therapeutic-factors"],
+      "cacrep": [
+        "group-work"
+      ],
+      "tags": [
+        "yalom",
+        "therapeutic-factors"
+      ],
       "prompt": "Name Yalom's eleven therapeutic factors in group therapy.",
       "answer": "Instillation of hope; universality; imparting information; altruism; corrective recapitulation of the primary family group; development of socializing techniques; imitative behaviour; interpersonal learning; group cohesiveness; catharsis; and existential factors.",
       "explanation": "Yalom regarded group cohesiveness as the group analogue of the therapeutic alliance and a precondition for the others to operate. Interpersonal learning is the factor most distinctive to group work and depends on the group functioning as a social microcosm.",
-      "refs": ["statpearls-group-therapy"]
+      "refs": [
+        "statpearls-group-therapy"
+      ]
     },
     {
       "id": "d5-group-079",
       "type": "mcq",
       "domain": "D5",
       "task": "5AH",
-      "cacrep": ["group-work"],
-      "tags": ["linking", "group-technique"],
+      "cacrep": [
+        "group-work"
+      ],
+      "tags": [
+        "linking",
+        "group-technique"
+      ],
       "prompt": "A group member describes feeling unheard at home, and the leader says 'Marcus, that sounds close to what Dana described last week — do you notice a connection?' What technique is this?",
       "choices": [
-        { "text": "Linking — connecting members' experiences to build cohesion and universality", "correct": true, "rationale": "Linking explicitly connects members' material, promoting member-to-member interaction rather than leader-centred exchange." },
-        { "text": "Blocking — stopping unproductive or harmful group behaviour", "correct": false, "rationale": "Blocking interrupts; this intervention connects." },
-        { "text": "Cutting off — ending a member's monologue", "correct": false, "rationale": "Cutting off limits a member's airtime for the group's benefit." },
-        { "text": "Drawing out — inviting a quiet member to participate", "correct": false, "rationale": "Drawing out targets silent members specifically." }
+        {
+          "text": "Linking — joining members' experiences together",
+          "correct": true,
+          "rationale": "Linking explicitly connects members' material, promoting member-to-member interaction rather than leader-centred exchange."
+        },
+        {
+          "text": "Blocking — stopping harmful behaviour in the group",
+          "correct": false,
+          "rationale": "Blocking interrupts; this intervention connects."
+        },
+        {
+          "text": "Cutting off — ending a member's long monologue",
+          "correct": false,
+          "rationale": "Cutting off limits a member's airtime for the group's benefit."
+        },
+        {
+          "text": "Drawing out — inviting a quiet member to speak",
+          "correct": false,
+          "rationale": "Drawing out targets silent members specifically."
+        }
       ],
       "explanation": "Linking is the primary tool for shifting a group from a series of individual conversations with the leader to genuine group interaction. It directly promotes universality and cohesion.",
-      "refs": ["statpearls-group-therapy"]
+      "refs": [
+        "statpearls-group-therapy"
+      ]
     },
     {
       "id": "d5-group-080",
       "type": "mcq",
       "domain": "D5",
       "task": "5AH",
-      "cacrep": ["group-work"],
-      "tags": ["blocking", "group-safety"],
+      "cacrep": [
+        "group-work"
+      ],
+      "tags": [
+        "blocking",
+        "group-safety"
+      ],
       "prompt": "One group member begins probing another with intrusive personal questions the second member is clearly uncomfortable with. What should the leader do?",
       "choices": [
-        { "text": "Block the behaviour promptly, protecting the member while addressing the norm for the whole group", "correct": true, "rationale": "Blocking is an ethical obligation: leaders must protect members from harm within the group." },
-        { "text": "Allow it, since group members should be free to challenge one another", "correct": false, "rationale": "Freedom to interact does not extend to permitting harm; the leader is responsible for member safety." },
-        { "text": "Wait to see whether the second member sets their own boundary", "correct": false, "rationale": "Delay leaves a member exposed and may replicate experiences where no one intervened." },
-        { "text": "Address it privately with the questioning member after the session", "correct": false, "rationale": "The group witnessed it and needs to see the norm enforced; private-only handling leaves the group's safety in doubt." }
+        {
+          "text": "Block it promptly, protecting the member and the norm",
+          "correct": true,
+          "rationale": "Blocking is an ethical obligation: leaders must protect members from harm within the group."
+        },
+        {
+          "text": "Allow it, since members should be free to challenge",
+          "correct": false,
+          "rationale": "Freedom to interact does not extend to permitting harm; the leader is responsible for member safety."
+        },
+        {
+          "text": "Wait and see whether the member sets their own boundary",
+          "correct": false,
+          "rationale": "Delay leaves a member exposed and may replicate experiences where no one intervened."
+        },
+        {
+          "text": "Take it up privately with the questioner after the session",
+          "correct": false,
+          "rationale": "The group witnessed it and needs to see the norm enforced; private-only handling leaves the group's safety in doubt."
+        }
       ],
       "explanation": "Behaviours warranting blocking include probing, gossiping about absent members, breaking confidentiality, scapegoating, and persistent advice-giving. Blocking should address the behaviour without shaming the member.",
-      "refs": ["statpearls-group-therapy", "aca-ethics"]
+      "refs": [
+        "statpearls-group-therapy",
+        "aca-ethics"
+      ]
     },
     {
       "id": "d5-group-081",
       "type": "scenario",
       "domain": "D5",
       "task": "5AV",
-      "cacrep": ["group-work"],
-      "tags": ["scapegoating", "group-dynamics"],
+      "cacrep": [
+        "group-work"
+      ],
+      "tags": [
+        "scapegoating",
+        "group-dynamics"
+      ],
       "prompt": "A group repeatedly directs criticism at one member who has become the target for the group's frustration. What is the leader's task?",
       "choices": [
-        { "text": "Interrupt the pattern and help the group examine what the scapegoating accomplishes for them, while protecting the targeted member", "correct": true, "rationale": "Scapegoating diverts the group from its own difficulties; naming the process is the intervention, alongside protecting the member." },
-        { "text": "Support the group's feedback, since honest confrontation is therapeutic", "correct": false, "rationale": "Scapegoating is not honest feedback; it concentrates group tension in one person." },
-        { "text": "Remove the targeted member to relieve group tension", "correct": false, "rationale": "This completes the scapegoating and confirms the group's avoidance." },
-        { "text": "Change the subject to reduce conflict", "correct": false, "rationale": "Avoidance leaves the dynamic operating beneath the surface." }
+        {
+          "text": "Interrupt it and ask what the group gains by doing it",
+          "correct": true,
+          "rationale": "Scapegoating diverts the group from its own difficulties; naming the process is the intervention, alongside protecting the member."
+        },
+        {
+          "text": "Back the feedback, since honest confrontation helps",
+          "correct": false,
+          "rationale": "Scapegoating is not honest feedback; it concentrates group tension in one person."
+        },
+        {
+          "text": "Remove the targeted member, to relieve the tension",
+          "correct": false,
+          "rationale": "This completes the scapegoating and confirms the group's avoidance."
+        },
+        {
+          "text": "Change the subject, so the conflict cools down",
+          "correct": false,
+          "rationale": "Avoidance leaves the dynamic operating beneath the surface."
+        }
       ],
       "explanation": "The scapegoat frequently carries something the group cannot own — anger at the leader, anxiety about the work, or a disowned trait. The productive question is what the group avoids by focusing there.",
-      "refs": ["statpearls-group-therapy", "aca-ethics"]
+      "refs": [
+        "statpearls-group-therapy",
+        "aca-ethics"
+      ]
     },
     {
       "id": "d5-group-082",
       "type": "mcq",
       "domain": "D5",
       "task": "5AP",
-      "cacrep": ["group-work"],
-      "tags": ["monopolizing", "group-management"],
+      "cacrep": [
+        "group-work"
+      ],
+      "tags": [
+        "monopolizing",
+        "group-management"
+      ],
       "prompt": "A member consistently dominates group time with lengthy monologues. What is the most effective leader response?",
       "choices": [
-        { "text": "Cut off tactfully and redirect to the group, while privately exploring what drives the monopolizing", "correct": true, "rationale": "The group's needs require intervention now, and the behaviour usually reflects anxiety or a need for control worth understanding." },
-        { "text": "Allow it, since the member clearly needs to talk", "correct": false, "rationale": "Permitting monopolization deprives other members and typically generates resentment toward the member and the leader." },
-        { "text": "Ask other members to confront the behaviour directly", "correct": false, "rationale": "Delegating the leader's containment role can turn into group attack." },
-        { "text": "Remove the member from the group", "correct": false, "rationale": "Disproportionate; the behaviour is usually workable within the group." }
+        {
+          "text": "Cut in tactfully, then explore it with them privately",
+          "correct": true,
+          "rationale": "The group's needs require intervention now, and the behaviour usually reflects anxiety or a need for control worth understanding."
+        },
+        {
+          "text": "Allow it, since the member clearly needs to talk",
+          "correct": false,
+          "rationale": "Permitting monopolization deprives other members and typically generates resentment toward the member and the leader."
+        },
+        {
+          "text": "Ask the other members to confront the behaviour",
+          "correct": false,
+          "rationale": "Delegating the leader's containment role can turn into group attack."
+        },
+        {
+          "text": "Remove the member from the group altogether",
+          "correct": false,
+          "rationale": "Disproportionate; the behaviour is usually workable within the group."
+        }
       ],
       "explanation": "Leaders often hesitate to interrupt for fear of seeming rude, and the group pays the cost. Interrupting well — acknowledging the content, then turning to others — is a core group leadership skill.",
-      "refs": ["statpearls-group-therapy"]
+      "refs": [
+        "statpearls-group-therapy"
+      ]
     },
     {
       "id": "d5-group-083",
       "type": "mcq",
       "domain": "D5",
       "task": "5AQ",
-      "cacrep": ["group-work"],
-      "tags": ["silent-member", "participation"],
+      "cacrep": [
+        "group-work"
+      ],
+      "tags": [
+        "silent-member",
+        "participation"
+      ],
       "prompt": "A group member has remained silent for several sessions. What should the leader consider first?",
       "choices": [
-        { "text": "That silence has many meanings — anxiety, cultural norms, processing style, or disengagement — and should be explored gently rather than assumed", "correct": true, "rationale": "Silent members may be engaged and benefiting; assuming disengagement risks a misdirected intervention." },
-        { "text": "That the member is not benefiting and should be moved to individual counseling", "correct": false, "rationale": "Silent members often report substantial benefit from vicarious learning." },
-        { "text": "That the group should pressure the member to participate", "correct": false, "rationale": "Group pressure to disclose is coercive and can drive the member out." },
-        { "text": "That the leader should avoid drawing attention to the silence", "correct": false, "rationale": "Never addressing it may leave the member permanently peripheral." }
+        {
+          "text": "Silence has many meanings, so explore it gently",
+          "correct": true,
+          "rationale": "Silent members may be engaged and benefiting; assuming disengagement risks a misdirected intervention."
+        },
+        {
+          "text": "They are not benefiting and should move to individual work",
+          "correct": false,
+          "rationale": "Silent members often report substantial benefit from vicarious learning."
+        },
+        {
+          "text": "The group should press the member to join in more",
+          "correct": false,
+          "rationale": "Group pressure to disclose is coercive and can drive the member out."
+        },
+        {
+          "text": "The leader should avoid drawing attention to it at all",
+          "correct": false,
+          "rationale": "Never addressing it may leave the member permanently peripheral."
+        }
       ],
       "explanation": "Drawing out should be invitational rather than demanding — offering an opening the member may decline. Cultural norms about speaking in groups, deference to authority, and turn-taking vary widely.",
-      "refs": ["statpearls-group-therapy", "msjcc"]
+      "refs": [
+        "statpearls-group-therapy",
+        "msjcc"
+      ]
     },
     {
       "id": "d5-group-084",
       "type": "cloze",
       "domain": "D5",
       "task": "5AF",
-      "cacrep": ["group-work"],
-      "tags": ["here-and-now", "group-process"],
+      "cacrep": [
+        "group-work"
+      ],
+      "tags": [
+        "here-and-now",
+        "group-process"
+      ],
       "prompt": "Yalom's emphasis on the {{here-and-now}} holds that group work is most powerful when members examine their immediate interactions within the group rather than only reporting outside events.",
       "answer": "here-and-now",
       "explanation": "It has two components: the experience itself, and the illumination of it through process reflection. Experience without reflection is merely emotional; reflection without experience is intellectual. Both are needed.",
-      "refs": ["statpearls-group-therapy"]
+      "refs": [
+        "statpearls-group-therapy"
+      ]
     },
     {
       "id": "d5-group-085",
       "type": "mcq",
       "domain": "D5",
       "task": "5AW",
-      "cacrep": ["group-work"],
-      "tags": ["subgrouping", "outside-contact"],
+      "cacrep": [
+        "group-work"
+      ],
+      "tags": [
+        "subgrouping",
+        "outside-contact"
+      ],
       "prompt": "Two group members begin socializing outside the group and referencing shared experiences the others were not part of. What should the leader do?",
       "choices": [
-        { "text": "Bring the extra-group contact into the group for open discussion, since undisclosed subgrouping undermines cohesion and safety", "correct": true, "rationale": "Yalom's guidance is not that outside contact is forbidden, but that it must not be kept secret from the group." },
-        { "text": "Prohibit all contact between members outside sessions", "correct": false, "rationale": "Blanket prohibition is often unenforceable and unnecessary; secrecy is the actual problem." },
-        { "text": "Ignore it, since members' lives outside the group are private", "correct": false, "rationale": "Undisclosed alliances directly affect in-group process." },
-        { "text": "Remove both members for violating group norms", "correct": false, "rationale": "Disproportionate, and the norm should have been set in advance rather than enforced by expulsion." }
+        {
+          "text": "Bring the outside contact into the group and discuss it",
+          "correct": true,
+          "rationale": "Yalom's guidance is not that outside contact is forbidden, but that it must not be kept secret from the group."
+        },
+        {
+          "text": "Forbid all contact between members outside of sessions",
+          "correct": false,
+          "rationale": "Blanket prohibition is often unenforceable and unnecessary; secrecy is the actual problem."
+        },
+        {
+          "text": "Leave it — members' lives outside the group are private",
+          "correct": false,
+          "rationale": "Undisclosed alliances directly affect in-group process."
+        },
+        {
+          "text": "Remove both members for breaching the group's norms",
+          "correct": false,
+          "rationale": "Disproportionate, and the norm should have been set in advance rather than enforced by expulsion."
+        }
       ],
       "explanation": "The principle is that extra-group socializing becomes destructive when it is concealed, because it creates information asymmetries and loyalties that operate invisibly. Setting this norm during pre-group preparation prevents the problem.",
-      "refs": ["statpearls-group-therapy", "aca-ethics"]
+      "refs": [
+        "statpearls-group-therapy",
+        "aca-ethics"
+      ]
     },
     {
       "id": "d5-group-086",
       "type": "mcq",
       "domain": "D5",
       "task": "5AI",
-      "cacrep": ["group-work"],
-      "tags": ["co-leadership", "dynamics"],
+      "cacrep": [
+        "group-work"
+      ],
+      "tags": [
+        "co-leadership",
+        "dynamics"
+      ],
       "prompt": "What is a primary risk of co-leading a group?",
       "choices": [
-        { "text": "Unresolved differences between co-leaders being enacted in the group, splitting members or modelling unaddressed conflict", "correct": true, "rationale": "Co-leader dynamics are visible to the group and can be paralleled or exploited by members." },
-        { "text": "Members receiving too much individual attention", "correct": false, "rationale": "Not a recognized risk of co-leadership." },
-        { "text": "Sessions running shorter than planned", "correct": false, "rationale": "Not a characteristic risk." },
-        { "text": "Reduced ability to observe group process", "correct": false, "rationale": "Co-leadership typically improves process observation, which is one of its main advantages." }
+        {
+          "text": "Unresolved differences between leaders playing out in the room",
+          "correct": true,
+          "rationale": "Co-leader dynamics are visible to the group and can be paralleled or exploited by members."
+        },
+        {
+          "text": "Members getting rather too much individual attention",
+          "correct": false,
+          "rationale": "Not a recognized risk of co-leadership."
+        },
+        {
+          "text": "Sessions consistently running shorter than planned",
+          "correct": false,
+          "rationale": "Not a characteristic risk."
+        },
+        {
+          "text": "A reduced ability to observe what the group is doing",
+          "correct": false,
+          "rationale": "Co-leadership typically improves process observation, which is one of its main advantages."
+        }
       ],
       "explanation": "Benefits include broader observation, modelling of healthy disagreement, continuity when one leader is absent, and mutual supervision. Realizing them requires regular co-leader processing time outside the group.",
-      "refs": ["statpearls-group-therapy", "aca-ethics"]
+      "refs": [
+        "statpearls-group-therapy",
+        "aca-ethics"
+      ]
     },
     {
       "id": "d5-group-087",
       "type": "mcq",
       "domain": "D5",
       "task": "5AR",
-      "cacrep": ["group-work"],
-      "tags": ["psychoeducational-group", "structure"],
+      "cacrep": [
+        "group-work"
+      ],
+      "tags": [
+        "psychoeducational-group",
+        "structure"
+      ],
       "prompt": "How does leading a psychoeducational group differ from leading a process group?",
       "choices": [
-        { "text": "It is more structured and content-driven, with the leader more directive, though process still requires attention", "correct": true, "rationale": "Psychoeducational groups follow a curriculum, but ignoring group process entirely undermines even a content-focused group." },
-        { "text": "Group process is irrelevant and should be avoided entirely", "correct": false, "rationale": "Process affects engagement and learning in any group format." },
-        { "text": "Confidentiality norms do not apply", "correct": false, "rationale": "Confidentiality applies in all group formats." },
-        { "text": "Screening of members is unnecessary", "correct": false, "rationale": "Screening remains good practice, though it may be less intensive than for therapy groups." }
+        {
+          "text": "More structured and content-led, but process still matters",
+          "correct": true,
+          "rationale": "Psychoeducational groups follow a curriculum, but ignoring group process entirely undermines even a content-focused group."
+        },
+        {
+          "text": "Group process is irrelevant and should be avoided entirely",
+          "correct": false,
+          "rationale": "Process affects engagement and learning in any group format."
+        },
+        {
+          "text": "The usual confidentiality norms do not apply in this format",
+          "correct": false,
+          "rationale": "Confidentiality applies in all group formats."
+        },
+        {
+          "text": "There is no need to screen members before they join",
+          "correct": false,
+          "rationale": "Screening remains good practice, though it may be less intensive than for therapy groups."
+        }
       ],
       "explanation": "A common failure is delivering psychoeducational content as a lecture. Even structured groups benefit from linking, drawing out, and universality — the content lands better when members connect around it.",
-      "refs": ["statpearls-group-therapy", "cacrep-standards"]
+      "refs": [
+        "statpearls-group-therapy",
+        "cacrep-standards"
+      ]
     },
     {
       "id": "d5-group-088",
       "type": "mcq",
       "domain": "D5",
       "task": "5AO",
-      "cacrep": ["group-work"],
-      "tags": ["structured-activities", "exercises"],
+      "cacrep": [
+        "group-work"
+      ],
+      "tags": [
+        "structured-activities",
+        "exercises"
+      ],
       "prompt": "When are structured activities most useful in group work?",
       "choices": [
-        { "text": "Early on to build safety and interaction, and later to focus work — but not as a substitute for genuine group process", "correct": true, "rationale": "Exercises accelerate early engagement and can deepen specific work, but over-reliance prevents authentic interaction from developing." },
-        { "text": "Throughout every session, to maintain structure and prevent awkwardness", "correct": false, "rationale": "Constant structure prevents the group from taking responsibility for its own process." },
-        { "text": "Only in the final session as a closing ritual", "correct": false, "rationale": "Unduly restrictive; exercises serve multiple purposes across the group's life." },
-        { "text": "Never, since they are artificial and inhibit genuine interaction", "correct": false, "rationale": "Well-chosen exercises have legitimate uses, particularly in early and time-limited groups." }
+        {
+          "text": "Early to build safety, later to focus — never as a substitute",
+          "correct": true,
+          "rationale": "Exercises accelerate early engagement and can deepen specific work, but over-reliance prevents authentic interaction from developing."
+        },
+        {
+          "text": "In every session, to keep structure and avoid awkwardness",
+          "correct": false,
+          "rationale": "Constant structure prevents the group from taking responsibility for its own process."
+        },
+        {
+          "text": "Only in the final session, as a way of closing things",
+          "correct": false,
+          "rationale": "Unduly restrictive; exercises serve multiple purposes across the group's life."
+        },
+        {
+          "text": "Never, since they are artificial and block real interaction",
+          "correct": false,
+          "rationale": "Well-chosen exercises have legitimate uses, particularly in early and time-limited groups."
+        }
       ],
       "explanation": "Always process an exercise afterwards — the activity generates material, and the discussion is where the learning happens. Running exercises back to back without processing produces activity without therapy.",
-      "refs": ["statpearls-group-therapy"]
+      "refs": [
+        "statpearls-group-therapy"
+      ]
     },
     {
       "id": "d5-group-089",
       "type": "mcq",
       "domain": "D5",
       "task": "5AT",
-      "cacrep": ["group-work"],
-      "tags": ["group-cohesion", "outcome"],
+      "cacrep": [
+        "group-work"
+      ],
+      "tags": [
+        "group-cohesion",
+        "outcome"
+      ],
       "prompt": "Why is group cohesion considered a precondition for the other therapeutic factors?",
       "choices": [
-        { "text": "Because members will not risk honest disclosure, give real feedback, or tolerate confrontation without a sense of belonging and safety", "correct": true, "rationale": "Cohesion is the group analogue of the therapeutic alliance and enables everything else." },
-        { "text": "Because cohesive groups finish their curriculum faster", "correct": false, "rationale": "Efficiency is not the mechanism." },
-        { "text": "Because cohesion eliminates conflict within the group", "correct": false, "rationale": "Cohesive groups can tolerate more conflict, not less — that is part of their value." },
-        { "text": "Because cohesion reduces the leader's workload", "correct": false, "rationale": "Not the therapeutic rationale." }
+        {
+          "text": "Without belonging, nobody risks honesty or takes feedback",
+          "correct": true,
+          "rationale": "Cohesion is the group analogue of the therapeutic alliance and enables everything else."
+        },
+        {
+          "text": "Because cohesive groups get through the curriculum faster",
+          "correct": false,
+          "rationale": "Efficiency is not the mechanism."
+        },
+        {
+          "text": "Because cohesion does away with conflict inside the group",
+          "correct": false,
+          "rationale": "Cohesive groups can tolerate more conflict, not less — that is part of their value."
+        },
+        {
+          "text": "Because cohesion cuts down on the leader's workload",
+          "correct": false,
+          "rationale": "Not the therapeutic rationale."
+        }
       ],
       "explanation": "This is why premature confrontation in a new group backfires: without cohesion, challenge is experienced as attack. Cohesion is built through consistent norms, attention to inclusion, and the leader's modelling.",
-      "refs": ["statpearls-group-therapy", "div12-treatments"]
+      "refs": [
+        "statpearls-group-therapy",
+        "div12-treatments"
+      ]
     },
     {
       "id": "d5-group-090",
       "type": "mcq",
       "domain": "D5",
       "task": "5AK",
-      "cacrep": ["group-work", "helping-relationships"],
-      "tags": ["family-recapitulation", "group"],
+      "cacrep": [
+        "group-work",
+        "helping-relationships"
+      ],
+      "tags": [
+        "family-recapitulation",
+        "group"
+      ],
       "prompt": "A group member reacts to the female co-leader with the same resentment they describe feeling toward their mother. Which therapeutic factor does this illustrate?",
       "choices": [
-        { "text": "Corrective recapitulation of the primary family group", "correct": true, "rationale": "Groups reproduce family dynamics, allowing them to be re-experienced and worked through differently." },
-        { "text": "Imparting information", "correct": false, "rationale": "That refers to didactic instruction and advice within the group." },
-        { "text": "Altruism", "correct": false, "rationale": "Altruism is the benefit derived from helping other members." },
-        { "text": "Catharsis", "correct": false, "rationale": "Catharsis is emotional discharge, not the re-enactment of family roles." }
+        {
+          "text": "Corrective recapitulation of the primary family group",
+          "correct": true,
+          "rationale": "Groups reproduce family dynamics, allowing them to be re-experienced and worked through differently."
+        },
+        {
+          "text": "Imparting information, through advice and teaching",
+          "correct": false,
+          "rationale": "That refers to didactic instruction and advice within the group."
+        },
+        {
+          "text": "Altruism, the benefit that comes from helping other members",
+          "correct": false,
+          "rationale": "Altruism is the benefit derived from helping other members."
+        },
+        {
+          "text": "Catharsis, the release of strongly felt emotion",
+          "correct": false,
+          "rationale": "Catharsis is emotional discharge, not the re-enactment of family roles."
+        }
       ],
       "explanation": "The word 'corrective' carries the weight: the value lies not in the re-enactment itself but in it going differently this time — the leader not retaliating, the group responding in a new way.",
-      "refs": ["statpearls-group-therapy"]
+      "refs": [
+        "statpearls-group-therapy"
+      ]
     },
     {
       "id": "d5-systemic-091",
       "type": "mcq",
       "domain": "D5",
       "task": "5W",
-      "cacrep": ["helping-relationships"],
-      "tags": ["homeostasis", "systems", "change"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "homeostasis",
+        "systems",
+        "change"
+      ],
       "prompt": "A family's problems reliably worsen just as the identified patient begins improving. How does systems theory explain this?",
       "choices": [
-        { "text": "Homeostasis — the system acts to restore its familiar equilibrium when change threatens the established pattern", "correct": true, "rationale": "Systems resist change to preserve stability, even when the existing balance is dysfunctional." },
-        { "text": "The family is deliberately sabotaging treatment", "correct": false, "rationale": "Homeostatic resistance is usually outside awareness rather than deliberate." },
-        { "text": "The improvement was illusory", "correct": false, "rationale": "The improvement may be real; the system's response is the phenomenon to explain." },
-        { "text": "The identified patient's diagnosis was incorrect", "correct": false, "rationale": "Diagnostic error does not explain the timing of the family's reaction." }
+        {
+          "text": "Homeostasis — the system pulling back to its old balance",
+          "correct": true,
+          "rationale": "Systems resist change to preserve stability, even when the existing balance is dysfunctional."
+        },
+        {
+          "text": "The family is deliberately sabotaging the treatment",
+          "correct": false,
+          "rationale": "Homeostatic resistance is usually outside awareness rather than deliberate."
+        },
+        {
+          "text": "The improvement was never real in the first place",
+          "correct": false,
+          "rationale": "The improvement may be real; the system's response is the phenomenon to explain."
+        },
+        {
+          "text": "The identified patient's diagnosis was simply wrong",
+          "correct": false,
+          "rationale": "Diagnostic error does not explain the timing of the family's reaction."
+        }
       ],
       "explanation": "Anticipating this with families is protective: naming in advance that things sometimes feel harder as change begins prevents the family from reading it as failure and withdrawing.",
-      "refs": ["samhsa-tip65"]
+      "refs": [
+        "samhsa-tip65"
+      ]
     },
     {
       "id": "d5-systemic-092",
       "type": "mcq",
       "domain": "D5",
       "task": "5J",
-      "cacrep": ["helping-relationships"],
-      "tags": ["first-order", "second-order", "change"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "first-order",
+        "second-order",
+        "change"
+      ],
       "prompt": "What distinguishes first-order from second-order change?",
       "choices": [
-        { "text": "First-order change alters behaviour within the existing system rules; second-order change alters the rules and structure themselves", "correct": true, "rationale": "First-order change is doing more or less of the same; second-order change transforms the framework." },
-        { "text": "First-order change is fast and second-order change is slow", "correct": false, "rationale": "Speed is not the distinction." },
-        { "text": "First-order change occurs in individuals and second-order in families", "correct": false, "rationale": "Both can occur at either level." },
-        { "text": "First-order change is superficial and always inadequate", "correct": false, "rationale": "First-order change is often sufficient and appropriate; it is not inferior by definition." }
+        {
+          "text": "First-order changes behaviour; second-order changes the rules",
+          "correct": true,
+          "rationale": "First-order change is doing more or less of the same; second-order change transforms the framework."
+        },
+        {
+          "text": "First-order change is fast and second-order change is slow",
+          "correct": false,
+          "rationale": "Speed is not the distinction."
+        },
+        {
+          "text": "First-order happens in individuals, and second-order in families",
+          "correct": false,
+          "rationale": "Both can occur at either level."
+        },
+        {
+          "text": "First-order change is superficial and always inadequate",
+          "correct": false,
+          "rationale": "First-order change is often sufficient and appropriate; it is not inferior by definition."
+        }
       ],
       "explanation": "A parent applying stricter punishments for the same misbehaviour is first-order; restructuring the parental subsystem so both parents present a united front is second-order. Persistent problems often require the second kind.",
-      "refs": ["samhsa-tip65"]
+      "refs": [
+        "samhsa-tip65"
+      ]
     },
     {
       "id": "d5-systemic-093",
       "type": "mcq",
       "domain": "D5",
       "task": "5P",
-      "cacrep": ["helping-relationships"],
-      "tags": ["interaction-pattern", "sequence", "family"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "interaction-pattern",
+        "sequence",
+        "family"
+      ],
       "prompt": "A counselor asks a family 'When your son slams the door, what does each of you do next, and then what happens?' What is being assessed?",
       "choices": [
-        { "text": "The behavioural sequence maintaining the problem — the repeating interactional loop", "correct": true, "rationale": "Tracking the sequence identifies where the loop can be interrupted, which is the systemic intervention point." },
-        { "text": "Which family member is responsible for the conflict", "correct": false, "rationale": "Assigning responsibility is a linear framing that systemic work avoids." },
-        { "text": "The son's individual psychopathology", "correct": false, "rationale": "The focus is explicitly on the interaction rather than the individual." },
-        { "text": "The family's genogram across three generations", "correct": false, "rationale": "Genogram work maps multigenerational patterns, not immediate sequences." }
+        {
+          "text": "The repeating loop that keeps the problem going",
+          "correct": true,
+          "rationale": "Tracking the sequence identifies where the loop can be interrupted, which is the systemic intervention point."
+        },
+        {
+          "text": "Which family member is responsible for the conflict",
+          "correct": false,
+          "rationale": "Assigning responsibility is a linear framing that systemic work avoids."
+        },
+        {
+          "text": "The son's individual psychopathology and diagnosis",
+          "correct": false,
+          "rationale": "The focus is explicitly on the interaction rather than the individual."
+        },
+        {
+          "text": "The family's genogram going back three generations",
+          "correct": false,
+          "rationale": "Genogram work maps multigenerational patterns, not immediate sequences."
+        }
       ],
       "explanation": "Sequence tracking is a practical systemic skill: any point in a repeating loop can be interrupted, and the smallest feasible change is usually the best target. Families rarely see the loop until it is described back to them.",
-      "refs": ["samhsa-tip65"]
+      "refs": [
+        "samhsa-tip65"
+      ]
     },
     {
       "id": "d5-systemic-094",
       "type": "mcq",
       "domain": "D5",
       "task": "5AM",
-      "cacrep": ["helping-relationships"],
-      "tags": ["family-of-origin", "patterns", "intergenerational"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "family-of-origin",
+        "patterns",
+        "intergenerational"
+      ],
       "prompt": "Why explore a client's family of origin even when the presenting problem seems unrelated?",
       "choices": [
-        { "text": "Because relational patterns, roles, and rules learned there frequently shape current relationships and expectations outside awareness", "correct": true, "rationale": "Family of origin supplies the templates for later relational functioning, including the therapeutic relationship." },
-        { "text": "Because family of origin issues are the root cause of all psychological problems", "correct": false, "rationale": "An overstatement; many presentations have other primary drivers." },
-        { "text": "Because insurers require a family history for reimbursement", "correct": false, "rationale": "Not the clinical rationale." },
-        { "text": "Because clients expect counselors to ask about childhood", "correct": false, "rationale": "Meeting expectations is not a clinical justification." }
+        {
+          "text": "The roles learned there still shape relationships now",
+          "correct": true,
+          "rationale": "Family of origin supplies the templates for later relational functioning, including the therapeutic relationship."
+        },
+        {
+          "text": "Family of origin is the root cause of all psychological problems",
+          "correct": false,
+          "rationale": "An overstatement; many presentations have other primary drivers."
+        },
+        {
+          "text": "Because insurers require a family history for reimbursement",
+          "correct": false,
+          "rationale": "Not the clinical rationale."
+        },
+        {
+          "text": "Because clients expect a counselor to ask about childhood",
+          "correct": false,
+          "rationale": "Meeting expectations is not a clinical justification."
+        }
       ],
       "explanation": "The proportionate approach is to gather enough family history to understand relational templates without treating every difficulty as a childhood artefact. Roles such as the responsible one, the peacemaker, or the scapegoat often persist into adult contexts.",
-      "refs": ["samhsa-tip65", "nice-attachment"]
+      "refs": [
+        "samhsa-tip65",
+        "nice-attachment"
+      ]
     },
     {
       "id": "d5-systemic-095",
       "type": "cloze",
       "domain": "D5",
       "task": "5AN",
-      "cacrep": ["helping-relationships"],
-      "tags": ["social-support", "buffering"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "social-support",
+        "buffering"
+      ],
       "prompt": "The finding that social support reduces the impact of stress on health outcomes is known as the {{stress-buffering hypothesis}}.",
       "answer": "stress-buffering hypothesis",
       "explanation": "It is contrasted with the main effect model, in which support benefits wellbeing regardless of stress level. Both have evidence; the buffering effect is strongest when the support received matches the demands of the stressor.",
-      "refs": ["statpearls-burnout", "nimh-depression", "sprc"]
+      "refs": [
+        "statpearls-burnout",
+        "nimh-depression",
+        "sprc"
+      ]
     },
     {
       "id": "d5-couples-096",
       "type": "mcq",
       "domain": "D5",
       "task": "5B",
-      "cacrep": ["helping-relationships"],
-      "tags": ["couples", "neutrality", "alliance"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "couples",
+        "neutrality",
+        "alliance"
+      ],
       "prompt": "What is the main alliance challenge specific to couples counseling?",
       "choices": [
-        { "text": "Building and maintaining a working alliance with both partners simultaneously, without either perceiving the counselor as aligned against them", "correct": true, "rationale": "Split alliance is the leading cause of failure in couples work; perceived partiality typically ends the therapy." },
-        { "text": "Deciding which partner is the real client", "correct": false, "rationale": "In couples counseling, the relationship is the client." },
-        { "text": "Preventing partners from speaking to one another in session", "correct": false, "rationale": "Enactment of their interaction is often the point." },
-        { "text": "Maintaining strict confidentiality between the two partners", "correct": false, "rationale": "That is the secrets policy question, which is separate from alliance balance." }
+        {
+          "text": "Holding an alliance with both, so neither feels ganged up on",
+          "correct": true,
+          "rationale": "Split alliance is the leading cause of failure in couples work; perceived partiality typically ends the therapy."
+        },
+        {
+          "text": "Working out which of the two partners is the real client",
+          "correct": false,
+          "rationale": "In couples counseling, the relationship is the client."
+        },
+        {
+          "text": "Stopping the partners from speaking to each other in session",
+          "correct": false,
+          "rationale": "Enactment of their interaction is often the point."
+        },
+        {
+          "text": "Keeping strict confidentiality between the two partners",
+          "correct": false,
+          "rationale": "That is the secrets policy question, which is separate from alliance balance."
+        }
       ],
       "explanation": "Practical countermeasures: balance airtime deliberately, validate both perspectives before intervening, and check in periodically about whether each partner feels heard. Balance must be visible to the partners, not merely intended by the counselor.",
-      "refs": ["samhsa-tip65", "div12-treatments"]
+      "refs": [
+        "samhsa-tip65",
+        "div12-treatments"
+      ]
     },
     {
       "id": "d5-couples-097",
       "type": "mcq",
       "domain": "D5",
       "task": "5AG",
-      "cacrep": ["helping-relationships"],
-      "tags": ["couples", "escalation", "intervention"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "couples",
+        "escalation",
+        "intervention"
+      ],
       "prompt": "A couple begins escalating into a hostile argument during session. What should the counselor do?",
       "choices": [
-        { "text": "Interrupt and slow the interaction, then help each partner identify the underlying feeling beneath the attack", "correct": true, "rationale": "Allowing escalation replicates the destructive pattern; interrupting and going beneath the surface content is the intervention." },
-        { "text": "Allow the argument to run its course so the counselor can observe the full pattern", "correct": false, "rationale": "Brief observation is useful, but permitting full escalation is harmful and models nothing new." },
-        { "text": "Determine which partner is factually correct and say so", "correct": false, "rationale": "Adjudicating content destroys neutrality and misses the process." },
-        { "text": "End the session early to prevent further conflict", "correct": false, "rationale": "Ending on an escalation leaves the couple to continue it unsupported." }
+        {
+          "text": "Slow it down, and find the feeling under the attack",
+          "correct": true,
+          "rationale": "Allowing escalation replicates the destructive pattern; interrupting and going beneath the surface content is the intervention."
+        },
+        {
+          "text": "Let the argument run, so you can see the whole pattern",
+          "correct": false,
+          "rationale": "Brief observation is useful, but permitting full escalation is harmful and models nothing new."
+        },
+        {
+          "text": "Work out which partner is factually right and say so",
+          "correct": false,
+          "rationale": "Adjudicating content destroys neutrality and misses the process."
+        },
+        {
+          "text": "End the session early, to head off any further conflict",
+          "correct": false,
+          "rationale": "Ending on an escalation leaves the couple to continue it unsupported."
+        }
       ],
       "explanation": "Beneath hostility there is usually a softer primary emotion — hurt, fear of abandonment, shame — and EFT works precisely by helping partners express that instead of the secondary anger. Sessions should not end mid-escalation.",
-      "refs": ["div12-treatments", "samhsa-tip65", "nice-attachment"]
+      "refs": [
+        "div12-treatments",
+        "samhsa-tip65",
+        "nice-attachment"
+      ]
     },
     {
       "id": "d5-child-098",
       "type": "mcq",
       "domain": "D5",
       "task": "5A",
-      "cacrep": ["human-growth", "helping-relationships"],
-      "tags": ["parent-training", "behavioral", "children"],
+      "cacrep": [
+        "human-growth",
+        "helping-relationships"
+      ],
+      "tags": [
+        "parent-training",
+        "behavioral",
+        "children"
+      ],
       "prompt": "Which approach has the strongest evidence for childhood disruptive behaviour problems?",
       "choices": [
-        { "text": "Behavioural parent training, which works primarily through changing parental responses", "correct": true, "rationale": "Parent training has the strongest evidence base for disruptive behaviour in young children, exceeding child-only treatment." },
-        { "text": "Individual play therapy with the child alone", "correct": false, "rationale": "Less effective for disruptive behaviour than parent-mediated approaches." },
-        { "text": "Group therapy with other children who have similar behaviour problems", "correct": false, "rationale": "Aggregating behaviourally disordered peers risks deviancy training." },
-        { "text": "Insight-oriented individual therapy exploring the child's feelings", "correct": false, "rationale": "Limited evidence for this indication." }
+        {
+          "text": "Behavioural parent training, changing how parents respond",
+          "correct": true,
+          "rationale": "Parent training has the strongest evidence base for disruptive behaviour in young children, exceeding child-only treatment."
+        },
+        {
+          "text": "Individual play therapy, with the child seen alone",
+          "correct": false,
+          "rationale": "Less effective for disruptive behaviour than parent-mediated approaches."
+        },
+        {
+          "text": "Group therapy alongside other children with the same problems",
+          "correct": false,
+          "rationale": "Aggregating behaviourally disordered peers risks deviancy training."
+        },
+        {
+          "text": "Insight-oriented therapy exploring the child's own feelings",
+          "correct": false,
+          "rationale": "Limited evidence for this indication."
+        }
       ],
       "explanation": "The counterintuitive point for parents is that the most effective 'child' treatment often involves the child minimally. Programmes such as PCIT and Incredible Years teach differential attention, effective commands, and consistent consequences.",
-      "refs": ["div12-treatments", "nimh-adhd", "statpearls-milestones"]
+      "refs": [
+        "div12-treatments",
+        "nimh-adhd",
+        "statpearls-milestones"
+      ]
     },
     {
       "id": "d5-school-099",
       "type": "mcq",
       "domain": "D5",
       "task": "5C",
-      "cacrep": ["helping-relationships"],
-      "tags": ["school-counseling", "consultation", "systems"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "school-counseling",
+        "consultation",
+        "systems"
+      ],
       "prompt": "A school counselor works with a teacher to change classroom responses to a student's behaviour. What service is this?",
       "choices": [
-        { "text": "Consultation — an indirect service in which the counselor works with a consultee to benefit a third party", "correct": true, "rationale": "Consultation is triadic: counselor, consultee, and the client who benefits indirectly." },
-        { "text": "Counseling, since the counselor is providing a therapeutic service", "correct": false, "rationale": "The teacher is not a counseling client; the relationship is professional and work-focused." },
-        { "text": "Supervision, since the counselor is guiding the teacher's practice", "correct": false, "rationale": "Supervision involves evaluative authority over a supervisee's professional work." },
-        { "text": "Advocacy, since the counselor is acting on the student's behalf", "correct": false, "rationale": "Advocacy targets barriers and systems; this is a collaborative problem-solving relationship." }
+        {
+          "text": "Consultation — working with one person to help a third",
+          "correct": true,
+          "rationale": "Consultation is triadic: counselor, consultee, and the client who benefits indirectly."
+        },
+        {
+          "text": "Counseling, since a therapeutic service is being provided",
+          "correct": false,
+          "rationale": "The teacher is not a counseling client; the relationship is professional and work-focused."
+        },
+        {
+          "text": "Supervision, since the counselor is guiding their practice",
+          "correct": false,
+          "rationale": "Supervision involves evaluative authority over a supervisee's professional work."
+        },
+        {
+          "text": "Advocacy, since the counselor acts for the student",
+          "correct": false,
+          "rationale": "Advocacy targets barriers and systems; this is a collaborative problem-solving relationship."
+        }
       ],
       "explanation": "Consultation is non-hierarchical and the consultee retains the right to reject recommendations — a key difference from supervision, where the supervisor holds responsibility and evaluative power.",
-      "refs": ["aca-ethics", "cacrep-standards"]
+      "refs": [
+        "aca-ethics",
+        "cacrep-standards"
+      ]
     },
     {
       "id": "d5-career-100",
       "type": "mcq",
       "domain": "D5",
       "task": "5Y",
-      "cacrep": ["career", "helping-relationships"],
-      "tags": ["career-counseling", "process", "intervention"],
+      "cacrep": [
+        "career",
+        "helping-relationships"
+      ],
+      "tags": [
+        "career-counseling",
+        "process",
+        "intervention"
+      ],
       "prompt": "A client is paralyzed by career indecision. What is generally the most useful first step?",
       "choices": [
-        { "text": "Clarify what kind of indecision it is — lack of information, lack of self-knowledge, anxiety about committing, or external constraint — since each calls for a different intervention", "correct": true, "rationale": "Indecision is a symptom with several distinct causes, and matching intervention to cause is what makes career counseling effective." },
-        { "text": "Administer an interest inventory immediately", "correct": false, "rationale": "Assessment is useful but premature before the nature of the difficulty is understood." },
-        { "text": "Provide occupational information about growing fields", "correct": false, "rationale": "Information helps only when the barrier is informational." },
-        { "text": "Encourage the client to choose any option and commit to it", "correct": false, "rationale": "Forcing a decision does not address the underlying difficulty." }
+        {
+          "text": "Work out what kind of stuck this is — each needs something different",
+          "correct": true,
+          "rationale": "Indecision is a symptom with several distinct causes, and matching intervention to cause is what makes career counseling effective."
+        },
+        {
+          "text": "Give them an interest inventory to complete straight away",
+          "correct": false,
+          "rationale": "Assessment is useful but premature before the nature of the difficulty is understood."
+        },
+        {
+          "text": "Provide occupational information about the growing fields",
+          "correct": false,
+          "rationale": "Information helps only when the barrier is informational."
+        },
+        {
+          "text": "Encourage them to pick something and commit to it",
+          "correct": false,
+          "rationale": "Forcing a decision does not address the underlying difficulty."
+        }
       ],
       "explanation": "Distinguish developmental indecision — normal and resolvable — from chronic indecisiveness, a trait-like difficulty deciding across domains that often reflects anxiety and may need attention in its own right.",
-      "refs": ["ncda", "onet", "bls-ooh"]
+      "refs": [
+        "ncda",
+        "onet",
+        "bls-ooh"
+      ]
     },
     {
       "id": "d5-career-101",
       "type": "mcq",
       "domain": "D5",
       "task": "5Y",
-      "cacrep": ["career"],
-      "tags": ["career-counseling", "job-search", "skills"],
+      "cacrep": [
+        "career"
+      ],
+      "tags": [
+        "career-counseling",
+        "job-search",
+        "skills"
+      ],
       "prompt": "What does effective job-search counseling include beyond résumé preparation?",
       "choices": [
-        { "text": "Networking strategy, interview rehearsal, managing rejection and search-related demoralization, and structuring the search itself", "correct": true, "rationale": "Job searching is a sustained behavioural and emotional task; documents are only one part of it." },
-        { "text": "Only résumé and cover letter optimization, since these determine outcomes", "correct": false, "rationale": "Most positions are filled through networks rather than cold applications." },
-        { "text": "Directing the client toward the fastest-growing occupations regardless of fit", "correct": false, "rationale": "Ignoring fit produces poor retention and satisfaction." },
-        { "text": "Advising the client to accept the first available offer", "correct": false, "rationale": "Directive advice on a major decision exceeds the counselor's role." }
+        {
+          "text": "Networking, interview practice, and handling rejection",
+          "correct": true,
+          "rationale": "Job searching is a sustained behavioural and emotional task; documents are only one part of it."
+        },
+        {
+          "text": "Only the résumé and cover letter, since those decide it",
+          "correct": false,
+          "rationale": "Most positions are filled through networks rather than cold applications."
+        },
+        {
+          "text": "Steering them to the fastest-growing jobs, whatever the fit",
+          "correct": false,
+          "rationale": "Ignoring fit produces poor retention and satisfaction."
+        },
+        {
+          "text": "Advising the client to take the first offer that comes",
+          "correct": false,
+          "rationale": "Directive advice on a major decision exceeds the counselor's role."
+        }
       ],
       "explanation": "The emotional dimension is routinely underestimated: extended searching with repeated rejection is a documented risk factor for depression, and structure plus support materially improves persistence.",
-      "refs": ["ncda", "bls-ooh", "onet", "nimh-depression"]
+      "refs": [
+        "ncda",
+        "bls-ooh",
+        "onet",
+        "nimh-depression"
+      ]
     },
     {
       "id": "d5-teletherapy-102",
       "type": "mcq",
       "domain": "D5",
       "task": "5X",
-      "cacrep": ["helping-relationships"],
-      "tags": ["telehealth", "alliance", "adaptation"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "telehealth",
+        "alliance",
+        "adaptation"
+      ],
       "prompt": "What adaptation most helps maintain therapeutic presence in video sessions?",
       "choices": [
-        { "text": "Making nonverbal attunement explicit — naming what is observed and checking understanding more often, since subtle cues are lost", "correct": true, "rationale": "Video compresses nonverbal information, so what would be read implicitly in person must be verbalized." },
-        { "text": "Speaking more loudly to compensate for the medium", "correct": false, "rationale": "Volume does not address the loss of nonverbal information." },
-        { "text": "Shortening sessions to reduce screen fatigue", "correct": false, "rationale": "May help occasionally but does not address presence." },
-        { "text": "Avoiding emotionally intense material in video sessions", "correct": false, "rationale": "Telehealth can handle intense material with appropriate preparation and safety planning." }
+        {
+          "text": "Say out loud what you notice, since the small cues are lost",
+          "correct": true,
+          "rationale": "Video compresses nonverbal information, so what would be read implicitly in person must be verbalized."
+        },
+        {
+          "text": "Speaking more loudly, to make up for the medium",
+          "correct": false,
+          "rationale": "Volume does not address the loss of nonverbal information."
+        },
+        {
+          "text": "Shortening the sessions, to cut down on screen fatigue",
+          "correct": false,
+          "rationale": "May help occasionally but does not address presence."
+        },
+        {
+          "text": "Steering clear of intense material in video sessions",
+          "correct": false,
+          "rationale": "Telehealth can handle intense material with appropriate preparation and safety planning."
+        }
       ],
       "explanation": "Research generally finds comparable alliance and outcomes between video and in-person therapy for many presentations. The practical adjustments are technical and communicative rather than clinical avoidance.",
-      "refs": ["aca-ethics", "div12-treatments", "nbcc-ethics"]
+      "refs": [
+        "aca-ethics",
+        "div12-treatments",
+        "nbcc-ethics"
+      ]
     },
     {
       "id": "d5-documentation-103",
       "type": "mcq",
       "domain": "D5",
       "task": "5D",
-      "cacrep": ["helping-relationships"],
-      "tags": ["intervention-documentation", "notes"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "intervention-documentation",
+        "notes"
+      ],
       "prompt": "Which progress note entry best documents an intervention?",
       "choices": [
-        { "text": "'Counselor used guided discovery to examine the client's belief that asking for help proves incompetence; client generated two counter-examples.'", "correct": true, "rationale": "It names the specific intervention, the target, and the client's response — the elements a reviewer looks for." },
-        { "text": "'Client discussed work stress. Supportive counseling provided.'", "correct": false, "rationale": "Vague and unlinked to any goal or identifiable technique." },
-        { "text": "'Good session. Client seems to be making progress.'", "correct": false, "rationale": "Impressionistic with no clinical content." },
-        { "text": "'Client talked about their week for 50 minutes.'", "correct": false, "rationale": "Describes time passing rather than clinical work." }
+        {
+          "text": "'Used guided discovery on the belief that asking help = weak.'",
+          "correct": true,
+          "rationale": "It names the specific intervention, the target, and the client's response — the elements a reviewer looks for."
+        },
+        {
+          "text": "'Client discussed work stress. Supportive counseling given.'",
+          "correct": false,
+          "rationale": "Vague and unlinked to any goal or identifiable technique."
+        },
+        {
+          "text": "'Good session. Client seems to be making some progress.'",
+          "correct": false,
+          "rationale": "Impressionistic with no clinical content."
+        },
+        {
+          "text": "'Client talked about their week for the full 50 minutes.'",
+          "correct": false,
+          "rationale": "Describes time passing rather than clinical work."
+        }
       ],
       "explanation": "The pattern to internalize: intervention used, target it addressed, client response, and plan. Notes that never name an intervention make it impossible to demonstrate that treatment occurred.",
-      "refs": ["aca-ethics", "hhs-hipaa-privacy"]
+      "refs": [
+        "aca-ethics",
+        "hhs-hipaa-privacy"
+      ]
     },
     {
       "id": "d5-eval-104",
       "type": "mcq",
       "domain": "D5",
       "task": "5D",
-      "cacrep": ["helping-relationships", "research"],
-      "tags": ["single-case-design", "evaluation"],
+      "cacrep": [
+        "helping-relationships",
+        "research"
+      ],
+      "tags": [
+        "single-case-design",
+        "evaluation"
+      ],
       "prompt": "A counselor tracks a client's panic frequency for two weeks before beginning treatment, then continues tracking during it. What design is this?",
       "choices": [
-        { "text": "An AB single-case design, with a baseline phase followed by an intervention phase", "correct": true, "rationale": "A is the baseline and B the intervention; this is the basic single-subject design used in practice evaluation." },
-        { "text": "A randomized controlled trial", "correct": false, "rationale": "There is no randomization or control group." },
-        { "text": "A cross-sectional survey", "correct": false, "rationale": "Cross-sectional designs measure at a single point across individuals." },
-        { "text": "A quasi-experimental cohort study", "correct": false, "rationale": "Cohort designs follow groups rather than a single case." }
+        {
+          "text": "An AB single-case design — baseline, then intervention",
+          "correct": true,
+          "rationale": "A is the baseline and B the intervention; this is the basic single-subject design used in practice evaluation."
+        },
+        {
+          "text": "A randomised controlled trial with a comparison group",
+          "correct": false,
+          "rationale": "There is no randomization or control group."
+        },
+        {
+          "text": "A cross-sectional survey taken at a single time point",
+          "correct": false,
+          "rationale": "Cross-sectional designs measure at a single point across individuals."
+        },
+        {
+          "text": "A quasi-experimental cohort study following two groups",
+          "correct": false,
+          "rationale": "Cohort designs follow groups rather than a single case."
+        }
       ],
       "explanation": "AB designs cannot rule out coincidental change, which is why ABAB (withdrawal) and multiple-baseline designs exist. Even so, systematic baseline measurement is far better practice-based evidence than impression alone.",
-      "refs": ["oer-research-methods", "apa-testing-standards"]
+      "refs": [
+        "oer-research-methods",
+        "apa-testing-standards"
+      ]
     },
     {
       "id": "d5-supervision-105",
       "type": "mcq",
       "domain": "D5",
       "task": "5D",
-      "cacrep": ["helping-relationships", "professional-ethics"],
-      "tags": ["supervision", "models", "development"],
+      "cacrep": [
+        "helping-relationships",
+        "professional-ethics"
+      ],
+      "tags": [
+        "supervision",
+        "models",
+        "development"
+      ],
       "prompt": "In developmental models of supervision, how does supervisor behaviour change as a supervisee gains experience?",
       "choices": [
-        { "text": "From more structure, instruction, and direct guidance toward greater collaboration, autonomy, and consultation", "correct": true, "rationale": "Developmental models match supervisory style to the supervisee's level, reducing structure as competence and autonomy grow." },
-        { "text": "From collaboration toward increasing direction as expectations rise", "correct": false, "rationale": "This reverses the developmental progression." },
-        { "text": "Supervisory style should remain constant for consistency", "correct": false, "rationale": "Fixed style under- or over-supports depending on the supervisee's stage." },
-        { "text": "From clinical focus toward exclusively administrative oversight", "correct": false, "rationale": "Clinical supervision remains clinical throughout." }
+        {
+          "text": "From structure and instruction toward autonomy",
+          "correct": true,
+          "rationale": "Developmental models match supervisory style to the supervisee's level, reducing structure as competence and autonomy grow."
+        },
+        {
+          "text": "From collaboration toward more direction as demands rise",
+          "correct": false,
+          "rationale": "This reverses the developmental progression."
+        },
+        {
+          "text": "It should stay constant throughout, for consistency",
+          "correct": false,
+          "rationale": "Fixed style under- or over-supports depending on the supervisee's stage."
+        },
+        {
+          "text": "From clinical focus toward purely administrative oversight",
+          "correct": false,
+          "rationale": "Clinical supervision remains clinical throughout."
+        }
       ],
       "explanation": "The Integrated Developmental Model tracks self-other awareness, motivation, and autonomy across levels. Early supervisees typically show high anxiety with fluctuating confidence; over-challenging them at that stage impedes development.",
-      "refs": ["aca-ethics", "cacrep-standards"]
+      "refs": [
+        "aca-ethics",
+        "cacrep-standards"
+      ]
     },
     {
       "id": "d5-technique-106",
       "type": "mcq",
       "domain": "D5",
       "task": "5AB",
-      "cacrep": ["helping-relationships"],
-      "tags": ["normalizing", "universality", "individual"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "normalizing",
+        "universality",
+        "individual"
+      ],
       "prompt": "A client is ashamed of having intrusive violent thoughts they would never act on. What psychoeducation is most helpful?",
       "choices": [
-        { "text": "That intrusive thoughts of this kind are common in the general population, and that distress about them reflects values rather than danger", "correct": true, "rationale": "Normalizing intrusive thoughts directly targets the shame and the catastrophic interpretation that maintain the distress." },
-        { "text": "That such thoughts indicate suppressed aggression requiring exploration", "correct": false, "rationale": "This confirms the client's feared interpretation and increases distress." },
-        { "text": "That the client should attempt to stop the thoughts whenever they occur", "correct": false, "rationale": "Thought suppression produces rebound and increases frequency." },
-        { "text": "That the thoughts require immediate risk assessment and possible reporting", "correct": false, "rationale": "Ego-dystonic intrusive thoughts without intent are not a risk indicator; over-reaction is harmful." }
+        {
+          "text": "Such thoughts are common, and the distress reflects values",
+          "correct": true,
+          "rationale": "Normalizing intrusive thoughts directly targets the shame and the catastrophic interpretation that maintain the distress."
+        },
+        {
+          "text": "The thoughts point to suppressed aggression worth exploring",
+          "correct": false,
+          "rationale": "This confirms the client's feared interpretation and increases distress."
+        },
+        {
+          "text": "The client should try to stop the thoughts whenever they come",
+          "correct": false,
+          "rationale": "Thought suppression produces rebound and increases frequency."
+        },
+        {
+          "text": "This needs immediate risk assessment and possibly a report",
+          "correct": false,
+          "rationale": "Ego-dystonic intrusive thoughts without intent are not a risk indicator; over-reaction is harmful."
+        }
       ],
       "explanation": "The clinical distinction is between ego-dystonic intrusions — unwanted, distressing, inconsistent with the person's values — and genuine violent ideation with intent. Confusing the two causes real harm to clients with OCD-spectrum presentations.",
-      "refs": ["nimh-ocd", "statpearls-cbt", "div12-treatments"]
+      "refs": [
+        "nimh-ocd",
+        "statpearls-cbt",
+        "div12-treatments"
+      ]
     },
     {
       "id": "d5-mindfulness-107",
       "type": "mcq",
       "domain": "D5",
       "task": "5M",
-      "cacrep": ["helping-relationships"],
-      "tags": ["mindfulness", "contraindication", "trauma"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "mindfulness",
+        "contraindication",
+        "trauma"
+      ],
       "prompt": "What caution applies when introducing extended mindfulness practice to trauma survivors?",
       "choices": [
-        { "text": "Sustained internal attention can increase intrusive memories and dissociation, so practice should be adapted — shorter, eyes open, externally anchored", "correct": true, "rationale": "Turning attention inward without stabilization can be destabilizing for trauma survivors." },
-        { "text": "Mindfulness is contraindicated for anyone with a trauma history", "correct": false, "rationale": "Too absolute; adapted mindfulness is widely used and beneficial in trauma treatment." },
-        { "text": "Mindfulness works only when practised for at least 45 minutes daily", "correct": false, "rationale": "Brief practice is effective and more sustainable." },
-        { "text": "Mindfulness should replace trauma-focused treatment", "correct": false, "rationale": "It complements rather than replaces trauma-focused protocols." }
+        {
+          "text": "Turning inward can worsen it, so adapt — shorter, eyes open",
+          "correct": true,
+          "rationale": "Turning attention inward without stabilization can be destabilizing for trauma survivors."
+        },
+        {
+          "text": "Mindfulness is ruled out for anyone with a trauma history",
+          "correct": false,
+          "rationale": "Too absolute; adapted mindfulness is widely used and beneficial in trauma treatment."
+        },
+        {
+          "text": "Mindfulness only works at 45 minutes or more, daily",
+          "correct": false,
+          "rationale": "Brief practice is effective and more sustainable."
+        },
+        {
+          "text": "Mindfulness should take the place of trauma-focused work",
+          "correct": false,
+          "rationale": "It complements rather than replaces trauma-focused protocols."
+        }
       ],
       "explanation": "Trauma-sensitive adaptations include keeping the eyes open, anchoring attention externally rather than on the breath, offering choice about posture and duration, and permitting the client to stop at any point.",
-      "refs": ["samhsa-tip57", "behavioraltech-dbt", "div12-treatments"]
+      "refs": [
+        "samhsa-tip57",
+        "behavioraltech-dbt",
+        "div12-treatments"
+      ]
     },
     {
       "id": "d5-strengths-108",
       "type": "cloze",
       "domain": "D5",
       "task": "5O",
-      "cacrep": ["helping-relationships"],
-      "tags": ["miracle-question", "solution-focused"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "miracle-question",
+        "solution-focused"
+      ],
       "prompt": "Asking 'Suppose overnight a miracle happened and this problem was solved, but you were asleep — what would you first notice tomorrow that told you things were different?' is the {{miracle question}}.",
       "answer": "miracle question",
       "explanation": "Its function is to produce a concrete, behavioural description of the preferred future, which then becomes the goal. The follow-up that does the real work is 'What is one small piece of that already happening sometimes?'",
-      "refs": ["samhsa-tip65"]
+      "refs": [
+        "samhsa-tip65"
+      ]
     },
     {
       "id": "d5-multicultural-109",
       "type": "mcq",
       "domain": "D5",
       "task": "5H",
-      "cacrep": ["social-cultural"],
-      "tags": ["indigenous-healing", "integration"],
+      "cacrep": [
+        "social-cultural"
+      ],
+      "tags": [
+        "indigenous-healing",
+        "integration"
+      ],
       "prompt": "A client wishes to combine counseling with traditional healing practices from their culture. How should the counselor respond?",
       "choices": [
-        { "text": "Support the client's use of culturally meaningful healing alongside counseling, and coordinate respectfully where the client wishes", "correct": true, "rationale": "Traditional healing is often central to a client's meaning system, and integration is generally more effective than requiring a choice." },
-        { "text": "Explain that only evidence-based treatments should be used", "correct": false, "rationale": "This dismisses the client's framework and misapplies EBP, which explicitly incorporates client values." },
-        { "text": "Agree, but treat the traditional practice as a placebo", "correct": false, "rationale": "A privately dismissive stance is disrespectful and tends to be perceptible to the client." },
-        { "text": "Defer entirely to the traditional healer and withdraw from the case", "correct": false, "rationale": "Withdrawal is unnecessary; concurrent care is usually workable." }
+        {
+          "text": "Support it alongside counseling, coordinating if they wish",
+          "correct": true,
+          "rationale": "Traditional healing is often central to a client's meaning system, and integration is generally more effective than requiring a choice."
+        },
+        {
+          "text": "Explain that only evidence-based treatments should be used",
+          "correct": false,
+          "rationale": "This dismisses the client's framework and misapplies EBP, which explicitly incorporates client values."
+        },
+        {
+          "text": "Go along with it, while privately treating it as a placebo",
+          "correct": false,
+          "rationale": "A privately dismissive stance is disrespectful and tends to be perceptible to the client."
+        },
+        {
+          "text": "Defer to the traditional healer and withdraw from the case",
+          "correct": false,
+          "rationale": "Withdrawal is unnecessary; concurrent care is usually workable."
+        }
       ],
       "explanation": "The main clinical caution is coordinating anything that interacts with medical treatment. Otherwise, indigenous and traditional healing practices frequently address meaning, community, and identity in ways counseling alone does not.",
-      "refs": ["msjcc", "aca-ethics", "div12-treatments"]
+      "refs": [
+        "msjcc",
+        "aca-ethics",
+        "div12-treatments"
+      ]
     },
     {
       "id": "d5-crisis-110",
       "type": "mcq",
       "domain": "D5",
       "task": "5Q",
-      "cacrep": ["helping-relationships"],
-      "tags": ["disaster-response", "community", "triage"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "disaster-response",
+        "community",
+        "triage"
+      ],
       "prompt": "In a community disaster response, what is the counselor's most appropriate initial focus?",
       "choices": [
-        { "text": "Practical needs, safety, and connection to resources and social support, rather than psychological processing of the event", "correct": true, "rationale": "Psychological First Aid prioritizes stabilization and practical assistance; most people recover with support rather than intervention." },
-        { "text": "Encouraging survivors to describe the traumatic event in detail", "correct": false, "rationale": "Required recounting is precisely what debriefing research advises against." },
-        { "text": "Screening everyone for PTSD immediately", "correct": false, "rationale": "PTSD cannot be diagnosed within the first month, and universal immediate screening is not indicated." },
-        { "text": "Beginning trauma-focused therapy with all those exposed", "correct": false, "rationale": "Most exposed people will not develop a disorder; universal treatment is inappropriate." }
+        {
+          "text": "Practical needs, safety, and links to support",
+          "correct": true,
+          "rationale": "Psychological First Aid prioritizes stabilization and practical assistance; most people recover with support rather than intervention."
+        },
+        {
+          "text": "Encouraging survivors to describe the event in detail",
+          "correct": false,
+          "rationale": "Required recounting is precisely what debriefing research advises against."
+        },
+        {
+          "text": "Screening every one of them for PTSD straight away",
+          "correct": false,
+          "rationale": "PTSD cannot be diagnosed within the first month, and universal immediate screening is not indicated."
+        },
+        {
+          "text": "Starting trauma-focused therapy with everyone exposed",
+          "correct": false,
+          "rationale": "Most exposed people will not develop a disorder; universal treatment is inappropriate."
+        }
       ],
       "explanation": "The core insight is that natural recovery is the norm after disaster. Intervention should be available for those who need it, targeted rather than universal, and focused early on safety, calm, connectedness, self-efficacy, and hope.",
-      "refs": ["samhsa-tip57", "nimh-ptsd"]
+      "refs": [
+        "samhsa-tip57",
+        "nimh-ptsd"
+      ]
     },
     {
       "id": "d5-ethics-111",
       "type": "mcq",
       "domain": "D5",
       "task": "5D",
-      "cacrep": ["helping-relationships", "professional-ethics"],
-      "tags": ["evidence-based", "fidelity", "flexibility"],
+      "cacrep": [
+        "helping-relationships",
+        "professional-ethics"
+      ],
+      "tags": [
+        "evidence-based",
+        "fidelity",
+        "flexibility"
+      ],
       "prompt": "What does 'flexibility within fidelity' mean in delivering manualized treatments?",
       "choices": [
-        { "text": "Retaining the treatment's core active components while adapting delivery, pacing, and examples to the individual client", "correct": true, "rationale": "It resolves the false dichotomy between rigid manual adherence and unstructured improvisation." },
-        { "text": "Following the manual exactly regardless of client response", "correct": false, "rationale": "That is rigid fidelity without flexibility." },
-        { "text": "Using the manual only as loose inspiration", "correct": false, "rationale": "That abandons the components responsible for the treatment's effect." },
-        { "text": "Alternating manualized and unstructured sessions", "correct": false, "rationale": "Not what the principle describes." }
+        {
+          "text": "Keeping the active ingredients while adapting the delivery",
+          "correct": true,
+          "rationale": "It resolves the false dichotomy between rigid manual adherence and unstructured improvisation."
+        },
+        {
+          "text": "Following the manual exactly, whatever the client's response",
+          "correct": false,
+          "rationale": "That is rigid fidelity without flexibility."
+        },
+        {
+          "text": "Treating the manual as loose inspiration and no more",
+          "correct": false,
+          "rationale": "That abandons the components responsible for the treatment's effect."
+        },
+        {
+          "text": "Alternating manualised sessions with unstructured ones",
+          "correct": false,
+          "rationale": "Not what the principle describes."
+        }
       ],
       "explanation": "Rigid adherence in the face of client distress or a rupture is associated with worse outcomes. The skill is knowing which elements are the active ingredients and which are packaging.",
-      "refs": ["div12-treatments", "samhsa-tip65", "aca-ethics"]
+      "refs": [
+        "div12-treatments",
+        "samhsa-tip65",
+        "aca-ethics"
+      ]
     },
     {
       "id": "d5-anger-112",
       "type": "mcq",
       "domain": "D5",
       "task": "5U",
-      "cacrep": ["helping-relationships"],
-      "tags": ["time-out", "anger", "technique"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "time-out",
+        "anger",
+        "technique"
+      ],
       "prompt": "What makes a time-out effective as an anger management technique for adults?",
       "choices": [
-        { "text": "Agreeing the signal and duration in advance, leaving without escalating, genuinely calming rather than rehearsing grievances, and returning to finish the conversation", "correct": true, "rationale": "Each element matters; the return is what distinguishes time-out from stonewalling." },
-        { "text": "Leaving the situation and not returning to the topic", "correct": false, "rationale": "Without return it becomes avoidance or stonewalling." },
-        { "text": "Remaining in the situation while suppressing the anger", "correct": false, "rationale": "Suppression is ineffective and physiologically costly." },
-        { "text": "Using the time away to prepare stronger arguments", "correct": false, "rationale": "Rehearsing grievances maintains arousal rather than reducing it." }
+        {
+          "text": "Agree the signal and length, calm down, then come back",
+          "correct": true,
+          "rationale": "Each element matters; the return is what distinguishes time-out from stonewalling."
+        },
+        {
+          "text": "Leaving the situation and never returning to the topic",
+          "correct": false,
+          "rationale": "Without return it becomes avoidance or stonewalling."
+        },
+        {
+          "text": "Staying in the situation while holding the anger down",
+          "correct": false,
+          "rationale": "Suppression is ineffective and physiologically costly."
+        },
+        {
+          "text": "Using the time away to prepare a stronger argument",
+          "correct": false,
+          "rationale": "Rehearsing grievances maintains arousal rather than reducing it."
+        }
       ],
       "explanation": "Gottman's physiological research supports at least 20 minutes for arousal to return to baseline. A time-out taken while mentally continuing the argument achieves nothing.",
-      "refs": ["samhsa-tip65", "div12-treatments"]
+      "refs": [
+        "samhsa-tip65",
+        "div12-treatments"
+      ]
     },
     {
       "id": "d5-severe-113",
       "type": "mcq",
       "domain": "D5",
       "task": "5C",
-      "cacrep": ["helping-relationships"],
-      "tags": ["serious-mental-illness", "recovery", "psychosis"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "serious-mental-illness",
+        "recovery",
+        "psychosis"
+      ],
       "prompt": "What characterizes a recovery-oriented approach to serious mental illness?",
       "choices": [
-        { "text": "Focusing on the person's own goals, hope, self-determination, and meaningful life roles rather than symptom elimination alone", "correct": true, "rationale": "Recovery is defined by a meaningful life with or without ongoing symptoms, not by cure." },
-        { "text": "Maintaining low expectations to protect clients from failure", "correct": false, "rationale": "Low expectations are a documented harm in services for serious mental illness." },
-        { "text": "Prioritizing medication adherence above all other goals", "correct": false, "rationale": "Adherence matters but is not the organizing principle of recovery orientation." },
-        { "text": "Deferring to family members' goals for the client", "correct": false, "rationale": "Recovery orientation centres the client's own goals." }
+        {
+          "text": "Their own goals, hope, and a life worth living",
+          "correct": true,
+          "rationale": "Recovery is defined by a meaningful life with or without ongoing symptoms, not by cure."
+        },
+        {
+          "text": "Keeping expectations low, to protect them from failure",
+          "correct": false,
+          "rationale": "Low expectations are a documented harm in services for serious mental illness."
+        },
+        {
+          "text": "Putting medication adherence above every other goal",
+          "correct": false,
+          "rationale": "Adherence matters but is not the organizing principle of recovery orientation."
+        },
+        {
+          "text": "Deferring to what family members want for the client",
+          "correct": false,
+          "rationale": "Recovery orientation centres the client's own goals."
+        }
       ],
       "explanation": "Supported employment, particularly the Individual Placement and Support model, is among the strongest evidence-based interventions for this population — and directly contradicts the assumption that work should wait for stability.",
-      "refs": ["nimh-schizophrenia", "div12-treatments", "msjcc"]
+      "refs": [
+        "nimh-schizophrenia",
+        "div12-treatments",
+        "msjcc"
+      ]
     },
     {
       "id": "d5-severe-114",
       "type": "mcq",
       "domain": "D5",
       "task": "5F",
-      "cacrep": ["helping-relationships"],
-      "tags": ["psychosis", "cbtp", "engagement"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "psychosis",
+        "cbtp",
+        "engagement"
+      ],
       "prompt": "In CBT for psychosis, how does the counselor approach a client's delusional belief?",
       "choices": [
-        { "text": "Collaboratively and curiously, exploring the evidence and the distress it causes without direct disputation", "correct": true, "rationale": "Direct challenge increases defensiveness; CBTp works through gentle collaborative exploration and reducing distress and interference." },
-        { "text": "By directly disputing the belief with contradictory evidence", "correct": false, "rationale": "Confrontation typically strengthens the belief and damages engagement." },
-        { "text": "By agreeing with the belief to maintain rapport", "correct": false, "rationale": "Collusion is dishonest and can reinforce the belief system." },
-        { "text": "By avoiding the topic entirely and focusing only on functioning", "correct": false, "rationale": "Complete avoidance forgoes useful work and can feel dismissive." }
+        {
+          "text": "Curiously and together, without disputing it head-on",
+          "correct": true,
+          "rationale": "Direct challenge increases defensiveness; CBTp works through gentle collaborative exploration and reducing distress and interference."
+        },
+        {
+          "text": "By disputing the belief with contradictory evidence",
+          "correct": false,
+          "rationale": "Confrontation typically strengthens the belief and damages engagement."
+        },
+        {
+          "text": "By going along with the belief, to keep the rapport",
+          "correct": false,
+          "rationale": "Collusion is dishonest and can reinforce the belief system."
+        },
+        {
+          "text": "By avoiding it entirely and working only on functioning",
+          "correct": false,
+          "rationale": "Complete avoidance forgoes useful work and can feel dismissive."
+        }
       ],
       "explanation": "CBTp targets distress and interference rather than belief conviction as the primary outcome. A client may retain a belief while it occupies far less of their life — a legitimate and meaningful result.",
-      "refs": ["nimh-schizophrenia", "div12-treatments", "statpearls-cbt"]
+      "refs": [
+        "nimh-schizophrenia",
+        "div12-treatments",
+        "statpearls-cbt"
+      ]
     },
     {
       "id": "d5-technique-115",
       "type": "mcq",
       "domain": "D5",
       "task": "5AL",
-      "cacrep": ["helping-relationships"],
-      "tags": ["grounding", "technique", "dissociation"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "grounding",
+        "technique",
+        "dissociation"
+      ],
       "prompt": "Which is a grounding technique appropriate for a client becoming dissociated in session?",
       "choices": [
-        { "text": "Directing attention to immediate sensory input — naming objects in the room, feeling the chair, pressing feet into the floor", "correct": true, "rationale": "Grounding reorients to the present through external sensory anchors, countering dissociation." },
-        { "text": "Encouraging the client to stay with the internal experience and describe it fully", "correct": false, "rationale": "Deepening internal focus during dissociation increases it." },
-        { "text": "Suggesting the client close their eyes and focus on their breathing", "correct": false, "rationale": "Eye closure and internal focus can worsen dissociation, though breathing helps in other contexts." },
-        { "text": "Waiting quietly for the episode to pass", "correct": false, "rationale": "Passive waiting misses the opportunity to teach a transferable skill." }
+        {
+          "text": "Point attention outward — objects, the chair, feet on the floor",
+          "correct": true,
+          "rationale": "Grounding reorients to the present through external sensory anchors, countering dissociation."
+        },
+        {
+          "text": "Encourage them to stay inside it and describe it fully",
+          "correct": false,
+          "rationale": "Deepening internal focus during dissociation increases it."
+        },
+        {
+          "text": "Suggest closing their eyes and focusing on the breath",
+          "correct": false,
+          "rationale": "Eye closure and internal focus can worsen dissociation, though breathing helps in other contexts."
+        },
+        {
+          "text": "Wait quietly and let the episode pass on its own",
+          "correct": false,
+          "rationale": "Passive waiting misses the opportunity to teach a transferable skill."
+        }
       ],
       "explanation": "The 5-4-3-2-1 technique — naming five things seen, four heard, three touched, two smelled, one tasted — is a standard structured version. Practise it during calm sessions so it is available when needed.",
-      "refs": ["samhsa-tip57", "behavioraltech-dbt", "nimh-ptsd"]
+      "refs": [
+        "samhsa-tip57",
+        "behavioraltech-dbt",
+        "nimh-ptsd"
+      ]
     },
     {
       "id": "d5-relapse-116",
       "type": "mcq",
       "domain": "D5",
       "task": "5G",
-      "cacrep": ["helping-relationships"],
-      "tags": ["recovery-capital", "resources"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "recovery-capital",
+        "resources"
+      ],
       "prompt": "What does 'recovery capital' refer to in substance use treatment?",
       "choices": [
-        { "text": "The total internal and external resources a person can draw on to initiate and sustain recovery", "correct": true, "rationale": "It encompasses personal, social, community, and cultural resources, and predicts recovery outcomes." },
-        { "text": "The financial cost of completing a treatment programme", "correct": false, "rationale": "Not a financial concept." },
-        { "text": "The length of time a person has been abstinent", "correct": false, "rationale": "That is recovery duration." },
-        { "text": "The number of treatment episodes a person has completed", "correct": false, "rationale": "Treatment history is not recovery capital." }
+        {
+          "text": "All the resources someone can draw on to sustain recovery",
+          "correct": true,
+          "rationale": "It encompasses personal, social, community, and cultural resources, and predicts recovery outcomes."
+        },
+        {
+          "text": "The financial cost of completing a treatment programme",
+          "correct": false,
+          "rationale": "Not a financial concept."
+        },
+        {
+          "text": "How long the person has managed to stay abstinent",
+          "correct": false,
+          "rationale": "That is recovery duration."
+        },
+        {
+          "text": "How many treatment episodes they have completed",
+          "correct": false,
+          "rationale": "Treatment history is not recovery capital."
+        }
       ],
       "explanation": "The practical value of the concept is that it directs attention to housing, employment, relationships, and community belonging as legitimate treatment targets — not peripheral concerns to address after the substance use resolves.",
-      "refs": ["samhsa-tip42", "samhsa-tip65", "asam-criteria"]
+      "refs": [
+        "samhsa-tip42",
+        "samhsa-tip65",
+        "asam-criteria"
+      ]
     },
     {
       "id": "d5-technique-117",
       "type": "mcq",
       "domain": "D5",
       "task": "5AB",
-      "cacrep": ["helping-relationships"],
-      "tags": ["redirecting", "focus", "session-management"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "redirecting",
+        "focus",
+        "session-management"
+      ],
       "prompt": "A client repeatedly returns to detailed complaints about a colleague, avoiding their own stated goal. How should the counselor redirect?",
       "choices": [
-        { "text": "Acknowledge the frustration, then explicitly connect back to the client's stated goal and ask which they want to spend the time on", "correct": true, "rationale": "Redirecting works best when it validates first and returns choice about the session's use to the client." },
-        { "text": "Interrupt and state that the topic is unproductive", "correct": false, "rationale": "Dismissing the content invalidates the client and damages the alliance." },
-        { "text": "Allow the pattern indefinitely, since the client sets the agenda", "correct": false, "rationale": "Client direction does not require the counselor to ignore avoidance of their own goals." },
-        { "text": "Interpret the avoidance as unconscious resistance and say so", "correct": false, "rationale": "Interpretation is premature and likely to be experienced as accusatory." }
+        {
+          "text": "Acknowledge it, then link back to the goal and ask them",
+          "correct": true,
+          "rationale": "Redirecting works best when it validates first and returns choice about the session's use to the client."
+        },
+        {
+          "text": "Interrupt and say that the topic is unproductive",
+          "correct": false,
+          "rationale": "Dismissing the content invalidates the client and damages the alliance."
+        },
+        {
+          "text": "Let it run indefinitely, since the client sets the agenda",
+          "correct": false,
+          "rationale": "Client direction does not require the counselor to ignore avoidance of their own goals."
+        },
+        {
+          "text": "Name it as unconscious resistance and interpret it",
+          "correct": false,
+          "rationale": "Interpretation is premature and likely to be experienced as accusatory."
+        }
       ],
       "explanation": "Persistent circling around one topic often signals that the stated goal feels unsafe to approach. Naming the pattern gently and asking about it usually yields more than either allowing it or shutting it down.",
-      "refs": ["samhsa-tip65", "samhsa-tip35"]
+      "refs": [
+        "samhsa-tip65",
+        "samhsa-tip35"
+      ]
     },
     {
       "id": "d5-collab-118",
       "type": "mcq",
       "domain": "D5",
       "task": "5N",
-      "cacrep": ["helping-relationships"],
-      "tags": ["peer-support", "recovery", "resources"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "peer-support",
+        "recovery",
+        "resources"
+      ],
       "prompt": "What distinguishes peer support specialists from clinical counselors?",
       "choices": [
-        { "text": "Peer specialists draw on lived experience of recovery to provide mutual support, modelling, and advocacy, rather than clinical treatment", "correct": true, "rationale": "The defining element is shared lived experience and a non-clinical, mutual relationship." },
-        { "text": "Peer specialists are trainee counselors working toward licensure", "correct": false, "rationale": "Peer support is a distinct role, not a stage of clinical training." },
-        { "text": "Peer specialists provide the same services at lower cost", "correct": false, "rationale": "The role differs in kind, not merely in price." },
-        { "text": "Peer specialists work only with clients who have substance use disorders", "correct": false, "rationale": "Peer support operates across mental health and substance use services." }
+        {
+          "text": "They use their own lived recovery to offer mutual support",
+          "correct": true,
+          "rationale": "The defining element is shared lived experience and a non-clinical, mutual relationship."
+        },
+        {
+          "text": "They are trainee counselors working their way toward a licence",
+          "correct": false,
+          "rationale": "Peer support is a distinct role, not a stage of clinical training."
+        },
+        {
+          "text": "They deliver the very same services at a lower cost",
+          "correct": false,
+          "rationale": "The role differs in kind, not merely in price."
+        },
+        {
+          "text": "They work only with clients who have substance problems",
+          "correct": false,
+          "rationale": "Peer support operates across mental health and substance use services."
+        }
       ],
       "explanation": "Peer support has evidence for improving engagement, hope, and self-efficacy, and appears in Yalom's factors as the group analogue — instillation of hope through seeing someone further along the path.",
-      "refs": ["samhsa-tip42", "nimh-schizophrenia", "statpearls-group-therapy"]
+      "refs": [
+        "samhsa-tip42",
+        "nimh-schizophrenia",
+        "statpearls-group-therapy"
+      ]
     },
     {
       "id": "d5-tech-119",
       "type": "mcq",
       "domain": "D5",
       "task": "5X",
-      "cacrep": ["helping-relationships"],
-      "tags": ["apps", "digital", "adjunct"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "apps",
+        "digital",
+        "adjunct"
+      ],
       "prompt": "How should mental health apps be used alongside counseling?",
       "choices": [
-        { "text": "As adjuncts selected for evidence and privacy practices, introduced with a rationale and reviewed in session", "correct": true, "rationale": "Apps supplement treatment; selection should consider evidence and data handling, and use should be reviewed like any homework." },
-        { "text": "As replacements for sessions where clients prefer them", "correct": false, "rationale": "Most apps lack evidence sufficient to replace treatment, and engagement drops sharply without human contact." },
-        { "text": "Freely, since most apps carry no risk", "correct": false, "rationale": "Many collect and share sensitive data; privacy practices vary enormously." },
-        { "text": "Only when prescribed by a physician", "correct": false, "rationale": "No such requirement exists for most wellness apps." }
+        {
+          "text": "As extras chosen for evidence and privacy, then reviewed",
+          "correct": true,
+          "rationale": "Apps supplement treatment; selection should consider evidence and data handling, and use should be reviewed like any homework."
+        },
+        {
+          "text": "As a replacement for sessions, where clients prefer them",
+          "correct": false,
+          "rationale": "Most apps lack evidence sufficient to replace treatment, and engagement drops sharply without human contact."
+        },
+        {
+          "text": "Freely, since most of these apps carry no real risk",
+          "correct": false,
+          "rationale": "Many collect and share sensitive data; privacy practices vary enormously."
+        },
+        {
+          "text": "Only where a physician has specifically prescribed one",
+          "correct": false,
+          "rationale": "No such requirement exists for most wellness apps."
+        }
       ],
       "explanation": "Two practical cautions: consumer app privacy policies frequently permit data sharing that would be unacceptable in clinical care, and unguided app use has notoriously low sustained engagement compared with guided use.",
-      "refs": ["aca-ethics", "hhs-hipaa-privacy", "div12-treatments"]
+      "refs": [
+        "aca-ethics",
+        "hhs-hipaa-privacy",
+        "div12-treatments"
+      ]
     },
     {
       "id": "d5-outcome-120",
       "type": "mcq",
       "domain": "D5",
       "task": "5D",
-      "cacrep": ["helping-relationships"],
-      "tags": ["therapist-effects", "variability"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "therapist-effects",
+        "variability"
+      ],
       "prompt": "What does research on therapist effects show?",
       "choices": [
-        { "text": "Counselors differ substantially and consistently in their outcomes, and these differences often exceed differences between treatment models", "correct": true, "rationale": "Who delivers the treatment accounts for meaningful outcome variance, sometimes more than which treatment is delivered." },
-        { "text": "Outcomes depend almost entirely on the treatment model used", "correct": false, "rationale": "Model differences among bona fide therapies are typically small." },
-        { "text": "Years of experience is the strongest predictor of counselor effectiveness", "correct": false, "rationale": "Experience alone correlates weakly with outcome — a well-replicated and uncomfortable finding." },
-        { "text": "All adequately trained counselors achieve equivalent outcomes", "correct": false, "rationale": "Directly contradicted by the therapist effects literature." }
+        {
+          "text": "Counselors differ, often more than the models do",
+          "correct": true,
+          "rationale": "Who delivers the treatment accounts for meaningful outcome variance, sometimes more than which treatment is delivered."
+        },
+        {
+          "text": "Outcome depends almost entirely on the model being used",
+          "correct": false,
+          "rationale": "Model differences among bona fide therapies are typically small."
+        },
+        {
+          "text": "Years of experience predicts effectiveness best of all",
+          "correct": false,
+          "rationale": "Experience alone correlates weakly with outcome — a well-replicated and uncomfortable finding."
+        },
+        {
+          "text": "Every adequately trained counselor gets the same results",
+          "correct": false,
+          "rationale": "Directly contradicted by the therapist effects literature."
+        }
       ],
       "explanation": "The corollary about experience is why deliberate practice and outcome feedback matter: accumulating years without systematic feedback does not reliably produce improvement.",
-      "refs": ["div12-treatments", "oer-research-methods", "aca-ethics"]
+      "refs": [
+        "div12-treatments",
+        "oer-research-methods",
+        "aca-ethics"
+      ]
     },
     {
       "id": "d5-technique-121",
       "type": "cloze",
       "domain": "D5",
       "task": "5AE",
-      "cacrep": ["helping-relationships"],
-      "tags": ["discrepancy", "motivational-interviewing"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "discrepancy",
+        "motivational-interviewing"
+      ],
       "prompt": "In motivational interviewing, helping a client notice the gap between their current behaviour and their own values or goals is called developing {{discrepancy}}.",
       "answer": "discrepancy",
       "explanation": "The essential qualifier is that the discrepancy must be between the behaviour and the *client's* values, not the counselor's. Discrepancy voiced by the counselor produces defensiveness; discrepancy the client articulates produces motivation.",
-      "refs": ["samhsa-tip35", "mi-org"]
+      "refs": [
+        "samhsa-tip35",
+        "mi-org"
+      ]
     },
     {
       "id": "d5-family-122",
       "type": "mcq",
       "domain": "D5",
       "task": "5K",
-      "cacrep": ["helping-relationships"],
-      "tags": ["joining", "family-therapy", "engagement"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "joining",
+        "family-therapy",
+        "engagement"
+      ],
       "prompt": "What does 'joining' mean in family therapy?",
       "choices": [
-        { "text": "The therapist accommodating to the family's style and structure to be accepted into the system before attempting change", "correct": true, "rationale": "Minuchin's joining is a prerequisite for restructuring — a therapist outside the system has no leverage within it." },
-        { "text": "Bringing extended family members into the sessions", "correct": false, "rationale": "That is expanding the treatment system, not joining." },
-        { "text": "Taking sides with the family member the therapist finds most credible", "correct": false, "rationale": "That is alignment, which if permanent destroys therapeutic position." },
-        { "text": "Combining two families in conjoint treatment", "correct": false, "rationale": "Not the meaning of the term." }
+        {
+          "text": "Fitting in with the family's style before changing anything",
+          "correct": true,
+          "rationale": "Minuchin's joining is a prerequisite for restructuring — a therapist outside the system has no leverage within it."
+        },
+        {
+          "text": "Bringing extended family members into the sessions too",
+          "correct": false,
+          "rationale": "That is expanding the treatment system, not joining."
+        },
+        {
+          "text": "Siding with whichever family member seems most credible",
+          "correct": false,
+          "rationale": "That is alignment, which if permanent destroys therapeutic position."
+        },
+        {
+          "text": "Combining two separate families into conjoint treatment",
+          "correct": false,
+          "rationale": "Not the meaning of the term."
+        }
       ],
       "explanation": "Joining techniques include mimesis (matching the family's affect and pace), tracking (following their content and language), and maintenance (supporting the existing structure initially). Attempting restructuring before joining reliably fails.",
-      "refs": ["samhsa-tip65"]
+      "refs": [
+        "samhsa-tip65"
+      ]
     },
     {
       "id": "d5-technique-123",
       "type": "mcq",
       "domain": "D5",
       "task": "5AL",
-      "cacrep": ["helping-relationships"],
-      "tags": ["pacing", "titration", "trauma"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "pacing",
+        "titration",
+        "trauma"
+      ],
       "prompt": "What does 'titration' mean in trauma-informed practice?",
       "choices": [
-        { "text": "Approaching traumatic material in small, tolerable amounts with regulation between, rather than in a single extended exposure", "correct": true, "rationale": "Titration keeps the client within their window of tolerance while still doing the work." },
-        { "text": "Gradually reducing the frequency of sessions", "correct": false, "rationale": "That is tapering, a different concept." },
-        { "text": "Adjusting medication dosage in coordination with a prescriber", "correct": false, "rationale": "Medication titration is outside the counselor's scope and not the meaning here." },
-        { "text": "Alternating between different therapeutic modalities", "correct": false, "rationale": "Not what the term describes." }
+        {
+          "text": "Taking the trauma in small doses, settling in between",
+          "correct": true,
+          "rationale": "Titration keeps the client within their window of tolerance while still doing the work."
+        },
+        {
+          "text": "Gradually reducing how often the sessions happen",
+          "correct": false,
+          "rationale": "That is tapering, a different concept."
+        },
+        {
+          "text": "Adjusting medication doses alongside the prescriber",
+          "correct": false,
+          "rationale": "Medication titration is outside the counselor's scope and not the meaning here."
+        },
+        {
+          "text": "Alternating between two different therapeutic modalities",
+          "correct": false,
+          "rationale": "Not what the term describes."
+        }
       ],
       "explanation": "Pendulation — deliberately moving between traumatic material and a resourced, safe state — is a related technique from somatic approaches. Both prevent the overwhelm that causes clients to drop out of trauma treatment.",
-      "refs": ["samhsa-tip57", "nimh-ptsd", "behavioraltech-dbt"]
+      "refs": [
+        "samhsa-tip57",
+        "nimh-ptsd",
+        "behavioraltech-dbt"
+      ]
     },
     {
       "id": "d5-alliance-124",
       "type": "mcq",
       "domain": "D5",
       "task": "5E",
-      "cacrep": ["helping-relationships"],
-      "tags": ["rupture", "repair", "types"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "rupture",
+        "repair",
+        "types"
+      ],
       "prompt": "What are the two main types of alliance rupture?",
       "choices": [
-        { "text": "Withdrawal ruptures, where the client disengages or complies superficially, and confrontation ruptures, where the client expresses dissatisfaction directly", "correct": true, "rationale": "Safran and Muran's distinction; withdrawal ruptures are more common and much easier to miss." },
-        { "text": "Verbal and nonverbal ruptures", "correct": false, "rationale": "Not the established typology." },
-        { "text": "Early and late ruptures", "correct": false, "rationale": "Timing is not the classification." },
-        { "text": "Client-caused and counselor-caused ruptures", "correct": false, "rationale": "Ruptures are co-constructed rather than attributable to one party." }
+        {
+          "text": "Withdrawal, going quiet, and confrontation, saying so",
+          "correct": true,
+          "rationale": "Safran and Muran's distinction; withdrawal ruptures are more common and much easier to miss."
+        },
+        {
+          "text": "Verbal ruptures and nonverbal ones, read from behaviour",
+          "correct": false,
+          "rationale": "Not the established typology."
+        },
+        {
+          "text": "Early ruptures and late ruptures in the course of work",
+          "correct": false,
+          "rationale": "Timing is not the classification."
+        },
+        {
+          "text": "Client-caused ruptures and counselor-caused ruptures",
+          "correct": false,
+          "rationale": "Ruptures are co-constructed rather than attributable to one party."
+        }
       ],
       "explanation": "Withdrawal ruptures are the dangerous ones precisely because they look like cooperation — the client agrees, goes quiet, intellectualizes, or simply does not return. Repair begins with noticing and naming.",
-      "refs": ["div12-treatments", "samhsa-tip65"]
+      "refs": [
+        "div12-treatments",
+        "samhsa-tip65"
+      ]
     },
     {
       "id": "d5-multicultural-125",
       "type": "mcq",
       "domain": "D5",
       "task": "5H",
-      "cacrep": ["social-cultural"],
-      "tags": ["colorblind", "ideology", "harm"],
+      "cacrep": [
+        "social-cultural"
+      ],
+      "tags": [
+        "colorblind",
+        "ideology",
+        "harm"
+      ],
       "prompt": "A counselor tells a client of colour 'I don't see race — I treat everyone the same.' What is the problem with this stance?",
       "choices": [
-        { "text": "It denies a salient part of the client's identity and experience, including experiences of racism, and functions as a microinvalidation", "correct": true, "rationale": "Colorblind ideology, though often well-intentioned, communicates that racial experience will not be acknowledged here." },
-        { "text": "It is legally impermissible under anti-discrimination law", "correct": false, "rationale": "The issue is clinical and ethical rather than a legal violation." },
-        { "text": "There is no problem; it demonstrates impartiality", "correct": false, "rationale": "The stance is well documented as harmful in the multicultural counseling literature." },
-        { "text": "It only becomes a problem if the client raises racial issues later", "correct": false, "rationale": "The harm is done at the point the statement forecloses the topic." }
+        {
+          "text": "It erases part of who they are, and invalidates racism",
+          "correct": true,
+          "rationale": "Colorblind ideology, though often well-intentioned, communicates that racial experience will not be acknowledged here."
+        },
+        {
+          "text": "It is legally impermissible under anti-discrimination law",
+          "correct": false,
+          "rationale": "The issue is clinical and ethical rather than a legal violation."
+        },
+        {
+          "text": "There is no problem — it demonstrates real impartiality",
+          "correct": false,
+          "rationale": "The stance is well documented as harmful in the multicultural counseling literature."
+        },
+        {
+          "text": "It only matters if the client raises race later on",
+          "correct": false,
+          "rationale": "The harm is done at the point the statement forecloses the topic."
+        }
       ],
       "explanation": "Treating everyone the same is not the same as treating everyone equitably. The alternative is a multicultural orientation — cultural humility, attention to cultural opportunities in session, and comfort discussing difference.",
-      "refs": ["msjcc", "aca-ethics"]
+      "refs": [
+        "msjcc",
+        "aca-ethics"
+      ]
     },
     {
       "id": "d5-boundaries-126",
       "type": "scenario",
       "domain": "D5",
       "task": "5S",
-      "cacrep": ["helping-relationships", "professional-ethics"],
-      "tags": ["between-session-contact", "boundaries"],
+      "cacrep": [
+        "helping-relationships",
+        "professional-ethics"
+      ],
+      "tags": [
+        "between-session-contact",
+        "boundaries"
+      ],
       "prompt": "A client begins texting the counselor daily between sessions with updates and questions. How should this be handled?",
       "choices": [
-        { "text": "Address it directly, clarify the purpose and limits of between-session contact, and explore what the client needs that sessions are not providing", "correct": true, "rationale": "Boundary clarification plus clinical curiosity about the need addresses both the practical and the therapeutic dimension." },
-        { "text": "Respond to every message to demonstrate availability and care", "correct": false, "rationale": "Unlimited responsiveness is unsustainable and can foster dependence." },
-        { "text": "Stop responding entirely without explanation", "correct": false, "rationale": "Unexplained withdrawal is confusing and can feel like rejection." },
-        { "text": "Terminate the counseling relationship for boundary violation", "correct": false, "rationale": "Disproportionate; the client is likely unaware of the expectation, which should have been set in advance." }
+        {
+          "text": "Raise it, set the limits, and ask what sessions are missing",
+          "correct": true,
+          "rationale": "Boundary clarification plus clinical curiosity about the need addresses both the practical and the therapeutic dimension."
+        },
+        {
+          "text": "Reply to every message, to show that you are available and care",
+          "correct": false,
+          "rationale": "Unlimited responsiveness is unsustainable and can foster dependence."
+        },
+        {
+          "text": "Stop replying altogether, without explaining why",
+          "correct": false,
+          "rationale": "Unexplained withdrawal is confusing and can feel like rejection."
+        },
+        {
+          "text": "End the counseling relationship for a boundary violation",
+          "correct": false,
+          "rationale": "Disproportionate; the client is likely unaware of the expectation, which should have been set in advance."
+        }
       ],
       "explanation": "This is best prevented at informed consent: state the purpose of between-session contact, expected response times, and what to do in an emergency. Escalating contact often signals unmet need or rising risk worth exploring.",
-      "refs": ["aca-ethics", "nbcc-ethics"]
+      "refs": [
+        "aca-ethics",
+        "nbcc-ethics"
+      ]
     },
     {
       "id": "d5-eval-127",
       "type": "mcq",
       "domain": "D5",
       "task": "5D",
-      "cacrep": ["helping-relationships"],
-      "tags": ["case-conceptualization", "formulation"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "case-conceptualization",
+        "formulation"
+      ],
       "prompt": "What is the primary function of a case conceptualization?",
       "choices": [
-        { "text": "To organize assessment information into a coherent explanation of what causes and maintains the client's difficulties, guiding intervention choice", "correct": true, "rationale": "Conceptualization is the bridge between assessment and treatment, explaining rather than merely describing." },
-        { "text": "To summarize the client's presenting complaints for the record", "correct": false, "rationale": "That is a description, not a formulation." },
-        { "text": "To assign the most accurate diagnosis", "correct": false, "rationale": "Diagnosis classifies; conceptualization explains the individual case." },
-        { "text": "To document the counselor's theoretical orientation", "correct": false, "rationale": "Orientation shapes the conceptualization but is not its purpose." }
+        {
+          "text": "To explain what causes and maintains the difficulty",
+          "correct": true,
+          "rationale": "Conceptualization is the bridge between assessment and treatment, explaining rather than merely describing."
+        },
+        {
+          "text": "To summarise the client's presenting complaints for the file",
+          "correct": false,
+          "rationale": "That is a description, not a formulation."
+        },
+        {
+          "text": "To arrive at the most accurate diagnosis available",
+          "correct": false,
+          "rationale": "Diagnosis classifies; conceptualization explains the individual case."
+        },
+        {
+          "text": "To document which theoretical orientation is being used",
+          "correct": false,
+          "rationale": "Orientation shapes the conceptualization but is not its purpose."
+        }
       ],
       "explanation": "The maintaining factors are the practical heart of it, because they are what current intervention can change. Predisposing, precipitating, perpetuating, and protective factors — the four Ps — is a common organizing framework.",
-      "refs": ["div12-treatments", "statpearls-cbt", "samhsa-tip65"]
+      "refs": [
+        "div12-treatments",
+        "statpearls-cbt",
+        "samhsa-tip65"
+      ]
     },
     {
       "id": "d5-group-128",
       "type": "mcq",
       "domain": "D5",
       "task": "5AH",
-      "cacrep": ["group-work"],
-      "tags": ["advice-giving", "group-norms"],
+      "cacrep": [
+        "group-work"
+      ],
+      "tags": [
+        "advice-giving",
+        "group-norms"
+      ],
       "prompt": "Group members respond to one member's distress by rapidly offering advice. Why might the leader intervene?",
       "choices": [
-        { "text": "Because advice-giving often functions to relieve the group's discomfort with distress and short-circuits deeper exploration", "correct": true, "rationale": "Premature advice closes down the emotional work the group is capable of doing." },
-        { "text": "Because members are not qualified to give advice", "correct": false, "rationale": "Qualification is not the issue; members' perspectives are valuable when offered well." },
-        { "text": "Because advice-giving violates confidentiality norms", "correct": false, "rationale": "Unrelated to confidentiality." },
-        { "text": "Because only the leader should offer interventions", "correct": false, "rationale": "Member-to-member interaction is the point of group work." }
+        {
+          "text": "Advice often eases the group's discomfort, not the person's",
+          "correct": true,
+          "rationale": "Premature advice closes down the emotional work the group is capable of doing."
+        },
+        {
+          "text": "Because members are not qualified to be giving advice",
+          "correct": false,
+          "rationale": "Qualification is not the issue; members' perspectives are valuable when offered well."
+        },
+        {
+          "text": "Because giving advice breaches the confidentiality norms",
+          "correct": false,
+          "rationale": "Unrelated to confidentiality."
+        },
+        {
+          "text": "Because only the leader ought to be offering any interventions",
+          "correct": false,
+          "rationale": "Member-to-member interaction is the point of group work."
+        }
       ],
       "explanation": "Yalom placed advice-giving among the lower-order therapeutic factors: the content rarely helps, though the caring it expresses does. The leader's move is to redirect toward sharing personal experience and emotional responses instead.",
-      "refs": ["statpearls-group-therapy"]
+      "refs": [
+        "statpearls-group-therapy"
+      ]
     },
     {
       "id": "d5-technique-129",
       "type": "mcq",
       "domain": "D5",
       "task": "5M",
-      "cacrep": ["helping-relationships"],
-      "tags": ["thought-record", "cbt", "tool"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "thought-record",
+        "cbt",
+        "tool"
+      ],
       "prompt": "What columns does a standard CBT thought record include?",
       "choices": [
-        { "text": "Situation, automatic thought, emotion and intensity, evidence for and against, alternative balanced thought, and re-rated emotion", "correct": true, "rationale": "This structure walks the client through identifying, examining, and revising a thought, with before-and-after emotion ratings." },
-        { "text": "Situation, behaviour, consequence, and reinforcement schedule", "correct": false, "rationale": "That is a functional behavioural analysis (ABC), not a thought record." },
-        { "text": "Trigger, defense mechanism, and unconscious conflict", "correct": false, "rationale": "Psychodynamic concepts, not a CBT thought record." },
-        { "text": "Goal, obstacle, plan, and outcome", "correct": false, "rationale": "Closer to a problem-solving worksheet." }
+        {
+          "text": "Situation, thought, emotion, evidence, alternative, re-rate",
+          "correct": true,
+          "rationale": "This structure walks the client through identifying, examining, and revising a thought, with before-and-after emotion ratings."
+        },
+        {
+          "text": "Situation, behaviour, consequence, reinforcement schedule",
+          "correct": false,
+          "rationale": "That is a functional behavioural analysis (ABC), not a thought record."
+        },
+        {
+          "text": "Trigger, defense mechanism, and the unconscious conflict",
+          "correct": false,
+          "rationale": "Psychodynamic concepts, not a CBT thought record."
+        },
+        {
+          "text": "Goal, obstacle, plan of action, and eventual outcome",
+          "correct": false,
+          "rationale": "Closer to a problem-solving worksheet."
+        }
       ],
       "explanation": "The re-rating step is the one clients most often skip and the one that demonstrates the method works. Start with identifying thoughts and emotions before introducing the full record — the complete form overwhelms many clients initially.",
-      "refs": ["statpearls-cbt", "div12-treatments"]
+      "refs": [
+        "statpearls-cbt",
+        "div12-treatments"
+      ]
     },
     {
       "id": "d5-integration-130",
       "type": "mcq",
       "domain": "D5",
       "task": "5F",
-      "cacrep": ["helping-relationships"],
-      "tags": ["functional-analysis", "abc", "behavioral"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "functional-analysis",
+        "abc",
+        "behavioral"
+      ],
       "prompt": "In a functional behavioural analysis, what does the ABC sequence stand for?",
       "choices": [
-        { "text": "Antecedent, Behaviour, Consequence", "correct": true, "rationale": "Functional analysis identifies what precedes and what follows a behaviour, revealing what maintains it." },
-        { "text": "Activating event, Belief, Consequence", "correct": false, "rationale": "That is Ellis's REBT model — a different ABC that exam items often conflate with this one." },
-        { "text": "Affect, Behaviour, Cognition", "correct": false, "rationale": "These are domains of experience, not a functional analysis." },
-        { "text": "Assessment, Baseline, Change", "correct": false, "rationale": "Not a recognized framework." }
+        {
+          "text": "Antecedent, Behaviour, Consequence",
+          "correct": true,
+          "rationale": "Functional analysis identifies what precedes and what follows a behaviour, revealing what maintains it."
+        },
+        {
+          "text": "Activating event, Belief, Consequence",
+          "correct": false,
+          "rationale": "That is Ellis's REBT model — a different ABC that exam items often conflate with this one."
+        },
+        {
+          "text": "Affect, Behaviour, Cognition",
+          "correct": false,
+          "rationale": "These are domains of experience, not a functional analysis."
+        },
+        {
+          "text": "Assessment, Baseline, Change",
+          "correct": false,
+          "rationale": "Not a recognized framework."
+        }
       ],
       "explanation": "Note the deliberate trap: REBT's ABC (Activating event, Belief, Consequence) and behavioural ABC (Antecedent, Behaviour, Consequence) share an acronym and differ entirely. Context determines which is meant.",
-      "refs": ["statpearls-cbt", "div12-treatments"]
+      "refs": [
+        "statpearls-cbt",
+        "div12-treatments"
+      ]
     },
     {
       "id": "d5-technique-131",
       "type": "mcq",
       "domain": "D5",
       "task": "5AD",
-      "cacrep": ["helping-relationships"],
-      "tags": ["disclosure", "types", "technique"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "disclosure",
+        "types",
+        "technique"
+      ],
       "prompt": "What is the difference between self-involving and self-disclosing counselor statements?",
       "choices": [
-        { "text": "Self-involving statements express the counselor's present reaction to the client; self-disclosing statements reveal information about the counselor's own life", "correct": true, "rationale": "Self-involving disclosure stays in the here-and-now relationship; self-disclosure imports outside content." },
-        { "text": "Self-involving statements are always inappropriate", "correct": false, "rationale": "Self-involving disclosure is generally considered the more therapeutically useful of the two." },
-        { "text": "They are two names for the same technique", "correct": false, "rationale": "They differ in content and function." },
-        { "text": "Self-disclosing statements are limited to professional credentials", "correct": false, "rationale": "Self-disclosure covers a much broader range of personal information." }
+        {
+          "text": "Self-involving is your reaction now; self-disclosing is your life",
+          "correct": true,
+          "rationale": "Self-involving disclosure stays in the here-and-now relationship; self-disclosure imports outside content."
+        },
+        {
+          "text": "Self-involving statements are always inappropriate in session",
+          "correct": false,
+          "rationale": "Self-involving disclosure is generally considered the more therapeutically useful of the two."
+        },
+        {
+          "text": "They are two different names for one and the same technique",
+          "correct": false,
+          "rationale": "They differ in content and function."
+        },
+        {
+          "text": "Self-disclosing is limited to stating your professional credentials",
+          "correct": false,
+          "rationale": "Self-disclosure covers a much broader range of personal information."
+        }
       ],
       "explanation": "'I notice I feel a pull to rescue you right now' is self-involving; 'I went through a divorce too' is self-disclosing. The former usually carries more therapeutic value and less boundary risk.",
-      "refs": ["samhsa-tip65", "aca-ethics"]
+      "refs": [
+        "samhsa-tip65",
+        "aca-ethics"
+      ]
     },
     {
       "id": "d5-eval-132",
       "type": "mcq",
       "domain": "D5",
       "task": "5D",
-      "cacrep": ["helping-relationships"],
-      "tags": ["session-frequency", "intensity"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "session-frequency",
+        "intensity"
+      ],
       "prompt": "What generally justifies increasing session frequency?",
       "choices": [
-        { "text": "Elevated risk, acute deterioration, or an intensive treatment phase requiring closer support", "correct": true, "rationale": "Frequency should follow clinical need, particularly risk and treatment phase." },
-        { "text": "Client preference for more contact, regardless of clinical indication", "correct": false, "rationale": "Preference is relevant but not sufficient on its own, and may reflect dependence." },
-        { "text": "Insurance authorization for additional sessions", "correct": false, "rationale": "Authorization permits but does not indicate." },
-        { "text": "The counselor having open availability in their schedule", "correct": false, "rationale": "Not a clinical criterion." }
+        {
+          "text": "Raised risk, sharp deterioration, or an intensive phase",
+          "correct": true,
+          "rationale": "Frequency should follow clinical need, particularly risk and treatment phase."
+        },
+        {
+          "text": "The client wanting more contact, whatever the clinical picture",
+          "correct": false,
+          "rationale": "Preference is relevant but not sufficient on its own, and may reflect dependence."
+        },
+        {
+          "text": "The insurer having authorised some additional sessions",
+          "correct": false,
+          "rationale": "Authorization permits but does not indicate."
+        },
+        {
+          "text": "The counselor happening to have space in their diary",
+          "correct": false,
+          "rationale": "Not a clinical criterion."
+        }
       ],
       "explanation": "Frequency is also a clinical variable in the other direction: reducing it deliberately during termination gives the client graded practice at managing independently.",
-      "refs": ["aca-ethics", "sprc", "div12-treatments"]
+      "refs": [
+        "aca-ethics",
+        "sprc",
+        "div12-treatments"
+      ]
     },
     {
       "id": "d5-community-133",
       "type": "mcq",
       "domain": "D5",
       "task": "5W",
-      "cacrep": ["social-cultural", "helping-relationships"],
-      "tags": ["prevention", "levels", "public-health"],
+      "cacrep": [
+        "social-cultural",
+        "helping-relationships"
+      ],
+      "tags": [
+        "prevention",
+        "levels",
+        "public-health"
+      ],
       "prompt": "A programme identifies students showing early warning signs and provides targeted support. What level of prevention is this?",
       "choices": [
-        { "text": "Selective or secondary prevention — targeting those at elevated risk before a disorder develops", "correct": true, "rationale": "Selective prevention targets an at-risk subgroup, distinct from universal and from indicated prevention." },
-        { "text": "Universal or primary prevention", "correct": false, "rationale": "Universal prevention is delivered to an entire population regardless of risk." },
-        { "text": "Tertiary prevention", "correct": false, "rationale": "Tertiary prevention reduces disability and relapse in those already affected." },
-        { "text": "Crisis intervention", "correct": false, "rationale": "Crisis intervention responds to an acute event." }
+        {
+          "text": "Selective prevention — aimed at those already at risk",
+          "correct": true,
+          "rationale": "Selective prevention targets an at-risk subgroup, distinct from universal and from indicated prevention."
+        },
+        {
+          "text": "Universal prevention, offered to the whole population",
+          "correct": false,
+          "rationale": "Universal prevention is delivered to an entire population regardless of risk."
+        },
+        {
+          "text": "Tertiary prevention, reducing disability after onset",
+          "correct": false,
+          "rationale": "Tertiary prevention reduces disability and relapse in those already affected."
+        },
+        {
+          "text": "Crisis intervention, responding to an acute event",
+          "correct": false,
+          "rationale": "Crisis intervention responds to an acute event."
+        }
       ],
       "explanation": "The IOM framework runs universal, selective, and indicated; the older public health framework runs primary, secondary, and tertiary. Counseling's professional identity has a strong prevention emphasis, so these appear regularly.",
-      "refs": ["cacrep-standards", "cdc-ace", "sprc"]
+      "refs": [
+        "cacrep-standards",
+        "cdc-ace",
+        "sprc"
+      ]
     },
     {
       "id": "d5-technique-134",
       "type": "cloze",
       "domain": "D5",
       "task": "5AA",
-      "cacrep": ["helping-relationships"],
-      "tags": ["paraphrase", "basic-skills"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "paraphrase",
+        "basic-skills"
+      ],
       "prompt": "Restating the essential content of what a client said in the counselor's own words, without adding interpretation, is a {{paraphrase}}.",
       "answer": "paraphrase",
       "explanation": "Paraphrase addresses content, reflection addresses feeling, and summary integrates multiple threads. Effective paraphrase is shorter than the client's original statement — repeating it at equal length is parroting.",
-      "refs": ["samhsa-tip65", "samhsa-tip35"]
+      "refs": [
+        "samhsa-tip65",
+        "samhsa-tip35"
+      ]
     },
     {
       "id": "d5-technique-135",
       "type": "mcq",
       "domain": "D5",
       "task": "5AC",
-      "cacrep": ["helping-relationships"],
-      "tags": ["nonverbal", "incongruence", "observation"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "nonverbal",
+        "incongruence",
+        "observation"
+      ],
       "prompt": "A client says they are 'completely fine' about a recent breakup while their voice tightens and their eyes fill. What is the most useful response?",
       "choices": [
-        { "text": "Gently note the discrepancy between what they are saying and what the counselor observes, and invite them to comment", "correct": true, "rationale": "Naming incongruence tentatively opens access to feeling the client may not have permission to express." },
-        { "text": "Accept the statement at face value and move on", "correct": false, "rationale": "Accepting the words while ignoring the evident affect misses the material." },
-        { "text": "Tell the client they are clearly not fine", "correct": false, "rationale": "Asserting what the client feels is presumptuous and likely to trigger defence." },
-        { "text": "Wait several sessions for the client to raise it themselves", "correct": false, "rationale": "Unnecessary delay when the material is present now." }
+        {
+          "text": "Gently note the gap between the words and what you see",
+          "correct": true,
+          "rationale": "Naming incongruence tentatively opens access to feeling the client may not have permission to express."
+        },
+        {
+          "text": "Take the statement at face value and move on",
+          "correct": false,
+          "rationale": "Accepting the words while ignoring the evident affect misses the material."
+        },
+        {
+          "text": "Tell the client that they are clearly not fine at all",
+          "correct": false,
+          "rationale": "Asserting what the client feels is presumptuous and likely to trigger defence."
+        },
+        {
+          "text": "Wait a few sessions for them to bring it up themselves",
+          "correct": false,
+          "rationale": "Unnecessary delay when the material is present now."
+        }
       ],
       "explanation": "Where verbal and nonverbal channels conflict, the nonverbal is usually the more reliable indicator. Tentative phrasing — 'I may be misreading this, but...' — keeps the observation an invitation rather than a verdict.",
-      "refs": ["samhsa-tip65", "statpearls-mse"]
+      "refs": [
+        "samhsa-tip65",
+        "statpearls-mse"
+      ]
     },
     {
       "id": "d5-ethics-136",
       "type": "mcq",
       "domain": "D5",
       "task": "5C",
-      "cacrep": ["helping-relationships", "social-cultural"],
-      "tags": ["older-adults", "adaptation", "ageism"],
+      "cacrep": [
+        "helping-relationships",
+        "social-cultural"
+      ],
+      "tags": [
+        "older-adults",
+        "adaptation",
+        "ageism"
+      ],
       "prompt": "What adaptation is most often useful when counseling older adults?",
       "choices": [
-        { "text": "Attending to sensory and pace considerations, addressing cumulative loss, and not assuming decline where none exists", "correct": true, "rationale": "Practical accommodations plus resisting ageist assumptions are the key adaptations; psychotherapy is effective in this population." },
-        { "text": "Focusing primarily on reminiscence, since older adults benefit most from life review", "correct": false, "rationale": "Life review is valuable but is not the default for every older client or presenting problem." },
-        { "text": "Simplifying interventions, since older adults respond less well to complex therapy", "correct": false, "rationale": "An ageist assumption; older adults respond well to standard evidence-based treatments." },
-        { "text": "Involving adult children in all treatment decisions", "correct": false, "rationale": "Autonomy is retained; family involvement requires the client's consent like any other adult." }
+        {
+          "text": "Mind pace and hearing, and don't assume decline",
+          "correct": true,
+          "rationale": "Practical accommodations plus resisting ageist assumptions are the key adaptations; psychotherapy is effective in this population."
+        },
+        {
+          "text": "Focusing on reminiscence, since life review suits them best",
+          "correct": false,
+          "rationale": "Life review is valuable but is not the default for every older client or presenting problem."
+        },
+        {
+          "text": "Simplifying things, since complex therapy suits them less",
+          "correct": false,
+          "rationale": "An ageist assumption; older adults respond well to standard evidence-based treatments."
+        },
+        {
+          "text": "Bringing adult children into all the treatment decisions",
+          "correct": false,
+          "rationale": "Autonomy is retained; family involvement requires the client's consent like any other adult."
+        }
       ],
       "explanation": "Older adults are under-referred for psychotherapy despite responding at least as well as younger adults. Assuming that distress is an inevitable feature of aging is the central clinical error.",
-      "refs": ["nimh-depression", "msjcc", "statpearls-erikson"]
+      "refs": [
+        "nimh-depression",
+        "msjcc",
+        "statpearls-erikson"
+      ]
     },
     {
       "id": "d5-technique-137",
       "type": "mcq",
       "domain": "D5",
       "task": "5O",
-      "cacrep": ["helping-relationships"],
-      "tags": ["commitment", "change-plan", "action"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "commitment",
+        "change-plan",
+        "action"
+      ],
       "prompt": "A client has decided to change and asks what to do next. What does MI's planning process involve?",
       "choices": [
-        { "text": "Developing a specific change plan with the client — what, when, how, who will help, and how progress will be known — and eliciting commitment language", "correct": true, "rationale": "Planning is MI's fourth process, entered once the client is ready, and remains collaborative rather than prescriptive." },
-        { "text": "Providing the counselor's recommended plan, since the client has asked for direction", "correct": false, "rationale": "Even at the planning stage, MI elicits the plan from the client, offering options with permission." },
-        { "text": "Continuing to explore ambivalence to test the decision", "correct": false, "rationale": "Continuing to evoke ambivalence after commitment can undermine it." },
-        { "text": "Referring the client to another provider for action-stage work", "correct": false, "rationale": "No referral is needed; planning is part of MI." }
+        {
+          "text": "Build the plan with them — what, when, and who helps",
+          "correct": true,
+          "rationale": "Planning is MI's fourth process, entered once the client is ready, and remains collaborative rather than prescriptive."
+        },
+        {
+          "text": "Give them the counselor's plan, since they asked for direction",
+          "correct": false,
+          "rationale": "Even at the planning stage, MI elicits the plan from the client, offering options with permission."
+        },
+        {
+          "text": "Keep exploring the ambivalence, to test how firm it is",
+          "correct": false,
+          "rationale": "Continuing to evoke ambivalence after commitment can undermine it."
+        },
+        {
+          "text": "Refer them to another provider for the action-stage work",
+          "correct": false,
+          "rationale": "No referral is needed; planning is part of MI."
+        }
       ],
       "explanation": "MI's four processes run engaging, focusing, evoking, planning — sequential but recursive. Moving to planning prematurely is one of the most common MI errors, and the signal is a return of sustain talk.",
-      "refs": ["samhsa-tip35", "mi-org", "stages-of-change"]
+      "refs": [
+        "samhsa-tip35",
+        "mi-org",
+        "stages-of-change"
+      ]
     },
     {
       "id": "d5-crisis-138",
       "type": "mcq",
       "domain": "D5",
       "task": "5V",
-      "cacrep": ["helping-relationships"],
-      "tags": ["means-restriction", "safety", "collaboration"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "means-restriction",
+        "safety",
+        "collaboration"
+      ],
       "prompt": "How should a counselor approach lethal means restriction with a client at risk?",
       "choices": [
-        { "text": "Collaboratively and non-judgementally, identifying a trusted person to hold or secure the means temporarily, framed as a time-limited safety measure", "correct": true, "rationale": "Collaboration and temporariness make the conversation acceptable; confrontation typically produces refusal." },
-        { "text": "By requiring the client to surrender all means before treatment can continue", "correct": false, "rationale": "Ultimatums damage the alliance and often lead the client to conceal access instead." },
-        { "text": "By avoiding the topic, since it may offend the client", "correct": false, "rationale": "Means restriction is among the most effective suicide prevention interventions and should not be omitted." },
-        { "text": "By notifying family members without the client's knowledge", "correct": false, "rationale": "Covert action breaches confidentiality outside the conditions that would justify it." }
+        {
+          "text": "Together and without judgement, as a temporary measure",
+          "correct": true,
+          "rationale": "Collaboration and temporariness make the conversation acceptable; confrontation typically produces refusal."
+        },
+        {
+          "text": "Require them to surrender everything before treatment goes on",
+          "correct": false,
+          "rationale": "Ultimatums damage the alliance and often lead the client to conceal access instead."
+        },
+        {
+          "text": "Leave the subject alone, since it may offend the client",
+          "correct": false,
+          "rationale": "Means restriction is among the most effective suicide prevention interventions and should not be omitted."
+        },
+        {
+          "text": "Tell family members about it without the client knowing",
+          "correct": false,
+          "rationale": "Covert action breaches confidentiality outside the conditions that would justify it."
+        }
       ],
       "explanation": "The evidence base rests on the impulsivity of many attempts and method-specific lethality: putting time and distance between a person and a highly lethal method saves lives. Framing it as temporary makes agreement far more likely.",
-      "refs": ["sprc", "cdc-suicide-data", "nimh-suicide-prevention"]
+      "refs": [
+        "sprc",
+        "cdc-suicide-data",
+        "nimh-suicide-prevention"
+      ]
     },
     {
       "id": "d5-technique-139",
       "type": "mcq",
       "domain": "D5",
       "task": "5M",
-      "cacrep": ["helping-relationships"],
-      "tags": ["values-clarification", "act", "technique"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "values-clarification",
+        "act",
+        "technique"
+      ],
       "prompt": "Why is values clarification used in acceptance-based approaches?",
       "choices": [
-        { "text": "Because values provide direction and motivation for action that does not depend on feeling better first", "correct": true, "rationale": "Values-guided action can proceed while distress is present, which is central to ACT's model of change." },
-        { "text": "Because identifying values eliminates unwanted emotions", "correct": false, "rationale": "Values work does not remove distress and is not intended to." },
-        { "text": "Because clients must resolve value conflicts before behavioural change is possible", "correct": false, "rationale": "Action can proceed alongside unresolved conflict." },
-        { "text": "Because values determine which diagnosis applies", "correct": false, "rationale": "Values are unrelated to diagnostic classification." }
+        {
+          "text": "Values give direction without waiting to feel better first",
+          "correct": true,
+          "rationale": "Values-guided action can proceed while distress is present, which is central to ACT's model of change."
+        },
+        {
+          "text": "Because naming your values gets rid of unwanted emotions",
+          "correct": false,
+          "rationale": "Values work does not remove distress and is not intended to."
+        },
+        {
+          "text": "Because value conflicts must be settled before any change happens",
+          "correct": false,
+          "rationale": "Action can proceed alongside unresolved conflict."
+        },
+        {
+          "text": "Because a person's values determine which diagnosis fits",
+          "correct": false,
+          "rationale": "Values are unrelated to diagnostic classification."
+        }
       ],
       "explanation": "The distinction ACT draws is between values as ongoing directions — 'being a caring parent' — and goals as achievable endpoints. Directions can be moved toward every day; goals can be failed.",
-      "refs": ["div12-treatments", "behavioraltech-dbt", "statpearls-cbt"]
+      "refs": [
+        "div12-treatments",
+        "behavioraltech-dbt",
+        "statpearls-cbt"
+      ]
     },
     {
       "id": "d5-relationship-140",
       "type": "mcq",
       "domain": "D5",
       "task": "5E",
-      "cacrep": ["helping-relationships"],
-      "tags": ["real-relationship", "genuineness"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "real-relationship",
+        "genuineness"
+      ],
       "prompt": "What is meant by the 'real relationship' in counseling, as distinct from transference and the working alliance?",
       "choices": [
-        { "text": "The genuine person-to-person connection between counselor and client, characterized by realistic perception and authentic liking or regard", "correct": true, "rationale": "It is distinguished from transference (distorted perception) and from the task-focused working alliance." },
-        { "text": "The contractual agreement about fees and scheduling", "correct": false, "rationale": "That is the business frame, not a relational construct." },
-        { "text": "The relationship as it exists outside the counseling room", "correct": false, "rationale": "There should be no relationship outside the counseling context." },
-        { "text": "The client's accurate report of events in their life", "correct": false, "rationale": "Unrelated to the construct." }
+        {
+          "text": "The genuine person-to-person bond between the two of you",
+          "correct": true,
+          "rationale": "It is distinguished from transference (distorted perception) and from the task-focused working alliance."
+        },
+        {
+          "text": "The contractual agreement covering fees and scheduling",
+          "correct": false,
+          "rationale": "That is the business frame, not a relational construct."
+        },
+        {
+          "text": "The relationship as it exists outside the counseling room",
+          "correct": false,
+          "rationale": "There should be no relationship outside the counseling context."
+        },
+        {
+          "text": "The client's accurate account of events in their own life",
+          "correct": false,
+          "rationale": "Unrelated to the construct."
+        }
       ],
       "explanation": "Gelso's tripartite model treats the working alliance, transference-countertransference, and the real relationship as three components operating simultaneously. The real relationship correlates with outcome independently of alliance.",
-      "refs": ["div12-treatments", "samhsa-tip65"]
+      "refs": [
+        "div12-treatments",
+        "samhsa-tip65"
+      ]
     },
     {
       "id": "d5-technique-141",
       "type": "mcq",
       "domain": "D5",
       "task": "5AB",
-      "cacrep": ["helping-relationships"],
-      "tags": ["externalizing", "shame", "language"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "externalizing",
+        "shame",
+        "language"
+      ],
       "prompt": "Why does externalizing language reduce shame for clients?",
       "choices": [
-        { "text": "Because separating the person from the problem allows them to examine it without defending their identity", "correct": true, "rationale": "When the problem is the identity, examination feels like self-attack; externalizing creates room to look at it." },
-        { "text": "Because it denies the client's responsibility for their behaviour", "correct": false, "rationale": "Externalizing does not remove agency; narrative work explicitly engages the client's response to the problem." },
-        { "text": "Because it makes the problem seem less serious", "correct": false, "rationale": "Minimization is not the mechanism." },
-        { "text": "Because it shifts responsibility to family members", "correct": false, "rationale": "Externalizing separates person from problem, not person from accountability." }
+        {
+          "text": "Separating person from problem means no identity to defend",
+          "correct": true,
+          "rationale": "When the problem is the identity, examination feels like self-attack; externalizing creates room to look at it."
+        },
+        {
+          "text": "Because it lets the client off the hook for their behaviour",
+          "correct": false,
+          "rationale": "Externalizing does not remove agency; narrative work explicitly engages the client's response to the problem."
+        },
+        {
+          "text": "Because it makes the problem seem a good deal less serious",
+          "correct": false,
+          "rationale": "Minimization is not the mechanism."
+        },
+        {
+          "text": "Because it moves the responsibility onto family members",
+          "correct": false,
+          "rationale": "Externalizing separates person from problem, not person from accountability."
+        }
       ],
       "explanation": "Compare 'you are an anxious person' with 'anxiety has been telling you to stay home'. The second invites a relationship to the problem — including resistance to it — where the first describes a fixed trait.",
-      "refs": ["samhsa-tip65"]
+      "refs": [
+        "samhsa-tip65"
+      ]
     },
     {
       "id": "d5-community-142",
       "type": "mcq",
       "domain": "D5",
       "task": "5W",
-      "cacrep": ["social-cultural"],
-      "tags": ["advocacy", "systems-change", "counselor-role"],
+      "cacrep": [
+        "social-cultural"
+      ],
+      "tags": [
+        "advocacy",
+        "systems-change",
+        "counselor-role"
+      ],
       "prompt": "A counselor notices that most clients from one neighbourhood face the same eviction-related crisis. What is the appropriate systems-level response?",
       "choices": [
-        { "text": "Address individual needs while also engaging in community-level advocacy or collaboration to address the shared structural cause", "correct": true, "rationale": "Advocacy competencies expect counselors to act beyond the individual level when a pattern indicates a structural cause." },
-        { "text": "Continue treating each client individually, since systems work is outside the counselor's role", "correct": false, "rationale": "Systems-level advocacy is an established part of the counselor role." },
-        { "text": "Refer all affected clients to legal aid and close the cases", "correct": false, "rationale": "Referral is appropriate but does not exhaust the counselor's response to a population-level pattern." },
-        { "text": "Focus on helping clients accept circumstances they cannot change", "correct": false, "rationale": "Treating a changeable structural problem as immutable is a failure of advocacy." }
+        {
+          "text": "Treat the individuals and take on the shared cause too",
+          "correct": true,
+          "rationale": "Advocacy competencies expect counselors to act beyond the individual level when a pattern indicates a structural cause."
+        },
+        {
+          "text": "Keep treating each client individually, since systems aren't the job",
+          "correct": false,
+          "rationale": "Systems-level advocacy is an established part of the counselor role."
+        },
+        {
+          "text": "Refer everyone affected to legal aid and close the cases",
+          "correct": false,
+          "rationale": "Referral is appropriate but does not exhaust the counselor's response to a population-level pattern."
+        },
+        {
+          "text": "Help clients accept the circumstances they cannot change",
+          "correct": false,
+          "rationale": "Treating a changeable structural problem as immutable is a failure of advocacy."
+        }
       ],
       "explanation": "The MSJCC place counseling and advocacy interventions across intrapersonal, interpersonal, institutional, community, public policy, and international/global domains. Recognizing a pattern across clients is exactly the trigger for moving up levels.",
-      "refs": ["msjcc", "aca-ethics", "cacrep-standards"]
+      "refs": [
+        "msjcc",
+        "aca-ethics",
+        "cacrep-standards"
+      ]
     },
     {
       "id": "d5-integration-143",
       "type": "mcq",
       "domain": "D5",
       "task": "5F",
-      "cacrep": ["helping-relationships"],
-      "tags": ["technique-selection", "matching", "responsiveness"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "technique-selection",
+        "matching",
+        "responsiveness"
+      ],
       "prompt": "What does 'appropriate responsiveness' mean in psychotherapy research?",
       "choices": [
-        { "text": "Adjusting technique and style in the moment based on the individual client's characteristics, state, and reactions", "correct": true, "rationale": "Responsiveness describes the ongoing tailoring that distinguishes skilled practice from uniform application." },
-        { "text": "Responding quickly to client emails and calls", "correct": false, "rationale": "That is administrative availability, not the research construct." },
-        { "text": "Using only interventions the client explicitly requests", "correct": false, "rationale": "Responsiveness includes clinical judgement, not just client request." },
-        { "text": "Matching the counselor's demographics to the client's", "correct": false, "rationale": "That is demographic matching, a separate question." }
+        {
+          "text": "Adjusting style in the moment to this particular client",
+          "correct": true,
+          "rationale": "Responsiveness describes the ongoing tailoring that distinguishes skilled practice from uniform application."
+        },
+        {
+          "text": "Replying quickly to the client's emails and phone calls",
+          "correct": false,
+          "rationale": "That is administrative availability, not the research construct."
+        },
+        {
+          "text": "Using only those interventions the client has asked for",
+          "correct": false,
+          "rationale": "Responsiveness includes clinical judgement, not just client request."
+        },
+        {
+          "text": "Matching the counselor's demographics to the client's own",
+          "correct": false,
+          "rationale": "That is demographic matching, a separate question."
+        }
       ],
       "explanation": "Responsiveness complicates outcome research, because effective counselors give more of an intervention to clients who need it — which can obscure a technique's effect in aggregate analyses.",
-      "refs": ["div12-treatments", "oer-research-methods", "samhsa-tip65"]
+      "refs": [
+        "div12-treatments",
+        "oer-research-methods",
+        "samhsa-tip65"
+      ]
     },
     {
       "id": "d5-technique-144",
       "type": "mcq",
       "domain": "D5",
       "task": "5AL",
-      "cacrep": ["helping-relationships"],
-      "tags": ["emotion-regulation", "opposite-action", "dbt"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "emotion-regulation",
+        "opposite-action",
+        "dbt"
+      ],
       "prompt": "A client feels intense shame and wants to withdraw and hide, though they have done nothing that violates their values. What DBT skill applies?",
       "choices": [
-        { "text": "Opposite action — acting contrary to the emotion's urge when the emotion does not fit the facts", "correct": true, "rationale": "Opposite action is used when an emotion is unjustified or acting on it would be ineffective; here it would mean staying visible rather than hiding." },
-        { "text": "Radical acceptance of the shame", "correct": false, "rationale": "Radical acceptance applies to unchangeable realities, not to acting on an unjustified emotion." },
-        { "text": "Distress tolerance through distraction", "correct": false, "rationale": "Useful in crisis but does not change the emotion's fit to the facts." },
-        { "text": "Checking the facts only, with no behavioural component", "correct": false, "rationale": "Checking the facts precedes opposite action; on its own it does not address the urge." }
+        {
+          "text": "Opposite action — going against an urge that doesn't fit",
+          "correct": true,
+          "rationale": "Opposite action is used when an emotion is unjustified or acting on it would be ineffective; here it would mean staying visible rather than hiding."
+        },
+        {
+          "text": "Radical acceptance of the shame exactly as it is",
+          "correct": false,
+          "rationale": "Radical acceptance applies to unchangeable realities, not to acting on an unjustified emotion."
+        },
+        {
+          "text": "Distress tolerance, using distraction to get through",
+          "correct": false,
+          "rationale": "Useful in crisis but does not change the emotion's fit to the facts."
+        },
+        {
+          "text": "Checking the facts alone, with nothing done differently",
+          "correct": false,
+          "rationale": "Checking the facts precedes opposite action; on its own it does not address the urge."
+        }
       ],
       "explanation": "The critical qualifier is 'does not fit the facts'. Opposite action is not for suppressing justified emotions — shame that follows a genuine values violation calls for repair, not for acting opposite.",
-      "refs": ["behavioraltech-dbt", "nimh-bpd", "div12-treatments"]
+      "refs": [
+        "behavioraltech-dbt",
+        "nimh-bpd",
+        "div12-treatments"
+      ]
     },
     {
       "id": "d5-closing-145",
       "type": "mcq",
       "domain": "D5",
       "task": "5D",
-      "cacrep": ["helping-relationships"],
-      "tags": ["session-closing", "structure"],
+      "cacrep": [
+        "helping-relationships"
+      ],
+      "tags": [
+        "session-closing",
+        "structure"
+      ],
       "prompt": "What should a well-structured session closing accomplish?",
       "choices": [
-        { "text": "Summarize key points, agree any between-session work, check the client's emotional state, and invite feedback about the session", "correct": true, "rationale": "Closing consolidates the work, ensures the client leaves regulated, and surfaces problems before they become ruptures." },
-        { "text": "End precisely on time regardless of the client's state", "correct": false, "rationale": "Time boundaries matter, but a distressed client needs regulation before leaving — which means planning the closing earlier." },
-        { "text": "Introduce a new topic to consider before the next session", "correct": false, "rationale": "New material at closing cannot be processed and may leave the client unsettled." },
-        { "text": "Provide the counselor's assessment of the client's progress", "correct": false, "rationale": "A one-sided evaluation is less useful than a collaborative summary and feedback." }
+        {
+          "text": "Summarise, agree next steps, check they're steady, ask for feedback",
+          "correct": true,
+          "rationale": "Closing consolidates the work, ensures the client leaves regulated, and surfaces problems before they become ruptures."
+        },
+        {
+          "text": "End exactly on time, whatever state the client is in",
+          "correct": false,
+          "rationale": "Time boundaries matter, but a distressed client needs regulation before leaving — which means planning the closing earlier."
+        },
+        {
+          "text": "Introduce a new topic for them to think about before next time",
+          "correct": false,
+          "rationale": "New material at closing cannot be processed and may leave the client unsettled."
+        },
+        {
+          "text": "Give the counselor's own assessment of how they are progressing",
+          "correct": false,
+          "rationale": "A one-sided evaluation is less useful than a collaborative summary and feedback."
+        }
       ],
       "explanation": "Requesting feedback is the most frequently omitted element and the most protective — it catches misunderstandings and unspoken dissatisfaction while they are still small enough to repair.",
-      "refs": ["statpearls-cbt", "div12-treatments", "samhsa-tip65"]
+      "refs": [
+        "statpearls-cbt",
+        "div12-treatments",
+        "samhsa-tip65"
+      ]
     },
     {
       "id": "d5-group-146",
       "type": "mcq",
       "domain": "D5",
       "task": "5AS",
-      "cacrep": ["group-work"],
-      "tags": ["group-planning", "composition"],
+      "cacrep": [
+        "group-work"
+      ],
+      "tags": [
+        "group-planning",
+        "composition"
+      ],
       "prompt": "What is the general guidance on group composition?",
       "choices": [
-        { "text": "Enough homogeneity for members to identify with one another, and enough heterogeneity to provide differing perspectives and interpersonal learning", "correct": true, "rationale": "Balanced composition supports both cohesion and productive difference." },
-        { "text": "Complete homogeneity, so members share the same presenting problem exactly", "correct": false, "rationale": "Excessive homogeneity can limit perspective and reinforce shared distortions." },
-        { "text": "Maximum heterogeneity, so members learn from very different others", "correct": false, "rationale": "Too much difference impedes identification and cohesion." },
-        { "text": "Composition determined solely by scheduling availability", "correct": false, "rationale": "Practical constraints exist but should not replace clinical judgement about composition." }
+        {
+          "text": "Alike enough to identify, different enough to learn",
+          "correct": true,
+          "rationale": "Balanced composition supports both cohesion and productive difference."
+        },
+        {
+          "text": "Completely alike, all sharing the same presenting problem",
+          "correct": false,
+          "rationale": "Excessive homogeneity can limit perspective and reinforce shared distortions."
+        },
+        {
+          "text": "As different as possible, so members learn from contrast",
+          "correct": false,
+          "rationale": "Too much difference impedes identification and cohesion."
+        },
+        {
+          "text": "Whatever the scheduling availability happens to allow",
+          "correct": false,
+          "rationale": "Practical constraints exist but should not replace clinical judgement about composition."
+        }
       ],
       "explanation": "Homogeneity of ego strength and heterogeneity of interpersonal style is a common formulation. Avoid placing a single member in an isolated position — one man in an otherwise female group, or one adolescent among adults.",
-      "refs": ["statpearls-group-therapy", "aca-ethics"]
+      "refs": [
+        "statpearls-group-therapy",
+        "aca-ethics"
+      ]
     },
     {
       "id": "d5-final-147",
       "type": "mcq",
       "domain": "D5",
       "task": "5AJ",
-      "cacrep": ["helping-relationships", "group-work"],
-      "tags": ["modeling", "learning", "bandura"],
+      "cacrep": [
+        "helping-relationships",
+        "group-work"
+      ],
+      "tags": [
+        "modeling",
+        "learning",
+        "bandura"
+      ],
       "prompt": "How does a counselor's own behaviour function as an intervention?",
       "choices": [
-        { "text": "Through modelling — clients learn from observing how the counselor handles emotion, conflict, mistakes, and boundaries", "correct": true, "rationale": "Observational learning operates continuously, whether or not the counselor intends it." },
-        { "text": "Only when the counselor explicitly demonstrates a technique", "correct": false, "rationale": "Modelling is continuous, not confined to deliberate demonstration." },
-        { "text": "It does not; only explicit interventions produce change", "correct": false, "rationale": "Contradicted by social learning theory and group research." },
-        { "text": "Only in group settings where multiple members observe", "correct": false, "rationale": "Modelling operates in individual work as well." }
+        {
+          "text": "Through modelling — they watch how you handle things",
+          "correct": true,
+          "rationale": "Observational learning operates continuously, whether or not the counselor intends it."
+        },
+        {
+          "text": "Only when the counselor explicitly demonstrates a technique",
+          "correct": false,
+          "rationale": "Modelling is continuous, not confined to deliberate demonstration."
+        },
+        {
+          "text": "It doesn't; only explicit interventions produce any change",
+          "correct": false,
+          "rationale": "Contradicted by social learning theory and group research."
+        },
+        {
+          "text": "Only in groups, where several members are there to observe",
+          "correct": false,
+          "rationale": "Modelling operates in individual work as well."
+        }
       ],
       "explanation": "The most consequential modelling is often around repair: a counselor who acknowledges a mistake without collapsing or becoming defensive demonstrates something many clients have never seen.",
-      "refs": ["statpearls-group-therapy", "samhsa-tip65", "div12-treatments"]
+      "refs": [
+        "statpearls-group-therapy",
+        "samhsa-tip65",
+        "div12-treatments"
+      ]
     },
     {
       "id": "d5-final-148",
       "type": "cloze",
       "domain": "D5",
       "task": "5AU",
-      "cacrep": ["group-work"],
-      "tags": ["group-norms", "development"],
+      "cacrep": [
+        "group-work"
+      ],
+      "tags": [
+        "group-norms",
+        "development"
+      ],
       "prompt": "Group {{norms}} — the implicit and explicit rules governing member behaviour — are shaped early and are strongly influenced by what the leader models and reinforces in the first sessions.",
       "answer": "norms",
       "explanation": "Norms established early are difficult to change later, which is why leaders are more active and structuring in the forming stage. What the leader permits in session one tends to become the standard.",
-      "refs": ["statpearls-group-therapy"]
+      "refs": [
+        "statpearls-group-therapy"
+      ]
     },
     {
       "id": "d5-final-149",
       "type": "mcq",
       "domain": "D5",
       "task": "5C",
-      "cacrep": ["social-cultural", "helping-relationships"],
-      "tags": ["rural", "access", "practice"],
+      "cacrep": [
+        "social-cultural",
+        "helping-relationships"
+      ],
+      "tags": [
+        "rural",
+        "access",
+        "practice"
+      ],
       "prompt": "What practice challenge is distinctive to rural counseling settings?",
       "choices": [
-        { "text": "Unavoidable overlapping relationships and limited referral options, requiring careful boundary management rather than avoidance", "correct": true, "rationale": "In small communities, encountering clients socially is unavoidable; the ethical task is managing it transparently rather than pretending it can be prevented." },
-        { "text": "Clients in rural areas generally have less severe presentations", "correct": false, "rationale": "Rural populations face comparable or greater needs with less access." },
-        { "text": "Confidentiality obligations are relaxed in small communities", "correct": false, "rationale": "Obligations are identical and arguably harder to uphold." },
-        { "text": "Telehealth is unnecessary where communities are close-knit", "correct": false, "rationale": "Telehealth is often especially valuable in rural areas because of distance and provider scarcity." }
+        {
+          "text": "Overlapping relationships you cannot avoid, and few referrals",
+          "correct": true,
+          "rationale": "In small communities, encountering clients socially is unavoidable; the ethical task is managing it transparently rather than pretending it can be prevented."
+        },
+        {
+          "text": "Clients in rural areas generally present with less severity",
+          "correct": false,
+          "rationale": "Rural populations face comparable or greater needs with less access."
+        },
+        {
+          "text": "Confidentiality obligations are relaxed in small communities",
+          "correct": false,
+          "rationale": "Obligations are identical and arguably harder to uphold."
+        },
+        {
+          "text": "Telehealth is unnecessary where the community is close-knit",
+          "correct": false,
+          "rationale": "Telehealth is often especially valuable in rural areas because of distance and provider scarcity."
+        }
       ],
       "explanation": "Practical management includes discussing in advance how the counselor and client will handle meeting in public, documenting unavoidable overlaps and the reasoning, and using consultation. Rigid urban boundary norms are unworkable and can deny access entirely.",
-      "refs": ["aca-ethics", "msjcc", "counseling-compact"]
+      "refs": [
+        "aca-ethics",
+        "msjcc",
+        "counseling-compact"
+      ]
     },
     {
       "id": "d5-final-150",
       "type": "mcq",
       "domain": "D5",
       "task": "5D",
-      "cacrep": ["helping-relationships", "professional-ethics"],
-      "tags": ["deliberate-practice", "development", "expertise"],
+      "cacrep": [
+        "helping-relationships",
+        "professional-ethics"
+      ],
+      "tags": [
+        "deliberate-practice",
+        "development",
+        "expertise"
+      ],
       "prompt": "What does the deliberate practice literature suggest counselors need in order to improve over time?",
       "choices": [
-        { "text": "Systematic feedback on outcomes, focused practice of specific skills at the edge of current ability, and coaching — not merely accumulated caseload hours", "correct": true, "rationale": "Experience without feedback does not reliably produce improvement; deliberate practice supplies the missing elements." },
-        { "text": "Attendance at continuing education workshops", "correct": false, "rationale": "Passive workshop attendance shows limited effect on actual skill." },
-        { "text": "Increased caseload volume to accumulate experience faster", "correct": false, "rationale": "Volume without feedback is the very thing shown not to work." },
-        { "text": "Additional theoretical training in a new orientation", "correct": false, "rationale": "Breadth of theory does not by itself improve outcomes." }
+        {
+          "text": "Feedback on outcomes, focused practice, and coaching",
+          "correct": true,
+          "rationale": "Experience without feedback does not reliably produce improvement; deliberate practice supplies the missing elements."
+        },
+        {
+          "text": "Attending continuing education workshops regularly",
+          "correct": false,
+          "rationale": "Passive workshop attendance shows limited effect on actual skill."
+        },
+        {
+          "text": "A bigger caseload, to build up experience more quickly",
+          "correct": false,
+          "rationale": "Volume without feedback is the very thing shown not to work."
+        },
+        {
+          "text": "Further theoretical training in another orientation",
+          "correct": false,
+          "rationale": "Breadth of theory does not by itself improve outcomes."
+        }
       ],
       "explanation": "This connects to the therapist effects and outcome monitoring findings: knowing your own results is the precondition for improving them, and most counselors substantially overestimate their effectiveness without data.",
-      "refs": ["div12-treatments", "oer-research-methods", "aca-ethics"]
+      "refs": [
+        "div12-treatments",
+        "oer-research-methods",
+        "aca-ethics"
+      ]
     }
   ]
 }

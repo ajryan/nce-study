@@ -211,7 +211,7 @@
           "rationale": "A normal curve is symmetric and unimodal, so the three measures of central tendency coincide."
         },
         {
-          "text": "The mean is above the median, which is above the mode",
+          "text": "The mean sits above the median, which is above the mode",
           "correct": false,
           "rationale": "That ordering describes a positively (right) skewed distribution."
         },
@@ -1804,7 +1804,7 @@
           "rationale": "Purpose is the discriminating factor: disclosure is a clinical intervention, judged by whether it advances the client's work."
         },
         {
-          "text": "Whether the counselor is comfortable sharing the information",
+          "text": "Whether the counselor feels comfortable sharing it with them",
           "correct": false,
           "rationale": "Counselor comfort is about the counselor, which is exactly the wrong reference point."
         },
@@ -1994,7 +1994,7 @@
           "rationale": "Sending session content to a third-party processor is a disclosure of protected health information and must be handled as one."
         },
         {
-          "text": "Whether the transcription comes back grammatically accurate",
+          "text": "Whether the transcription comes back grammatically accurate enough",
           "correct": false,
           "rationale": "Accuracy matters clinically but is secondary to the confidentiality exposure."
         },

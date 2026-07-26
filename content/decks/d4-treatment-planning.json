@@ -129,7 +129,7 @@
           "rationale": "Strengths are most useful when operationalized into the plan, not merely listed on an intake form."
         },
         {
-          "text": "As an encouraging opener before the real problems are raised",
+          "text": "As an encouraging opener before the real problems get raised",
           "correct": false,
           "rationale": "Treating strengths as a courtesy wastes the clinical information they carry."
         },
@@ -889,7 +889,7 @@
           "rationale": "Universality makes this an excellent group indication."
         },
         {
-          "text": "Someone whose difficulties show up in most relationships",
+          "text": "Someone whose difficulties turn up in most of their relationships",
           "correct": false,
           "rationale": "Interpersonal patterns are exactly what process groups are designed to surface and address."
         }
@@ -1015,7 +1015,7 @@
           "rationale": "Internal states without a measurement method are not objectives."
         },
         {
-          "text": "Counselor will teach the client a set of relaxation techniques",
+          "text": "Counselor will teach the client a set of relaxation techniques to use",
           "correct": false,
           "rationale": "This describes the counselor's intervention, not a client objective."
         }
@@ -1708,7 +1708,7 @@
           "rationale": "FIT uses systematic session-by-session feedback, particularly to detect alliance problems and non-response early."
         },
         {
-          "text": "Giving the client feedback on their progress at the end",
+          "text": "Giving the client feedback about their progress at the very end",
           "correct": false,
           "rationale": "FIT collects feedback *from* the client continuously, not only to them at the end."
         },

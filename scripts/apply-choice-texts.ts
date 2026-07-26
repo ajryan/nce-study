@@ -13,7 +13,12 @@ import { join } from 'node:path';
 const patchPath = process.argv[2];
 if (!patchPath) throw new Error('usage: apply-choice-texts.ts <patch.json>');
 
-const patch = JSON.parse(readFileSync(patchPath, 'utf8')) as Record<string, string[]>;
+/**
+ * Either a full array of replacement texts in the card's existing choice order,
+ * or a sparse object keyed by choice index for single-option edits.
+ */
+type CardPatch = string[] | Record<string, string>;
+const patch = JSON.parse(readFileSync(patchPath, 'utf8')) as Record<string, CardPatch>;
 const dir = new URL('../content/decks/', import.meta.url).pathname;
 
 let applied = 0;
@@ -31,12 +36,21 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     if (!next) continue;
     missing.delete(card.id);
     if (!card.choices) throw new Error(`${card.id} has no choices`);
-    if (card.choices.length !== next.length) {
-      throw new Error(`${card.id}: patch has ${next.length} texts, card has ${card.choices.length}`);
+
+    if (Array.isArray(next)) {
+      if (card.choices.length !== next.length) {
+        throw new Error(`${card.id}: patch has ${next.length} texts, card has ${card.choices.length}`);
+      }
+      card.choices.forEach((c, i) => {
+        c.text = next[i]!;
+      });
+    } else {
+      for (const [idx, text] of Object.entries(next)) {
+        const i = Number(idx);
+        if (!card.choices[i]) throw new Error(`${card.id}: no choice at index ${i}`);
+        card.choices[i]!.text = text;
+      }
     }
-    card.choices.forEach((c, i) => {
-      c.text = next[i]!;
-    });
     touched = true;
     applied++;
   }
