@@ -364,7 +364,22 @@ button.wrong .rationale { color: #9a3412; }
 .refs li { margin-bottom: 0.3rem; }
 .refs .cite { color: var(--text-dim); font-size: 0.79rem; display: block; }
 
-.grading { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1.15rem; }
+.grading-prompt {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  margin-bottom: 0.4rem;
+  text-align: center;
+}
+.grading { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0; }
+/* "Again" is not a point on the difficulty scale — it means the answer was
+   wrong — so it reads in the warm "not quite" colour rather than as a rung. */
+.grading button.again {
+  border-color: var(--wrong-border);
+  background: var(--wrong-bg);
+  color: var(--wrong);
+  font-weight: 650;
+}
+.grading button.again:hover { border-color: var(--wrong); background: #ffe0c4; }
 .grading button { flex: 1 1 8rem; text-align: center; }
 .grading .ivl { display: block; font-size: 0.72rem; opacity: 0.85; font-family: var(--mono); }
 

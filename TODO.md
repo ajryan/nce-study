@@ -4,14 +4,7 @@
 
 In priority order:
 
-1. **Rating labels are not a parallel construction.** "Hard / Good / Easy" mixes a judgement
-   of the question with a judgement of the answer, so the three do not answer one question.
-   All three should complete "how difficult was this?" — e.g. Hard / OK / Easy, or
-   "A struggle / Took a moment / Straight away". "Again" is a fourth case and genuinely
-   different: it means *wrong*, not a difficulty. Keep it visually distinct rather than
-   forcing it into the same scale.
-
-2. **Show practice test results on the Progress page, with a placeholder before the first
+1. **Show practice test results on the Progress page, with a placeholder before the first
    one.** Right now a practice test score is the single most exam-like signal in the app and
    it is thrown away the moment you navigate off the results screen.
 
@@ -30,10 +23,10 @@ In priority order:
    Worth deciding while building: whether the Progress headline should stay
    coverage-based or blend in practice-test performance once one exists.
 
-3. **Confirm settings changes visually.** Settings save silently on change, so there is no
+2. **Confirm settings changes visually.** Settings save silently on change, so there is no
    feedback that anything happened. Add an unobtrusive saved indicator.
 
-4. **When the exam date changes, offer the daily new-card number.** The Progress page
+3. **When the exam date changes, offer the daily new-card number.** The Progress page
    already computes the required cards-per-day to finish in time. On changing the exam date,
    surface that as a prompt with a button that applies it, rather than making the user work
    out the arithmetic and find the right field.
@@ -42,6 +35,24 @@ In priority order:
 ## Done
 
 Move from the not-yet-done category after completing.
+
+1. **Rating labels are not a parallel construction.** "Hard / Good / Easy" mixes a judgement
+   of the question with a judgement of the answer, so the three do not answer one question.
+   All three should complete "how difficult was this?" — e.g. Hard / OK / Easy, or
+   "A struggle / Took a moment / Straight away". "Again" is a fourth case and genuinely
+   different: it means *wrong*, not a difficulty. Keep it visually distinct rather than
+   forcing it into the same scale.
+
+   **Done.** The three difficulty options now all answer one question, asked explicitly
+   above them ("How hard was that?"): **A struggle / Took a moment / Easy**. "Good" is gone
+   — it judged the answer, not the difficulty, so it never belonged on the same scale.
+
+   "Again" was kept off the scale, as suspected: it means the answer was *wrong*, not that
+   it was hard. It reads "Didn't know it", sits in the warm not-quite orange rather than as
+   a fourth rung, and appears only after a wrong answer — where the prompt drops the
+   question entirely ("This one will come back around sooner"), since posing a question with
+   one possible answer is silly. The keyboard hint follows suit: `2`–`4` when rating a
+   correct answer, `1` alone when there is only one option.
 
 1. **Exam-date changes don't reschedule cards that were already rated.** Confirmed in the
    code, not assumed: `capDueDate` is only applied inside `review()` and `previewIntervals()`

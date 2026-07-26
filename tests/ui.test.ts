@@ -135,9 +135,8 @@ describe('review view', () => {
     renderReview(app, root);
 
     (root.querySelector('ol.choices button') as HTMLButtonElement).click();
-    const gradeBtn = [...root.querySelectorAll('.grading button')].find((b) =>
-      /Good|Again/.test(b.textContent ?? ''),
-    ) as HTMLButtonElement;
+    // Whatever the labels say, the first difficulty button always grades.
+    const gradeBtn = root.querySelector('.grading button') as HTMLButtonElement;
     gradeBtn.click();
     await vi.waitFor(() => expect(app.current?.card.id).not.toBe(first));
 
@@ -339,6 +338,50 @@ describe('other views render against real data', () => {
     expect(legend).toMatch(/solid/);
     expect(legend).toMatch(/still learning/);
     expect(legend).toMatch(/not started/);
+  });
+
+  it('rates on one scale, with "wrong" kept off it', async () => {
+    const app = await bootedApp({ maxNewPerDay: 200 });
+    app.queueIndex = app.queue.findIndex((i) => i.card.choices);
+    const root = container();
+    app.onChange = () => renderReview(app, root);
+    renderReview(app, root);
+
+    // Answer correctly, so the difficulty scale is what's offered.
+    const card = app.current!.card;
+    const right = card.choices!.find((c) => c.correct)!.text;
+    ([...root.querySelectorAll('ol.choices button')] as HTMLButtonElement[])
+      .find((b) => b.textContent?.includes(right))!
+      .click();
+
+    expect(root.querySelector('.grading-prompt')!.textContent).toMatch(/how hard was that/i);
+
+    // Every offered label answers "how hard was that?" — none judges the answer.
+    const labels = [...root.querySelectorAll('.grading button')].map((b) =>
+      (b.textContent ?? '').split('(')[0]!.trim(),
+    );
+    expect(labels.some((l) => /good/i.test(l))).toBe(false);
+    expect(labels.some((l) => /easy/i.test(l))).toBe(true);
+    // A correct answer never offers "didn't know it".
+    expect(labels.some((l) => /didn’t know/i.test(l))).toBe(false);
+  });
+
+  it('marks "didn\'t know it" apart from the difficulty scale after a wrong answer', async () => {
+    const app = await bootedApp({ maxNewPerDay: 200 });
+    app.queueIndex = app.queue.findIndex((i) => i.card.choices);
+    const root = container();
+    app.onChange = () => renderReview(app, root);
+    renderReview(app, root);
+
+    const card = app.current!.card;
+    const wrong = card.choices!.find((c) => !c.correct)!.text;
+    ([...root.querySelectorAll('ol.choices button')] as HTMLButtonElement[])
+      .find((b) => b.textContent?.includes(wrong))!
+      .click();
+
+    const again = root.querySelector('.grading button.again');
+    expect(again).not.toBeNull();
+    expect(again!.textContent).toMatch(/didn’t know it/i);
   });
 
   it('drops vocabulary that does not appear on the rating buttons', async () => {

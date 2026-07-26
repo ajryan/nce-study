@@ -21,10 +21,20 @@ import { previewIntervals, Rating } from '../scheduler/fsrs';
 import type { Grade } from 'ts-fsrs';
 
 const CHOICE_KEYS = ['1', '2', '3', '4', '5'];
+
+/**
+ * All three difficulty labels answer one question — "how hard was that?" — so
+ * they sit on a single scale. The previous set mixed frames: "Hard" judged the
+ * question, "Good" judged the answer, and the two could not be compared.
+ *
+ * "Again" is deliberately not on that scale. It means the answer was wrong,
+ * which is a different kind of statement, so it is labelled and styled apart
+ * rather than pretending to be a fourth rung.
+ */
 const GRADE_LABELS: Array<{ grade: Grade; label: string; key: string }> = [
-  { grade: Rating.Again as Grade, label: 'Again', key: '1' },
-  { grade: Rating.Hard as Grade, label: 'Hard', key: '2' },
-  { grade: Rating.Good as Grade, label: 'Good', key: '3' },
+  { grade: Rating.Again as Grade, label: 'Didn’t know it', key: '1' },
+  { grade: Rating.Hard as Grade, label: 'A struggle', key: '2' },
+  { grade: Rating.Good as Grade, label: 'Took a moment', key: '3' },
   { grade: Rating.Easy as Grade, label: 'Easy', key: '4' },
 ];
 
@@ -137,6 +147,16 @@ export function renderReview(app: AppState, root: HTMLElement, go?: (view: ViewN
   // runs. Reading the detail may need scrolling; rating never should.
   const actions = el('div', { class: 'actionbar' });
   if (local.revealed) {
+    // The buttons only make sense as answers to a question, so ask it.
+    actions.appendChild(
+      el(
+        'div',
+        { class: 'grading-prompt' },
+        isChoiceCard && !isCurrentCorrect(app)
+          ? 'This one will come back around sooner.'
+          : 'How hard was that?',
+      ),
+    );
     actions.appendChild(renderGrading(app, isChoiceCard));
   } else if (!isChoiceCard) {
     actions.appendChild(
@@ -144,7 +164,9 @@ export function renderReview(app: AppState, root: HTMLElement, go?: (view: ViewN
     );
   }
   if (actions.childNodes.length > 0) {
-    actions.appendChild(renderHints(isChoiceCard, local.revealed));
+    actions.appendChild(
+      renderHints(isChoiceCard, local.revealed, isChoiceCard && !isCurrentCorrect(app)),
+    );
     root.appendChild(actions);
   } else {
     root.appendChild(renderHints(isChoiceCard, local.revealed));
@@ -251,7 +273,9 @@ function renderGrading(app: AppState, isChoiceCard: boolean): HTMLElement {
       el(
         'button',
         {
-          class: `btn${grade === Rating.Good ? ' primary' : ''}`,
+          class:
+            `btn${grade === Rating.Good ? ' primary' : ''}` +
+            (grade === Rating.Again ? ' again' : ''),
           onclick: () => grade_(app, grade),
         },
         `${label} (${key})`,
@@ -269,9 +293,12 @@ function renderGrading(app: AppState, isChoiceCard: boolean): HTMLElement {
 
 /** Hints must describe what the number keys do *now* — they answer before the
  *  reveal and rate after it, and a stale hint is worse than none. */
-function renderHints(isChoiceCard: boolean, revealed: boolean): HTMLElement {
+function renderHints(isChoiceCard: boolean, revealed: boolean, onlyAgain = false): HTMLElement {
   const lead = revealed
-    ? frag(el('kbd', {}, '1'), '–', el('kbd', {}, '4'), ' rate how it went · ')
+    ? onlyAgain
+      // A wrong MCQ answer accepts one key, so promising 1-4 would be a lie.
+      ? frag(el('kbd', {}, '1'), ' to continue · ')
+      : frag(el('kbd', {}, '2'), '–', el('kbd', {}, '4'), ' rate how hard it was · ')
     : isChoiceCard
       ? frag(el('kbd', {}, '1'), '–', el('kbd', {}, '4'), ' pick an answer · ')
       : frag(el('kbd', {}, 'space'), ' show the answer · ');
