@@ -15,6 +15,47 @@ import { RAMP_WINDOW_DAYS } from '../scheduler/examDate';
 /** Surfaced after an exam-date change so the reshuffle isn't invisible. */
 let lastReschedule = 0;
 
+/**
+ * Which setting was saved most recently, so the confirmation can sit beside
+ * that field rather than in a corner. Settings save the instant you change
+ * them, with no Save button to press, so without this nothing on screen tells
+ * you it worked — and "did that take?" is a bad question to leave with someone
+ * already anxious.
+ *
+ * Module-level because changing a setting re-renders the whole view, so a
+ * confirmation held in local state would be destroyed by the very act that
+ * created it.
+ */
+let savedKey: string | null = null;
+let savedTimer: ReturnType<typeof setTimeout> | undefined;
+
+/** Long enough to notice without becoming a permanent fixture. */
+const SAVED_VISIBLE_MS = 2600;
+
+/** Test seam: clears the confirmation between cases. */
+export function resetSettingsView(): void {
+  lastReschedule = 0;
+  savedKey = null;
+  clearTimeout(savedTimer);
+  savedTimer = undefined;
+}
+
+function markSaved(key: string, app: AppState): void {
+  savedKey = key;
+  clearTimeout(savedTimer);
+  savedTimer = setTimeout(() => {
+    savedKey = null;
+    // Re-render through the app so this is a no-op if the user has navigated
+    // away, rather than writing into a detached element.
+    app.onChange();
+  }, SAVED_VISIBLE_MS);
+}
+
+/** The confirmation itself — quiet, and never in the way of the control. */
+function savedChip(): HTMLElement {
+  return el('span', { class: 'saved-chip' }, '✓ Saved');
+}
+
 export function renderSettings(app: AppState, root: HTMLElement): void {
   clear(root);
   root.appendChild(el('h1', {}, 'Settings'));
@@ -28,9 +69,10 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
 
   const s = app.settings;
   const rerender = () => renderSettings(app, root);
-  const update = async (patch: Parameters<typeof app.repo.updateSettings>[0]) => {
+  const update = async (key: string, patch: Parameters<typeof app.repo.updateSettings>[0]) => {
     const { rescheduled } = await app.updateSettings(patch);
     lastReschedule = rescheduled;
+    markSaved(key, app);
     rerender();
   };
 
@@ -44,10 +86,12 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
       el('input', {
         type: 'date',
         value: s.examDate ?? '',
-        onchange: (e: Event) => void update({ examDate: (e.target as HTMLInputElement).value || null }),
+        onchange: (e: Event) =>
+          void update('examDate', { examDate: (e.target as HTMLInputElement).value || null }),
       }),
       'Optional, but helpful — we’ll count down to it and make sure every card comes back ' +
         'around at least once before the day itself.',
+      'examDate',
     ),
   );
 
@@ -70,10 +114,14 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
         max: '0.98',
         step: '0.01',
         value: String(s.desiredRetention),
-        onchange: (e: Event) => void update({ desiredRetention: Number((e.target as HTMLInputElement).value) }),
+        onchange: (e: Event) =>
+          void update('desiredRetention', {
+            desiredRetention: Number((e.target as HTMLInputElement).value),
+          }),
       }),
       'Aim higher and cards come back more often, so you forget less but study more. ' +
         'Around 90% is a good balance for most people — there’s no wrong answer here.',
+      'desiredRetention',
     ),
   );
 
@@ -81,9 +129,10 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
     check(
       'Study a little harder as the exam gets closer',
       s.rampRetention,
-      (v) => void update({ rampRetention: v }),
+      (v) => void update('rampRetention', { rampRetention: v }),
       `In the final ${RAMP_WINDOW_DAYS} days we’ll bring cards back a bit more often, so things ` +
         'are fresh when it actually counts.',
+      'rampRetention',
     ),
   );
 
@@ -91,9 +140,10 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
     check(
       'Make sure everything comes up before exam day',
       s.capIntervalsAtExam,
-      (v) => void update({ capIntervalsAtExam: v }),
+      (v) => void update('capIntervalsAtExam', { capIntervalsAtExam: v }),
       'Cards you know well can otherwise drift months into the future and never reappear ' +
         'before your exam. This pulls them back so nothing is forgotten at the wrong moment.',
+      'capIntervalsAtExam',
     ),
   );
 
@@ -101,9 +151,10 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
     check(
       'Mix up the topics while you study',
       s.interleave,
-      (v) => void update({ interleave: v }),
+      (v) => void update('interleave', { interleave: v }),
       'Jumping between subjects feels harder than doing one at a time — and that’s exactly ' +
         'why it works better. Worth leaving on unless you want to drill one area.',
+      'interleave',
     ),
   );
 
@@ -120,10 +171,12 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
         min: '0',
         max: '500',
         value: String(s.maxNewPerDay),
-        onchange: (e: Event) => void update({ maxNewPerDay: Number((e.target as HTMLInputElement).value) }),
+        onchange: (e: Event) =>
+          void update('maxNewPerDay', { maxNewPerDay: Number((e.target as HTMLInputElement).value) }),
       }),
       'How much brand-new material to introduce. Start smaller than you think — every new ' +
         'card comes back for review later, so these add up.',
+      'maxNewPerDay',
     ),
   );
   limits.appendChild(
@@ -134,9 +187,13 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
         min: '0',
         max: '2000',
         value: String(s.maxReviewsPerDay),
-        onchange: (e: Event) => void update({ maxReviewsPerDay: Number((e.target as HTMLInputElement).value) }),
+        onchange: (e: Event) =>
+          void update('maxReviewsPerDay', {
+            maxReviewsPerDay: Number((e.target as HTMLInputElement).value),
+          }),
       }),
       'A safety net. If you miss a few days, this stops everything landing on you at once.',
+      'maxReviewsPerDay',
     ),
   );
   root.appendChild(limits);
@@ -294,11 +351,11 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
   root.appendChild(about);
 }
 
-function field(label: string, control: HTMLElement, hint?: string): HTMLElement {
+function field(label: string, control: HTMLElement, hint: string, key: string): HTMLElement {
   return el(
     'div',
     { class: 'field' },
-    el('label', {}, label),
+    el('label', {}, label, savedKey === key ? savedChip() : null),
     control,
     hint ? el('div', { class: 'hint' }, hint) : null,
   );
@@ -308,7 +365,8 @@ function check(
   label: string,
   value: boolean,
   onChange: (value: boolean) => void,
-  hint?: string,
+  hint: string,
+  key: string,
 ): HTMLElement {
   const id = `chk-${label.replace(/\W+/g, '-').toLowerCase()}`;
   return el(
@@ -324,6 +382,7 @@ function check(
         onchange: (e: Event) => onChange((e.target as HTMLInputElement).checked),
       }),
       el('label', { for: id, style: 'font-weight:650;font-size:.92rem' }, label),
+      savedKey === key ? savedChip() : null,
     ),
     hint ? el('div', { class: 'hint', style: 'margin-left:1.5rem;margin-top:-.5rem' }, hint) : null,
   );

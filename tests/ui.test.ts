@@ -16,7 +16,7 @@ import { renderHome } from '../src/ui/HomeView';
 import { formatInterval } from '../src/ui/dom';
 import { renderDashboard, resetDashboardView } from '../src/ui/DashboardView';
 import { renderBrowse } from '../src/ui/BrowseView';
-import { renderSettings } from '../src/ui/SettingsView';
+import { renderSettings, resetSettingsView } from '../src/ui/SettingsView';
 import { renderExam } from '../src/ui/ExamView';
 import { bundledCards, blueprint } from '../src/data/loader';
 import { ProgressRepository } from '../src/storage/progress';
@@ -43,6 +43,7 @@ beforeEach(() => {
   document.body.innerHTML = '';
   resetReviewView();
   resetDashboardView();
+  resetSettingsView();
 });
 
 describe('formatInterval', () => {
@@ -609,6 +610,65 @@ describe('other views render against real data', () => {
     const reloaded = new ProgressRepository();
     await reloaded.load();
     expect(reloaded.getSettings().maxNewPerDay).toBe(33);
+  });
+
+  it('confirms a saved setting beside the field that changed', async () => {
+    const app = await bootedApp();
+    const root = container();
+    renderSettings(app, root);
+    expect(root.querySelector('.saved-chip')).toBeNull();
+
+    const newPerDay = [...root.querySelectorAll('input[type="number"]')].find(
+      (i) => (i as HTMLInputElement).max === '500',
+    ) as HTMLInputElement;
+    newPerDay.value = '17';
+    newPerDay.dispatchEvent(new Event('change'));
+    await vi.waitFor(() => expect(root.querySelector('.saved-chip')).not.toBeNull());
+
+    // Beside the field that changed, not floating somewhere unrelated: an
+    // anxious user should not have to work out which control the message is about.
+    const chip = root.querySelector('.saved-chip')!;
+    const field = chip.closest('.field')!;
+    expect(field.textContent).toContain('New cards a day');
+    expect(root.querySelectorAll('.saved-chip')).toHaveLength(1);
+
+    // And it really saved, rather than only claiming to.
+    const reloaded = new ProgressRepository();
+    await reloaded.load();
+    expect(reloaded.getSettings().maxNewPerDay).toBe(17);
+  });
+
+  it('clears the saved confirmation after a moment', async () => {
+    vi.useFakeTimers();
+    try {
+      const app = await bootedApp();
+      const root = container();
+      app.onChange = () => renderSettings(app, root);
+      renderSettings(app, root);
+
+      const box = root.querySelector('input[type="checkbox"]') as HTMLInputElement;
+      box.checked = !box.checked;
+      box.dispatchEvent(new Event('change'));
+      await vi.waitFor(() => expect(root.querySelector('.saved-chip')).not.toBeNull());
+
+      await vi.advanceTimersByTimeAsync(5000);
+      expect(root.querySelector('.saved-chip')).toBeNull();
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it('never puts the confirmation inside a checkbox label, where clicking it would toggle the setting', async () => {
+    const app = await bootedApp();
+    const root = container();
+    renderSettings(app, root);
+
+    const box = root.querySelector('input[type="checkbox"]') as HTMLInputElement;
+    box.checked = !box.checked;
+    box.dispatchEvent(new Event('change'));
+    await vi.waitFor(() => expect(root.querySelector('.saved-chip')).not.toBeNull());
+
+    expect(root.querySelector('label .saved-chip')).toBeNull();
   });
 
   it('exam setup renders and can draw a full blueprint-proportional exam', async () => {

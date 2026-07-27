@@ -4,10 +4,7 @@
 
 In priority order:
 
-1. **Confirm settings changes visually.** Settings save silently on change, so there is no
-   feedback that anything happened. Add an unobtrusive saved indicator.
-
-2. **When the exam date changes, offer the daily new-card number.** The Progress page
+1. **When the exam date changes, offer the daily new-card number.** The Progress page
    already computes the required cards-per-day to finish in time. On changing the exam date,
    surface that as a prompt with a button that applies it, rather than making the user work
    out the arithmetic and find the right field.
@@ -16,6 +13,30 @@ In priority order:
 ## Done
 
 Move from the not-yet-done category after completing.
+
+1. **Confirm settings changes visually.** Settings save silently on change, so there is no
+   feedback that anything happened. Add an unobtrusive saved indicator.
+
+   **Done.** A small "✓ Saved" chip appears next to the label of the field that changed, and
+   clears itself after 2.6 seconds. Beside the field rather than a corner toast on purpose:
+   with seven controls saving independently, a floating message makes the user work out which
+   one it refers to, and "did that take?" is a bad question to leave with someone already
+   anxious about the exam.
+
+   The confirmation is module-level state, not local, because changing a setting re-renders
+   the whole view — a confirmation held in the render closure would be destroyed by the very
+   act that created it. The clearing timer re-renders through `app.onChange` rather than the
+   view's own `rerender`, so it is a no-op if the user has navigated away instead of writing
+   into a detached element.
+
+   One thing worth having caught: the chip started out inside the checkbox `<label for=…>`,
+   so clicking the confirmation would have toggled the setting straight back off. It is a
+   sibling of the label now, with a test asserting no `.saved-chip` is ever inside a label.
+
+   Covered three ways, because each catches something the others cannot: jsdom tests assert
+   it appears beside the right field, only one shows at a time, the value really persisted,
+   and it clears on a fake timer; `npm run visual` asserts it is genuinely *visible* on
+   screen with a non-zero box, which jsdom cannot tell you.
 
 1. **Give the navbar sections real URLs.** Every view lives at the same address, so a
    refresh — or the reload the update prompt is about to trigger — dumps you back on Start,

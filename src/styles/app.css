@@ -686,6 +686,30 @@ table.grid td.barcell { width: 38%; min-width: 120px; }
   color: var(--text);
 }
 .field input[type="range"] { padding: 0; width: 100%; max-width: 320px; accent-color: var(--accent); }
+/* Settings save on change with no Save button, so the confirmation sits beside
+   the label of the field that changed — attached to the thing you just touched,
+   rather than a corner toast you have to connect back to it yourself. */
+.saved-chip {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  vertical-align: middle;
+  animation: saved-in 0.18s ease-out;
+}
+@keyframes saved-in {
+  from { opacity: 0; transform: translateY(-2px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .saved-chip { animation: none; }
+}
+
 .checkline { display: flex; gap: 0.55rem; align-items: flex-start; margin-bottom: 0.75rem; }
 .checkline input { margin-top: 0.35rem; accent-color: var(--accent); }
 

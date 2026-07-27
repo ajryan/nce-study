@@ -239,6 +239,25 @@ async function main(): Promise<void> {
       'an unrecognised URL falls back to Start rather than an empty page',
     );
 
+    // ---- settings save confirmation ----
+    // jsdom can prove the chip is in the DOM but not that anyone can see it.
+    await page.goto(`${BASE}#/settings`, { waitUntil: 'networkidle' });
+    await page.waitForSelector('.field');
+    const newPerDay = page.locator('input[type="number"]').first();
+    await newPerDay.fill('17');
+    await newPerDay.blur();
+    const chip = page.locator('.saved-chip');
+    await chip.waitFor({ timeout: 5000 });
+    check(await chip.isVisible(), 'a changed setting confirms itself on screen');
+    const box = await chip.boundingBox();
+    check(
+      !!box && box.width > 0 && box.height > 0 && box.y < 700,
+      'the confirmation is on screen next to the field, not off in a corner',
+      box ? `at ${Math.round(box.x)},${Math.round(box.y)}` : 'no box',
+    );
+    await page.waitForTimeout(3200);
+    check((await chip.count()) === 0, 'the confirmation clears itself after a moment');
+
     check(errors.length === 0, 'no console errors', errors.slice(0, 2).join(' | '));
     notes.push(`screenshots written to ${SHOTS}/`);
   } finally {
