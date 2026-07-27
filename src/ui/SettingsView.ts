@@ -13,6 +13,21 @@ import { downloadBackup, parseBackup, BackupParseError } from '../storage/backup
 import { RAMP_WINDOW_DAYS, requiredNewPerDay, daysUntilExam } from '../scheduler/examDate';
 import { State } from 'ts-fsrs';
 
+/** Injected by Vite at build time. */
+declare const __BUILD_DATE__: string;
+
+/** "2026-07-27" reads as a serial number; the date should read as a date. */
+function buildDate(): string {
+  const [y, m, d] = __BUILD_DATE__.split('-').map(Number);
+  if (!y || !m || !d) return __BUILD_DATE__;
+  return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString(undefined, {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC',
+  });
+}
+
 /** Surfaced after an exam-date change so the reshuffle isn't invisible. */
 let lastReschedule = 0;
 
@@ -365,6 +380,11 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
         'real exam questions, and this app is not connected to or endorsed by NBCC. Every answer ' +
         'links to a source you can check for yourself.',
     ),
+  );
+  // Lets someone confirm which copy of the app they are looking at, which is
+  // otherwise unanswerable once the update prompt has been offered.
+  about.appendChild(
+    el('p', { class: 'small muted' }, `This version was built on ${buildDate()}.`),
   );
   root.appendChild(about);
 
