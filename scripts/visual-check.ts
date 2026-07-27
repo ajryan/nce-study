@@ -272,6 +272,47 @@ async function main(): Promise<void> {
       'a tight exam date offers a daily pace, as a real modal in the top layer',
     );
 
+    // Regression: the "Saved" chip timer fired a full re-render 2.6s later,
+    // which rebuilt <main> detached and called showModal() on a node that was
+    // not in the document yet. That threw after rootEl had been cleared, so the
+    // whole page went blank a few seconds after the prompt appeared.
+    await page.waitForTimeout(4000);
+    check(
+      (await page.locator('main').count()) === 1 &&
+        (await page.locator('body').innerText()).trim().length > 500,
+      'the page does not blank out while the prompt sits open',
+      `body text ${(await page.locator('body').innerText()).trim().length} chars`,
+    );
+    check(await modal.isVisible(), 'the prompt is still there, not torn down and rebuilt');
+    check(errors.length === 0, 'no error thrown while the prompt is open',
+      errors.slice(0, 2).join(' | '));
+
+    // The above only proves the chip timer no longer re-renders. A re-render
+    // can still arrive from elsewhere (the update banner, any onChange), so
+    // force one and prove <main> is attached before the view draws into it —
+    // showModal() on a detached node is what blanked the page.
+    await page.evaluate(() => window.dispatchEvent(new HashChangeEvent('hashchange')));
+    await page.waitForTimeout(300);
+    check(
+      (await page.locator('main').count()) === 1 &&
+        (await page.locator('body').innerText()).trim().length > 500 &&
+        !(await page.locator('body').innerText()).includes('Something went wrong'),
+      'a re-render while the prompt is open does not blank or break the page',
+      `body text ${(await page.locator('body').innerText()).trim().length} chars`,
+    );
+    check(
+      errors.length === 0,
+      'and throws nothing doing it',
+      errors.slice(0, 2).join(' | '),
+    );
+    // The sharp end of the ordering fix: <main> must be attached before the
+    // view draws, or showModal() cannot run and the prompt silently becomes an
+    // invisible <dialog> sitting in the page.
+    check(
+      await modal.evaluate((d: HTMLDialogElement) => d.matches(':modal')),
+      'and the prompt survives that re-render as a real modal',
+    );
+
     const before = await newPerDay.inputValue();
     await page.keyboard.press('Escape');
     await modal.waitFor({ state: 'detached', timeout: 5000 });

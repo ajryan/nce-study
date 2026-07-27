@@ -58,6 +58,11 @@ function markSaved(key: string, app: AppState): void {
   clearTimeout(savedTimer);
   savedTimer = setTimeout(() => {
     savedKey = null;
+    // Not while the pacing prompt is up: re-rendering rebuilds the view from
+    // scratch, which would tear down the open modal and pop a fresh one in its
+    // place — a visible blink, and the focus inside it lost. Dismissing the
+    // prompt re-renders anyway, which clears the chip then.
+    if (pacingSuggestion !== null) return;
     // Re-render through the app so this is a no-op if the user has navigated
     // away, rather than writing into a detached element.
     app.onChange();
@@ -367,9 +372,10 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
   if (pacingSuggestion !== null) {
     const dialog = pacingDialog(app, pacingSuggestion, rerender);
     root.appendChild(dialog);
-    // Guarded because jsdom has no <dialog> implementation — the tests still
-    // exercise the content and both buttons, just without the top layer.
-    if (typeof dialog.showModal === 'function') dialog.showModal();
+    // Guarded twice over: jsdom has no <dialog> implementation at all, and
+    // showModal() throws InvalidStateError on an element that is not in the
+    // document — which once blanked the whole page from inside a re-render.
+    if (typeof dialog.showModal === 'function' && dialog.isConnected) dialog.showModal();
   }
 }
 

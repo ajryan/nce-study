@@ -85,16 +85,57 @@ function render(): void {
   if (banners.childNodes.length > 0) rootEl.appendChild(banners);
 
   const main = el('main');
-  switch (app.view) {
-    case 'home': renderHome(app, main, go); break;
-    case 'study': renderReview(app, main, go); break;
-    case 'dashboard': renderDashboard(app, main, go); break;
-    case 'browse': renderBrowse(app, main); break;
-    case 'exam': renderExam(app, main); break;
-    case 'settings': renderSettings(app, main); break;
-  }
-
+  // Attached *before* the view renders into it. Views may call DOM APIs that
+  // require a connected element — dialog.showModal() throws InvalidStateError
+  // on a detached node — and because rootEl has already been cleared, such a
+  // throw used to leave the user staring at a blank page.
   rootEl.appendChild(main);
+
+  try {
+    switch (app.view) {
+      case 'home': renderHome(app, main, go); break;
+      case 'study': renderReview(app, main, go); break;
+      case 'dashboard': renderDashboard(app, main, go); break;
+      case 'browse': renderBrowse(app, main); break;
+      case 'exam': renderExam(app, main); break;
+      case 'settings': renderSettings(app, main); break;
+    }
+  } catch (err: unknown) {
+    // A half-rendered view is recoverable; a blank screen is not. Someone
+    // anxious about this exam should never be left with nothing on the page
+    // and no idea whether their progress went with it.
+    console.error(err);
+    renderViewFailure(main, err);
+  }
+}
+
+/** Last resort when a view throws: say what is true, and offer a way out. */
+function renderViewFailure(main: HTMLElement, err: unknown): void {
+  clear(main);
+  main.appendChild(
+    el(
+      'div',
+      { class: 'card' },
+      el('h1', {}, 'Something went wrong on this screen'),
+      el(
+        'p',
+        {},
+        'Your progress is safe — everything you’ve studied is saved on this device. ' +
+          'This is just the screen failing to draw.',
+      ),
+      el(
+        'div',
+        { class: 'row' },
+        el('button', { class: 'btn primary', onclick: () => go('home') }, 'Back to start'),
+        el('button', { class: 'btn', onclick: () => location.reload() }, 'Reload the page'),
+      ),
+      el(
+        'p',
+        { class: 'small muted', style: 'margin-top:1rem' },
+        err instanceof Error ? err.message : String(err),
+      ),
+    ),
+  );
 }
 
 /**

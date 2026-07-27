@@ -9,6 +9,38 @@ In priority order:
 
 ## Done
 
+1. **BUG: the Settings page blanked completely a few seconds after the pacing prompt
+   appeared.** Reported from the console:
+   `Uncaught InvalidStateError: Failed to execute 'showModal' on 'HTMLDialogElement': The
+   element is not in a Document.`
+
+   **Fixed.** `render()` in `src/main.ts` built `<main>` detached, ran the view into it, and
+   only attached it to `rootEl` afterwards — but `showModal()` throws on an element that is
+   not in the document. The throw landed *after* `clear(rootEl)`, so the page was left empty.
+   The delay was the "✓ Saved" chip timer firing a full re-render 2.6 seconds later.
+
+   Three separate faults, each fixed on its own terms:
+
+   - **Cause:** `<main>` is now attached before the view renders into it. Views may legitimately
+     call DOM APIs that require a connected element, and none of them should have to know
+     they are being drawn into a detached node.
+   - **Blast radius:** a view that throws now shows a recovery card — "Your progress is safe …
+     this is just the screen failing to draw" — with Back to start and Reload buttons. `render()`
+     clears before it rebuilds, so *any* exception used to mean a blank page. That is the worst
+     possible outcome for someone anxious about this exam, and it should never have been the
+     default.
+   - **Jank:** the chip timer no longer re-renders while the prompt is open, since rebuilding the
+     view tears the modal down and pops a fresh one in its place.
+
+   The regression check took three attempts to make honest, which is the part worth recording.
+   The first version passed with the fix reverted — the timer suppression alone stopped the
+   re-render, so nothing exercised the ordering. The second still passed, because the
+   `isConnected` guard prevents the throw. Only asserting that the prompt is still a real
+   `:modal` after a *forced* re-render actually fails without the fix. Verified in both
+   directions before being believed.
+
+
+
 Move from the not-yet-done category after completing.
 
 1. **When the exam date changes, offer the daily new-card number.** The Progress page
