@@ -9,6 +9,34 @@ In priority order:
 
 ## Done
 
+1. **The timing label under each difficulty button was hard to read against the button's own
+   label.** "Took a moment" is itself a span of time, so "in 4 days" directly beneath it read
+   as part of the same phrase rather than as the consequence of pressing it. Suggested fix: a
+   single "show again in: xx" that updates on hover.
+
+   **Done, as suggested, with two additions the hover-only version would have missed.** The
+   per-button captions are gone. One line sits under the whole row and reads as a sentence:
+   *Show again in 6 days*.
+
+   - It updates on **keyboard focus** as well as hover, because the ratings have shortcuts
+     (`2`-`4`) and a keyboard user never hovers.
+   - It has a **useful resting value** rather than a placeholder, because a touchscreen has no
+     hover at all and would otherwise show nothing until the moment of committing. At rest it
+     shows the interval for the button most likely to be pressed: *Took a moment* normally,
+     *Didn't know it* after a wrong multiple-choice answer, which is the only rating offered
+     there.
+   - Hovering **Hide this card** does not claim a return time. It says "This card stops coming
+     up until you bring it back", since an interval there would be false.
+
+   The line reserves its height so the sticky bar cannot resize under the cursor, asserted in
+   the browser at 165px before and after. The bar also got shorter: 155 to 145px on desktop
+   and **189 to 142px on a phone**, where the captions had been wrapping under a 2-up grid.
+
+   Worth recording about the check itself: `npm run visual` answers the first multiple-choice
+   card with the first option, which is usually wrong, so only "Didn't know it" renders and
+   there was no second interval to compare. It now advances until a card offers the full
+   scale before testing the hover.
+
 1. **BUG: the Settings page blanked completely a few seconds after the pacing prompt
    appeared.** Reported from the console:
    `Uncaught InvalidStateError: Failed to execute 'showModal' on 'HTMLDialogElement': The
