@@ -5,7 +5,10 @@
  * immutable by filename). The single-file build never registers this — it is
  * already self-contained.
  */
-const VERSION = 'nce-study-v1';
+// Replaced at build time by stamp-sw-version in vite.config.ts with a hash of
+// everything else in the build. It must differ between releases or the browser
+// byte-compares this file, sees no change, and never offers the update.
+const VERSION = 'nce-study-dev';
 const OFFLINE_URLS = ['', 'index.html', 'manifest.webmanifest', 'icon.svg'];
 
 self.addEventListener('install', (event) => {

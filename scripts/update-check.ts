@@ -63,8 +63,11 @@ async function main(): Promise<void> {
     });
     check('no banner on a first, up-to-date load', (await page.locator('.banner.update').count()) === 0);
 
-    // Publish a genuinely different worker so the byte-comparison update check fires.
-    writeFileSync(SW, originalSw.replace('nce-study-v1', 'nce-study-v2'));
+    // Publish a genuinely different worker so the byte-comparison update check
+    // fires. Rewriting the stamped VERSION is the smallest honest change.
+    // scripts/sw-version-check.ts covers the other half, and the half that was
+    // actually broken: that a real build produces a changed worker at all.
+    writeFileSync(SW, originalSw.replace(/const VERSION = '[^']*';/, "const VERSION = 'nce-study-test';"));
     await page.evaluate(async () => {
       const reg = await navigator.serviceWorker.getRegistration();
       await reg?.update();

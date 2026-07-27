@@ -84,6 +84,12 @@ npx tsc --noEmit       # typecheck (strict, noUncheckedIndexedAccess)
 npx tsx scripts/check-links.ts   # link-check all references — NEEDS NETWORK, not in `check`
 ```
 
+`check:update` runs two scripts, and the split matters. `update-check.ts` drives the banner
+flow *given* a changed worker; `sw-version-check.ts` proves a real build produces one. The
+prompt shipped dead for eight deploys because only the first existed: `public/sw.js` is
+copied to `dist/` verbatim, the browser byte-compares it, and it was identical every time.
+A test of the mechanism is not a test of the trigger.
+
 `visual` and `check:update` both build first, on purpose: they serve `dist/`, and for a
 while `visual` did not build, so it silently checked whatever was last built — a routing
 change reported six failures against a bundle that had no routing in it.

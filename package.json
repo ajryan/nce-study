@@ -16,7 +16,7 @@
     "check": "npm run validate && npm run coverage && npm run bias && npm run test",
     "bias": "tsx scripts/answer-bias.ts",
     "visual": "npm run build && tsx scripts/visual-check.ts",
-    "check:update": "npm run build && tsx scripts/update-check.ts"
+    "check:update": "npm run build && tsx scripts/update-check.ts && tsx scripts/sw-version-check.ts"
   },
   "dependencies": {
     "idb": "^8.0.3",

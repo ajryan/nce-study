@@ -9,6 +9,37 @@ In priority order:
 
 ## Done
 
+1. **BUG: no service worker traffic visible on the live site, and the update prompt had never
+   once fired.** Asked how the app checks for a new version.
+
+   Registration itself was fine — the live site had an `activated` worker controlling the
+   page. Service worker script fetches simply do not appear in the page's network log; they
+   belong to the worker's context, not the document's.
+
+   **The real fault was underneath.** A browser decides a worker has changed by
+   byte-comparing the fetched script against the installed one. `public/sw.js` is copied to
+   `dist/` verbatim and its `VERSION` was the literal `'nce-study-v1'`, so it was **identical
+   on every deploy**. `git log -- public/sw.js` showed two changes in the repo's life against
+   eight deploys in one session. No new worker ever installed, nothing reached `waiting`, and
+   the banner could not fire however much the app changed.
+
+   Users were never *stuck*, because navigations are network-first, so a reload always
+   fetched the new build. They were simply never told, which is the entire feature.
+
+   **Fixed** with a `stamp-sw-version` plugin in `vite.config.ts` that rewrites `VERSION`
+   with a hash of the contents of every other emitted file. Content-derived rather than a
+   timestamp on purpose: an unchanged rebuild must produce an unchanged worker, or every
+   deploy would nag about an update that isn't one. Hashing file *contents* rather than
+   filenames means an edit touching only `index.html` still counts. The plugin throws if it
+   cannot find the `VERSION` line, since silently not stamping is how this failed the first
+   time.
+
+   **Why it was missed, which is the lesson.** `check:update` edits `dist/sw.js` by hand to
+   simulate a new deploy, so it passed happily throughout. It tested the mechanism, never the
+   trigger. `scripts/sw-version-check.ts` now covers the trigger in both directions — a
+   source change must change the worker, an unchanged rebuild must not — and was verified by
+   reverting the plugin and watching it report `nce-study-dev -> nce-study-dev`.
+
 1. **The timing label under each difficulty button was hard to read against the button's own
    label.** "Took a moment" is itself a span of time, so "in 4 days" directly beneath it read
    as part of the same phrase rather than as the consequence of pressing it. Suggested fix: a
