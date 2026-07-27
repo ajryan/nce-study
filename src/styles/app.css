@@ -686,6 +686,25 @@ table.grid td.barcell { width: 38%; min-width: 120px; }
   color: var(--text);
 }
 .field input[type="range"] { padding: 0; width: 100%; max-width: 320px; accent-color: var(--accent); }
+/* The one modal in the app. Justified here because it is a decision *about*
+   the page you are already on, raised the moment you make it — not an
+   interruption of study, which is why the update prompt is a banner instead. */
+dialog.pacing {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  color: var(--text);
+  padding: 1.4rem 1.5rem;
+  max-width: 27rem;
+  width: calc(100% - 2rem);
+  box-shadow: var(--shadow-lift);
+  font-family: inherit;
+}
+dialog.pacing::backdrop { background: rgba(53, 49, 60, 0.38); }
+dialog.pacing h2 { margin: 0 0 0.6rem; font-size: 1.15rem; }
+dialog.pacing p { margin: 0 0 0.7rem; font-size: 0.92rem; }
+dialog.pacing .row { margin-top: 1.1rem; }
+
 /* Settings save on change with no Save button, so the confirmation sits beside
    the label of the field that changed — attached to the thing you just touched,
    rather than a corner toast you have to connect back to it yourself. */

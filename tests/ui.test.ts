@@ -16,7 +16,7 @@ import { renderHome } from '../src/ui/HomeView';
 import { formatInterval } from '../src/ui/dom';
 import { renderDashboard, resetDashboardView } from '../src/ui/DashboardView';
 import { renderBrowse } from '../src/ui/BrowseView';
-import { renderSettings, resetSettingsView } from '../src/ui/SettingsView';
+import { renderSettings, resetSettingsView, suggestNewPerDay } from '../src/ui/SettingsView';
 import { renderExam } from '../src/ui/ExamView';
 import { bundledCards, blueprint } from '../src/data/loader';
 import { ProgressRepository } from '../src/storage/progress';
@@ -669,6 +669,96 @@ describe('other views render against real data', () => {
     await vi.waitFor(() => expect(root.querySelector('.saved-chip')).not.toBeNull());
 
     expect(root.querySelector('label .saved-chip')).toBeNull();
+  });
+
+  it('offers a daily new-card number when the exam date leaves too little time', async () => {
+    // 512 cards and a fortnight: 20 a day cannot get through them.
+    const app = await bootedApp({ maxNewPerDay: 20 });
+    const root = container();
+    app.onChange = () => renderSettings(app, root);
+    renderSettings(app, root);
+
+    const soon = new Date(Date.now() + 14 * 864e5).toISOString().slice(0, 10);
+    const dateInput = root.querySelector('input[type="date"]') as HTMLInputElement;
+    dateInput.value = soon;
+    dateInput.dispatchEvent(new Event('change'));
+
+    const dialog = await vi.waitFor(() => {
+      const d = root.querySelector('dialog.pacing');
+      expect(d).not.toBeNull();
+      return d as HTMLElement;
+    });
+
+    // It must do the arithmetic, not report a shortfall and leave the user to it.
+    const suggested = suggestNewPerDay(app)!;
+    expect(suggested).toBeGreaterThan(20);
+    const apply = [...dialog.querySelectorAll('button')].find((b) =>
+      b.textContent!.includes(String(suggested)),
+    ) as HTMLButtonElement;
+    expect(apply).toBeDefined();
+
+    apply.click();
+    await vi.waitFor(() => expect(root.querySelector('dialog.pacing')).toBeNull());
+    expect(app.settings.maxNewPerDay).toBe(suggested);
+
+    // Applied for real, not just in memory.
+    const reloaded = new ProgressRepository();
+    await reloaded.load();
+    expect(reloaded.getSettings().maxNewPerDay).toBe(suggested);
+  });
+
+  it('stays quiet when the current pace is already enough', async () => {
+    const app = await bootedApp({ maxNewPerDay: 40 });
+    const root = container();
+    app.onChange = () => renderSettings(app, root);
+    renderSettings(app, root);
+
+    // Three years out: the required pace is a floor, not a target, so
+    // suggesting the user *slow down* to it would be bad advice.
+    const distant = new Date(Date.now() + 1095 * 864e5).toISOString().slice(0, 10);
+    const dateInput = root.querySelector('input[type="date"]') as HTMLInputElement;
+    dateInput.value = distant;
+    dateInput.dispatchEvent(new Event('change'));
+
+    await vi.waitFor(() => expect(app.settings.examDate).toBe(distant));
+    expect(suggestNewPerDay(app)).toBeNull();
+    expect(root.querySelector('dialog.pacing')).toBeNull();
+  });
+
+  it('does not offer a pace for an exam date that has already passed', async () => {
+    const app = await bootedApp({ maxNewPerDay: 5 });
+    await app.updateSettings({ examDate: '2020-01-01' });
+    // requiredNewPerDay is Infinity here; there is no honest number to offer.
+    expect(suggestNewPerDay(app)).toBeNull();
+  });
+
+  it('lets the user keep their current pace', async () => {
+    const app = await bootedApp({ maxNewPerDay: 20 });
+    const root = container();
+    app.onChange = () => renderSettings(app, root);
+    renderSettings(app, root);
+
+    const soon = new Date(Date.now() + 14 * 864e5).toISOString().slice(0, 10);
+    const dateInput = root.querySelector('input[type="date"]') as HTMLInputElement;
+    dateInput.value = soon;
+    dateInput.dispatchEvent(new Event('change'));
+
+    const dialog = await vi.waitFor(() => {
+      const d = root.querySelector('dialog.pacing');
+      expect(d).not.toBeNull();
+      return d as HTMLElement;
+    });
+
+    const keep = [...dialog.querySelectorAll('button')].find((b) =>
+      b.textContent!.startsWith('Keep'),
+    ) as HTMLButtonElement;
+    keep.click();
+
+    await vi.waitFor(() => expect(root.querySelector('dialog.pacing')).toBeNull());
+    expect(app.settings.maxNewPerDay).toBe(20);
+    // And it does not come back on the next render.
+    renderSettings(app, root);
+    expect(root.querySelector('dialog.pacing')).toBeNull();
   });
 
   it('exam setup renders and can draw a full blueprint-proportional exam', async () => {

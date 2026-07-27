@@ -258,6 +258,40 @@ async function main(): Promise<void> {
     await page.waitForTimeout(3200);
     check((await chip.count()) === 0, 'the confirmation clears itself after a moment');
 
+    // ---- pacing prompt on an exam-date change ----
+    // jsdom has no <dialog> at all, so the modal behaviour is only ever
+    // exercised here: top layer, backdrop, and Escape to dismiss.
+    const soon = new Date(Date.now() + 14 * 864e5).toISOString().slice(0, 10);
+    const dateField = page.locator('input[type="date"]');
+    await dateField.fill(soon);
+    await dateField.blur();
+    const modal = page.locator('dialog.pacing');
+    await modal.waitFor({ timeout: 5000 });
+    check(
+      await modal.evaluate((d: HTMLDialogElement) => d.matches(':modal')),
+      'a tight exam date offers a daily pace, as a real modal in the top layer',
+    );
+
+    const before = await newPerDay.inputValue();
+    await page.keyboard.press('Escape');
+    await modal.waitFor({ state: 'detached', timeout: 5000 });
+    check(
+      (await newPerDay.inputValue()) === before,
+      'Escape dismisses the prompt without changing anything',
+    );
+
+    await dateField.fill(new Date(Date.now() + 13 * 864e5).toISOString().slice(0, 10));
+    await dateField.blur();
+    await modal.waitFor({ timeout: 5000 });
+    const applyLabel = await page.locator('dialog.pacing .btn.primary').innerText();
+    await page.locator('dialog.pacing .btn.primary').click();
+    await modal.waitFor({ state: 'detached', timeout: 5000 });
+    check(
+      applyLabel.includes(await newPerDay.inputValue()),
+      'accepting it applies that exact number to the field',
+      `${applyLabel} → ${await newPerDay.inputValue()}`,
+    );
+
     check(errors.length === 0, 'no console errors', errors.slice(0, 2).join(' | '));
     notes.push(`screenshots written to ${SHOTS}/`);
   } finally {

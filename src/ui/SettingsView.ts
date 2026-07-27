@@ -10,7 +10,8 @@ import type { AppState } from '../app';
 import { blueprint } from '../data/loader';
 import { el, clear } from './dom';
 import { downloadBackup, parseBackup, BackupParseError } from '../storage/backup';
-import { RAMP_WINDOW_DAYS } from '../scheduler/examDate';
+import { RAMP_WINDOW_DAYS, requiredNewPerDay, daysUntilExam } from '../scheduler/examDate';
+import { State } from 'ts-fsrs';
 
 /** Surfaced after an exam-date change so the reshuffle isn't invisible. */
 let lastReschedule = 0;
@@ -32,10 +33,22 @@ let savedTimer: ReturnType<typeof setTimeout> | undefined;
 /** Long enough to notice without becoming a permanent fixture. */
 const SAVED_VISIBLE_MS = 2600;
 
+/**
+ * How many new cards a day a just-changed exam date actually calls for, when
+ * that is more than the current setting allows. Null the rest of the time.
+ *
+ * Only the "not enough" direction is worth raising. The pacing figure is a
+ * *floor* — the minimum needed to see every card once before the exam — not an
+ * optimum, so telling someone with a distant exam to drop to 1 card a day would
+ * be bad advice dressed up as a recommendation.
+ */
+let pacingSuggestion: number | null = null;
+
 /** Test seam: clears the confirmation between cases. */
 export function resetSettingsView(): void {
   lastReschedule = 0;
   savedKey = null;
+  pacingSuggestion = null;
   clearTimeout(savedTimer);
   savedTimer = undefined;
 }
@@ -72,6 +85,7 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
   const update = async (key: string, patch: Parameters<typeof app.repo.updateSettings>[0]) => {
     const { rescheduled } = await app.updateSettings(patch);
     lastReschedule = rescheduled;
+    if (key === 'examDate') pacingSuggestion = suggestNewPerDay(app);
     markSaved(key, app);
     rerender();
   };
@@ -349,6 +363,103 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
     ),
   );
   root.appendChild(about);
+
+  if (pacingSuggestion !== null) {
+    const dialog = pacingDialog(app, pacingSuggestion, rerender);
+    root.appendChild(dialog);
+    // Guarded because jsdom has no <dialog> implementation — the tests still
+    // exercise the content and both buttons, just without the top layer.
+    if (typeof dialog.showModal === 'function') dialog.showModal();
+  }
+}
+
+/**
+ * The daily new-card number this exam date needs, or null if the current
+ * setting already covers it (or there is nothing useful to say).
+ */
+export function suggestNewPerDay(app: AppState, now: Date = new Date()): number | null {
+  const unseen = app.cards.reduce((n, card) => {
+    const p = app.progressFor(card.id);
+    return n + (!p || p.suspended || p.state === State.New ? 1 : 0);
+  }, 0);
+
+  const needed = requiredNewPerDay(unseen, app.settings.examDate, now);
+  // Infinity means the date is today or already past — a pacing number cannot
+  // help with that, and offering one would be a lie.
+  if (needed === null || !Number.isFinite(needed) || needed <= 0) return null;
+  return needed > app.settings.maxNewPerDay ? needed : null;
+}
+
+/**
+ * Shown when the exam date changes and the current daily limit will not get
+ * through the deck in time. Does the arithmetic and offers the answer as a
+ * button, rather than reporting a number and leaving the user to find the
+ * right field — which is exactly the kind of homework this app should absorb.
+ */
+function pacingDialog(app: AppState, suggestion: number, done: () => void): HTMLDialogElement {
+  const dialog = el('dialog', { class: 'pacing' }) as HTMLDialogElement;
+  // No dialog.close() needed: clearing the suggestion and re-rendering removes
+  // the element outright, which takes it out of the top layer too.
+  const close = () => {
+    pacingSuggestion = null;
+    done();
+  };
+
+  const days = daysUntilExam(app.settings.examDate);
+  dialog.appendChild(el('h2', {}, 'Shall we pick up the pace?'));
+  dialog.appendChild(
+    el(
+      'p',
+      {},
+      days === null
+        ? ''
+        : `Your exam is ${days} day${days === 1 ? '' : 's'} away. `,
+      'To see every card at least once before then, you’d need about ',
+      el('strong', {}, `${suggestion} new cards a day`),
+      ` — you’re set to ${app.settings.maxNewPerDay}.`,
+    ),
+  );
+  dialog.appendChild(
+    el(
+      'p',
+      { class: 'small muted' },
+      'You can change this any time, and nothing is lost if you’d rather go steadier — ' +
+        'you’ll just see fewer of the cards before the day itself.',
+    ),
+  );
+  dialog.appendChild(
+    el(
+      'div',
+      { class: 'row' },
+      el(
+        'button',
+        {
+          class: 'btn primary',
+          onclick: () => {
+            void app.updateSettings({ maxNewPerDay: suggestion }).then(() => {
+              // Confirm on the field that actually changed, so the effect of
+              // the button is visible on the page behind the dialog.
+              markSaved('maxNewPerDay', app);
+              close();
+            });
+          },
+        },
+        `Use ${suggestion} a day`,
+      ),
+      el(
+        'button',
+        { class: 'btn ghost', onclick: close },
+        `Keep ${app.settings.maxNewPerDay}`,
+      ),
+    ),
+  );
+
+  // Escape dismisses rather than leaving the dialog stuck open on a re-render.
+  dialog.addEventListener('cancel', (e) => {
+    e.preventDefault();
+    close();
+  });
+  return dialog;
 }
 
 function field(label: string, control: HTMLElement, hint: string, key: string): HTMLElement {

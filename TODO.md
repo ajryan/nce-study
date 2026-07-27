@@ -4,15 +4,42 @@
 
 In priority order:
 
-1. **When the exam date changes, offer the daily new-card number.** The Progress page
-   already computes the required cards-per-day to finish in time. On changing the exam date,
-   surface that as a prompt with a button that applies it, rather than making the user work
-   out the arithmetic and find the right field.
+*(Nothing pending. New items go here in priority order.)*
 
 
 ## Done
 
 Move from the not-yet-done category after completing.
+
+1. **When the exam date changes, offer the daily new-card number.** The Progress page
+   already computes the required cards-per-day to finish in time. On changing the exam date,
+   surface that as a prompt with a button that applies it, rather than making the user work
+   out the arithmetic and find the right field.
+
+   **Done.** Changing the exam date now raises a modal — "Shall we pick up the pace?" — with
+   the exact number and a button that applies it: *Use 37 a day* / *Keep 20*. The app does
+   the arithmetic and hands over the answer, rather than reporting a shortfall and leaving
+   the user to find the right field.
+
+   **It only prompts in one direction, and that is deliberate.** `requiredNewPerDay` is a
+   *floor* — the minimum to see every card once before the exam — not an optimum. Prompting
+   whenever the number merely differs would tell someone with a distant exam to *drop* to 1
+   card a day, which is bad advice dressed up as a recommendation. So the prompt appears only
+   when the current setting will not get through the deck in time. An exam date already past
+   yields `Infinity`; there is no honest number to offer, so it stays quiet there too.
+
+   This is the only modal in the app, against the standing "never a modal" instinct, and the
+   distinction is worth writing down: it is a decision *about the page you are on*, raised
+   the moment you make it. The update prompt is a banner because it interrupts studying;
+   this does not.
+
+   jsdom implements no `<dialog>` at all — not `showModal`, not `close` — so the modal
+   behaviour is only ever exercised by `npm run visual`, which asserts it is genuinely in the
+   top layer (`:modal`), that Escape dismisses without changing anything, and that accepting
+   applies that exact number to the field. `dialog.close()` turned out to be unnecessary:
+   clearing the suggestion re-renders the view and removes the element, which takes it out of
+   the top layer anyway. Four jsdom tests cover the content, both buttons, the quiet cases
+   and that the setting really persisted.
 
 1. **Confirm settings changes visually.** Settings save silently on change, so there is no
    feedback that anything happened. Add an unobtrusive saved indicator.
