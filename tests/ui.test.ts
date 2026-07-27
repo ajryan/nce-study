@@ -474,6 +474,57 @@ describe('other views render against real data', () => {
     expect(labels.some((l) => /didn’t know/i.test(l))).toBe(false);
   });
 
+  it('states when a card returns once, not under every button', async () => {
+    const app = await bootedApp({ maxNewPerDay: 400 });
+    app.queueIndex = app.queue.findIndex((i) => i.card.type === 'recall');
+    const root = container();
+    app.onChange = () => renderReview(app, root);
+    renderReview(app, root);
+    handleReviewKey(app, new KeyboardEvent('keydown', { key: ' ' }));
+
+    // Each rating label is itself a span of time ("Took a moment"), so a second
+    // time phrase directly beneath it read as part of the same phrase.
+    const buttons = [...root.querySelectorAll('.grading button')];
+    expect(buttons.length).toBeGreaterThan(1);
+    for (const b of buttons) expect(b.textContent).not.toMatch(/\bin \d+ (day|hour|minute|month)/i);
+
+    const readout = root.querySelector('.next-showing') as HTMLElement;
+    expect(root.querySelectorAll('.next-showing')).toHaveLength(1);
+    // Useful before anything is hovered, because a touchscreen never hovers.
+    expect(readout.textContent).toMatch(/^Show again (in \d|shortly)/);
+
+    // Hover and keyboard focus both drive it, and it goes back afterwards.
+    const resting = readout.textContent;
+    const easy = buttons.find((b) => /easy/i.test(b.textContent ?? ''))!;
+    easy.dispatchEvent(new Event('mouseenter'));
+    expect(readout.textContent).toMatch(/^Show again /);
+    expect(readout.textContent).not.toBe(resting);
+    easy.dispatchEvent(new Event('mouseleave'));
+    expect(readout.textContent).toBe(resting);
+
+    easy.dispatchEvent(new FocusEvent('focus'));
+    expect(readout.textContent).not.toBe(resting);
+    easy.dispatchEvent(new FocusEvent('blur'));
+    expect(readout.textContent).toBe(resting);
+  });
+
+  it('does not promise a return date for a card being hidden', async () => {
+    const app = await bootedApp({ maxNewPerDay: 400 });
+    app.queueIndex = app.queue.findIndex((i) => i.card.type === 'recall');
+    const root = container();
+    app.onChange = () => renderReview(app, root);
+    renderReview(app, root);
+    handleReviewKey(app, new KeyboardEvent('keydown', { key: ' ' }));
+
+    const readout = root.querySelector('.next-showing') as HTMLElement;
+    const hideBtn = [...root.querySelectorAll('.grading button')].find((b) =>
+      /hide this card/i.test(b.textContent ?? ''),
+    )!;
+    hideBtn.dispatchEvent(new Event('mouseenter'));
+    expect(readout.textContent).not.toMatch(/Show again/);
+    expect(readout.textContent).toMatch(/stops coming up/i);
+  });
+
   it('marks "didn\'t know it" apart from the difficulty scale after a wrong answer', async () => {
     const app = await bootedApp({ maxNewPerDay: 200 });
     app.queueIndex = app.queue.findIndex((i) => i.card.choices);

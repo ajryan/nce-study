@@ -253,10 +253,10 @@ function renderAnswerInput(app: AppState, card: Card): HTMLElement {
   );
 }
 
-/** "in 3 days" reads as a time; "3d" reads as a code. Worth the extra width. */
-function intervalLabel(days: number): string {
+/** A whole sentence, so it cannot be misread as a label on the button above. */
+function nextShowingLabel(days: number): string {
   const phrase = formatInterval(days);
-  return phrase === 'now' ? 'again shortly' : `in ${phrase}`;
+  return phrase === 'now' ? 'Show again shortly' : `Show again in ${phrase}`;
 }
 
 /** The blueprint task in words, trimmed to fit a chip — never the raw code. */
@@ -343,7 +343,26 @@ function renderGrading(app: AppState, isChoiceCard: boolean): HTMLElement {
   const item = app.current!;
   const preview = previewIntervals(item.progress, app.settings);
 
-  const wrap = el('div', { class: 'grading' });
+  const wrap = el('div', { class: 'grading-wrap' });
+  const row = el('div', { class: 'grading' });
+
+  // One readout for all the buttons instead of a caption under each. Every
+  // rating label already describes a span of time ("Took a moment"), so a
+  // second time phrase directly beneath it ("in 4 days") read as part of the
+  // same thought. Saying it once, in a full sentence, separates the judgement
+  // you are making from the consequence of making it.
+  const readout = el('div', { class: 'next-showing', 'aria-live': 'polite' });
+
+  // Whichever button is the likely press is what the readout says at rest —
+  // there is no hover on a touchscreen, so the resting value has to be useful
+  // on its own rather than a placeholder.
+  const restingGrade: Grade = (isChoiceCard && !isCurrentCorrect(app)
+    ? Rating.Again
+    : Rating.Good) as Grade;
+  const rest = () => {
+    readout.textContent = nextShowingLabel(preview[restingGrade]);
+  };
+  rest();
 
   for (const { grade, label, key } of GRADE_LABELS) {
     // On an MCQ the outcome already decided Again vs. not; offering "Again"
@@ -355,31 +374,48 @@ function renderGrading(app: AppState, isChoiceCard: boolean): HTMLElement {
       if (!wasCorrect && grade !== Rating.Again) continue;
     }
 
-    wrap.appendChild(
-      el(
-        'button',
-        {
-          class:
-            `btn${grade === Rating.Good ? ' primary' : ''}` +
-            (grade === Rating.Again ? ' again' : ''),
-          onclick: () => grade_(app, grade),
-        },
-        el('span', { class: 'glabel' }, label),
-        el('span', { class: 'gkey' }, ` (${key})`),
-        el('span', { class: 'ivl' }, intervalLabel(preview[grade])),
-      ),
+    const button = el(
+      'button',
+      {
+        class:
+          `btn${grade === Rating.Good ? ' primary' : ''}` +
+          (grade === Rating.Again ? ' again' : ''),
+        onclick: () => grade_(app, grade),
+      },
+      el('span', { class: 'glabel' }, label),
+      el('span', { class: 'gkey' }, ` (${key})`),
     );
+    // focus as well as hover: the ratings have keyboard shortcuts, and a
+    // touchscreen has no hover at all.
+    const show = () => {
+      readout.textContent = nextShowingLabel(preview[grade]);
+    };
+    button.addEventListener('mouseenter', show);
+    button.addEventListener('focus', show);
+    button.addEventListener('mouseleave', rest);
+    button.addEventListener('blur', rest);
+    row.appendChild(button);
   }
 
-  wrap.appendChild(
-    el(
-      'button',
-      { class: 'btn', onclick: () => void app.suspendCurrent() },
-      el('span', { class: 'glabel' }, 'Hide this card'),
-      el('span', { class: 'gkey' }, ' (h)'),
-    ),
+  const hide = el(
+    'button',
+    { class: 'btn', onclick: () => void app.suspendCurrent() },
+    el('span', { class: 'glabel' }, 'Hide this card'),
+    el('span', { class: 'gkey' }, ' (h)'),
   );
+  // Hiding is not a schedule, so it gets its own sentence rather than an
+  // interval that would be a lie.
+  const hidden = () => {
+    readout.textContent = 'This card stops coming up until you bring it back.';
+  };
+  hide.addEventListener('mouseenter', hidden);
+  hide.addEventListener('focus', hidden);
+  hide.addEventListener('mouseleave', rest);
+  hide.addEventListener('blur', rest);
+  row.appendChild(hide);
 
+  wrap.appendChild(row);
+  wrap.appendChild(readout);
   return wrap;
 }
 

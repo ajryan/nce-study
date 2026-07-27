@@ -486,7 +486,16 @@ button.wrong .rationale { color: #9a3412; }
 .grading button.again:hover { border-color: var(--wrong); background: #ffe0c4; }
 .grading button { flex: 1 1 8rem; text-align: center; line-height: 1.25; }
 .grading .glabel { white-space: nowrap; }
-.grading .ivl { display: block; font-size: 0.7rem; opacity: 0.8; margin-top: 0.1rem; }
+.grading-wrap { display: flex; flex-direction: column; }
+/* One line for all the buttons. Reserves its height so the sticky bar does not
+   shift as the text changes on hover. */
+.next-showing {
+  min-height: 1.15rem;
+  margin-top: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  text-align: center;
+}
 
 /* ---- sticky action bar ----
    The rating controls sit outside the card and stick to the bottom of the
@@ -790,7 +799,7 @@ dialog.pacing .row { margin-top: 1.1rem; }
      four columns wrapped every label onto three lines. */
   .grading { gap: 0.4rem; }
   .grading button { flex: 1 1 calc(50% - 0.2rem); padding: 0.45rem 0.4rem; font-size: 0.88rem; min-width: 0; }
-  .grading .ivl { font-size: 0.66rem; }
+  .next-showing { font-size: 0.74rem; margin-top: 0.3rem; }
   /* No keyboard on a phone, so the shortcut hint is pure noise. */
   .grading .gkey { display: none; }
   .prompt { font-size: 1.02rem; }

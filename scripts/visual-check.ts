@@ -167,6 +167,48 @@ async function main(): Promise<void> {
     const good = page.locator('.actionbar .grading button').first();
     check(await good.isVisible(), 'rating buttons are visible and hittable');
 
+    // ---- when the card comes back ----
+    // Hover is the whole mechanism here, and jsdom cannot hover.
+    // A wrongly-answered MCQ offers only "Didn't know it", so advance until a
+    // card shows the full difficulty scale and there are two values to compare.
+    const ratings = () =>
+      page.locator('.actionbar .grading button').filter({ hasNotText: 'Hide this card' });
+    for (let i = 0; i < 12 && (await ratings().count()) < 3; i++) {
+      await ratings().first().click();
+      await page.waitForTimeout(150);
+      if ((await page.locator('.prompt').count()) === 0) break;
+      const choice = page.locator('ol.choices button').first();
+      if (await choice.count()) await choice.click();
+      else await page.getByRole('button', { name: /Show answer/i }).click();
+      await page.waitForSelector('.actionbar .grading');
+    }
+    check((await ratings().count()) >= 3, 'a card offers the full difficulty scale',
+      `${await ratings().count()} rating buttons`);
+
+    const readout = page.locator('.next-showing');
+    const resting = (await readout.innerText()).trim();
+    check(/^Show again (in \d|shortly)/.test(resting),
+      'the return time reads as a sentence before anything is hovered', resting);
+    const barBefore = (await page.locator('.actionbar').boundingBox())!.height;
+
+    const easy = ratings().last();
+    await easy.hover();
+    const hovered = (await readout.innerText()).trim();
+    check(hovered !== resting && /^Show again /.test(hovered),
+      'hovering a rating updates it', `${resting} -> ${hovered}`);
+
+    const hideBtn = page.locator('.actionbar .grading button', { hasText: 'Hide this card' });
+    await hideBtn.hover();
+    check(!/Show again/.test(await readout.innerText()),
+      'hiding a card does not claim a return time', (await readout.innerText()).trim());
+
+    // The bar is sticky and sits over the card, so it must not resize as the
+    // text changes underneath the cursor.
+    const barAfter = (await page.locator('.actionbar').boundingBox())!.height;
+    check(Math.abs(barAfter - barBefore) < 1,
+      'the sticky bar does not resize as the readout changes',
+      `${Math.round(barBefore)}px -> ${Math.round(barAfter)}px`);
+
     // ---- references collapsed ----
     const refs = page.locator('details.refs');
     if (await refs.count()) {
