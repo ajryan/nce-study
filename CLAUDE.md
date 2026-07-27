@@ -41,9 +41,32 @@ and it outranks engineering taste. Two standing constraints follow:
   After each chunk of cards the app pauses and offers a next step instead of silently
   continuing.
 
-Practical consequences when writing UI: prefer encouragement over neutral reporting, frame
-wrong answers as learning rather than failure (note `--wrong` is a warm orange, not an
-alarm red), and never leave the user at a dead end without an obvious next action.
+Practical consequences when writing UI: frame wrong answers as learning rather than failure
+(note `--wrong` is a warm orange, not an alarm red), and never leave the user at a dead end
+without an obvious next action.
+
+**Warmth comes from specifics, never from telling the user how to feel.** This was reversed
+after the copy was read back and found to be full of the constructions people recognise as
+machine-written. "The 3 you missed come back sooner than the rest" is reassuring and cannot
+be smug, because it is a fact. "A snapshot, not a verdict" is reassurance by assertion, and
+it planted the anxiety it claimed to soothe — nobody was thinking *verdict* until the app
+said it. Report the number, say what happens to those cards next, and stop.
+
+`tests/copy.test.ts` fails the build on the specific tells, scanning source strings rather
+than rendered output so that states no test renders are covered too:
+
+- the negation pivot — `X, not Y` / `not just` / `it's not`. The most-recognised tell of all,
+  and "not a verdict" had been used twice as the same stock foil.
+- **any em dash in prose.** The bolted-on afterthought clause is the punctuation tic. There
+  were 27; a full stop or a colon says the same thing.
+- claims the app cannot support — "you clearly know this material" off ten cards, addressed
+  to someone whose entire worry is whether they know the material.
+- self-congratulation — "this is the system working", said to a user who just did badly.
+- emotional instruction — "and remember,", "there's no wrong answer here", "don't worry".
+- tacked-on praise — "You've started every card at least once. **Nice.**"
+
+Verify a new rule actually fires before trusting it: reintroduce the offending string and
+watch the test fail. Guards that pass for the wrong reason have bitten this repo twice.
 
 ## Commands
 

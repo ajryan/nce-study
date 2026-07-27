@@ -57,7 +57,7 @@ function renderSetup(app: AppState, root: HTMLElement): HTMLElement {
       { class: 'muted' },
       'A timed practice run that works like the real thing: the same mix of topics, the same ' +
         `${exam.optionsPerItem} answers per question, and the same clock. Useful once you’ve ` +
-        'covered a fair bit — and remember, a practice score is just information, not a verdict.',
+        'covered a fair bit.',
     ),
   );
 
@@ -96,7 +96,7 @@ function renderSetup(app: AppState, root: HTMLElement): HTMLElement {
       el(
         'div',
         { class: 'banner warn', style: 'margin-top:1rem' },
-        `There aren’t quite enough cards for a perfectly balanced test — we’re short ${shortfall}. ` +
+        `There aren’t quite enough cards for a perfectly balanced test. We’re short ${shortfall}. ` +
           'It’ll still run, but the topic mix won’t exactly match the real exam.',
       ),
     );
@@ -436,9 +436,8 @@ function renderResults(app: AppState, root: HTMLElement): HTMLElement {
     el(
       'p',
       { class: 'small muted' },
-      'There’s no official pass mark to compare this against — the real exam’s cut-off isn’t ' +
-        'published as a percentage. Treat this as a guide to where to put your time next, not ' +
-        'as a prediction of how you’ll do on the day.',
+      'The real exam’s cut-off isn’t published as a percentage, so there’s nothing here to ' +
+        'compare this score against. Use it to decide where to put your time next.',
     ),
   );
 
@@ -482,7 +481,7 @@ function renderResults(app: AppState, root: HTMLElement): HTMLElement {
         disabled: missed.length === 0,
         onclick: () => {
           void reinjectMissed(app, missed.map((m) => m.card)).then(() => {
-            status.textContent = `Done — those ${missed.length} will come back around soon.`;
+            status.textContent = `Done. Those ${missed.length} will come back around soon.`;
             app.rebuildQueue();
           });
         },

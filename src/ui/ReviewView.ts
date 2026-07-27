@@ -163,8 +163,11 @@ export function renderReview(app: AppState, root: HTMLElement, go?: (view: ViewN
   }
 
   if (local.revealed) {
-    // A missed card is framed as learning, not failure — this deck is studied by
-    // someone anxious about the exam, and "wrong" answers are the useful ones.
+    // A missed card is framed warmly, because this deck is studied by someone
+    // anxious about the exam. But the verdict states the outcome and stops:
+    // telling someone their wrong answer was secretly good is the register that
+    // reads as smug, and the "comes back sooner" line below already says the
+    // useful thing without editorialising.
     if (isChoiceCard) {
       const right = isCurrentCorrect(app);
       body.appendChild(
@@ -172,7 +175,7 @@ export function renderReview(app: AppState, root: HTMLElement, go?: (view: ViewN
           'div',
           { class: `verdict ${right ? 'correct' : 'wrong'}` },
           el('span', { class: 'emoji' }, right ? '✅' : '💡'),
-          el('span', {}, right ? 'Nice — that’s right.' : 'Not quite — and this is a good one to have caught now.'),
+          el('span', {}, right ? 'That’s right.' : 'Not quite.'),
         ),
       );
     }
@@ -395,14 +398,24 @@ function renderHints(isChoiceCard: boolean, revealed: boolean, onlyAgain = false
   return el('div', { class: 'kbd-hint' }, lead, el('kbd', {}, 'h'), ' hide this card');
 }
 
-/** Encouragement that reflects how the chunk actually went, without grading the person. */
+/**
+ * What happened in the chunk, and what happens to those cards next.
+ *
+ * Deliberately not praise. The app cannot tell from ten cards whether someone
+ * "clearly knows this material", and saying so to a person whose whole worry is
+ * whether they know it makes every other line here suspect. The score is the
+ * encouragement; this sentence just says where the cards went.
+ */
 function chunkMessage(correct: number, total: number): string {
-  if (total === 0) return 'Every card you look at is progress.';
+  if (total === 0) return 'Nothing answered yet.';
   const share = correct / total;
-  if (share >= 0.9) return 'That was a strong run. You clearly know this material.';
-  if (share >= 0.7) return 'Solid work — most of that was right, and the misses are now flagged to come back.';
-  if (share >= 0.4) return 'A mixed set, which is exactly what studying looks like. The ones you missed will come back sooner.';
-  return 'That was a tough batch. Getting them wrong now is how they stick later — this is the system working.';
+  const missed = total - correct;
+  const back = `The ${missed} you missed come back sooner than the rest.`;
+  if (share === 1) return 'All of them right. Those move to longer gaps now.';
+  if (share >= 0.9) return `${correct} of ${total} right. ${back}`;
+  if (share >= 0.7) return `${correct} of ${total} right. ${back}`;
+  if (share >= 0.4) return `${correct} of ${total} right. ${back}`;
+  return `That was a tough batch. ${back}`;
 }
 
 /**
@@ -479,7 +492,8 @@ function renderComplete(app: AppState, go: (view: ViewName) => void): HTMLElemen
       el(
         'p',
         { class: 'encourage' },
-        'Your reviews are all up to date. Resting between sessions is part of how spaced repetition works — the gap is doing real work.',
+        'Your reviews are all up to date. Cards come back on their own schedule, so there is ' +
+          'nothing more to do today.',
       ),
     );
   }
@@ -490,7 +504,7 @@ function renderComplete(app: AppState, go: (view: ViewName) => void): HTMLElemen
         'p',
         { class: 'muted small' },
         `${counts.new} card${counts.new === 1 ? '' : 's'} you haven’t seen yet are waiting for future days. ` +
-          'If you would like more today, you can raise the daily limit.',
+          'You can raise the daily limit if you want more now.',
       ),
     );
   }

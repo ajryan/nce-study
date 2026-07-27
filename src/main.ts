@@ -120,8 +120,8 @@ function renderViewFailure(main: HTMLElement, err: unknown): void {
       el(
         'p',
         {},
-        'Your progress is safe — everything you’ve studied is saved on this device. ' +
-          'This is just the screen failing to draw.',
+        'Your progress is safe. Everything you’ve studied is saved on this device, and only ' +
+          'this screen failed to draw.',
       ),
       el(
         'div',
@@ -155,8 +155,8 @@ function renderUpdateBanner(): HTMLElement {
       el(
         'span',
         {},
-        'Refreshing takes a second and your progress is safe — everything you’ve studied is ' +
-          'saved on this device and will still be here afterwards.',
+        'Refreshing takes a second. Your progress is saved on this device and will still be ' +
+          'here afterwards.',
       ),
     ),
     el(

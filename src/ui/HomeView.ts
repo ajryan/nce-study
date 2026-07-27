@@ -41,7 +41,7 @@ export function renderHome(app: AppState, root: HTMLElement, go: (view: ViewName
       'p',
       { class: 'encourage' },
       stats.total > 0
-        ? 'No rush and no wrong pace — a few cards still counts.'
+        ? 'Even a few cards helps. Stop whenever you like.'
         : 'Nothing is due right now. Pick anything below if you feel like it.',
     ),
   );
@@ -91,7 +91,7 @@ export function renderHome(app: AppState, root: HTMLElement, go: (view: ViewName
       title: stats.total > 0 ? 'Study your cards' : 'Study anyway',
       desc:
         stats.total > 0
-          ? 'A mix of new material and things due for review, shuffled across topics so it sticks.'
+          ? 'A mix of new material and cards due for review, shuffled across topics so it sticks.'
           : 'Nothing is due, but you can always look through cards you have already seen.',
       count:
         stats.total > 0
@@ -107,7 +107,7 @@ export function renderHome(app: AppState, root: HTMLElement, go: (view: ViewName
       icon: '🌱',
       cta: 'See my progress',
       title: 'See how I’m doing',
-      desc: 'Your progress across every exam topic, and an honest read on what still needs work.',
+      desc: 'Your progress across every exam topic, and what still needs work.',
       count: `${pct(seen, app.cards.length)} of the deck seen`,
       onClick: () => go('dashboard'),
     }),
@@ -129,7 +129,7 @@ export function renderHome(app: AppState, root: HTMLElement, go: (view: ViewName
       icon: '🔎',
       cta: 'Browse the cards',
       title: 'Look through the cards',
-      desc: 'Search and read any card at your own pace — nothing is scored and nothing is scheduled.',
+      desc: 'Search and read any card at your own pace. Nothing here is scored or scheduled.',
       count: `${app.cards.length} cards`,
       onClick: () => go('browse'),
     }),

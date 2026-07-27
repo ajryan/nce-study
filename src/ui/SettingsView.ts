@@ -108,7 +108,7 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
         onchange: (e: Event) =>
           void update('examDate', { examDate: (e.target as HTMLInputElement).value || null }),
       }),
-      'Optional, but helpful — we’ll count down to it and make sure every card comes back ' +
+      'Optional, but helpful. We’ll count down to it and make sure every card comes back ' +
         'around at least once before the day itself.',
       'examDate',
     ),
@@ -126,7 +126,7 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
 
   scheduling.appendChild(
     field(
-      `How well do you want to remember things? — ${Math.round(s.desiredRetention * 100)}%`,
+      `How well do you want to remember things? ${Math.round(s.desiredRetention * 100)}%`,
       el('input', {
         type: 'range',
         min: '0.75',
@@ -139,7 +139,7 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
           }),
       }),
       'Aim higher and cards come back more often, so you forget less but study more. ' +
-        'Around 90% is a good balance for most people — there’s no wrong answer here.',
+        'Around 90% suits most people.',
       'desiredRetention',
     ),
   );
@@ -171,7 +171,7 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
       'Mix up the topics while you study',
       s.interleave,
       (v) => void update('interleave', { interleave: v }),
-      'Jumping between subjects feels harder than doing one at a time — and that’s exactly ' +
+      'Jumping between subjects feels harder than doing one at a time, and that’s exactly ' +
         'why it works better. Worth leaving on unless you want to drill one area.',
       'interleave',
     ),
@@ -193,7 +193,7 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
         onchange: (e: Event) =>
           void update('maxNewPerDay', { maxNewPerDay: Number((e.target as HTMLInputElement).value) }),
       }),
-      'How much brand-new material to introduce. Start smaller than you think — every new ' +
+      'How much brand-new material to introduce. Start smaller than you think: every new ' +
         'card comes back for review later, so these add up.',
       'maxNewPerDay',
     ),
@@ -228,7 +228,7 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
       { class: 'small', style: saving ? '' : 'color:var(--wrong);font-weight:600' },
       saving
         ? '✅ Your progress is being saved on this device.'
-        : '⚠️ Your progress is not being saved right now — it will disappear when you close this tab. ' +
+        : '⚠️ Your progress is not being saved right now. It will disappear when you close this tab. ' +
             'Save a copy below before you go.',
     ),
   );
@@ -321,9 +321,8 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
     el(
       'p',
       { class: 'small' },
-      `There are ${app.cards.length} cards here, and they’re spread across the exam’s topics in ` +
-        'the same proportions the real test uses — so the areas worth the most marks get the ' +
-        'most practice.',
+      `There are ${app.cards.length} cards here, spread across the exam’s topics in the same ` +
+        'proportions the real test uses, so the areas worth the most marks get the most practice.',
     ),
   );
   about.appendChild(
@@ -340,9 +339,9 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
     el(
       'p',
       { class: 'small muted' },
-      'Heads up: the exam changes on 1 July 2027 — fewer questions, three answers instead of ' +
-        'four, and reorganised topics. These cards are written for the current version, so if ' +
-        'you’re testing on or after that date they won’t match.',
+      'Heads up: the exam changes on 1 July 2027, with fewer questions, three answers instead ' +
+        'of four, and reorganised topics. These cards are written for the current version, so ' +
+        'if you’re testing on or after that date they won’t match.',
     ),
   );
   about.appendChild(
@@ -362,9 +361,9 @@ export function renderSettings(app: AppState, root: HTMLElement): void {
     el(
       'p',
       { class: 'small muted' },
-      'These are practice questions written from the official published outline — not real exam ' +
-        'questions, and not connected to or endorsed by NBCC. Every answer links to a source you ' +
-        'can check for yourself.',
+      'These are practice questions written from the official published outline. They are not ' +
+        'real exam questions, and this app is not connected to or endorsed by NBCC. Every answer ' +
+        'links to a source you can check for yourself.',
     ),
   );
   root.appendChild(about);
@@ -422,15 +421,15 @@ function pacingDialog(app: AppState, suggestion: number, done: () => void): HTML
         : `Your exam is ${days} day${days === 1 ? '' : 's'} away. `,
       'To see every card at least once before then, you’d need about ',
       el('strong', {}, `${suggestion} new cards a day`),
-      ` — you’re set to ${app.settings.maxNewPerDay}.`,
+      `. You’re set to ${app.settings.maxNewPerDay}.`,
     ),
   );
   dialog.appendChild(
     el(
       'p',
       { class: 'small muted' },
-      'You can change this any time, and nothing is lost if you’d rather go steadier — ' +
-        'you’ll just see fewer of the cards before the day itself.',
+      'You can change this any time. Going steadier costs nothing except seeing fewer of the ' +
+        'cards before the day itself.',
     ),
   );
   dialog.appendChild(

@@ -24,7 +24,7 @@ export function renderBrowse(app: AppState, root: HTMLElement): void {
   clear(root);
   root.appendChild(el('h1', {}, 'All the cards'));
   root.appendChild(
-    el('p', { class: 'lede' }, 'Read anything you like here — nothing is scored and nothing gets scheduled.'),
+    el('p', { class: 'lede' }, 'Read anything you like here. Nothing is scored or scheduled.'),
   );
 
   const rerender = () => renderBrowse(app, root);
@@ -77,7 +77,7 @@ export function renderBrowse(app: AppState, root: HTMLElement): void {
         ['', 'Any card'],
         ['new', 'Not started yet'],
         ['learning', 'Still learning'],
-        ['review', 'Sticking well'],
+        ['review', 'Solid'],
         ['due', 'Ready to review now'],
         ['suspended', 'Hidden'],
         ['lapsed', 'Ones I keep missing'],
@@ -200,7 +200,7 @@ function renderRow(app: AppState, card: Card, rerender: () => void): HTMLElement
         'div',
         { class: 'meta' },
         `${domain?.name ?? card.domain} · ${stateLabel}` +
-          (p && p.answerCount > 0 ? ` · you've got this right ${p.correctCount} of ${p.answerCount} times` : ''),
+          (p && p.answerCount > 0 ? ` · right ${p.correctCount} of ${p.answerCount} times` : ''),
       ),
     ),
   );

@@ -90,7 +90,7 @@ export function renderDashboard(
     el(
       'p',
       { class: 'lede' },
-      'A snapshot, not a verdict. Gaps here are just the parts you haven’t got to yet.',
+      'Where you’ve got to so far. The gaps are the parts you haven’t reached yet.',
     ),
   );
 
@@ -112,8 +112,8 @@ export function renderDashboard(
       'div',
       { class: 'label' },
       started === 1
-        ? `card worked through — that’s ${startedPct}% of the deck`
-        : `cards worked through — that’s ${startedPct}% of the deck`,
+        ? `card worked through, ${startedPct}% of the deck`
+        : `cards worked through, ${startedPct}% of the deck`,
     ),
   );
   headline.appendChild(stackedBar(all));
@@ -162,7 +162,7 @@ export function renderDashboard(
       );
     } else if (needed === 0) {
       root.appendChild(
-        el('p', { class: 'small muted' }, 'You’ve started every card at least once. Nice.'),
+        el('p', { class: 'small muted' }, 'You’ve started every card at least once.'),
       );
     }
   }
@@ -196,7 +196,7 @@ export function renderDashboard(
       { class: 'small muted', style: 'margin-top:-.35rem' },
       axis === 'topic'
         ? 'The same three colours as above, split by the exam’s own topics.'
-        : 'The same cards sliced another way — a topic can look fine while a subject inside it is thin.',
+        : 'The same cards sliced another way. A topic can look fine while a subject inside it is thin.',
     ),
   );
 
@@ -322,9 +322,8 @@ function renderExamPanel(app: AppState, go: (view: 'exam') => void): HTMLElement
       el(
         'p',
         { class: 'muted small' },
-        'A timed test is the closest thing here to the real exam, and it measures something ' +
-          'the numbers above cannot: how you do under time pressure. Your scores will show ' +
-          'up here so you can watch them move.',
+        'A timed test measures something the numbers above cannot: how you do against the ' +
+          'clock. Your scores appear here so you can see them change.',
       ),
       el('button', { class: 'btn primary', onclick: () => go('exam') }, 'Take your first one'),
     );
