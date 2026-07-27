@@ -11,6 +11,7 @@ import { renderBrowse } from './ui/BrowseView';
 import { renderSettings } from './ui/SettingsView';
 import { renderExam, pauseExamTimer } from './ui/ExamView';
 import { queueStats } from './scheduler/queue';
+import { createUpdateController, type UpdateController } from './update';
 
 declare const __SINGLE_FILE__: boolean;
 
@@ -31,15 +32,22 @@ const rootEl = document.getElementById('app')!;
 /** Dismissed for the session only — the underlying condition doesn't change. */
 let warningDismissed = false;
 
+let updates: UpdateController | null = null;
+
 function render(): void {
   clear(rootEl);
   rootEl.appendChild(renderHeader());
 
-  const main = el('main');
+  // Banners live in their own container, not inside <main>. Every view's
+  // render* function starts by clearing the element it is given, so anything
+  // appended to <main> before the switch below is wiped out again.
+  const banners = el('div', { class: 'banners' });
+
+  if (updates?.isAvailable()) banners.appendChild(renderUpdateBanner());
 
   const warning = app.storageWarning;
   if (warning && !warningDismissed) {
-    main.appendChild(
+    banners.appendChild(
       el(
         'div',
         { class: 'banner warn' },
@@ -73,6 +81,9 @@ function render(): void {
     );
   }
 
+  if (banners.childNodes.length > 0) rootEl.appendChild(banners);
+
+  const main = el('main');
   switch (app.view) {
     case 'home': renderHome(app, main, go); break;
     case 'study': renderReview(app, main, go); break;
@@ -83,6 +94,46 @@ function render(): void {
   }
 
   rootEl.appendChild(main);
+}
+
+/**
+ * Non-blocking, and never a modal. Being interrupted mid-card would be worse
+ * than running a slightly stale build — and the reassurance is the point, since
+ * "reload to update" reads as "lose your place" to someone anxious.
+ */
+function renderUpdateBanner(): HTMLElement {
+  return el(
+    'div',
+    { class: 'banner update' },
+    el('span', { class: 'icon' }, '✨'),
+    el(
+      'div',
+      { class: 'body' },
+      el('strong', {}, 'A new version is ready'),
+      el(
+        'span',
+        {},
+        'Refreshing takes a second and your progress is safe — everything you’ve studied is ' +
+          'saved on this device and will still be here afterwards.',
+      ),
+    ),
+    el(
+      'div',
+      { class: 'acts' },
+      el('button', { class: 'btn primary', onclick: () => void updates?.apply() }, 'Refresh now'),
+      el(
+        'button',
+        {
+          class: 'btn ghost',
+          onclick: () => {
+            updates?.dismiss();
+            render();
+          },
+        },
+        'Later',
+      ),
+    ),
+  );
 }
 
 /** Single navigation entry point, so view-specific cleanup happens in one place. */
@@ -173,8 +224,21 @@ void app
 // self-contained and registering from file:// throws.
 if (!__SINGLE_FILE__ && 'serviceWorker' in navigator && location.protocol.startsWith('http')) {
   window.addEventListener('load', () => {
-    void navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(() => {
-      /* offline support is a bonus, not a requirement */
-    });
+    const registration = navigator.serviceWorker
+      .register(`${import.meta.env.BASE_URL}sw.js`)
+      .catch(() => undefined);
+
+    updates = createUpdateController(
+      () => registration,
+      () => render(),
+    );
+
+    // Catch updates published while the tab sits open for hours.
+    setInterval(
+      () => {
+        void registration.then((reg) => reg?.update().catch(() => undefined));
+      },
+      60 * 60 * 1000,
+    );
   });
 }

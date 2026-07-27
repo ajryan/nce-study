@@ -17,9 +17,17 @@ self.addEventListener('install', (event) => {
       await cache.addAll(urls).catch(() => {
         /* a missing optional asset must not block installation */
       });
-      await self.skipWaiting();
+      // Deliberately NOT skipWaiting() here. A new worker that activates
+      // immediately leaves the open page running the old JS with no signal that
+      // anything changed. Instead it waits, the page notices and offers a
+      // refresh, and only then do we take over.
     })(),
   );
+});
+
+self.addEventListener('message', (event) => {
+  // Sent by the page when the user accepts the update prompt.
+  if (event.data === 'SKIP_WAITING') void self.skipWaiting();
 });
 
 self.addEventListener('activate', (event) => {

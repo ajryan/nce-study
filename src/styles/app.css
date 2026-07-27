@@ -173,6 +173,11 @@ button.btn.primary:hover { background: var(--accent-strong); border-color: var(-
 button.btn:disabled { opacity: 0.45; cursor: not-allowed; }
 button.btn.ghost { box-shadow: none; background: transparent; }
 
+/* Banners sit between the header and <main> rather than inside it, because each
+   view clears the element it renders into. Matches main's own column width. */
+.banners { max-width: var(--maxw); width: 100%; margin: 0 auto; padding: 1.5rem 1rem 0; }
+.banners + main { padding-top: 0; }
+
 .banner {
   border-radius: var(--radius);
   padding: 0.8rem 1rem;
@@ -182,6 +187,26 @@ button.btn.ghost { box-shadow: none; background: transparent; }
 }
 .banner.warn { background: var(--warn-bg); border-color: #fde047; color: var(--warn); }
 .banner.warn strong { color: inherit; }
+
+.banner.update {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent-strong);
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+.banner.update .icon { font-size: 1.3rem; line-height: 1; flex: none; }
+.banner.update .body { flex: 1; display: flex; flex-direction: column; gap: 0.1rem; }
+.banner.update strong { font-size: 0.95rem; }
+.banner.update span { font-size: 0.83rem; line-height: 1.4; color: #0b5f58; }
+.banner.update .acts { display: flex; gap: 0.4rem; flex: none; }
+@media (max-width: 620px) {
+  .banner.update { flex-wrap: wrap; }
+  .banner.update span { display: none; }
+  .banner.update .acts { width: 100%; }
+  .banner.update .acts .btn { flex: 1; }
+}
 
 /* ---- home / choose your path ----
    Cards with a real button inside, not cards that *are* buttons. The old

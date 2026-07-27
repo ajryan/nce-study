@@ -4,15 +4,12 @@
 
 In priority order:
 
-1. **Tell the user when a new version is available, and reassure them about their progress.**
-   The site now deploys on every push, and the service worker serves cached hashed assets,
-   so someone with the app open — or installed as a PWA — can sit on a stale build without
-   knowing. Detect a waiting service worker and offer a refresh.
-
-   The reassurance is the point, not a nicety: this user is anxious, and "reload to update"
-   reads as "lose your place". Progress lives in IndexedDB and survives a refresh entirely,
-   so the prompt should say so plainly. Must not be a blocking modal — never interrupt
-   mid-card.
+1. **Give the navbar sections real URLs.** Every view lives at the same address, so a
+   refresh — or the reload the update prompt is about to trigger — dumps you back on Start,
+   and the browser Back button leaves the app entirely. Route Start / Study / Progress /
+   Practice Test / All Cards / Settings to their own paths (or hashes, given Pages serves a
+   static site with no rewrite rules), restore the view on load, and keep Back working
+   between sections.
 
 2. **Confirm settings changes visually.** Settings save silently on change, so there is no
    feedback that anything happened. Add an unobtrusive saved indicator.
@@ -26,6 +23,40 @@ In priority order:
 ## Done
 
 Move from the not-yet-done category after completing.
+
+1. **Tell the user when a new version is available, and reassure them about their progress.**
+   The site now deploys on every push, and the service worker serves cached hashed assets,
+   so someone with the app open — or installed as a PWA — can sit on a stale build without
+   knowing. Detect a waiting service worker and offer a refresh.
+
+   The reassurance is the point, not a nicety: this user is anxious, and "reload to update"
+   reads as "lose your place". Progress lives in IndexedDB and survives a refresh entirely,
+   so the prompt should say so plainly. Must not be a blocking modal — never interrupt
+   mid-card.
+
+   **Done.** The service worker no longer calls `skipWaiting()` on install — it waits, so the
+   open page keeps running the code it started with. `src/update.ts` notices the waiting
+   worker and the page shows a non-blocking banner: "A new version is ready — refreshing
+   takes a second and your progress is safe: everything you've studied is saved on this
+   device and will still be here afterwards." Refresh now / Later, never a modal.
+
+   Two bugs that only a real browser could find, and both would have shipped green:
+
+   - The banner was appended to `<main>`, but every view's `render*` function begins by
+     clearing the element it is given, so a correctly-detected update rendered into an
+     element that was wiped microseconds later. Banners now live in their own `.banners`
+     container between the header and `<main>`. **This had also been silently swallowing the
+     non-durable-storage warning** — the "Progress will not be saved" banner has never once
+     appeared, on exactly the file:// origins where losing progress is a real risk.
+   - The first verification attempt passed for the wrong reason: a crashed run had left
+     `dist/sw.js` already rewritten, so the edit meant to simulate a deploy was a no-op.
+
+   `npm run check:update` (`scripts/update-check.ts`) now drives a real Chromium against a
+   preview server, edits `dist/sw.js` to publish a genuinely different worker, and asserts
+   all ten steps: no banner when current, banner on waiting, banner outside `<main>`, "Later"
+   hides without reloading, it returns on next load, "Refresh now" hands over, banner clears.
+   The unit tests in `tests/update.test.ts` cover the detection logic against a fake
+   registration; they could not have caught either bug.
 
 1. **Let the user type their answer on short-answer cards.** On recall and cloze cards
    there is nothing to do before revealing, so it is easy to think "yes, I knew that" without
