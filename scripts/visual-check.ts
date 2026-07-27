@@ -187,6 +187,58 @@ async function main(): Promise<void> {
     check(!overflowsX, 'no horizontal overflow at 390px wide');
     check((await barTop()) < 720, 'rating bar still on screen on a phone-sized viewport');
 
+    // ---- routing ----
+    // The point of the URLs is surviving a refresh, and nothing short of a real
+    // browser reload proves that. Back/forward matter just as much: the whole
+    // app lived at one address, so Back used to leave the site entirely.
+    await page.setViewportSize({ width: 1000, height: 700 });
+
+    // Scoped to the tab bar: the home screen has its own "See my progress"
+    // button, and an unscoped role query matches both.
+    const tab = (label: string) => page.locator('nav.tabs button', { hasText: label });
+    const current = () => page.locator('nav.tabs button[aria-current="page"]').innerText();
+    const hashBecomes = async (expected: string): Promise<boolean> => {
+      try {
+        await page.waitForFunction((h) => location.hash === h, expected, { timeout: 5000 });
+        return true;
+      } catch {
+        return false;
+      }
+    };
+
+    await page.goto(BASE, { waitUntil: 'networkidle' });
+    check(await hashBecomes('#/start'), 'the first load names itself in the URL', page.url());
+
+    await tab('My Progress').click();
+    check(await hashBecomes('#/progress'), 'moving to a section changes the URL');
+
+    await page.reload({ waitUntil: 'networkidle' });
+    check(
+      (await hashBecomes('#/progress')) && (await current()).includes('My Progress'),
+      'a refresh comes back to the same section',
+    );
+
+    await tab('Settings').click();
+    await hashBecomes('#/settings');
+    await page.goBack();
+    check(
+      (await hashBecomes('#/progress')) && (await current()).includes('My Progress'),
+      'Back returns to the previous section instead of leaving the app',
+    );
+
+    await page.goForward();
+    check(
+      (await hashBecomes('#/settings')) && (await current()).includes('Settings'),
+      'Forward works too',
+    );
+
+    // A hand-typed URL or a stale bookmark must land somewhere, not on a blank page.
+    await page.goto(`${BASE}#/nonsense`, { waitUntil: 'networkidle' });
+    check(
+      (await hashBecomes('#/start')) && (await page.locator('main').innerText()).trim().length > 0,
+      'an unrecognised URL falls back to Start rather than an empty page',
+    );
+
     check(errors.length === 0, 'no console errors', errors.slice(0, 2).join(' | '));
     notes.push(`screenshots written to ${SHOTS}/`);
   } finally {

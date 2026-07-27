@@ -4,17 +4,10 @@
 
 In priority order:
 
-1. **Give the navbar sections real URLs.** Every view lives at the same address, so a
-   refresh — or the reload the update prompt is about to trigger — dumps you back on Start,
-   and the browser Back button leaves the app entirely. Route Start / Study / Progress /
-   Practice Test / All Cards / Settings to their own paths (or hashes, given Pages serves a
-   static site with no rewrite rules), restore the view on load, and keep Back working
-   between sections.
-
-2. **Confirm settings changes visually.** Settings save silently on change, so there is no
+1. **Confirm settings changes visually.** Settings save silently on change, so there is no
    feedback that anything happened. Add an unobtrusive saved indicator.
 
-3. **When the exam date changes, offer the daily new-card number.** The Progress page
+2. **When the exam date changes, offer the daily new-card number.** The Progress page
    already computes the required cards-per-day to finish in time. On changing the exam date,
    surface that as a prompt with a button that applies it, rather than making the user work
    out the arithmetic and find the right field.
@@ -23,6 +16,42 @@ In priority order:
 ## Done
 
 Move from the not-yet-done category after completing.
+
+1. **Give the navbar sections real URLs.** Every view lives at the same address, so a
+   refresh — or the reload the update prompt is about to trigger — dumps you back on Start,
+   and the browser Back button leaves the app entirely. Route Start / Study / Progress /
+   Practice Test / All Cards / Settings to their own paths (or hashes, given Pages serves a
+   static site with no rewrite rules), restore the view on load, and keep Back working
+   between sections.
+
+   **Done.** Hashes, not paths — `#/start`, `#/study`, `#/progress`, `#/practice-test`,
+   `#/cards`, `#/settings`. Pages serves a static site with no rewrite rules, so
+   `/nce-study/progress` would 404 on exactly the refresh this was meant to survive, and the
+   single-file build runs from `file://` where the History API is unusable. The slugs are the
+   navigation's own words rather than the internal view ids: `#/progress`, not `#/dashboard`,
+   which is a term the app deliberately never shows anyone.
+
+   The URL is now what actually moves the app. `go()` only sets the hash; a `hashchange`
+   listener calls `applyView()`, which does the view-specific cleanup (pausing the practice
+   test clock, resetting the study session). So a tab click, a card button, the Back button
+   and a pasted URL all take the identical path — the previous design would have skipped
+   cleanup on any history navigation, since those never call `go()`.
+
+   Two things found while testing rather than assumed:
+
+   - An unrecognised hash rendered Start but left the bad URL in the address bar, because
+     `#/nonsense` on top of an already-loaded page is a hash change, not a page load, so the
+     boot-time normalisation never ran. The `hashchange` handler now normalises too.
+   - **`npm run visual` served `dist/` without ever building it**, so it had been checking
+     whatever happened to be built last — the first routing run reported six failures against
+     a bundle with no routing in it. It builds first now. Every visual result before this
+     commit was only as current as the last manual build.
+
+   `npm run visual` covers first load, navigation, refresh, Back, Forward and the bad-URL
+   fallback; `tests/router.test.ts` covers the slug mapping, including that hand-typed
+   variants (`#study`, `study`, `#/study/`, `#/STUDY`) all resolve. Verified in the
+   single-file build over `file://` as well — navigation, Back and no console errors — since
+   `history.replaceState` can throw there and is wrapped for that reason.
 
 1. **Tell the user when a new version is available, and reassure them about their progress.**
    The site now deploys on every push, and the service worker serves cached hashed assets,

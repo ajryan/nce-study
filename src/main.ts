@@ -12,6 +12,7 @@ import { renderSettings } from './ui/SettingsView';
 import { renderExam, pauseExamTimer } from './ui/ExamView';
 import { queueStats } from './scheduler/queue';
 import { createUpdateController, type UpdateController } from './update';
+import { hashForView, viewFromHash, DEFAULT_VIEW } from './router';
 
 declare const __SINGLE_FILE__: boolean;
 
@@ -136,13 +137,52 @@ function renderUpdateBanner(): HTMLElement {
   );
 }
 
-/** Single navigation entry point, so view-specific cleanup happens in one place. */
-function go(view: ViewName): void {
+/**
+ * Switches to a view. Every arrival goes through here — a tab click, a button
+ * in a card, the browser Back button, or a URL pasted into a fresh tab — so
+ * view-specific cleanup cannot be skipped by any of those routes.
+ */
+function applyView(view: ViewName): void {
+  if (app.view === view) {
+    render();
+    return;
+  }
   if (app.view === 'exam' && view !== 'exam') pauseExamTimer();
   if (view === 'study') resetReviewView();
   app.view = view;
   render();
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/**
+ * Navigates, via the URL. Changing the hash is what actually moves the app —
+ * `applyView` runs from the hashchange handler — so a click and a Back button
+ * press take exactly the same path, and the address bar can never disagree
+ * with what is on screen.
+ */
+function go(view: ViewName): void {
+  const target = hashForView(view);
+  // Assigning an unchanged hash fires no event, so drive it directly.
+  if (location.hash === target) applyView(view);
+  else location.hash = target;
+}
+
+window.addEventListener('hashchange', () => {
+  const view = viewFromHash(location.hash);
+  // A hash naming nothing renders the default, so the address bar should say
+  // so rather than leaving a URL that describes a screen the user isn't on.
+  if (view === null) replaceHash(DEFAULT_VIEW);
+  applyView(view ?? DEFAULT_VIEW);
+});
+
+/** Rewrites the address bar without adding a history entry. */
+function replaceHash(view: ViewName): void {
+  try {
+    history.replaceState(null, '', hashForView(view));
+  } catch {
+    // Some browsers refuse replaceState on file:// — the single-file build
+    // still routes, its URL just stays as typed.
+  }
 }
 
 function renderHeader(): HTMLElement {
@@ -207,7 +247,13 @@ app.onChange = render;
 
 void app
   .init()
-  .then(render)
+  .then(() => {
+    const view = viewFromHash(location.hash) ?? DEFAULT_VIEW;
+    // Normalise the address bar without adding a history entry, so Back from
+    // the first screen leaves the app rather than bouncing within it.
+    replaceHash(view);
+    applyView(view);
+  })
   .catch((err: unknown) => {
     clear(rootEl);
     rootEl.appendChild(
