@@ -54,10 +54,21 @@ npm run build:single   # portable single file → dist-single/nce-study.html
 npm test               # all tests
 npm run validate       # deck schema + citation integrity (no network)
 npm run coverage       # domain and CACREP balance + blueprint task coverage
-npm run check          # validate + coverage + test — run this before declaring done
+npm run check          # validate + coverage + bias + test — run this before declaring done
+npm run visual         # builds, then drives a real Chromium: layout, routing, settings
+npm run check:update   # builds, then exercises the whole service-worker update flow
 npx tsc --noEmit       # typecheck (strict, noUncheckedIndexedAccess)
 npx tsx scripts/check-links.ts   # link-check all references — NEEDS NETWORK, not in `check`
 ```
+
+`visual` and `check:update` both build first, on purpose: they serve `dist/`, and for a
+while `visual` did not build, so it silently checked whatever was last built — a routing
+change reported six failures against a bundle that had no routing in it.
+
+**Anything involving the browser's own machinery has to be checked in a browser.** jsdom
+implements no `<dialog>` (not `showModal`, not `close`), service worker update states do not
+exist there at all, and it cannot tell you whether an element that is in the DOM is actually
+*visible*. Three shipped-looking bugs got through unit tests this way.
 
 Single test file or single case:
 
@@ -159,6 +170,23 @@ Hand-rolled view layer, no framework. `src/ui/dom.ts` is the whole thing: an `el
 that escapes by construction (text goes through `textContent`; `html:` is only ever used
 with strings the module builds itself). Views are plain `render*(app, root)` functions that
 clear and rebuild; `AppState.onChange` triggers a re-render.
+
+**Every view starts by clearing the element it is handed**, which has one sharp consequence:
+nothing put into `<main>` before the view's own render survives. Banners therefore live in
+their own `.banners` container between the header and `<main>`. This was not theoretical —
+the update prompt *and* the "Progress will not be saved" warning were both being appended to
+`<main>` and wiped microseconds later, so the storage warning had never once appeared on the
+`file://` origins where losing progress is a real risk.
+
+Navigation goes through the URL, not around it (`src/router.ts`): `go()` only sets the hash,
+and a `hashchange` listener calls `applyView()`, which owns the per-view cleanup. A tab
+click, a card button, the Back button and a pasted URL all take that one path — routing
+cleanup through `go()` alone would skip it on every history navigation. Hashes rather than
+paths because Pages has no rewrite rules and the single-file build runs from `file://`.
+
+State that must survive a re-render (a "Saved" confirmation, a pending prompt) has to be
+module-level. A change re-renders the whole view, so anything held in the render closure is
+destroyed by the very act that created it. Each such module has a `reset*View()` test seam.
 
 ### Build targets (`vite.config.ts`)
 
